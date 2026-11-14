@@ -30,7 +30,9 @@ h1{font:400 clamp(26px,5vw,40px)/1.1 "Dela Gothic One",sans-serif;margin:0 0 4px
 .seg button{font:inherit;font-weight:700;border:0;background:transparent;color:var(--ink);padding:8px 18px;min-height:44px;cursor:pointer}
 .seg button[aria-pressed=true]{background:var(--red);color:#fff}
 label.h{display:block;font-weight:700;margin:6px 0 8px}
-.chars{display:flex;flex-wrap:wrap;gap:6px}
+.chars{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:10px 14px}
+.team>span{display:block;font-size:13px;color:var(--sub);margin-bottom:4px}
+.team>div{display:flex;flex-wrap:wrap;gap:6px}
 .chars button{font:inherit;font-size:15px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);padding:8px 12px;min-height:44px;border-radius:8px;cursor:pointer}
 .chars button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 button:focus-visible,input:focus-visible{outline:3px solid var(--red);outline-offset:2px}
@@ -74,7 +76,7 @@ mark{background:var(--red);color:#fff;border-radius:3px;padding:0 2px}
 <body>
 <header>
 <h1>大門五郎　確定地雷震レシピ</h1>
-<p class="lead">KOF2002｜相手キャラを選ぶと、始動技ごとの隙間Fとレシピが出ます</p>
+<p class="lead">KOF2002｜相手キャラを選ぶと、始動技ごとの隙間Fとレシピが出ます｜作成：MOT</p>
 <nav class="tabs" id="tabs">
 <button data-v="find" aria-pressed="true">キャラで引く</button>
 <button data-v="table" aria-pressed="false">対照表</button>
@@ -117,7 +119,7 @@ mark{background:var(--red);color:#fff;border-radius:3px;padding:0 2px}
 <dt>2024/07/20</dt><dd>ダッシュ予備→前方大J→ダッシュ予備：47フレーム消費。人間に可能か？</dd>
 <dt>2020/09/03</dt><dd>ありえないレシピを削除しました（例：MAX嵐の山→MAX2）／載せてなかったレシピを追加しました</dd>
 </dl>
-<p class="src">元ページ：<a href="http://comesonobravo.xxxxxxxx.jp/02goro-kakuteizirai.html">ＫＯＦ２００２五郎　確定地震連続技表</a></p>
+<p class="src">作成：MOT<br>元ページ：<a href="http://comesonobravo.xxxxxxxx.jp/02goro-kakuteizirai.html">ＫＯＦ２００２五郎　確定地震連続技表</a></p>
 </section>
 </main>
 
@@ -247,8 +249,23 @@ for(const k in D){const v=D[k];v.byF={};v.idx={};v.order=[];
    if(!v.idx[name]){v.idx[name]={};v.order.push(name)}
    (v.idx[name][s]=v.idx[name][s]||[]).push({f,note})}))})}
 
-// キャラ順：弱地雷震の表に初めて出た順、MAX2だけのキャラは後ろ
-const ALL=[...new Set([...D.jaku.order,...D.max2.order])];
+// キャラ順：KOF2002のチーム順
+const TEAMS=[
+ ["K’チーム",["Ｋ’","マキシマ","ウィップ"]],
+ ["京チーム",["京","紅丸","大門"]],
+ ["餓狼伝説チーム",["テリー","アンディ","ジョー"]],
+ ["龍虎の拳チーム",["リョウ","ロバート","タクマ"]],
+ ["サイコソルジャーチーム",["アテナ","ケンスウ","チン"]],
+ ["女性格闘家チーム",["舞","ユリ","メイリー"]],
+ ["八神チーム",["庵","マチュア","バイス"]],
+ ["’97スペシャルチーム",["山崎","マリー","ビリー"]],
+ ["怒チーム",["レオナ","ラルフ","クラーク"]],
+ ["キムチーム",["キム","チャン","チョイ"]],
+ ["エージェントチーム",["ヴァネッサ","セス","ラモン"]],
+ ["ネスツチーム",["クーラ","Ｋ９９９９","アンヘル"]],
+ ["オロチチーム",["社","シェルミー","クリス"]],
+ ["ボス・その他",["クローン京","ルガール"]]];
+const ALL=TEAMS.flatMap(t=>t[1]);
 let ver="jaku",chr=null;
 try{const s=JSON.parse(localStorage.getItem("goro-jrs")||"{}");if(D[s.ver])ver=s.ver;if(ALL.includes(s.chr))chr=s.chr}catch(e){}
 const save=()=>{try{localStorage.setItem("goro-jrs",JSON.stringify({ver,chr}))}catch(e){}};
@@ -257,7 +274,7 @@ const $=id=>document.getElementById(id);
 const setSeg=(el,k)=>el.querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.k===k));
 
 function renderChars(){
- $("chars").innerHTML=ALL.map(n=>`<button data-c="${esc(n)}" aria-pressed="${n===chr}">${esc(n)}</button>`).join("");
+ $("chars").innerHTML=TEAMS.map(([t,cs])=>`<div class="team"><span>${esc(t)}</span><div>${cs.map(n=>`<button data-c="${esc(n)}" aria-pressed="${n===chr}">${esc(n)}</button>`).join("")}</div></div>`).join("");
 }
 const recBlock=(t,arr,cls)=>arr.length?`<div><p class="rk">${t}</p><ul class="r ${cls}">${arr.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`:"";
 function renderOut(){
