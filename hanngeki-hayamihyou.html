@@ -21,6 +21,7 @@
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Noto Sans JP",system-ui,sans-serif;overflow-x:clip}
 header{background:var(--belt);color:#f6f2e9;padding:20px max(5vw,16px) 0}
 h1{font:400 clamp(26px,5vw,40px)/1.1 "Dela Gothic One",sans-serif;margin:0 0 4px;text-wrap:balance}
+.home{display:inline-block;color:#cfc6b8;font-size:13px;margin-bottom:4px;text-decoration:none}.home:hover{text-decoration:underline}
 .lead{margin:0 0 16px;color:#cfc6b8;font-size:14px}
 .tabs{display:flex;gap:4px;flex-wrap:wrap}
 .tabs button{font:inherit;font-weight:700;border:0;padding:12px 16px;min-height:44px;border-radius:8px 8px 0 0;background:#2e2822;color:#cfc6b8;cursor:pointer}
@@ -81,6 +82,7 @@ mark{background:var(--red);color:#fff;border-radius:3px;padding:0 2px}
 </head>
 <body>
 <header>
+<a class="home" href="https://mot-csb.github.io/">← Come sono bravo? トップ</a>
 <h1>KOF2002　反撃確定技早見表</h1>
 <p class="lead">ガードした（ヒットさせた）技を選ぶと、硬直中に間に合う反撃技が出ます｜作成：MOT</p>
 <nav class="tabs" id="tabs">
@@ -152,6 +154,7 @@ mark{background:var(--red);color:#fff;border-radius:3px;padding:0 2px}
 <section class="band memo" id="v-hist" hidden>
 <h3>アプリ版</h3>
 <dl>
+<dt>2026/11/15</dt><dd>サイトのトップページへのリンクを追加</dd>
 <dt>2026/11/15</dt><dd>クーラの通常技・立ちC+Dのうち、ヒットまたはガードで不利になるもの（ガード16・ヒット11）を追加（出典：ＫＯＦ２００２ クーラの各技のヒットorガード時の硬直差について／2006/10/25）。フレーム上は間に合っても、距離によっては反撃が届かない場合があります</dd>
 <dt>2026/11/15</dt><dd>略称を正式名称に変更（「近C」→「近距離立ちC」、「クラック」→「クラックシュート」、「SAB」→「スーパーアルゼンチンバックブリーカー」、「S.D.スラスト」→「シューティングダンサースラスト」、「M.スクランブル」→「マキシマスクランブル」）</dd>
 <dt>2026/11/15</dt><dd>ジョーの「BHTK」を「爆裂ハリケーンタイガーカカト」に、アテナの「SCB」を「シャイニングクリスタルビット」に、それぞれ正式名称へ変更</dd>
