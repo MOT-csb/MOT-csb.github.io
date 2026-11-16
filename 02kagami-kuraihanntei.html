@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KOF2002各キャラの屈み時の食らい判定について｜Come sono bravo?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/csb.css">
+</head>
+<body>
+<header><div class="wrap">
+<p class="crumb"><a href="/">Come sono bravo?</a> › <a href="/kof-top.html">KOF</a> › <a href="/kof02-top.html">KOF2002</a></p>
+<p class="kicker">KOF2002</p>
+<h1>KOF2002各キャラの屈み時の食らい判定について</h1>
+<p class="lead">作成者：MOT ／ 作成：2004/1/4</p>
+</div></header>
+<main><div class="wrap">
+<p>（2004/3/25：下の『屈みガード時の食らい判定の大きさ』の表を若干わかりやすくして、『屈み時の食らい判定』に変更しました）</p>
+<p>屈み時の食らい判定の大きさ</p>
+　屈み時の食らい判定の大きさはひときわ重要である。
+
+理由
+・連続技を決める場合は屈み食らいの相手にキチンと入るかが大事になる。<br/>
+・昇りジャンプ攻撃での中段を狙う場合は、相手の起き上がりに重ねる場合などは屈んでガードしていない状態での食らい判定の大きさが重要になってくる。<br/>
+・立ち回りの主要技の場合、屈まれると空振りすると影響が大きい（例：ビリーの<span class="cmd">→</span>A、クーラの弱レイスピンなど）
+
+　屈んでガードしていない状態、屈みガード状態、屈み食らい状態の食らい判定の大きさは同じキャラはどれも大体同じだが、一部異なるものもあるので検討していく。
+
+<div class="tw"><table>
+
+<tr>
+<td>キャラ</td>
+<td>備考</td>
+</tr>
+<tr>
+<td>ウィップ・セス・チョイ・チン・ルガール</td>
+<td>屈み食らい中はやや食らい判定が高くなる<br/>
+      ⇒屈みガード時には当たらない技の一部が当たるようになる。</td>
+</tr>
+<tr>
+<td>K’・アンディ・バイス・アンヘル</td>
+<td>屈んでいる状態よりも屈みガード中の方が食らい判定が高くなる<br/>
+      （バイスは弱攻撃に対する屈みガードの判定は低く、強攻撃に対しては高くなる。）</td>
+</tr>
+<tr>
+<td>クリス</td>
+<td>屈みガード中よりも屈んでいる状態の方が食らい判定が高く</td>
+</tr>
+
+</table></div>
+
+<p>↓2005/7/10：まだK’～ラモンまでしかきちんと調べてないです。リョウ～ルガールはもう少しお待ち下さいm(_
+_)m<br/>
+↓2005/7/11：一応全キャラ埋めました（しかし、必殺技＆超必殺技は見落としているものあるかもしれないです）。</p>
+
+<div class="tw"><table class="hpb-cnt-tb1" id="_HPB_TABLE_1_A_050708235340">
+<caption>各キャラの相手キャラ別の屈まれた場合に当たらない攻撃</caption>
+
+<tr>
+<th class="hpb-cnt-tb-th1"></th>
+<th class="hpb-cnt-tb-th1">チン・チョイ<br/>
+      屈みガード</th>
+<th class="hpb-cnt-tb-th1">K’（屈）・アンディ（屈）<br/>
+      ジョー・紅丸・庵・マチュア<br/>
+      バイス（屈＆屈弱G）・レオナ<br/>
+      アテナ・ケンスウ・チン（屈H）<br/>
+      舞・ユリ・社・クリス（屈G）<br/>
+      山崎・ビリー・キム・チョイ（屈H）<br/>
+      クーラ・アンヘル（屈）</th>
+<th class="hpb-cnt-tb-th1">K’（屈G）・ウィップ・テリー<br/>
+      アンディ（屈G）・京・クローン京<br/>
+      バイス（屈強G）・ラルフ・クラーク<br/>
+      ヴァネッサ・セス・ラモン・リョウ<br/>
+      ロバート・タクマ・メイリー<br/>
+      シェルミー・クリス（屈）・マリー<br/>
+      K9999・アンヘル（屈G）<br/>
+      ルガール（屈H）</th>
+<th class="hpb-cnt-tb-th1">マキシマ<br/>
+      五郎</th>
+<th class="hpb-cnt-tb-th1">チャン</th>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">K’</td>
+<td class="hpb-cnt-tb-cell2">弱ミニッツスパイク</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちC</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちA<br/>
+      昇りJC<br/>
+      強ミニッツスパイク</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">マキシマ</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちC</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちA</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">ウィップ</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちD</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">テリー</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちC<br/>
+      遠距離立ちD<br/>
+      弱強バーンナックル</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA<br/>
+      遠距離立ちA</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2">強クラックシュート</td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">アンディ</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA<br/>
+      近距離立ちB<br/>
+      近距離立ちD<br/>
+      3A（2段目）</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちC（1段目）</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちA<br/>
+      遠距離立ちB</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">ジョー</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA<br/>
+      近距離立ちD<br/>
+      遠距離立ちC<br/>
+      遠距離立ちD<br/>
+      弱スラッシュキック</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちA<br/>
+      立ちC＋D<br/>
+      強スラッシュキック（先端当て）</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">京</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA<br/>
+      遠距離立ちB<br/>
+      強75式改（2段目）（ディレイ版）</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちC<br/>
+      屈みC<br/>
+      弱75式改（2段目）（ディレイ版）<br/>
+      強75式改（2段目）（すぐに出した場合）</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちA</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">クローン京</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちB<br/>
+      屈みC<br/>
+      強75式改（2段目）（ディレイ版）</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA<br/>
+      遠距離立ちC<br/>
+      弱75式改（2段目）（ディレイ版）<br/>
+      強75式改（2段目）（すぐに出した場合）</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちA</td>
+<td class="hpb-cnt-tb-cell2">弱朧車（出始め）</td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">紅丸</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちB<br/>
+      遠距離立ちD</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA<br/>
+      遠距離立ちC</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちA<br/>
+      遠距離立ちB</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">五郎</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA<br/>
+      遠距離立ちA</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちB<br/>
+      遠距離立ちC<br/>
+      遠距離立ちD</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">庵</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2">飛び越し百合折り<br/>
+      強鬼焼き（2段目）（ガード時限定）</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">マチュア</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちC<br/>
+      遠距離立ちD</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA<br/>
+      遠距離立ちA</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">バイス</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちC</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA<br/>
+      遠距離立ちA</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちD</td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">レオナ</td>
+<td class="hpb-cnt-tb-cell2">昇り垂直JD</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちC（2段目）<br/>
+      遠距離立ちD<br/>
+      昇り小J＆斜めJD<br/>
+      弱ボルティックランチャー</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA<br/>
+      遠距離立ちA<br/>
+      遠距離立ちB<br/>
+      強ボルティックランチャー</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">ラルフ</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちC<br/>
+      近距離立ちD<br/>
+      遠距離立ちB</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちC</td>
+<td class="hpb-cnt-tb-cell2">昇りJA</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA<br/>
+      遠距離立ちA</td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">クラーク</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちC</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちD</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA<br/>
+      遠距離立ちA</td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">ヴァネッサ</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA<br/>
+      近距離立ちC<br/>
+      昇りJC</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちB<br/>
+      遠距離立ちB<br/>
+      遠距離立ちC（2段とも）</td>
+<td class="hpb-cnt-tb-cell2">立ちC＋D</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちA</td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">セス</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちC</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちA</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">ラモン</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA<br/>
+      遠距離立ちA<br/>
+      遠距離立ちD<br/>
+      立ちC＋D</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">リョウ</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA<br/>
+      遠距離立ちD<br/>
+      立ちC＋D<br/>
+      弱飛燕疾風脚（2段目）</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちA<br/>
+      近距離立ちB</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">ロバート</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちA<br/>
+      遠距離立ちD<br/>
+      強龍撃拳</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">タクマ</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちC</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちD</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちA</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちB</td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">アテナ</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA<br/>
+      遠距離立ちB<br/>
+      近距離立ちC</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちB</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">ケンスウ</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA<br/>
+      遠距離立ちA<br/>
+      遠距離立ちD</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちB<br/>
+      6B</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">チン</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA<br/>
+      屈みC</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2">弱強噴炎口</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">舞</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちC</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちB</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">ユリ</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちA<br/>
+      遠距離立ちB<br/>
+      遠距離立ちC<br/>
+      遠距離立ちD</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">メイリー</td>
+<td class="hpb-cnt-tb-cell2">（スタンダード時）<br/>
+      遠距離立ちB<br/>
+      屈みC<br/>
+      （ヒーロー時）<br/>
+      立ちA</td>
+<td class="hpb-cnt-tb-cell2">（スタンダード時）<br/>
+      近距離立ちA<br/>
+      遠距離立ちA</td>
+<td class="hpb-cnt-tb-cell2">（スタンダード時）<br/>
+      遠距離立ちD（最初の攻撃判定）<br/>
+      ↑次の攻撃判定は全キャラに当たる<br/>
+      （ヒーロー時）<br/>
+      屈みC</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">社</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちA<br/>
+      遠距離立ちB</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちD</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA</td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">シェルミー</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちC<br/>
+      立ちC＋D<br/>
+      弱強アクセルスピンキック<br/>
+      ABCDむげつのらいうん</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちB（2段目）<br/>
+      遠距離立ちB（2段目）<br/>
+      6B（1段目）<br/>
+      弱強やたなぎのむち</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA<br/>
+      遠距離立ちA</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちD（2段とも）</td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">クリス</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちB<br/>
+      遠距離立ちC（2段とも）<br/>
+      弱強かがみをほふるほのお</td>
+<td class="hpb-cnt-tb-cell2">屈みC（1段目）<br/>
+      立ちC＋D</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA<br/>
+      遠距離立ちA<br/>
+      遠距離立ちD<br/>
+      屈みC（2段目）<br/>
+      昇りJD<br/>
+      ↑一つ左の列の相手にも当たるが、<br/>
+      タイミング難</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">山崎</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA<br/>
+      遠距離立ちD<br/>
+      蛇使い中段</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちD（2段目）<br/>
+      遠距離立ちA</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">マリー</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちB</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA<br/>
+      遠距離立ちA<br/>
+      ↑非常に当てにくい</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">ビリー</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちC<br/>
+      遠距離立ちA<br/>
+      6A（2段とも）</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA<br/>
+      遠距離立ちB</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちD</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">キム</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちD（2段とも）<br/>
+      遠距離立ちA<br/>
+      遠距離立ちC<br/>
+      遠距離立ちD（1段目）<br/>
+      屈みC<br/>
+      立ちC＋D<br/>
+      弱強三連撃（1段目）<br/>
+      弱飛燕斬</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちD（1段目）<br/>
+      遠距離立ちB</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">チャン</td>
+<td class="hpb-cnt-tb-cell2">弱強鉄球粉砕撃</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちD<br/>
+      遠距離立ちC</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちA</td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">チョイ</td>
+<td class="hpb-cnt-tb-cell2">遠距離立ちC</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">クーラ</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちC（1段目）<br/>
+      遠距離立ちC<br/>
+      3C<br/>
+      弱レイスピン<br/>
+      強レイスピン（2段目）</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA<br/>
+      遠距離立ちA</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2">強レイスピン（1段目）</td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">K9999</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA<br/>
+      遠距離立ちA</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">アンヘル</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA<br/>
+      遠距離立ちA<br/>
+      遠距離立ちD<br/>
+      立ちC＋D<br/>
+      弱強センスレスフィスツ（1段目）<br/>
+      ↑2段目は全キャラに当たる</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+<tr>
+<td class="hpb-cnt-tb-cell1">ルガール</td>
+<td class="hpb-cnt-tb-cell2">近距離立ちA<br/>
+      近距離立ちC（2段目）<br/>
+      近距離立ちD（2段目）<br/>
+      立ちC＋D</td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+<td class="hpb-cnt-tb-cell2"></td>
+</tr>
+
+</table></div>
+
+<p>※バイスのみ、庵の飛び越し百合折りが空振り。</p>
+<p>（下にあるキャラは、上の技が全てヒットorガードさせられます）<br/>
+（キャラの後に何も書かれてない場合、屈んだ状態・屈みガード・屈み食らいの食らい判定が縦方向において違いがないもので、違う場合は後ろに限定状況を併記しています）<br/>
+（右に掲げるキャラは屈み食らい時の食らい判定があいまいなので載せていません。調査後加える予定です。クリス・K’・アンディ）<br/>
+（キャラの後ろについている状況はそれぞれ、<br/>
+屈…屈んだ状態<br/>
+屈G…屈みガード時<br/>
+屈弱G…弱攻撃を屈みガード時<br/>
+屈強G…強攻撃を屈みガード時<br/>
+屈H…屈み食らい時<br/>
+を指しています）</p>
+<p>メモ</p>
+
+<p>・屈んだチン＆チョイにすら当たる技</p>
+K’の遠距離立ちD・<span class="cmd">→</span>B・アイントリガー<br/>
+テリーの弱クラック<br/>
+京の弱強REDkick<br/>
+リョウの遠距離立ちB・弱強雷神刹<br/>庵の遠距離立ちD
+<p>・ロバートの6Aは密着＆屈んだ状態のチョイには空振りする（屈みガードしてるとヒットする）。</p>
+<p>・バイス・マチュアは背面食らいに特徴があり、キムで背後から近距離立ちCをヒットさせた場合、2段目が空振りしてしまう。<br/>
+・チンの回転的空突撃もレオナのグランドセイバー同様、引きつけて投げで返せる。<br/>
+・テリーの近距離立ちC（×2）≫弱バーンは屈んだチョイに対して、正面食らいなら連続技になるが背後からだと入らない。近距離立ちCを1段目でキャンセルすれば背後＆屈み食らいでも弱バーンは連続ヒットする。<br/>
+・PRACTICEでGUARDをONにしてACTIONをHUMANにして操作してレバーをガード方向に入れると相手が攻撃していなくてもガードしてくれる。<br/>
+・アンディの近距離立ちCは屈んだラルフに対しては密着から当てても2段目が空振りしてしまう（他のキャラに対しても調べてみよう）。</p>
+
+<p>調べたい技</p>
+・昇りJ攻撃全般、屈んだチン・チョイに当たるJ攻撃
+<p><a href="02kuraihanntei.html">KOF2002連続技時の各キャラの食らい判定の違いについて</a>へ<br/>
+<a href="kof02-top.html">KOF2002トップ</a>へ<br/>
+<a href="/">トップページ</a>へ</p>
+
+<p>発表：2004/1/6<br/>
+更新：2004/3/25<br/>
+更新：2005/7/10（ページ名を変更（以前は<a href="02kuraihanntei.html">こちら</a>））<br/>
+最終更新：2008/3/14（チン、チョイの屈み時の高さを表から削除）</p>
+<nav class="foot-nav"><a href="/kof02-top.html">KOF2002のトップへ</a><a href="/kof-top.html">KOFシリーズへ</a><a href="/">入口へ</a></nav>
+</div></main>
+<footer><div class="wrap">Come sono bravo?｜作成：MOT</div></footer>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KOF2002　テリー攻略（特殊技／緊急回避／GCC＋D／通常投げ解析）｜Come sono bravo?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/csb.css">
+</head>
+<body>
+<header><div class="wrap">
+<p class="crumb"><a href="/">Come sono bravo?</a> › <a href="/kof-top.html">KOF</a> › <a href="/kof02-top.html">KOF2002</a></p>
+<p class="kicker">KOF2002｜特殊技・通常投げ解析</p>
+<h1>KOF2002　テリー攻略（特殊技／緊急回避／GCC＋D／通常投げ解析）</h1>
+<p class="lead"></p>
+</div></header>
+<main><div class="wrap">
+<p>作成者：MOT
+
+作成：2003/2/1
+
+更新：2003/8/28
+
+発表：2004/4/20
+
+更新：2004/4/20（微更新＆コマンドを矢印にしました）
+
+更新：2004/4/26（地上通常技を微更新）
+
+更新：2004/4/28（特殊技を微更新）
+
+更新：2004/4/30（技データを補完＆通常技を少し更新）
+
+最終更新：2004/5/10（分離）</p>
+<p>（完成度は70％ほどです…。）
+
+（参照：サイト「<a href="http://www.geocities.jp/kof_no_koto/">KOFのこと</a>」さん）</p>
+
+<h2>特殊技</h2>
+
+<p>ライジングアッパー（<span class="cmd">↘</span>C）</p>
+
+<div class="tw"><table>
+
+<tr>
+<td>キャンセル</td>
+<td>ダメージ</td>
+<td>カウンター</td>
+<td>GCL値</td>
+<td>増加ゲージ</td>
+<td>ガード方向</td>
+<td>予/持/硬</td>
+<td>全体F</td>
+<td>発生</td>
+<td>ガード時<br/>
+      硬直差</td>
+<td>ヒット時<br/>
+      硬直差</td>
+</tr>
+<tr>
+<td>必※</td>
+<td>11</td>
+<td>14</td>
+<td>14</td>
+<td>14</td>
+<td>立屈</td>
+<td>3/3+3/19</td>
+<td>28</td>
+<td>4</td>
+<td>-7（～-2）</td>
+<td>-5（～±0）</td>
+</tr>
+
+</table></div>
+
+
+<p>※空振り時はキャンセル不可能</p>
+<p>・発生が4Fと早く、弱攻撃からつないで連続技の中継点として活躍する
+
+・腕を振り上げる前の攻撃の部分は横方向への判定が強い感じがするので、近距離での暴れ技としてもまあまあ頼れる。
+
+・対空技として使用することも可能だが、攻撃している腕にもやられ判定があるため、下方向にリーチの長いJ攻撃にはめっぽう弱い。こういう場合はダッシュから出すことで空中の相手の懐に入ってから攻撃を当てられる。
+
+・’99以降は判定が弱体化しているため対空技としてはあまり強くない。しかし、早めに出して腕の伸びきった状態の対空性能はまあまあ高いので早だし対空として使っていける。
+
+・今回は強ライジングが弱くなったので使っていく場面も多くなった。
+
+・横方向にはなかなか強いので中間距離で相手の技を潰すのに結構使える。ダッシュから出すことでプレッシャーをかけていくことも可能。今回のテリーはけん制技で相手のジャンプを抑えるのが難しく、更に強ライジングの全身無敵もなくなったため、この技をダッシュから出していくことが重要になった。この場合は相手に当てるように出さないといけないので注意（目の前で空振り指定し待った場合、空振りキャンセルができないので危険だし、反撃を受けなくても相手側にターンが移動してしまうのは間違いない）。
+
+・ビリーの屈みAに勝てた。低い打点の横方向への判定は強いのかも知れない。
+
+・強攻撃≫<span class="cmd">↘</span>Cのつなぎは屈みC≫<span class="cmd">↘</span>Cのつなぎが最もダメージが高い。
+
+・近距離立ちC（×2）からつなげる場合、ダメージは近距離立ちDからとほとんど変わらないが、ゲージ増加量が多いのが魅力。ただし、近距離立ちCがヒットした場合は<span class="cmd">↘</span>Cはつながりやすいが、ガードされている場合は<span class="cmd">↘</span>Cはまず空振りするので注意。2002は特殊技は空振りキャンセル不可なので基本的には「やってはいけない連係」になる。</p>
+
+
+<h2>緊急回避関連のフレームデータ</h2>
+
+
+<div class="tw"><table>
+
+<tr>
+<td>　</td>
+<td>全体F</td>
+<td>フレームデータ（無敵時間）</td>
+<td>備考</td>
+</tr>
+<tr>
+<td>緊急回避・前方</td>
+<td>33f</td>
+<td>1-24全身無敵　25脛下無敵　26-33膝下B</td>
+<td>標準レベル</td>
+</tr>
+<tr>
+<td>緊急回避・後方</td>
+<td>33f</td>
+<td>1-24全身無敵　25脛下無敵　26-33膝下B</td>
+<td>標準レベル</td>
+</tr>
+<tr>
+<td>GC緊急回避・前方</td>
+<td>35f</td>
+<td>1-35全身無敵</td>
+<td>標準レベル</td>
+</tr>
+<tr>
+<td>GC緊急回避・後方</td>
+<td>35f</td>
+<td>1-35全身無敵</td>
+<td>標準レベル</td>
+</tr>
+<tr>
+<td>クイック緊急回避</td>
+<td>37f</td>
+<td>1-28全身無敵　29脛下無敵　30-37膝下B</td>
+<td>標準レベル</td>
+</tr>
+
+</table></div>
+
+
+<h2>GCC＋D</h2>
+
+
+<div class="tw"><table>
+
+<tr>
+<td>キャンセル</td>
+<td>ダメージ</td>
+<td>カウンター</td>
+<td>GCL値</td>
+<td>増加ゲージ</td>
+<td>ガード<br/>
+      方向</td>
+<td>予/持/硬</td>
+<td>全体F</td>
+<td>発生</td>
+<td>無敵</td>
+<td>ガード時<br/>
+      硬直差</td>
+<td>ヒット時<br/>
+      硬直差</td>
+</tr>
+<tr>
+<td>×</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>※</td>
+<td>屈</td>
+<td>5/18/15</td>
+<td>38</td>
+<td>6</td>
+<td>11</td>
+<td>-11（～+6）</td>
+<td>ダウン</td>
+</tr>
+
+</table></div>
+
+
+<h2>通常投げ</h2>
+
+<p>C投げ（グラスピングアッパー）</p>
+
+<div class="tw"><table>
+
+<tr>
+<td>キャンセル</td>
+<td>ダメージ</td>
+<td>カウンター</td>
+<td>GCL値</td>
+<td>増加ゲージ</td>
+<td>ガード方向</td>
+<td>投げヒットマーク<br/>
+      発生F</td>
+<td>投げ抜け可能F</td>
+</tr>
+<tr>
+<td>×</td>
+<td>18</td>
+<td>18</td>
+<td>0</td>
+<td>0</td>
+<td>投</td>
+<td>4</td>
+<td>19</td>
+</tr>
+
+</table></div>
+<p>　つかんだ後アッパーをかまして前方にダウンさせる。受け身可能。端近くの相手が前転してきた時に、連続技を決める（心の）余裕がなければC投げを決めて端に追い詰める使い方もできる。</p>
+
+<p>D投げ</p>
+
+<div class="tw"><table>
+
+<tr>
+<td>キャンセル</td>
+<td>ダメージ</td>
+<td>カウンター</td>
+<td>GCL値</td>
+<td>増加ゲージ</td>
+<td>ガード方向</td>
+<td>投げヒットマーク<br/>
+      発生F</td>
+<td>投げ抜け可能F</td>
+</tr>
+<tr>
+<td>×</td>
+<td>18</td>
+<td>18</td>
+<td>0</td>
+<td>0</td>
+<td>投</td>
+<td>4</td>
+<td>19</td>
+</tr>
+
+</table></div>
+<p>　自分の後ろ側に背負い投げで叩きつける技。相手は受け身不可能。ここからめくりJDが狙いやすい。</p>
+
+<p>［C投げとD投げの比較］</p>
+
+<div class="tw"><table>
+
+<tr>
+<td>　</td>
+<td>ダメージ</td>
+<td>投げた後の位置</td>
+<td>受け身</td>
+<td>抜けやすさ</td>
+</tr>
+<tr>
+<td>C投げ</td>
+<td rowspan="2">18</td>
+<td>そのまま</td>
+<td>可</td>
+<td rowspan="2">同じ</td>
+</tr>
+<tr>
+<td>D投げ</td>
+<td>入れ替わり</td>
+<td>不可</td>
+</tr>
+
+</table></div>
+<nav class="foot-nav"><a href="/kof02-top.html">KOF2002のトップへ</a><a href="/kof-top.html">KOFシリーズへ</a><a href="/">入口へ</a></nav>
+</div></main>
+<footer><div class="wrap">Come sono bravo?｜作成：MOT</div></footer>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>餓狼伝説SPのダメージ計算について｜Come sono bravo?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/csb.css">
+</head>
+<body>
+<header><div class="wrap">
+<p class="crumb"><a href="/">Come sono bravo?</a> › <a href="/ffsp-top.html">餓狼伝説SP</a></p>
+<p class="kicker">餓狼伝説SP</p>
+<h1>餓狼伝説SPのダメージ計算について</h1>
+<p class="lead">作成者：MOT ／ 作成：？ ／ 発表：2004/5/14</p>
+</div></header>
+<main><div class="wrap">
+餓狼伝説SPのダメージ計算について
+
+<p>（参考：オールアバウト餓狼伝説SP）</p>
+<p>
+
+餓狼伝説SPのダメージにはきちんとした法則が存在する。決してランダムの要素はないし、キャラによる防御力などといったものも存在しない。<br/>
+（ただし、気絶耐久力についてはキャラ別に異なる）
+<p>
+
+残り体力およびラウンドによる補正
+
+
+<div class="tw"><table>
+<tr>
+<td>残り体力</td>
+<td>通常時</td>
+<td>攻撃側がラウンド先取時</td>
+</tr>
+<tr>
+<td>100％～50％</td>
+<td>技の攻撃力×1.000</td>
+<td>技の攻撃力×0.750</td>
+</tr>
+<tr>
+<td>49％～25％</td>
+<td colspan="2">技の攻撃力×0.750</td>
+</tr>
+<tr>
+<td>24％～12.5％</td>
+<td colspan="2">技の攻撃力×0.675</td>
+</tr>
+<tr>
+<td>12.4～0％</td>
+<td colspan="2">技の攻撃力×0.500</td>
+</tr>
+</table></div>
+
+<p>
+連続技による補正
+
+
+<div class="tw"><table>
+<tr>
+<td>ヒット状況</td>
+<td>補正</td>
+</tr>
+<tr>
+<td>単発ヒット</td>
+<td>技の攻撃力×1.00</td>
+</tr>
+<tr>
+<td>2連続ヒット</td>
+<td>技の攻撃力×0.875</td>
+</tr>
+<tr>
+<td>3連続ヒット以降</td>
+<td>技の攻撃力×0.75</td>
+</tr>
+</table></div>
+
+<p>
+ケズリによる補正
+
+
+<div class="tw"><table>
+<tr>
+<td>必殺技（超必殺技含む）をガードしたときに与えるダメージ</td>
+<td>技の攻撃力×0.25</td>
+</tr>
+</table></div>
+
+※　ニードルローは必殺技扱いだがケズリダメージは0
+<p>
+上の要素がすべて掛けられてダメージが決定する。<br/>
+すなわち、実際に与えるダメージは、<br/>
+技の攻撃力×残り体力およびラウンドによる補正×連続技による補正<br/>
+または、<br/>
+技の攻撃力×残り体力およびラウンドによる補正×ケズリによる補正<br/>
+と、いうことになる。<br/>
+ここで重要なのは、<br/>
+連続ガードの状態でも、ケズリダメージには連続技のダメージ補正は適用されないということである。
+<p>注意点
+・ケズリで残り体力がマイナスになった場合、体力が0で残る<br/>
+・1ラインステージの障害物に当たった時に残り体力がマイナスになった場合、体力が0で残る
+
+</p></p></p></p></p></p>
+<nav class="foot-nav"><a href="/ffsp-top.html">餓狼伝説SPのトップへ</a><a href="/kof-top.html">KOFシリーズへ</a><a href="/">入口へ</a></nav>
+</div></main>
+<footer><div class="wrap">Come sono bravo?｜作成：MOT</div></footer>
+</body>
+</html>

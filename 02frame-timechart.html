@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Come sono bravo?‐タイムチャート｜Come sono bravo?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/csb.css">
+</head>
+<body>
+<header><div class="wrap">
+<p class="crumb"><a href="/">Come sono bravo?</a> › <a href="/kof-top.html">KOF</a> › <a href="/kof02-top.html">KOF2002</a></p>
+<p class="kicker">KOF2002</p>
+<h1>Come sono bravo?‐タイムチャート</h1>
+<p class="lead">作成者：MOT ／ 作成＆発表：2007/9/15</p>
+</div></header>
+<main><div class="wrap">
+<div>
+<p>KOF2002　フレームについての説明（タイムチャート付き）</p>
+
+</div>
+<h2 id="id_0019f1d1">フレーム</h2>
+<div>このゲームにおける時間の最小単位。 <br/>1フレームは1／60秒。 <br/>
+</div>
+
+<div>ちなみに、ゲーム中の1カウントは50フレームとなっている。つまり、50／60秒。 <br/>
+</div>
+
+<div>これだけだとわかりにくいが、1フレームを1秒と置き換えて考えると理解しやすいのではないかと思われる。 <br/>
+</div>
+
+<h2 id="id_7cbd6d2a">フレームとは？</h2>
+<div>格闘ゲームのキャラクターは、パラパラ漫画を物凄いスピードでめくるように、何枚もの絵を高速で入れ替える事で、あのように動き回っています。 
+<br/>この時、一枚の絵を入れ替えるのにかかる時間のことを、フレームといいます。 
+<br/>なので、「フレーム＝動作にかかる時間」と考えていただければ、間違いないと思います。 
+<br/>KOFにおいては「1フレーム＝1/60秒」であり、これがゲーム内における時間の実質的な最小単位となります。 <br/>
+</div>
+
+<h2 id="id_9923f58d">数字の意味</h2>
+<div><a href="http://www.geocities.jp/kof_no_koto/">「KOFのこと」</a>さんに掲載されているフレームデータは、（予備,持続,戻り）という構成になっています。 
+<br/>
+</div>
+
+<div>予備の部分は、攻撃判定が発生する前の準備動作の時間を表します。 <br/>持続の部分は、攻撃判定がどの位の時間継続するかを表します。 
+<br/>戻りの部分は、攻撃判定が消えてからどの位動けない時間があるかを表します。 <br/>
+</div>
+
+<div>例：八神庵の近距離立ちAは数値が(4, 4, 5)なので、予備が4フレーム、持続が4フレーム、戻りが5フレームの技になります。 
+<br/>
+</div>
+
+<div class="tw"><table>
+
+<tr>
+<td>攻撃判定</td>
+<td>4</td>
+<td>4</td>
+<td>5</td>
+</tr>
+
+</table></div>
+
+
+<h2 id="id_4d52ef84">どこからが技の発生？</h2>
+<div>どの技も共通して、予備が終わり、持続の1フレ目に入ると同時に攻撃判定が出現します。 
+<br/>そのため、「発生フレーム＝予備フレーム＋1フレーム」と考えるのが正しいです。 <br/>
+</div>
+
+<div>※「予備フレームの数字＝発生フレームではないことに注意してください」 <br/>
+</div>
+
+<div>例：八神庵の近距離立ちAは数値が(4, 4, 5)なので、発生は4+1＝5フレームとなります。 <br/>
+</div>
+
+<h2 id="id_687ec79d">[G]と[M]って何の事？</h2>
+<div>[G]は、そのモーションにガードポイントがある事を示しています。 
+<br/>[G]のくっついている数字が、ガードポイントが持続している時間の長さを表しています。 <br/>
+</div>
+
+<div>例：草薙京の百拾四式・荒咬みは、数値が(9 + 2[G], 2+6, 
+24)なので、予備時間11フレームのうち10～11フレーム目、つまり攻撃発生直前の2フレにガードポイントがついています。 <br/>
+</div>
+
+<div>[M]とは、そのモーションに無敵時間がある事を示しています。 <br/>[M]のくっついている数字が、無敵時間が持続している時間の長さを表しています。 
+<br/>
+</div>
+
+<div>例：草薙京の百式・鬼焼きCは、数値が(5[全身M], 4[全身M], 0, 16, 
+22+13)なので、発生までの予備時間5フレと、発生してから最初の4フレの、計9フレ無敵時間があります。 <br/>
+</div>
+
+<h2 id="id_b2509794">多段技の見方</h2>
+<div>一段だけの技に比べて非常に細かく区切られていますが、これは主に、持続部分について細かく書かれているためです。 
+<br/>基本的に、モーションが変わるたびに、数字を分けて書いています。 <br/>つまり、 <br/>
+</div>
+
+<div>「予備」→「一個目のモーション」→「次のモーションに切り替わる時間」→「二個目のモーション」→「次のモーションに切り替わる時間」→「三個目のモーション……→「戻り」といった感じです。 
+<br/>持続が細かく書かれていることを除けば、基本的には「予備、持続、戻り」と、一段技と同じ図式になっています。 <br/>
+</div>
+
+<div>例：八神庵の百式・鬼焼きAは、数値が(5, 2, 0, 2, 0, 8, 
+11+16)なので「予備時間が5フレーム」→「最初のモーションの持続が2フレーム」→「次のモーションへ0フレームで切り替わる」→「次のモーションの持続が2フレーム」→「0フレームで次のモーションへ入れ替わる」→「次のモーションの持続が8フレーム」→「戻りが11＋16＝27フレーム」という流れで技が構成されています。 
+<br/>
+</div>
+
+<h2 id="id_147be5bf">暗転について</h2>
+<div>KOFにおいては、超必殺技・MAX超必殺技・MAX2を使う際、暗転という演出が入ります。 <br/>長さは共通して28フレームです。 
+<br/>暗転中は自キャラも相手キャラも動かないので、動作の時間には全く影響しません。 
+<br/>発生や全体フレームを計算する際には、この暗転の28フレームは除いて考えてください。 <br/>
+</div>
+
+<div>例：八神庵の禁千弐百拾壱式・八稚女Aの数値は( {1 + 28[暗転] + 5}[全身M], 4+12, 
+42)なので、発生は1＋5＋1＝7になります。全体フレームは、6＋16＋42＝64フレームです。 <br/>
+</div>
+
+<div>☆ヒットorガード後の硬直差について <br/>　地上弱攻撃の硬直時間はヒット時11フレーム、ガード時9フレーム、 
+<br/>　地上強攻撃の硬直時間はヒット時19フレーム、ガード時17フレーム、 <br/>となっていますので、技をヒットorガードさせた後の硬直時間はそれぞれ、 
+<br/>　弱攻撃（ヒット）＝11－（持続－1＋戻り） <br/>　弱攻撃（ガード）＝9－（持続－1＋戻り） <br/>　強攻撃（ヒット）＝19－（持続－1＋戻り） 
+<br/>　強攻撃（ガード）＝17－（持続－1＋戻り） <br/>となります。 <br/>一部の特殊なものを除いて、必殺技や特殊技は強攻撃のデータに準じます。 
+<br/>計算の結果が＋ならその分だけ有利なフレームが、－ならその分だけ不利なフレームが存在する事を表しています。 <br/>
+</div>
+
+<div>例：八神庵の近距離立ちAは数値が(4, 4, 5)なのでヒットさせた場合は11－（4－1＋5）＝3フレーム有利となります。 
+<br/>
+</div>
+
+
+<p>2003/12/16</p>
+　通常技や必殺技の発生・持続・戻りなどの表現をタイムチャート形式で表現しようと思います。<br/>
+↓に並んでいるのは、その暫定版です（随時改良していく予定です）。
+<p>2003/12/21</p>
+　硬直差についてちょっと勘違いしていたみたいなので訂正します（間違っていたものはそのまま残しておきます）。
+（このページのフレームデータは、特にことわりのない場合はすべて似非南原さんが運営されているサイト<a href="http://www43.tok2.com/home/esenambara/game/kof/">KOFのこと</a>のものです。）
+
+<h2>2004/3/7</h2>
+
+<p>　ある方から、「舞の弱龍炎舞のタイムチャート（2003/12/22に更新時に発表）が多段技のように見える」とメールにて指摘をいただきました。</p>
+KOF2002の舞の弱龍炎舞
+
+発生…14、持続…3＋3＋4、硬直…19
+
+
+
+<div class="tw"><table>
+
+<tr>
+<td>攻撃判定</td>
+<td>14</td>
+<td>3</td>
+<td></td>
+<td>3</td>
+<td></td>
+<td>4</td>
+<td>19</td>
+</tr>
+
+</table></div>
+※無敵時間および部位は不明
+
+<p>　確かにいわれてみるとご指摘のとおりで、説明が不足しておりました。<br/>
+　この舞の弱龍炎舞は、正確には、「攻撃部位が異なる部分に複数回（この場合は3回）出現する技で、攻撃部位が変更される場合に攻撃判定が消える瞬間がまったくないタイプの技」です。他に同様のタイプの技を挙げますと、レオナの屈みCなども同じように攻撃判定が消えることなく攻撃部位が変更されます。<br/>
+　これと区別しなければならないものに、「多段技で攻撃部位が変更される場合に攻撃判定が消える瞬間がまったくない技」というものがあります。この2つを区別するためには、<br/>
+合間にはさむ部分の線の色を<br/>
+多段技：白、<br/>
+多段技ではないが攻撃部位が異なる部分に複数回現れる技：黒<br/>
+と区別しようと思います。</p>
+<p>KOF2002のレオナの屈みC（多段技はないが攻撃部位が異なる部分に2回現れる）</p>
+発生…3、持続3＋3、硬直28 
+
+<div class="tw"><table>
+
+<tr>
+<td>攻撃判定</td>
+<td>3</td>
+<td>3</td>
+<td></td>
+<td>3</td>
+<td>28</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>ガード時</td>
+<td></td>
+<td>5</td>
+<td>12</td>
+<td>5</td>
+<td>（レオナ最低で16f不利、最高で11f不利）</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>ヒット時</td>
+<td></td>
+<td>5</td>
+<td>14</td>
+<td>5</td>
+<td>（レオナ最低で14f不利、最高で9f不利）</td>
+</tr>
+
+</table></div>
+
+<p>KOF2002の庵の強鬼焼き（多段技で最大3ヒットする）</p>
+発生…5（全身無敵5）、持続2、0、3、0、13、硬直22＋19（19は着地硬直）
+
+
+<div class="tw"><table>
+
+<tr>
+<td>攻撃判定</td>
+<td>5</td>
+<td>2</td>
+<td></td>
+<td>3</td>
+<td></td>
+<td>13</td>
+<td>22</td>
+<td></td>
+<td>19</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>無敵</td>
+<td>5</td>
+<td>全身無敵…5</td>
+</tr>
+
+</table></div>
+
+
+<h2>2004/1/8</h2>
+
+<p>　無敵部位に関する部分に変更を加えました。<br/>
+　具体的には、「全身無敵を青色で表現して、部分無敵を青緑色で表現するという方法にしようと思います。</p>
+<p>KOF2002のキムの通常版弱鳳凰飛天脚</p>
+発生…1＋（暗転28）＋7（全身無敵）、持続…4、硬直…4＋26 
+
+<div class="tw"><table>
+
+<tr>
+<td>攻撃判定</td>
+<td>1</td>
+<td></td>
+<td>7</td>
+<td>4</td>
+<td>4</td>
+<td></td>
+<td>26</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>無敵</td>
+<td>1</td>
+<td></td>
+<td>7</td>
+<td>全身無敵…8</td>
+</tr>
+
+</table></div>
+
+<p>KOF2002のキムの通常版強鳳凰飛天脚</p>
+発生…1＋（暗転28）＋7（全身無敵4＋膝上無敵3）、持続…5、硬直…5＋28
+
+<div class="tw"><table>
+
+<tr>
+<td>攻撃判定</td>
+<td>1</td>
+<td></td>
+<td>7</td>
+<td>5</td>
+<td>5</td>
+<td></td>
+<td>28</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>無敵</td>
+<td>1</td>
+<td></td>
+<td>4</td>
+<td>3</td>
+<td>全身無敵…5＋膝上無敵…3</td>
+</tr>
+
+</table></div>
+
+<p>KOF2002のキムの屈みA＞近距離立ちCの目押し連続技</p>
+
+<div class="tw"><table>
+
+<tr>
+<td>攻撃判定</td>
+<td>4</td>
+<td>3</td>
+<td>5</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>19</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>ガード時</td>
+<td></td>
+<td>2</td>
+<td>7</td>
+<td>1</td>
+<td>22</td>
+<td>（？）</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>ヒット時</td>
+<td></td>
+<td>2</td>
+<td>32</td>
+<td>（？）</td>
+</tr>
+
+</table></div>
+
+（上の目押しのタイムチャートは間違いがあるかもしれません…）
+
+<h2>2003/12/25</h2>
+
+<p>　サイズを変更してみました（横：5＞10、縦：16＞24）。<br/>
+　これによって、1fしかない部分にも数値を入れることが可能になりました。また、無敵部位に関してもこの方法で表現できる可能性があります。</p>
+<p>KOF2002のジョーの近距離立ちD</p>
+
+<div class="tw"><table>
+
+<tr>
+<td>攻撃判定</td>
+<td>6</td>
+<td>8</td>
+<td>10</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>ガード時</td>
+<td></td>
+<td>7</td>
+<td>10</td>
+<td>7</td>
+<td>（ジョー最低で五分、最高で7f有利）</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>ヒット時</td>
+<td></td>
+<td>7</td>
+<td>12</td>
+<td>7</td>
+<td>（ジョー最低で2f有利、最高で9f有利）</td>
+</tr>
+
+</table></div>
+
+<p>KOF2002の炎のさだめのクリスの弱つきをつむほのお（サイズ変更版）</p>
+
+<div class="tw"><table>
+
+<tr>
+<td>攻撃判定</td>
+<td>7</td>
+<td>2</td>
+<td>5</td>
+<td>8</td>
+<td>19</td>
+<td></td>
+<td>11</td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>無敵</td>
+<td>9</td>
+<td>上半身9</td>
+</tr>
+
+</table></div>
+
+
+<h2>2003/12/22</h2>
+
+<p>　今まで作ってきたなかで感じた問題点を列記しておきます。</p>
+・1fを表示できていない（1f＝5ピクセルでやっているため）<br/>
+・無敵部位表示。<br/>
+・目盛り表示に関して。
+<p>KOF2002の舞の弱龍炎舞</p>
+発生…14、持続…3＋3＋4、硬直…19
+
+<div class="tw"><table>
+
+<tr>
+<td>攻撃判定</td>
+<td>14</td>
+<td>3</td>
+<td></td>
+<td>3</td>
+<td></td>
+<td>4</td>
+<td>19</td>
+</tr>
+
+</table></div>
+※無敵時間および部位は不明
+<p>KOF2002の炎のさだめのクリスの弱つきをつむほのお</p>
+発生…7、持続…2、5、8、硬直…19＋11（11は着地硬直）<br/>
+無敵は上半身に9
+
+<div class="tw"><table>
+
+<tr>
+<td>攻撃判定</td>
+<td>7</td>
+<td>2</td>
+<td>5</td>
+<td>8</td>
+<td>19</td>
+<td></td>
+<td>11</td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>無敵</td>
+<td>9</td>
+<td>上半身9</td>
+</tr>
+
+</table></div>
+
+<p>KOF2002のアンディのMAX超裂破弾</p>
+発生…1＋（暗転28）＋13<br/>
+そこから4、0、8、0、1、1、1、1、1、1、1、1、1、1、1、1、1、1、1、1、1、1、1、 1、1、1、1<br/>
+硬直…7＋34（34は着地硬直）
+
+<div class="tw"><table>
+
+<tr>
+<td>攻撃判定</td>
+<td></td>
+<td></td>
+<td>13</td>
+<td>4</td>
+<td></td>
+<td>8</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>7</td>
+<td></td>
+<td>34</td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>無敵</td>
+<td></td>
+<td></td>
+<td>17</td>
+<td>全身18</td>
+</tr>
+
+</table></div>
+
+<p>KOF2002のアンディの弱斬影拳</p>
+発生…10、持続（相手と一定間合い内に入ると肘打ち攻撃へ移行）…8、硬直…7
+
+<div class="tw"><table>
+
+<tr>
+<td>攻撃判定</td>
+<td>10</td>
+<td>8</td>
+<td>7</td>
+</tr>
+
+</table></div>
+
+<p>KOF2002のユリの近距離立ちD</p>
+発生…5、持続…8、硬直…13
+
+<div class="tw"><table>
+
+<tr>
+<td>攻撃判定</td>
+<td>5</td>
+<td>8</td>
+<td>13</td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>ガード時</td>
+<td></td>
+<td>7</td>
+<td>10</td>
+<td>7</td>
+<td>（ユリ最低で3f不利、最高で4f有利）</td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>ヒット時</td>
+<td></td>
+<td>7</td>
+<td>12</td>
+<td>7</td>
+<td>（ユリ最低で1f不利、最高で6f有利）</td>
+</tr>
+
+</table></div>
+
+<p>KOF2002のラルフの立ちC＋D</p>
+発生…16、持続…2＋4、硬直…12
+
+<div class="tw"><table>
+
+<tr>
+<td>攻撃判定</td>
+<td>16</td>
+<td>2</td>
+<td></td>
+<td>4</td>
+<td>12</td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>ガード時</td>
+<td></td>
+<td>5</td>
+<td>16</td>
+<td>5</td>
+<td>（ラルフ最低で4f有利、最高で9f有利）</td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>ヒット時</td>
+<td>ダウン</td>
+</tr>
+
+</table></div>
+
+
+<h2>2003/12/21</h2>
+
+<p>KOF2002の裏シェルミーのあんこくらいこうけん</p>
+発生…｛1＋3｝全身無敵＋1から、5、5、4、5、4、5、4、5、4ときて、硬直…34
+
+<div class="tw"><table>
+
+<tr>
+<td>攻撃判定</td>
+<td></td>
+<td></td>
+<td>4</td>
+<td>5</td>
+<td>4</td>
+<td>4</td>
+<td>5</td>
+<td>4</td>
+<td>5</td>
+<td>4</td>
+<td>5</td>
+<td>4</td>
+<td>34</td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>無敵</td>
+<td></td>
+<td></td>
+<td>3</td>
+<td>全身4</td>
+</tr>
+
+</table></div>
+
+<p>KOF2002のクローン京の近距離立ちC（修正版）</p>
+発生…3、持続3＋10、硬直10
+
+<div class="tw"><table>
+
+<tr>
+<td>攻撃判定</td>
+<td>3</td>
+<td>3</td>
+<td></td>
+<td>10</td>
+<td>10</td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>ガード時</td>
+<td></td>
+<td>12</td>
+<td>5</td>
+<td>12</td>
+<td>（クローン京最低で5f不利、最高で7f有利）</td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>ヒット時</td>
+<td></td>
+<td>12</td>
+<td>7</td>
+<td>12</td>
+<td>（クローン京最低で4f不利、最高で9f有利）</td>
+</tr>
+
+</table></div>
+
+<p>KOF’98のビリーの<span class="cmd">→</span>A</p>
+発生…7、1段目持続…2、2段目までの隙…11、2段目の持続…2、硬直…17
+
+
+<div class="tw"><table>
+
+<tr>
+<td>攻撃判定</td>
+<td>7</td>
+<td>2</td>
+<td>11</td>
+<td>2</td>
+<td>17</td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>ガード時(2段目空振り）</td>
+<td></td>
+<td></td>
+<td>16</td>
+<td></td>
+<td>（ビリー最低で14f不利、最高で13f不利）</td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>ヒット時（2段目空振り）</td>
+<td></td>
+<td></td>
+<td>18</td>
+<td></td>
+<td>（ビリー最低で12f不利、最高で10f不利）</td>
+</tr>
+
+</table></div>
+<br/>
+<div class="tw"><table>
+
+<tr>
+<td>ガード時(2段目もガード）</td>
+<td></td>
+<td></td>
+<td>29</td>
+<td>（ビリー1f不利）</td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>ヒット時（2段目もヒット）</td>
+<td></td>
+<td></td>
+<td>31</td>
+<td>（ビリー1f有利）</td>
+</tr>
+
+</table></div>
+
+<p>KOF2002のビリーの<span class="cmd">→</span>A（修正版）</p>
+発生…7、1段目持続…2、2段目までの隙…11、2段目の持続…2、硬直…14
+
+<div class="tw"><table>
+
+<tr>
+<td>攻撃判定</td>
+<td>7</td>
+<td>2</td>
+<td>11</td>
+<td>2</td>
+<td>14</td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>ガード時(2段目空振り）</td>
+<td></td>
+<td></td>
+<td>16</td>
+<td></td>
+<td>（ビリー最低で11f不利、最高で10f不利）</td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>ヒット時（2段目空振り）</td>
+<td></td>
+<td></td>
+<td>18</td>
+<td></td>
+<td>（ビリー最低で9f不利、最高で8f不利）</td>
+</tr>
+
+</table></div>
+<br/>
+<div class="tw"><table>
+
+<tr>
+<td>ガード時(2段目もガード）</td>
+<td></td>
+<td></td>
+<td>29</td>
+<td>（ビリー2f有利）</td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>ヒット時（2段目もヒット）</td>
+<td></td>
+<td></td>
+<td>31</td>
+<td>（ビリー4f有利）</td>
+</tr>
+
+</table></div>
+
+<p>KOF2002のアテナの近距離立ちD（修正版）</p>
+発生…6、持続…6、硬直…6
+
+<div class="tw"><table>
+
+<tr>
+<td></td>
+<td>発生</td>
+<td>持続</td>
+<td>硬直</td>
+</tr>
+<tr>
+<td>攻撃判定</td>
+<td>6</td>
+<td>6</td>
+<td>6</td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>ガード時</td>
+<td></td>
+<td>5</td>
+<td>12</td>
+<td>5</td>
+<td>（アテナ最低で6f有利、最高で11f有利）</td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>ヒット時</td>
+<td></td>
+<td>5</td>
+<td>14</td>
+<td>5</td>
+<td>（アテナ最低で8f有利、最高で13f有利）</td>
+</tr>
+
+</table></div>
+
+
+<h2>2003/12/20</h2>
+
+<p>KOF2002のクローン京の近距離立ちC</p>
+発生…3、持続3＋10、硬直10
+
+<div class="tw"><table>
+
+<tr>
+<td>攻撃判定</td>
+<td>3</td>
+<td>3</td>
+<td></td>
+<td>10</td>
+<td>10</td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>ガード時</td>
+<td></td>
+<td>13</td>
+<td>4</td>
+<td>13</td>
+<td>（クローン京最低で6f不利、最高で7f有利）</td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>ヒット時</td>
+<td></td>
+<td>13</td>
+<td>6</td>
+<td>13</td>
+<td>（クローン京最低で4f不利、最高で9f有利）</td>
+</tr>
+
+</table></div>
+
+<p>KOF2002のビリーの<span class="cmd">→</span>A</p>
+発生…7、1段目持続…2、2段目までの隙…11、2段目の持続…2、硬直…14
+
+<div class="tw"><table>
+
+<tr>
+<td>攻撃判定</td>
+<td>7</td>
+<td>2</td>
+<td>11</td>
+<td>2</td>
+<td>14</td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>ガード時(2段目空振り）</td>
+<td></td>
+<td>2</td>
+<td>15</td>
+<td>2</td>
+<td>（ビリー最低で10f不利、最高で8f不利）</td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>ヒット時（2段目空振り）</td>
+<td></td>
+<td>2</td>
+<td>17</td>
+<td>2</td>
+<td>（ビリー最低で8f不利、最高で6f不利）</td>
+</tr>
+
+</table></div>
+<br/>
+<div class="tw"><table>
+
+<tr>
+<td>ガード時(2段目もガード）</td>
+<td></td>
+<td>2</td>
+<td>29</td>
+<td>（ビリー2f有利）</td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>ヒット時（2段目もヒット）</td>
+<td></td>
+<td>2</td>
+<td>31</td>
+<td>（ビリー4f有利）</td>
+</tr>
+
+</table></div>
+
+<p>KOF2002のアテナの近距離立ちD</p>
+発生…6、持続…6、硬直…6
+
+<div class="tw"><table>
+
+<tr>
+<td></td>
+<td>発生</td>
+<td>持続</td>
+<td>硬直</td>
+</tr>
+<tr>
+<td>攻撃判定</td>
+<td>6</td>
+<td>6</td>
+<td>6</td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>ガード時</td>
+<td></td>
+<td>6</td>
+<td>11</td>
+<td>6</td>
+<td>（アテナ最低で5f有利、最高で11f有利）</td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>ヒット時</td>
+<td></td>
+<td>6</td>
+<td>13</td>
+<td>6</td>
+<td>（アテナ最低で7f有利、最高で13f有利）</td>
+</tr>
+
+</table></div>
+
+
+<h2>2003/12/18</h2>
+
+<p>KOF2002のテリーの通常版弱パワーゲイザー（2003/12/16のを少し改良）</p>
+発生…14（全身無敵）＋3（腰上無敵）、持続…11、硬直…43
+
+<div class="tw"><table>
+
+<tr>
+<td></td>
+<td colspan="2">発生</td>
+<td>持続</td>
+<td>硬直</td>
+</tr>
+<tr>
+<td>攻撃判定</td>
+<td></td>
+<td>17</td>
+<td>11</td>
+<td>43</td>
+</tr>
+
+</table></div>
+<div class="tw"><table>
+
+<tr>
+<td>無敵</td>
+<td></td>
+<td>14</td>
+<td>3</td>
+<td>全身14/上半身3</td>
+</tr>
+
+</table></div>
+
+<div>
+<div><a href="/">トップページ</a>へ</div>
+</div>
+<nav class="foot-nav"><a href="/kof02-top.html">KOF2002のトップへ</a><a href="/kof-top.html">KOFシリーズへ</a><a href="/">入口へ</a></nav>
+</div></main>
+<footer><div class="wrap">Come sono bravo?｜作成：MOT</div></footer>
+</body>
+</html>

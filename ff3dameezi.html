@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>餓狼3のダメージ計算について｜Come sono bravo?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/csb.css">
+</head>
+<body>
+<header><div class="wrap">
+<p class="crumb"><a href="/">Come sono bravo?</a> › <a href="/ff3-top.html">餓狼伝説3</a></p>
+<p class="kicker">餓狼伝説3</p>
+<h1>餓狼3のダメージ計算について</h1>
+<p class="lead">作成者：MOT ／ 作成：？ ／ 発表：2004/5/14</p>
+</div></header>
+<main><div class="wrap">
+<p>餓狼伝説3のダメージ計算について</p>
+
+<p>（参考：オールアバウト餓狼伝説3）</p>
+<p>餓狼伝説3のダメージにはきちんとした法則が存在する。決してランダムの要素はないし、キャラによる防御力などといったものも存在しない。<br/>
+（ただし、気絶耐久力についてはキャラ別に異なる）</p>
+<p>残り体力およびラウンドによる補正 </p>
+
+<div class="tw"><table>
+<tr>
+<td>残り体力</td>
+<td>通常時</td>
+<td>攻撃側ラウンド先取時</td>
+</tr>
+<tr>
+<td>MAX～40</td>
+<td>技の攻撃力×1.000</td>
+<td>技の攻撃力×0.750</td>
+</tr>
+<tr>
+<td>39～20</td>
+<td colspan="2">技の攻撃力×0.750</td>
+</tr>
+<tr>
+<td>19～0</td>
+<td colspan="2">技の攻撃力×0.500</td>
+</tr>
+</table></div>
+
+<p>連続技による補正 </p>
+
+<div class="tw"><table>
+<tr>
+<td>ヒット状況</td>
+<td>補正</td>
+</tr>
+<tr>
+<td>単発ヒット</td>
+<td>技の攻撃力×1.000</td>
+</tr>
+<tr>
+<td>2連続ヒット</td>
+<td>技の攻撃力×0.875</td>
+</tr>
+<tr>
+<td>3連続ヒット以降</td>
+<td>技の攻撃力×0.750</td>
+</tr>
+</table></div>
+
+<p>ケズリによる補正 </p>
+
+<div class="tw"><table>
+<tr>
+<td>必殺技（超必殺技含む）をガードしたときに与えるダメージ</td>
+<td>技の攻撃力×0.0625 (1/16)</td>
+</tr>
+</table></div>
+
+<p>カウンターヒットによる補正</p>
+
+<div class="tw"><table>
+<tr>
+<td>カウンターヒット時のダメージ</td>
+<td>技の攻撃力＋相手の技の攻撃力×0.25</td>
+</tr>
+</table></div>
+
+<p>上の要素がすべて掛けられてダメージが決定する。<br/>
+すなわち、実際に与えるダメージは、<br/>
+「技の攻撃力×残り体力およびラウンドによる補正×連続技による補正×カウンターヒットによる補正」<br/>
+または、<br/>
+「技の攻撃力×残り体力およびラウンドによる補正×ケズリによる補正」<br/>
+と、いうことになる。<br/>
+<br/>
+ここで重要なのは、「連続ガードの状態でも、ケズリダメージには連続技のダメージ補正は適用されない」ということである。<br/>
+また、「計算は小数点以下を切り捨てる。但し、計算結果が1未満になった場合は1とする。」</p>
+<nav class="foot-nav"><a href="/ff3-top.html">餓狼伝説3のトップへ</a><a href="/kof-top.html">KOFシリーズへ</a><a href="/">入口へ</a></nav>
+</div></main>
+<footer><div class="wrap">Come sono bravo?｜作成：MOT</div></footer>
+</body>
+</html>

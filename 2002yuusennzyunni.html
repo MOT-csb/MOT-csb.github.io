@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KOF2002の各行動の優先順位の分析について｜Come sono bravo?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/csb.css">
+</head>
+<body>
+<header><div class="wrap">
+<p class="crumb"><a href="/">Come sono bravo?</a> › <a href="/kof-top.html">KOF</a> › <a href="/kof02-top.html">KOF2002</a></p>
+<p class="kicker">KOF2002</p>
+<h1>KOF2002の各行動の優先順位の分析について</h1>
+<p class="lead"></p>
+</div></header>
+<main><div class="wrap">
+<p>
+作成者：MOT
+
+<textarea cols="35" name="S1" rows="4">作成：2003/6/2
+最終更新：2007/12/21
+更新：2007/12/18
+↑全面的に再編集開始
+更新：2005/5/2
+↑主にゲイザー部分のコマンドについてを更新
+更新：2004/11/7
+更新：2003/12/14
+更新：2003/12/11
+↑ho-rinさんの書き込みを見て必殺技コマンドの簡略化を少し分析
+更新：2003/12/7
+更新：2003/11/30
+更新：2003/11/27
+更新：2003/10/31
+↑見やすくしたつもり
+更新：2003/9/23
+更新：2003/9/17
+更新：2003/9/10
+更新：2003/9/7
+更新：2003/9/6
+</textarea> </p>
+<p>（2003/12/9　項目が多くなりすぎているので、分割する予定です。）
+
+（2007/12/18　分割前に内容を最新のものに編集することにしました。）</p>
+<p>［ボタン自体の優先順位］</p>
+スタートボタン＞A＞B＞C＞D（セレクトボタンは不明）
+<p>［各行動の優先順位］</p>
+
+<div class="tw"><table>
+
+<tr>
+<td>優先度</td>
+<td>行動</td>
+<td>補足</td>
+</tr>
+<tr>
+<td>高</td>
+<td>緊急回避（AB同時押し）<br/>
+      立ちC＋D（CD同時押し）</td>
+<td>どちらも余計なボタンを押すと成立しない。</td>
+</tr>
+<tr>
+<td>↓</td>
+<td>挑発（スタートボタン）</td>
+<td>立っている状態で4orNor6でないと出ない。</td>
+</tr>
+<tr>
+<td>↓</td>
+<td>MAX発動（BC同時押し）</td>
+<td>余計なボタンを押すと成立しない</td>
+</tr>
+<tr>
+<td>↓</td>
+<td>必殺技</td>
+<td>余計なボタンを押しっぱなしにしていると出ない。</td>
+</tr>
+<tr>
+<td>↓</td>
+<td>特殊技</td>
+<td>動作開始までタイムラグあり。</td>
+</tr>
+<tr>
+<td>↓</td>
+<td>通常投げ</td>
+<td>動作開始までタイムラグあり。</td>
+</tr>
+<tr>
+<td>低</td>
+<td>通常技</td>
+<td>動作開始までタイムラグあり。</td>
+</tr>
+
+</table></div>
+
+になっていると思われる。
+<p>［各必殺技コマンドの簡略化関係について］</p>
+必殺技のコマンド入力については、’99とほぼ同一の仕組みの様です。詳しくは<a href="http://www28.atwiki.jp/kof2002/pages/604.html">こちら</a>を参照（未完成）。
+<p>［必殺技コマンドを成立させた後のレバー受付について］</p>
+　KOFシリーズは’98以降必殺技コマンドを成立させた後レバーを動かすとコマンド成立が認められなくなることがあります。これは連続技を狙う際の分割入力に活用できると思います。
+
+<div class="tw"><table>
+<col span="1"/>
+
+<tr>
+<th>コマンド</th>
+<th>結果</th>
+</tr>
+<tr>
+<td>コマンド入力の最後が<span class="cmd">→</span>になる技<br/>
+      （<span class="cmd">↓</span><span class="cmd">↘</span><span class="cmd">→</span>や<span class="cmd">←</span><span class="cmd">↙</span><span class="cmd">↓</span><span class="cmd">↘</span><span class="cmd">→</span>など）</td>
+<td>・<span class="cmd">→</span>に入れたあと、<span class="cmd">↖</span>・<span class="cmd">←</span>・<span class="cmd">↙</span>・<span class="cmd">↓</span>・<span class="cmd">↘</span>に入れてボタンを押すと必殺技は出ず、<span class="cmd">N</span>・<span class="cmd">→</span>・<span class="cmd">↗</span>・<span class="cmd">↑</span>に入れてボタンを押すと出せる。<br/>
+      ・具体例：<span class="cmd">↓</span><span class="cmd">↘</span><span class="cmd">→</span>＋ボタンの技は、<span class="cmd">↓</span><span class="cmd">↘</span><span class="cmd">→</span><span class="cmd">N</span>＋ボタンでも出てしまうが、<span class="cmd">↓</span><span class="cmd">↘</span><span class="cmd">→</span><span class="cmd">←</span>＋ボタンとすると暴発を抑えられる。<br/>
+      ・よって、紅丸で近距離立ちC＞弱雷光拳を出したい場合は<span class="cmd">↓</span><span class="cmd">↘</span><span class="cmd">→</span><span class="cmd">←</span>＋C<span class="cmd">↓</span><span class="cmd">↘</span><span class="cmd">→</span>＋Aとすると出せる（はず）。<br/>
+      ・逆のコマンド（<span class="cmd">↓</span><span class="cmd">↙</span><span class="cmd">←</span>や<span class="cmd">→</span><span class="cmd">↘</span><span class="cmd">↓</span><span class="cmd">↙</span><span class="cmd">←</span>）は全て左右逆の結果になる。<br/>
+<br/>
+      ・下に図にしてみる。<span class="cmd">↓</span><span class="cmd">↘</span><span class="cmd">→</span>の後入力が残る部分は○で、受け付けなくなる部分は×にしている。
+<div class="tw"><table>
+
+<tr>
+<td>×</td>
+<td>○</td>
+<td>○</td>
+</tr>
+<tr>
+<td>×</td>
+<td>○</td>
+<td>○</td>
+</tr>
+<tr>
+<td>×</td>
+<td>×</td>
+<td>×</td>
+</tr>
+
+</table></div>
+</td>
+</tr>
+<tr>
+<td><span class="cmd">→</span><span class="cmd">↓</span><span class="cmd">↘</span>系</td>
+<td>・コマンド入力完成後、受付時間以内ならどこにレバーを入れても出てくれる。</td>
+</tr>
+<tr>
+<td><span class="cmd">↓</span><span class="cmd">↙</span><span class="cmd">←</span><span class="cmd">↙</span><span class="cmd">→</span>系</td>
+<td>・コマンド入力完成後、受付時間以内ならどこにレバーを入れても出てくれる。</td>
+</tr>
+<tr>
+<td>タメ系</td>
+<td>・最後の部分＝タメ開放部分のレバーを離しつつボタンを押しても成立しません。<br/>
+      ・またタメ開放後のボタンを押すまでの猶予時間も、普通のコマンドタイプの必殺技に比べ、かなり短いです。</td>
+</tr>
+
+</table></div>
+
+<p>［各動作の入力受付について］</p>
+
+<div class="tw"><table>
+
+<tr>
+<td>動作名</td>
+<td>説明</td>
+</tr>
+<tr>
+<td>前進</td>
+<td>6入れっぱなし</td>
+</tr>
+<tr>
+<td>後退</td>
+<td>4入れっぱなし</td>
+</tr>
+<tr>
+<td>ダッシュ</td>
+<td>6N6</td>
+</tr>
+<tr>
+<td>バックステップ</td>
+<td>4N4</td>
+</tr>
+<tr>
+<td>ジャンプ全般</td>
+<td>ジャンプの隙：1F（相手を飛び越した場合も変化なし、この隙は投げられ判定なし）<br/>
+      ジャンプ予備動作は原則としてどのジャンプも同様。ただし先行入力中大ジャンプ時は予備動作がなくなる。<br/>
+      ジャンプ予備動作はジャンプ攻撃でキャンセル可能。</td>
+</tr>
+<tr>
+<td>小ジャンプ</td>
+<td>一瞬8要素</td>
+</tr>
+<tr>
+<td>中ジャンプ</td>
+<td>2要素→一瞬7or9</td>
+</tr>
+<tr>
+<td>ノーマルジャンプ</td>
+<td>8要素入れっぱなし</td>
+</tr>
+<tr>
+<td>大ジャンプ</td>
+<td>2要素→7or9入れっぱなし</td>
+</tr>
+<tr>
+<td>通常技</td>
+<td>地上でA～Dの任意のボタン</td>
+</tr>
+<tr>
+<td>ジャンプ攻撃</td>
+<td>空中でA～Dの任意のボタン</td>
+</tr>
+<tr>
+<td>ふっとばし攻撃</td>
+<td>正式コマンド…<span class="cmd">←</span>or<span class="cmd">N</span>or<span class="cmd">→</span>＋CDのみ同時押し</td>
+</tr>
+<tr>
+<td>特殊技</td>
+<td>特定コマンド</td>
+</tr>
+<tr>
+<td>通常投げ</td>
+<td>相手の近くで4or6＋CorD</td>
+</tr>
+<tr>
+<td>必殺技</td>
+<td>特定コマンド</td>
+</tr>
+<tr>
+<td>超必殺技</td>
+<td>1ゲージある場合に特定コマンド</td>
+</tr>
+<tr>
+<td>MAX超必殺技</td>
+<td>MAX発動中にさらに1ゲージある場合に特定コマンド</td>
+</tr>
+<tr>
+<td>MAX2</td>
+<td>体力1／4以下＆MAX発動中にさらに1ゲージある場合に特定コマンド</td>
+</tr>
+<tr>
+<td>緊急回避</td>
+<td>（前方）…Nor<span class="cmd">→</span>＋ABのみ同時押し<br/>
+      （後方）…<span class="cmd">←</span>＋ABのみ同時押し</td>
+</tr>
+<tr>
+<td>MAX発動</td>
+<td><span class="cmd">←</span>orNor<span class="cmd">→</span>＋BCのみ同時押し</td>
+</tr>
+<tr>
+<td>クイックMAX発動</td>
+<td>相手に地上技（通常技、特殊技、ガードキャンセルふっとばし攻撃）をヒットorガードさせ、そのヒットストップ中にBCのみ同時押し</td>
+</tr>
+<tr>
+<td>ガードキャンセル緊急回避</td>
+<td>相手の攻撃をガードし、そのヒットストップ中にABのみ同時押し</td>
+</tr>
+<tr>
+<td>ガードキャンセルふっとばし攻撃</td>
+<td>相手の攻撃をガードじ、そのヒットストップ中にCDのみ同時押し</td>
+</tr>
+<tr>
+<td>クイック緊急回避</td>
+<td>相手に地上技（通常技、特殊技、ガードキャンセルふっとばし攻撃）をヒットorガードさせ、そのヒットストップ中にABのみ同時押し</td>
+</tr>
+<tr>
+<td>どこでもキャンセル</td>
+<td>・地上通常技を出している最中に、任意のタイミングでどこでもキャンセル対応技入力。<br/>
+      ・特殊技、ジャンプ攻撃、ガードキャンセルふっとばし攻撃、必殺技を相手にヒットorガードさせた直後にどこでもキャンセル対応技入力</td>
+</tr>
+<tr>
+<td>スーパーキャンセル</td>
+<td>スーパーキャンセル対応技を相手にヒットorガードさせた直後に超必殺技orMAX超必殺技</td>
+</tr>
+
+</table></div>
+
+<p> ［入力に関する調査結果］ </p>
+・同時押し行動の猶予：3フレーム。<br/>
+↑同時押しとは、緊急回避、MAX発動、ふっとばし攻撃、受け身、ガードキャンセル緊急回避、ガードキャンセルふっとばし攻撃のこと。
+・ただし、MAX超必殺技やMAX2の同時押しは基本的に猶予なし（キャンセル時に先行入力＋押しっぱなししていればOK）。
+
+<p>（必殺技の封印について）
+
+ボタンを押しっぱなしにしておくことで必殺技が出せなくなる、いわゆる封印のテクニックのこと。
+
+詳しく言えば、レバー部分が2つ以上の場合のみ適用されます。
+
+⇒よって、必殺技の追加入力に見られるレバー1つ＋ボタンで出せる必殺技は別のボタンを押しっぱなしにしていても出てしまいます。</p>
+
+・MAX版に対応している超必殺技は、MAX版が出せない時にMAX版のコマンド入力をしても、ノーマル版は出せない<br/>
+（MAX版に対応していない超必殺技（アンディの斬影流星拳など）はゲージが1以上あるときにACorBD同時押しでもでる）
+
+・テリーでMAX発動中に近立ちC≫<span class="cmd">↓</span><span class="cmd">←</span><span class="cmd">→</span>＋AC同時押しを入力しても、ゲージがなければMAXゲイザーが出ないどころかノーマル版のゲイザーも出せません。<br/>
+・これは、2000で可能だったパオのいくよキャンのような特殊キャンセルを防止するためのものだと思われます。<br/>
+↑その証拠（？）に、2001で既に不可能になっています。<br/>
+・ちなみに、キムのMAX超必殺技である空中鳳凰脚は通常の鳳凰脚とは完全に別扱いの技らしく、通常の鳳凰脚はBD同時押しでも出せます。
+
+・ノーマル版の必殺技も出せない時に入力すると、コマンドの重複している必殺技は出せない
+
+・庵でゲージのないときに<span class="cmd">↓</span><span class="cmd">↘</span><span class="cmd">→</span><span class="cmd">↘</span><span class="cmd">↓</span><span class="cmd">↙</span><span class="cmd">←</span>＋Aと入力しても弱葵花は出ない。<br/>
+（これはおそらく『必殺技』全ての入力受付を終了して後は普通に受付をしているためと考えられる。）<br/>
+・裏クリスでゲージのないときに<span class="cmd">↓</span><span class="cmd">↙</span><span class="cmd">←</span><span class="cmd">↙</span><span class="cmd">↓</span><span class="cmd">↘</span><span class="cmd">→</span>＋Aと入力すると弱かがみをほふるほのおでもなく<span class="cmd">→</span>Aが出る。<br/>
+・裏クリスでゲージが1ある時に同じく裏クリスで<span class="cmd">←</span><span class="cmd">↙</span><span class="cmd">↓</span><span class="cmd">↘</span><span class="cmd">→</span>＋BC同時押しをするとMAX発動になる。<br/>
+・裏クリスでゲージのないときに<span class="cmd">↓</span><span class="cmd">↙</span><span class="cmd">←</span><span class="cmd">↙</span><span class="cmd">↓</span><span class="cmd">↘</span><span class="cmd">→</span>＋AB同時押しをすると緊急回避になる。
+
+・キャンセル緊急回避・キャンセルクイック発動は屈み状態でも出せる（似非南原さん情報）
+
+・しゃがみ状態でAB同時押しを連打すると、しゃがみAがガード／ヒット時のみ、キャンセル前転が発動する。<br/>
+・しゃがみ状態でBC同時押しを連打すると、しゃがみBがガード／ヒット時のみ、キャンセルクイック発動が発動する。
+
+・投げ抜けは関係ないボタンを押しても認められるため、CD同時押し、ACD同時押し、BCD同時押し、ABCD同時押しでも可能。
+・ガード硬直中にABC・ABCD・ACD・BCDを同時押ししてもGC緊急回避にもGCC＋Dにもなりません。（＜’99でも不可能）
+・アンディでJ攻撃ヒットから<span class="cmd">←</span><span class="cmd">↙</span><span class="cmd">↓</span><span class="cmd">↘</span><span class="cmd">→</span>＋AorCと入力すると［近距離立ちAor近距離立ちC（1段目）］≫撃壁背水掌になってくれる。これはJ攻撃 ヒット中に撃壁のコマンドが成立しても相手がJ攻撃ののけぞり中でコマンド投げが成立しなくて通常技が出るがその通常技のキャンセル受付中に撃壁のコマン ドが残っていて成立するためだと思われる。なお、この入力法を使うと近立ちC（1段目）≫斬影拳が暴発しないので結構便利。
+<div>各作品の優先順位の分析（<a href="94yuusennzyunni.html">KOF’94</a>・<a href="96yu-zyunni.html">KOF’96</a>・<a href="98yu-zyunni.html">KOF’98</a>・<a href="99yu-zyunni.html">KOF’99</a>）へ<br/>
+<a href="kof-top.html">KOFシリーズトップ</a>へ<br/>
+<a href="kof02-top.html">KOF2002トップ</a>へ<br/>
+<a href="/">トップページ</a>へ</div>
+
+<h2>以下、以前の調査結果など</h2>
+
+<p>［わかっていること］</p>
+
+<div class="tw"><table>
+
+<tr>
+<td>立ちC＋D</td>
+<td>＞必殺技</td>
+<td>　</td>
+<td>＞特殊技</td>
+<td>＞通常投げ</td>
+<td>＞通常技</td>
+</tr>
+<tr>
+<td>　</td>
+<td>＞必殺技</td>
+<td>＞MAX発動</td>
+<td>＞特殊技</td>
+<td>＞通常投げ</td>
+<td>＞通常技</td>
+</tr>
+<tr>
+<td>緊急回避（A＋B）</td>
+<td>＞必殺技</td>
+<td>　</td>
+<td>＞特殊技</td>
+<td>　</td>
+<td>＞通常技</td>
+</tr>
+
+</table></div>
+
+<p>［各行動の優先順位の分析］</p>
+
+<div class="tw"><table>
+<col span="1"/>
+
+<tr>
+<td>優先順位</td>
+<td>理由（実験結果）</td>
+</tr>
+<tr>
+<td>特殊技＞通常技</td>
+<td>・テリーで<span class="cmd">↘</span>＋ABCと入力すると屈みAでなくて<span class="cmd">↘</span>Cが出る<br/>
+      ・ジョーで<span class="cmd">↘</span>＋ABCと入力すると屈みAでなくて<span class="cmd">↘</span>Bが出る</td>
+</tr>
+<tr>
+<td>通常投げ＞通常技</td>
+<td>・<span class="cmd">→</span>＋A＋Cなどで通常投げが出る</td>
+</tr>
+<tr>
+<td>必殺技＞通常投げ＞通常技</td>
+<td>・アンディで相手の近くで<span class="cmd">←</span><span class="cmd">↙</span><span class="cmd">↓</span><span class="cmd">↘</span><span class="cmd">→</span>＋Dで立ちDでもD投げでもなく強空破弾が出る</td>
+</tr>
+<tr>
+<td>特殊技＞通常投げ</td>
+<td>・特殊技と通常投げを同時に入力すると特殊技になるため</td>
+</tr>
+<tr>
+<td>必殺技＞特殊技</td>
+<td>・アンディで<span class="cmd">←</span><span class="cmd">↙</span><span class="cmd">↓</span><span class="cmd">↘</span><span class="cmd">→</span>＋Bと入力すると<span class="cmd">→</span>Bでなくて弱空破弾が出る</td>
+</tr>
+<tr>
+<td>立ちC＋D＞通常技</td>
+<td>・当たり前（そうでないと出ないので）。</td>
+</tr>
+<tr>
+<td>立ちC＋D＞通常投げ</td>
+<td>・相手の近くで<span class="cmd">→</span>＋C＋Dとすると通常投げにならずに立ちC＋Dになる。</td>
+</tr>
+<tr>
+<td>立ちC＋D＞特殊技</td>
+<td>・地上では特殊技は立ちC＋Dとコマンドがかぶらないため調べられていないが、京で奈落落としをCD同時押しで入力したところ、空中C＋Dになったため、おそらく地上で立ちC＋D＞特殊技もいえる。</td>
+</tr>
+<tr>
+<td>立ちC＋D＞必殺技</td>
+<td>・必殺技コマンドと立ちC＋Dをかぶらせると、原則として必殺技は出ない。<br/>
+      ↑例外として紅丸の立ちC＋Dは必殺技が優先されるが、これは裏キャンの可能性が高い。<br/>
+      ・ジョーでMAX発動中に<span class="cmd">←</span><span class="cmd">↙</span><span class="cmd">↓</span><span class="cmd">↘</span><span class="cmd">→</span>＋C＋Dと入力したところ、立ちC＋Dのでがかりをどこでもキャンセルしての強スラッシュキックになった（ハリケーンはどこでもキャンセル対応技でないので出ない）。</td>
+</tr>
+<tr>
+<td>緊急回避＞必殺技<br/>
+      必殺技＞MAX発動</td>
+<td>・以下の必殺技をAB同時押しおよびBC同時押しで試した。<br/>
+      アンディの飛翔拳・ジョーのハリケーンアッパー・ケンスウの超球弾・テリーのバーンナックル<br/>
+      （ときどき必殺技が出ますが、これはおそらく同時押しの失敗だと思われます。）</td>
+</tr>
+<tr>
+<td>MAX発動＞特殊技＞通常投げ</td>
+<td>・アンディとジョーを使用して相手の近くで<span class="cmd">→</span>＋BC同時押しをしてみた結果、MAX発動になった。</td>
+</tr>
+<tr>
+<td>緊急回避＞特殊技</td>
+<td>・いろんなキャラで<span class="cmd">→</span>＋AB同時押しをしてみた結果、緊急回避（前方）になるので。</td>
+</tr>
+
+</table></div>
+
+<p>（以下、’99の各行動の優先順位についてのページから必殺技の入力受付の部分をコピー＋α）</p>
+<p>［中or大Jの入力方法の分析］</p>
+・中or大Jはレバー<span class="cmd">↓</span>要素（<span class="cmd">↙</span>or<span class="cmd">↓</span>or<span class="cmd">↘</span>）からレバー<span class="cmd">↑</span>要素（<span class="cmd">↖</span>or<span class="cmd">↑</span>or<span class="cmd">↗</span>）と入れれば可能。<br/>
+途中で<span class="cmd">N</span>を通す必要はなく、<span class="cmd">↓</span>要素と<span class="cmd">↑</span>要素はどの組み合わせでもいい。<br/>
+よって、前方大Jとしたい場合は<span class="cmd">↘</span><span class="cmd">↗</span>入れっぱなしで可能。<br/>
+※しかし垂直中or大Jは小or大Jとまったく見分けがつかない、残像もつかないし。もしかしたら中or大Jと扱われてないかも。もしそうなら先行入力法を使う時に影響してきますね。
+<p>［メモ］</p>
+・<span class="cmd">→</span><span class="cmd">↓</span><span class="cmd">↘</span>のコマンドは<span class="cmd">↘</span>に入れた後、少しの間は受付猶予があるため、相手の飛び込みに対して早く<span class="cmd">→</span><span class="cmd">↓</span><span class="cmd">↘</span>を入力してしまった場合でも焦らずに<span class="cmd">↘</span>を入れっぱなしにしてタイミングを合わせてボタンを押せばちょうどいいタイミングで出せる。<br/>
+・最後の<span class="cmd">↘</span>で姿勢を低くして引きつけてからボタンを押すことで、姿勢の低い状態から無敵技を出すことが可能になる（スト2シリーズのサガット（背が高い）では必須テクニックでしたね。）
+・K9999のゲージのある時の屈伸は強力だが、なぜ可能かというと、<span class="cmd">→</span><span class="cmd">↘</span><span class="cmd">↓</span><span class="cmd">↙</span><span class="cmd">←</span>入力の直後に<span class="cmd">→</span><span class="cmd">↘</span><span class="cmd">↓</span><span class="cmd">↙</span><span class="cmd">←</span>とすぐに入力することで<span class="cmd">↙</span>と<span class="cmd">→</span>のコマンド入力の隙間を短くできるので、ほぼ常に<span class="cmd">↙</span><span class="cmd">→</span><span class="cmd">↘</span><span class="cmd">↓</span><span class="cmd">↙</span><span class="cmd">←</span>まで成立させ続けておけるのがある。おそらく上述の<span class="cmd">↘</span>入れっぱなしと組み合わせると強力と思われる。
+・アルカディアやKTKさんのサイトで紹介されているいわゆる立ちMAX龍虎乱舞も強虎煌拳＝<span class="cmd">→</span>で終わるコマンドの必殺技がレバーを<span class="cmd">↖</span>or<span class="cmd">←</span>or<span class="cmd">↙</span>or<span class="cmd">↓</span>or<span class="cmd">↘</span>に入れると出なくなるという現象を利用して、強虎煌拳（<span class="cmd">↓</span><span class="cmd">↘</span><span class="cmd">→</span>＋C）を暴発させることなく出せるようにしていると思われる。<br/>
+↑Cを押してから遠Cが出る前の同時押し猶予中にコマンドを完成させているため。
+・いわゆるボタン順押し系で出せる技（超必殺技＆MAX2に多い）は、受付時間が非常に長いため、マリーのM．D．S．などは分割入力がしやすい。
+・<span class="cmd">↓</span><span class="cmd">↙</span><span class="cmd">←</span><span class="cmd">↙</span><span class="cmd">↓</span><span class="cmd">↘</span><span class="cmd">→</span>系の必殺技は<span class="cmd">↓</span><span class="cmd">←</span><span class="cmd">↓</span><span class="cmd">→</span>で出せるため、<span class="cmd">↓</span><span class="cmd">↙</span><span class="cmd">←</span><span class="cmd">↓</span><span class="cmd">↙</span><span class="cmd">←</span>…と繰り返し入力しておき、出したい時に<span class="cmd">→</span>＋ボタンを押せば簡単に出せる。
+・家庭用のプラクティスモードでセレクトボタンとAボタンを同時押しすると、一瞬だけ設定画面が見えて、すぐに戻る。セレクトボタンと他のボタンと同時押しした場合は設定画面に移行した後そのままになる。
+・ジョーで屈みABD同時押しを連打すると屈みA＞クイック緊急回避にはならずに屈みA＞爆裂拳になる。
+・地上C＋Dの正式コマンド…<span class="cmd">←</span>or<span class="cmd">N</span>or<span class="cmd">→</span>＋CDのみ同時押し
+＞アンディの<span class="cmd">←</span><span class="cmd">↙</span><span class="cmd">↓</span><span class="cmd">↘</span><span class="cmd">→</span>＋BCD同時押しで優先順位を調べたところ、弱空破弾になる。<br/>
+立ちC＋Dの方が必殺技よりも優先順位が高いことから考えると、CDはAやBが同時に押されると認識されないみたいです。
+
+・クイック発動は調べなおし
+・テリーの屈みB＞<span class="cmd">↘</span>C＞パワーゲイザーが『<span class="cmd">↘</span>入れっぱなしでB＞C＞<span class="cmd">↓</span><span class="cmd">↙</span><span class="cmd">←</span><span class="cmd">→</span>＋AorC』という入力で出せる。<br/>
+・アンディの斬影流星拳＆超裂破弾は公式コマンドは<span class="cmd">↓</span><span class="cmd">↙</span><span class="cmd">←</span><span class="cmd">↙</span><span class="cmd">↓</span><span class="cmd">↘</span><span class="cmd">→</span>だが実は今回の受付は<span class="cmd">↓</span><span class="cmd">↙</span><span class="cmd">←</span><span class="cmd">↙</span><span class="cmd">→</span>になっているようで、<span class="cmd">↓</span><span class="cmd">←</span><span class="cmd">→</span>で出せる。
+MAX2は基本的に、すべて省略不可能です。<br/>
+ただ、キムのMAX2は246＋ABCD同時押しに省略できることを確認。
+<div></div>
+<nav class="foot-nav"><a href="/kof02-top.html">KOF2002のトップへ</a><a href="/kof-top.html">KOFシリーズへ</a><a href="/">入口へ</a></nav>
+</div></main>
+<footer><div class="wrap">Come sono bravo?｜作成：MOT</div></footer>
+</body>
+</html>

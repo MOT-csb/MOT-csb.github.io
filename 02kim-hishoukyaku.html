@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KOF2002 キム対策：飛翔脚ガード後の反撃｜Come sono bravo?</title>
+<meta name="description" content="KOF2002 キムの飛翔脚をガードした後の反撃は、キム側のヒットフラグ（有利・不利）で変わる。作成：MOT">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light dark;
+--bg:light-dark(#f6f2e9,#14110e);--card:light-dark(#fffdf8,#1f1b17);--ink:light-dark(#1b1712,#f1ebe0);
+--sub:light-dark(#6b6257,#a89e90);--line:light-dark(#ddd4c4,#3a332b);--belt:light-dark(#1b1712,#000);
+--red:light-dark(#c8341f,#ff6a4d);--redbg:light-dark(#fbe3dc,#3a1a13)}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 "Noto Sans JP",system-ui,sans-serif}
+header{background:var(--belt);color:#f6f2e9;padding:36px max(5vw,16px) 30px}
+.wrap{max-width:960px;margin:0 auto}
+.kicker{margin:0;color:#cfc6b8;font-size:14px;font-weight:700;letter-spacing:.08em}
+h1{font:400 clamp(34px,7vw,60px)/1.1 "Dela Gothic One",sans-serif;margin:6px 0 10px}
+.lead{margin:0;color:#cfc6b8;font-size:15px}
+main{padding:28px max(5vw,16px) 48px}
+h2{font:400 clamp(20px,3.4vw,26px)/1.2 "Dela Gothic One",sans-serif;margin:34px 0 14px;padding-bottom:6px;border-bottom:3px solid var(--ink)}
+h2:first-child{margin-top:0}
+.apps{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:14px}
+a.app{display:flex;flex-direction:column;gap:6px;text-decoration:none;color:var(--ink);background:var(--card);border:1.5px solid var(--line);border-left:6px solid var(--red);border-radius:12px;padding:16px 18px;min-height:44px}
+a.app:hover{border-color:var(--red);background:var(--redbg)}
+a.app:focus-visible,a:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.app b{font-size:19px;line-height:1.35}
+.app span{font-size:14px;color:var(--sub)}
+.app i{font-style:normal;font-size:13px;font-weight:700;color:var(--red)}
+ul.links{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+ul.links a{color:var(--ink);font-weight:700}
+ul.links span{display:block;font-size:14px;color:var(--sub)}
+dl.hist{display:grid;grid-template-columns:7.5em minmax(0,1fr);gap:6px 12px;margin:0;font-size:15px}
+dl.hist dt{font-weight:700;white-space:nowrap}
+dl.hist dd{margin:0}
+footer{padding:20px max(5vw,16px) 32px;color:var(--sub);font-size:13px;border-top:1px solid var(--line)}
+
+.home{display:inline-block;color:#cfc6b8;font-size:13px;margin-bottom:4px;text-decoration:none}.home:hover{text-decoration:underline}
+.point{background:var(--redbg);border-left:6px solid var(--red);border-radius:0 12px 12px 0;padding:16px 20px;font-size:17px;font-weight:700;margin:0}
+.point small{display:block;font-size:14px;font-weight:400;color:var(--sub);margin-top:4px}
+.vs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:14px}
+.flag{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:0 0 6px;overflow:hidden}
+.flag h3{margin:0;padding:12px 18px;font:400 20px/1.3 "Dela Gothic One",sans-serif;color:#f6f2e9}
+.flag.adv h3{background:var(--belt)}
+.flag.dis h3{background:var(--red)}
+.flag h3 small{display:block;font:700 13px/1.4 "Noto Sans JP",sans-serif;opacity:.85}
+.flag dl{margin:0;padding:6px 18px}
+.flag dt{font-size:13px;font-weight:700;color:var(--sub);margin-top:10px}
+.flag dd{margin:2px 0 0;font-size:16px}
+.flag dd b{color:var(--red)}
+.cond{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:12px 18px;font-size:15px}
+.cond ul{margin:0;padding-left:1.2em}.cond li{margin:4px 0}
+.which{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:10px;margin:0 0 4px}
+.which div{background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:10px 14px;font-size:15px}
+.which b{display:block;font-size:13px;color:var(--sub)}
+h3.team{font-size:14px;color:var(--sub);margin:22px 0 8px;font-weight:700}
+.chars{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,440px),1fr));gap:12px}
+.cc{background:var(--card);border:1.5px solid var(--line);border-radius:12px;overflow:hidden}
+.cc h4{margin:0;padding:8px 14px;font:400 19px/1.3 "Dela Gothic One",sans-serif;border-bottom:1.5px solid var(--line)}
+.two{display:grid;grid-template-columns:1fr 1fr}
+@media (max-width:520px){.two{grid-template-columns:1fr}.col.a{border-right:0!important;border-bottom:1px solid var(--line)}}
+.col{padding:8px 14px 10px}.col.a{border-right:1px solid var(--line)}
+.lab{margin:0 0 4px;font-size:12px;font-weight:700;color:var(--sub)}
+.col.a .lab b{color:var(--ink)}.col.d .lab b{color:var(--red)}
+.col ul{margin:0;padding:0;list-style:none}
+.col li{padding:3px 0;font-size:15px;line-height:1.45}
+.col li span{display:block;font-size:13px;color:var(--sub)}
+.col.d li b{color:var(--red)}
+.none{margin:0;color:var(--sub);font-size:14px}
+.col.u{border-top:1px solid var(--line)}
+.col.u li b{color:var(--ink)}
+.tips{margin:0;padding-left:1.3em}.tips li{margin:6px 0}
+.memo{margin:0;padding:8px 14px;border-top:1px dashed var(--line);font-size:13px;color:var(--sub);background:var(--bg)}
+.meta{font-size:13px;color:var(--sub);margin:14px 0 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a class="home" href="/kof02-top.html">← Come sono bravo? トップ</a>
+<p class="kicker">KOF2002｜対策メモ</p>
+<h1>KOF2002 キム対策：飛翔脚ガード後の反撃</h1>
+<p class="lead">反撃のしかたは、キム側のヒットフラグで変わります｜作成：MOT</p>
+</div></header>
+<main><div class="wrap">
+<p class="point">飛翔脚をガードした後の硬直差は、ヒットフラグの影響を受けます。<small>飛翔脚をガードさせたとき、キム側にはヒットストップがかかりません。ガードした側にヒットストップがかかるかどうかは、キム側が「有利フラグ」か「不利フラグ」かで決まり、反撃に使える技が違ってきます。</small></p>
+
+<h2>フラグ別の違い</h2>
+<div class="vs">
+<section class="flag adv"><h3><small>キム側</small>有利フラグ</h3><dl>
+<dt>ヒットストップ</dt><dd>あり</dd>
+<dt>キム側の隙</dt><dd>少し少なめ</dd>
+<dt>GC前転</dt><dd>飛翔脚に<b>GC前転できる</b></dd>
+<dt>反撃</dt><dd>GC前転できるので、<b>一部のキャラは連続技で反撃できる</b></dd>
+</dl></section>
+<section class="flag dis"><h3><small>キム側</small>不利フラグ</h3><dl>
+<dt>ヒットストップ</dt><dd>なし</dd>
+<dt>キム側の隙</dt><dd>大きめ</dd>
+<dt>GC前転</dt><dd>飛翔脚に<b>GC前転できない</b></dd>
+<dt>反撃</dt><dd>隙が大きいので、<b>色んな技で反撃できる</b></dd>
+</dl></section>
+</div>
+<h2>どちらのフラグになるか</h2>
+<div class="which">
+<div><b>キム側が有利フラグ</b>直前にキム側が攻撃をヒットかガードさせていた、または投げを決めていた。こちらのヒットストップが残るので、ガードキャンセルができます。</div>
+<div><b>キム側が不利フラグ</b>直前にこちらが攻撃をヒットかガードさせていた、または投げを決めていた。こちらのヒットストップがなくなり、実質的な硬直が11F減ります。</div>
+</div>
+<p class="meta">フラグは、攻撃を先にヒットかガードさせた側（投げでも可）に立ちます。ラウンド開始時は1P側に立っているので、キムが1P側ならキム側有利フラグ、2P側ならキム側不利フラグから始まります。攻撃が相打ちになったときは、もとのフラグに関係なく1P側のフラグになります。</p>
+
+<h2>反撃しやすくするコツ</h2>
+<ul class="tips">
+<li><b>低い位置でガードする</b>：飛翔脚は、高い位置でガードするほどキムが遠くへ跳ね返り、反撃しにくくなります。同じ距離なら、屈みガードのほうが反撃しやすくなります。</li>
+<li><b>遠Aの後の飛翔脚を狙う</b>：キムの遠Aをガードした後（キム側有利フラグ）に大ジャンプから飛翔脚をかぶせられる場面が、一番意識しやすいポイントです。ガードしたらGC前転からの反撃を狙いましょう。</li>
+</ul>
+
+<h2>キャラ別の反撃</h2>
+<div class="cond"><ul>
+<li>キムの遠距離立ちAが届くかどうかの距離から、前方大ジャンプの頂点で出した強飛翔脚をガードした後に、反撃できるかを基準にしています。</li>
+<li>飛翔脚は、弱と強でガード後に離れる距離が大きく違います（強のほうが離れます）。そのため、強飛翔脚のガード後には届かない反撃もあります。</li>
+<li>赤字はキム側不利フラグのときの反撃です。</li>
+<li>「フラグの区別なし」は、フラグを分けずに反撃を確認した技です。ガードする距離によっては間に合わない（届かない）こともあります。</li>
+</ul></div>
+<h3 class="team">K’チーム</h3><div class="chars"><article class="cc"><h4>K’</h4><div class="two"><div class="col a"><p class="lab">キム側<b>有利</b>フラグ</p><ul><li><b>弱ヒートドライブ</b></li><li><b>（強ミニッツスパイク～）ナロウスパイク</b></li></ul></div><div class="col d"><p class="lab">キム側<b>不利</b>フラグ</p><ul><li><b>弱強チェーンドライブ</b></li><li><b>強ヒートドライブ</b><span>（弱も間に合うが、追加攻撃に一方的に負ける）</span></li><li><b>強ミニッツスパイク</b><span>（追加攻撃と相打ちになることあり）</span></li></ul></div></div></article><article class="cc"><h4>マキシマ</h4><div class="two"><div class="col a"><p class="lab">キム側<b>有利</b>フラグ</p><ul><li><b>GC前転→弱強マキシマリベンジャー</b></li><li><b>立ちガード→GC前転→屈みA始動の連続技</b></li></ul></div><div class="col d"><p class="lab">キム側<b>不利</b>フラグ</p><ul><li><b>ダッシュ弱ベイパーキャノン</b></li></ul></div></div><p class="memo">マキシマは立ちガードすると飛翔脚をかなり高い打点でガードでき、キムの滞空時間が長くなります。そのぶんGC前転の後に有利を取りやすくなります。</p></article><article class="cc"><h4>ウィップ</h4><div class="two"><div class="col a"><p class="lab">キム側<b>有利</b>フラグ</p><ul><li><b>GC前転→屈みB始動の連続技</b></li></ul></div><div class="col d"><p class="lab">キム側<b>不利</b>フラグ</p><ul><li><b>リバサ大JC+D</b></li><li><b>中JC+D</b></li></ul></div></div><p class="memo">GC前転から弱ブーメランや弱ソニックが直接入ることもありますが、確定しなかったときは反撃を受けるので、屈みBを挟むのがおすすめです。</p></article></div><h3 class="team">京チーム</h3><div class="chars"><article class="cc"><h4>紅丸</h4><div class="two"><div class="col a"><p class="lab">キム側<b>有利</b>フラグ</p><ul><li><b>弱強幻影ハリケーン</b></li></ul></div><div class="col d"><p class="lab">キム側<b>不利</b>フラグ</p><p class="none">調査していません</p></div></div></article><article class="cc"><h4>大門</h4><div class="two"><div class="col a"><p class="lab">キム側<b>有利</b>フラグ</p><p class="none">調査していません</p></div><div class="col d"><p class="lab">キム側<b>不利</b>フラグ</p><ul><li><b>弱地雷震</b></li></ul></div></div></article></div><h3 class="team">餓狼伝説チーム</h3><div class="chars"><article class="cc"><h4>テリー</h4><div class="two"><div class="col a"><p class="lab">キム側<b>有利</b>フラグ</p><p class="none">調査していません</p></div><div class="col d"><p class="lab">キム側<b>不利</b>フラグ</p><ul><li><b>強バーンナックル</b></li><li><b>MAX2</b></li></ul></div></div></article><article class="cc"><h4>アンディ</h4><div class="two"><div class="col a"><p class="lab">キム側<b>有利</b>フラグ</p><ul><li><b>強斬影流星拳</b></li></ul></div><div class="col d"><p class="lab">キム側<b>不利</b>フラグ</p><p class="none">調査していません</p></div></div><div class="col u"><p class="lab">フラグの区別なし</p><ul><li><b>ダッシュ遠C</b></li></ul></div></article><article class="cc"><h4>ジョー</h4><div class="two"><div class="col a"><p class="lab">キム側<b>有利</b>フラグ</p><ul><li><b>強スラッシュキック</b></li></ul></div><div class="col d"><p class="lab">キム側<b>不利</b>フラグ</p><p class="none">調査していません</p></div></div></article></div><h3 class="team">龍虎の拳チーム</h3><div class="chars"><article class="cc"><h4>リョウ</h4><div class="two"><div class="col a"><p class="lab">キム側<b>有利</b>フラグ</p><p class="none">調査していません</p></div><div class="col d"><p class="lab">キム側<b>不利</b>フラグ</p><p class="none">調査していません</p></div></div><div class="col u"><p class="lab">フラグの区別なし</p><ul><li><b>強覇王翔吼拳</b></li></ul></div></article><article class="cc"><h4>ロバート</h4><div class="two"><div class="col a"><p class="lab">キム側<b>有利</b>フラグ</p><ul><li><b>強龍虎乱舞</b></li></ul></div><div class="col d"><p class="lab">キム側<b>不利</b>フラグ</p><p class="none">調査していません</p></div></div></article><article class="cc"><h4>タクマ</h4><div class="two"><div class="col a"><p class="lab">キム側<b>有利</b>フラグ</p><ul><li><b>弱龍虎乱舞</b></li></ul></div><div class="col d"><p class="lab">キム側<b>不利</b>フラグ</p><ul><li><b>強疾風脚</b><span>（2段目のみ）</span></li><li><b>強龍虎乱舞</b></li></ul></div></div><p class="memo">キム側不利フラグのときは、弱龍虎乱舞だと追加攻撃と相打ちになることがあります。</p></article></div><h3 class="team">女性格闘家チーム</h3><div class="chars"><article class="cc"><h4>舞</h4><div class="two"><div class="col a"><p class="lab">キム側<b>有利</b>フラグ</p><ul><li><b>弱強花嵐</b></li></ul></div><div class="col d"><p class="lab">キム側<b>不利</b>フラグ</p><p class="none">調査していません</p></div></div></article><article class="cc"><h4>ユリ</h4><div class="two"><div class="col a"><p class="lab">キム側<b>有利</b>フラグ</p><ul><li><b>強飛燕鳳凰脚</b></li></ul></div><div class="col d"><p class="lab">キム側<b>不利</b>フラグ</p><p class="none">調査していません</p></div></div></article></div><h3 class="team">八神チーム</h3><div class="chars"><article class="cc"><h4>庵</h4><div class="two"><div class="col a"><p class="lab">キム側<b>有利</b>フラグ</p><ul><li><b>強八稚女</b></li></ul></div><div class="col d"><p class="lab">キム側<b>不利</b>フラグ</p><p class="none">調査していません</p></div></div><div class="col u"><p class="lab">フラグの区別なし</p><ul><li><b>強葵花</b><span>（1段目は空振りし、2・3段目だけ当たる）</span></li><li><b>強闇払い</b></li></ul></div></article><article class="cc"><h4>マチュア</h4><div class="two"><div class="col a"><p class="lab">キム側<b>有利</b>フラグ</p><p class="none">調査していません</p></div><div class="col d"><p class="lab">キム側<b>不利</b>フラグ</p><p class="none">調査していません</p></div></div><div class="col u"><p class="lab">フラグの区別なし</p><ul><li><b>弱メタルマサカー</b></li></ul></div></article><article class="cc"><h4>バイス</h4><div class="two"><div class="col a"><p class="lab">キム側<b>有利</b>フラグ</p><ul><li><b>強ディーサイド</b></li></ul></div><div class="col d"><p class="lab">キム側<b>不利</b>フラグ</p><p class="none">調査していません</p></div></div><div class="col u"><p class="lab">フラグの区別なし</p><ul><li><b>強ウィザリングサーフィス</b></li></ul></div></article></div><h3 class="team">’97スペシャルチーム</h3><div class="chars"><article class="cc"><h4>山崎</h4><div class="two"><div class="col a"><p class="lab">キム側<b>有利</b>フラグ</p><p class="none">調査していません</p></div><div class="col d"><p class="lab">キム側<b>不利</b>フラグ</p><p class="none">調査していません</p></div></div><div class="col u"><p class="lab">フラグの区別なし</p><ul><li><b>ダッシュ遠D</b><span>（ダッシュ蛇使いの中段も2段目だけ当たる）</span></li></ul></div></article><article class="cc"><h4>マリー</h4><div class="two"><div class="col a"><p class="lab">キム側<b>有利</b>フラグ</p><p class="none">調査していません</p></div><div class="col d"><p class="lab">キム側<b>不利</b>フラグ</p><p class="none">調査していません</p></div></div><div class="col u"><p class="lab">フラグの区別なし</p><ul><li><b>弱強ストレートスライサー</b><span>（マリーの屈みガードで確認）</span></li></ul></div></article><article class="cc"><h4>ビリー</h4><div class="two"><div class="col a"><p class="lab">キム側<b>有利</b>フラグ</p><ul><li><b>強三節棍～火炎</b><span>（弱だと届かないことが多い。強でも届かない・間に合わないことはあるが、弱より長いので強一択）</span></li></ul></div><div class="col d"><p class="lab">キム側<b>不利</b>フラグ</p><ul><li><b>強三節棍～火炎</b><span>（弱だと追加攻撃に空中ヒットして火炎が当たらないことがある。強飛翔脚のガード後は届かないこともある）</span></li><li><b>リバサ大JC+D</b></li></ul></div></div></article></div><h3 class="team">怒チーム</h3><div class="chars"><article class="cc"><h4>レオナ</h4><div class="two"><div class="col a"><p class="lab">キム側<b>有利</b>フラグ</p><ul><li><b>ダッシュ屈みD</b><span>（シビア）</span></li><li><b>リバサ大J強Vスラ</b></li></ul></div><div class="col d"><p class="lab">キム側<b>不利</b>フラグ</p><ul><li><b>中JD≫強Vスラ</b></li><li><b>弱強リボル</b></li><li><b>ダッシュからの連続技</b></li></ul></div></div><div class="col u"><p class="lab">フラグの区別なし</p><ul><li><b>（覚醒後）大JD→着地して連続技</b></li></ul></div><p class="memo">中Jは、一瞬屈みガードに入れておくとジャンプの予備動作が残るので出しやすくなります。リバサ大Jは逆に、屈みガードに入れると予備動作が残ってしまうので注意してください。</p></article><article class="cc"><h4>クラーク</h4><div class="two"><div class="col a"><p class="lab">キム側<b>有利</b>フラグ</p><ul><li><b>マウントタックル</b></li></ul></div><div class="col d"><p class="lab">キム側<b>不利</b>フラグ</p><p class="none">調査していません</p></div></div></article></div><h3 class="team">キムチーム</h3><div class="chars"><article class="cc"><h4>キム</h4><div class="two"><div class="col a"><p class="lab">キム側<b>有利</b>フラグ</p><ul><li><b>強鳳凰脚</b><span>（距離によっては間に合わない）</span></li><li><b>GC前転～近距離立ちC≫強半月斬</b></li></ul></div><div class="col d"><p class="lab">キム側<b>不利</b>フラグ</p><ul><li><b>強鳳凰脚</b><span>（最速だと距離によって追加攻撃と相打ちになるので、一瞬遅らせる）</span></li><li><b>リバサ大J攻撃からの連続技</b></li><li><b>ダッシュ近距離立ちCからの連続技</b><span>（最速でダッシュすると、距離によっては追加攻撃を食らう）</span></li></ul></div></div><p class="memo">キム側有利フラグのときは、強鳳凰脚がキムの着地硬直に当たるので相打ちの心配はありません。少しタイミングを遅らせれば、距離が遠めでも着地硬直に当てられそうです。</p></article><article class="cc"><h4>チャン</h4><div class="two"><div class="col a"><p class="lab">キム側<b>有利</b>フラグ</p><ul><li><b>弱強覇気脚</b><span>（最速でOK）</span></li></ul></div><div class="col d"><p class="lab">キム側<b>不利</b>フラグ</p><ul><li><b>弱強覇気脚</b><span>（最速だと空振りするので、一瞬遅らせる）</span></li><li><b>リバサ大JC+D</b></li></ul></div></div><p class="memo">立っているチャンに強飛翔脚を近めでガードさせると、追加攻撃が必ず最速で出るのかもしれません。</p></article><article class="cc"><h4>チョイ</h4><div class="two"><div class="col a"><p class="lab">キム側<b>有利</b>フラグ</p><ul><li><b>強鳳凰脚</b></li></ul></div><div class="col d"><p class="lab">キム側<b>不利</b>フラグ</p><ul><li><b>強鳳凰脚</b><span>（最速だと距離によって追加攻撃に一方的に負けるので、一瞬遅らせる）</span></li><li><b>中J攻撃からの連続技</b></li><li><b>中JC+D</b><span>（こちらのほうが安定）</span></li></ul></div></div></article></div><h3 class="team">エージェントチーム</h3><div class="chars"><article class="cc"><h4>ヴァネッサ</h4><div class="two"><div class="col a"><p class="lab">キム側<b>有利</b>フラグ</p><p class="none">調査していません</p></div><div class="col d"><p class="lab">キム側<b>不利</b>フラグ</p><p class="none">調査していません</p></div></div><div class="col u"><p class="lab">フラグの区別なし</p><ul><li><b>弱ダッシュパンチャー</b><span>（ヴァネッサの屈みガードで確認）</span></li></ul></div></article></div><h3 class="team">ネスツチーム</h3><div class="chars"><article class="cc"><h4>クーラ</h4><div class="two"><div class="col a"><p class="lab">キム側<b>有利</b>フラグ</p><ul><li><b>ダッシュ遠B</b><span>（距離による）</span></li></ul></div><div class="col d"><p class="lab">キム側<b>不利</b>フラグ</p><p class="none">調査していません</p></div></div></article><article class="cc"><h4>K9999</h4><div class="two"><div class="col a"><p class="lab">キム側<b>有利</b>フラグ</p><ul><li><b>弱強てめぇもいっちまえ！</b></li></ul></div><div class="col d"><p class="lab">キム側<b>不利</b>フラグ</p><ul><li><b>弱強てめぇもいっちまえ！</b></li></ul></div></div></article></div><h3 class="team">オロチチーム</h3><div class="chars"><article class="cc"><h4>シェルミー</h4><div class="two"><div class="col a"><p class="lab">キム側<b>有利</b>フラグ</p><ul><li><b>GC前転→1Fコマンド投げ</b></li><li><b>ダッシュ1Fコマンド投げ</b></li></ul></div><div class="col d"><p class="lab">キム側<b>不利</b>フラグ</p><ul><li><b>ダッシュ1Fコマンド投げ</b></li><li><b>ダッシュ屈みC≫1Fコマンド投げ</b></li></ul></div></div><p class="memo">シェルミーはダッシュが速いので、飛翔脚ガード後の反撃がしやすいです。</p></article><article class="cc"><h4>クリス</h4><div class="two"><div class="col a"><p class="lab">キム側<b>有利</b>フラグ</p><p class="none">調査していません</p></div><div class="col d"><p class="lab">キム側<b>不利</b>フラグ</p><p class="none">調査していません</p></div></div><div class="col u"><p class="lab">フラグの区別なし</p><ul><li><b>昇り大JC+D</b></li></ul></div></article></div>
+
+<h2>詳しい検証（ブログ）</h2>
+<ul class="links">
+<li><a href="https://comesonobravo.seesaa.net/article/503737888.html">KOF2002：キム対策（飛翔脚ガード後の反撃）</a><span>このページのもとになったまとめ（2024/6/23）</span></li>
+<li><a href="https://comesonobravo.jugem.jp/?eid=85">02対キム（飛翔脚ガード後の反撃の新事実）</a><span>フラグでヒットストップが変わることを見つけた記事（2007/6/30）</span></li>
+<li><a href="https://comesonobravo.jugem.jp/?eid=293">02：対キム（飛翔脚ガードの反撃について）</a><span>フラグがキム側になければ直接反撃でき、あればGC前転から反撃できるキャラもいる（2007/10/17）</span></li>
+<li><a href="https://comesonobravo.jugem.jp/?eid=478">02：対キム（飛翔脚ガードの反撃について　その２）</a><span>キム側有利フラグでも反撃できるキャラと技。相打ち時のフラグ（2008/2/18）</span></li>
+<li><a href="https://comesonobravo.jugem.jp/?eid=479">02：対キム（飛翔脚ガードの反撃について　その３）</a><span>ガードの高さで跳ね返る距離が変わる。新たに確認した反撃技（2008/2/19）</span></li>
+<li><a href="https://comesonobravo.jugem.jp/?eid=807">02：対キム（飛翔脚ガードの反撃について　その４）</a><span>K’・マキシマ・ウィップの追加と、それまでのまとめ（2009/2/21）</span></li>
+</ul>
+
+<h2>関連ツール</h2>
+<ul class="links">
+<li><a href="02hanngeki-hayamihyou.htm">反撃確定技早見表</a><span>ガードした技を選ぶと、硬直中に間に合う反撃技が出ます</span></li>
+</ul>
+</div></main>
+<footer><div class="wrap">Come sono bravo?｜作成：MOT</div></footer>
+</body>
+</html>
