@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KOF99：ケンスウのJ強攻撃・JCDからの龍連打｜Come sono bravo?</title>
+<meta name="description" content="KOF99 ケンスウは龍連打をガードさせにくいと言われる。J強攻撃やJCDから直接龍連打を狙えば、ガードさせるポイントが増える。作成：MOT">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light dark;
+--bg:light-dark(#f6f2e9,#14110e);--card:light-dark(#fffdf8,#1f1b17);--ink:light-dark(#1b1712,#f1ebe0);
+--sub:light-dark(#6b6257,#a89e90);--line:light-dark(#ddd4c4,#3a332b);--belt:light-dark(#1b1712,#000);
+--red:light-dark(#c8341f,#ff6a4d);--redbg:light-dark(#fbe3dc,#3a1a13)}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 "Noto Sans JP",system-ui,sans-serif}
+header{background:var(--belt);color:#f6f2e9;padding:36px max(5vw,16px) 30px}
+.wrap{max-width:960px;margin:0 auto}
+.kicker{margin:0;color:#cfc6b8;font-size:14px;font-weight:700;letter-spacing:.08em}
+h1{font:400 clamp(34px,7vw,60px)/1.1 "Dela Gothic One",sans-serif;margin:6px 0 10px}
+.lead{margin:0;color:#cfc6b8;font-size:15px}
+main{padding:28px max(5vw,16px) 48px}
+h2{font:400 clamp(20px,3.4vw,26px)/1.2 "Dela Gothic One",sans-serif;margin:34px 0 14px;padding-bottom:6px;border-bottom:3px solid var(--ink)}
+h2:first-child{margin-top:0}
+.apps{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:14px}
+a.app{display:flex;flex-direction:column;gap:6px;text-decoration:none;color:var(--ink);background:var(--card);border:1.5px solid var(--line);border-left:6px solid var(--red);border-radius:12px;padding:16px 18px;min-height:44px}
+a.app:hover{border-color:var(--red);background:var(--redbg)}
+a.app:focus-visible,a:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.app b{font-size:19px;line-height:1.35}
+.app span{font-size:14px;color:var(--sub)}
+.app i{font-style:normal;font-size:13px;font-weight:700;color:var(--red)}
+ul.links{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+ul.links a{color:var(--ink);font-weight:700}
+ul.links span{display:block;font-size:14px;color:var(--sub)}
+dl.hist{display:grid;grid-template-columns:7.5em minmax(0,1fr);gap:6px 12px;margin:0;font-size:15px}
+dl.hist dt{font-weight:700;white-space:nowrap}
+dl.hist dd{margin:0}
+footer{padding:20px max(5vw,16px) 32px;color:var(--sub);font-size:13px;border-top:1px solid var(--line)}
+
+.home{display:inline-block;color:#cfc6b8;font-size:13px;margin-bottom:4px;text-decoration:none}.home:hover{text-decoration:underline}
+.home{display:inline-block;color:#cfc6b8;font-size:13px;margin-bottom:4px;text-decoration:none}.home:hover{text-decoration:underline}
+.point{background:var(--redbg);border-left:6px solid var(--red);border-radius:0 12px 12px 0;padding:16px 20px;font-size:17px;font-weight:700;margin:0}
+.point small{display:block;font-size:14px;font-weight:400;color:var(--sub);margin-top:4px}
+p{margin:0 0 12px}
+.route{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:4px 0 14px}
+.route span{background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:8px 14px;font-weight:700}
+.route span.hit{border-color:var(--red);color:var(--red)}
+.route i{font-style:normal;color:var(--sub);font-weight:700}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:12px}
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:12px 18px}
+.card h3{margin:0 0 6px;font:400 18px/1.3 "Dela Gothic One",sans-serif}
+.card p{margin:0;font-size:15px}
+.tw{overflow-x:auto;background:var(--card);border:1.5px solid var(--line);border-radius:12px}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{padding:8px 12px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+thead th{font-size:13px;color:var(--sub);background:var(--bg)}
+tbody tr:last-child th,tbody tr:last-child td{border-bottom:0}
+td.n{font-variant-numeric:tabular-nums}
+td b{color:var(--red)}
+.note{font-size:13px;color:var(--sub);margin:8px 0 0}
+ul.sum{margin:0;padding-left:1.3em}ul.sum li{margin:6px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a class="home" href="/arcade/kof99/">← Come sono bravo?｜KOF99 トップ</a>
+<p class="kicker">KOF99｜攻略メモ</p>
+<h1>ケンスウ：J強攻撃・JCDからの龍連打</h1>
+<p class="lead">龍連打をガードさせるポイントを増やす｜作成：MOT</p>
+</div></header>
+<main><div class="wrap">
+<p class="point">J強攻撃やJCDから、地上の強攻撃をはさまずに直接龍連打を狙います。<small>低い打点でガードさせれば、龍連打（623+P）をガードさせられます。そこから永久連続ガードにつなげられます。</small></p>
+
+<h2>ケンスウの評価が分かれる理由</h2>
+<p>KOF99のケンスウは「最強」と言われる一方で、「龍連打をガードさせるのが難しいので、実際にはそこまで強くない」という意見もあります。</p>
+<p>ケンスウはジャンプの滞空時間が長く、近C・近D・屈Cもどれも発生が遅めです。そのため「J攻撃→地上の強攻撃→龍連打」の流れを実戦で狙うのは難しくなっています。</p>
+
+<h2>直接龍連打を狙う</h2>
+<div class="route"><span>J強攻撃 / JCD</span><i>→</i><span class="hit">龍連打（623+P）</span><i>→</i><span>永久連続ガード</span></div>
+<div class="cards">
+<div class="card"><h3>龍連打は発生が早い</h3><p>発生12F。J強攻撃やJCDをガードさせたあと、地上の強攻撃をはさまずに直接つなげられます。</p></div>
+<div class="card"><h3>打点は低く</h3><p>J強攻撃・JCDを低い打点でガードさせるのが条件です。</p></div>
+<div class="card"><h3>99は対空が弱め</h3><p>KOF99は対空技が全体的に弱いので、ジャンプから攻めるこの狙い方が通りやすい環境です。</p></div>
+</div>
+
+<h2>関連フレームデータ</h2>
+<div class="tw" tabindex="0" role="region" aria-label="関連フレームデータ"><table>
+<thead><tr><th scope="col">技</th><th scope="col">発生</th><th scope="col">硬直差 ヒット</th><th scope="col">硬直差 ガード</th></tr></thead>
+<tbody>
+<tr><th scope="row">龍連打（弱強共通）</th><td class="n">12</td><td class="n">—</td><td class="n"><b>+15</b></td></tr>
+<tr><th scope="row">ジャンプB</th><td class="n">—</td><td class="n">+10</td><td class="n">+8</td></tr>
+<tr><th scope="row">ジャンプD</th><td class="n">—</td><td class="n">+10</td><td class="n"><b>+16</b></td></tr>
+<tr><th scope="row">ジャンプC+D</th><td class="n">—</td><td class="n">ダウン</td><td class="n"><b>+20</b></td></tr>
+<tr><th scope="row">近C</th><td class="n">9</td><td class="n">—</td><td class="n">—</td></tr>
+<tr><th scope="row">近D</th><td class="n">6</td><td class="n">—</td><td class="n">—</td></tr>
+<tr><th scope="row">屈C</th><td class="n">8</td><td class="n">—</td><td class="n">—</td></tr>
+</tbody></table></div>
+<p class="note">ジャンプ攻撃の硬直差は、低い打点で当てたときの値です。</p>
+
+<h2>まとめ</h2>
+<ul class="sum">
+<li>KOF99のケンスウは「最強」という評価がある</li>
+<li>一方で、龍連打をガードさせるポイントが少ないので、評価が低いという意見もある</li>
+<li>J強攻撃やJCDから直接龍連打を狙えば、ガードさせるポイントが増える</li>
+</ul>
+</div></main>
+<footer><div class="wrap">Come sono bravo?｜作成：MOT</div></footer>
+</body>
+</html>

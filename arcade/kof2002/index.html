@@ -1,10 +1,81 @@
-<!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
-<title>KOF2002｜Come sono bravo?｜MOT ゲーム攻略・検証ノート</title><meta name="description" content="MOTによるKOF2002の対戦攻略資料と便利な早見表。既存の攻略ツールのURLは変更していません。">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap">
-<link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">MOT <span>GAME NOTES</span></a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/msx/">MSX</a><a href="/msx/nobunaga-fuunroku/">武将風雲録</a><a href="/arcade/kof2002/">KOF2002</a></nav></div></header>
-<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/arcade/kof2002/">アーケード</a><span aria-hidden="true"> / </span><b>KOF2002</b></div><p class="kicker">ARCADE / KOF2002</p><h1>KOF2002｜Come sono bravo?</h1><p>MOTによるKOF2002の対戦攻略資料と便利な早見表。既存の攻略ツールのURLは変更していません。</p></div></div><main class="main"><div class="wrap"><section class="section"><p class="lead">MOTが蓄積してきたKOF2002の攻略研究を、対戦前や練習時に参照しやすい形で公開しています。</p><div class="cards">
-<article class="card"><span class="tag">全キャラ対応</span><h3><a class="stretch" href="/hanngeki-hayamihyou.html">反撃確定技早見表</a></h3><p>ガードした技から反撃の候補とリーチの目安を探せます。</p><a href="/hanngeki-hayamihyou.html">早見表を見る →</a></article>
-<article class="card"><span class="tag">大門五郎</span><h3><a class="stretch" href="/goro-jiraishin.html">確定地雷震レシピ</a></h3><p>相手キャラクターと始動技からレシピを探せます。</p><a href="/goro-jiraishin.html">レシピを見る →</a></article>
-</div></section><section class="section"><h2>以前からのサイト</h2><p><a href="https://comesonobravo.xxxxxxxx.jp/kof02-top.html">Come sono bravo?－KOF2002（元サイト）</a></p></section></div></main>
-<footer class="footer"><div class="wrap">MOT ゲーム攻略・検証ノート　｜　攻略・観戦・研究メモ<br>ゲームの権利は各権利者に帰属します。</div></footer></body></html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Come sono bravo?｜KOF2002</title>
+<meta name="description" content="KOF2002の攻略データとツール。反撃確定技早見表、確定地雷震レシピ。作成：MOT">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light dark;
+--bg:light-dark(#f6f2e9,#14110e);--card:light-dark(#fffdf8,#1f1b17);--ink:light-dark(#1b1712,#f1ebe0);
+--sub:light-dark(#6b6257,#a89e90);--line:light-dark(#ddd4c4,#3a332b);--belt:light-dark(#1b1712,#000);
+--red:light-dark(#c8341f,#ff6a4d);--redbg:light-dark(#fbe3dc,#3a1a13)}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 "Noto Sans JP",system-ui,sans-serif}
+header{background:var(--belt);color:#f6f2e9;padding:36px max(5vw,16px) 30px}
+.wrap{max-width:960px;margin:0 auto}
+.kicker{margin:0;color:#cfc6b8;font-size:14px;font-weight:700;letter-spacing:.08em}
+h1{font:400 clamp(34px,7vw,60px)/1.1 "Dela Gothic One",sans-serif;margin:6px 0 10px}
+.lead{margin:0;color:#cfc6b8;font-size:15px}
+main{padding:28px max(5vw,16px) 48px}
+h2{font:400 clamp(20px,3.4vw,26px)/1.2 "Dela Gothic One",sans-serif;margin:34px 0 14px;padding-bottom:6px;border-bottom:3px solid var(--ink)}
+h2:first-child{margin-top:0}
+.apps{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:14px}
+a.app{display:flex;flex-direction:column;gap:6px;text-decoration:none;color:var(--ink);background:var(--card);border:1.5px solid var(--line);border-left:6px solid var(--red);border-radius:12px;padding:16px 18px;min-height:44px}
+a.app:hover{border-color:var(--red);background:var(--redbg)}
+a.app:focus-visible,a:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.app b{font-size:19px;line-height:1.35}
+.app span{font-size:14px;color:var(--sub)}
+.app i{font-style:normal;font-size:13px;font-weight:700;color:var(--red)}
+ul.links{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+ul.links a{color:var(--ink);font-weight:700}
+ul.links span{display:block;font-size:14px;color:var(--sub)}
+dl.hist{display:grid;grid-template-columns:7.5em minmax(0,1fr);gap:6px 12px;margin:0;font-size:15px}
+dl.hist dt{font-weight:700;white-space:nowrap}
+dl.hist dd{margin:0}
+footer{padding:20px max(5vw,16px) 32px;color:var(--sub);font-size:13px;border-top:1px solid var(--line)}
+.home{display:inline-block;color:#cfc6b8;font-size:13px;margin-bottom:4px;text-decoration:none}.home:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a class="home" href="/">← MOT GAME NOTES トップ</a>
+<p class="kicker">THE KING OF FIGHTERS 2002</p>
+<h1>Come sono bravo?</h1>
+<p class="lead">KOF2002の攻略データとツール｜作成：MOT</p>
+</div></header>
+<main><div class="wrap">
+<h2>ツール</h2>
+<div class="apps">
+<a class="app" href="/hanngeki-hayamihyou.html"><b>反撃確定技早見表</b><span>ガードした（ヒットさせた）技を選ぶと、硬直中に間に合う反撃技とリーチの目安が出ます。</span><i>全キャラ対応</i></a>
+<a class="app" href="/goro-jiraishin.html"><b>大門五郎　確定地雷震レシピ</b><span>相手キャラを選ぶと、始動技ごとの隙間Fと確定地雷震のレシピが出ます。</span><i>大門五郎</i></a>
+</div>
+<h2>キャラ別データ</h2>
+<div class="apps">
+<a class="app" href="/iori.html"><b>八神庵</b><span>全技の発生・持続・硬直・硬直差・ダメージなどをまとめた表です。</span><i>キャラ別データ</i></a>
+</div>
+<h2>対策メモ</h2>
+<div class="apps">
+<a class="app" href="/kim-hishoukyaku.html"><b>キム対策：飛翔脚ガード後の反撃</b><span>反撃のしかたは、キム側のヒットフラグ（有利・不利）で変わります。</span><i>キム</i></a>
+</div>
+<h2>関連ページ</h2>
+<ul class="links">
+<li><a href="/arcade/kof99/">Come sono bravo?｜KOF99</a><span>KOF99の攻略メモのトップです。</span></li>
+<li><a href="https://comesonobravo.xxxxxxxx.jp/kof02-top.html">Come sono bravo?－KOF2002（元サイト）</a><span>2003年から公開している元のサイトです。各キャラの硬直差の表などがあります。</span></li>
+<li><a href="https://w.atwiki.jp/kof2002/">The King Of Fighters 2002 @ wiki</a><span>キャラ別の各種データ（フレームなど）をまとめたwikiです。</span></li>
+</ul>
+<h2>更新履歴</h2>
+<dl class="hist">
+<dt>2026/11/16</dt><dd>トップページの場所を /arcade/kof2002/ に移動。関連ページにKOF99のトップを追加</dd>
+<dt>2026/11/15</dt><dd>対策メモに「キム対策：飛翔脚ガード後の反撃」を追加</dd>
+<dt>2026/11/15</dt><dd>キャラ別データに八神庵を追加</dd>
+<dt>2026/11/15</dt><dd>トップページを公開</dd>
+<dt>2026/11/14</dt><dd>反撃確定技早見表を公開</dd>
+<dt>2026/11/14</dt><dd>大門五郎　確定地雷震レシピを公開</dd>
+</dl>
+</div></main>
+<footer><div class="wrap">Come sono bravo?｜作成：MOT</div></footer>
+</body>
+</html>
