@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KOF'98 千鶴　ガード不能三籟の布陣セットプレイ｜Come sono bravo?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: 対戦台の横に置く早見表。速く引けて、迷わない
+   IDEA: 柔道着と黒帯の道場札。キャラを選ぶと札が並ぶ
+   PICTURE: 選んだ相手への「始動技ごとの札」そのものが主役
+   COLOUR and TYPE: 生成りの白・墨の黒帯・地雷震の朱。Dela Gothic One + Noto Sans JP
+   LAYOUT: 上に版の切替とキャラ選択、下に札。もう一枚は元の表を隙間F順に */
+:root{color-scheme:light dark;
+--bg:light-dark(#f6f2e9,#14110e);--card:light-dark(#fffdf8,#1f1b17);--ink:light-dark(#1b1712,#f1ebe0);
+--sub:light-dark(#6b6257,#a89e90);--line:light-dark(#ddd4c4,#3a332b);--belt:light-dark(#1b1712,#000);
+--red:light-dark(#c8341f,#ff6a4d);--redbg:light-dark(#fbe3dc,#3a1a13);--dim:light-dark(#e9e3d8,#2a251f)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Noto Sans JP",system-ui,sans-serif;overflow-x:clip}
+header{background:var(--belt);color:#f6f2e9;padding:20px max(5vw,16px) 0}
+h1{font:400 clamp(26px,5vw,40px)/1.1 "Dela Gothic One",sans-serif;margin:0 0 4px;text-wrap:balance}
+.home{display:inline-block;color:#cfc6b8;font-size:13px;margin-bottom:4px;text-decoration:none}.home:hover{text-decoration:underline}
+.lead{margin:0 0 16px;color:#cfc6b8;font-size:14px}
+.tabs{display:flex;gap:4px;flex-wrap:wrap}
+.tabs button{font:inherit;font-weight:700;border:0;padding:12px 18px;min-height:44px;border-radius:8px 8px 0 0;background:#2e2822;color:#cfc6b8;cursor:pointer}
+.tabs button[aria-pressed=true]{background:var(--bg);color:var(--ink)}
+.band{padding:20px max(5vw,16px);max-width:1240px;margin:0 auto}
+.seg{display:inline-flex;border:2px solid var(--ink);border-radius:999px;overflow:hidden;margin-bottom:14px}
+.seg button{font:inherit;font-weight:700;border:0;background:transparent;color:var(--ink);padding:8px 18px;min-height:44px;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--red);color:#fff}
+label.h{display:block;font-weight:700;margin:6px 0 8px}
+.chars{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:10px 14px}
+.team>span{display:block;font-size:13px;color:var(--sub);margin-bottom:4px}
+.team>div{display:flex;flex-wrap:wrap;gap:6px}
+.chars button{font:inherit;font-size:15px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);padding:8px 12px;min-height:44px;border-radius:8px;cursor:pointer}
+.chars button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+button:focus-visible,input:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.who{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:26px 0 12px;border-bottom:3px solid var(--ink);padding-bottom:6px}
+.who h2{font:400 clamp(26px,4vw,36px)/1.05 "Dela Gothic One",sans-serif;margin:0}
+.who span{color:var(--sub);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:12px}
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:10px}
+.card.none{background:var(--dim);border-style:dashed}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.st{font-weight:700;font-size:17px;line-height:1.3}
+.f{white-space:nowrap;text-align:right;line-height:1}
+.f b{font:400 40px/1 "Dela Gothic One",sans-serif;color:var(--red)}
+.f small{display:block;font-size:13px;color:var(--sub);margin-top:2px}
+.note{font-size:13px;color:var(--red);font-weight:700}
+.rk{font-size:13px;font-weight:700;color:var(--sub);margin:0 0 4px}
+ul.r{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:4px}
+ul.r li{background:var(--bg);border-left:4px solid var(--ink);padding:5px 10px;border-radius:0 6px 6px 0}
+ul.r.tight li{border-left-color:var(--red);background:var(--redbg)}
+.empty{color:var(--sub);font-size:14px}
+.search{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.search input{font:inherit;font-size:16px;padding:10px 12px;min-height:44px;border:1.5px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);width:min(100%,360px)}
+.scroll{overflow-x:auto;border:1.5px solid var(--line);border-radius:12px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{border-bottom:1px solid var(--line);padding:6px 8px;vertical-align:top;text-align:left;white-space:pre-line}
+thead th{position:sticky;top:0;background:var(--ink);color:var(--bg);font-weight:700;white-space:pre-line;min-width:120px}
+th.fc,td.fc{text-align:right;min-width:52px;font-weight:700;white-space:nowrap}
+td.fc{color:var(--red);font-size:16px}
+tr.hit td{background:var(--redbg)}
+mark{background:var(--red);color:#fff;border-radius:3px;padding:0 2px}
+.memo dl{display:grid;grid-template-columns:minmax(0,14em) minmax(0,1fr);gap:6px 16px;margin:0}
+.memo dt{font-weight:700}.memo dd{margin:0}
+.memo h3{font:400 20px/1.2 "Dela Gothic One",sans-serif;margin:22px 0 10px}
+.src{font-size:13px;color:var(--sub);margin-top:24px}
+.src a{color:inherit}
+[hidden]{display:none!important}
+@media(max-width:600px){.memo dl{grid-template-columns:1fr}.memo dd{margin-bottom:8px}.tabs button{padding:10px 12px}}
+@media(prefers-reduced-motion:no-preference){.card{animation:in .25s ease both}@keyframes in{from{opacity:0;transform:translateY(6px)}}}
+</style>
+</head>
+<body>
+<header>
+<nav class="home" style="display:flex;gap:14px;flex-wrap:wrap"><a class="home" href="/kof98-top.html">← KOF'98 トップ</a><a class="home" href="/kof-kakuteizirai.html">確定地雷震まとめ</a><a class="home" href="/">Come sono bravo?</a></nav>
+<h1>KOF'98 千鶴　ガード不能三籟の布陣セットプレイ</h1>
+<p class="lead">KOF'98｜三籟の布陣｜相手キャラを選ぶと、始動技ごとのフレームとレシピが出ます｜作成：MOT</p>
+<nav class="tabs" id="tabs">
+<button data-v="find" aria-pressed="true">キャラで引く</button>
+<button data-v="table" aria-pressed="false">対照表</button>
+<button data-v="memo" aria-pressed="false">メモ</button>
+</nav>
+</header>
+
+<main>
+<section class="band" id="v-find">
+<div class="seg" id="ver" hidden><button data-k="jaku" aria-pressed="true">三籟の布陣</button></div>
+<label class="h">相手キャラ</label>
+<div class="chars" id="chars"></div>
+<div id="out"></div>
+</section>
+
+<section class="band" id="v-table" hidden>
+<div class="seg" id="ver2" hidden><button data-k="jaku" aria-pressed="true">三籟の布陣</button></div>
+<div class="search"><input id="q" type="search" placeholder="キャラ名・技名で絞り込み（例：アンディ、前転）"><span class="empty" id="qn"></span></div>
+<div class="scroll"><table><thead id="th"></thead><tbody id="tb"></tbody></table></div>
+</section>
+
+<section class="band memo" id="v-memo" hidden>
+<h3>表の見方</h3>
+<dl>
+<dt>フレーム</dt><dd>始動技のあと、レシピで消費するフレーム数。相手キャラごとに、このフレームのレシピを使います</dd>
+<dt>始動技</dt><dd>63214B（追い討ちなし）、63214D（追い討ちなし）、D分身→追加</dd>
+</dl>
+<h3>更新履歴</h3>
+<dl>
+<dt>2026/11/17</dt><dd>サイトのページにしました</dd>
+</dl>
+<p class="src">作成：MOT<br>関連：<a href="kof-kakuteizirai.html">KOFシリーズ 確定地雷震まとめ</a>／<a href="96goro-kakuteizirai.html">KOF'96 大門五郎 確定地雷震レシピ</a>／<a href="02goro-kakuteizirai.html">KOF2002 大門五郎 確定地雷震レシピ</a></p>
+</section>
+</main>
+
+<script>
+{
+// 元データ：スプレッドシート「KOF98千鶴ガード不能三籟の布陣セットプレイレシピ一覧」をそのまま転記
+// 各行 = [隙間F, 安定, 猶予なし, ...始動技の列]
+const D={
+jaku:{name:"三籟の布陣",
+starters:["63214B追い討ちなし", "63214D追い討ちなし", "D分身→追加"],
+colnote:{},
+rows:[
+[33, "", "", "", "クラーク"],
+[34],
+[35, "", "", "", "京、舞、山崎、真吾"],
+[36, "", "", "", "ユリ、ビリー、タクマ"],
+[37, "", "", "", "ラルフ、アテナ、クリス、マリー、庵、ルガール"],
+[38, "", "", "", "ジョー、リョウ、ロバート"],
+[39, "", "", "", "", "ロバート、タクマ"],
+[40, "", "", "", "社", "クラーク"],
+[41, "", "", "", "ケンスウ、キング、マチュア、バイス、ブライアン"],
+[42, "CD空キャン～弱三籟", "", "", "アンディ、チョイ、シェルミー", "京、舞、山崎、真吾"],
+[43, "63214A最速とめ～弱三籟", "", "", "テリー", "ユリ"],
+[44, "CD空キャン～強三籟", "", "", "", "アテナ、クリス、マリー、ビリー、庵、ルガール"],
+[45, "63214A最速とめ～強三籟", "", "", "チン", "ジョー、ラルフ"],
+[46],
+[47, "前転～弱三籟", "", "", "大門、柴舟、ヘビーD!、ラッキー", "社"],
+[48, "小ジャンプor追撃B～弱三籟", "", "", "紅丸、レオナ、チャン", "ケンスウ、キング、マチュア、バイス、ブライアン"],
+[49, "下り小ジャンプ攻撃or前転～強三籟", "", "", "ハイデルン", "アンディ、チョイ、シェルミー"],
+[50, "上り小ジャンプ攻撃～弱三籟\n小ジャンプ～強三籟\nダッシュ予備~前転～弱三籟", "", "クラーク", "", "テリー"],
+[51, "下り小ジャンプ攻撃～強三籟", "", "", "千鶴", "チン"],
+[52, "上り小ジャンプ攻撃～強三籟", "", "京、舞、山崎、真吾", "キム"],
+[53, "ダッシュ予備~上り小ジャンプ攻撃～弱三籟\nダッシュ予備~小ジャンプ～強三籟", "", "ユリ、ビリー、タクマ"],
+[54, "リバサ大ジャンプ 　～弱三籟", "", "ラルフ、アテナ、クリス、マリー、庵、ルガール", "", "大門、柴舟、ラッキー"],
+[55, "リバサ大ジャンプ下り攻撃　or　昇竜A　or　↓↓A　～弱三籟", "", "ジョー、リョウ、ロバート", "", "紅丸、レオナ、チャン、ヘビーD!"],
+[56, "リバサ大ジャンプ上り攻撃　or　↓↓B　～弱三籟", "", "", "", "ハイデルン"],
+[57, "リバサ大ジャンプ下り攻撃　or　昇竜A　or　↓↓A～強三籟", "", "社"],
+[58, "リバサ大ジャンプ上り攻撃　or　↓↓B　～強三籟\nノーマルジャンプ　or　63214C～弱三籟", "", "ケンスウ、キング、マチュア、バイス、ブライアン", "", "千鶴"],
+[59, "下りノーマルジャンプ攻撃～弱三籟", "", "アンディ、チョイ、シェルミー"],
+[60, "上りノーマルジャンプ攻撃～弱三籟\nノーマルジャンプ～強三籟", "", "テリー", "", "キム"],
+[61, "下りノーマルジャンプ攻撃～強三籟\n↓↓C　～　弱三籟"],
+[62, "上りノーマルジャンプ攻撃～強三籟\n↓↓D　～　弱三籟", "", "チン"],
+[63, "ダッシュ予備~大ジャンプ～強三籟\n↓↓C～強三籟"],
+[64, "ダッシュ予備~下り大ジャンプ攻撃～強三籟\n↓↓D～強三籟", "", "大門、柴舟、ヘビーD!、ラッキー"],
+[65, "ダッシュ予備~上り大ジャンプ攻撃～強三籟", "", "紅丸、レオナ、チャン"],
+[66, "", "", "ハイデルン"],
+[67],
+[68, "", "", "千鶴"],
+[69, "", "", "キム"]
+]}};
+
+const ALIAS={};
+// セル → [{name, note}] 例：「紅丸（ラモンは不可）」→ 紅丸＋注記
+const parse=c=>{if(!c||!c.trim())return[];const m=c.match(/^(.*?)（(.*)）$/);const body=m?m[1]:c,note=m?m[2]:"";
+ return body.split("、").map(s=>s.trim()).filter(Boolean).map(n=>({name:ALIAS[n]||n,note}))};
+const lines=c=>c?c.split("\n").map(s=>s.trim()).filter(Boolean):[];
+const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+// 版ごとに：キャラ→始動技→[{f,note}]、隙間F→レシピ
+for(const k in D){const v=D[k];v.byF={};v.idx={};v.order=[];
+ v.rows.forEach(r=>{const f=r[0];v.byF[f]={st:lines(r[1]),tg:lines(r[2])};
+  v.starters.forEach((s,i)=>parse(r[3+i]).forEach(({name,note})=>{
+   if(!v.idx[name]){v.idx[name]={};v.order.push(name)}
+   (v.idx[name][s]=v.idx[name][s]||[]).push({f,note})}))})}
+
+// キャラ順：KOF'98のチーム順
+const TEAMS=[
+ ["主人公チーム",["京","紅丸","大門"]],
+ ["餓狼伝説チーム",["テリー","アンディ","ジョー"]],
+ ["龍虎の拳チーム",["リョウ","ロバート","ユリ"]],
+ ["怒チーム",["レオナ","ラルフ","クラーク"]],
+ ["サイコソルジャーチーム",["アテナ","ケンスウ","チン"]],
+ ["キムチーム",["キム","チャン","チョイ"]],
+ ["女性格闘家チーム",["舞","キング","千鶴"]],
+ ["八神チーム",["庵","マチュア","バイス"]],
+ ["’97スペシャルチーム",["山崎","ビリー","マリー"]],
+ ["オロチチーム",["社","シェルミー","クリス"]],
+ ["アメリカンスポーツチーム",["ヘビーD!","ラッキー","ブライアン"]],
+ ["そのほか",["真吾","柴舟","ハイデルン","タクマ","ルガール"]]];
+const ALL=TEAMS.flatMap(t=>t[1]);
+let ver="jaku",chr=null;
+try{const s=JSON.parse(localStorage.getItem("tizuru-sannrai98")||"{}");if(D[s.ver])ver=s.ver;if(ALL.includes(s.chr))chr=s.chr}catch(e){}
+const save=()=>{try{localStorage.setItem("tizuru-sannrai98",JSON.stringify({ver,chr}))}catch(e){}};
+
+const $=id=>document.getElementById(id);
+const setSeg=(el,k)=>el.querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.k===k));
+
+function renderChars(){
+ $("chars").innerHTML=TEAMS.map(([t,cs])=>`<div class="team"><span>${esc(t)}</span><div>${cs.map(n=>`<button data-c="${esc(n)}" aria-pressed="${n===chr}">${esc(n)}</button>`).join("")}</div></div>`).join("");
+}
+const recBlock=(t,arr,cls)=>arr.length?`<div><p class="rk">${t}</p><ul class="r ${cls}">${arr.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`:"";
+function renderOut(){
+ const v=D[ver];
+ if(!chr){$("out").innerHTML=`<p class="empty" style="margin-top:20px">上のボタンから相手キャラを選んでください。</p>`;return}
+ const m=v.idx[chr]||{};
+ const cards=v.starters.map(s=>{
+  const hits=m[s];const sn=esc(s.replace("\n","／"));
+  if(!hits){const cn=(v.colnote||{})[s];return`<article class="card none"><div class="top"><div class="st">${sn}</div>${cn?"":`<div class="f"><small>表に記載なし</small></div>`}</div>${cn?`<p class="empty">${esc(cn)}</p>`:""}</article>`}
+  return hits.map(({f,note})=>{const r=v.byF[f]||{st:[],tg:[]};
+   const recs=recBlock("レシピ",r.st,"");
+   return`<article class="card"><div class="top"><div class="st">${sn}</div><div class="f"><b>${f}</b><small>フレーム</small></div></div>`+
+    (note?`<div class="note">※${esc(note)}</div>`:"")+
+    (recs||`<p class="empty">このフレーム（${f}）のレシピは表にありません</p>`)+`</article>`}).join("")}).join("");
+ $("out").innerHTML=`<div class="who"><h2>対 ${esc(chr)}</h2><span>${v.name}｜始動技ごと</span></div><div class="grid">${cards}</div>`;
+}
+
+let ver2="jaku";
+function renderTable(){
+ const v=D[ver2],q=$("q").value.trim();
+ $("th").innerHTML=`<tr><th class="fc">フレーム</th><th>レシピ</th>${v.starters.map(s=>`<th>${esc(s)}${(v.colnote||{})[s]?"\n"+esc(v.colnote[s]):""}</th>`).join("")}</tr>`;
+ const hl=s=>{const e=esc(s||"");return q?e.split(esc(q)).join(`<mark>${esc(q)}</mark>`):e};
+ let n=0;
+ $("tb").innerHTML=v.rows.map(r=>{const cells=[r[1],...v.starters.map((_,i)=>r[3+i])];
+  const hit=q&&cells.some(c=>c&&c.includes(q));if(q&&!hit)return"";n++;
+  return`<tr class="${hit?"hit":""}"><td class="fc">${r[0]}</td>${cells.map(c=>`<td>${hl(c)}</td>`).join("")}</tr>`}).join("");
+ $("qn").textContent=q?(n?`${n}行が該当`:"該当なし"):"";
+}
+
+$("chars").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;chr=b.dataset.c;save();renderChars();renderOut()});
+$("ver").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;ver=b.dataset.k;setSeg($("ver"),ver);save();renderOut()});
+$("ver2").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;ver2=b.dataset.k;setSeg($("ver2"),ver2);renderTable()});
+$("q").addEventListener("input",renderTable);
+$("tabs").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;
+ $("tabs").querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b));
+ ["find","table","memo"].forEach(k=>$("v-"+k).hidden=k!==b.dataset.v)});
+
+setSeg($("ver"),ver);renderChars();renderOut();renderTable();
+}
+</script>
+</body>
+</html>
