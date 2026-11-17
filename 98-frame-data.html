@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KOF’98 システムフレーム早見表｜Come sono bravo?</title>
+<meta name="description" content="KOF’98の起き上がり、ジャンプ予備動作・滞空、前転・後転、前方・後方ステップ、GCCDの発生とガード時差を検索できる早見表。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/csb.css">
+<style>
+.hero-note,.note-box{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:14px 18px;margin:0 0 18px}.hero-note{border-left:6px solid var(--red)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:10px;margin:14px 0 24px}.fact{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px}.fact b{display:block;color:var(--red);font-size:21px}.fact span{font-size:13px;color:var(--sub)}
+.controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:12px 0}.controls input{min-width:min(100%,320px);font:inherit;padding:10px 12px;border:1.5px solid var(--line);border-radius:9px;background:var(--card);color:inherit}.count{font-size:13px;color:var(--sub)}
+.data-table{font-size:13px}.data-table th{white-space:nowrap;position:sticky;top:0;z-index:1}.data-table td{white-space:nowrap}.data-table td:first-child{font-weight:700;position:sticky;left:0;background:var(--card);z-index:1}.data-table th:first-child{left:0;z-index:2}.plus{color:#116329;font-weight:700}.minus{color:#b42318;font-weight:700}
+.legend{display:flex;gap:8px 16px;flex-wrap:wrap;font-size:13px;color:var(--sub);margin:8px 0 16px}.pill{display:inline-block;background:var(--redbg);color:var(--red);font-weight:700;padding:2px 8px;border-radius:999px}
+.sources li{margin:6px 0}.small{font-size:13px;color:var(--sub)}
+@media(max-width:600px){.data-table{font-size:12px}.hero-note,.note-box{padding:12px 14px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<p class="crumb"><a href="/">Come sono bravo?</a> › <a href="/kof-top.html">KOF</a> › <a href="/kof98-top.html">KOF’98</a></p>
+<p class="kicker">KOF’98｜システムデータ</p>
+<h1>システムフレーム早見表</h1>
+<p class="lead">起き上がり、ジャンプ、ステップ、GCCDを1枚で検索。</p>
+</div></header>
+<main><div class="wrap">
+
+<div class="hero-note">
+<p><b>大会中に欲しい数字へ、キャラ名からすぐ到達するための表です。</b></p>
+<p>「KOFのこと」のWebアーカイブとKOF98 Crazy Encyclopedia（KCE）の公開データを照合して再構成しました。原資料の数え方が異なるGCCDは、実戦上の発生と原表記を分けています。</p>
+</div>
+
+<h2>全キャラ共通</h2>
+<div class="facts">
+<div class="fact"><b>33F</b><span>通常前転・後転の合計<br>無敵8／移動14+3／硬直8</span></div>
+<div class="fact"><b>31F</b><span>GC前転・後転の合計（暗転4F後）<br>無敵8／移動17／硬直6</span></div>
+<div class="fact"><b>1F</b><span>ジャンプ着地硬直</span></div>
+<div class="fact"><b>10F</b><span>最低ダッシュ時間</span></div>
+<div class="fact"><b>9／17／21F</b><span>地上ガード硬直<br>弱／強／ふっとばし</span></div>
+<div class="fact"><b>10F</b><span>空中ガード硬直<br>着地硬直は0F</span></div>
+</div>
+
+<div class="note-box">
+<p><b>ジャンプの読み方：</b>小・中・垂直小ジャンプは同じ滞空時間。通常・大・垂直通常ジャンプも同じ滞空時間です。ジャンプ攻撃を出すと、その瞬間に滞空が1F増えます。</p>
+<p><b>GCCDの読み方：</b>KCE原表記は暗転中に相手が動ける1Fを省き、「暗転後の発生」を先頭に記録しています。この表の「実発生」は原表記の先頭値に1Fを足した値です。たとえば大門は原表記0F、実発生1Fです。</p>
+</div>
+
+<h2>キャラクター別一覧</h2>
+<div class="controls">
+<label for="q">キャラ検索</label><input id="q" type="search" placeholder="例：大門、庵、クリス" autocomplete="off">
+<span class="count" id="count"></span>
+</div>
+<div class="legend"><span><span class="pill">前／後ステップ</span> 予備・移動・硬直（合計）</span><span><span class="pill">GCCD</span> 実発生／原表記／ガード時差</span></div>
+<div class="tw"><table class="data-table">
+<thead><tr><th>キャラ</th><th>起上</th><th>J予備</th><th>小・中J</th><th>通常・大J</th><th>前ステップ</th><th>後ステップ</th><th>GCCD実発生</th><th>GCCD原表記</th><th>攻撃側のガード時差</th></tr></thead>
+<tbody id="rows"></tbody>
+</table></div>
+
+<h2>資料の状態と注意</h2>
+<ul>
+<li>起き上がり・ジャンプ・ステップは「KOFのこと」に掲載されていた数値をWebアーカイブから復元しました。</li>
+<li>GCCDはKCEの全キャラExcelを使用。<code>[M]</code>は、その区間に無敵が付くという原表記です。</li>
+<li>ジョーの原表には先頭値の閉じ括弧に誤植があります。このページでは数値を0として扱い、原表記欄に「原表誤植」と注記しました。</li>
+<li>フレーム値だけではGCCDの着地ガード可否は決まりません。攻撃側の強制停止と打点も関係するため、<a href="98-gccd.html">GCCD攻略・対策</a>も併用してください。</li>
+</ul>
+
+<h2>出典</h2>
+<ul class="sources small">
+<li><a href="https://web.archive.org/web/20040929105751/http://www.geocities.jp/kof_no_koto/kof98/kouchoku.html">KOFのこと：硬直時間（Webアーカイブ）</a></li>
+<li><a href="https://web.archive.org/web/20080111062509/http://www.geocities.jp/kof_no_koto/kof98/okiagari.html">KOFのこと：起き上がり（Webアーカイブ）</a></li>
+<li><a href="https://web.archive.org/web/20080110184120/http://www.geocities.jp/kof_no_koto/kof98/taiku.html">KOFのこと：ジャンプ滞空（Webアーカイブ）</a></li>
+<li><a href="https://web.archive.org/web/20080111062459/http://www.geocities.jp/kof_no_koto/kof98/frontstep.html">KOFのこと：前方ステップ（Webアーカイブ）</a>／<a href="https://web.archive.org/web/20080111062454/http://www.geocities.jp/kof_no_koto/kof98/backstep.html">後方ステップ</a></li>
+<li><a href="https://k-c-e.jp/kof98/all-data/all-data1.xls">KOF98 Crazy Encyclopedia：全キャラデータ（Excel）</a>／<a href="https://k-c-e.jp/kof98/all-data/data3.html">データの見方</a></li>
+</ul>
+
+<h2>更新履歴</h2>
+<ul class="small"><li>2026/11/18　WebアーカイブとKCE公開データから作成。</li></ul>
+<nav class="foot-nav"><a href="/98-gccd.html">GCCD攻略・対策</a><a href="/98-goro-kakuteizirai.html">確定地雷震</a><a href="/98-taikai-check.html">大会前チェック</a><a href="/kof98-top.html">KOF’98トップ</a></nav>
+</div></main>
+<footer><div class="wrap">Come sono bravo?｜作成：MOT</div></footer>
+<script>
+const DATA=[
+['京',26,4,24,33,[3,11,3],[3,15,3],4,'(3[M],4[M],18)','0'],
+['紅丸',26,4,28,37,[3,13,4],[3,18,4],3,'(2[M],4[M],20)','-2'],
+['大門',25,4,27,36,[3,18,3],[3,18,3],1,'(0,1[M],20)','0'],
+['テリー',25,5,27,36,[3,10,3],[3,18,3],3,'(2[M],10[M],16)','-4'],
+['アンディ',30,4,28,38,[3,11,3],[3,16,3],3,'(2[M],5[M],33)','-16'],
+['ジョー',20,5,29,38,[3,11,3],[3,21,3],1,'(0,5[M],23) ※原表誤植','-8'],
+['リョウ',21,4,25,33,[3,9,3],[3,14,3],2,'(1[M],8[M],18)','-4'],
+['ロバート',20,4,27,36,[3,11,3],[3,18,3],1,'(0,2[M],23)','-5'],
+['ユリ',16,4,27,36,[3,10,3],[3,16,3],1,'(0[M],7[M],23)','-8'],
+['レオナ',27,4,28,37,[3,10,3],[3,18,3],5,'(4[M],2[M],27)','-7'],
+['ラルフ',21,4,25,34,[3,16,3],[3,18,3],5,'(4[M],4[M],21)','-3'],
+['クラーク',21,4,25,33,[3,18,3],[3,18,3],7,'(6[M],5[M],16)','+1'],
+['アテナ',21,4,32,43,[3,12,3],[3,16,3],1,'(0[M],4[M],22)','-4'],
+['ケンスウ',25,4,30,40,[3,12,3],[3,18,3],3,'(2[M],4[M],22)','-4'],
+['チン',29,4,27,36,[3,26,3],[3,26,3],1,'(0,5[M],19)','-4'],
+['ちづる',29,5,29,39,[3,11,3],[3,21,3],1,'(0[M],2[M]+6[M],18)','-4'],
+['舞',21,4,28,37,[3,10,3],[3,16,3],1,'(0[M],5[M],24)','-7'],
+['キング',26,4,27,36,[3,10,3],[3,16,3],1,'(0[M],5[M],14)','+3'],
+['キム',21,4,26,35,[3,11,3],[3,19,3],3,'(2[M],10[M],15)','-3'],
+['チャン',31,4,24,32,[3,16,3],[3,22,3],7,'(6[M],7[M],19)','-4'],
+['チョイ',26,4,31,42,[3,12,3],[3,16,3],1,'(0[M],11[M],16)','-5'],
+['社',24,4,23,31,[3,13,3],[3,16,3],1,'(0[M],5[M],24)','-7'],
+['シェルミー',31,4,25,34,[3,12,3],[3,18,3],3,'(2[M],6[M],17)','-1'],
+['クリス',29,4,23,31,[3,8,3],[3,21,3],1,'(0,1[M],28)','-9'],
+['山崎',19,4,25,34,[3,12,3],[3,18,3],6,'(5[M],8[M],18)','-4'],
+['マリー',21,4,25,34,[3,14,3],[3,17,4],5,'(4[M],4[M]+4[M],20)','-6'],
+['ビリー',31,4,27,37,[3,10,3],[3,18,3],3,'(2[M],2[M],31)','-11'],
+['庵',28,4,23,31,[3,15,3],[3,16,3],3,'(2[M],5[M],24)','-7'],
+['マチュア',21,5,25,34,[3,13,3],[3,18,4],3,'(2[M],5[M],21)','-4'],
+['バイス',26,5,28,37,[3,14,3],[3,19,4],1,'(0[M],5[M],24)','-7'],
+['ハイデルン',29,4,25,34,[4,11,4],[4,15,4],1,'(0[M],9[M],17)','-4'],
+['タクマ',23,4,25,33,[3,11,3],[2,14,3],1,'(0,4[M],23)','-6'],
+['柴舟',25,4,24,32,[3,14,3],[3,15,3],1,'(0[M],5[M],28)','-11'],
+['ヘビィD！',30,5,26,34,[3,11,3],[3,9,3],4,'(3[M],4[M],18)','0'],
+['ラッキー',31,4,29,39,[3,16,3],[3,18,3],7,'(6[M],5[M],18)','-1'],
+['ブライアン',25,5,26,35,[3,17,3],[3,16,3],1,'(0[M],4[M],28)','-10'],
+['ルガール',21,5,25,34,[3,12,3],[3,14,3],1,'(0[M],4[M],27)','-9'],
+['真吾',26,4,27,36,[3,10,3],[3,18,3],3,'(2[M],4[M],16)','0']
+];
+const tbody=document.getElementById('rows'),q=document.getElementById('q'),count=document.getElementById('count');
+const step=a=>`${a.join('・')}（${a.reduce((s,n)=>s+n,0)}）`;
+function render(){const key=q.value.trim().toLowerCase();const list=DATA.filter(r=>r[0].toLowerCase().includes(key));tbody.innerHTML=list.map(r=>{const cls=r[9].startsWith('+')?'plus':(r[9].startsWith('-')?'minus':'');return `<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td><td>${r[4]}</td><td>${step(r[5])}</td><td>${step(r[6])}</td><td>${r[7]}F</td><td>${r[8]}</td><td class="${cls}">${r[9]}F</td></tr>`}).join('');count.textContent=`${list.length}キャラ表示`;}
+q.addEventListener('input',render);render();
+</script>
+</body>
+</html>
