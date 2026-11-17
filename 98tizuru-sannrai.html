@@ -189,7 +189,8 @@ const TEAMS=[
  ["’97スペシャルチーム",["山崎","ビリー","マリー"]],
  ["オロチチーム",["社","シェルミー","クリス"]],
  ["アメリカンスポーツチーム",["ヘビーD!","ラッキー","ブライアン"]],
- ["そのほか",["真吾","柴舟","ハイデルン","タクマ","ルガール"]]];
+ ["おやじチーム",["柴舟","ハイデルン","タクマ"]],
+ ["そのほか",["真吾","ルガール"]]];
 const ALL=TEAMS.flatMap(t=>t[1]);
 let ver="jaku",chr=null;
 try{const s=JSON.parse(localStorage.getItem("tizuru-sannrai98")||"{}");if(D[s.ver])ver=s.ver;if(ALL.includes(s.chr))chr=s.chr}catch(e){}
