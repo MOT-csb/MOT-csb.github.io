@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KOF’98 GCCD攻略・対策｜Come sono bravo?</title>
+<meta name="description" content="KOF’98のGCCD（ガードキャンセルふっとばし）について、強制停止、着地ガード、空振らせ方、キャラ別事例をMOTの検証投稿から再整理。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/csb.css">
+<style>
+.summary{background:var(--card);border:1.5px solid var(--line);border-left:6px solid var(--red);border-radius:12px;padding:14px 18px;margin:0 0 22px}
+.summary p:last-child{margin-bottom:0}
+.correction{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:stretch;margin:12px 0 22px}
+.claim{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:14px 16px}
+.claim.old{opacity:.76}.claim.new{border-color:var(--red)}
+.claim h3{margin:0 0 8px;font-size:16px}.claim p:last-child{margin-bottom:0}
+.arrow{align-self:center;font-size:26px;font-weight:700;color:var(--red)}
+.status{display:inline-block;border-radius:999px;padding:2px 9px;font-size:12px;font-weight:700;margin:0 6px 8px 0}
+.status.ok{background:#dafbe1;color:#116329}.status.check{background:#fff8c5;color:#7d4e00}.status.old{background:var(--line);color:var(--sub)}
+.box{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:14px 18px;margin:12px 0}
+.box h3{margin:0 0 8px;font-size:18px}.box ul{margin:6px 0 0;padding-left:1.3em}
+.check-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:12px}
+.check-grid .box{margin:0}
+.src{font-size:13px;color:var(--sub);margin:10px 0 0}.src a{margin-right:9px}
+.cases td:first-child{font-weight:700;white-space:nowrap}.cases td:nth-child(2){white-space:nowrap}.cases tr:first-child td{white-space:normal}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0}
+.flow div{background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;font-size:14px;position:relative}
+.flow b{display:block;color:var(--red);font-size:12px;margin-bottom:3px}
+.warning{font-weight:700;color:var(--red)}
+@media(max-width:700px){.correction{grid-template-columns:1fr}.arrow{text-align:center;transform:rotate(90deg)}.flow{grid-template-columns:1fr 1fr}.cases td:first-child,.cases td:nth-child(2){white-space:normal}}
+@media(max-width:430px){.flow{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<p class="crumb"><a href="/">Come sono bravo?</a> › <a href="/kof-top.html">KOF</a> › <a href="/kof98-top.html">KOF’98</a></p>
+<p class="kicker">KOF’98｜システム攻略</p>
+<h1>GCCD攻略・対策</h1>
+<p class="lead">ガードキャンセルふっとばしの強制停止、着地ガード、空振らせ方を再整理。</p>
+</div></header>
+
+<main><div class="wrap">
+<div class="summary">
+<p><b>結論：</b>KOF’98のGCCDは、発生フレームだけを見ても対空性能を正しく説明できません。攻撃側にかかる強制停止と、ジャンプ攻撃の打点・着地までの時間を一緒に考える必要があります。</p>
+<p>特に重要なのが、2015年の旧整理を2016年の再検証で修正している点です。</p>
+</div>
+
+<h2>最重要：旧説からの修正</h2>
+<div class="correction">
+<section class="claim old">
+<span class="status old">2015年の旧整理</span>
+<h3>発生7F以上ならガードが間に合う？</h3>
+<p>当初は、GCCDの発生フレームを基準に「発生7F以上はJ攻撃に狙ってもガードされる可能性がある」と整理していました。</p>
+<p class="src"><a href="https://x.com/mot_csb/status/641089089769357312" rel="nofollow">当時の投稿</a></p>
+</section>
+<div class="arrow" aria-hidden="true">→</div>
+<section class="claim new">
+<span class="status ok">2016年の再検証</span>
+<h3>強制停止中に判定が重なってもヒットしない</h3>
+<p>攻撃側にかかる強制停止中にGCCDの攻撃判定が出ても、すぐにはヒットしません。大門のGCCDでも、J攻撃を最低打点で当てれば着地ガードが間に合うことを確認しました。</p>
+<p class="src"><a href="https://x.com/mot_csb/status/735401246966812672" rel="nofollow">再検証</a><a href="https://x.com/mot_csb/status/735409346394349568" rel="nofollow">京の小JBで確認</a></p>
+</section>
+</div>
+<p class="note">投稿時点では「どのGCCDでも、J攻撃の打点を限界まで下げればガード可能」と一般化しています。個別ページでは、キャラ別の例外や打点の猶予を追加検証します。</p>
+
+<h2>KOF’98特有の強制停止</h2>
+<p>KOF2002系は発生フレーム中心で説明しやすいのに対し、KOF’98のGCCDには攻撃側への強制停止があります。このため、見かけ上の発生だけで「間に合う／間に合わない」を決められません。</p>
+<div class="flow" aria-label="GCCD成立までの考え方">
+<div><b>1</b>ジャンプ攻撃をガード</div>
+<div><b>2</b>相手がGCCDを発動</div>
+<div><b>3</b>攻撃側に強制停止</div>
+<div><b>4</b>停止解除後、着地ガードとの競争</div>
+</div>
+<div class="box">
+<h3>大門GCCDの再表記メモ</h3>
+<p>2021年の再確認では、大門のGCCDを「（1＋8［相手停止］、2［相手停止］＋1、20）」のように表せると整理しました。単純に「発生9F」と数えるか、「実動1F＋相手停止」と分けるかで表記が変わります。</p>
+<p class="src"><a href="https://x.com/mot_csb/status/1389494971825229826" rel="nofollow">判定発生の確認</a><a href="https://x.com/mot_csb/status/1389496280783548417" rel="nofollow">フレーム表記</a></p>
+</div>
+
+<h2>GCCDを受ける側の対策</h2>
+<div class="box">
+<h3>1．最低打点でJ攻撃を当て、着地ガード</h3>
+<p>最も基本的な考え方です。J攻撃をできるだけ低く当てて着地までの時間を短くし、強制停止解除後のGCCDをガードします。京の小JB対大門、マチュアのJB2段目対大門などで実戦例があります。</p>
+<p class="src"><a href="https://x.com/mot_csb/status/735409346394349568" rel="nofollow">京対大門</a><a href="https://x.com/mot_csb/status/1045218437385998336" rel="nofollow">大会動画のマチュア対大門</a></p>
+</div>
+<div class="box">
+<h3>2．攻撃判定の位置を利用して空振らせる</h3>
+<p>相手GCCDの攻撃判定が高い位置まで届かない、あるいは前進するため根元が当たらない場合があります。紅丸の近め・高め打点の低JB／JCDで京のGCCDを空振らせ、連続技まで狙えるという確認があります。</p>
+<p class="src"><a href="https://x.com/mot_csb/status/642530070892933120" rel="nofollow">紅丸対京</a></p>
+</div>
+<div class="box">
+<h3>3．無敵技・空中必殺技へキャンセル</h3>
+<p>アテナはJ攻撃から空中シャイニングクリスタルビット、または高め打点のJC／JCDからフェニックスアローを出すことで、大門GCCDを空振らせながら攻撃できます。フェニックスアローはガードされると反撃を受けるため、リスク込みの選択です。</p>
+<p class="src"><a href="https://x.com/mot_csb/status/645558407001280512" rel="nofollow">空中SCB</a><a href="https://x.com/mot_csb/status/645558758765039616" rel="nofollow">フェニックスアロー</a></p>
+</div>
+<div class="box">
+<h3>4．GCCDされた時だけ必殺技を出す仕込み</h3>
+<span class="status check">要再検証</span>
+<p>GCCDの光・強制停止に合わせてキャンセル必殺技を入力し、「GCCDされた場合だけ必殺技が出る」仕込みが可能という古い攻略があります。テリー、チャン、表クリスなどで案を出していますが、入力方法と成立条件は再検証が必要です。</p>
+<p class="src"><a href="https://x.com/mot_csb/status/714110551303917568" rel="nofollow">仕込みの説明</a><a href="https://x.com/mot_csb/status/654214502422999040" rel="nofollow">テリー案</a><a href="https://x.com/mot_csb/status/656037283141828608" rel="nofollow">チャン案</a></p>
+</div>
+
+<h2>キャラクター別の具体例</h2>
+<div class="tw"><table class="cases">
+<tr><td>攻撃側</td><td>相手GCCD</td><td>確認内容</td><td>状態</td></tr>
+<tr><td>京</td><td>大門</td><td>小JBを最低打点で当てると着地ガードが間に合う。</td><td>確認済み</td></tr>
+<tr><td>紅丸</td><td>京</td><td>近め・高め打点の低JB／JCDで空振らせ、連続技を狙える。</td><td>一部確認</td></tr>
+<tr><td>舞</td><td>大門</td><td>低J攻撃を高めに当てると安定して空振らせられる。打点を下げると食らう。</td><td>確認済み</td></tr>
+<tr><td>舞</td><td>ロバート・大門</td><td>屈C→ムササビの舞で、無敵時間を使ってGCCDを抜ける。京・ジョーは先端時。</td><td>一部確認</td></tr>
+<tr><td>アテナ</td><td>大門</td><td>J攻撃→空中SCB、または高めJ攻撃→フェニックスアロー。</td><td>一部確認</td></tr>
+<tr><td>大門</td><td>チャン</td><td>最低打点小JD→着地超大外刈りで空振らせ、最速天地返しが確定。</td><td>確認済み</td></tr>
+<tr><td>表リョウ</td><td>大門</td><td>立CD→弱覇王翔吼拳で、GCCD終了後に超必殺技の暗転が入り、空振らせてヒット。</td><td>確認済み</td></tr>
+<tr><td>アンディ</td><td>各キャラ</td><td>通常技→6Bでの空振らせは、相手GCCDの攻撃判定次第。</td><td>2024年再確認</td></tr>
+</table></div>
+
+<h2>GCCDを使う側の判断</h2>
+<div class="check-grid">
+<div class="box">
+<h3>ラインを上げる</h3>
+<p>GCCDは硬直が短く、特に空中ヒット時は相手を大きく押し戻してラインを上げやすいという利点があります。単なる切り返しではなく、位置交換・端攻めへの移行として評価します。</p>
+<p class="src"><a href="https://x.com/mot_csb/status/580381886670774273" rel="nofollow">ラインに関するメモ</a></p>
+</div>
+<div class="box">
+<h3>ゲージを温存する</h3>
+<p>表京のように1ゲージ連続技のリターンが高く、ほかの守備手段も強いキャラは、GCCDを我慢して超必殺技へ回す選択があります。キャラごとに「守る1ゲージ」と「倒す1ゲージ」を比較します。</p>
+<p class="src"><a href="https://x.com/mot_csb/status/618571369706426369" rel="nofollow">表京の1ゲージ</a></p>
+</div>
+<div class="box">
+<h3>GC後転を選ぶ</h3>
+<p>GCCDよりGC後転の方が大きな反撃につながる場面があります。ブライアンのステップガメラは、早めのGC後転から着地硬直を狙う案があります。</p>
+<p class="src"><a href="https://x.com/mot_csb/status/1751396608330314235" rel="nofollow">ガメラへのGC後転案</a><a href="98-taikai-check.html">大会前チェック</a></p>
+</div>
+</div>
+
+<h2>検証するときの確認項目</h2>
+<ol>
+<li>攻撃側・防御側のキャラクター</li>
+<li>J攻撃の種類と打点（最高・中間・最低）</li>
+<li>GCCDが空振り／ガード／ヒットのどれになるか</li>
+<li>着地後に確定する反撃</li>
+<li>1P・2P、有利不利フラグ、画面位置で結果が変わるか</li>
+</ol>
+<p class="note">この5点を揃えると、「たまたま空振りした」のか、再現できる対策なのかを分けられます。</p>
+
+<h2>更新履歴</h2>
+<ul class="src">
+<li>2026/11/17　MOTのKOF’98関連X投稿からGCCD候補52件を抽出し、旧説と再検証の差分、キャラ別事例を整理。</li>
+</ul>
+
+<nav class="foot-nav"><a href="/98-taikai-check.html">大会前チェックへ</a><a href="/kof98-top.html">KOF’98のトップへ</a><a href="/kof-top.html">KOFシリーズへ</a><a href="/">入口へ</a></nav>
+</div></main>
+<footer><div class="wrap">Come sono bravo?｜作成：MOT</div></footer>
+</body>
+</html>
