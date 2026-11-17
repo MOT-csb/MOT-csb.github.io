@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KOF’98 大会前チェック｜Come sono bravo?</title>
+<meta name="description" content="MOTのKOF’98攻略投稿から、大会前に確認したいGCCD、ダウン回避、入力受付、キャラ対策を再整理。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/csb.css">
+<style>
+.hero-note{background:var(--card);border:1.5px solid var(--line);border-left:6px solid var(--red);border-radius:12px;padding:14px 18px;margin:0 0 24px}
+.hero-note p:last-child{margin-bottom:0}
+.legend{display:flex;gap:8px 16px;flex-wrap:wrap;margin:12px 0 24px;font-size:13px;color:var(--sub)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block;background:var(--sub)}
+.dot.ok{background:#238636}.dot.check{background:#d29922}.dot.todo{background:var(--red)}
+.check-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr));gap:14px}
+.check-card{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:16px 18px}
+.check-card h3{margin:0 0 8px;font-size:18px;line-height:1.4}
+.check-card ul{margin:8px 0 12px;padding-left:1.3em}
+.check-card li{margin:4px 0}
+.status{display:inline-block;border-radius:999px;padding:2px 9px;font-size:12px;font-weight:700;margin:0 6px 8px 0}
+.status.ok{background:#dafbe1;color:#116329}.status.check{background:#fff8c5;color:#7d4e00}.status.todo{background:var(--redbg);color:var(--red)}
+.src{font-size:13px;color:var(--sub);margin:10px 0 0}
+.src a{margin-right:8px}
+.quick{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:12px}
+.quick article{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:14px 16px}
+.quick h3{margin:0 0 6px;font-size:17px}
+.quick p{font-size:14px;margin-bottom:8px}
+.roadmap td:first-child{font-weight:700;white-space:nowrap}
+.roadmap td:nth-child(2){text-align:right;white-space:nowrap}
+.roadmap tr:first-child td{text-align:left}
+.warning{font-weight:700;color:var(--red)}
+@media(max-width:600px){.roadmap td:first-child{white-space:normal}.roadmap td:nth-child(2){text-align:left}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<p class="crumb"><a href="/">Come sono bravo?</a> › <a href="/kof-top.html">KOF</a> › <a href="/kof98-top.html">KOF’98</a></p>
+<p class="kicker">KOF’98｜大会前チェック</p>
+<h1>大会前チェック</h1>
+<p class="lead">MOTのX攻略投稿を、対戦前に引きやすい形へ再整理しています。</p>
+</div></header>
+
+<main><div class="wrap">
+<div class="hero-note">
+<p><b>Duelling the KOFに向けた再整理ページです。</b></p>
+<p>KOF’98関連のX投稿1,265件のうち、自作の攻略・検証候補573件を抽出しました。このページでは、まず大会前の実用性が高い論点を選んでいます。古いメモに「はず」「かも」と書いていたものは、そのまま断定せず再検証対象にしています。</p>
+</div>
+
+<div class="legend" aria-label="情報の状態">
+<span><i class="dot ok"></i>確認済み・公開済み</span>
+<span><i class="dot check"></i>要再検証</span>
+<span><i class="dot todo"></i>個別ページ整理待ち</span>
+</div>
+
+<h2>まず確認するページ</h2>
+<div class="apps">
+<a class="app" href="98tizuru-sannrai.html"><b>千鶴　ガード不能三籟の布陣</b><span>相手キャラと始動技を選んでレシピを確認できます。</span></a>
+<a class="app" href="98hanngeki-hayamihyou.htm"><b>反撃確定技早見表</b><span>確定反撃を技ごとに確認。後年の検証を追加予定です。</span></a>
+<a class="app" href="98kakukyara-hit-guard-koutyoku.htm"><b>ヒット・ガード時の硬直差</b><span>キャラクターごとの硬直差と特殊なヒットストップを確認します。</span></a>
+<a class="app" href="98to02notigai.htm"><b>KOF’98と2002の違い</b><span>似ている2作品の入力・硬直・技性能の差を整理しています。</span></a>
+</div>
+
+<h2>システム面の重点チェック</h2>
+<div class="check-grid">
+<article class="check-card">
+<span class="status check">要再検証</span><span class="status todo">専用ページ予定</span>
+<h3>GCCD（ガードキャンセルふっとばし）</h3>
+<ul>
+<li>キャラごとに発生が違う。旧調査では、発生7F以上のGCCDはジャンプ攻撃に使っても相手のガードが間に合う可能性がある。</li>
+<li>京の小JBを最低打点で当てると、大門のGCCDをガードできることを確認。</li>
+<li>舞はジャンプ攻撃の打点やムササビの舞を使い、大門などのGCCDを空振りさせられる組み合わせがある。</li>
+</ul>
+<p class="src">元投稿：<a href="https://x.com/mot_csb/status/641089089769357312" rel="nofollow">発生フレーム</a><a href="https://x.com/mot_csb/status/735409346394349568" rel="nofollow">京対大門</a><a href="https://x.com/mot_csb/status/665451664405569536" rel="nofollow">舞対大門</a></p>
+</article>
+
+<article class="check-card">
+<span class="status ok">データ公開済み</span><span class="status todo">専用ページ予定</span>
+<h3>ダウン回避と着地硬直</h3>
+<ul>
+<li>ダウン回避の所要フレームはキャラクターごとに違う。2016年に一覧を作成済み。</li>
+<li>ダウンしない技を空中で食らった場合の着地硬直は、打撃にも投げにも無敵。硬直時間はキャラによって少し違う。</li>
+<li>ダウン回避の有無で、追撃・起き攻め・反撃の成立が変わるため、レシピの前提を揃える。</li>
+</ul>
+<p class="src">元投稿：<a href="https://x.com/mot_csb/status/754852344907476992" rel="nofollow">ダウン回避一覧</a><a href="https://x.com/mot_csb/status/659319357533650944" rel="nofollow">空中被弾後の着地硬直</a></p>
+</article>
+
+<article class="check-card">
+<span class="status check">要再検証</span><span class="status todo">専用ページ予定</span>
+<h3>コマンド入力受付</h3>
+<ul>
+<li>旧メモでは、236コマンドは「2を1F・3を2F・6を1F」が必要。</li>
+<li>623系では斜め方向は1Fでもよく、4・2・6などの方向は2F必要という整理。</li>
+<li>必殺技のボタンも最低2F押す必要がある、という過去の確認メモがある。</li>
+</ul>
+<p class="warning">いずれも過去投稿で「はず」としていた内容。フレーム表示で再確認してから確定情報にします。</p>
+<p class="src">元投稿：<a href="https://x.com/mot_csb/status/657532909306318850" rel="nofollow">236／41236</a><a href="https://x.com/mot_csb/status/1021331330364141568" rel="nofollow">623入力受付</a><a href="https://x.com/mot_csb/status/549930815858016257" rel="nofollow">ボタン保持</a></p>
+</article>
+
+<article class="check-card">
+<span class="status ok">一部確認済み</span><span class="status todo">専用ページ予定</span>
+<h3>ブライアンのステップガメラ対策</h3>
+<ul>
+<li>置き垂直J攻撃：斜め下に強く、持続の長い技が有効。負けてもカウンターヒットにならない点も利点。</li>
+<li>後方ノーマルJ：空中ガードになり、組み合わせによっては反撃できる。</li>
+<li>GC後転：早めに出せれば、着地硬直へ反撃できる場合がある。</li>
+</ul>
+<p><b>現時点の結論：</b>空中ガードからの反撃は安定しにくく、まずは置きJ攻撃が有力。JCDが使えるキャラは追撃も検討。</p>
+<p class="src">元投稿：<a href="https://x.com/mot_csb/status/1751814268666908705" rel="nofollow">対策スレッド起点</a><a href="https://x.com/mot_csb/status/1753615073300656296" rel="nofollow">3案の確認</a><a href="https://x.com/mot_csb/status/1753619865628471596" rel="nofollow">現時点のまとめ</a></p>
+</article>
+</div>
+
+<h2>キャラクター別の確認入口</h2>
+<div class="quick">
+<article><h3>京</h3><p>EXTのステップ奈落、最低打点小JBとGCCD、疑似中段を重点整理予定。</p><p class="src"><a href="https://x.com/mot_csb/status/671634650758955008" rel="nofollow">ステップ奈落の数値</a></p></article>
+<article><h3>庵</h3><p>屑風の割り込み、百合折り、通常投げを含む起き攻めを整理予定。</p><p class="src"><a href="https://x.com/mot_csb/status/615822323266916352" rel="nofollow">JD後の屑風</a></p></article>
+<article><h3>大門</h3><p>GCCD、確定地雷震、ダウン回避、押し合い判定をまとめる予定。</p><p class="src"><a href="https://x.com/mot_csb/status/1378189859932676099" rel="nofollow">地雷震レシピ追加</a></p></article>
+<article><h3>クリス／裏クリス</h3><p>密着垂直Jの起き攻め、6B、暴発への割り込み、裏クリス同キャラを整理予定。</p><p class="src"><a href="https://x.com/mot_csb/status/1761261401279226321" rel="nofollow">密着垂直Jへの対応</a></p></article>
+<article><h3>ジョー</h3><p>既存攻略へ、遠Bの判定、弱ハリケーン、庵戦、クリスの起き攻め対策を追加予定。</p><p class="src"><a href="98joe.html">既存のジョー攻略</a></p></article>
+<article><h3>千鶴</h3><p>三籟の布陣はツール化済み。見切れてバグ、分身、GCCD時の挙動を別途整理予定。</p><p class="src"><a href="98tizuru-sannrai.html">三籟の布陣ツール</a></p></article>
+</div>
+
+<h2>今後の追加順</h2>
+<div class="tw"><table class="roadmap">
+<tr><td>ページ</td><td>抽出候補</td><td>主な内容</td></tr>
+<tr><td>GCCD攻略・対策</td><td>52件</td><td>発生、使用場面、空振らせ方、GC後転との使い分け</td></tr>
+<tr><td>大門攻略・検証</td><td>70件</td><td>GCCD、地雷震、ダウン回避、キャラ別レシピ</td></tr>
+<tr><td>京攻略・検証</td><td>60件</td><td>ADV／EXT／95京、奈落、起き攻め、GCCD対策</td></tr>
+<tr><td>庵攻略・検証</td><td>56件</td><td>屑風、闇払い、投げ、起き攻め、キャラ対策</td></tr>
+<tr><td>クリス／裏クリス対策</td><td>41件</td><td>起き攻め、割り込み、リバサ大J、表裏別の整理</td></tr>
+<tr><td>コマンド入力受付</td><td>39件</td><td>方向・ボタンの最低保持、タメ時間、暴発防止</td></tr>
+<tr><td>ダウン回避・着地硬直</td><td>30件</td><td>キャラ別フレームと実戦上の入力タイミング</td></tr>
+</table></div>
+
+<h2>更新履歴</h2>
+<ul class="src">
+<li>2026/11/17　XアーカイブのKOF’98攻略候補573件から、大会前の優先項目を選んで作成。</li>
+</ul>
+
+<nav class="foot-nav"><a href="/kof98-top.html">KOF’98のトップへ</a><a href="/kof-top.html">KOFシリーズへ</a><a href="/">入口へ</a></nav>
+</div></main>
+<footer><div class="wrap">Come sono bravo?｜作成：MOT</div></footer>
+</body>
+</html>
