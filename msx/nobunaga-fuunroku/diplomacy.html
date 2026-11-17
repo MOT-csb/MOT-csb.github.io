@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>外交の成功条件（脅迫・同盟・婚姻・貢物）｜信長の野望・武将風雲録（MSX2版）｜MOT ゲーム攻略・検証ノート</title><meta name="description" content="MSX2版『武将風雲録』の外交コマンドの成否の決まり方。脅迫は兵数の差、同盟・婚姻・貢物は友好度と使者の能力で決まります。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap">
+<link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">MOT <span>GAME NOTES</span></a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/msx/">MSX</a><a href="/msx/nobunaga-fuunroku/">武将風雲録</a><a href="/arcade/kof2002/">KOF2002</a></nav></div></header>
+<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>外交の成功条件</b></div><p class="kicker">GAMEPLAY / DIPLOMACY</p><h1>外交の成功条件（脅迫・同盟・婚姻・貢物）</h1><p>外交コマンドは、脅迫とそれ以外で成否の決まり方がまったく違います。脅迫は兵数の差、同盟・婚姻・貢物は友好度と使者の能力で決まります。</p></div></div><main class="main"><div class="wrap">
+
+<section class="section"><h2>脅迫：兵数の差がほぼすべて</h2>
+<div class="statement"><p><b>ポイント：</b>脅迫の成否は、自分と相手の<b>総兵数の比</b>でほぼ決まります。相性・魅力・教養・友好度は関係しません。</p></div>
+<h3>必ず無視される条件</h3>
+<p>次のどれかに当てはまる相手には、何度脅迫しても無視されます。</p>
+<ul class="contents">
+<li>相手の大名の<b>政治＋戦闘＋教養が240以上</b></li>
+<li>相手の領地が<b>2国以上</b>ある</li>
+<li>相手の本拠地の国に、自分の国が<b>1つも隣接していない</b></li>
+</ul>
+<h3>点数の決まり方</h3>
+<p>上の条件をすべて通ると、次の点数で結果が決まります。</p>
+<div class="statement"><p>点数 ＝ 基礎点 ＋ <b>5 ×（自分の総兵数 ÷ 相手の総兵数）</b>（上限500） ＋ 使者の野望 − 相手の大名の野望 − 乱数（0〜9） − 5 × 難易度</p></div>
+<ul class="contents">
+<li>基礎点は、相手の本拠地に隣接している自分の国の数（1〜6）です。相手を完全に囲んでいるときだけ「10 − 難易度」になります（CPUが脅迫する側なら40）。</li>
+<li>総兵数は、どちらも全国の兵数の合計です。</li>
+<li>使者の能力で効くのは<b>野望</b>だけです。</li>
+</ul>
+<div class="table-scroll"><table><thead><tr><th>点数</th><th>結果</th></tr></thead><tbody>
+<tr><td>120を超える</td><td>降伏（相手の勢力を吸収）</td></tr>
+<tr><td>80を超える</td><td>茶器を贈ってくる</td></tr>
+<tr><td>50を超える</td><td>姫を差し出す</td></tr>
+<tr><td>30を超える</td><td>貢物を差し出す</td></tr>
+<tr><td>それ以下</td><td>無視される</td></tr>
+</tbody></table></div>
+<p class="small">茶器や姫を持っていない相手の場合は、ひとつ下の結果になります。茶器・姫・貢物の段階の細かい条件は未確認です。</p>
+<p>降伏させるには、総兵数でざっと<b>25倍前後</b>の差が必要です。シナリオ開始時点では、どちらのシナリオでも降伏まで届く組み合わせはありません。開始時点で最も点数が高いのは、シナリオ2の織田信長が足利義昭を脅迫する組み合わせです（乱数を引く前で96点）。</p>
+</section>
+
+<section class="section"><h2>脅迫に応じない大名</h2>
+<p>政治＋戦闘＋教養が240以上の大名は、兵数の差に関係なく脅迫を無視します。シナリオ開始時点では次の大名が当てはまります。</p>
+<div class="table-scroll"><table><thead><tr><th>シナリオ</th><th>大名（政治＋戦闘＋教養）</th></tr></thead><tbody>
+<tr><td>シナリオ1</td><td>武田信玄（270）、毛利元就（268）、織田信長（262）、北条氏康（259）、今川義元（251）、斎藤道三（250）、本願寺光佐（248）、上杉謙信（247）、大友宗麟（241）</td></tr>
+<tr><td>シナリオ2</td><td>武田信玄（270）、毛利元就（266）、織田信長（264）、北条氏康（261）、徳川家康（252）、上杉謙信（250）、本願寺光佐（249）、大友宗麟（241）</td></tr>
+</tbody></table></div>
+<p class="small">能力値はゲームの進行で変わるため、途中から当てはまる大名、外れる大名もいます。</p>
+</section>
+
+<section class="section"><h2>同盟・婚姻・貢物：友好度と使者の能力</h2>
+<p>脅迫以外の3つのコマンドは共通の式で、基準値だけがコマンドごとに違います。</p>
+<div class="statement"><p>成功率（%）＝ 5 ×（10 − 相性の差） ＋ 10 × 友好度 ＋ 使者の魅力 ＋ 2 × 使者の教養 ＋ 乱数（0〜9） − 基準値</p></div>
+<div class="table-scroll"><table><thead><tr><th>コマンド</th><th>基準値</th></tr></thead><tbody>
+<tr><td>貢物</td><td>210</td></tr>
+<tr><td>同盟</td><td>240</td></tr>
+<tr><td>婚姻</td><td>270</td></tr>
+</tbody></table></div>
+<ul class="contents">
+<li>プレイヤーが送る場合は、基準値に「2 × 難易度」が加わります。</li>
+<li>相性の差は、大名どうしの相性の数値の差（最大15）です。</li>
+<li>友好度の影響が最も大きく、1上がるごとに成功率が10%上がります。</li>
+<li><b>貢物の金額は成否に関係しません。</b>少ない金額でも成功率は同じです（成功した後の効果に金額が関係するかは未確認です）。</li>
+</ul>
+</section>
+
+<section class="section"><p><a href="cpu-ai.html">CPU勢力の行動傾向へ →</a></p></section></div></main>
+<footer class="footer"><div class="wrap">MOT ゲーム攻略・検証ノート　｜　攻略・観戦・研究メモ<br>ゲームの権利は各権利者に帰属します。</div></footer></body></html>
