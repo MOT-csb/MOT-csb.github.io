@@ -4,7 +4,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap">
 <link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">MOT <span>GAME NOTES</span></a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/msx/">MSX</a><a href="/msx/nobunaga-fuunroku/">武将風雲録</a><a href="/arcade/kof2002/">KOF2002</a></nav></div></header>
 <div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>HEX戦の戦術</b></div><p class="kicker">GAMEPLAY / HEX BATTLE</p><h1>HEX戦の戦術・特徴</h1><p>奇襲、突撃、騎馬隊、鉄砲隊、本陣攻略など、MSX2版『武将風雲録』の戦闘で注目したいポイント。</p></div></div><main class="main"><div class="wrap"><section class="section"><h2>夜間・雨天を利用した奇襲</h2><p>夜や雨の場面では敵部隊が見えなくなり、接近時の奇襲が大きな意味を持ちます。距離を取ってから再び接近する戦い方は、移動の速い騎馬隊と相性がよい戦術です。</p><div class="statement"><p><b>ポイント：</b>奇襲で相手の兵数を減らすだけでなく、こちらの損失を抑えながら繰り返し攻められることが重要です。</p></div></section>
-<section class="section" id="kishu"><h2>奇襲の成立条件と効果</h2><p>夜間や雨・雪などで視界が悪いとき、部隊が敵と接触すると奇襲になる場合があります。どちらが奇襲を仕掛けるかには、戦闘力だけでなく武将の別の能力も関係します。</p><p>奇襲時は通常攻撃よりも高い攻撃割合（150％）が使われ、攻撃側が受ける損害も抑えられます。ただし、最低損害の制限があるため、実際の被害人数が常に一定割合になるわけではありません。</p></section>
+<section class="section" id="kishu"><h2>奇襲の成立条件と効果</h2><p>夜間や雨・雪などで視界が悪いとき、部隊が敵と接触すると奇襲になる場合があります。どちらが奇襲を仕掛けるかは「4×戦闘＋その軍の国の訓練度」の大きい方で決まり、同じなら仕掛けた側にはなりません（説明書の「戦闘力と訓練度による」と一致）。戦闘1の差は訓練度4に当たります。</p><p>奇襲時は通常攻撃よりも高い攻撃割合（150％）が使われ、攻撃側が受ける損害も抑えられます。ただし、最低損害の制限があるため、実際の被害人数が常に一定割合になるわけではありません。</p></section>
 <section class="section" id="damage"><h2>損害の計算式</h2>
 <p>部隊どうしがぶつかると、攻めた側と攻められた側の両方について、同じ式で「相手に与える損害」を計算します。</p>
 <h3>① 部隊の強さ（基礎戦力）</h3>
@@ -28,7 +28,14 @@
 <li><b>奇襲</b>では、仕掛けた側が受ける損害が10分の1になります（ただし最低50）。</li>
 <li>どんなに差があっても損害は最低50なので、小さな部隊でも少しずつは削れます。</li>
 </ul>
-<p class="small">確かめた範囲：上の式は、部隊がぶつかったときの損害の計算部分です。地形の値の一覧、突撃・鉄砲・大砲それぞれの割合や回数、計算した損害が画面の兵数にどう反映されるか（単位の換算）は未確認です。</p>
+<h3>③ 地形の値</h3>
+<ul class="contents">
+<li>損害は「10×地形の値」で割られるので、地形の値が大きいHEXにいる部隊ほど損害を受けにくくなります（説明書の「地形効果」）。</li>
+<li><b>本丸</b>だけは、地形の値が「√城防御度」になります（最低17）。城防御度が289以下なら17のまま、400で20、999で31です。<b>築城は城防御度が289を超えてから本丸の守りに効き始めます</b>。999まで上げると、本丸にいる部隊の受ける損害は城防御度289以下のときの約55%になります。</li>
+<li>鉄甲船を持つ武将の部隊は、水上と見られる地形で地形の値が＋4されます。</li>
+<li>ほかの地形ごとの値は1〜16の表になっていますが、どの番号がどの地形かは未確認です。</li>
+</ul>
+<p class="small">確かめた範囲：上の式は、部隊がぶつかったときの損害の計算部分です。本丸以外の地形の名前と値の対応、突撃・鉄砲・大砲それぞれの割合や回数、計算した損害が画面の兵数にどう反映されるか（単位の換算）は未確認です。</p>
 </section>
 <section class="section"><h2>突撃と本陣の鉄砲隊</h2><p>通常の突撃は1ターンに複数回攻撃でき、鉄砲隊への攻撃手段として重要です。しかし、本陣にいる相手へ突撃すると攻撃が1回にとどまります。</p><p>そのため、守備側が本陣に鉄砲隊を置いていると攻略が難しくなります。戦闘力100の上杉謙信でさえ、攻撃側では苦戦しやすい状況です。</p></section>
 <section class="section"><h2>戦闘コマンドの整理</h2><div class="table-scroll"><table><thead><tr><th>主なコマンド</th><th>内容</th></tr></thead><tbody><tr><td>移動</td><td>部隊を移動させる</td></tr><tr><td>攻撃</td><td>通常攻撃・突撃・鉄砲・大砲・門壊など</td></tr><tr><td>待機</td><td>機動力を回復（上限10）</td></tr><tr><td>退却</td><td>退却・城内への移動</td></tr><tr><td>情報</td><td>兵数や部隊情報などの確認</td></tr><tr><td>伝令</td><td>出陣・開門・降伏勧告</td></tr><tr><td>委任</td><td>部隊の行動を任せる</td></tr></tbody></table></div></section>
