@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
-<title>褒美・茶会・教育・茶器没収のしくみ｜信長の野望・武将風雲録（MSX2版）｜MOT ゲーム攻略・検証ノート</title><meta name="description" content="MSX2版『武将風雲録』の褒美で上がる忠誠の計算式（計算機つき）、茶会の格と教養・文化度の上がり方、教育と茶器没収、文化度が広がるしくみ。">
+<title>褒美・茶会・教育・茶器没収・委任のしくみ｜信長の野望・武将風雲録（MSX2版）｜MOT ゲーム攻略・検証ノート</title><meta name="description" content="MSX2版『武将風雲録』の褒美で上がる忠誠の計算式（計算機つき）、茶会の格と教養・文化度の上がり方、教育と茶器没収、文化度が広がるしくみ。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap">
 <link rel="stylesheet" href="/assets/research.css"><style>.calc{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px}.calc .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}.calc label{display:block;font-size:13px;color:var(--muted)}.calc input,.calc select{width:100%;font:inherit;padding:7px 9px;border:1px solid var(--line);border-radius:7px;background:var(--bg);color:var(--ink)}.calc .out{margin-top:16px}.calc .out .stat strong{font-size:24px}.calc .note{font-size:13px;color:var(--muted);margin-top:10px}.calc .hide{display:none}</style></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">MOT <span>GAME NOTES</span></a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/msx/">MSX</a><a href="/msx/nobunaga-fuunroku/">武将風雲録</a><a href="/arcade/kof2002/">KOF2002</a></nav></div></header>
-<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>褒美・茶会・教育・茶器没収のしくみ</b></div><p class="kicker">GAMEPLAY / PERSONNEL</p><h1>褒美・茶会・教育・茶器没収のしくみ</h1><p>褒美の効きは大名との相性で2.6倍違います。茶会は持っている茶器で強さが決まり、国の文化度の一番上を押し上げられる唯一の方法です。文化度は税収や内政に効くので、茶器は内政の入口でもあります。</p></div></div><main class="main"><div class="wrap">
+<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>褒美・茶会・教育・茶器没収・委任のしくみ</b></div><p class="kicker">GAMEPLAY / PERSONNEL</p><h1>褒美・茶会・教育・茶器没収・委任のしくみ</h1><p>褒美の効きは大名との相性で2.6倍違います。茶会は持っている茶器で強さが決まり、国の文化度の一番上を押し上げられる唯一の方法です。文化度は税収や内政に効くので、茶器は内政の入口でもあります。</p></div></div><main class="main"><div class="wrap">
 <section class="section" id="calc"><h2>褒美の計算機</h2>
 <div class="calc">
 <div class="grid">
@@ -78,6 +78,13 @@ $('h-note').textContent=(k?'茶器の価値は金'+V+'と同じ扱いです。':
 <li><b>残ったとき</b>：忠誠が「30 ＋ 0〜（39 − 茶器の格）」下がります。良い茶器を取り上げるほど大きく下がり、格0の名物なら30〜69も下がります。</li>
 <li><b>恨み</b>：残った武将は恨みを抱き、毎月の謀叛・寝返りの候補になります。大名と同じ一族で野望が60未満の武将は、そのうち許してくれます。</li>
 <li>茶器を褒美として与えると、確率で恨みが消えます。</li>
+</ul>
+</section>
+<section class="section" id="dismiss"><h2>武将解任と委任</h2>
+<ul class="contents">
+<li><b>武将解任</b>：行動力10。政治と戦闘の合計が110以上の武将を解任しようとすると、軍師が引き止めの確認をしてきます。</li>
+<li><b>委任の種類</b>：属領ごとに「直轄・軍事型・内政型」の3つ。全委任を選ぶと、すべて内政型になります。</li>
+<li><b>軍事型と内政型の違い</b>：軍事型は冬（1〜3月）と夏（7〜9月）に、兵士が商業価値の半分以下なら兵を10人ずつ雇います。内政型はこれをしません。国境の属領は軍事型、奥の属領は内政型、という説明書の使い分けどおりの作りです。</li>
 </ul>
 </section>
 <section class="section"><h2>文化度</h2>
