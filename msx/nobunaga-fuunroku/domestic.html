@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
-<title>内政コマンドの計算式｜信長の野望・武将風雲録（MSX2版）｜MOT ゲーム攻略・検証ノート</title><meta name="description" content="MSX2版『武将風雲録』の内政コマンドで、投資額・政治力・技術などから成果がどう決まるか。開墾・治水。">
+<title>内政コマンドの計算式｜信長の野望・武将風雲録（MSX2版）｜MOT ゲーム攻略・検証ノート</title><meta name="description" content="MSX2版『武将風雲録』の内政コマンドで、投資額・政治力・技術などから成果がどう決まるか。開墾・治水・町投資・技術革新・築城・金山。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap">
 <link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">MOT <span>GAME NOTES</span></a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/msx/">MSX</a><a href="/msx/nobunaga-fuunroku/">武将風雲録</a><a href="/arcade/kof2002/">KOF2002</a></nav></div></header>
 <div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>内政コマンドの計算式</b></div><p class="kicker">GAMEPLAY / DOMESTIC AFFAIRS</p><h1>内政コマンドの計算式</h1><p>内政の成果が、投資した金・担当武将の能力・国の状態からどう決まるかをまとめています。政治力には、戦闘力の96以上のような段差はなく、成果は政治力にまっすぐ比例します。</p></div></div><main class="main"><div class="wrap">
@@ -64,8 +64,46 @@
 </ul>
 </section>
 
-<section class="section"><h2>ほかの内政コマンド</h2>
-<p>町投資・技術革新・築城・金山は、順次追加します。</p>
+<section class="section"><h2>町投資・技術革新・築城</h2>
+<p>この3つは<b>開墾と同じ式</b>です。「今の石高」の部分が、それぞれのコマンドで上げる値に置き換わります。</p>
+<div class="statement"><p>上がる量 ＝ 投資した金 ×（12 − 今の値÷200）÷ 50 ×（担当武将の政治 ＋ 担当武将の忠誠÷8 ＋ 2×√国の技術）÷ 100</p></div>
+<div class="table-scroll"><table><thead><tr><th>コマンド</th><th>上がる値</th><th>「今の値」に入るもの</th><th>上限</th></tr></thead><tbody>
+<tr><td>町投資</td><td>商業価値</td><td>今の商業価値</td><td>国ごとに決まる上限（最大999）</td></tr>
+<tr><td>技術革新</td><td>技術力</td><td>今の技術力</td><td>999</td></tr>
+<tr><td>築城</td><td>城防御度</td><td>今の城防御度</td><td>999</td></tr>
+</tbody></table></div>
+<ul class="contents">
+<li>どれも、上げる値が高くなるほど効率が落ちます（係数12→8）。</li>
+<li>CPUの補正（難易度に応じて1.2〜2倍）も、開墾と同じくかかります。</li>
+<li>民忠が+1される確率も開墾と同じです。</li>
+</ul>
+<h3>技術革新だけの追加補正</h3>
+<div class="statement"><p>技術革新の上がる量 × （商業価値の上限÷10 ＋ 50 − 今の技術力÷20）%</p></div>
+<p>商業価値の上限が大きい国（都会）ほど技術が伸びやすく、技術が上がるほど伸びにくくなります。商業価値の上限が600の国なら、技術0で110%、技術400で90%、技術999で61%です。</p>
+<h3>計算例</h3>
+<p>投資額100、担当武将は政治80・忠誠100、国の技術0、商業価値の上限600の場合。</p>
+<div class="table-scroll"><table><thead><tr><th>コマンド</th><th>今の値</th><th>上がる量</th></tr></thead><tbody>
+<tr><td>町投資</td><td>商業価値300</td><td>+20</td></tr>
+<tr><td>技術革新</td><td>技術力0</td><td>+24</td></tr>
+<tr><td>築城</td><td>城防御度300</td><td>+20</td></tr>
+</tbody></table></div>
+<p>技術はすべての内政（治水以外）の効率を上げるので、早めに上げておくほど後の内政が楽になります。</p>
+</section>
+
+<section class="section"><h2>金山</h2>
+<div class="statement"><p>掘れる金 ＝ 3×√国の技術 ＋ 5 ＋ 乱数（0〜19）</p></div>
+<ul class="contents">
+<li><b>政治は関係しません</b>。担当武将の能力ではなく、国の技術だけで決まります。</li>
+<li>投資する金はいりませんが、消費行動力は<b>100</b>です。</li>
+<li>金山のある国でしか実行できません。金山には残りの量があり、掘るたびに減って、尽きると掘れなくなります。残りが少ない金山は、掘れる量も減ります（残り1で20%、2で40%、3で60%、4で80%）。</li>
+</ul>
+<div class="table-scroll"><table><thead><tr><th>国の技術</th><th>0</th><th>100</th><th>400</th><th>999</th></tr></thead><tbody>
+<tr><td>掘れる金（残り5以上）</td><td>5〜24</td><td>35〜54</td><td>65〜84</td><td>98〜117</td></tr>
+</tbody></table></div>
+</section>
+
+<section class="section"><h2>内政コマンドの一覧</h2>
+<p>大名本人が実行すると、消費行動力は表の値です。家臣が実行すると、その半分で済みます。</p>
 <div class="table-scroll"><table><thead><tr><th>コマンド</th><th>消費行動力</th><th>上限</th></tr></thead><tbody>
 <tr><td>開墾</td><td>50</td><td>その国の最大石高</td></tr>
 <tr><td>治水</td><td>50</td><td>100</td></tr>
