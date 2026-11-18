@@ -1,0 +1,54 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>確定地雷震の回避検証｜MOT / KOF'96</title><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:950px}.article h1{font-size:clamp(26px,4vw,38px)}.article blockquote{border-left:4px solid var(--accent);margin:14px 0;padding:10px 16px;background:var(--soft)}.article table{min-width:0}.article td,.article th{overflow-wrap:anywhere}.article p,.article li{overflow-wrap:anywhere}.article pre{overflow-x:auto}@media(max-width:600px){.article table{font-size:13px}}</style></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav"><a href="/kof-top.html">KOF一覧</a><a href="/kof96-top.html">KOF'96旧ページ</a><a href="/">トップ</a></nav></div></header><main class="main"><div class="wrap article"><nav class="nav" style="margin:0 0 22px" aria-label="研究ノートメニュー"><a href="index.html">総合メニュー</a><a href="goro-kakuteijirai.html">大門・確定地雷震</a><a href="quake-defense.html" aria-current="page">回避の検証</a><a href="frame-recipe.html">レシピ消費F</a></nav><article class="section"><h1>KOF'96｜確定地雷震の回避をめぐる研究（2024年の再検証）</h1>
+<blockquote>
+<p>資料状態：MOT本人の公開ブログとX投稿に書かれた内容を、出典付きで編集したものです。「確認済み」はMOTの資料上の確認を意味し、今回ゲームを動かして独立検証したという意味ではありません。別作品のデータは混ぜていません。</p>
+</blockquote>
+<h2>研究上の問題</h2>
+<p>KOF'96の確定地雷震（地雷バグ）が、KOF'97以降に語られるような「コマンド投げ等の不成立入力」で回避できるかどうかを、MOT本人が2024年2月20日に調べました。シリーズ共通の知識をKOF'96へそのまま輸入しないための記録です。</p>
+<h2>MOTが行った試行【本人報告】</h2>
+<p><a href="https://x.com/mot_csb/status/1759862584029913547">本人の検証投稿</a>には以下が報告されています。</p>
+<table>
+<thead>
+<tr>
+  <th>試行</th>
+  <th>本人が報告した結果</th>
+  <th>位置づけ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>使用できない状態の超必殺投げを入力</td>
+  <td>弱地雷震を食らった</td>
+  <td>KOF'96での試行報告</td>
+</tr>
+<tr>
+  <td>打撃投げを入力</td>
+  <td>弱地雷震を食らった</td>
+  <td>KOF'96での試行報告</td>
+</tr>
+<tr>
+  <td>クラークのUAB</td>
+  <td>「奴隷化」と呼ぶ例外挙動</td>
+  <td>原文の用語を保持。詳しい再現条件は追加確認待ち</td>
+</tr>
+</tbody>
+</table>
+<h2>MOTの説明仮説【未確定】</h2>
+<p>同日の<a href="https://x.com/mot_csb/status/1759905104873078915">追加考察</a>で、起き上がりの1F前の強制立ち状態を必殺技などでキャンセルできないのではないかと推測しています。これは<strong>ゲーム内部の処理を直接解析して確認した事実ではありません</strong>。現段階では試行報告を説明するための仮説です。</p>
+<h2>2011年時点の問題意識とのつながり</h2>
+<p>2011年8月28日にMOTは、KOF'96には特殊技がないので「リバサ特殊技による地雷震の回避」ができないと述べ、コマンド投げや空中判定技の調査案を挙げています。<a href="https://x.com/mot_csb/status/107714230916091904">当時の投稿</a>に対して、2024年の試行は一部の検討に結果を与えたものです。ただし2011年の提案をそのまま「2011年に回避できた」とすることはできません。</p>
+<h2>境界条件と注意</h2>
+<ul>
+<li>通常のダウン回避で重ならなくなる場合と、起き上がり直前に地震判定を重ねられた後で回避できるかは別問題です。</li>
+<li>別作品で成立する対策を、KOF'96で再現できるとは限りません。</li>
+<li>試行したキャラクター、入力タイミング、1P/2P、位置などを網羅する追加記録は現資料上確認できません。</li>
+<li><a href="https://github.com/MOT-csb/MOT-csb.github.io/blob/main/kof-kakuteizirai.html">既存サイトのシリーズ横断記事</a>には複数作品の対策が掲載されますが、本ページでは<strong>KOF'96固有の報告のみ</strong>を採用しました。</li>
+</ul>
+<h2>関連</h2>
+<ul>
+<li><a href="./goro-kakuteijirai.html">大門五郎：確定地雷震の研究履歴</a></li>
+<li><a href="https://github.com/MOT-csb/MOT-csb.github.io/blob/main/96goro-kakuteizirai.html">現行サイト：KOF'96大門レシピ検索</a></li>
+<li><a href="https://x.com/mot_csb/status/1759862584029913547">2024/2/20 試行報告</a></li>
+<li><a href="https://x.com/mot_csb/status/1759905104873078915">2024/2/20 仕様仮説</a></li>
+</ul>
+<p><strong>整理日：2026年11月18日</strong>。</p>
+</article></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜MOTのゲーム攻略・研究アーカイブ（新規ページ案、未公開）</div></footer></body></html>

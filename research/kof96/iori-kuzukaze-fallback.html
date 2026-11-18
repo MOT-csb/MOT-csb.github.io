@@ -1,0 +1,60 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>KOF&#x27;96｜庵の屑風入力・暴発制御・近C連続技の研究史｜MOT</title><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:920px}.article table{min-width:0;width:100%}.article th,.article td{overflow-wrap:anywhere}.article blockquote{border-left:4px solid var(--accent);margin:16px 0;padding:4px 16px;background:var(--soft)}.article code{white-space:normal;overflow-wrap:anywhere}.article h2{margin-top:2rem}.article h3{margin-top:1.6rem}.article a{overflow-wrap:anywhere}@media(max-width:650px){.article table{display:block;overflow-x:auto;font-size:12px}.article table th,.article table td{min-width:95px;padding:8px}}</style></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/kof96-top.html">既存KOF'96</a><a href="./index.html">研究アーカイブ</a><a href="/kof-top.html">KOF</a></nav></div></header><main class="main"><div class="wrap article"><h1>KOF'96｜庵の屑風入力・暴発制御・近C連続技の研究史</h1>
+<blockquote>
+<p>MOTの2010、2011、2020、2025年の本人投稿を年代順に統合。独立した実機・ROM検証は未実施です。「確認しました」「かも」「大雑把に計算」「覚えがあります」を区別します。</p>
+</blockquote>
+<h2>2010年9月：ガードの保険をかける入力</h2>
+<p>MOTは、屑風を<code>41236C</code>と説明し、AC同時押しなら不成立時に出る技のボタン系統を弱へ寄せられると述べています。次の投稿では、<code>412361＋AC同時押し</code>（1を入れ、ボタンを押し続ける）により、連続ガード中はしゃがみガード、それ以外では屑風成立またはガードポーズ継続という分岐を説明しました。</p>
+<p><a href="https://x.com/mot_csb/status/24475425872">前半の投稿</a>／<a href="https://x.com/mot_csb/status/24475599026">後半の投稿</a>。この記述は本人の説明ですが、全対戦キャラ・全ての連係で有効と検証された資料ではありません。</p>
+<h2>2011年9月：屑風が成立しないときの暴発技を選択</h2>
+<p>2011年9月14日にMOTは<code>641236＋AC</code>の検証結果を投稿しました。</p>
+<table>
+<thead>
+<tr>
+  <th>状況</th>
+  <th>本人が報告した技</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>投げが成立する</td>
+  <td>屑風</td>
+</tr>
+<tr>
+  <td>投げが不成立・AC同時押し</td>
+  <td>弱鬼焼き</td>
+</tr>
+<tr>
+  <td>投げが不成立・ACを遅らせて押す</td>
+  <td>弱闇払い</td>
+</tr>
+</tbody>
+</table>
+<p>相手のジャンプを意識するなら鬼焼き、屈伸ガードを意識するなら闇払いという使い分けを提案しています。<a href="https://x.com/mot_csb/status/113945965643317248">原文</a>。</p>
+<p>ただし、10月7日の本人投稿では、<code>641236AC</code>で弱鬼焼きを同時に成立させることは難しいかもしれないと留保し、<code>4123623AC</code>なら両技を仕込めるはずとも述べています。<strong>9月の観測と10月の安定性についての懸念は別々に保存</strong>します。<a href="https://x.com/mot_csb/status/122183207629238272">10月7日</a>。</p>
+<h2>2011年10月：入力が速ければよいわけではない</h2>
+<p>MOTは、236系受付12F、41236系受付18Fと書き、方向を速く入力するだけでは意図した技にならない問題を説明しています。2011年の検討では、闇払いを暴発させずに屑風を出す入力も「タイミングがシビア」としています。<a href="https://x.com/mot_csb/status/121407293395959808">10月5日の本人投稿</a>。</p>
+<p>また、相手の着地へ投げを合わせようとしてボタンを押し続けると、庵では闇払いが漏れるため、技が成立する位置・タイミングを少しずらす案が示されています。<a href="https://x.com/mot_csb/status/121819306974642176">10月6日</a>。</p>
+<h2>2020年10月：近C→屑風の難しさを再分析</h2>
+<p>MOTは「屑風からダッシュ近C→屑風」について、ダッシュ直後にレバーを後ろへ入れる案を検討。本人は「かも」「気がします」「ハッキリとは調べていない」と留保しています。<a href="https://x.com/mot_csb/status/1311845690255896576">10月2日・案</a>／<a href="https://x.com/mot_csb/status/1311879478209961985">続報</a>。</p>
+<p>その後、遠Cが出るギリギリの間合いからも屑風が成立したこと、<code>41236C</code>を早く入れすぎると強闇払いになることを<strong>確認した</strong>と報告。受付時間の大小関係が理由ではないかという説明は、本人の推測です。<a href="https://x.com/mot_csb/status/1312005303882313729">検証投稿</a>。</p>
+<p>2020年10月3日には近C入力から屑風までの猶予を「<strong>大雑把に計算</strong>」し、<strong>6F</strong>という概算値を示しています。これは正式な一律入力猶予の確定値ではありません。<a href="https://x.com/mot_csb/status/1312299527353688066">概算</a>／<a href="https://x.com/mot_csb/status/1312300357653946370">操作イメージの続報</a>。</p>
+<p>同年、対ユリで<code>{近C→屑風}×3→遠Cまたは遠D</code>で気絶させたという確認報告もあります。ただし、この対ユリの結果を全キャラへの安定連続技として一般化しません。<a href="https://x.com/mot_csb/status/1312010792183623680">対ユリ</a>。</p>
+<h2>2025年12月：入力難度に関する本人の記憶と解釈</h2>
+<p>2025年12月21日、MOTは屑風について受付時間が短い一方で斜め2Fが必要だった「<strong>覚えがあります</strong>」と述べました。さらに、同時押し猶予によって立ち攻撃が屈攻撃に変わることもあり、ダッシュ近C→屑風が難しいと解釈しています。</p>
+<ul>
+<li><a href="https://x.com/mot_csb/status/2002610665375347166">本人の記憶</a></li>
+<li><a href="https://x.com/mot_csb/status/2002612883864399929">同時押し猶予の解釈</a></li>
+<li><a href="https://kofplayers.hatenablog.jp/entry/2024/09/02/204724">2024年の入力受付数値の本人記事</a></li>
+</ul>
+<p><strong>資料上の区分</strong>：2011・2020年の入力結果は本人の検証報告。2020年の6Fは概算。2025年の2Fは本人が記憶として述べたものです。今回は独立測定で確定していません。</p>
+<h2>更新履歴と追加検証</h2>
+<ul>
+<li>2010年：屈ガード保険の着想と説明。</li>
+<li>2011年：AC同時押しによる屑風不成立時の技分岐、受付制約を研究。</li>
+<li>2020年：近C→屑風の入力難度と、早すぎる入力での強闇払いを再検討。</li>
+<li>2025年：斜め2Fと同時押し猶予の関係に言及。</li>
+<li>2026年11月18日：この研究史を一次資料から再構成。</li>
+</ul>
+<p><strong>未確認</strong>：<code>4123623AC</code>の全条件下での成功率、ダッシュ近C→屑風の入力開始猶予の厳密値、対ユリ以外でのコンボ安定性。</p>
+<p><a href="./command-throw-fallback.html">コマンド投げ不成立時の総合研究へ戻る</a> ／ <a href="./index.html">KOF'96総合目次</a></p>
+</div></main><footer class="footer"><div class="wrap">MOT 攻略研究アーカイブ｜2026-11-18｜本人資料を再構成</div></footer></body></html>

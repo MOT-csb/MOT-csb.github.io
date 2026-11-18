@@ -1,0 +1,131 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>KOF&#x27;96｜コマンド投げ不成立時の暴発技を制御する｜MOT</title><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:920px}.article table{min-width:0;width:100%}.article th,.article td{overflow-wrap:anywhere}.article blockquote{border-left:4px solid var(--accent);margin:16px 0;padding:4px 16px;background:var(--soft)}.article code{white-space:normal;overflow-wrap:anywhere}.article h2{margin-top:2rem}.article h3{margin-top:1.6rem}.article a{overflow-wrap:anywhere}@media(max-width:650px){.article table{display:block;overflow-x:auto;font-size:12px}.article table th,.article table td{min-width:95px;padding:8px}}</style></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/kof96-top.html">既存KOF'96</a><a href="./index.html">研究アーカイブ</a><a href="/kof-top.html">KOF</a></nav></div></header><main class="main"><div class="wrap article"><h1>KOF'96｜コマンド投げ不成立時の暴発技を制御する</h1>
+<blockquote>
+<p>研究者：MOT。2010〜2025年の本人投稿と旧ブログに基づく再構成。<strong>「本人がそう報告した」ことと、今回独立して再現したことは異なります。</strong> このページではゲームのROM・実機での独立検証は未実施です。旧研究で後に撤回された案は、現行レシピには採用しません。</p>
+</blockquote>
+<h2>このページの狙い</h2>
+<p>KOF'96のコマンド投げでは、投げが成立しなかったとき、通常技や別の必殺技が出ることがあります。MOTは、その技を単なる入力ミスとせず、<strong>レバー・ボタン・入力タイミングの工夫で選び直し、攻めのリスクを減らす</strong>対象として研究しました。</p>
+<p>「投げ不成立時の暴発」は、(1)コマンド自体が受理されない、(2)投げが可能な状況でない、(3)同じ入力に別の技コマンドが重なる、などの異なる可能性を含みます。これらの内部分岐の完全な定式化は資料からは確認できません（AIによる整理）。</p>
+<h2>キャラクター別の資料確認結果</h2>
+<table>
+<thead>
+<tr>
+  <th>使用キャラ・狙い</th>
+  <th>入力・状況</th>
+  <th>MOTの記録した結果</th>
+  <th>状態</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>庵・屑風</td>
+  <td><code>641236＋AC</code>同時押し</td>
+  <td>成立なら屑風。不成立なら弱鬼焼き。ACを遅らせると弱闇払いという結果を報告</td>
+  <td><strong>検証報告あり</strong></td>
+</tr>
+<tr>
+  <td>庵・屑風</td>
+  <td><code>412361＋AC</code>（1・ボタン押しっぱなし）</td>
+  <td>連続ガードでは屈ガード、他では屑風またはガードポーズ継続と説明</td>
+  <td><strong>本人の記述</strong>（2010年）</td>
+</tr>
+<tr>
+  <td>クラーク・SAB</td>
+  <td><code>412362＋D</code></td>
+  <td>SAB不成立なら屈D。2011年報告で近DのG-10Fに対し屈DはG-6F</td>
+  <td><strong>検証報告あり</strong></td>
+</tr>
+<tr>
+  <td>クラーク・SAB</td>
+  <td><code>412369D</code></td>
+  <td>不成立時の昇りJDを狙う</td>
+  <td><strong>本人による方法の提示</strong>（成功例の詳細不足）</td>
+</tr>
+<tr>
+  <td>クラーク・SAB</td>
+  <td><code>41236D→B</code>ずらし押し</td>
+  <td>不成立時にフランケンシュタイナーを出す案</td>
+  <td><strong>本人による方法の提示</strong></td>
+</tr>
+<tr>
+  <td>クラーク・UAB</td>
+  <td>不成立時に弱攻撃化</td>
+  <td>近Aまたは屈Aにできるかもしれないと本人が考察</td>
+  <td><strong>仮説</strong>（2011年）</td>
+</tr>
+<tr>
+  <td>クラーク・被起き攻め</td>
+  <td><code>412361</code>でSAB、失敗時は屈ガード</td>
+  <td>チャンの端固めに対する「なるはず」という提案</td>
+  <td><strong>仮説</strong>（2020年）</td>
+</tr>
+<tr>
+  <td>ラルフ・SAB</td>
+  <td>弱強どちらのボタンでも成立</td>
+  <td>MOTの2011年メモは「暴発技がない」と説明</td>
+  <td><strong>本人記事に記述</strong></td>
+</tr>
+<tr>
+  <td>紅丸・コレダー</td>
+  <td>投げ不成立時の雷靭拳</td>
+  <td>雷靭拳も反撃されるという報告</td>
+  <td><strong>本人記述</strong>（詳細条件未整理）</td>
+</tr>
+<tr>
+  <td>ユリ・弱百烈びんた</td>
+  <td>不成立時の弱ちょうなっくる</td>
+  <td>しゃがまれると当たらないと報告</td>
+  <td><strong>本人記述</strong>（詳細条件未整理）</td>
+</tr>
+<tr>
+  <td>バイス・コマンド投げ</td>
+  <td>ボタン押しっぱなしと屈ガード保険</td>
+  <td>2025年に戦術的可能性を考察</td>
+  <td><strong>仮説</strong>（個別入力と成功率は資料上未確認）</td>
+</tr>
+</tbody>
+</table>
+<p>庵の記録：<a href="https://x.com/mot_csb/status/113945965643317248">2011/9/14</a>、<a href="https://x.com/mot_csb/status/24475425872">2010/9/14前半</a>、<a href="https://x.com/mot_csb/status/24475599026">同後半</a>。</p>
+<p>クラークの記録：<a href="https://x.com/mot_csb/status/120782088839507968">2011/10/3</a>、<a href="https://x.com/mot_csb/status/126101581182668800">2011/10/18</a>、<a href="https://x.com/mot_csb/status/1300025017820872704">2020/8/30</a>、<a href="https://x.com/mot_csb/status/122197484490604545">2011/10/7 UABの仮説</a>。</p>
+<p>他キャラの記録：<a href="https://x.com/mot_csb/status/123922631744434177">2011/10/12</a>、<a href="https://x.com/mot_csb/status/1888859863910060354">2025/2/10 バイス</a>。<a href="https://comesonobravo.seesaa.net/article/230142382.html">MOTの2011年ブログ</a>も参照。</p>
+<h2>古い攻略案の明示的な撤回</h2>
+<h3>クラーク「弱ボタン同時押しで近Bが出る」は採用しない</h3>
+<p>2011年10月1日、MOTはクラークのSABに弱攻撃を同時押しすれば、失敗時は近Dでなく近Bになると述べました。しかし<strong>約1分後</strong>、<code>41236B</code>ではフランケンシュタイナーが出るとして、自分の説明を明確に撤回しています。</p>
+<ul>
+<li><a href="https://x.com/mot_csb/status/119986174826790912">最初の投稿</a></li>
+<li><a href="https://x.com/mot_csb/status/119986545515167744">直後の訂正</a></li>
+</ul>
+<p>「弱ボタンを混ぜれば必ず弱攻撃になる」という一般化はできません。</p>
+<h3>「ABCで投げ失敗時にパワーため」は本人記事で否定済み</h3>
+<p>2011年の本人ブログは、コマンド投げのCボタンとABCを組み合わせる案を記載した直後、<strong>「無理だった。パワーためが一番優先順位が高かった」</strong>と訂正しています。実用技術として掲載しません。<a href="https://comesonobravo.seesaa.net/article/230142382.html">原記事</a>。</p>
+<h2>成立時／不成立時だけでなく、ガードの保険もある</h2>
+<p>KOF'96で、コマンド完成後にレバーをガード方向へ動かしてボタンを押し続ける方法をMOTは検討しています。庵については2010年9月の投稿、クラークについては2020年8月30日の投稿が確認できます。ただしクラークの2020年案は本人が「なるはず」と書いています。<a href="https://x.com/mot_csb/status/24475599026">庵の2010年投稿</a>／<a href="https://x.com/mot_csb/status/1300025017820872704">クラークの2020年投稿</a>。</p>
+<p>2015年10月には、起き上がりの投げ無敵と、ボタンを押し続けた場合の投げ成立について本人が別途述べていますが、「8Fみたい」「4F経った後」といった表現を含みます。個別の状況を再検証せず、一般条件として採用しません。<a href="https://x.com/mot_csb/status/651357778510942212">2015年投稿</a>。</p>
+<h2>防御側から見た価値</h2>
+<p>2011年10月12日にはMOT本人が、投げを仕掛けられた側は<strong>失敗時に出た技をガードして反撃し、リスクを負わせる</strong>べきだと書いています。<a href="https://x.com/mot_csb/status/123922897180958720">本人投稿</a>。攻撃側の技選択の工夫と、防御側の暴発技への反撃は同じ研究テーマの両面です。</p>
+<h2>混同しない事項</h2>
+<ul>
+<li><strong>通常投げの弱ボタン同時押し</strong>と<strong>コマンド投げの暴発制御</strong>は異なります。2011年9月に通常投げの弱同時押しを確認した投稿があります。<a href="https://x.com/mot_csb/status/115316593411633153">原文</a>。</li>
+<li>通常投げと通常投げが同時成立した場合について、MOTは2023年に「96～2002ではどちらも投げられず、通常技も出ない」とシリーズ比較しました。これは「コマンド投げ不成立」の話とは別です。<a href="https://x.com/mot_csb/status/1641013600595881984">原文</a>。</li>
+<li>KOF2002・98・95の詳細をそのままKOF'96の仕様として流用しません。</li>
+</ul>
+<h2>今後の確認事項</h2>
+<ol>
+<li>同じ相手・同じ間合いで、クラークの近Dガード時硬直差が旧ブログと2011年X投稿で異なる理由。</li>
+<li>2011年に示された<code>412369D</code>と<code>41236D→B</code>の再現率とレバー条件。</li>
+<li>クラークの<code>412361</code>でSAB不成立時に必ず屈ガードが成立する条件。</li>
+<li>バイスの屈ガード保険について、具体的なコマンドと起き上がり時の成立条件。</li>
+<li>コレダー／百烈びんた失敗時の技に、安全な代替入力があるか。</li>
+</ol>
+<h2>関連ページ</h2>
+<ul>
+<li><a href="./iori-kuzukaze-fallback.html">庵：屑風の入力と2010～2025年の研究</a></li>
+<li><a href="./clark-sab-fallback.html">クラーク：SAB失敗時の技選択</a></li>
+<li><a href="./input-priority.html">旧記事を検証した行動優先順位</a></li>
+<li><a href="./input-window.html">入力受付と必殺技の出しにくさ</a></li>
+<li><a href="./index.html">KOF'96研究総合ページ</a></li>
+</ul>
+<h3>更新履歴</h3>
+<ul>
+<li>2026-11-18：MOT本人の投稿・ブログに基づき試作。今後の独立検証は未実施。</li>
+</ul>
+</div></main><footer class="footer"><div class="wrap">MOT 攻略研究アーカイブ｜2026-11-18｜本人資料を再構成</div></footer></body></html>

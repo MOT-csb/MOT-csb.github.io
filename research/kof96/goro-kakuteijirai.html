@@ -1,0 +1,259 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>大門五郎・確定地雷震｜MOT / KOF'96</title><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:950px}.article h1{font-size:clamp(26px,4vw,38px)}.article blockquote{border-left:4px solid var(--accent);margin:14px 0;padding:10px 16px;background:var(--soft)}.article table{min-width:0}.article td,.article th{overflow-wrap:anywhere}.article p,.article li{overflow-wrap:anywhere}.article pre{overflow-x:auto}@media(max-width:600px){.article table{font-size:13px}}</style></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav"><a href="/kof-top.html">KOF一覧</a><a href="/kof96-top.html">KOF'96旧ページ</a><a href="/">トップ</a></nav></div></header><main class="main"><div class="wrap article"><nav class="nav" style="margin:0 0 22px" aria-label="研究ノートメニュー"><a href="index.html">総合メニュー</a><a href="goro-kakuteijirai.html" aria-current="page">大門・確定地雷震</a><a href="quake-defense.html">回避の検証</a><a href="frame-recipe.html">レシピ消費F</a></nav><article class="section"><h1>KOF'96｜大門五郎の確定地雷震：成立条件とレシピ研究史</h1>
+<blockquote>
+<p>資料状態：MOT本人の公開ブログとX投稿に書かれた内容を、出典付きで編集したものです。「確認済み」はMOTの資料上の確認を意味し、今回ゲームを動かして独立検証したという意味ではありません。別作品のデータは混ぜていません。</p>
+</blockquote>
+<h2>1. このページの使い方</h2>
+<p>「必要な隙間F」は、<strong>各投げの後に弱地雷震を確定させるために必要だとMOTが記録したタイミング合わせのフレーム数</strong>です。攻撃技の発生Fや成功猶予Fと同一ではありません。</p>
+<p>このページは根拠や履歴を説明する補助資料です。実戦用の相手キャラ検索は<a href="https://github.com/MOT-csb/MOT-csb.github.io/blob/main/96goro-kakuteizirai.html">既存の確定地雷震レシピツール</a>を利用してください。</p>
+<h2>2. 相手キャラ別・始動技別の必要隙間F【2011年MOT公開表】</h2>
+<h3>天地返し</h3>
+<p>出典：<a href="https://comesonobravo.seesaa.net/article/217566431.html">天地返しからの確定地雷震Fリスト</a>（2011-07-31）。</p>
+<table>
+<thead>
+<tr>
+  <th style="text-align:right">必要な隙間F</th>
+  <th>相手キャラクター</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:right">39</td>
+  <td>ユリ、ギース</td>
+</tr>
+<tr>
+  <td style="text-align:right">42</td>
+  <td>リョウ</td>
+</tr>
+<tr>
+  <td style="text-align:right">43</td>
+  <td>ロバート、キム</td>
+</tr>
+<tr>
+  <td style="text-align:right">44</td>
+  <td>ジョー、ラルフ、クラーク、アテナ、クラウザー、舞、マチュア、バイス</td>
+</tr>
+<tr>
+  <td style="text-align:right">48</td>
+  <td>テリー、ケンスウ</td>
+</tr>
+<tr>
+  <td style="text-align:right">49</td>
+  <td>BIG、キング</td>
+</tr>
+<tr>
+  <td style="text-align:right">50</td>
+  <td>京、レオナ、チョイ、香澄</td>
+</tr>
+<tr>
+  <td style="text-align:right">51</td>
+  <td>紅丸、五郎、庵</td>
+</tr>
+<tr>
+  <td style="text-align:right">52</td>
+  <td>チン、チャン</td>
+</tr>
+<tr>
+  <td style="text-align:right">54</td>
+  <td>アンディ</td>
+</tr>
+</tbody>
+</table>
+<h3>雲つかみ投げ／切り株返し</h3>
+<p>出典：<a href="https://comesonobravo.seesaa.net/article/217635010.html">雲つかみ投げ／切り株返しFリスト</a>（2011-07-31）。</p>
+<table>
+<thead>
+<tr>
+  <th style="text-align:right">必要な隙間F</th>
+  <th>相手キャラクター</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:right">21</td>
+  <td>ユリ、ギース</td>
+</tr>
+<tr>
+  <td style="text-align:right">24</td>
+  <td>リョウ</td>
+</tr>
+<tr>
+  <td style="text-align:right">25</td>
+  <td>ジョー、ロバート</td>
+</tr>
+<tr>
+  <td style="text-align:right">26</td>
+  <td>ラルフ、クラーク、アテナ、クラウザー、キム、舞、マチュア、バイス</td>
+</tr>
+<tr>
+  <td style="text-align:right">30</td>
+  <td>五郎、テリー、ケンスウ</td>
+</tr>
+<tr>
+  <td style="text-align:right">31</td>
+  <td>京、紅丸、BIG、チョイ、香澄、キング</td>
+</tr>
+<tr>
+  <td style="text-align:right">32</td>
+  <td>レオナ</td>
+</tr>
+<tr>
+  <td style="text-align:right">33</td>
+  <td>庵</td>
+</tr>
+<tr>
+  <td style="text-align:right">34</td>
+  <td>チン</td>
+</tr>
+<tr>
+  <td style="text-align:right">35</td>
+  <td>アンディ</td>
+</tr>
+<tr>
+  <td style="text-align:right">36</td>
+  <td>チャン</td>
+</tr>
+</tbody>
+</table>
+<h3>超大外刈り</h3>
+<p>出典：<a href="https://comesonobravo.seesaa.net/article/222894254.html">超大外刈り始動Fリスト</a>（2011-08-28）。</p>
+<table>
+<thead>
+<tr>
+  <th style="text-align:right">必要な隙間F</th>
+  <th>相手キャラクター</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:right">19</td>
+  <td>マチュア、バイス</td>
+</tr>
+<tr>
+  <td style="text-align:right">22</td>
+  <td>京、舞</td>
+</tr>
+<tr>
+  <td style="text-align:right">24</td>
+  <td>ユリ、ラルフ、クラーク、アテナ、ギース、クラウザー、香澄、庵</td>
+</tr>
+<tr>
+  <td style="text-align:right">25</td>
+  <td>ジョー、リョウ、ロバート</td>
+</tr>
+<tr>
+  <td style="text-align:right">28</td>
+  <td>ケンスウ、キング</td>
+</tr>
+<tr>
+  <td style="text-align:right">29</td>
+  <td>チョイ</td>
+</tr>
+<tr>
+  <td style="text-align:right">30</td>
+  <td>テリー</td>
+</tr>
+<tr>
+  <td style="text-align:right">32</td>
+  <td>チン</td>
+</tr>
+<tr>
+  <td style="text-align:right">34</td>
+  <td>五郎、BIG</td>
+</tr>
+<tr>
+  <td style="text-align:right">35</td>
+  <td>紅丸、レオナ、チャン</td>
+</tr>
+<tr>
+  <td style="text-align:right">38</td>
+  <td>キム</td>
+</tr>
+<tr>
+  <td style="text-align:right">43</td>
+  <td>アンディ</td>
+</tr>
+</tbody>
+</table>
+<h3>雲つかみ投げと切り株返しを同一視できるか【未確認】</h3>
+<p>2011年のMOT本人の記事は、<strong>切り株返しヒット後の硬直差で確認した</strong>と明記し、雲つかみ投げには相違の可能性があると留保しています。表を丸ごと「雲つかみで実機確認済み」と読み替えません。</p>
+<h2>3. 地獄極楽落としからは確定するか【当時のMOT結論：しない】</h2>
+<p><a href="https://comesonobravo.seesaa.net/article/217810974.html">2011年8月1日の記事</a>には、通常版は大門側の硬直が長いため弱地雷震の地震判定を間に合わせられず、MAX版は相手がダウン回避可能なため確定しない、と明記されています。この結論はKOF'96についてのものです。他のシリーズの地獄極楽始動レシピと混同しません。</p>
+<h2>4. タイミング合わせの代表例【MOTの資料上のレシピ】</h2>
+<table>
+<thead>
+<tr>
+  <th style="text-align:right">消費F</th>
+  <th>記録された動作</th>
+  <th>根拠</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:right">10F</td>
+  <td>地上CD空キャン</td>
+  <td><a href="https://comesonobravo.seesaa.net/article/217558588.html">2011年のレシピ</a></td>
+</tr>
+<tr>
+  <td style="text-align:right">17F</td>
+  <td>挑発（最短キャンセル）</td>
+  <td><a href="https://comesonobravo.seesaa.net/article/217558588.html">2023年4月2日追記</a></td>
+</tr>
+<tr>
+  <td style="text-align:right">24F</td>
+  <td>バックステップ</td>
+  <td><a href="https://comesonobravo.seesaa.net/article/217558588.html">2011年のレシピ</a></td>
+</tr>
+<tr>
+  <td style="text-align:right">30F</td>
+  <td>前転</td>
+  <td><a href="https://comesonobravo.seesaa.net/article/217558588.html">2011年のレシピ</a></td>
+</tr>
+<tr>
+  <td style="text-align:right">37F</td>
+  <td>攻撃避け</td>
+  <td><a href="https://comesonobravo.seesaa.net/article/217558588.html">2011年のレシピ</a></td>
+</tr>
+<tr>
+  <td style="text-align:right">39F</td>
+  <td>リバサ大J攻撃（上昇中）</td>
+  <td><a href="https://comesonobravo.seesaa.net/article/217558588.html">2011年のレシピ</a></td>
+</tr>
+<tr>
+  <td style="text-align:right">51F</td>
+  <td>強超受け身→立CD空キャン／ノーマルJ→立CD空キャン</td>
+  <td><a href="https://github.com/MOT-csb/MOT-csb.github.io/blob/main/96goro-kakuteizirai.html">2026年掲載の既存対照表</a></td>
+</tr>
+</tbody>
+</table>
+<p>これらは<strong>候補動作の消費F</strong>であり、上表の必要隙間Fに一致するからといって全相手・全状況での成功を保証しません。消費Fの一覧は付属のCSVを参照してください。</p>
+<h2>5. 研究の変遷</h2>
+<ul>
+<li><strong>2011/7/29〜7/31</strong>：MOTが96版確定地雷震を調べたいと述べ、タイミングレシピ、天地返し始動、雲つかみ／切り株返し始動の表を順次発表。<a href="https://x.com/mot_csb/status/96864447917850626">投稿（96864447917850626）</a>、<a href="https://x.com/mot_csb/status/97328966691598336">投稿（97328966691598336）</a>、<a href="https://x.com/mot_csb/status/97349593435611136">投稿（97349593435611136）</a>、<a href="https://x.com/mot_csb/status/97520687387910144">投稿（97520687387910144）</a></li>
+<li><strong>2011/8/1〜8/28</strong>：地獄極楽落としでは確定しない理由を記事化し、超大外刈り始動表も発表。<a href="https://x.com/mot_csb/status/97906970291470336">投稿（97906970291470336）</a>、<a href="https://x.com/mot_csb/status/107813980055154689">投稿（107813980055154689）</a></li>
+<li><strong>2020/11/24</strong>：MOTが「レシピ対照表」をまとめ、チンに対する実戦応用を検討。天地返しや切り株返しからの確定地雷震を対チンの手段として挙げた。<a href="https://x.com/mot_csb/status/1331071943752048640">投稿（1331071943752048640）</a>、<a href="https://x.com/mot_csb/status/1331262491695857664">投稿（1331262491695857664）</a></li>
+<li><strong>2023/4/2</strong>：挑発（最短キャンセル）をタイミング合わせレシピに追加。庵相手の天地返し始動レシピの可能性について述べた後、安定レシピがあるとも投稿。<a href="https://x.com/mot_csb/status/1642531644107259904">投稿（1642531644107259904）</a>、<a href="https://x.com/mot_csb/status/1642545180099375104">投稿（1642545180099375104）</a></li>
+<li><strong>2024/2/20</strong>：MOT本人は、コンパクトな一覧よりレシピ対照表の方が正確だと説明。KOF'96の回避手段の調査も報告。<a href="https://x.com/mot_csb/status/1759863775388471768">投稿（1759863775388471768）</a>、<a href="https://x.com/mot_csb/status/1759862584029913547">投稿（1759862584029913547）</a></li>
+<li><strong>2026/11/17</strong>：既存GitHub Pagesにインタラクティブな<a href="https://github.com/MOT-csb/MOT-csb.github.io/blob/main/96goro-kakuteizirai.html">対照表・検索ツール</a>を掲載（ページ内記載）。原スプレッドシートそのものは今回の添付資料に含まれない。</li>
+</ul>
+<h2>6. 他の対戦研究につながる点</h2>
+<p>2020年の検討では、チンの望月酔に切り株返しが当たることや、切り株返しからの確定地雷震を利用する案が示されています。ただし同日の試行で、<strong>チンの中JCDへの雲つかみ投げは普通に負ける</strong>と報告し、置き遠Dでの相打ち狙いを現実的と見直しています。<a href="https://x.com/mot_csb/status/1331071943752048640">投稿（1331071943752048640）</a>、<a href="https://x.com/mot_csb/status/1331262491695857664">投稿（1331262491695857664）</a>、<a href="https://x.com/mot_csb/status/1331268700331069440">投稿（1331268700331069440）</a></p>
+<h2>7. 未解決・再検証事項</h2>
+<ol>
+<li>2011年の<a href="https://comesonobravo.seesaa.net/article/217566431.html">天地返し記事</a>には弱地雷震「発生26F」とあり、<a href="https://comesonobravo.seesaa.net/article/217558588.html">タイミングレシピ</a>のメモは「発生27F？」です。計測条件・更新時期を合わせた検証は未実施。</li>
+<li>雲つかみ投げ始動の全キャラ隙間Fが、切り株返し始動の測定値と一致するかは未確認。</li>
+<li>2020年の原スプレッドシートは未提供。現行GitHubの対照表とは照合したが、元のシートの独立検証は未実施。</li>
+<li>C投げ始動は既存ツール上でも「要確認」。</li>
+<li>レシピの成功・不成功はダウン回避、位置関係、技キャンセル、入力精度などの条件に左右され得る。資料にない断定はしない。</li>
+</ol>
+<h2>出典</h2>
+<ul>
+<li><a href="https://comesonobravo.seesaa.net/article/217558588.html">MOT：2011年タイミング合わせレシピ</a></li>
+<li><a href="https://comesonobravo.seesaa.net/article/217566431.html">MOT：2011年天地返し始動F一覧</a></li>
+<li><a href="https://comesonobravo.seesaa.net/article/217635010.html">MOT：2011年雲つかみ／切り株始動F一覧</a></li>
+<li><a href="https://comesonobravo.seesaa.net/article/222894254.html">MOT：2011年超大外刈り始動F一覧</a></li>
+<li><a href="https://comesonobravo.seesaa.net/article/217810974.html">MOT：2011年地獄極楽始動について</a></li>
+<li><a href="https://github.com/MOT-csb/MOT-csb.github.io/blob/main/96goro-kakuteizirai.html">現行サイトのKOF'96大門レシピ検索</a></li>
+<li><a href="./KOF96_%E7%A2%BA%E5%AE%9A%E5%9C%B0%E9%9B%B7%E9%9C%87_X%E4%B8%80%E6%AC%A1%E8%B3%87%E6%96%9924%E4%BB%B6.csv">関連X投稿24件（CSVに本文保存）</a></li>
+</ul>
+<p><strong>整理日：2026年11月18日</strong>。外部資料と自身のX履歴は独立検証とは異なります。全投稿のリンクが現時点でX上で公開表示されることは保証しません。</p>
+</article></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜MOTのゲーム攻略・研究アーカイブ（新規ページ案、未公開）</div></footer></body></html>

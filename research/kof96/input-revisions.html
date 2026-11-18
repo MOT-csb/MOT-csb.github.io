@@ -1,0 +1,62 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>KOF’96｜必殺技コマンド入力の研究史：古い説明と後年の訂正｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:920px;margin:auto}.article p,.article li{line-height:1.85}.article table{min-width:620px}.article table{display:block;max-width:100%;overflow-x:auto}.article blockquote{border-left:4px solid var(--accent);background:var(--soft);padding:8px 16px;margin:15px 0;border-radius:0 10px 10px 0}</style></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav"><a href="/kof96-top.html">KOF'96既存メニュー</a><a href="./index.html">研究アーカイブ</a><a href="/">トップ</a></nav></div></header><main class="main"><div class="wrap article"><h1>KOF’96｜必殺技コマンド入力の研究史：古い説明と後年の訂正</h1>
+<blockquote>
+<p>このページは必殺技の入力受付に関する<strong>研究履歴の変更点</strong>を記録します。すべての必殺技を動作検証したページではありません。既存の<a href="./input-window.html">入力受付の詳細記事</a>と合わせて参照してください。</p>
+</blockquote>
+<h2>1．旧記事にあった「最後の方向を入れっぱなし」説</h2>
+<p>MOTの古い<a href="https://comesonobravo.xxxxxxxx.jp/kof-komanndouketuke.html">KOFシリーズ入力受付ページ</a>には、KOF’96では最後のレバー方向を保たないと必殺技を出せないとする説明がありました。</p>
+<p>2004年3月5日の<a href="https://github.com/MOT-csb/MOT-csb.github.io/blob/main/96yu-zyunni.html">行動優先順位の旧記事</a>にも、236入力後に必殺技の成立を認める方向を一部に制限する表があります。これらは<strong>当時の研究上の記述</strong>として残します。</p>
+<h2>2．2011年10月：コマンド完成後のレバーは自由と報告</h2>
+<p>2011年10月1日の本人投稿では、KOF’96について、<strong>コマンド入力が完成した後ならレバーを別方向へ動かしても必殺技が成立する</strong>と報告しています。その上で、最後の方向を維持すると出しやすいと感じる理由は疑問として残していました。</p>
+<p><a href="https://x.com/mot_csb/status/119939352158674944">2011年10月1日の本人投稿</a>。</p>
+<h2>3．2024年：受付時間と必要フレームを数値で整理</h2>
+<p>2024年9月2日のMOTによる測定一覧には、次の受付値が掲載されています。</p>
+<table>
+<thead>
+<tr>
+  <th>コマンド系統</th>
+  <th style="text-align:right">受付時間</th>
+  <th>レバーの最小入力例（2024年資料）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>236</td>
+  <td style="text-align:right">12F</td>
+  <td>2を1F、3を2F、6を1F</td>
+</tr>
+<tr>
+  <td>623</td>
+  <td style="text-align:right">15F</td>
+  <td>6を2F、2を1F、3を2F</td>
+</tr>
+<tr>
+  <td>41236</td>
+  <td style="text-align:right">18F</td>
+  <td>4を1F、1を2F、2を省略可、3を2F、6を1F</td>
+</tr>
+<tr>
+  <td>632146</td>
+  <td style="text-align:right">28F</td>
+  <td>6/3/2/1/4/6の順に1/2/0/2/1/2F</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://kofplayers.hatenablog.jp/entry/2024/09/02/204724">2024年9月2日の詳細データ</a>。この表の数値は記事にあるレバーの必要Fと受付時間を要約したもので、独立測定ではありません。</p>
+<p>同日の<a href="https://kofplayers.hatenablog.jp/entry/2024/09/02/210820">猶予に関する考察</a>では、236系は「通常入力7F、受付12F、猶予5F」と<strong>仮定に基づいて計算</strong>しています。</p>
+<h2>4．2025年：古い「入れっぱなし」説明を本人が訂正</h2>
+<p>2025年3月2日の投稿でMOTは、旧ページの「レバーの最後の方向を入れっぱなしにしないと必殺技が出ない」という説明について、<strong>当時の知識が不正確で、間違いだった</strong>と明言しました。</p>
+<p><a href="https://x.com/mot_csb/status/1896159670278189175">2025年3月2日の訂正投稿</a>。</p>
+<p><strong>現在の整理</strong>：旧ページの当該説明は撤回されたものとして扱い、「最後の方向を必ず保持」と読者へ教えません。2011年・2024年以降の検証を優先します。ただし、技ごとの追加制約をすべて否定するものでもありません。</p>
+<h2>5．2025年12月：「7F」と「8F」は違う前提の計算</h2>
+<p>2025年12月21日の本人投稿には、236系の受付12Fに対し「全方向2Fずつ入力する場合は8F」とあります。これは<strong>レバー3方向とボタンをそれぞれ2Fと仮定</strong>した数え方です。</p>
+<p>一方、2024年の記事は<strong>最初の方向だけ1F、以後2F</strong>という想定で通常入力7Fとしています。入力条件の想定が異なるため、7Fと8Fを無条件に矛盾と扱いません。</p>
+<p><a href="https://x.com/mot_csb/status/2002614298234048597">2025年12月21日の投稿</a> ／ <a href="https://kofplayers.hatenablog.jp/entry/2024/09/02/210820">2024年の比較記事</a>。</p>
+<h2>6．今後の検証待ち</h2>
+<ul>
+<li>2004年の記事にある236系入力後の方向別○×表について、どの入力手順・どの技で観測したものか。</li>
+<li>2011年の「どの方向でも出る」が全コマンド共通か、技・入力所要Fによる例外があるか。</li>
+<li>236系の最小入力Fと、必殺技ボタン受付の起点の正確な数え方。</li>
+<li>コマンド完成後にレバーを動かした場合と、ボタンを押すまで待つ場合の影響の切り分け。</li>
+</ul>
+<p><strong>結論</strong>：後年の訂正を優先しつつ、旧説は研究経緯として保存します。「古い情報を削除して誤解を招かない」のではなく、なぜ改訂されたかを追跡できる資料にすることが目的です。</p>
+<p class="small">作成 2026年11月18日／MOTの保存資料をAIが出典付きで再構築。元ブログとGitHubは変更していません。</p><nav class="foot-nav"><a href="./index.html">研究アーカイブへ戻る</a></nav></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜MOTゲーム研究資料</div></footer></body></html>
