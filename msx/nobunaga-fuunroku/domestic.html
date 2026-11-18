@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
-<title>内政コマンドの計算式｜信長の野望・武将風雲録（MSX2版）｜MOT ゲーム攻略・検証ノート</title><meta name="description" content="MSX2版『武将風雲録』の内政コマンドで、投資額・政治力・技術などから成果がどう決まるか。まずは開墾。">
+<title>内政コマンドの計算式｜信長の野望・武将風雲録（MSX2版）｜MOT ゲーム攻略・検証ノート</title><meta name="description" content="MSX2版『武将風雲録』の内政コマンドで、投資額・政治力・技術などから成果がどう決まるか。開墾・治水。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap">
 <link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">MOT <span>GAME NOTES</span></a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/msx/">MSX</a><a href="/msx/nobunaga-fuunroku/">武将風雲録</a><a href="/arcade/kof2002/">KOF2002</a></nav></div></header>
 <div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>内政コマンドの計算式</b></div><p class="kicker">GAMEPLAY / DOMESTIC AFFAIRS</p><h1>内政コマンドの計算式</h1><p>内政の成果が、投資した金・担当武将の能力・国の状態からどう決まるかをまとめています。政治力には、戦闘力の96以上のような段差はなく、成果は政治力にまっすぐ比例します。</p></div></div><main class="main"><div class="wrap">
@@ -41,8 +41,31 @@
 </ul>
 </section>
 
+<section class="section"><h2>治水</h2>
+<div class="statement"><p>上がる治水度 ＝ 投資した金 ×（担当武将の政治 × 担当武将の忠誠 ÷ 3）÷（36 × 今の石高）</p></div>
+<p class="small">割り算の小数点以下は切り捨てです。治水度は100が上限です。消費行動力は50です。</p>
+<h3>開墾との違い</h3>
+<ul class="contents">
+<li><b>政治と忠誠の掛け算</b>：開墾では忠誠は「÷8」のおまけでしたが、治水では政治と<b>同じ重さ</b>で効きます。忠誠50の武将は、忠誠100の武将の半分しか上げられません。</li>
+<li><b>石高が大きいほど上がりにくい</b>：今の石高に反比例します。石高が2倍の国では、同じ投資でも上がる量は半分です。</li>
+<li><b>技術は関係しない</b>。CPUの補正もありません。</li>
+</ul>
+<h3>計算例</h3>
+<p>投資額100の場合。</p>
+<div class="table-scroll"><table><thead><tr><th>担当武将</th><th>石高300</th><th>石高600</th></tr></thead><tbody>
+<tr><td>政治80・忠誠100</td><td>治水度 +24</td><td>治水度 +12</td></tr>
+<tr><td>政治80・忠誠50</td><td>治水度 +12</td><td>治水度 +6</td></tr>
+<tr><td>政治50・忠誠80</td><td>治水度 +12</td><td>治水度 +6</td></tr>
+</tbody></table></div>
+<h3>そのほかの仕様</h3>
+<ul class="contents">
+<li><b>民忠</b>：開墾と同じく、2×（√投資額 ＋ 25 − 民忠÷4）%の確率で民忠が+1されます。</li>
+<li><b>開墾との順番</b>：開墾すると治水度が石高の伸びに合わせて薄まります。同じ国で両方やるなら、開墾を先にして治水をあとにした方が無駄がありません。</li>
+</ul>
+</section>
+
 <section class="section"><h2>ほかの内政コマンド</h2>
-<p>治水・町投資・技術革新・築城・金山は、順次追加します。</p>
+<p>町投資・技術革新・築城・金山は、順次追加します。</p>
 <div class="table-scroll"><table><thead><tr><th>コマンド</th><th>消費行動力</th><th>上限</th></tr></thead><tbody>
 <tr><td>開墾</td><td>50</td><td>その国の最大石高</td></tr>
 <tr><td>治水</td><td>50</td><td>100</td></tr>
