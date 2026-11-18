@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>褒美・茶会・文化度のしくみ｜信長の野望・武将風雲録（MSX2版）｜MOT ゲーム攻略・検証ノート</title><meta name="description" content="MSX2版『武将風雲録』の褒美で上がる忠誠の計算式（計算機つき）、茶会の格と教養・文化度の上がり方、文化度が広がるしくみ。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap">
+<link rel="stylesheet" href="/assets/research.css"><style>.calc{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px}.calc .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}.calc label{display:block;font-size:13px;color:var(--muted)}.calc input,.calc select{width:100%;font:inherit;padding:7px 9px;border:1px solid var(--line);border-radius:7px;background:var(--bg);color:var(--ink)}.calc .out{margin-top:16px}.calc .out .stat strong{font-size:24px}.calc .note{font-size:13px;color:var(--muted);margin-top:10px}.calc .hide{display:none}</style></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">MOT <span>GAME NOTES</span></a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/msx/">MSX</a><a href="/msx/nobunaga-fuunroku/">武将風雲録</a><a href="/arcade/kof2002/">KOF2002</a></nav></div></header>
+<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>褒美・茶会・文化度のしくみ</b></div><p class="kicker">GAMEPLAY / PERSONNEL</p><h1>褒美・茶会・文化度のしくみ</h1><p>褒美の効きは大名との相性で2.6倍違います。茶会は持っている茶器で強さが決まり、国の文化度の一番上を押し上げられる唯一の方法です。文化度は税収や内政に効くので、茶器は内政の入口でもあります。</p></div></div><main class="main"><div class="wrap">
+<section class="section" id="calc"><h2>褒美の計算機</h2>
+<div class="calc">
+<div class="grid">
+<div><label for="h-kind">与えるもの</label><select id="h-kind"><option value="0">金</option><option value="1">茶器</option></select></div>
+<div class="h-gold"><label for="h-gold">金</label><input id="h-gold" type="number" min="0" max="9999" value="200"></div>
+<div class="h-grade hide"><label for="h-grade">茶器の格（0が最上）</label><input id="h-grade" type="number" min="0" max="31" value="10"></div>
+<div><label for="h-diff">相性差（0〜15）</label><input id="h-diff" type="number" min="0" max="15" value="3"></div>
+<div><label for="h-loy">今の忠誠</label><input id="h-loy" type="number" min="0" max="100" value="60"></div>
+<div><label for="h-who">実行する勢力</label><select id="h-who"><option value="1">プレイヤー（難易度1）</option><option value="2">プレイヤー（難易度2）</option><option value="3" selected>プレイヤー（難易度3）</option><option value="4">プレイヤー（難易度4）</option><option value="5">プレイヤー（難易度5）</option><option value="0">CPU</option></select></div>
+</div>
+<div class="out stat-board">
+<div class="stat"><small>上がる忠誠</small><strong id="h-up">-</strong></div>
+<div class="stat"><small>褒美のあとの忠誠</small><strong id="h-after">-</strong></div>
+<div class="stat"><small>忠誠100にする最小の金</small><strong id="h-need">-</strong></div>
+</div>
+<p class="note" id="h-note"></p>
+</div>
+</section>
+<script>
+(()=>{const $=id=>document.getElementById(id),v=id=>Math.max(0,parseInt($(id).value,10)||0),f=Math.floor;
+const up=(V,d,x)=>Math.min(100,Math.max(0,f((f(V/10)+5-d)*(146-6*x)/100)));
+function calc(){const k=$('h-kind').value==='1';$('h-gold').closest('.h-gold').classList.toggle('hide',k);$('h-grade').closest('.h-grade').classList.toggle('hide',!k);
+const g=Math.min(31,v('h-grade')),V=k?((30-g+256)%256)*125:v('h-gold'),d=+$('h-who').value,x=Math.min(15,v('h-diff')),L=Math.min(100,v('h-loy'));
+const u=up(V,d,x);$('h-up').textContent='+'+u;$('h-after').textContent=Math.min(100,L+u);
+let need='-';if(L>=100)need='0';else{for(let G=0;G<=9999;G+=1){if(L+up(G,d,x)>=100){need=String(G);break}}if(need==='-')need='9999でも届かない'}$('h-need').textContent=need;
+$('h-note').textContent=(k?'茶器の価値は金'+V+'と同じ扱いです。':'')+'割り算は整数に切り捨てて計算しています。忠誠は100で止まります。'}
+['h-kind','h-gold','h-grade','h-diff','h-loy','h-who'].forEach(id=>{$(id).addEventListener('input',calc);$(id).addEventListener('change',calc)});calc()})();
+</script>
+<section class="section"><h2>褒美</h2>
+<div class="statement"><p>上がる忠誠 ＝（金÷10 ＋ 5 − 難易度）×（146 − 6 × 相性差）÷ 100</p></div>
+<ul class="contents">
+<li><b>相性差</b>：褒美をもらう武将と大名の相性の差（最大15）。相性がぴったりなら146%、一番遠いと56%で、効きが2.6倍違います。</li>
+<li><b>難易度</b>：引かれるのはプレイヤーだけで、CPUは引かれません。</li>
+<li>忠誠は100で止まります。行動力は20で、その国の城主から引かれます。</li>
+</ul>
+<p>難易度3のとき、必要な金の目安です。</p>
+<div class="table-scroll"><table><thead><tr><th>相性差</th><th>忠誠＋30</th><th>忠誠＋50</th></tr></thead><tbody>
+<tr><td>0</td><td>190</td><td>330</td></tr><tr><td>15</td><td>520</td><td>880</td></tr></tbody></table></div>
+<h3>茶器を与えるとき</h3>
+<ul class="contents">
+<li>茶器は「（30 − 格）× 125」の金と同じ扱いです。格は0が一番上で、唐物三日月が0、九十九髪茄子が1です。</li>
+<li>難易度3なら、相性がぴったりの武将は格24まで、相性が一番遠い武将でも格15までの茶器で、忠誠0から1回で100になります。格30の茶器は価値0です。</li>
+<li><b>一番格の低い格31の茶器（赤楽早船・黒楽鉢開・古銅鶴一声）は、計算が一周して最高級の扱いになります。</b>どの武将に与えても忠誠100です。</li>
+</ul>
+<p>忠誠は内政の効果に直接入ります（開墾などは＋忠誠÷3、治水は政治×忠誠）。内政を任せる武将は、相性の近い武将を選んで忠誠100にしておくと効率が上がります。<a href="domestic.html">内政コマンドの計算式</a></p>
+</section>
+<section class="section"><h2>茶会</h2>
+<div class="statement"><p><b>茶会の格</b>（最大16）＝ その国の武将が持っている茶器それぞれの点数「10 − 格÷3」の合計</p></div>
+<ul class="contents">
+<li>格0〜2の名物は1個10点、格30〜31の茶器は0点です。良い茶器が2つあれば満点の16に届きます。</li>
+<li><b>参加した武将の教養</b>：1人ずつ「6 × 茶会の格 ＋ 5」%の確率で、2以上上がります。</li>
+<li><b>国の文化度</b>：「6 × 茶会の格÷2 ＋ 5」%の確率で、2以上上がります。</li>
+<li>上がる量は2〜（茶会の格の平方根）で、最低でも2です。</li>
+<li>どちらも上限は「68 ＋ 2 × 茶会の格」。茶会の格16なら100まで、茶器が弱いと70台で止まります。</li>
+<li>今井宗久を招いたときは、宗久との友好度も1〜3上がります。</li>
+</ul>
+<p>茶会の格16なら、文化度は1回でおよそ半分の確率で2〜4上がります。</p>
+</section>
+<section class="section"><h2>文化度</h2>
+<ul class="contents">
+<li><b>広がり方</b>：毎月35%の確率で、自国の中で一番高い文化度より低い国が、0か1上がります（1国あたり年に2くらい）。一番高い国はこれでは上がらないので、上限を押し上げるのは茶会です。</li>
+<li><b>金の収入</b>：商業価値 ×（110 ＋ 文化度）%。文化度の高い国ほど税収が多くなります。</li>
+<li><b>町投資の上限</b>：商業価値は「文化度 × 10」までしか上がりません。</li>
+<li><b>技術革新</b>：上がる量に「文化度 ＋ 50 − 技術÷20」%の補正が入ります。</li>
+<li><b>適正な税率</b>：55 ＋ 民忠÷10 − 文化度÷5。文化度が高いほど、民忠を下げずに取れる税率は低くなります。</li>
+</ul>
+<p class="small">税収の計算は<a href="income.html">税収・年貢・維持費</a>、内政の計算は<a href="domestic.html">内政コマンドの計算式</a>、全体の関係は<a href="relations.html">内政と戦闘のつながり図</a>を参照してください。</p>
+</section>
+</div></main>
+<footer class="footer"><div class="wrap">MOT ゲーム攻略・検証ノート　｜　攻略・観戦・研究メモ<br>ゲームの権利は各権利者に帰属します。</div></footer></body></html>

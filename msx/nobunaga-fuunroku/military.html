@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
-<title>訓練と兵に施し（兵忠）の計算式｜信長の野望・武将風雲録（MSX2版）｜MOT ゲーム攻略・検証ノート</title><meta name="description" content="MSX2版『武将風雲録』の訓練で上がる訓練度と、兵に施しで上がる兵忠の計算式。計算機つき。">
+<title>兵雇用・訓練・兵に施し（兵忠）の計算式｜信長の野望・武将風雲録（MSX2版）｜MOT ゲーム攻略・検証ノート</title><meta name="description" content="MSX2版『武将風雲録』の兵雇用で混ざる新兵、訓練で上がる訓練度と、兵に施しで上がる兵忠の計算式。計算機つき。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap">
 <link rel="stylesheet" href="/assets/research.css"><style>.calc{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px}.calc .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}.calc label{display:block;font-size:13px;color:var(--muted)}.calc input,.calc select{width:100%;font:inherit;padding:7px 9px;border:1px solid var(--line);border-radius:7px;background:var(--bg);color:var(--ink)}.calc .out{margin-top:16px}.calc .out .stat strong{font-size:24px}.calc .note{font-size:13px;color:var(--muted);margin-top:10px}.calc .hide{display:none}</style></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">MOT <span>GAME NOTES</span></a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/msx/">MSX</a><a href="/msx/nobunaga-fuunroku/">武将風雲録</a><a href="/arcade/kof2002/">KOF2002</a></nav></div></header>
-<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>訓練と兵に施しの計算式</b></div><p class="kicker">GAMEPLAY / MILITARY</p><h1>訓練と兵に施し（兵忠）の計算式</h1><p>訓練は担当武将の戦闘だけで決まり、お金はいりません。兵に施しは魅力が効き、兵士が多い国ほど上がりにくくなります。訓練度と兵忠は、戦闘の攻撃・防御に直接効きます。</p></div></div><main class="main"><div class="wrap">
+<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>兵雇用・訓練・兵に施しの計算式</b></div><p class="kicker">GAMEPLAY / MILITARY</p><h1>兵雇用・訓練・兵に施し（兵忠）の計算式</h1><p>訓練は担当武将の戦闘だけで決まり、お金はいりません。兵に施しは魅力が効き、兵士が多い国ほど上がりにくくなります。訓練度と兵忠は、戦闘の攻撃・防御に直接効きます。</p></div></div><main class="main"><div class="wrap">
 
 <section class="section" id="calc"><h2>計算機</h2>
 <div class="calc">
@@ -86,6 +86,23 @@ document.querySelectorAll('#calc input,#calc select').forEach(e=>e.addEventListe
 </tbody></table></div>
 </section>
 
+<section class="section" id="hire"><h2>兵雇用</h2>
+<div class="statement"><p>雇った兵は<b>訓練度30・兵忠30の兵</b>として混ざります。<br>新しい訓練度（兵忠）＝（今の値 × 今の兵士 ＋ 30 × 雇った数）÷（今の兵士 ＋ 雇った数）</p></div>
+<ul class="contents">
+<li><b>値段</b>：1人あたり「兵の雇用相場（3.0〜7.0）」の金。合計の端数は切り上げなので、10人単位で雇うと無駄が出ません。</li>
+<li><b>雇える上限</b>：「999 − 今の兵士」と「手持ちの金で雇える人数」の少ないほう。</li>
+<li><b>行動力</b>：40（家臣なら半分）。担当武将の能力は結果に関係しないので、能力の低い家臣に任せるのが得です。</li>
+<li>民忠や石高は下がりません。</li>
+</ul>
+<p>例：兵士200・訓練度80・兵忠70の国で600人雇うと、訓練度は42、兵忠は40まで下がります。</p>
+<h3>やる順番は「雇う → 訓練 → 施し」</h3>
+<ul class="contents">
+<li><b>訓練</b>は兵の数に関係なく同じだけ上がります。先に訓練すると、あとで雇った新兵に薄められて損をします。</li>
+<li><b>施し</b>は兵が多いほど効きにくくなりますが、雇う前に上げても新兵で30へ引き戻されます。高い兵忠を保つなら、雇い終わってから施します。</li>
+<li>訓練度や兵忠が30より低い国では、兵を雇うだけで数値が上がります。</li>
+</ul>
+<p class="small">雇用相場は米相場と同じ動き方をし、5.0に戻りやすい作りです。くわしくは<a href="market.html">米相場の決まり方</a>。</p>
+</section>
 <section class="section" id="battle"><h2>兵忠と訓練度は戦闘に直接効く</h2>
 <p>戦場では、部隊ごとに出陣したときの国の訓練度と兵忠を持っています（戦闘後は兵数に応じた平均で国に戻ります）。部隊の基礎戦力は次の式で決まります。</p>
 <div class="statement"><p>基礎戦力 ＝ 9×戦闘 ＋ 6×戦闘²÷100 ＋ 3×訓練度 ＋ 2×兵忠（100〜2000の範囲）</p></div>
@@ -124,6 +141,7 @@ document.querySelectorAll('#battle input').forEach(e=>e.addEventListener('input'
 <section class="section"><h2>兵忠のそのほかの効果</h2>
 <ul class="contents">
 <li><b>維持費</b>：兵忠が低いほど兵士の維持費が高くなります（兵忠100と50で1.33倍の差）。くわしくは<a href="income.html">税収・年貢・維持費</a>。</li>
+<li><b>合戦中の脱走</b>：部隊の兵忠が<b>50未満</b>で、自軍の総兵数が敵軍以下のとき、「（100 −（武将の忠誠÷2 ＋ 兵忠））%」の確率で兵が逃げ、その部隊の兵が約1割減ります。数で上回っている側では起きません。</li>
 <li><b>CPUの侵攻</b>：CPUは兵忠が40未満の国からは攻め込みません。</li>
 <li><b>施し</b>：今の兵忠が高いほど、施しが少し効きやすくなります。</li>
 </ul>
