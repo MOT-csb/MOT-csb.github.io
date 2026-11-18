@@ -9,7 +9,7 @@
 <div class="calc">
 <div class="grid">
 <div><label for="i-min">国の民忠</label><input id="i-min" type="number" min="0" max="100" value="60"></div>
-<div><label for="i-mcap">商業価値の上限</label><input id="i-mcap" type="number" min="0" max="990" step="10" value="600"></div>
+<div><label for="i-mcap">文化度</label><input id="i-mcap" type="number" min="0" max="100" step="1" value="60"></div>
 <div><label for="i-rate">税率・年貢率（%）</label><input id="i-rate" type="number" min="0" max="100" value="50"></div>
 <div><label for="i-com">商業価値</label><input id="i-com" type="number" min="0" max="999" value="300"></div>
 <div><label for="i-koku">石高</label><input id="i-koku" type="number" min="0" max="999" value="300"></div>
@@ -35,7 +35,7 @@
 const $=id=>document.getElementById(id),f=Math.floor;
 function v(id){const x=parseInt($(id).value,10);return isNaN(x)?0:x}
 function calc(){
- const m=v('i-min'),X=f(v('i-mcap')/10),C=v('i-rate'),S=v('i-com'),K=v('i-koku'),chi=v('i-chi'),sol=v('i-sol'),hc=v('i-hc');
+ const m=v('i-min'),X=v('i-mcap'),C=v('i-rate'),S=v('i-com'),K=v('i-koku'),chi=v('i-chi'),sol=v('i-sol'),hc=v('i-hc');
  const T=55+f(m/10)-f(X/5);
  $('i-t').textContent=T+'%';
  {const d=C<=T?f((T-C)/5):-f((C-T)/2);$('i-dm').textContent=d>0?'+'+d:d<0?'−'+(-d):'±0';}
@@ -57,8 +57,8 @@ document.querySelectorAll('#calc input,#calc select').forEach(e=>e.addEventListe
 
 
 <section class="section"><h2>適正な率</h2>
-<div class="statement"><p>適正率（%）＝ 55 ＋ 民忠÷10 − 商業価値の上限÷50</p></div>
-<p>例：民忠60、商業価値の上限600の国なら、55＋6−12＝49%。</p>
+<div class="statement"><p>適正率（%）＝ 55 ＋ 民忠÷10 − 文化度÷5</p></div>
+<p>例：民忠60、文化度60の国なら、55＋6−12＝49%。文化度の高い国ほど、適正な税率は低くなります。</p>
 <div class="table-scroll"><table><thead><tr><th>税率（年貢率）</th><th>民忠の変化</th></tr></thead><tbody>
 <tr><td>適正率より低い</td><td>（適正率 − 税率）÷5 だけ上がる</td></tr>
 <tr><td>適正率より高い</td><td>（税率 − 適正率）÷2 だけ下がる</td></tr>
@@ -68,9 +68,9 @@ document.querySelectorAll('#calc input,#calc select').forEach(e=>e.addEventListe
 </section>
 
 <section class="section"><h2>金の収入（税率）</h2>
-<div class="statement"><p>金 ＝ 商業価値 ×（110 ＋ 商業価値の上限÷10）÷ 100 × 税率 ÷ 100</p></div>
-<p>例：商業価値300、上限600、税率50% → 300 × 170% × 50% ＝ <b>255</b></p>
-<p>金の収入は商業価値で決まります。商業価値の上限が大きい国（都会）ほど、同じ商業価値でも収入が多くなります。</p>
+<div class="statement"><p>金 ＝ 商業価値 ×（110 ＋ 文化度）÷ 100 × 税率 ÷ 100</p></div>
+<p>例：商業価値300、文化度60、税率50% → 300 × 170% × 50% ＝ <b>255</b></p>
+<p>金の収入は商業価値と文化度で決まります。文化度が高い国ほど、同じ商業価値でも収入が多くなります。</p>
 </section>
 
 <section class="section"><h2>兵糧の収入（年貢率）</h2>
