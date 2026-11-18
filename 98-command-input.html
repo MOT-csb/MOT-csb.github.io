@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KOF’98 必殺技コマンド入力受付｜Come sono bravo?</title>
+<meta name="description" content="KOF’98の236、41236、623、63214、タメ技、ダッシュの入力受付をMOTの実測記事とX投稿から再整理。必要フレーム、受付時間、ボタン保持、押しっぱなし入力を確認できます。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/csb.css">
+<style>
+.summary{background:var(--card);border:1.5px solid var(--line);border-left:6px solid var(--red);border-radius:12px;padding:14px 18px;margin:0 0 22px}.summary p:last-child{margin-bottom:0}.status{display:inline-block;border-radius:999px;padding:2px 9px;font-size:12px;font-weight:700;margin:0 6px 8px 0}.status.ok{background:#dafbe1;color:#116329}.status.measured{background:#dbeafe;color:#174ea6}.status.check{background:#fff8c5;color:#7d4e00}.chooser{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:18px;margin:12px 0 22px}.chooser label{display:block;font-size:14px;font-weight:700;margin-bottom:6px}.chooser select{width:min(100%,420px);font:inherit;padding:10px 12px;border:1.5px solid var(--line);border-radius:9px;background:var(--bg);color:inherit}.result{margin-top:16px;border-top:1px solid var(--line);padding-top:14px}.result h3{margin:0 0 7px}.frames{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.frame{display:inline-flex;align-items:center;gap:7px;background:var(--redbg);border-radius:9px;padding:7px 10px}.frame b{font-size:20px;color:var(--red)}.frame small{color:var(--sub)}.box{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:15px 18px;margin:12px 0}.box h3{margin:0 0 8px}.src{font-size:13px;color:var(--sub)}.src a{margin-right:9px}.compare{display:grid;grid-template-columns:1fr 1fr;gap:12px}.compare>div{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:15px 18px}.compare h3{margin:0 0 8px}.command-table td:first-child{font-weight:700;white-space:nowrap}.command-table td:nth-child(2){white-space:nowrap}.examples{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px}.examples .box{margin:0}.examples code{font-size:17px;font-weight:700}.warning{color:var(--red);font-weight:700}.flow{counter-reset:step;display:grid;gap:10px}.flow>div{counter-increment:step;background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:13px 15px}.flow>div:before{content:counter(step);display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;margin-right:8px;background:var(--red);color:#fff;font-weight:700}.flow h3{display:inline;margin:0}.flow p{margin:6px 0 0 35px}@media(max-width:650px){.compare{grid-template-columns:1fr}.command-table td:first-child,.command-table td:nth-child(2){white-space:normal}.summary,.box,.chooser{padding:13px 14px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<p class="crumb"><a href="/">Come sono bravo?</a> › <a href="/kof-top.html">KOF</a> › <a href="/kof98-top.html">KOF’98</a></p>
+<p class="kicker">KOF’98｜システム攻略</p>
+<h1>必殺技コマンド入力受付</h1>
+<p class="lead">レバーを何F入れるか、ボタンをいつ押すか。過去の実測と後年の再確認を一つにまとめます。</p>
+</div></header>
+
+<main><div class="wrap">
+<div class="summary">
+<p><b>先に結論：</b>KOF’98は、すべての斜め方向を長く入れるゲームではありません。<b>236の3、623の6と3、63214の6・2・4など、コマンドごとに指定された方向を2F入れること</b>と、<b>ボタンを2F以上押すこと</b>が重要です。方向の代用関係もコマンドごとに異なります。</p>
+<p>2011年の入力実験、2014〜2023年の補足、2024年の再整理を照合しました。古い「はず」というメモだけに依存する項目は、要再検証と表示しています。</p>
+</div>
+
+<h2>コマンド別の早見</h2>
+<div class="chooser">
+<label for="command">確認するコマンド</label>
+<select id="command">
+<option value="236">236系</option>
+<option value="41236">41236系</option>
+<option value="623">623系</option>
+<option value="63214">63214系</option>
+<option value="charge">タメ技（タクマ・飛燕疾風脚）</option>
+<option value="dash">ダッシュ</option>
+</select>
+<section class="result" id="commandResult" aria-live="polite"></section>
+</div>
+
+<div class="tw"><table class="command-table">
+<tr><td>コマンド</td><td>主要な必要時間</td><td>代用・短縮</td><td>資料の状態</td></tr>
+<tr><td>236</td><td>2＝1F、3＝2F、6＝1F</td><td>斜めの3だけ2F必要</td><td><span class="status ok">2024年再整理</span></td></tr>
+<tr><td>41236</td><td>1と3は省略可能</td><td>426は各方向2Fという旧整理</td><td><span class="status check">一部要再検証</span></td></tr>
+<tr><td>623</td><td>6＝2F、2＝1F、3＝2F</td><td>2は1、3の後半は6または9で代用可能</td><td><span class="status measured">実測資料あり</span></td></tr>
+<tr><td>63214</td><td>受付21F。6・2・4を各2F</td><td>斜め入力で隣接2方向を兼ねられる</td><td><span class="status measured">実測資料あり</span></td></tr>
+<tr><td>タメ技</td><td>タメ31F、隙間8F、ボタン2F</td><td>飛燕疾風脚で確認</td><td><span class="status ok">個別検証あり</span></td></tr>
+<tr><td>ダッシュ</td><td>6＝2F、N＝5F、6＝2F</td><td>リバーサルでは入力難度が上がる</td><td><span class="status check">要再検証</span></td></tr>
+</table></div>
+
+<h2>623コマンド</h2>
+<div class="box">
+<span class="status measured">2011年に成功・失敗例を実測</span><span class="status ok">2024年に再整理</span>
+<div class="frames"><span class="frame"><b>6</b><small>2F</small></span><span class="frame"><b>2</b><small>1F</small></span><span class="frame"><b>3</b><small>2F</small></span><span class="frame"><b>受付</b><small>15F</small></span></div>
+<ul>
+<li>最初の6のうち1Fは、3または9で代用できます。</li>
+<li>2は1で代用できます。</li>
+<li>最後の3の2F目は、6または9で代用できます。ただし6へ入れるとダッシュが暴発しやすくなります。</li>
+<li>レバー部分の成立後は、別方向へ入れてからボタンを押しても出せます。</li>
+</ul>
+<p class="src"><a href="https://comesonobravo.seesaa.net/category/8660373-55.html" rel="nofollow">2011年の入力実験</a><a href="https://x.com/mot_csb/status/1791966876098261335" rel="nofollow">2024年の再整理</a><a href="https://x.com/mot_csb/status/1791967132777168956" rel="nofollow">代用方向の補足</a></p>
+</div>
+
+<h2>63214コマンド</h2>
+<div class="box">
+<span class="status measured">2011年に入力例を実測</span><span class="status ok">2024年にボタンとの関係を確認</span>
+<div class="frames"><span class="frame"><b>6</b><small>2F</small></span><span class="frame"><b>2</b><small>2F</small></span><span class="frame"><b>4</b><small>2F</small></span><span class="frame"><b>受付</b><small>21F</small></span></div>
+<p>最低限必要なのは6・2・4です。3は6と2、1は2と4を同時に満たすため、斜め入力を使えば次のように短縮できます。</p>
+<div class="examples">
+<div class="box"><h3>成立例</h3><p><code>6(1F) 3(1F) 1(1F) 4(1F)</code></p><p>3と1が隣接方向を兼ねるため成立。</p></div>
+<div class="box"><h3>不成立例</h3><p><code>6 2 2 4</code></p><p>6と4の必要時間を満たせず不成立。</p></div>
+</div>
+<p class="src"><a href="https://comesonobravo.seesaa.net/article/215292546.html" rel="nofollow">63214コマンドの受付について</a><a href="https://x.com/mot_csb/status/1791969157388583375" rel="nofollow">琴月でのボタンタイミング確認</a></p>
+</div>
+
+<h2>最後のレバー方向とボタン</h2>
+<p>2024年に庵の琴月（63214＋BまたはD）で、レバーの最後とボタンの前後関係を確認しています。</p>
+<div class="compare">
+<div><h3>最後の4より後にボタン</h3><p>通常どおり成立します。</p></div>
+<div><h3>4とボタンを同時</h3><p>4を2F以上、ボタンを3F以上押すと成立しました。</p></div>
+<div><h3>4より前にボタン</h3><p>2方向の入力後からボタンを押しっぱなしにしていれば成立しました。</p></div>
+<div><h3>実戦上の要点</h3><p><b>最後の方向とボタンは同時でもよく、ボタン押しっぱなしが重要</b>です。</p></div>
+</div>
+<p class="src"><a href="https://x.com/mot_csb/status/1791969157388583375" rel="nofollow">検証投稿</a><a href="https://x.com/mot_csb/status/1791969255350800477" rel="nofollow">押しっぱなしについての補足</a></p>
+
+<h2>タメ技とボタンの最低時間</h2>
+<div class="box">
+<h3>タクマの飛燕疾風脚で確認した値</h3>
+<div class="frames"><span class="frame"><b>タメ</b><small>31F以上</small></span><span class="frame"><b>隙間</b><small>8Fまで</small></span><span class="frame"><b>B/D</b><small>2F以上</small></span></div>
+<p>タメを完成させたあと、反対方向へすぐ入れなくても8Fまで許容されます。隙間の間は6へ入れておく必要もありません。ただしボタンは最低2F必要です。</p>
+<p class="warning">31F・8Fは飛燕疾風脚の検証値です。全タメ技へ同じ数値をそのまま適用する場合は、技ごとの再確認が必要です。</p>
+<p class="src"><a href="https://x.com/mot_csb/status/1612657092590211074" rel="nofollow">6A→強飛燕疾風脚の検証起点</a><a href="https://x.com/mot_csb/status/1612659057512546307" rel="nofollow">隙間8Fの補足</a><a href="https://x.com/mot_csb/status/1612660267120488448" rel="nofollow">タメ・隙間・ボタンの整理</a></p>
+</div>
+
+<h2>236・41236と暴発防止</h2>
+<div class="compare">
+<div><h3>236</h3><p>2は1F、3は2F、6は1Fという整理です。2024年の再整理でも、236系は3を2F以上入れる必要があるとしています。</p><p class="src"><a href="https://x.com/mot_csb/status/657532909306318850" rel="nofollow">2015年の整理</a><a href="https://x.com/mot_csb/status/1791966876098261335" rel="nofollow">2024年の再整理</a></p></div>
+<div><h3>41236</h3><p>1と3は省略でき、426でも成立します。旧整理では、41236なら各1F、426なら各2Fで成立するとしています。</p><p class="warning">各方向の必要時間は旧投稿が「だったはず」としているため要再検証です。</p></div>
+</div>
+<div class="box"><h3>236236系から236系が暴発するとき</h3><p>ボタンを少し遅らせ、先に入力した236の受付時間を切らす方法が候補です。古い投稿では仮説段階なので、キャラクターごとに確認して使います。</p><p class="src"><a href="https://x.com/mot_csb/status/740063522298568704" rel="nofollow">暴発防止案</a></p></div>
+
+<h2>実戦で使う順番</h2>
+<div class="flow">
+<div><h3>必要な方向を確認する</h3><p>斜め方向が隣接2方向を兼ねるのか、最初・最後の方向を2F入れるのかを区別します。</p></div>
+<div><h3>ボタンを2F以上押す</h3><p>KOF’98では1Fだけでは成立しないため、弾くより押しっぱなしを基本にします。</p></div>
+<div><h3>リバーサルでは押しっぱなしを使う</h3><p>早めにコマンドを完成させ、最後の方向とボタンを保持して成立時間を延ばします。</p></div>
+<div><h3>暴発する技から入力を逆算する</h3><p>ダッシュ、通常技、別の必殺技が出る場合は、どの受付を先に満たしたかを確認します。</p></div>
+</div>
+
+<h2>資料の位置づけ</h2>
+<div class="tw"><table>
+<tr><td>資料</td><td>このページでの扱い</td></tr>
+<tr><td>2011年の623・63214入力実験</td><td>成立・不成立例が残っている実測資料</td></tr>
+<tr><td>2014〜2023年のX投稿</td><td>ボタン2F、ダッシュ、タメ技、暴発防止などの補足</td></tr>
+<tr><td>2024年5月の再整理</td><td>方向ごとの必要時間と、琴月での最後の方向・ボタンの確認</td></tr>
+<tr><td>KOF’98 Wiki「小ネタ・テクニック」</td><td>押しっぱなし、ダッシュからの投げ、暴発防止など実戦応用の照合先</td></tr>
+</table></div>
+<p class="src">Xアーカイブの「コマンド入力・受付」関連39件から、入力仕様を直接説明する投稿を優先して採用しました。立ち回り案だけに該当する投稿は、このページの数値根拠には使用していません。</p>
+
+<h2>更新履歴</h2>
+<ul class="src"><li>2026/11/18　Xアーカイブ39件、2011年の実測記事、2024年の再整理を統合して作成。</li></ul>
+<nav class="foot-nav"><a href="/98-taikai-check.html">大会前チェック</a><a href="/98to02notigai.htm">KOF’98と2002の違い</a><a href="/kof98-top.html">KOF’98トップ</a></nav>
+</div></main>
+
+<footer><div class="wrap">Come sono bravo?｜作成：MOT</div></footer>
+<script>
+const data={
+  '236':{title:'236系',status:'2024年再整理',items:[['2','1F'],['3','2F'],['6','1F']],text:'斜めの3を2F入れる点が重要です。2と6は1Fという旧実測と、2024年の再整理が一致します。'},
+  '41236':{title:'41236系',status:'一部要再検証',items:[['41236','各1F'],['426','各2F']],text:'1と3は省略可能です。各方向の必要時間は2015年の旧整理が「だったはず」としているため再検証対象です。'},
+  '623':{title:'623系',status:'受付15F・実測資料あり',items:[['6','2F'],['2','1F'],['3','2F']],text:'2は1で、最後の3の後半は6または9で代用できます。最初と最後をしっかり入れるコマンドです。'},
+  '63214':{title:'63214系',status:'受付21F・実測資料あり',items:[['6','2F'],['2','2F'],['4','2F']],text:'3は6＋2、1は2＋4を兼ねます。斜め入力を使うと6・3・1・4を各1Fでも成立します。'},
+  'charge':{title:'タメ技（飛燕疾風脚）',status:'タクマで個別確認',items:[['タメ','31F'],['隙間','8Fまで'],['ボタン','2F']],text:'タメと反対方向の間は8Fまで空けられ、その間は6へ入れておく必要もありません。'},
+  'dash':{title:'ダッシュ',status:'要再検証',items:[['6','2F'],['N','5F'],['6','2F']],text:'2015年の旧メモによる値です。リバーサルで出す場合は硬直終了に合わせる必要があります。'}
+};
+const select=document.getElementById('command'),result=document.getElementById('commandResult');
+function render(){const d=data[select.value];result.innerHTML='<span class="status '+(d.status.includes('要')?'check':d.status.includes('実測')?'measured':'ok')+'">'+d.status+'</span><h3>'+d.title+'</h3><div class="frames">'+d.items.map(x=>'<span class="frame"><b>'+x[0]+'</b><small>'+x[1]+'</small></span>').join('')+'</div><p>'+d.text+'</p>'}
+select.addEventListener('change',render);render();
+</script>
+</body>
+</html>
