@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
-<title>外交の成功条件（脅迫・同盟・婚姻・貢物・誘降）｜信長の野望・武将風雲録（MSX2版）｜MOT ゲーム攻略・検証ノート</title><meta name="description" content="MSX2版『武将風雲録』の外交コマンドの成否の決まり方。脅迫は兵数の差、同盟・婚姻・貢物は友好度と使者の能力で決まります。">
+<title>外交と調略の成功条件（脅迫・同盟・婚姻・貢物・誘降・戦争工作・流言）｜信長の野望・武将風雲録（MSX2版）｜MOT ゲーム攻略・検証ノート</title><meta name="description" content="MSX2版『武将風雲録』の外交コマンドの成否の決まり方。脅迫は兵数の差、同盟・婚姻・貢物は友好度と使者の能力で決まります。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap">
 <link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">MOT <span>GAME NOTES</span></a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/msx/">MSX</a><a href="/msx/nobunaga-fuunroku/">武将風雲録</a><a href="/arcade/kof2002/">KOF2002</a></nav></div></header>
-<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>外交の成功条件</b></div><p class="kicker">GAMEPLAY / DIPLOMACY</p><h1>外交の成功条件（脅迫・同盟・婚姻・貢物・誘降）</h1><p>外交コマンドは、脅迫とそれ以外で成否の決まり方がまったく違います。脅迫は兵数の差、同盟・婚姻・貢物は友好度と使者の能力で決まります。</p></div></div><main class="main"><div class="wrap">
+<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>外交の成功条件</b></div><p class="kicker">GAMEPLAY / DIPLOMACY</p><h1>外交と調略の成功条件（脅迫・同盟・婚姻・貢物・誘降・戦争工作・流言）</h1><p>外交コマンドは、脅迫とそれ以外で成否の決まり方がまったく違います。脅迫は兵数の差、同盟・婚姻・貢物は友好度と使者の能力で決まります。</p></div></div><main class="main"><div class="wrap">
 
 <section class="section"><h2>脅迫：兵数の差がほぼすべて</h2>
 <div class="statement"><p><b>ポイント：</b>脅迫の成否は、自分と相手の<b>総兵数の比</b>でほぼ決まります。相性・魅力・教養・友好度は関係しません。</p></div>
@@ -89,6 +89,24 @@
 <li>内応の約束がなくても、忠誠50未満の武将は合戦中に寝返ることがあります。忠誠が低いほど起きやすくなります。</li>
 <li>自分の家臣に茶器を褒美として与えると、確率でこの約束（と茶器没収の恨み）が消えます。</li>
 </ul>
+</section>
+<section class="section" id="plot"><h2>戦争工作・流言：使者の「政治＋戦闘＋野望」の勝負</h2>
+<div class="statement"><p>成功率（%）＝（使者の政治＋戦闘＋野望）−（相手の政治＋戦闘＋野望）− 4 × 難易度 ＋ 0〜10</p></div>
+<p>相手より3つの合計が低い使者では、ほぼ成功しません。野望の高い武将ほど調略向きです。難易度はプレイヤーだけ引かれます。</p>
+<h3>戦争工作</h3>
+<ul class="contents">
+<li>相手は、選んだ2国の大名のうち政治力の高いほうです。</li>
+<li><b>成功</b>：2国の友好度が1段階下がります。</li>
+<li><b>失敗</b>：こちらと2国それぞれの友好度が1段階下がります。</li>
+</ul>
+<h3>流言</h3>
+<ul class="contents">
+<li>相手は、対象の国の城主です。</li>
+<li><b>成功</b>：その国の民忠が1割下がります（民忠60なら54）。</li>
+<li><b>失敗</b>：こちらとその国の友好度が1段階下がります。</li>
+<li>流言を<b>仕掛けられた側がプレイヤー</b>のときは、さらに3分の1の確率で「家臣に謀叛の企み」か「民に一揆の企み」が起きます。謀叛の企みを抱くのは、大名以外で忠誠90以下の、一番忠誠の低い家臣です。</li>
+</ul>
+<p class="small">友好度の段階は<a href="friendship.html">友好度・関係値・相性</a>を参照してください。</p>
 </section>
 <section class="section"><p><a href="cpu-ai.html">CPU勢力の行動傾向へ →</a></p></section></div></main>
 <footer class="footer"><div class="wrap">MOT ゲーム攻略・検証ノート　｜　攻略・観戦・研究メモ<br>ゲームの権利は各権利者に帰属します。</div></footer></body></html>
