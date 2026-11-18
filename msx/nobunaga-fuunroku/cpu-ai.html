@@ -3,8 +3,25 @@
 <title>CPU勢力の行動傾向｜MOT ゲーム攻略・検証ノート</title><meta name="description" content="MSX2版『武将風雲録』で、CPUが侵攻する場面、守りを固める場面、総大将が出撃しない場面を考えます。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap">
 <link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">MOT <span>GAME NOTES</span></a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/msx/">MSX</a><a href="/msx/nobunaga-fuunroku/">武将風雲録</a><a href="/arcade/kof2002/">KOF2002</a></nav></div></header>
-<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>CPUの行動傾向</b></div><p class="kicker">GAMEPLAY / CPU TACTICS</p><h1>CPU勢力の行動傾向</h1><p>MSX2版『武将風雲録』で、CPUが侵攻する場面、守りを固める場面、総大将が出撃しない場面を考えます。</p></div></div><main class="main"><div class="wrap"><section class="section"><h2>他国への侵攻と勢力拡大</h2><p>長期観戦では、国力があっても侵攻を見送る勢力がある一方、周辺勢力の滅亡後に動き始める例も見られます。兵力だけでなく、同盟関係、隣国の状況、直前の戦争結果などが行動傾向を考える手掛かりになります。</p>
+<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>CPUの行動傾向</b></div><p class="kicker">GAMEPLAY / CPU TACTICS</p><h1>CPU勢力の行動傾向</h1><p>MSX2版『武将風雲録』で、CPUの毎月の内政、侵攻する場面、総大将が出撃しない場面を考えます。</p></div></div><main class="main"><div class="wrap"><section class="section"><h2>他国への侵攻と勢力拡大</h2><p>長期観戦では、国力があっても侵攻を見送る勢力がある一方、周辺勢力の滅亡後に動き始める例も見られます。兵力だけでなく、同盟関係、隣国の状況、直前の戦争結果などが行動傾向を考える手掛かりになります。</p>
 <p>織田家・島津家などは、周辺の条件次第で拡大のしやすさが変わるため、同じ条件で比較していく価値があります。</p></section>
+<section class="section" id="naisei"><h2>CPUの毎月の内政（委任した国も同じ）</h2>
+<div class="statement"><p><b>ポイント：</b>CPUは季節ごとに決まった内政をし、1回に使う金は30だけです。米の売買は米相場を見ずに、秋に売って、それ以外の月に買います。</p></div>
+<div class="table-scroll"><table><thead><tr><th>月</th><th>選ぶ内政</th></tr></thead><tbody>
+<tr><td>1〜3月</td><td>治水度が100未満なら治水。100なら開墾（石高が上限未満のとき）</td></tr>
+<tr><td>4〜6月</td><td>開墾（石高が上限未満のとき）。6月に兵糧が兵士の2倍未満なら米を買う</td></tr>
+<tr><td>7〜9月</td><td>技術革新</td></tr>
+<tr><td>10〜12月</td><td>商業価値が上限（文化度×10）未満なら町投資、上限なら技術革新。12月に金が兵士の2倍未満なら米を売る</td></tr>
+</tbody></table></div>
+<ul class="contents">
+<li><b>使う金</b>：内政1回につき金30。難易度による補正（×1.2〜2.0）がかかります。金が50未満の月は内政をしません。</li>
+<li><b>築城</b>：この選び方では選ばれません。</li>
+<li><b>内政をしない月</b>：技術が100以上で金山が残っていれば金山。それ以外は、10〜12月なら兵糧の3割を売り、ほかの月なら金の3割で米を買います。</li>
+<li><b>米の売買</b>：相場に関係なく1対1で交換します（売るときだけ難易度で少し得をします）。相場が安い時期に買い、高い時期に売るプレイヤーのほうが、同じ米でずっと得をします。</li>
+<li><b>軍事</b>：毎月、兵がいて訓練度が100未満なら訓練。100なら兵を雇い（兵士が商業価値の半分以下のとき10人）、施しをします。1〜3月と7〜9月は、内政型で委任した国以外は兵10人の雇い足しもします。</li>
+</ul>
+<p class="small">内政の計算式は<a href="domestic.html">内政コマンドの計算式</a>、米相場は<a href="market.html">米相場の決まり方</a>を参照してください。</p>
+</section>
 <section class="section"><h2>HEX戦での総大将の動き</h2><div class="statement"><p><b>注目している現象：</b>攻撃側の総大将が本陣に留まり、ほかの部隊だけが前進する場合があります。守備側の本陣防衛と分けて考える必要があります。</p></div>
 <p>攻撃側が数で有利な場合と不利な場合では、総大将の振る舞いが変わることがあります。移動できる地形や周辺の敵部隊、兵種の組み合わせも含めて観戦しています。</p></section>
 <section class="section"><h2>総大将が動かない場合の考え方</h2><p>総大将が本陣に留まる場面でも、初めから待機を選んだとは限りません。移動目標の選択、進路の評価、隣接する6方向からの次の一歩の選択を経て、移動先が決まらなければ待機に至る場合があります。</p><p>移動先を決める際には周辺の地形や進路の条件が関係し、評価が同点の候補には一定の確率で選ばれるものもあります。ただし、こうした条件だけで個々の戦闘における待機の原因を断定することはできません。</p><p class="small">特定の戦闘で、どの段階で移動が成立しなかったかは未確認です。</p></section>
