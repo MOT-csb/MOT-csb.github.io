@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="2011年9月30日MOT本人のチン調査途中版を、移動・通常技・J攻撃・必殺技別に保存"><title>KOF'96 鎮元斎：2011年フレームデータ原本の復元｜MOT KOF'96研究</title>
+<link rel="stylesheet" href="/assets/research.css">
+<style>.article{max-width:1020px}.article h2{margin-top:2rem}.article h3{margin-top:1.6rem}.article .scroll{max-width:100%;overflow-x:auto}.article table{border-collapse:collapse;width:100%;min-width:550px;font-variant-numeric:tabular-nums}.article th,.article td{border:1px solid var(--line,#acb4ac);padding:9px 11px;vertical-align:top;text-align:left}.article th{background:var(--soft,#edf1ed)}.article a{overflow-wrap:anywhere}.article .note{border-left:4px solid var(--accent,#456759);padding:12px;background:var(--soft,#ecf0ed);line-height:1.8}.article .meta{color:var(--muted,#666);font-size:.9rem}</style>
+</head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav"><a href="/kof96-top.html">KOF'96メイン</a><a href="./index.html">研究アーカイブ</a><a href="/kof-top.html">KOF総合</a></nav></div></header>
+<main class="main"><div class="wrap article"><h1>KOF'96 鎮元斎：2011年フレームデータ原本の復元</h1><p class="meta">MOT本人の公開資料を元に構成。測定値・原文の未測定項目・本人の仮説を区別しています。新たな実機／ROMによる独立測定はしていません。</p><h2>元資料と復元方針</h2>
+<p>MOTは2011年9月30日に「途中ですけどあげておきます」と明記して、チンのフレームデータを公開しました。<strong>攻撃の発生Fが記載されても、G（ガード時）・H（ヒット時）の欄が空欄の技があります。</strong> このページは、その空欄を埋めずに原本の構造を残しています。</p>
+<h2>移動・防御動作</h2>
+<div class="scroll"><table><thead><tr><th>動作</th><th>2011年の本人測定</th></tr></thead><tbody><tr><td>ジャンプ予備動作</td><td>4F</td></tr><tr><td>低ジャンプ滞空</td><td>27F</td></tr><tr><td>高ジャンプ滞空</td><td>36F</td></tr><tr><td>ダッシュ開始／停止</td><td>3F／3F</td></tr><tr><td>バックステップ</td><td>6F+26F+6F</td></tr><tr><td>通常前転</td><td>31F</td></tr><tr><td>GC前転</td><td>未測定</td></tr><tr><td>通常後転</td><td>29F</td></tr><tr><td>GC後転</td><td>未測定</td></tr><tr><td>ダウン回避</td><td>24F</td></tr><tr><td>ジャンプ着地硬直</td><td>1F</td></tr></tbody></table></div>
+<h2>地上通常技</h2>
+<div class="scroll"><table><thead><tr><th>技</th><th>発生F</th><th>ガード時の硬直差</th><th>ヒット時</th></tr></thead><tbody><tr><td>近A</td><td>6</td><td>未記載</td><td>未記載</td></tr><tr><td>近B</td><td>4</td><td>未記載</td><td>未記載</td></tr><tr><td>近C</td><td>4</td><td>未記載</td><td>未記載</td></tr><tr><td>近D</td><td>10</td><td>未記載</td><td>未記載</td></tr><tr><td>遠A</td><td>6</td><td>未記載</td><td>未記載</td></tr><tr><td>遠B</td><td>4</td><td>未記載</td><td>未記載</td></tr><tr><td>遠C</td><td>8</td><td>未記載</td><td>未記載</td></tr><tr><td>遠D</td><td>16</td><td>未記載</td><td>未記載</td></tr><tr><td>屈A</td><td>7</td><td>未記載</td><td>未記載</td></tr><tr><td>屈B</td><td>4</td><td>未記載</td><td>未記載</td></tr><tr><td>屈C</td><td>6</td><td>未記載</td><td>未記載</td></tr><tr><td>屈D</td><td>9</td><td>未記載</td><td>ダウン</td></tr><tr><td>立ちCD</td><td>12</td><td>未記載</td><td>ダウン</td></tr></tbody></table></div>
+<h2>ジャンプ攻撃（発生と持続）</h2>
+<div class="scroll"><table><thead><tr><th>技</th><th>発生F</th><th>持続・判定の続く時間</th><th>原文の注記</th></tr></thead><tbody><tr><td>斜めJA</td><td>7</td><td>7F</td><td></td></tr><tr><td>斜めJB</td><td>7</td><td>6F</td><td></td></tr><tr><td>斜めJC</td><td>5</td><td>2F+8F</td><td>判定の間に隙間あり</td></tr><tr><td>斜めJD</td><td>9</td><td>5F</td><td></td></tr><tr><td>垂直JA</td><td>6</td><td>7F</td><td>本人原稿に「？」あり</td></tr><tr><td>垂直JB</td><td>7</td><td>6F</td><td></td></tr><tr><td>垂直JC</td><td>5</td><td>2F+8F</td><td>判定の間に隙間あり</td></tr><tr><td>垂直JD</td><td>9</td><td>5F</td><td></td></tr><tr><td>JCD</td><td>8</td><td>14F</td><td></td></tr></tbody></table></div>
+<p class="note"><strong>原文の重要な注意：</strong>斜めJC・垂直JCの持続は「2+8F」で、その間には隙間があります。連続して10F攻撃判定が出ている、と読んではいけません。垂直JAの数値には本人の「？」が残されています。</p>
+<h2>必殺技・超必殺技</h2>
+<div class="scroll"><table><thead><tr><th>技</th><th>発生F</th><th>本人の備考</th></tr></thead><tbody><tr><td>弱瓢箪撃</td><td>13F</td><td>ガード・ヒット時の硬直差は未記載</td></tr><tr><td>強瓢箪撃</td><td>15F</td><td>ガード・ヒット時の硬直差は未記載</td></tr><tr><td>弱柳燐蓬莱</td><td>9F</td><td>肩上部分のGPは4～8Fのみ</td></tr><tr><td>強柳燐蓬莱</td><td>4F</td><td>本人記事ではGP時間未記載</td></tr><tr><td>弱回転的空突撃</td><td>27F</td><td>ガード・ヒット時の硬直差は未記載</td></tr><tr><td>強回転的空突撃</td><td>33F</td><td>ガード・ヒット時の硬直差は未記載</td></tr><tr><td>弱轟欄炎炮</td><td>12F</td><td>ヒット時ダウン</td></tr><tr><td>強轟欄炎炮</td><td>12F</td><td>ヒット時ダウン</td></tr><tr><td>MAX弱轟欄炎炮</td><td>16F</td><td>ヒット時ダウン</td></tr><tr><td>MAX強轟欄炎炮</td><td>未測定</td><td>空欄のまま維持</td></tr></tbody></table></div>
+<h2>対空用途に関する整理</h2>
+<p>弱柳燐蓬莱は発生9Fで肩上部分のGPが4～8F、強版は発生4Fです。この差は「強の方が必ず対空向き」という意味ではありません。GPの有無・位置と発生速度を別々に考える必要があります。詳しくは<a href="./anti-air-specials-2011.html">2011年の対空技比較</a>を参照してください。</p>
+<h2>確認条件と未測定項目</h2>
+<ul>
+<li>本人は<strong>チン同キャラで確認</strong>したと記載。</li>
+<li>小J／中Jのジャンプ攻撃は未確認。原稿のジャンプ攻撃はノーマルJ・大Jの確認を中心としています。</li>
+<li>斜めJは前方と後方を確認。</li>
+<li>GC前転・GC後転、地上通常技の多くの硬直差、派生技の発生、MAX強轟欄炎炮は未記入。</li>
+</ul>
+<h2>他のチン研究との関係</h2>
+<p><a href="./chin-mochizukiyoi-8d-defense.html">望月酔・8D/8Bの対策</a>は、チンを相手にした戦術とGC前転後の反撃が中心。本記事は<strong>チンを使用する側の技データ</strong>を保存するため、目的が異なります。</p>
+<h2>一次資料</h2><p><a href="https://comesonobravo.seesaa.net/article/228151647.html">MOT本人の2011年9月30日『チンのフレームデータ』原稿全文</a>（元ブログ）。</p><p><a href="./index.html">← KOF'96研究アーカイブに戻る</a></p></div></main>
+<footer class="footer"><div class="wrap">MOT研究アーカイブ｜2026年11月19日</div></footer></body></html>
