@@ -3,7 +3,7 @@
 <title>訓練と兵に施し（兵忠）の計算式｜信長の野望・武将風雲録（MSX2版）｜MOT ゲーム攻略・検証ノート</title><meta name="description" content="MSX2版『武将風雲録』の訓練で上がる訓練度と、兵に施しで上がる兵忠の計算式。計算機つき。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap">
 <link rel="stylesheet" href="/assets/research.css"><style>.calc{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px}.calc .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}.calc label{display:block;font-size:13px;color:var(--muted)}.calc input,.calc select{width:100%;font:inherit;padding:7px 9px;border:1px solid var(--line);border-radius:7px;background:var(--bg);color:var(--ink)}.calc .out{margin-top:16px}.calc .out .stat strong{font-size:24px}.calc .note{font-size:13px;color:var(--muted);margin-top:10px}.calc .hide{display:none}</style></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">MOT <span>GAME NOTES</span></a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/msx/">MSX</a><a href="/msx/nobunaga-fuunroku/">武将風雲録</a><a href="/arcade/kof2002/">KOF2002</a></nav></div></header>
-<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>訓練と兵に施しの計算式</b></div><p class="kicker">GAMEPLAY / MILITARY</p><h1>訓練と兵に施し（兵忠）の計算式</h1><p>訓練は担当武将の戦闘だけで決まり、お金はいりません。兵に施しは魅力が効き、兵士が多い国ほど上がりにくくなります。</p></div></div><main class="main"><div class="wrap">
+<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>訓練と兵に施しの計算式</b></div><p class="kicker">GAMEPLAY / MILITARY</p><h1>訓練と兵に施し（兵忠）の計算式</h1><p>訓練は担当武将の戦闘だけで決まり、お金はいりません。兵に施しは魅力が効き、兵士が多い国ほど上がりにくくなります。訓練度と兵忠は、戦闘の攻撃・防御に直接効きます。</p></div></div><main class="main"><div class="wrap">
 
 <section class="section" id="calc"><h2>計算機</h2>
 <div class="calc">
@@ -21,6 +21,9 @@
 <div class="stat"><small>施しで上がる兵忠</small><strong id="m-hc-r">-</strong></div>
 <div class="stat"><small>同じ量になる最小の金</small><strong id="m-min">-</strong></div>
 <div class="stat"><small>次に1増える金</small><strong id="m-next">-</strong></div>
+<div class="stat"><small>兵忠100までの金：1回で</small><strong id="m-s1">-</strong></div>
+<div class="stat"><small>2回に分けて</small><strong id="m-s2">-</strong></div>
+<div class="stat"><small>4回に分けて</small><strong id="m-s4">-</strong></div>
 </div>
 <p class="note" id="m-note"></p>
 </div>
@@ -38,6 +41,11 @@ function calc(){
  let lo=0;while(lo<money&&res(lo)<r)lo++;let nx=money+1;while(nx<=9999&&res(nx)<=r)nx++;
  $('m-min').textContent=lo+(lo<money?'（'+(money-lo)+'節約）':'');
  $('m-next').textContent=(r>=100-hc)||nx>9999?'上限':nx+'（+'+(r+1)+'）';
+ const inc=(h,m)=>Math.min(100-h,Math.min(100,f(Math.max(0,f(h/5)+f(m/3)-pen)*mul/den)));
+ const need=(h,t)=>{let m=0;while(m<=9999&&inc(h,m)<t-h)m++;return m>9999?null:m};
+ const split=k=>{let h=hc,tot=0;for(let i=1;i<=k;i++){const t=i===k?100:hc+Math.round((100-hc)*i/k);if(t<=h)continue;const m=need(h,t);if(m===null)return null;tot+=m;h=t}return tot};
+ const s1=split(1),s2=split(2),s4=split(4),best=Math.min(...[s1,s2,s4].filter(x=>x!==null));
+ [['m-s1',s1],['m-s2',s2],['m-s4',s4]].forEach(([id,x])=>{$(id).textContent=hc>=100?'-':x===null?'届かない':x+(x===best?'（最安）':'')});
  $('m-note').textContent='施し：（兵忠÷5 '+f(hc/5)+' ＋ 金÷3 '+f(money/3)+' − '+pen+'）×（魅力＋20）÷4 '+mul+' ÷（3√兵士＋1）'+den+'。割り算と√は整数に切り捨てています。';
 }
 document.querySelectorAll('#calc input,#calc select').forEach(e=>e.addEventListener('input',calc));calc();
@@ -62,12 +70,63 @@ document.querySelectorAll('#calc input,#calc select').forEach(e=>e.addEventListe
 <li>今の兵忠が高いほど、少し上がりやすくなります（兵忠÷5の部分）。</li>
 <li>1回で上がるのは最大100、兵忠の上限も100です。消費行動力は20（家臣なら10）。</li>
 </ul>
+<h3>1回で上げるか、分けるか</h3>
+<p>施しのたびに「10＋2×難易度」が引かれる一方、兵忠が上がった後ほど施しは効きやすくなります。どちらが得かは難易度で変わります。兵忠50→100（魅力80・兵士100）に必要な金：</p>
+<div class="table-scroll"><table><thead><tr><th>難易度</th><th>1回で</th><th>2回に分けて</th><th>4回に分けて</th></tr></thead><tbody>
+<tr><td>1</td><td>192</td><td>183</td><td><b>174</b></td></tr>
+<tr><td>3</td><td><b>204</b></td><td>207</td><td>222</td></tr>
+<tr><td>5</td><td><b>216</b></td><td>231</td><td>270</td></tr>
+</tbody></table></div>
+<p>難易度1〜2は分けた方が金は少なく済み、難易度3以上は1回でまとめる方が得です。分けると行動力は回数分かかります。計算機でも1回・2回・4回の金額を比べられます。</p>
 <h3>計算例</h3>
 <p>難易度3、今の兵忠50、使う金100の場合。</p>
 <div class="table-scroll"><table><thead><tr><th>担当武将の魅力</th><th>兵士100</th><th>兵士400</th></tr></thead><tbody>
 <tr><td>魅力80</td><td>兵忠 +21</td><td>兵忠 +11</td></tr>
 <tr><td>魅力40</td><td>兵忠 +13</td><td>兵忠 +6</td></tr>
 </tbody></table></div>
+</section>
+
+<section class="section" id="battle"><h2>兵忠と訓練度は戦闘に直接効く</h2>
+<p>戦場では、部隊ごとに出陣したときの国の訓練度と兵忠を持っています（戦闘後は兵数に応じた平均で国に戻ります）。部隊の基礎戦力は次の式で決まります。</p>
+<div class="statement"><p>基礎戦力 ＝ 9×戦闘 ＋ 6×戦闘²÷100 ＋ 3×訓練度 ＋ 2×兵忠（100〜2000の範囲）</p></div>
+<p>基礎戦力は損害の計算で「攻撃する側 ÷ 受ける側」の比として使われ、損害はその比の平方根に比例します。攻撃にも防御にも効きます。訓練度は1あたり3、兵忠は1あたり2なので、訓練度の方が1.5倍効きます。</p>
+<div class="calc">
+<div class="grid">
+<div><label for="b-war">部隊の武将の戦闘</label><input id="b-war" type="number" min="0" max="100" value="80"></div>
+<div><label for="b-tr1">訓練度（比べる前）</label><input id="b-tr1" type="number" min="0" max="100" value="50"></div>
+<div><label for="b-hc1">兵忠（比べる前）</label><input id="b-hc1" type="number" min="0" max="100" value="50"></div>
+<div><label for="b-tr2">訓練度（比べた後）</label><input id="b-tr2" type="number" min="0" max="100" value="100"></div>
+<div><label for="b-hc2">兵忠（比べた後）</label><input id="b-hc2" type="number" min="0" max="100" value="100"></div>
+</div>
+<div class="out stat-board">
+<div class="stat"><small>基礎戦力（前 → 後）</small><strong id="b-b">-</strong></div>
+<div class="stat"><small>与える損害</small><strong id="b-atk">-</strong></div>
+<div class="stat"><small>受ける損害</small><strong id="b-def">-</strong></div>
+</div>
+<p class="note">損害の変化は、相手が同じ条件のときのおよその目安です（実際は整数の切り捨てや地形・兵数・攻撃方法も関わります）。</p>
+</div>
+</section>
+<script>
+(function(){
+const $=id=>document.getElementById(id),f=Math.floor;
+function v(id){const x=parseInt($(id).value,10);return isNaN(x)?0:x}
+const B=(t,tr,hc)=>Math.max(100,Math.min(2000,9*t+f(6*t*t/100)+3*tr+2*hc));
+function calc(){
+ const t=v('b-war'),b1=B(t,v('b-tr1'),v('b-hc1')),b2=B(t,v('b-tr2'),v('b-hc2'));
+ $('b-b').textContent=b1+' → '+b2;
+ const r=Math.sqrt(b2/b1),pct=x=>(x>=0?'+':'−')+Math.abs(Math.round(x*1000)/10)+'%';
+ $('b-atk').textContent=pct(r-1);$('b-def').textContent=pct(1/r-1);
+}
+document.querySelectorAll('#battle input').forEach(e=>e.addEventListener('input',calc));calc();
+})();
+</script>
+
+<section class="section"><h2>兵忠のそのほかの効果</h2>
+<ul class="contents">
+<li><b>維持費</b>：兵忠が低いほど兵士の維持費が高くなります（兵忠100と50で1.33倍の差）。くわしくは<a href="income.html">税収・年貢・維持費</a>。</li>
+<li><b>CPUの侵攻</b>：CPUは兵忠が40未満の国からは攻め込みません。</li>
+<li><b>施し</b>：今の兵忠が高いほど、施しが少し効きやすくなります。</li>
+</ul>
 </section>
 
 <section class="section"><p><a href="income.html">税収・年貢・維持費の計算式へ →</a>（兵忠は兵士の維持費にも効きます）</p></section></div></main>
