@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>デスタワーのスプリット処理｜初代ぷよぷよ｜MOT</title>
+<meta name="description" content="初代ぷよぷよのデスタワーで起きるスプリットを、低い位置と高い位置に分け、1式への変形、別色を挟む処理、多連鎖移行、見切りの判断までMOTの旧ブログとX投稿から整理します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap">
+<link rel="stylesheet" href="/assets/research.css">
+<style>
+.jump{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 0}.jump a{border:1px solid var(--line);border-radius:999px;padding:6px 12px;text-decoration:none;background:var(--paper);font-weight:700}.visual-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px;margin:18px 0}.figure{margin:0;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center}.figure img{display:block;margin:auto;max-width:100%;height:auto;max-height:610px;image-rendering:auto}.figure figcaption{text-align:left;font-size:13px;color:var(--muted);margin-top:10px}.point{background:var(--soft);border-radius:10px;padding:14px 17px}.point p{margin:0}.compare{display:grid;grid-template-columns:1fr 1fr;gap:16px}.compare>article{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px}.compare h3{margin:0 0 9px}.risk{border-top:5px solid #a94b4b}.safe{border-top:5px solid var(--accent)}.route{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,225px),1fr));gap:14px}.route article{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:17px}.route h3{margin:0 0 7px}.route p{font-size:14px;color:var(--muted);margin:0}.decision{counter-reset:step;display:grid;gap:12px}.decision>div{counter-increment:step;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:15px 17px}.decision>div:before{content:counter(step);display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;margin-right:9px;background:var(--accent);color:#fff;font-weight:800}.decision h3{display:inline;margin:0}.decision p{margin:7px 0 0 37px}.source{font-size:13px;color:var(--muted)}@media(max-width:680px){.compare{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/puyo/death-tower/">デスタワー</a><a href="/kof-top.html">KOF</a><a href="/kof98-top.html">KOF98</a><a href="/msx/">MSX</a></nav></div></header>
+
+<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/puyo/death-tower/">デスタワー</a><span aria-hidden="true"> / </span><b>スプリット処理</b></div><p class="kicker">DEATH TOWER / SPLIT CONTROL</p><h1>デスタワーのスプリット処理</h1><p>必要な連結を離して置いた後、どこまで待ち、どうつなぎ直すか。高さ・ネクスト・別色の逃がし方から判断します。</p></div></div>
+
+<main class="main"><div class="wrap">
+<section class="section">
+<p class="lead">スプリットは「できたら失敗」ではありません。問題は、<b>必要色を待つ間に手が止まるか</b>、そして<b>待てる高さが残っているか</b>です。低い序盤スプリットは破綻しやすく、高い位置や中盤以降のスプリットは処理しやすい――この違いを出発点にします。</p>
+<div class="statement"><p><b>結論：</b>両側の色を使え、次の数手で解消でき、待っている間も盤面を低く保てるならスプリットは有力です。どれかが欠けるなら、1式への変形・別色を挟む処理・多連鎖移行・片側を捨てる見切りを早めに選びます。</p></div>
+<nav class="jump" aria-label="ページ内メニュー"><a href="#meaning">意味</a><a href="#height">低い／高い</a><a href="#routes">4つの処理</a><a href="#examples">図解</a><a href="#flow">判断手順</a><a href="#sources">資料</a></nav>
+</section>
+
+<section class="section" id="meaning"><p class="eyebrow">SPLIT AND RESERVE</p><h2>スプリットとリザーブは同じではない</h2>
+<p>ここでいうスプリットは、2連鎖目でつなげたい同色の連結部分を離して置き、接続を後回しにした状態です。一方、リザーブは、完成形を想定して「この場所へこの色を置く」という接続先を確保している状態です。</p>
+<div class="cols"><div class="point"><p><b>スプリット</b><br>連結を後回しにしている。必要色が来るまで待つことになりやすい。</p></div><div class="point"><p><b>リザーブ</b><br>置く色と場所が見えている。完成までのルートを先に持っている。</p></div></div>
+<p>したがって、スプリットを作るだけでは柔軟とは限りません。<b>接続先を読めたときに、スプリットがリザーブとして働き始めます。</b></p>
+<p class="source">出典：<a href="https://x.com/mot_csb/status/302902699945521153" rel="nofollow">スプリットとリザーブの違い（2013年2月17日）</a></p>
+</section>
+
+<section class="section" id="height"><p class="eyebrow">HEIGHT MATTERS</p><h2>低いスプリットと高いスプリット</h2>
+<div class="compare">
+<article class="risk"><h3>低い・序盤のスプリット</h3><ul class="contents"><li>必要色が来ないと手が止まりやすい</li><li>待つ間に3列目・5列目が高くなりやすい</li><li>発火点が低く、他の連結を放棄しやすい</li><li>柔軟性の低い選択になりやすい</li></ul><p class="small">序盤に構えるほど、盤面全体が「待ち」に支配されます。</p></article>
+<article class="safe"><h3>高い・中盤以降のスプリット</h3><ul class="contents"><li>下の土台ができており手を進めやすい</li><li>分かれた両方の色を活かせる場合がある</li><li>ネクストで即座に解消できるなら負担が小さい</li><li>スプリットだけを理由に運任せとはいえない</li></ul><p class="small">高さよりも、待つ間に有効手が残っているかが重要です。</p></article>
+</div>
+<p class="source">出典：<a href="https://x.com/mot_csb/status/1021670701625831424" rel="nofollow">低いスプリットと高いスプリット（2018年7月24日）</a>／<a href="https://x.com/mot_csb/status/586484420166557696" rel="nofollow">序盤以外では手が進む場合が多い（2015年4月10日）</a>／<a href="https://x.com/mot_csb/status/622974200341331968" rel="nofollow">高い位置の実例（2015年7月20日）</a></p>
+</section>
+
+<section class="section" id="routes"><p class="eyebrow">FOUR ROUTES</p><h2>スプリットを処理する4つの方向</h2>
+<div class="route">
+<article><span class="tag">変形</span><h3>1式などへ覆い直す</h3><p>片側の色を別の連結へ吸収し、通常形へ戻します。序盤の不安定な待ちを短くできる基本処理です。</p></article>
+<article><span class="tag">保留</span><h3>別色を挟んでルートを残す</h3><p>すぐにはつながらない色を間に置き、接続先を確保します。別色が次のタネとして働くかも確認します。</p></article>
+<article><span class="tag">移行</span><h3>多連鎖へ切り替える</h3><p>スプリットの接続を待つより、間に置いた色を軸に連鎖を伸ばす方がよい局面があります。</p></article>
+<article><span class="tag">見切り</span><h3>片側を捨てて先へ進む</h3><p>待つほど崩壊率が上がるなら、連結の一部を諦めて高さを抑えます。早すぎる見切りとの釣り合いが重要です。</p></article>
+</div>
+<p class="source">MOTの整理：<a href="https://comesonobravo.hatenadiary.org/entry/433690368.html" rel="nofollow">序盤スプリットからの捌き方メモ</a>／<a href="https://comesonobravo.hatenadiary.org/entry/434752487.html" rel="nofollow">序盤のスプリット考察メモ</a></p>
+</section>
+
+<section class="section" id="examples"><p class="eyebrow">POSITION EXAMPLES</p><h2>似た形でも、覆い直せるかで差がつく</h2>
+<p>次の2例は似ていますが、上の形は黄を使って1式へ覆い直せます。下の形には同じ受けがなく、赤待ちを続けやすい構造です。スプリットの見た目より、<b>別色で通常形へ戻るルートがあるか</b>を見ます。</p>
+<div class="visual-grid">
+<figure class="figure"><img src="/puyo/death-tower/split/assets/coverable.png" width="182" height="320" loading="lazy" alt="黄色を使って1式に覆い直せる序盤スプリットのぷよ図"><figcaption><b>覆い直せる形。</b>黄を使って1式へ移れるため、赤待ちだけに依存しません。5列目の赤1個は使えなくなりますが、手は進みます。</figcaption></figure>
+<figure class="figure"><img src="/puyo/death-tower/split/assets/hard-cover.png" width="182" height="320" loading="lazy" alt="通常形へ覆い直しにくく赤待ちが続く序盤スプリットのぷよ図"><figcaption><b>覆い直しにくい形。</b>同じ黄の受けがなく、赤待ちを継続しやすい状態。4列目へ緑も置きにくく、手が狭くなります。</figcaption></figure>
+</div>
+<h3>崩れる前に、別色を軸に切り替える</h3>
+<p>待ち続けると中央列が高くなり、スプリットを解消する前に盤面が崩れます。必要色が来ない場合は、間へ別色を置いて完成ルートを残すか、その色を軸に多連鎖へ移ります。</p>
+<div class="visual-grid">
+<figure class="figure"><img src="/puyo/death-tower/split/assets/collapse.png" width="182" height="320" loading="lazy" alt="必要色を待つ間に中央列が高くなったスプリットのぷよ図"><figcaption><b>待ちすぎた状態。</b>接続色だけを待つと中央が高くなり、以後の置き場所が減ります。</figcaption></figure>
+<figure class="figure"><img src="/puyo/death-tower/split/assets/multichain.png" width="182" height="320" loading="lazy" alt="別色を間に入れて多連鎖へ移行するスプリット処理のぷよ図"><figcaption><b>別色を使う処理。</b>スプリットをそのまま解消する一本道から外れ、挟んだ色を軸に連鎖へ移行します。</figcaption></figure>
+</div>
+<div class="point"><p><b>図から読むポイント：</b>「何色を待っているか」だけでなく、待っている間に置ける色、通常形へ戻る色、連鎖移行の軸になる色を同時に数えます。</p></div>
+</section>
+
+<section class="section" id="flow"><h2>実戦の判断手順</h2>
+<div class="decision">
+<div><h3>分かれた両方の色が使えるか</h3><p>片方が完全な死にぷよなら、スプリットを維持する価値は低くなります。</p></div>
+<div><h3>ネクストで早く解消できるか</h3><p>次の1〜2手でつながるなら維持。見えないなら、別の置き場所を探します。</p></div>
+<div><h3>待つ間も盤面を低く保てるか</h3><p>3列目・5列目が高くなり始めるなら、低いスプリットの破綻パターンに入っています。</p></div>
+<div><h3>1式・別色挟み・多連鎖のルートを探す</h3><p>必要色だけを待たず、通常形へ戻る手と別の完成形を同時に見ます。</p></div>
+<div><h3>維持する期限を決める</h3><p>早すぎる解消はスプリットの価値を失い、遅すぎる解消は崩壊を招きます。中央列が高くなり、次の有効手が狭くなる前に見切ります。</p></div>
+</div>
+<p class="source">出典：<a href="https://x.com/mot_csb/status/697714909220511744" rel="nofollow">待つほど崩壊し、早い判断ではスプリットの意味を失うジレンマ（2016年2月11日）</a></p>
+</section>
+
+<section class="section" id="sources"><h2>調査した資料</h2>
+<div class="table-scroll"><table><thead><tr><th>資料</th><th>このページで使った内容</th></tr></thead><tbody>
+<tr><td><a href="https://comesonobravo.hatenadiary.org/entry/433690368.html" rel="nofollow">序盤スプリットからの捌き方メモ</a></td><td>AB→AC→ABからの配色別の処理案</td></tr>
+<tr><td><a href="https://comesonobravo.hatenadiary.org/entry/434752487.html" rel="nofollow">序盤のスプリット考察メモ</a></td><td>覆い直せる形と覆い直しにくい形、崩壊と多連鎖移行</td></tr>
+<tr><td><a href="https://comesonobravo.hatenadiary.org/entry/441277276.html" rel="nofollow">スプリット、リザーブの具体例</a></td><td>完成形を先に見て、置く色と場所を確保する考え方</td></tr>
+<tr><td>Xアーカイブの関連投稿71件</td><td>低い／高いスプリット、柔軟性、解消時期についての後年の補足</td></tr>
+</tbody></table></div>
+<p class="notice">このページは、旧ブログの図と説明をそのまま並べ直したものではありません。2009〜2026年のXアーカイブを照合し、後年の「高さ」「手の止まりにくさ」「判断期限」という観点を加えて再構成しています。</p>
+<p><a class="buttonlink" href="/puyo/death-tower/">デスタワー総合メニューへ戻る</a> <a class="buttonlink" href="/puyo/death-tower/shelf-cap-extension/">棚上げ・蓋・伸ばしを読む</a></p>
+</section>
+</div></main>
+
+<footer class="footer"><div class="wrap">Come sono bravo?　｜　作成：MOT<br>ゲームの権利は各権利者に帰属します。</div></footer>
+</body>
+</html>
