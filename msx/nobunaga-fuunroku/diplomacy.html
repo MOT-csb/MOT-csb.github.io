@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
-<title>外交の成功条件（脅迫・同盟・婚姻・貢物）｜信長の野望・武将風雲録（MSX2版）｜MOT ゲーム攻略・検証ノート</title><meta name="description" content="MSX2版『武将風雲録』の外交コマンドの成否の決まり方。脅迫は兵数の差、同盟・婚姻・貢物は友好度と使者の能力で決まります。">
+<title>外交の成功条件（脅迫・同盟・婚姻・貢物・誘降）｜信長の野望・武将風雲録（MSX2版）｜MOT ゲーム攻略・検証ノート</title><meta name="description" content="MSX2版『武将風雲録』の外交コマンドの成否の決まり方。脅迫は兵数の差、同盟・婚姻・貢物は友好度と使者の能力で決まります。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap">
 <link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">MOT <span>GAME NOTES</span></a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/msx/">MSX</a><a href="/msx/nobunaga-fuunroku/">武将風雲録</a><a href="/arcade/kof2002/">KOF2002</a></nav></div></header>
-<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>外交の成功条件</b></div><p class="kicker">GAMEPLAY / DIPLOMACY</p><h1>外交の成功条件（脅迫・同盟・婚姻・貢物）</h1><p>外交コマンドは、脅迫とそれ以外で成否の決まり方がまったく違います。脅迫は兵数の差、同盟・婚姻・貢物は友好度と使者の能力で決まります。</p></div></div><main class="main"><div class="wrap">
+<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>外交の成功条件</b></div><p class="kicker">GAMEPLAY / DIPLOMACY</p><h1>外交の成功条件（脅迫・同盟・婚姻・貢物・誘降）</h1><p>外交コマンドは、脅迫とそれ以外で成否の決まり方がまったく違います。脅迫は兵数の差、同盟・婚姻・貢物は友好度と使者の能力で決まります。</p></div></div><main class="main"><div class="wrap">
 
 <section class="section"><h2>脅迫：兵数の差がほぼすべて</h2>
 <div class="statement"><p><b>ポイント：</b>脅迫の成否は、自分と相手の<b>総兵数の比</b>でほぼ決まります。相性・魅力・教養・友好度は関係しません。</p></div>
@@ -66,5 +66,29 @@
 <p>友好度で見ると、50までは友好度10ごとに成功率が10%、50を超えると友好度5ごとに成功率が10%上がります。</p>
 </section>
 
+<section class="section" id="yuko"><h2>誘降：金をたくさん積み、教養の高い使者で</h2>
+<div class="statement"><p>成功率（%）＝ √（2 × 贈り物の価値）＋ 使者の教養÷2 ＋ 使者と相手の相性差 ＋ 一族ボーナス − 相手の忠誠÷2 − 2 × 難易度 − 0〜14</p></div>
+<ul class="contents">
+<li><b>贈り物</b>：金ならその額が価値です。効き目は平方根なので、200で20、800で40と、4倍積んで2倍の効き目です。</li>
+<li><b>使者</b>：教養の半分が足されます。行動力は90かかります。</li>
+<li><b>相性差</b>：使者と相手の相性が<b>離れているほど</b>成功しやすくなります（最大＋15）。</li>
+<li><b>相手の忠誠</b>：半分が引かれます。忠誠100の武将は−50です。</li>
+<li><b>一族ボーナス</b>：相手が使者と同じ一族なら＋2、こちらの大名と同じ一族なら＋3。</li>
+<li><b>難易度</b>：プレイヤーだけ、難易度×2が引かれます。</li>
+</ul>
+<h3>誘降できない武将</h3>
+<ul class="contents">
+<li>義理と忠誠の合計が100を超える武将は、何を贈っても0%です。</li>
+<li>主君と同じ一族の武将は、義理がかなり低く、野望が60以上のときしか応じません。</li>
+</ul>
+<h3>茶器を贈ると損をする</h3>
+<p>茶器の価値は格によって決まりますが、名物ほど価値が低く計算されます。唐物三日月（格0）は金76相当、格29の茶器は金250相当、格30は0です。茶器を贈るなら一番安い茶器、それ以外は金を贈るのが正解です。</p>
+<h3>成功したあと</h3>
+<ul class="contents">
+<li>相手は内応を約束し、合戦の陣中で<b>90%の確率で寝返りの判定</b>が成立するようになります。</li>
+<li>内応の約束がなくても、忠誠50未満の武将は合戦中に寝返ることがあります。忠誠が低いほど起きやすくなります。</li>
+<li>自分の家臣に茶器を褒美として与えると、確率でこの約束（と茶器没収の恨み）が消えます。</li>
+</ul>
+</section>
 <section class="section"><p><a href="cpu-ai.html">CPU勢力の行動傾向へ →</a></p></section></div></main>
 <footer class="footer"><div class="wrap">MOT ゲーム攻略・検証ノート　｜　攻略・観戦・研究メモ<br>ゲームの権利は各権利者に帰属します。</div></footer></body></html>
