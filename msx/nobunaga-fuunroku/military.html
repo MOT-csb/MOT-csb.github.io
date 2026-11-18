@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>訓練と兵に施し（兵忠）の計算式｜信長の野望・武将風雲録（MSX2版）｜MOT ゲーム攻略・検証ノート</title><meta name="description" content="MSX2版『武将風雲録』の訓練で上がる訓練度と、兵に施しで上がる兵忠の計算式。計算機つき。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap">
+<link rel="stylesheet" href="/assets/research.css"><style>.calc{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px}.calc .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}.calc label{display:block;font-size:13px;color:var(--muted)}.calc input,.calc select{width:100%;font:inherit;padding:7px 9px;border:1px solid var(--line);border-radius:7px;background:var(--bg);color:var(--ink)}.calc .out{margin-top:16px}.calc .out .stat strong{font-size:24px}.calc .note{font-size:13px;color:var(--muted);margin-top:10px}.calc .hide{display:none}</style></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">MOT <span>GAME NOTES</span></a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/msx/">MSX</a><a href="/msx/nobunaga-fuunroku/">武将風雲録</a><a href="/arcade/kof2002/">KOF2002</a></nav></div></header>
+<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>訓練と兵に施しの計算式</b></div><p class="kicker">GAMEPLAY / MILITARY</p><h1>訓練と兵に施し（兵忠）の計算式</h1><p>訓練は担当武将の戦闘だけで決まり、お金はいりません。兵に施しは魅力が効き、兵士が多い国ほど上がりにくくなります。</p></div></div><main class="main"><div class="wrap">
+
+<section class="section" id="calc"><h2>計算機</h2>
+<div class="calc">
+<div class="grid">
+<div><label for="m-war">担当武将の戦闘</label><input id="m-war" type="number" min="0" max="100" value="80"></div>
+<div><label for="m-chm">担当武将の魅力</label><input id="m-chm" type="number" min="0" max="100" value="80"></div>
+<div><label for="m-tr">今の訓練度</label><input id="m-tr" type="number" min="0" max="100" value="50"></div>
+<div><label for="m-hc">今の兵忠</label><input id="m-hc" type="number" min="0" max="100" value="50"></div>
+<div><label for="m-sol">兵士</label><input id="m-sol" type="number" min="0" max="999" value="100"></div>
+<div><label for="m-money">施しに使う金</label><input id="m-money" type="number" min="0" value="100"></div>
+<div><label for="m-who">実行する勢力</label><select id="m-who"><option value="p1">プレイヤー（難易度1）</option><option value="p2">プレイヤー（難易度2）</option><option value="p3" selected>プレイヤー（難易度3）</option><option value="p4">プレイヤー（難易度4）</option><option value="p5">プレイヤー（難易度5）</option><option value="c">CPU</option></select></div>
+</div>
+<div class="out stat-board">
+<div class="stat"><small>訓練で上がる訓練度</small><strong id="m-tr-r">-</strong></div>
+<div class="stat"><small>施しで上がる兵忠</small><strong id="m-hc-r">-</strong></div>
+<div class="stat"><small>同じ量になる最小の金</small><strong id="m-min">-</strong></div>
+<div class="stat"><small>次に1増える金</small><strong id="m-next">-</strong></div>
+</div>
+<p class="note" id="m-note"></p>
+</div>
+</section>
+<script>
+(function(){
+const $=id=>document.getElementById(id),f=Math.floor,isq=n=>f(Math.sqrt(Math.max(0,n)));
+function v(id){const x=parseInt($(id).value,10);return isNaN(x)?0:x}
+function calc(){
+ const war=v('m-war'),chm=v('m-chm'),tr=v('m-tr'),hc=v('m-hc'),sol=v('m-sol'),money=v('m-money'),w=$('m-who').value;
+ const t=Math.min(f(war*10/80),100-tr);$('m-tr-r').textContent=tr>=100?'満タン':(t>0?'+'+t:'効果なし');
+ const pen=w==='c'?10:10+2*parseInt(w.slice(1),10),den=3*isq(sol)+1,mul=f((chm+20)/4);
+ const res=m=>Math.min(100-hc,Math.min(100,f(Math.max(0,f(hc/5)+f(m/3)-pen)*mul/den)));
+ const r=res(money);$('m-hc-r').textContent=hc>=100?'満タン':'+'+r;
+ let lo=0;while(lo<money&&res(lo)<r)lo++;let nx=money+1;while(nx<=9999&&res(nx)<=r)nx++;
+ $('m-min').textContent=lo+(lo<money?'（'+(money-lo)+'節約）':'');
+ $('m-next').textContent=(r>=100-hc)||nx>9999?'上限':nx+'（+'+(r+1)+'）';
+ $('m-note').textContent='施し：（兵忠÷5 '+f(hc/5)+' ＋ 金÷3 '+f(money/3)+' − '+pen+'）×（魅力＋20）÷4 '+mul+' ÷（3√兵士＋1）'+den+'。割り算と√は整数に切り捨てています。';
+}
+document.querySelectorAll('#calc input,#calc select').forEach(e=>e.addEventListener('input',calc));calc();
+})();
+</script>
+
+<section class="section"><h2>訓練</h2>
+<div class="statement"><p>上がる訓練度 ＝ 担当武将の戦闘 ÷ 8</p></div>
+<ul class="contents">
+<li><b>戦闘だけで決まります</b>。お金はいりません。戦闘80なら+10、戦闘100なら+12。</li>
+<li>戦闘が7以下の武将では、まったく上がりません（「効果はありません」）。</li>
+<li>訓練度は100が上限です。消費行動力は40（家臣が担当すれば20）。</li>
+</ul>
+</section>
+
+<section class="section"><h2>兵に施し（兵忠）</h2>
+<div class="statement"><p>上がる兵忠 ＝（今の兵忠÷5 ＋ 使う金÷3 − 10 − 2×難易度）×（担当武将の魅力 ＋ 20）÷4 ÷（3×√兵士 ＋ 1）</p></div>
+<ul class="contents">
+<li><b>魅力が効きます</b>。魅力100なら30倍、魅力40なら15倍で、2倍の差になります。</li>
+<li><b>兵士が多い国ほど上がりにくい</b>。兵士100なら÷31、兵士400なら÷61で、約半分になります。</li>
+<li><b>最初に「10 ＋ 2×難易度」が引かれます</b>。少しの金では効果がありません。たとえば難易度3・兵忠50・兵士100・魅力80なら、金23以下では1も上がりません。CPUは「10」だけ引かれます。</li>
+<li>今の兵忠が高いほど、少し上がりやすくなります（兵忠÷5の部分）。</li>
+<li>1回で上がるのは最大100、兵忠の上限も100です。消費行動力は20（家臣なら10）。</li>
+</ul>
+<h3>計算例</h3>
+<p>難易度3、今の兵忠50、使う金100の場合。</p>
+<div class="table-scroll"><table><thead><tr><th>担当武将の魅力</th><th>兵士100</th><th>兵士400</th></tr></thead><tbody>
+<tr><td>魅力80</td><td>兵忠 +21</td><td>兵忠 +11</td></tr>
+<tr><td>魅力40</td><td>兵忠 +13</td><td>兵忠 +6</td></tr>
+</tbody></table></div>
+</section>
+
+<section class="section"><p><a href="income.html">税収・年貢・維持費の計算式へ →</a>（兵忠は兵士の維持費にも効きます）</p></section></div></main>
+<footer class="footer"><div class="wrap">MOT ゲーム攻略・検証ノート　｜　攻略・観戦・研究メモ<br>ゲームの権利は各権利者に帰属します。</div></footer></body></html>
