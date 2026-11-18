@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
-<title>兵雇用・訓練・兵に施し（兵忠）の計算式｜信長の野望・武将風雲録（MSX2版）｜MOT ゲーム攻略・検証ノート</title><meta name="description" content="MSX2版『武将風雲録』の兵雇用で混ざる新兵、訓練で上がる訓練度と、兵に施しで上がる兵忠の計算式。計算機つき。">
+<title>兵雇用・訓練・施し・製造の計算式｜信長の野望・武将風雲録（MSX2版）｜MOT ゲーム攻略・検証ノート</title><meta name="description" content="MSX2版『武将風雲録』の兵雇用で混ざる新兵、訓練で上がる訓練度と、兵に施しで上がる兵忠の計算式。計算機つき。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap">
 <link rel="stylesheet" href="/assets/research.css"><style>.calc{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px}.calc .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}.calc label{display:block;font-size:13px;color:var(--muted)}.calc input,.calc select{width:100%;font:inherit;padding:7px 9px;border:1px solid var(--line);border-radius:7px;background:var(--bg);color:var(--ink)}.calc .out{margin-top:16px}.calc .out .stat strong{font-size:24px}.calc .note{font-size:13px;color:var(--muted);margin-top:10px}.calc .hide{display:none}</style></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">MOT <span>GAME NOTES</span></a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/msx/">MSX</a><a href="/msx/nobunaga-fuunroku/">武将風雲録</a><a href="/arcade/kof2002/">KOF2002</a></nav></div></header>
-<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>兵雇用・訓練・兵に施しの計算式</b></div><p class="kicker">GAMEPLAY / MILITARY</p><h1>兵雇用・訓練・兵に施し（兵忠）の計算式</h1><p>訓練は担当武将の戦闘だけで決まり、お金はいりません。兵に施しは魅力が効き、兵士が多い国ほど上がりにくくなります。訓練度と兵忠は、戦闘の攻撃・防御に直接効きます。</p></div></div><main class="main"><div class="wrap">
+<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>兵雇用・訓練・兵に施しの計算式</b></div><p class="kicker">GAMEPLAY / MILITARY</p><h1>兵雇用・訓練・施し・製造の計算式</h1><p>訓練は担当武将の戦闘だけで決まり、お金はいりません。兵に施しは魅力が効き、兵士が多い国ほど上がりにくくなります。訓練度と兵忠は、戦闘の攻撃・防御に直接効きます。</p></div></div><main class="main"><div class="wrap">
 
 <section class="section" id="calc"><h2>計算機</h2>
 <div class="calc">
@@ -102,6 +102,23 @@ document.querySelectorAll('#calc input,#calc select').forEach(e=>e.addEventListe
 <li>訓練度や兵忠が30より低い国では、兵を雇うだけで数値が上がります。</li>
 </ul>
 <p class="small">雇用相場は米相場と同じ動き方をし、5.0に戻りやすい作りです。くわしくは<a href="market.html">米相場の決まり方</a>。</p>
+</section>
+<section class="section" id="make"><h2>製造（鉄砲・鉄甲船）</h2>
+<div class="statement"><p>単価 ＝ 鉄砲300・鉄甲船600 −（国の技術÷10 ＋ 担当武将の政治 ＋ 教養）</p></div>
+<p>例：技術500の国で、政治90・教養80の武将が作ると、鉄砲は1丁 300−(50＋90＋80)＝<b>80</b>。政治・教養の低い武将だと値段が跳ね上がるので、製造は政治と教養の両方が高い武将に任せます。</p>
+<h3>鉄砲</h3>
+<ul class="contents">
+<li>1回に注文できるのは<b>最大15丁</b>（金・鉄砲の上限999にも制限されます）。</li>
+<li>届くのは<b>3か月後</b>です。届くまで次の注文はできません。</li>
+<li>行動力は40です（家臣なら半分）。</li>
+</ul>
+<h3>鉄甲船</h3>
+<ul class="contents">
+<li>国の技術が<b>500以上</b>必要です。</li>
+<li>1隻ずつ作り、<b>3か月後</b>に完成します。完成したら武将1人に与えます。すでに持っている武将には与えられません。</li>
+<li>完成した船を誰かに与えるまで、次の鉄甲船は作れません。</li>
+</ul>
+<p class="small">技術は<a href="domestic.html">技術革新</a>で上げます。技術が上がると、製造の単価も下がります。</p>
 </section>
 <section class="section" id="battle"><h2>兵忠と訓練度は戦闘に直接効く</h2>
 <p>戦場では、部隊ごとに出陣したときの国の訓練度と兵忠を持っています（戦闘後は兵数に応じた平均で国に戻ります）。部隊の基礎戦力は次の式で決まります。</p>
