@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>米相場の決まり方｜信長の野望・武将風雲録（MSX2版）｜MOT ゲーム攻略・検証ノート</title><meta name="description" content="MSX2版『武将風雲録』の米相場（0.8〜2.5）の毎月の動き方。1.5に戻る力、豊作・凶作の影響、来月の相場の確率を計算できます。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap">
+<link rel="stylesheet" href="/assets/research.css"><style>.calc{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px}.calc .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}.calc label{display:block;font-size:13px;color:var(--muted)}.calc input,.calc select{width:100%;font:inherit;padding:7px 9px;border:1px solid var(--line);border-radius:7px;background:var(--bg);color:var(--ink)}.calc .out{margin-top:16px}.calc .out .stat strong{font-size:24px}.calc .note{font-size:13px;color:var(--muted);margin-top:10px}.calc .hide{display:none}</style><style>.bar{display:inline-block;height:10px;background:var(--accent);border-radius:3px;vertical-align:middle}</style></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">MOT <span>GAME NOTES</span></a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/msx/">MSX</a><a href="/msx/nobunaga-fuunroku/">武将風雲録</a><a href="/arcade/kof2002/">KOF2002</a></nav></div></header>
+<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>米相場の決まり方</b></div><p class="kicker">GAMEPLAY / RICE MARKET</p><h1>米相場の決まり方</h1><p>米相場は0.8〜2.5の範囲で毎月動きます。まったくのランダムではなく、1.5に戻ろうとする力が強くかかっていて、豊作・凶作の年は決まった方向に動きます。</p></div></div><main class="main"><div class="wrap">
+
+<section class="section" id="calc"><h2>来月の相場を計算する</h2>
+<div class="calc">
+<div class="grid">
+<div><label for="r-now">今月の米相場</label><select id="r-now"></select></div>
+<div><label for="r-harv">来月の作柄の知らせ</label><select id="r-harv"><option value="n">なし（ふだん）</option><option value="b">凶作</option><option value="g">豊作</option></select></div>
+<div><label for="r-qty">売買する米の量</label><input id="r-qty" type="number" min="0" value="100"></div>
+</div>
+<div class="out stat-board">
+<div class="stat"><small>今月この量を売買すると</small><strong id="r-cost">-</strong></div>
+<div class="stat"><small>来月、今より高くなる確率</small><strong id="r-up">-</strong></div>
+<div class="stat"><small>来月、今より安くなる確率</small><strong id="r-down">-</strong></div>
+<div class="stat"><small>来月の平均</small><strong id="r-avg">-</strong></div>
+</div>
+<div class="table-scroll" style="margin-top:14px"><table><thead><tr><th>来月の相場</th><th>確率</th><th></th></tr></thead><tbody id="r-tbl"></tbody></table></div>
+<p class="note">金額は「米の量 × 相場」（小数点以下切り捨て）。確率は月の初めの更新だけを計算したものです。</p>
+</div>
+</section>
+<script>
+(function(){
+const $=id=>document.getElementById(id);
+const sel=$('r-now');for(let p=8;p<=25;p++){const o=document.createElement('option');o.value=p;o.textContent=(p/10).toFixed(1);if(p===15)o.selected=true;sel.appendChild(o)}
+const cl=x=>Math.max(8,Math.min(25,x));
+function dist(p,h){
+ const base={};if(p<11||p>=20)base[15]=1;else{base[15]=(base[15]||0)+0.3;base[p]=(base[p]||0)+0.7}
+ const ch={};
+ if(h==='b'){for(let d=5;d<=9;d++)ch[d]=0.2}else if(h==='g'){for(let d=5;d<=9;d++)ch[-d]=0.2}
+ else{for(let d=-7;d<=5;d++)ch[d]=(ch[d]||0)+0.2/13;for(let d=-3;d<=3;d++)ch[d]=(ch[d]||0)+0.8/7}
+ const out={};for(const b in base)for(const d in ch){const q=cl(+b+ +d);out[q]=(out[q]||0)+base[b]*ch[d]}return out}
+function calc(){
+ const p=+sel.value,h=$('r-harv').value,q=parseInt($('r-qty').value,10)||0;
+ $('r-cost').textContent='金'+Math.floor(q*p/10);
+ const d=dist(p,h);let up=0,dn=0,avg=0,rows='';
+ for(let x=8;x<=25;x++){const pr=d[x]||0;if(x>p)up+=pr;if(x<p)dn+=pr;avg+=x*pr;
+  if(pr>0.0005)rows+='<tr><td>'+(x/10).toFixed(1)+(x===p?'（今と同じ）':'')+'</td><td>'+(pr*100).toFixed(1)+'%</td><td><span class="bar" style="width:'+Math.round(pr*300)+'px"></span></td></tr>'}
+ $('r-up').textContent=(up*100).toFixed(1)+'%';$('r-down').textContent=(dn*100).toFixed(1)+'%';$('r-avg').textContent=(avg/10).toFixed(2);
+ $('r-tbl').innerHTML=rows;
+}
+document.querySelectorAll('#calc input,#calc select').forEach(e=>e.addEventListener('input',calc));calc();
+})();
+</script>
+
+<section class="section"><h2>毎月の決まり方</h2>
+<h3>① まず1.5に戻すかどうか</h3>
+<div class="table-scroll"><table><thead><tr><th>今月の相場</th><th>来月の更新の前に</th></tr></thead><tbody>
+<tr><td>1.0以下、2.0以上</td><td><b>必ず1.5に戻る</b></td></tr>
+<tr><td>1.1〜1.9</td><td>30%の確率で1.5に戻る（70%はそのまま）</td></tr>
+</tbody></table></div>
+<h3>② そのあと変動する</h3>
+<div class="table-scroll"><table><thead><tr><th>状況</th><th>変動幅</th></tr></thead><tbody>
+<tr><td>凶作の知らせがあったとき</td><td><b>+0.5〜+0.9</b>（必ず上がる）</td></tr>
+<tr><td>豊作の知らせがあったとき</td><td><b>−0.5〜−0.9</b>（必ず下がる）</td></tr>
+<tr><td>ふだん（80%の月）</td><td>−0.3〜+0.3</td></tr>
+<tr><td>ふだん（20%の月）</td><td>−0.7〜+0.5（下がりやすい）</td></tr>
+</tbody></table></div>
+<p>最後に0.8〜2.5の範囲に収められます。相場の更新は、毎月の来訪者のイベントのあとに行われます。</p>
+</section>
+
+<section class="section"><h2>ここから分かること</h2>
+<ul class="contents">
+<li><b>極端な相場は1か月しか続かない</b>：1.0以下や2.0以上になっても、翌月には必ず1.5に戻ってから動きます。安い月を見たらその月のうちに買い、高い月を見たらその月のうちに売るのが正解です。</li>
+<li><b>豊作・凶作は方向が決まっている</b>：豊作なら米は確実に安く、凶作なら確実に高くなります。</li>
+<li><b>ふだんは1.2〜1.8に収まる</b>：長い目で見ると、相場の約78%は1.2〜1.8です（作柄の影響を除いて計算）。</li>
+</ul>
+<div class="table-scroll"><table><thead><tr><th>相場</th><th>0.8〜1.0</th><th>1.1</th><th>1.2〜1.8</th><th>1.9</th><th>2.0〜2.5</th></tr></thead><tbody>
+<tr><td>長い目で見た割合</td><td>約8%</td><td>約4%</td><td>約78%</td><td>約4%</td><td>約5%</td></tr>
+</tbody></table></div>
+</section>
+
+<section class="section"><p><a href="income.html">税収・年貢・維持費の計算式へ →</a></p></section></div></main>
+<footer class="footer"><div class="wrap">MOT ゲーム攻略・検証ノート　｜　攻略・観戦・研究メモ<br>ゲームの権利は各権利者に帰属します。</div></footer></body></html>
