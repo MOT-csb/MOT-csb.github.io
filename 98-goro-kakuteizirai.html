@@ -30,8 +30,8 @@
 
 <div class="hero-note">
 <p><b>38キャラ分の旧レシピを、検索できる形へ再構成しました。</b></p>
-<p>原整理はづねさん、2015年の再掲と追加整理はMOTです。長年の資料なので、掲載＝現行環境で全件再検証済みではありません。大会投入前は同じキャラ・位置・ゲージ状態で確認してください。</p>
-<span class="status archive">旧資料から復元</span><span class="status add">MOT追記あり</span><span class="status check">全件再検証前</span>
+<p>づねさんが整理した既存レシピを基礎に、MOTが発見した「ダッシュ予備動作3F」を利用する調整・レシピなどを加えた統合版です。長年の資料なので、掲載＝現行環境で全件再検証済みではありません。大会投入前は同じキャラ・位置・ゲージ状態で確認してください。</p>
+<span class="status archive">既存レシピを継承</span><span class="status add">MOT独自追加を統合</span><span class="status check">全件再検証前</span>
 </div>
 
 <h2>レシピ検索</h2>
@@ -66,13 +66,13 @@
 
 <h2>出典・クレジット</h2>
 <ul class="src">
-<li>原整理：<a href="https://k-c-e.jp/kof98/">KOF’98 Crazy Encyclopedia（KCE）</a>のづねさん。MOTの2015年再掲記事から当時のレシピを確認。</li>
-<li><a href="https://kofplayers.hatenablog.jp/entry/2015/03/24/213308">MOT再掲「98：地雷バグレシピ一覧」</a>（2015/3/24、追記を含む）</li>
+<li>基礎資料：<a href="https://k-c-e.jp/kof98/">KOF’98 Crazy Encyclopedia（KCE）</a>のづねさんが整理した既存レシピ。MOTがダッシュ予備動作3Fを使う調整・レシピなどを追加して統合。</li>
+<li><a href="https://kofplayers.hatenablog.jp/entry/2015/03/24/213308">MOT「98：地雷バグレシピ一覧」</a>（2015/3/24、既存レシピにMOT独自の追加・再整理を加えた統合記事）</li>
 <li><a href="https://kofplayers.hatenablog.jp/entry/2021/04/03/183333">MOT「KOF98：大門　確定地雷震レシピ用メモ」</a>（2021/4/3）</li>
 </ul>
 
 <h2>更新履歴</h2>
-<ul class="src"><li>2026/11/18　KCEの現行URLを確認し、原整理者のクレジット表記を修正。</li><li>2026/11/18　旧全キャラ表とMOTの追加メモを統合し、検索ページとして作成。</li></ul>
+<ul class="src"><li>2026/11/18　づねさんの既存レシピと、MOT独自のダッシュ予備動作3Fを使う追加レシピを統合した資料であることを明確化。</li><li>2026/11/18　KCEの現行URLを確認し、原整理者のクレジット表記を修正。</li><li>2026/11/18　旧全キャラ表とMOTの追加メモを統合し、検索ページとして作成。</li></ul>
 <nav class="foot-nav"><a href="/98-frame-data.html">フレーム早見表</a><a href="/kof-kakuteizirai.html">シリーズまとめ</a><a href="/98-taikai-check.html">大会前チェック</a><a href="/kof98-top.html">KOF’98トップ</a></nav>
 </div></main>
 <footer><div class="wrap">Come sono bravo?｜作成：MOT</div></footer>
@@ -120,7 +120,7 @@ const R={
 const sel=document.getElementById('char'),filter=document.getElementById('filter'),result=document.getElementById('result');
 Object.keys(R).forEach((n,i)=>sel.add(new Option(n,n,i===2,i===2)));
 function arrows(s){return s.replaceAll(' → ',' <span class="arrow">→</span> ')}
-function render(){const name=sel.value,key=filter.value.trim().toLowerCase();const all=R[name],list=all.filter(x=>x.toLowerCase().includes(key));result.innerHTML=`<h2>${name}への確定地雷震</h2><p class="meta">${list.length}／${all.length}件を表示</p>${list.length?`<ol class="recipes">${list.map(x=>`<li><span class="route">${arrows(x)}</span></li>`).join('')}</ol>`:`<p class="empty">条件に合うレシピがありません。</p>`}<p class="meta">旧資料を検索用に表記統一しています。地上ふっとばし＝地上CD。</p>`;}
+function render(){const name=sel.value,key=filter.value.trim().toLowerCase();const all=R[name],list=all.filter(x=>x.toLowerCase().includes(key));result.innerHTML=`<h2>${name}への確定地雷震</h2><p class="meta">${list.length}／${all.length}件を表示</p>${list.length?`<ol class="recipes">${list.map(x=>`<li><span class="route">${arrows(x)}</span></li>`).join('')}</ol>`:`<p class="empty">条件に合うレシピがありません。</p>`}<p class="meta">既存レシピとMOTの追加分を統合し、検索用に表記を統一しています。地上ふっとばし＝地上CD。</p>`;}
 sel.addEventListener('change',render);filter.addEventListener('input',render);render();
 </script>
 </body>
