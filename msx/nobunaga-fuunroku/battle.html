@@ -4,7 +4,32 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap">
 <link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">MOT <span>GAME NOTES</span></a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/msx/">MSX</a><a href="/msx/nobunaga-fuunroku/">武将風雲録</a><a href="/arcade/kof2002/">KOF2002</a></nav></div></header>
 <div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>HEX戦の戦術</b></div><p class="kicker">GAMEPLAY / HEX BATTLE</p><h1>HEX戦の戦術・特徴</h1><p>奇襲、突撃、騎馬隊、鉄砲隊、本陣攻略など、MSX2版『武将風雲録』の戦闘で注目したいポイント。</p></div></div><main class="main"><div class="wrap"><section class="section"><h2>夜間・雨天を利用した奇襲</h2><p>夜や雨の場面では敵部隊が見えなくなり、接近時の奇襲が大きな意味を持ちます。距離を取ってから再び接近する戦い方は、移動の速い騎馬隊と相性がよい戦術です。</p><div class="statement"><p><b>ポイント：</b>奇襲で相手の兵数を減らすだけでなく、こちらの損失を抑えながら繰り返し攻められることが重要です。</p></div></section>
-<section class="section"><h2>奇襲の成立条件と効果</h2><p>夜間や雨・雪などで視界が悪いとき、部隊が敵と接触すると奇襲になる場合があります。どちらが奇襲を仕掛けるかには、戦闘力だけでなく武将の別の能力も関係します。</p><p>奇襲時は通常攻撃よりも高い攻撃割合（150％）が使われ、攻撃側が受ける損害も抑えられます。ただし、最低損害の制限があるため、実際の被害人数が常に一定割合になるわけではありません。</p></section>
+<section class="section" id="kishu"><h2>奇襲の成立条件と効果</h2><p>夜間や雨・雪などで視界が悪いとき、部隊が敵と接触すると奇襲になる場合があります。どちらが奇襲を仕掛けるかには、戦闘力だけでなく武将の別の能力も関係します。</p><p>奇襲時は通常攻撃よりも高い攻撃割合（150％）が使われ、攻撃側が受ける損害も抑えられます。ただし、最低損害の制限があるため、実際の被害人数が常に一定割合になるわけではありません。</p></section>
+<section class="section" id="damage"><h2>損害の計算式</h2>
+<p>部隊どうしがぶつかると、攻めた側と攻められた側の両方について、同じ式で「相手に与える損害」を計算します。</p>
+<h3>① 部隊の強さ（基礎戦力）</h3>
+<div class="statement"><p>基礎戦力 ＝ 9 × 戦闘 ＋ 6 × 戦闘² ÷ 100 ＋ 3 × 訓練度 ＋ 2 × 兵忠（100〜2000に収める）</p></div>
+<ul class="contents">
+<li>戦闘50なら600、戦闘80なら1104、戦闘100なら1500（訓練度・兵忠の分を除く）。</li>
+<li>訓練度1は戦闘およそ0.3、兵忠1は戦闘およそ0.2に相当します。訓練度100・兵忠100の部隊は、30・30の部隊より基礎戦力が350高くなります。</li>
+<li>行動した側だけ、基礎戦力に攻撃の割合をかけます。通常の攻撃は110%、<a href="#kishu">奇襲</a>は150%です（ほかの攻撃の割合は未確認）。</li>
+</ul>
+<h3>② 与える損害</h3>
+<div class="statement"><p>損害 ＝ √（100 × 16 × 自分の基礎戦力 ÷ 相手の基礎戦力）× √（自分の兵数）× 戦闘の係数 ÷（10 × 地形の値）<br>（すべて小数点以下切り捨て。最後に50〜10000の範囲に収める）</p></div>
+<div class="table-scroll"><table><thead><tr><th>戦闘</th><th>戦闘の係数</th></tr></thead><tbody>
+<tr><td>80以下</td><td>いつも10</td></tr>
+<tr><td>81〜95</td><td>ふだんは10。「0〜戦闘−1の乱数＋11」が91以上になったとき（確率は（戦闘−80）÷戦闘、戦闘95で約16%）だけ、その値−80（戦闘95で最大20）</td></tr>
+<tr><td>96〜100</td><td>いつも 戦闘−80（16〜20）</td></tr>
+</tbody></table></div>
+<ul class="contents">
+<li><b>戦闘96以上が強い理由</b>はこの係数です。戦闘80と100では基礎戦力の差は1.36倍ですが、係数は10と20で2倍になります。</li>
+<li><b>兵数の効き方は平方根</b>です。兵数を4倍にしても、与える損害は2倍にしかなりません。</li>
+<li><b>基礎戦力の差も平方根</b>で効きます。相手の2倍の基礎戦力で、与える損害はおよそ1.4倍です。</li>
+<li><b>奇襲</b>では、仕掛けた側が受ける損害が10分の1になります（ただし最低50）。</li>
+<li>どんなに差があっても損害は最低50なので、小さな部隊でも少しずつは削れます。</li>
+</ul>
+<p class="small">確かめた範囲：上の式は、部隊がぶつかったときの損害の計算部分です。地形の値の一覧、突撃・鉄砲・大砲それぞれの割合や回数、計算した損害が画面の兵数にどう反映されるか（単位の換算）は未確認です。</p>
+</section>
 <section class="section"><h2>突撃と本陣の鉄砲隊</h2><p>通常の突撃は1ターンに複数回攻撃でき、鉄砲隊への攻撃手段として重要です。しかし、本陣にいる相手へ突撃すると攻撃が1回にとどまります。</p><p>そのため、守備側が本陣に鉄砲隊を置いていると攻略が難しくなります。戦闘力100の上杉謙信でさえ、攻撃側では苦戦しやすい状況です。</p></section>
 <section class="section"><h2>戦闘コマンドの整理</h2><div class="table-scroll"><table><thead><tr><th>主なコマンド</th><th>内容</th></tr></thead><tbody><tr><td>移動</td><td>部隊を移動させる</td></tr><tr><td>攻撃</td><td>通常攻撃・突撃・鉄砲・大砲・門壊など</td></tr><tr><td>待機</td><td>機動力を回復（上限10）</td></tr><tr><td>退却</td><td>退却・城内への移動</td></tr><tr><td>情報</td><td>兵数や部隊情報などの確認</td></tr><tr><td>伝令</td><td>出陣・開門・降伏勧告</td></tr><tr><td>委任</td><td>部隊の行動を任せる</td></tr></tbody></table></div></section>
 <section class="section"><h2>騎馬隊の価値</h2><p>騎馬隊の強みは、単に攻撃の数値だけではありません。戦場を素早く移動し、敵との距離を調整しながら有利な状況を作れることにもあります。</p><p>特に奇襲を狙う場合は、この機動力が戦術の選択肢を増やします。</p></section>
