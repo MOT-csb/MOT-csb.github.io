@@ -21,9 +21,10 @@
 <div><label for="d-min">国の民忠</label><input id="d-min" type="number" min="0" max="100" value="60"></div>
 <div><label for="d-who">実行する勢力</label><select id="d-who"><option value="0">プレイヤー</option><option value="1">CPU（難易度1）</option><option value="2">CPU（難易度2）</option><option value="3">CPU（難易度3）</option><option value="4">CPU（難易度4）</option><option value="5">CPU（難易度5）</option></select></div>
 </div>
-<div class="out stat-board"><div class="stat"><small id="d-res-l">上がる量</small><strong id="d-res">-</strong></div><div class="stat"><small>計算後の値</small><strong id="d-after">-</strong></div><div class="stat"><small>民忠+1の確率</small><strong id="d-min-p">-</strong></div><div class="stat d-chisui-s"><small>開墾後の治水度（今の治水度から）</small><strong id="d-chi2">-</strong></div></div>
+<div class="out stat-board"><div class="stat"><small id="d-res-l">上がる量</small><strong id="d-res">-</strong></div><div class="stat"><small>計算後の値</small><strong id="d-after">-</strong></div><div class="stat"><small>民忠+1の確率</small><strong id="d-min-p">-</strong></div><div class="stat d-th"><small>同じ量になる最小の金</small><strong id="d-min-m">-</strong></div><div class="stat d-th"><small>次に1増える金</small><strong id="d-next">-</strong></div><div class="stat d-chisui-s"><small>開墾後の治水度（今の治水度から）</small><strong id="d-chi2">-</strong></div></div>
 <div class="d-chi-in"><label for="d-chi" class="note">今の治水度（開墾で薄まる量の計算用）</label><input id="d-chi" type="number" min="0" max="100" value="60" style="max-width:170px"></div>
 <p class="note" id="d-note"></p>
+<p class="note">切り捨てがあるので、投資額を少し減らしても上がる量が変わらないことがあります。「同じ量になる最小の金」で入れると、無駄なく同じ成果が得られます。</p>
 </div>
 </section>
 <script>
@@ -35,7 +36,7 @@ function show(cls,on){document.querySelectorAll('.'+cls).forEach(e=>e.classList.
 function calc(){
  const c=+$('d-cmd').value,money=v('d-money'),pol=v('d-pol'),loy=v('d-loy'),tech=v('d-tech'),who=+$('d-who').value,minchu=v('d-min');
  show('d-money',c!==5);show('d-cur',c!==5&&c!==3);show('d-cap',c===0||c===2);show('d-koku',c===1);show('d-pol',c!==5);show('d-loy',c!==5);show('d-tech',c!==1);show('d-mcap',c===2||c===3);show('d-mine',c===5);
- show('d-chisui-s',c===0);show('d-chi-in',c===0);
+ show('d-chisui-s',c===0);show('d-th',c!==5);show('d-chi-in',c===0);
  $('d-cur-l').textContent='今の'+names[c];
  $('d-cap-l').textContent=c===0?'最大石高':'商業価値の上限';
  if(c===2){$('d-cap').closest('.d-cap').classList.add('hide')}
@@ -58,7 +59,13 @@ function calc(){
   $('d-min-p').textContent=Math.max(0,Math.min(100,2*(25-f(minchu/4))))+'%';
   $('d-note').textContent='政治は関係しません。消費行動力100。'+(n<5?'残りが少ないので '+n*20+'% に減ります。':'');return;
  }
- const lim=Math.max(0,cap-cur);if(r>lim){note+='上限で '+r+' → '+lim+' に切り捨て（払った金は全額減ります）。';r=lim}
+ const raw=mm=>{if(c===1){const k=Math.max(1,v('d-koku'));return f(mm*f(pol*loy/3)/(36*k))}const F=12-f(cur/200),P=2*isq(tech)+f(loy/3)+pol;let x=f(f(mm*F/50)*P/100);if(who>0)x=f(x*(100+20*who)/100);if(c===3){x=f(x*(f(v('d-mcap')/10)+50-f(tech/20))/100)}return x};
+ const lim=Math.max(0,cap-cur),eff=mm=>Math.min(raw(mm),lim);
+ const target=eff(money);let lo=0;while(lo<money&&eff(lo)<target)lo++;
+ let nx=money+1;while(nx<=9999&&eff(nx)<=target)nx++;
+ $('d-min-m').textContent=lo+(lo<money?'（'+(money-lo)+'節約）':'');
+ $('d-next').textContent=(target>=lim&&lim>0)||nx>9999?'上限':nx+'（+'+(target+1)+'）';
+ if(r>lim){note+='上限で '+r+' → '+lim+' に切り捨て（払った金は全額減ります）。';r=lim}
  $('d-res-l').textContent='上がる'+names[c];$('d-res').textContent='+'+r;$('d-after').textContent=cur+r;
  $('d-min-p').textContent=Math.max(0,Math.min(100,2*(isq(money)+25-f(minchu/4))))+'%';
  if(c===0){const chi=v('d-chi'),nk=cur+r;$('d-chi2').textContent=nk>0?Math.min(100,f(chi*cur/nk)):chi}
