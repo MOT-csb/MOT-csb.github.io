@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
-<title>月初の来訪イベント・茶器分布・一向一揆・台風｜信長の野望・武将風雲録（MSX2版）｜MOT ゲーム攻略・検証ノート</title><meta name="description" content="MSX2版『武将風雲録』の月初に訪れる14人の来訪者と、隠しメニュー「茶器分布」を開放する条件、本願寺の一向一揆が起きる条件、台風の被害。">
+<title>月初の来訪イベント・茶器分布・一向一揆・天災（台風・大雪・疫病）｜信長の野望・武将風雲録（MSX2版）｜MOT ゲーム攻略・検証ノート</title><meta name="description" content="MSX2版『武将風雲録』の月初に訪れる14人の来訪者と、隠しメニュー「茶器分布」を開放する条件、本願寺の一向一揆が起きる条件、台風の被害。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap">
 <link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">MOT <span>GAME NOTES</span></a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/msx/">MSX</a><a href="/msx/nobunaga-fuunroku/">武将風雲録</a><a href="/arcade/kof2002/">KOF2002</a></nav></div></header>
 <div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>月初の来訪イベント・茶器分布・一向一揆・台風</b></div><p class="kicker">GAMEPLAY / MONTHLY EVENTS</p><h1>月初の来訪イベント・茶器分布・一向一揆・台風</h1><p>月初に訪れる14人の来訪者と、情報メニューに隠れている「茶器分布」を開放する条件、本願寺による一向一揆が起きる条件をまとめました。</p></div></div><main class="main"><div class="wrap">
@@ -68,6 +68,34 @@
 <p class="small">本願寺家が滅びると一向一揆は起きなくなります。友好度については<a href="diplomacy.html">外交の成功条件</a>の対応表を参照してください。</p>
 </section>
 
+<section class="section" id="disaster"><h2>毎月の天災・豊作凶作の決まり方</h2>
+<p>毎月1回、次の順に判定し、起きるのは多くても1つです。</p>
+<div class="table-scroll"><table><thead><tr><th>時期</th><th>できごと</th><th>確率</th></tr></thead><tbody>
+<tr><td>7月</td><td>豊作</td><td>75% ×（45 − 5×難易度）%。難易度3なら約23%</td></tr>
+<tr><td>7月</td><td>凶作</td><td>25% ×（30 ＋ 5×難易度）%。難易度3なら約11%</td></tr>
+<tr><td>4〜6月</td><td><a href="#typhoon">台風</a></td><td>15%</td></tr>
+<tr><td>10〜12月</td><td>大雪</td><td>10%（どこにも雪が残っていないとき）</td></tr>
+<tr><td>上で何も起きなかった月</td><td>疫病</td><td>約6%（8%のうち4分の3）</td></tr>
+<tr><td>上で何も起きなかった月</td><td>地震</td><td>約2%（8%のうち4分の1）</td></tr>
+</tbody></table></div>
+<p>難易度が高いほど、豊作が減って凶作が増えます。豊作は10〜20か国、凶作は8〜15か国が選ばれて、それぞれ強さ（3段階）がつきます。豊作・凶作が収穫にどれだけ効くかは未確認です。</p>
+<h3>大雪</h3>
+<ul class="contents">
+<li>北陸地方か奥州のどちらかに降ります。</li>
+<li>北陸なら越後・能登・越中・加賀・越前・上野・信濃・飛騨、奥州なら陸奥・陸前・出羽・越後・下野から、何か国かに雪の深さ（3段階）がつきます。北陸は越後〜越前、奥州は陸奥〜越後が選ばれやすくなっています。</li>
+<li>雪の国では「雪深く、馬も鉄砲も役に立ちません」となります。</li>
+<li>雪は毎月80%の確率で1段階ずつ浅くなり、2月になると必ず消えます。</li>
+<li>雪の残る国には、CPUは空き国を取りに兵を移しません（<a href="cpu-ai.html#shinko">CPUの行動傾向</a>）。</li>
+</ul>
+<h3>疫病</h3>
+<ul class="contents">
+<li>発生した国と、そのまわりの国に被害が出ます。国ごとに被害の強さ（3段階）が決まります。</li>
+<li>被害の割合 L ＝ 2 ＋（強さ）²（強さ1〜3で 3・6・11）。プレイヤーの国はさらに＋難易度。</li>
+<li>兵士が L%、商業価値・石高・民忠が L÷2 % 減ります。</li>
+<li>来訪者の薬売りから薬を買ってあった国は、「富山の薬のおかげで1人の犠牲者も出ていません」となり被害がありません。薬はそこで使い切ります。</li>
+</ul>
+<p class="small">確かめた範囲：判定の順番と確率、大雪の国と雪の消え方、疫病の被害の式までです。地震の被害、豊作・凶作の収穫への効き方、疫病がまわりの国にどこまで広がるかは未確認です。</p>
+</section>
 <section class="section" id="typhoon"><h2>台風</h2>
 <div class="statement"><p><b>ポイント：</b>台風の被害は<b>治水度が下がる</b>ことと<b>その年の兵糧の収穫が70%になる</b>ことの2つです。治水度が高くても被害は減りません。</p></div>
 <ul class="contents">
