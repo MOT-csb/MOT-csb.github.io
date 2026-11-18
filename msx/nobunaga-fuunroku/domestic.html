@@ -2,11 +2,76 @@
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
 <title>内政コマンドの計算式｜信長の野望・武将風雲録（MSX2版）｜MOT ゲーム攻略・検証ノート</title><meta name="description" content="MSX2版『武将風雲録』の内政コマンドで、投資額・政治力・技術などから成果がどう決まるか。開墾・治水・町投資・技術革新・築城・金山。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap">
-<link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">MOT <span>GAME NOTES</span></a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/msx/">MSX</a><a href="/msx/nobunaga-fuunroku/">武将風雲録</a><a href="/arcade/kof2002/">KOF2002</a></nav></div></header>
+<link rel="stylesheet" href="/assets/research.css"><style>.calc{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px}.calc .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}.calc label{display:block;font-size:13px;color:var(--muted)}.calc input,.calc select{width:100%;font:inherit;padding:7px 9px;border:1px solid var(--line);border-radius:7px;background:var(--bg);color:var(--ink)}.calc .out{margin-top:16px}.calc .out .stat strong{font-size:24px}.calc .note{font-size:13px;color:var(--muted);margin-top:10px}.calc .hide{display:none}</style></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">MOT <span>GAME NOTES</span></a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/msx/">MSX</a><a href="/msx/nobunaga-fuunroku/">武将風雲録</a><a href="/arcade/kof2002/">KOF2002</a></nav></div></header>
 <div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>内政コマンドの計算式</b></div><p class="kicker">GAMEPLAY / DOMESTIC AFFAIRS</p><h1>内政コマンドの計算式</h1><p>内政の成果が、投資した金・担当武将の能力・国の状態からどう決まるかをまとめています。政治力には、戦闘力の96以上のような段差はなく、成果は政治力にまっすぐ比例します。</p></div></div><main class="main"><div class="wrap">
 
+<section class="section" id="calc"><h2>計算機</h2>
+<div class="calc">
+<div class="grid">
+<div><label for="d-cmd">コマンド</label><select id="d-cmd"><option value="0">開墾</option><option value="1">治水</option><option value="2">町投資</option><option value="3">技術革新</option><option value="4">築城</option><option value="5">金山</option></select></div>
+<div class="d-money"><label for="d-money">投資する金</label><input id="d-money" type="number" min="0" value="100"></div>
+<div class="d-cur"><label for="d-cur" id="d-cur-l">今の石高</label><input id="d-cur" type="number" min="0" value="300"></div>
+<div class="d-cap"><label for="d-cap" id="d-cap-l">最大石高</label><input id="d-cap" type="number" min="0" value="760"></div>
+<div class="d-koku hide"><label for="d-koku">今の石高</label><input id="d-koku" type="number" min="1" value="300"></div>
+<div class="d-pol"><label for="d-pol">担当武将の政治</label><input id="d-pol" type="number" min="0" max="100" value="80"></div>
+<div class="d-loy"><label for="d-loy">担当武将の忠誠</label><input id="d-loy" type="number" min="0" max="100" value="100"></div>
+<div class="d-tech"><label for="d-tech">国の技術</label><input id="d-tech" type="number" min="0" max="999" value="0"></div>
+<div class="d-mcap hide"><label for="d-mcap">商業価値の上限</label><input id="d-mcap" type="number" min="0" max="990" step="10" value="600"></div>
+<div class="d-mine hide"><label for="d-mine">金山の残り</label><input id="d-mine" type="number" min="1" max="62" value="5"></div>
+<div><label for="d-min">国の民忠</label><input id="d-min" type="number" min="0" max="100" value="60"></div>
+<div><label for="d-who">実行する勢力</label><select id="d-who"><option value="0">プレイヤー</option><option value="1">CPU（難易度1）</option><option value="2">CPU（難易度2）</option><option value="3">CPU（難易度3）</option><option value="4">CPU（難易度4）</option><option value="5">CPU（難易度5）</option></select></div>
+</div>
+<div class="out stat-board"><div class="stat"><small id="d-res-l">上がる量</small><strong id="d-res">-</strong></div><div class="stat"><small>計算後の値</small><strong id="d-after">-</strong></div><div class="stat"><small>民忠+1の確率</small><strong id="d-min-p">-</strong></div><div class="stat d-chisui-s"><small>開墾後の治水度（今の治水度から）</small><strong id="d-chi2">-</strong></div></div>
+<div class="d-chi-in"><label for="d-chi" class="note">今の治水度（開墾で薄まる量の計算用）</label><input id="d-chi" type="number" min="0" max="100" value="60" style="max-width:170px"></div>
+<p class="note" id="d-note"></p>
+</div>
+</section>
+<script>
+(function(){
+const $=id=>document.getElementById(id),f=Math.floor,isq=n=>f(Math.sqrt(Math.max(0,n)));
+const names=['石高','治水度','商業価値','技術力','城防御度','金'];
+function v(id){const x=parseInt($(id).value,10);return isNaN(x)?0:x}
+function show(cls,on){document.querySelectorAll('.'+cls).forEach(e=>e.classList.toggle('hide',!on))}
+function calc(){
+ const c=+$('d-cmd').value,money=v('d-money'),pol=v('d-pol'),loy=v('d-loy'),tech=v('d-tech'),who=+$('d-who').value,minchu=v('d-min');
+ show('d-money',c!==5);show('d-cur',c!==5&&c!==3);show('d-cap',c===0||c===2);show('d-koku',c===1);show('d-pol',c!==5);show('d-loy',c!==5);show('d-tech',c!==1);show('d-mcap',c===2||c===3);show('d-mine',c===5);
+ show('d-chisui-s',c===0);show('d-chi-in',c===0);
+ $('d-cur-l').textContent='今の'+names[c];
+ $('d-cap-l').textContent=c===0?'最大石高':'商業価値の上限';
+ if(c===2){$('d-cap').closest('.d-cap').classList.add('hide')}
+ let cur=c===3?tech:v('d-cur'),cap=999,r=0,note='';
+ if(c===0){cap=v('d-cap')}
+ if(c===1){cap=100}
+ if(c===2){cap=Math.min(999,f(v('d-mcap')/10)*10)}
+ if(c<=4&&c!==1){
+  const F=12-f(cur/200),P=2*isq(tech)+f(loy/3)+pol;
+  r=f(f(money*F/50)*P/100);
+  if(who>0)r=f(r*(100+20*who)/100);
+  if(c===3){const m=f(v('d-mcap')/10)+50-f(tech/20);r=f(r*m/100);note='技術革新の追加補正：'+m+'%。'}
+  note+='係数 '+F+'、能力 '+P+'（政治'+pol+'＋忠誠÷3='+f(loy/3)+'＋2√技術='+2*isq(tech)+'）。';
+  if(who>0)note+='CPU補正 '+(100+20*who)+'%。';
+ }else if(c===1){
+  const k=Math.max(1,v('d-koku'));r=f(money*f(pol*loy/3)/(36*k));note='政治×忠誠÷3 = '+f(pol*loy/3)+'。技術とCPU補正は関係しません。';
+ }else{
+  const n=v('d-mine');let lo=3*isq(tech)+5,hi=lo+19;if(n<5){lo=f(lo*n*20/100);hi=f(hi*n*20/100)}
+  $('d-res').textContent=lo+'〜'+hi;$('d-after').textContent='-';$('d-res-l').textContent='掘れる金';
+  $('d-min-p').textContent=Math.max(0,Math.min(100,2*(25-f(minchu/4))))+'%';
+  $('d-note').textContent='政治は関係しません。消費行動力100。'+(n<5?'残りが少ないので '+n*20+'% に減ります。':'');return;
+ }
+ const lim=Math.max(0,cap-cur);if(r>lim){note+='上限で '+r+' → '+lim+' に切り捨て（払った金は全額減ります）。';r=lim}
+ $('d-res-l').textContent='上がる'+names[c];$('d-res').textContent='+'+r;$('d-after').textContent=cur+r;
+ $('d-min-p').textContent=Math.max(0,Math.min(100,2*(isq(money)+25-f(minchu/4))))+'%';
+ if(c===0){const chi=v('d-chi'),nk=cur+r;$('d-chi2').textContent=nk>0?Math.min(100,f(chi*cur/nk)):chi}
+ $('d-note').textContent=note+' 割り算と√は整数に切り捨てて計算しています。';
+}
+const def={0:300,1:60,2:300,4:300};$('d-cmd').addEventListener('change',()=>{const c=+$('d-cmd').value;if(c in def)$('d-cur').value=def[c];calc()});
+document.querySelectorAll('#calc input,#calc select').forEach(e=>e.addEventListener('input',calc));calc();
+})();
+</script>
+
+
 <section class="section"><h2>開墾</h2>
-<div class="statement"><p>増える石高 ＝ 投資した金 ×（12 − 今の石高÷200）÷ 50 ×（担当武将の政治 ＋ 担当武将の忠誠÷8 ＋ 2×√国の技術）÷ 100</p></div>
+<div class="statement"><p>増える石高 ＝ 投資した金 ×（12 − 今の石高÷200）÷ 50 ×（担当武将の政治 ＋ 担当武将の忠誠÷3 ＋ 2×√国の技術）÷ 100</p></div>
 <p class="small">割り算の小数点以下はその都度切り捨てです。√も整数に切り捨てます。開墾の消費行動力は50です。</p>
 
 <h3>① 投資額：金に正比例</h3>
@@ -18,18 +83,18 @@
 </tbody></table></div>
 <p>石高が低い国ほど伸びやすく、800を超えると最初の2/3の効率になります。</p>
 
-<h3>③ 能力：政治 ＋ 忠誠÷8 ＋ 2×√技術</h3>
+<h3>③ 能力：政治 ＋ 忠誠÷3 ＋ 2×√技術</h3>
 <ul class="contents">
 <li><b>政治</b>：1上がるごとにまっすぐ効きます。どこかで急に伸びる境目はありません。</li>
-<li><b>忠誠</b>：担当武将の忠誠÷8。最大でも+12です。</li>
+<li><b>忠誠</b>：担当武将の忠誠÷3。忠誠100なら+33です。</li>
 <li><b>技術</b>：国の技術が意外と大きく効きます。技術100で+20、400で+40、999で+62。技術を最大まで上げると、政治62点分に相当します。</li>
 </ul>
 
 <h3>計算例</h3>
 <p>投資額100、今の石高300（係数11）の場合。</p>
 <div class="table-scroll"><table><thead><tr><th>担当武将</th><th>技術100</th><th>技術999</th></tr></thead><tbody>
-<tr><td>政治50・忠誠80</td><td>石高 +17</td><td>石高 +26</td></tr>
-<tr><td>政治100・忠誠100</td><td>石高 +29</td><td>石高 +38</td></tr>
+<tr><td>政治50・忠誠80</td><td>石高 +21</td><td>石高 +30</td></tr>
+<tr><td>政治100・忠誠100</td><td>石高 +33</td><td>石高 +42</td></tr>
 </tbody></table></div>
 
 <h3>そのほかの仕様</h3>
@@ -46,7 +111,7 @@
 <p class="small">割り算の小数点以下は切り捨てです。治水度は100が上限です。消費行動力は50です。</p>
 <h3>開墾との違い</h3>
 <ul class="contents">
-<li><b>政治と忠誠の掛け算</b>：開墾では忠誠は「÷8」のおまけでしたが、治水では政治と<b>同じ重さ</b>で効きます。忠誠50の武将は、忠誠100の武将の半分しか上げられません。</li>
+<li><b>政治と忠誠の掛け算</b>：開墾では忠誠は「÷3」の足し算でしたが、治水では政治と<b>同じ重さ</b>の掛け算で効きます。忠誠50の武将は、忠誠100の武将の半分しか上げられません。</li>
 <li><b>石高が大きいほど上がりにくい</b>：今の石高に反比例します。石高が2倍の国では、同じ投資でも上がる量は半分です。</li>
 <li><b>技術は関係しない</b>。CPUの補正もありません。</li>
 </ul>
@@ -66,7 +131,7 @@
 
 <section class="section"><h2>町投資・技術革新・築城</h2>
 <p>この3つは<b>開墾と同じ式</b>です。「今の石高」の部分が、それぞれのコマンドで上げる値に置き換わります。</p>
-<div class="statement"><p>上がる量 ＝ 投資した金 ×（12 − 今の値÷200）÷ 50 ×（担当武将の政治 ＋ 担当武将の忠誠÷8 ＋ 2×√国の技術）÷ 100</p></div>
+<div class="statement"><p>上がる量 ＝ 投資した金 ×（12 − 今の値÷200）÷ 50 ×（担当武将の政治 ＋ 担当武将の忠誠÷3 ＋ 2×√国の技術）÷ 100</p></div>
 <div class="table-scroll"><table><thead><tr><th>コマンド</th><th>上がる値</th><th>「今の値」に入るもの</th><th>上限</th></tr></thead><tbody>
 <tr><td>町投資</td><td>商業価値</td><td>今の商業価値</td><td>国ごとに決まる上限（最大999）</td></tr>
 <tr><td>技術革新</td><td>技術力</td><td>今の技術力</td><td>999</td></tr>
@@ -83,9 +148,9 @@
 <h3>計算例</h3>
 <p>投資額100、担当武将は政治80・忠誠100、国の技術0、商業価値の上限600の場合。</p>
 <div class="table-scroll"><table><thead><tr><th>コマンド</th><th>今の値</th><th>上がる量</th></tr></thead><tbody>
-<tr><td>町投資</td><td>商業価値300</td><td>+20</td></tr>
-<tr><td>技術革新</td><td>技術力0</td><td>+24</td></tr>
-<tr><td>築城</td><td>城防御度300</td><td>+20</td></tr>
+<tr><td>町投資</td><td>商業価値300</td><td>+24</td></tr>
+<tr><td>技術革新</td><td>技術力0</td><td>+29</td></tr>
+<tr><td>築城</td><td>城防御度300</td><td>+24</td></tr>
 </tbody></table></div>
 <p>技術はすべての内政（治水以外）の効率を上げるので、早めに上げておくほど後の内政が楽になります。</p>
 </section>

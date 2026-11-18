@@ -2,8 +2,59 @@
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
 <title>税収・年貢・維持費の計算式｜信長の野望・武将風雲録（MSX2版）｜MOT ゲーム攻略・検証ノート</title><meta name="description" content="MSX2版『武将風雲録』の金と兵糧の収入、適正な税率、民忠の増減、兵士と武将の維持費の計算式。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap">
-<link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">MOT <span>GAME NOTES</span></a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/msx/">MSX</a><a href="/msx/nobunaga-fuunroku/">武将風雲録</a><a href="/arcade/kof2002/">KOF2002</a></nav></div></header>
+<link rel="stylesheet" href="/assets/research.css"><style>.calc{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px}.calc .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}.calc label{display:block;font-size:13px;color:var(--muted)}.calc input,.calc select{width:100%;font:inherit;padding:7px 9px;border:1px solid var(--line);border-radius:7px;background:var(--bg);color:var(--ink)}.calc .out{margin-top:16px}.calc .out .stat strong{font-size:24px}.calc .note{font-size:13px;color:var(--muted);margin-top:10px}.calc .hide{display:none}</style></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">MOT <span>GAME NOTES</span></a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/msx/">MSX</a><a href="/msx/nobunaga-fuunroku/">武将風雲録</a><a href="/arcade/kof2002/">KOF2002</a></nav></div></header>
 <div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>税収・年貢・維持費の計算式</b></div><p class="kicker">GAMEPLAY / INCOME</p><h1>税収・年貢・維持費の計算式</h1><p>金と兵糧は年に1回ずつ入り、同じタイミングで兵士と武将の維持費が引かれます。収入の式に政治力は出てきません。収入を決めるのは商業価値・石高・治水度と、税率と民忠のバランスです。</p></div></div><main class="main"><div class="wrap">
+
+<section class="section" id="calc"><h2>計算機</h2>
+<div class="calc">
+<div class="grid">
+<div><label for="i-min">国の民忠</label><input id="i-min" type="number" min="0" max="100" value="60"></div>
+<div><label for="i-mcap">商業価値の上限</label><input id="i-mcap" type="number" min="0" max="990" step="10" value="600"></div>
+<div><label for="i-rate">税率・年貢率（%）</label><input id="i-rate" type="number" min="0" max="100" value="50"></div>
+<div><label for="i-com">商業価値</label><input id="i-com" type="number" min="0" max="999" value="300"></div>
+<div><label for="i-koku">石高</label><input id="i-koku" type="number" min="0" max="999" value="300"></div>
+<div><label for="i-chi">治水度</label><input id="i-chi" type="number" min="0" max="100" value="60"></div>
+<div><label for="i-crop">作柄</label><select id="i-crop"><option value="n">ふつう</option><option value="g0">豊作（補正なしの国）</option><option value="g10">豊作（小）</option><option value="g30">豊作（中）</option><option value="g70">豊作（大）</option><option value="b10">凶作（小）</option><option value="b30">凶作（中）</option><option value="b70">凶作（大）</option></select></div>
+<div><label for="i-sol">兵士</label><input id="i-sol" type="number" min="0" max="999" value="100"></div>
+<div><label for="i-hc">兵忠</label><input id="i-hc" type="number" min="0" max="100" value="70"></div>
+<div style="grid-column:1/-1"><label for="i-gen">城にいる武将の「政治＋戦闘」（カンマ区切り）</label><input id="i-gen" type="text" value="150,120,100"></div>
+</div>
+<div class="out stat-board">
+<div class="stat"><small>適正率</small><strong id="i-t">-</strong></div>
+<div class="stat"><small>民忠の変化</small><strong id="i-dm">-</strong></div>
+<div class="stat"><small>金の収入</small><strong id="i-gold">-</strong></div>
+<div class="stat"><small>兵糧の収入</small><strong id="i-rice">-</strong></div>
+<div class="stat"><small>維持費（金・兵糧それぞれ）</small><strong id="i-up">-</strong></div>
+<div class="stat"><small>民が不穏になる確率</small><strong id="i-risk">-</strong></div>
+</div>
+<p class="note" id="i-note"></p>
+</div>
+</section>
+<script>
+(function(){
+const $=id=>document.getElementById(id),f=Math.floor;
+function v(id){const x=parseInt($(id).value,10);return isNaN(x)?0:x}
+function calc(){
+ const m=v('i-min'),X=f(v('i-mcap')/10),C=v('i-rate'),S=v('i-com'),K=v('i-koku'),chi=v('i-chi'),sol=v('i-sol'),hc=v('i-hc');
+ const T=55+f(m/10)-f(X/5);
+ $('i-t').textContent=T+'%';
+ {const d=C<=T?f((T-C)/5):-f((C-T)/2);$('i-dm').textContent=d>0?'+'+d:d<0?'−'+(-d):'±0';}
+ const gold=f((S+f(S*(X+10)/100))*C/100);
+ $('i-gold').textContent=Math.min(9999,gold);
+ const B=K+f(K*(chi+30)/100);let k=100;const cr=$('i-crop').value;
+ if(cr!=='n'){const L=parseInt(cr.slice(1),10);k=cr[0]==='g'?f(k*(100+2*L)/100):f(k*(100-L)/100)}
+ const rice=f(f(B*k/100)*C/100);
+ $('i-rice').textContent=rice+'〜'+(rice+49);
+ let up=f((sol+f(sol*(150-hc)/100))/2);
+ $('i-gen').value.split(/[,、\s]+/).filter(x=>x).forEach(x=>{const n=parseInt(x,10);if(!isNaN(n))up+=f(n/10)});
+ $('i-up').textContent=up;
+ if(C>=T+2){const p=Math.max(0,Math.min(100,f(C*C/50)+100-T-m));$('i-risk').textContent=p+'%'}else{$('i-risk').textContent='0%'}
+ $('i-note').textContent='兵糧の作柄補正 '+k+'%。割り算はすべて整数に切り捨てて計算しています。収入の上限は9999です。プレイヤーの国として計算しています（CPUは税率に3×難易度が足されます）。';
+}
+document.querySelectorAll('#calc input,#calc select').forEach(e=>e.addEventListener('input',calc));calc();
+})();
+</script>
+
 
 <section class="section"><h2>適正な率</h2>
 <div class="statement"><p>適正率（%）＝ 55 ＋ 民忠÷10 − 商業価値の上限÷50</p></div>
