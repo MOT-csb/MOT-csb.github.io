@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>内政コマンドの計算式｜信長の野望・武将風雲録（MSX2版）｜MOT ゲーム攻略・検証ノート</title><meta name="description" content="MSX2版『武将風雲録』の内政コマンドで、投資額・政治力・技術などから成果がどう決まるか。まずは開墾。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap">
+<link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">MOT <span>GAME NOTES</span></a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/msx/">MSX</a><a href="/msx/nobunaga-fuunroku/">武将風雲録</a><a href="/arcade/kof2002/">KOF2002</a></nav></div></header>
+<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>内政コマンドの計算式</b></div><p class="kicker">GAMEPLAY / DOMESTIC AFFAIRS</p><h1>内政コマンドの計算式</h1><p>内政の成果が、投資した金・担当武将の能力・国の状態からどう決まるかをまとめています。政治力には、戦闘力の96以上のような段差はなく、成果は政治力にまっすぐ比例します。</p></div></div><main class="main"><div class="wrap">
+
+<section class="section"><h2>開墾</h2>
+<div class="statement"><p>増える石高 ＝ 投資した金 ×（12 − 今の石高÷200）÷ 50 ×（担当武将の政治 ＋ 担当武将の忠誠÷8 ＋ 2×√国の技術）÷ 100</p></div>
+<p class="small">割り算の小数点以下はその都度切り捨てです。√も整数に切り捨てます。開墾の消費行動力は50です。</p>
+
+<h3>① 投資額：金に正比例</h3>
+<p>投資額を2倍にすれば、増える石高もほぼ2倍になります。大金を入れても効率は落ちません。</p>
+
+<h3>② 今の石高：高いほど効率が落ちる</h3>
+<div class="table-scroll"><table><thead><tr><th>今の石高</th><th>0〜199</th><th>200〜399</th><th>400〜599</th><th>600〜799</th><th>800〜999</th></tr></thead><tbody>
+<tr><td>係数</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td></tr>
+</tbody></table></div>
+<p>石高が低い国ほど伸びやすく、800を超えると最初の2/3の効率になります。</p>
+
+<h3>③ 能力：政治 ＋ 忠誠÷8 ＋ 2×√技術</h3>
+<ul class="contents">
+<li><b>政治</b>：1上がるごとにまっすぐ効きます。どこかで急に伸びる境目はありません。</li>
+<li><b>忠誠</b>：担当武将の忠誠÷8。最大でも+12です。</li>
+<li><b>技術</b>：国の技術が意外と大きく効きます。技術100で+20、400で+40、999で+62。技術を最大まで上げると、政治62点分に相当します。</li>
+</ul>
+
+<h3>計算例</h3>
+<p>投資額100、今の石高300（係数11）の場合。</p>
+<div class="table-scroll"><table><thead><tr><th>担当武将</th><th>技術100</th><th>技術999</th></tr></thead><tbody>
+<tr><td>政治50・忠誠80</td><td>石高 +17</td><td>石高 +26</td></tr>
+<tr><td>政治100・忠誠100</td><td>石高 +29</td><td>石高 +38</td></tr>
+</tbody></table></div>
+
+<h3>そのほかの仕様</h3>
+<ul class="contents">
+<li><b>上限</b>：石高はその国の最大石高までしか増えません。上限を超える分は切り捨てられますが、払った金は全額減ります。</li>
+<li><b>CPUの補正</b>：CPUが開墾すると、増える量が難易度に応じて1.2倍（難易度1）〜2倍（難易度5）になります。</li>
+<li><b>民忠</b>：開墾のたびに、2×（√投資額 ＋ 25 − 民忠÷4）%の確率で民忠が+1されます。民忠が低い国、投資額が大きいときほど上がりやすくなります。</li>
+<li><b>治水度が下がる</b>：開墾すると治水度が「開墾前の石高 ÷ 開墾後の石高」の割合で下がります。例：石高300→330なら、治水度は約91%に。田畑が広がっても堤防はそのまま、という作りです。</li>
+</ul>
+</section>
+
+<section class="section"><h2>ほかの内政コマンド</h2>
+<p>治水・町投資・技術革新・築城・金山は、順次追加します。</p>
+<div class="table-scroll"><table><thead><tr><th>コマンド</th><th>消費行動力</th><th>上限</th></tr></thead><tbody>
+<tr><td>開墾</td><td>50</td><td>その国の最大石高</td></tr>
+<tr><td>治水</td><td>50</td><td>100</td></tr>
+<tr><td>町投資</td><td>50</td><td>国ごとに決まる値（最大999）</td></tr>
+<tr><td>技術革新</td><td>50</td><td>999</td></tr>
+<tr><td>築城</td><td>50</td><td>999</td></tr>
+<tr><td>金山</td><td>100</td><td>―</td></tr>
+</tbody></table></div>
+</section>
+
+<section class="section"><p><a href="friendship.html">友好度と相性のしくみへ →</a></p></section></div></main>
+<footer class="footer"><div class="wrap">MOT ゲーム攻略・検証ノート　｜　攻略・観戦・研究メモ<br>ゲームの権利は各権利者に帰属します。</div></footer></body></html>
