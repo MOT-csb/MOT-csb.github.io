@@ -13,7 +13,7 @@
 </div>
 <div class="picks" id="a-picks"></div>
 <div class="apt-wrap"><table class="apt"><thead><tr><th>武将</th><th>政治</th><th>戦闘</th><th>教養</th><th>魅力</th><th>野望</th><th>忠誠</th><th>相性差</th><th class="gp">内政</th><th>治水</th><th>製造</th><th>訓練・合戦</th><th>施し</th><th>同盟・婚姻・貢物</th><th>誘降</th><th>戦争工作・流言</th><th>脅迫</th><th>褒美の効き</th></tr></thead><tbody id="a-body"></tbody></table></div><datalist id="a-all"></datalist>
-<p class="note">武将名は書き換えられます。シナリオに登場する武将の名前を入れる（候補から選ぶ）と、その武将の能力が入ります。途中から登場する武将（シナリオ1は羽柴秀吉など118人、シナリオ2は38人）も候補に入っています。途中登場の武将の忠誠は仮に80としているので、登用したあとはゲーム画面の値に直してください。色は表の中での順位（1位・2位・3位）。相性差は大名との差（0〜15）。数値はゲーム開始時のもので、書き換えると表とおすすめがすぐ変わります。</p>
+<p class="note">武将名は書き換えられます。シナリオに登場する武将の名前を入れる（候補から選ぶ）と、その武将の能力が入ります。途中から登場する武将（シナリオ1は羽柴秀吉など118人、シナリオ2は38人）も候補に入っています。途中登場の武将の忠誠は仮に80としているので、登用したあとはゲーム画面の値に直してください。同じ武将でもシナリオによって能力が違い（例：羽柴秀吉はシナリオ1の登場時が政治98、シナリオ2の開始時が政治99）、表にはそのシナリオの値が入ります。追加した武将は、シナリオや大名家を切り替えても残り、そのシナリオの値に入れ替わります。色は表の中での順位（1位・2位・3位）。相性差は大名との差（0〜15）。数値はゲーム開始時のもので、書き換えると表とおすすめがすぐ変わります。</p>
 </div>
 </section>
 <section class="section"><h2>表の数値の意味</h2>
@@ -38,13 +38,17 @@ const D={"1":[{"d":"伊達晴宗","g":[["伊達晴宗",69,60,69,79,68,100,7,10,"
 const cols=[['内政',r=>r[1]+f(r[6]/3)],['治水',r=>f(r[1]*r[6]/100)],['製造',r=>r[1]+r[3]],['訓練・合戦',r=>r[2]],['施し',r=>r[4]],['同盟・婚姻・貢物',r=>r[4]+2*r[3]],['誘降',r=>f(r[3]/2)],['戦争工作・流言',r=>r[1]+r[2]+r[5]],['脅迫',r=>r[5]],['褒美の効き',r=>146-6*r[7]]];
 function fillAll(){const s=$('a-sc').value;$('a-all').innerHTML=Object.keys(ALL[s]).sort().map(n=>'<option value="'+n+'"'+(/途中登場/.test(ALL[s][n][9])?' label="途中登場"':'')+'>').join('')}
 function fillDm(){const s=$('a-sc').value;fillAll();$('a-dm').innerHTML=D[s].map((x,i)=>'<option value="'+i+'">'+x.d+'</option>').join('');const k=D[s].findIndex(x=>x.d==='織田信長');$('a-dm').value=k<0?0:k;load()}
-function load(){const fc=D[$('a-sc').value][+$('a-dm').value];const dm=fc.g.find(g=>g[0]===fc.d)||fc.g[0];rows=fc.g.map(g=>[g[0],g[1],g[2],g[3],g[4],g[5],g[6],Math.min(15,Math.abs(g[8]-dm[8])),g[0]===fc.d,g[9]]);render()}
+let EX=[];
+function load(){const sc=$('a-sc').value,fc=D[sc][+$('a-dm').value];const dm=fc.g.find(g=>g[0]===fc.d)||fc.g[0];
+rows=fc.g.map(g=>[g[0],g[1],g[2],g[3],g[4],g[5],g[6],Math.min(15,Math.abs(g[8]-dm[8])),g[0]===fc.d,g[9]+'（シナリオ'+sc+'の開始時）']);
+EX.forEach((x,k)=>{if(rows.some(r=>r[0]===x[0]))return;const g=ALL[sc][x[0]];if(g)rows.push([g[0],g[1],g[2],g[3],g[4],g[5],g[6],Math.min(15,Math.abs(g[8]-dm[8])),false,lab(g,sc),k]);else{const r=x.slice();r[10]=k;rows.push(r)}});render()}
+function lab(g,sc){return /途中登場/.test(g[9])?g[9]:g[9]+'（シナリオ'+sc+'の開始時）'}
 function render(){const body=$('a-body');body.innerHTML='';const sc=cols.map(c=>rows.map(c[1]));
 rows.forEach((r,i)=>{const tr=document.createElement('tr');let h='<td class="nm"><input class="nmi" type="text" list="a-all" data-i="'+i+'" value="'+r[0].replace(/"/g,'&quot;')+'">'+(r[8]?' <span class="dm">大名</span>':'')+(r[9]?'<br><span class="dm">'+r[9]+'</span>':'')+'</td>';
 for(let k=1;k<=7;k++)h+='<td><input type="number" min="0" max="'+(k===7?15:100)+'" data-i="'+i+'" data-k="'+k+'" value="'+r[k]+'"></td>';
 cols.forEach((c,j)=>{const v=sc[j][i];const rank=1+sc[j].filter(x=>x>v).length;h+='<td class="'+(j===0?'gp ':'')+(rank<=3&&rows.length>1?'r'+rank:'')+'">'+v+(j===9?'%':'')+'</td>'});tr.innerHTML=h;body.appendChild(tr)});
-body.querySelectorAll('input.nmi').forEach(el=>el.addEventListener('change',e=>{const t=e.target,i=+t.dataset.i,v=t.value.trim();rows[i][0]=v;const g=ALL[$('a-sc').value][v];if(g){const r=rows[i];[r[1],r[2],r[3],r[4],r[5],r[6]]=[g[1],g[2],g[3],g[4],g[5],g[6]];const fc=D[$('a-sc').value][+$('a-dm').value];const dm=fc.g.find(x=>x[0]===fc.d)||fc.g[0];r[7]=Math.min(15,Math.abs(g[8]-dm[8]));r[9]=g[9];render()}else update()}));
-body.querySelectorAll('input[type=number]').forEach(el=>el.addEventListener('input',e=>{const t=e.target;rows[+t.dataset.i][+t.dataset.k]=Math.max(0,Math.min(+t.max,parseInt(t.value,10)||0));update()}));update()}
+body.querySelectorAll('input.nmi').forEach(el=>el.addEventListener('change',e=>{const t=e.target,i=+t.dataset.i,v=t.value.trim(),r=rows[i];r[0]=v;const g=ALL[$('a-sc').value][v];if(g){[r[1],r[2],r[3],r[4],r[5],r[6]]=[g[1],g[2],g[3],g[4],g[5],g[6]];const sc=$('a-sc').value,fc=D[sc][+$('a-dm').value];const dm=fc.g.find(x=>x[0]===fc.d)||fc.g[0];r[7]=Math.min(15,Math.abs(g[8]-dm[8]));r[9]=lab(g,sc);if(r[10]!=null)EX[r[10]]=r.slice(0,10);render()}else{if(r[10]!=null)EX[r[10]][0]=v;update()}}));
+body.querySelectorAll('input[type=number]').forEach(el=>el.addEventListener('input',e=>{const t=e.target;const r=rows[+t.dataset.i];r[+t.dataset.k]=Math.max(0,Math.min(+t.max,parseInt(t.value,10)||0));if(r[10]!=null&&!ALL[$('a-sc').value][r[0]])EX[r[10]][+t.dataset.k]=r[+t.dataset.k];update()}));update()}
 function update(){const sc=cols.map(c=>rows.map(c[1]));
 document.querySelectorAll('#a-body tr').forEach((tr,i)=>{const tds=tr.querySelectorAll('td');cols.forEach((c,j)=>{const td=tds[8+j],v=sc[j][i],rank=1+sc[j].filter(x=>x>v).length;td.textContent=v+(j===9?'%':'');td.className=(j===0?'gp ':'')+(rank<=3&&rows.length>1?'r'+rank:'')})});
 const pick=j=>{const idx=rows.map((r,i)=>i).filter(i=>!rows[i][8]);const pool=idx.length?idx:rows.map((r,i)=>i);let b=pool[0];pool.forEach(i=>{if(sc[j][i]>sc[j][b])b=i});return rows[b]?rows[b][0]:'-'};
@@ -52,7 +56,7 @@ const vas=rows.map((r,i)=>i).filter(i=>!rows[i][8]);let low='-';if(vas.length){l
 const P=[['内政（開墾・町投資・技術革新・築城）',0],['治水',1],['製造',2],['訓練',3],['兵に施し',4],['同盟・婚姻・貢物の使者',5],['誘降の使者',6],['戦争工作・流言の使者',7],['脅迫の使者',8]];
 $('a-picks').innerHTML=P.map(p=>'<div><b>'+p[0]+'</b><span>'+pick(p[1])+'</span></div>').join('')+'<div><b>雑用向き（兵雇用・金山・米の売買）</b><span>'+low+'</span></div>'}
 $('a-sc').addEventListener('change',fillDm);$('a-dm').addEventListener('change',load);
-$('a-add').addEventListener('click',()=>{rows.push(['（追加）',50,50,50,50,50,80,7,false,'']);render()});fillDm()})();
+$('a-add').addEventListener('click',()=>{const r=['（追加）',50,50,50,50,50,80,7,false,''];EX.push(r.slice());r[10]=EX.length-1;rows.push(r);render()});fillDm()})();
 </script>
 </div></main>
 <footer class="footer"><div class="wrap">MOT ゲーム攻略・検証ノート　｜　攻略・観戦・研究メモ<br>ゲームの権利は各権利者に帰属します。</div></footer></body></html>
