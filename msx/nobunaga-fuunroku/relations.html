@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>内政と戦闘のつながり図｜信長の野望・武将風雲録（MSX2版）｜MOT ゲーム攻略・検証ノート</title><meta name="description" content="MSX2版『武将風雲録』の内政・収入・軍事の数値がどう影響し合うかを1枚の図にまとめました。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap">
+<link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">MOT <span>GAME NOTES</span></a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/msx/">MSX</a><a href="/msx/nobunaga-fuunroku/">武将風雲録</a><a href="/arcade/kof2002/">KOF2002</a></nav></div></header>
+<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>内政と戦闘のつながり図</b></div><p class="kicker">GAMEPLAY / RELATIONS</p><h1>内政と戦闘のつながり図</h1><p>武将の能力・コマンド・国の数値・収入が、どこでつながっているかを1枚にまとめました。左から右へ、「だれが」「何をすると」「どの数値が動き」「何に効くか」の順に並んでいます。</p></div></div><main class="main"><div class="wrap">
+<section class="section"><div style="overflow-x:auto;background:#fff;border-radius:12px;padding:8px"><div style="min-width:760px"><svg viewBox="0 0 1120 820" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="武将風雲録の内政・収入・軍事の関係図" style="width:100%;height:auto">
+<defs><marker id="ap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2f7d5b"/></marker><marker id="an" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker><marker id="af" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b07d1a"/></marker></defs>
+<style>.gen rect{fill:#e8eefc;stroke:#3a5bb8}.cmd rect{fill:#fff4e0;stroke:#c98a1b}.val rect{fill:#e9f6ee;stroke:#2f7d5b}.out rect{fill:#f6e9f3;stroke:#9b3d86}.res rect{fill:#fdf6d8;stroke:#b07d1a}.n text{fill:#222;font-size:16px;font-weight:700}.n .s{font-size:11px;font-weight:400;fill:#555}.lab{font-size:12px;fill:#333;paint-order:stroke;stroke:#fff;stroke-width:4px;stroke-linejoin:round}.colh{font-size:14px;font-weight:800;fill:#666}.sec{font-size:13px;font-weight:800;fill:#999}
+@media (prefers-color-scheme:dark){.lab{fill:#eee;stroke:#1b1b1b}.colh{fill:#bbb}}</style>
+<text class="colh" x="30" y="22">担当武将の能力</text>
+<text class="colh" x="300" y="22">コマンド</text>
+<text class="colh" x="590" y="22">国の数値</text>
+<text class="colh" x="890" y="22">結果</text>
+<line x1="20" y1="540" x2="1100" y2="540" stroke="#ccc" stroke-dasharray="3 5"/><text class="sec" x="1100" y="532" text-anchor="end">内政・収入</text><text class="sec" x="1100" y="558" text-anchor="end">軍事</text>
+<rect x="288" y="120" width="174" height="246" rx="12" fill="none" stroke="#c98a1b" stroke-dasharray="5 4"/><text x="375.0" y="115" text-anchor="middle" style="font-size:11px;fill:#b07020">同じ式の4コマンド</text>
+<path d="M180,134.0 C234.0,134.0 234.0,180 288,180" fill="none" stroke="#2f7d5b" stroke-width="2" marker-end="url(#ap)"/>
+<path d="M180,224.0 C234.0,224.0 234.0,235 288,235" fill="none" stroke="#2f7d5b" stroke-width="2" marker-end="url(#ap)"/>
+<path d="M180,316.0 C234.0,316.0 234.0,300 288,300" fill="none" stroke="#2f7d5b" stroke-width="2" marker-end="url(#ap)"/>
+<path d="M180,126.0 C240.0,126.0 240.0,56.0 300,56.0" fill="none" stroke="#2f7d5b" stroke-width="2" marker-end="url(#ap)"/>
+<path d="M180,216.0 C240.0,216.0 240.0,74.0 300,74.0" fill="none" stroke="#2f7d5b" stroke-width="2" marker-end="url(#ap)"/>
+<path d="M300,342.0 C258,342.0 210,336.0 180,336.0" fill="none" stroke="#2f7d5b" stroke-width="2" marker-end="url(#ap)"/>
+<path d="M180,342 C240.0,342 240.0,424.0 300,424.0" fill="none" stroke="#2f7d5b" stroke-width="2" marker-end="url(#ap)"/>
+<path d="M450,64.0 C520.0,64.0 520.0,64.0 590,64.0" fill="none" stroke="#2f7d5b" stroke-width="2" marker-end="url(#ap)"/>
+<path d="M450,154.0 C520.0,154.0 520.0,154.0 590,154.0" fill="none" stroke="#2f7d5b" stroke-width="2" marker-end="url(#ap)"/>
+<path d="M450,214.0 C520.0,214.0 520.0,214.0 590,214.0" fill="none" stroke="#2f7d5b" stroke-width="2" marker-end="url(#ap)"/>
+<path d="M450,274.0 C520.0,274.0 520.0,274.0 590,274.0" fill="none" stroke="#2f7d5b" stroke-width="2" marker-end="url(#ap)"/>
+<path d="M695.0,130 L695.0,88" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#an)"/>
+<path d="M740,64.0 C815.0,64.0 815.0,86.0 890,86.0" fill="none" stroke="#2f7d5b" stroke-width="2" marker-end="url(#ap)"/>
+<path d="M740,154.0 C815.0,154.0 815.0,104.0 890,104.0" fill="none" stroke="#2f7d5b" stroke-width="2" marker-end="url(#ap)"/>
+<path d="M740,214.0 C815.0,214.0 815.0,222.0 890,222.0" fill="none" stroke="#2f7d5b" stroke-width="2" marker-end="url(#ap)"/>
+<path d="M945.0,118 C945.0,178 945.0,230 945.0,310" fill="none" stroke="#b07d1a" stroke-width="2" marker-end="url(#af)"/>
+<path d="M1025.0,238 L1025.0,310" fill="none" stroke="#b07d1a" stroke-width="2" marker-end="url(#af)"/>
+<path d="M450,424.0 C670.0,424.0 670.0,344.0 890,344.0" fill="none" stroke="#b07d1a" stroke-width="2" marker-end="url(#af)"/>
+<path d="M740,476.0 C815.0,476.0 815.0,476.0 890,476.0" fill="none" stroke="#2f7d5b" stroke-width="2" marker-end="url(#ap)"/>
+<path d="M890,496.0 C815.0,496.0 815.0,496.0 740,496.0" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#an)"/>
+<path d="M180,594.0 C240.0,594.0 240.0,594.0 300,594.0" fill="none" stroke="#2f7d5b" stroke-width="2" marker-end="url(#ap)"/>
+<path d="M180,684.0 C240.0,684.0 240.0,684.0 300,684.0" fill="none" stroke="#2f7d5b" stroke-width="2" marker-end="url(#ap)"/>
+<path d="M450,594.0 C520.0,594.0 520.0,594.0 590,594.0" fill="none" stroke="#2f7d5b" stroke-width="2" marker-end="url(#ap)"/>
+<path d="M450,684.0 C520.0,684.0 520.0,684.0 590,684.0" fill="none" stroke="#2f7d5b" stroke-width="2" marker-end="url(#ap)"/>
+<path d="M590,774.0 C415.0,774.0 375.0,774.0 375.0,708" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#an)"/>
+<path d="M740,594.0 C815.0,594.0 815.0,606.0 890,606.0" fill="none" stroke="#2f7d5b" stroke-width="2" marker-end="url(#ap)"/>
+<path d="M740,676.0 C815.0,676.0 815.0,626.0 890,626.0" fill="none" stroke="#2f7d5b" stroke-width="2" marker-end="url(#ap)"/>
+<path d="M740,774.0 C815.0,774.0 815.0,782.0 890,782.0" fill="none" stroke="#2f7d5b" stroke-width="2" marker-end="url(#ap)"/>
+<path d="M740,696.0 C815.0,696.0 815.0,764.0 890,764.0" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#an)"/>
+<g class="n gen"><rect x="30" y="110" width="150" height="48" rx="9" stroke-width="1.6"/>
+<text x="105.0" y="131" text-anchor="middle">政治</text><text class="s" x="105.0" y="148" text-anchor="middle">担当武将</text></g>
+<g class="n gen"><rect x="30" y="200" width="150" height="48" rx="9" stroke-width="1.6"/>
+<text x="105.0" y="221" text-anchor="middle">忠誠</text><text class="s" x="105.0" y="238" text-anchor="middle">担当武将</text></g>
+<g class="n val"><rect x="30" y="300" width="150" height="48" rx="9" stroke-width="1.6"/>
+<text x="105.0" y="321" text-anchor="middle">技術</text><text class="s" x="105.0" y="338" text-anchor="middle">国の数値</text></g>
+<g class="n cmd"><rect x="300" y="40" width="150" height="48" rx="9" stroke-width="1.6"/>
+<text x="375.0" y="61" text-anchor="middle">治水</text><text class="s" x="375.0" y="78" text-anchor="middle">÷今の石高</text></g>
+<g class="n cmd"><rect x="300" y="130" width="150" height="48" rx="9" stroke-width="1.6"/>
+<text x="375.0" y="160" text-anchor="middle">開墾</text></g>
+<g class="n cmd"><rect x="300" y="190" width="150" height="48" rx="9" stroke-width="1.6"/>
+<text x="375.0" y="220" text-anchor="middle">町投資</text></g>
+<g class="n cmd"><rect x="300" y="250" width="150" height="48" rx="9" stroke-width="1.6"/>
+<text x="375.0" y="280" text-anchor="middle">築城</text></g>
+<g class="n cmd"><rect x="300" y="310" width="150" height="48" rx="9" stroke-width="1.6"/>
+<text x="375.0" y="340" text-anchor="middle">技術革新</text></g>
+<g class="n cmd"><rect x="300" y="400" width="150" height="48" rx="9" stroke-width="1.6"/>
+<text x="375.0" y="430" text-anchor="middle">金山</text></g>
+<g class="n val"><rect x="590" y="40" width="150" height="48" rx="9" stroke-width="1.6"/>
+<text x="665.0" y="70" text-anchor="middle">治水度</text></g>
+<g class="n val"><rect x="590" y="130" width="150" height="48" rx="9" stroke-width="1.6"/>
+<text x="665.0" y="160" text-anchor="middle">石高</text></g>
+<g class="n val"><rect x="590" y="190" width="150" height="48" rx="9" stroke-width="1.6"/>
+<text x="665.0" y="220" text-anchor="middle">商業価値</text></g>
+<g class="n val"><rect x="590" y="250" width="150" height="48" rx="9" stroke-width="1.6"/>
+<text x="665.0" y="280" text-anchor="middle">城防御度</text></g>
+<g class="n val"><rect x="590" y="460" width="150" height="48" rx="9" stroke-width="1.6"/>
+<text x="665.0" y="490" text-anchor="middle">民忠</text></g>
+<g class="n out"><rect x="890" y="70" width="190" height="48" rx="9" stroke-width="1.6"/>
+<text x="985.0" y="91" text-anchor="middle">兵糧の収入</text><text class="s" x="985.0" y="108" text-anchor="middle">年貢</text></g>
+<g class="n out"><rect x="890" y="190" width="190" height="48" rx="9" stroke-width="1.6"/>
+<text x="985.0" y="211" text-anchor="middle">金の収入</text><text class="s" x="985.0" y="228" text-anchor="middle">税</text></g>
+<g class="n res"><rect x="890" y="310" width="190" height="48" rx="9" stroke-width="1.6"/>
+<text x="985.0" y="331" text-anchor="middle">手持ちの金・兵糧</text><text class="s" x="985.0" y="348" text-anchor="middle">内政に投資／米相場で交換</text></g>
+<g class="n out"><rect x="890" y="460" width="190" height="48" rx="9" stroke-width="1.6"/>
+<text x="985.0" y="490" text-anchor="middle">適正税率</text></g>
+<g class="n gen"><rect x="30" y="570" width="150" height="48" rx="9" stroke-width="1.6"/>
+<text x="105.0" y="591" text-anchor="middle">戦闘</text><text class="s" x="105.0" y="608" text-anchor="middle">担当武将</text></g>
+<g class="n gen"><rect x="30" y="660" width="150" height="48" rx="9" stroke-width="1.6"/>
+<text x="105.0" y="681" text-anchor="middle">魅力</text><text class="s" x="105.0" y="698" text-anchor="middle">担当武将</text></g>
+<g class="n cmd"><rect x="300" y="570" width="150" height="48" rx="9" stroke-width="1.6"/>
+<text x="375.0" y="600" text-anchor="middle">訓練</text></g>
+<g class="n cmd"><rect x="300" y="660" width="150" height="48" rx="9" stroke-width="1.6"/>
+<text x="375.0" y="690" text-anchor="middle">兵に施し</text></g>
+<g class="n val"><rect x="590" y="570" width="150" height="48" rx="9" stroke-width="1.6"/>
+<text x="665.0" y="600" text-anchor="middle">訓練度</text></g>
+<g class="n val"><rect x="590" y="660" width="150" height="48" rx="9" stroke-width="1.6"/>
+<text x="665.0" y="690" text-anchor="middle">兵忠</text></g>
+<g class="n val"><rect x="590" y="750" width="150" height="48" rx="9" stroke-width="1.6"/>
+<text x="665.0" y="780" text-anchor="middle">兵士</text></g>
+<g class="n out"><rect x="890" y="590" width="190" height="48" rx="9" stroke-width="1.6"/>
+<text x="985.0" y="611" text-anchor="middle">戦闘力</text><text class="s" x="985.0" y="628" text-anchor="middle">9×戦闘＋3×訓練度＋2×兵忠</text></g>
+<g class="n out"><rect x="890" y="750" width="190" height="48" rx="9" stroke-width="1.6"/>
+<text x="985.0" y="771" text-anchor="middle">維持費</text><text class="s" x="985.0" y="788" text-anchor="middle">兵士・兵忠・武将の能力</text></g>
+<text class="lab" x="30" y="374.0" style="fill:#2f7d5b;font-weight:700">↻ 技術が上がるほど</text><text class="lab" x="30" y="390.0" style="fill:#2f7d5b;font-weight:700">　 内政が速くなる</text>
+<text class="lab" x="225" y="160" text-anchor="middle">＋政治</text>
+<text class="lab" x="228" y="212" text-anchor="middle">＋忠誠÷3</text>
+<text class="lab" x="230" y="290" text-anchor="middle">＋2√技術</text>
+<text class="lab" x="225" y="72" text-anchor="middle">× 政治</text>
+<text class="lab" x="250" y="112" text-anchor="middle">× 忠誠</text>
+<text class="lab" x="255" y="430" text-anchor="middle">3√技術</text>
+<text class="lab" x="770.0" y="116" text-anchor="middle">石高が増えると薄まる</text>
+<text class="lab" x="815" y="58" text-anchor="middle">×（130＋治水度）%</text>
+<text class="lab" x="815" y="232" text-anchor="middle">×（110＋上限÷10）%</text>
+<text class="lab" x="760" y="395" text-anchor="middle">掘れる金</text>
+<text class="lab" x="815" y="452" text-anchor="middle">＋民忠÷10</text>
+<text class="lab" x="815" y="526" text-anchor="middle">税率が適正より高いと民忠が下がる</text>
+<text class="lab" x="240" y="586" text-anchor="middle">÷8</text>
+<text class="lab" x="240" y="676" text-anchor="middle">（魅力＋20）÷4</text>
+<text class="lab" x="500" y="764.0" text-anchor="middle">兵士が多いほど効きにくい</text>
+<text class="lab" x="800" y="590" text-anchor="middle">×3</text>
+<text class="lab" x="800" y="646" text-anchor="middle">×2</text>
+<text class="lab" x="805" y="720" text-anchor="middle">兵忠が低いと高くつく</text>
+<g transform="translate(30,806)"><line x1="0" y1="-4" x2="30" y2="-4" stroke="#2f7d5b" stroke-width="2" marker-end="url(#ap)"/><text class="lab" x="40" y="0">増やす・効く</text><line x1="150" y1="-4" x2="180" y2="-4" stroke="#c0392b" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#an)"/><text class="lab" x="190" y="0">減らす・効きにくくする</text><line x1="370" y1="-4" x2="400" y2="-4" stroke="#b07d1a" stroke-width="2" marker-end="url(#af)"/><text class="lab" x="410" y="0">お金・兵糧の流れ</text></g>
+</svg></div></div></section>
+<section class="section"><h2>図の読みどころ</h2><div class="cards">
+<article class="card"><span class="tag">内政</span><h3>開墾・町投資・技術革新・築城は同じ式</h3><p>担当武将の政治、忠誠÷3、そして国の技術（2×√技術）が足し合わされて効果が決まります。技術を上げると、ほかの3つの内政も速くなります。<a href="domestic.html">内政コマンドの計算式</a></p></article>
+<article class="card"><span class="tag">治水</span><h3>治水は政治×忠誠、そして石高で割られる</h3><p>石高の大きい国ほど治水度は上がりにくく、開墾で石高が増えると治水度は薄まります。治水度は兵糧の収穫に直接効きます。<a href="income.html">税収・年貢・維持費</a></p></article>
+<article class="card"><span class="tag">収入</span><h3>収入はふたたび内政の元手になる</h3><p>年貢の兵糧と税の金が手持ちに入り、内政に投資され、石高・商業価値が増えて次の収入が増える、という循環です。金と兵糧は米相場で行き来できます。<a href="market.html">米相場の決まり方</a></p></article>
+<article class="card"><span class="tag">民忠</span><h3>民忠と税率は押し合う関係</h3><p>民忠が高いほど適正な税率が上がり、適正より高い税率を取ると民忠が下がります。<a href="income.html">税収・年貢・維持費</a></p></article>
+<article class="card"><span class="tag">軍事</span><h3>兵忠は戦闘力と維持費の両方に効く</h3><p>訓練度は×3、兵忠は×2で部隊の戦闘力に入ります。兵忠が低いと兵士の維持費も高くつきます。施しは兵士が多いほど効きにくくなります。<a href="military.html">訓練と兵に施し</a></p></article>
+</div></section>
+</div></main>
+<footer class="footer"><div class="wrap">MOT ゲーム攻略・検証ノート　｜　攻略・観戦・研究メモ<br>ゲームの権利は各権利者に帰属します。</div></footer></body></html>
