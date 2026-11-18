@@ -16,6 +16,8 @@
 .route{font-weight:700}.arrow{color:var(--red);padding:0 3px}.meta{font-size:13px;color:var(--sub)}
 .tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px}.tips .box{margin:0}.tips h3{margin:0 0 6px;font-size:17px}.src{font-size:13px;color:var(--sub)}
 .empty{padding:20px;color:var(--sub)}
+.formula{display:flex;gap:7px;align-items:center;flex-wrap:wrap;font-weight:700;margin:10px 0}.formula span{background:var(--redbg);color:var(--red);border-radius:8px;padding:6px 9px}.formula b{font-size:20px}
+.timing-controls{display:flex;gap:10px;align-items:end;flex-wrap:wrap;margin:12px 0}.timing-controls label{display:block;font-size:13px;font-weight:700;margin-bottom:5px}.timing-controls input{width:110px;font:inherit;padding:9px 11px;border:1.5px solid var(--line);border-radius:9px;background:var(--card);color:inherit}.timing-result{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:13px 16px;min-height:54px}.timing-result ul{margin:6px 0;padding-left:1.3em}
 @media(max-width:650px){.controls{grid-template-columns:1fr}.hero-note,.box,.result{padding:13px 14px}}
 </style>
 </head>
@@ -49,6 +51,25 @@
 <article class="box"><h3>入力猶予の違い</h3><p>MAX発動・前転後転・地上CDは4Fほど猶予を取れる一方、通常技・必殺技は同じ感覚で遅らせられないため、レシピの操作難度が違います。</p></article>
 </div>
 
+<h2>MOT式・フレーム消費パーツ</h2>
+<div class="hero-note">
+<p><b>ダッシュ予備動作は3Fでキャンセルできるため、既存の消費行動に3Fを加えた新しい調整を作れます。</b></p>
+<div class="formula" aria-label="19フレーム消費の計算"><span>ダッシュ予備 3F</span><b>＋</b><span>立CD空キャン 16F</span><b>＝ 19F</b></div>
+<p>したがって「ダッシュ予備 → 立CD空キャン → 弱地雷震」は19F消費です。これは単独の完成レシピというより、必要な空白時間に合わせてレシピを組み立てるための基本パーツです。</p>
+</div>
+<div class="timing-controls">
+<div><label for="timingF">必要な消費フレーム</label><input id="timingF" type="number" min="1" max="61" value="19"></div>
+</div>
+<div class="timing-result" id="timingResult" aria-live="polite"></div>
+<div class="box">
+<h3>19Fの実用例：対リョウ</h3>
+<p>従来レシピの「近C投げ → 遠B → 弱地雷震」は、遠Bが19F消費です。これを同じ19Fの「ダッシュ予備3F → 立CD空キャン16F」に置き換えた、次のレシピをMOTが2015年に確認しています。</p>
+<p class="route">近C投げ <span class="arrow">→</span> ダッシュ予備 <span class="arrow">→</span> 立CD空キャン弱地雷震</p>
+<p class="src"><a href="https://x.com/mot_csb/status/638558348372082688" rel="nofollow">MOTの確認投稿（2015/9/1）</a></p>
+</div>
+<p class="src">空欄のフレームには、元メモ上で対応パーツが未登録です。同じ消費Fでも移動距離や間合いが変わるため、自動的に全キャラで成立するとは限りません。表記は2021年のMOT「確定地雷震レシピ用メモ」を検索用に整えています。</p>
+<p class="src"><b>検算：</b>記事内の基本値から単純加算できる複合項目41件は、記載フレームと全件一致しました。技単体の消費値と、「ダッシュ予備→前方大J攻撃」を含む45F項目は単純加算だけでは確定できないため、実機再確認の対象です。</p>
+
 <h2>近年の追加確認</h2>
 <div class="box">
 <h3>大門への追加レシピ</h3>
@@ -72,7 +93,7 @@
 </ul>
 
 <h2>更新履歴</h2>
-<ul class="src"><li>2026/11/18　づねさんの既存レシピと、MOT独自のダッシュ予備動作3Fを使う追加レシピを統合した資料であることを明確化。</li><li>2026/11/18　KCEの現行URLを確認し、原整理者のクレジット表記を修正。</li><li>2026/11/18　旧全キャラ表とMOTの追加メモを統合し、検索ページとして作成。</li></ul>
+<ul class="src"><li>2026/11/18　MOTのフレーム消費パーツ表を追加。ダッシュ予備3F＋立CD空キャン16F＝19Fなど、レシピ生成法を検索可能にした。</li><li>2026/11/18　づねさんの既存レシピと、MOT独自のダッシュ予備動作3Fを使う追加レシピを統合した資料であることを明確化。</li><li>2026/11/18　KCEの現行URLを確認し、原整理者のクレジット表記を修正。</li><li>2026/11/18　旧全キャラ表とMOTの追加メモを統合し、検索ページとして作成。</li></ul>
 <nav class="foot-nav"><a href="/98-frame-data.html">フレーム早見表</a><a href="/kof-kakuteizirai.html">シリーズまとめ</a><a href="/98-taikai-check.html">大会前チェック</a><a href="/kof98-top.html">KOF’98トップ</a></nav>
 </div></main>
 <footer><div class="wrap">Come sono bravo?｜作成：MOT</div></footer>
@@ -84,7 +105,7 @@ const R={
 'テリー':['天地返し → 根っこ返し → （ノーマル版嵐の山／仕込み済み裏投げ） → 弱地雷震','天地返し → リバサ大ジャンプ攻撃 → 地上CD空キャンセル弱地雷震','天地返し → MAX発動 → 遠D → 弱地雷震','非発動時の強制ダウン版弱地雷震 → 地上CD空キャンセル弱地雷震'],
 'アンディ':['近C投げ → MAX発動 → 弱地雷震','遠C投げ → 遠A → 弱地雷震','（切り株返し／雲つかみ投げ／MAX版嵐の山3発目） → 遠D → 弱地雷震','天地返し → 根っこ返し → 超大外刈り → 弱地雷震','天地返し → MAX発動 → 弱超受け身 → 弱地雷震'],
 'ジョー':['天地返し → 強地雷震 → 地上CD空キャンセル弱地雷震'],
-'リョウ':['近C投げ → 遠B → 弱地雷震','天地返し → 天地返し → 地上CD空キャンセル弱地雷震','天地返し → MAX発動 → （バックステップ／MAX版嵐の山） → 弱地雷震','天地返し → （バックステップ／MAX版嵐の山） → MAX発動 → 弱地雷震','天地返し → ノーマル版嵐の山 → （ノーマル版嵐の山／仕込み済み裏投げ） → 弱地雷震','（非発動時の強制ダウン版弱地雷震／根っこ返し） → 近A → 弱地雷震【画面端】'],
+'リョウ':['近C投げ → 遠B → 弱地雷震','近C投げ → ダッシュ予備 → 地上CD空キャンセル弱地雷震【MOT確認・同19F】','天地返し → 天地返し → 地上CD空キャンセル弱地雷震','天地返し → MAX発動 → （バックステップ／MAX版嵐の山） → 弱地雷震','天地返し → （バックステップ／MAX版嵐の山） → MAX発動 → 弱地雷震','天地返し → ノーマル版嵐の山 → （ノーマル版嵐の山／仕込み済み裏投げ） → 弱地雷震','（非発動時の強制ダウン版弱地雷震／根っこ返し） → 近A → 弱地雷震【画面端】'],
 'ロバート':['天地返し → 強地雷震 → 地上CD空キャンセル弱地雷震'],
 'ユリ':['天地返し → 超大外刈り → 遠A → 弱地雷震','天地返し → MAX発動 → 遠B → 弱地雷震','発動時の強制ダウン版弱地雷震 → 地上CD空キャンセル弱地雷震'],
 'レオナ':['（切り株返し／雲つかみ投げ／MAX版嵐の山3発目） → （バックステップ／MAX版嵐の山） → 弱地雷震','超大外刈り → 強地雷震 → 弱地雷震','天地返し → 根っこ返し → 根っこ返し → 弱地雷震','天地返し → ノーマルJB（頂点を過ぎた辺り） → 地上CD空キャンセル弱地雷震','天地返し → MAX発動 → 遠A → 遠A → 弱地雷震','（非発動時の強制ダウン版弱地雷震／根っこ返し） → 遠B → 弱地雷震'],
@@ -117,6 +138,47 @@ const R={
 'ルガール':['近C投げ → 遠B → 弱地雷震','超大外刈り → （バックステップ／MAX版嵐の山） → 弱地雷震','天地返し → 天地返し → 地上CD空キャンセル弱地雷震','天地返し → MAX発動 → （バックステップ／MAX版嵐の山） → 弱地雷震','天地返し → （バックステップ／MAX版嵐の山） → MAX発動 → 弱地雷震','天地返し → ノーマル版嵐の山 → （ノーマル版嵐の山／仕込み済み裏投げ） → 弱地雷震','（非発動時の強制ダウン版弱地雷震／根っこ返し） → 近A → 弱地雷震【画面端】'],
 '真吾':['近C投げ → （バックステップ／MAX版嵐の山） → 弱地雷震','天地返し → 弱超受け身 → （バックステップ／MAX版嵐の山） → 弱地雷震','天地返し → MAX発動 → 根っこ返し → 弱地雷震','天地返し → 強超受け身 → 地上CD空キャンセル弱地雷震']
 };
+const T={
+3:['ダッシュ予備キャンセル'],
+16:['立CD空キャンセル','最短ダッシュ'],
+19:['ダッシュ予備 → 立CD空キャンセル'],
+24:['バックステップ','MAX版嵐の山'],
+26:['弱・強版嵐の山','仕込み済み裏投げ'],
+28:['MAX発動'],
+29:['弱・強版根っこ返し'],
+31:['ダッシュ予備 → MAX発動'],
+32:['小ジャンプ'],
+33:['前転','後転','弱超受け身','小J攻撃（下降中）'],
+34:['小J攻撃（頂点まで）'],
+35:['強版地雷震','MAX版地獄極楽落とし','ダッシュ予備 → 前方中J'],
+36:['弱・強版天地返し','ダッシュ予備 → 前転','ダッシュ予備 → 前方中J攻撃（下降中）'],
+37:['弱・強版超大外刈り','弱・強版地獄極楽落とし','大ジャンプ','ダッシュ予備 → 前方中J攻撃（頂点まで）'],
+38:['大J攻撃（下降中）'],
+39:['大J攻撃（頂点まで）'],
+40:['バックステップ → 立CD空キャンセル','最短ダッシュ → バックステップ'],
+41:['強版超受け身','ノーマルJ'],
+42:['立CD空キャンセル → 仕込み済み裏投げ','ノーマルJ攻撃（下降中）'],
+43:['ノーマルJ攻撃（頂点まで）'],
+44:['MAX発動 → 立CD空キャンセル【追加】'],
+45:['弱・強版根っこ返し → 立CD空キャンセル','立CD','ダッシュ予備 → 前方大J攻撃（下降中）','ダッシュ予備 → 前方大J攻撃（頂点まで）'],
+47:['ダッシュ予備 → MAX発動 → 立CD空キャンセル【追加】','MAX発動 → ダッシュ予備 → 立CD空キャンセル【追加】'],
+48:['バックステップ → バックステップ','小J → 立CD空キャンセル','最短ダッシュ → 垂直または後方小J','ダッシュ予備 → 立CD'],
+49:['小J攻撃（下降中） → 立CD空キャンセル','弱版超受け身 → 立CD空キャンセル'],
+50:['小J攻撃（頂点まで） → 立CD空キャンセル','バックステップ → 弱・強版嵐の山'],
+51:['雲つかみ投げ','強版地雷震 → 立CD空キャンセル'],
+52:['嵐の山 → 嵐の山','嵐の山 → 仕込み済み裏投げ','MAX発動 → MAX版嵐の山','バックステップ → MAX発動','弱・強版天地返し → 立CD空キャンセル','後方小J攻撃（下降中） → ダッシュ予備 → 立CD空キャンセル【追加】','後転 → ダッシュ予備 → 立CD空キャンセル【追加】'],
+53:['小J攻撃（頂点まで） → ダッシュ予備 → 立CD空キャンセル【追加】'],
+54:['大J攻撃（下降中） → 立CD空キャンセル'],
+56:['小J → バックステップ'],
+57:['強版超受け身 → 立CD空キャンセル','ノーマルJ → 立CD空キャンセル','小J攻撃（下降中） → バックステップ'],
+58:['小J攻撃（頂点まで） → バックステップ'],
+60:['強版超受け身 → ダッシュ予備 → 立CD空キャンセル【追加】','ノーマルJ → ダッシュ予備 → 立CD空キャンセル【追加】'],
+61:['立CD → 立CD空キャンセル','MAX発動 → 前転または後転','ノーマルJ攻撃（下降中） → ダッシュ予備 → 立CD空キャンセル【追加】']
+};
+const timingF=document.getElementById('timingF'),timingResult=document.getElementById('timingResult');
+function renderTiming(){const f=Number(timingF.value),list=T[f]||[];timingResult.innerHTML=list.length?`<b>${f}F消費</b><ul>${list.map(x=>`<li>${x}</li>`).join('')}</ul>`:`<b>${f}F消費</b><p class="meta">元メモに登録された調整パーツはありません。</p>`;}
+timingF.addEventListener('input',renderTiming);renderTiming();
+
 const sel=document.getElementById('char'),filter=document.getElementById('filter'),result=document.getElementById('result');
 Object.keys(R).forEach((n,i)=>sel.add(new Option(n,n,i===2,i===2)));
 function arrows(s){return s.replaceAll(' → ',' <span class="arrow">→</span> ')}
