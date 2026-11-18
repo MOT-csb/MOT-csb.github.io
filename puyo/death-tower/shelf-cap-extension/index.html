@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>デスタワーの棚上げ・蓋・伸ばし｜初代ぷよぷよ｜MOT</title>
+<meta name="description" content="初代ぷよぷよのデスタワーで使う棚上げ、蓋、伸ばし、タネ、リザーブの関係をMOTの旧ブログとX投稿のぷよ図から整理。蓋を急がず連結数を増やす判断を解説します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap">
+<link rel="stylesheet" href="/assets/research.css">
+<style>
+.jump{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 0}.jump a{border:1px solid var(--line);border-radius:999px;padding:6px 12px;text-decoration:none;background:var(--paper);font-weight:700}.visual-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:16px;margin:18px 0}.figure{margin:0;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center}.figure img{display:block;margin:auto;max-width:100%;height:auto;max-height:650px}.figure figcaption{text-align:left;font-size:13px;color:var(--muted);margin-top:10px}.point{background:var(--soft);border-radius:10px;padding:14px 17px}.point p{margin:0}.term{display:grid;grid-template-columns:120px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}.term:last-child{border-bottom:0}.term b{color:var(--accent);font-size:18px}.decision{counter-reset:step;display:grid;gap:12px}.decision>div{counter-increment:step;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:15px 17px}.decision>div:before{content:counter(step);display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;margin-right:9px;background:var(--accent);color:#fff;font-weight:800}.decision h3{display:inline;margin:0}.decision p{margin:7px 0 0 37px}.source{font-size:13px;color:var(--muted)}@media(max-width:560px){.term{grid-template-columns:1fr;gap:2px}}
+</style>
+</head>
+<body>
+<header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/puyo/death-tower/">デスタワー</a><a href="/kof-top.html">KOF</a><a href="/kof98-top.html">KOF98</a><a href="/msx/">MSX</a></nav></div></header>
+
+<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/puyo/death-tower/">デスタワー</a><span aria-hidden="true"> / </span><b>棚上げ・蓋・伸ばし</b></div><p class="kicker">DEATH TOWER / CONNECTION CONTROL</p><h1>棚上げ・蓋・伸ばし</h1><p>2連鎖目の連結を増やすか、新しい色を使えるようにするか。デスタワーの中盤を左右する判断を、タネとリザーブまで含めて整理します。</p></div></div>
+
+<main class="main"><div class="wrap">
+<section class="section">
+<p class="lead">基本方針は<b>「蓋を急がず、ネクストを見ながら伸ばせる色を伸ばす」</b>です。ただし伸ばし続けるだけでは高くなり、別の色を使えません。蓋・棚上げ・タネ・リザーブは、その限界を越えるための技術です。</p>
+<div class="statement"><p><b>結論：</b>蓋と伸ばしは二者択一ではありません。まず連結数を確保し、必要な段階で蓋をして新しいタネを作り、棚上げとリザーブで後続の置き場所を残します。</p></div>
+<nav class="jump" aria-label="ページ内メニュー"><a href="#terms">用語</a><a href="#cap">蓋を急がない</a><a href="#shelf">棚上げ</a><a href="#multi">多色伸ばし</a><a href="#reserve">リザーブ</a><a href="#flow">判断手順</a></nav>
+</section>
+
+<section class="section" id="terms"><h2>4つの用語を一つの流れで理解する</h2>
+<div class="card">
+<div class="term"><b>伸ばし</b><div>まだ上へ伸ばせる同色ぷよを、そのまま縦に連結すること。2連鎖目の連結数を直接増やします。</div></div>
+<div class="term"><b>蓋</b><div>まだ伸ばせる色の上に別の色を置くこと。下の色を伸ばせなくする代わりに、置いた色を新しい「タネ」にできます。</div></div>
+<div class="term"><b>タネ</b><div>2連鎖目でつながって消える部分の候補。タネを効率よく作り、必要な連結数へ育てることが致死量への近道です。</div></div>
+<div class="term"><b>棚上げ</b><div>候補色をすぐ確定・放棄せず、後で連結に使える位置へ残す考え方。高く置くだけの「悪い棚上げ」ではなく、手を進められる低い置き場所も探します。</div></div>
+</div>
+<p class="source">旧ブログ：<a href="https://comesonobravo.hatenadiary.org/archive/2010/03" rel="nofollow">デスタワー最適化計画その3「蓋と伸ばし」・その4「タネ」・その5「蓋と伸ばし その2」</a></p>
+</section>
+
+<section class="section" id="cap"><p class="eyebrow">CAP OR EXTEND</p><h2>蓋を急がない――連結数を先に稼ぐ</h2>
+<p>旧ブログの具体例では、伸ばせる紫の上を黄で蓋すると、紫は最大4連結で止まります。この場合は蓋を急がず、紫をさらに伸ばせる余地を残す方がよい、というのが出発点です。</p>
+<div class="visual-grid"><figure class="figure"><img src="/puyo/death-tower/assets/no-cap-all-colors.jpg" width="256" height="448" loading="lazy" alt="蓋をせず青・緑・黄を活かす置き方のぷよ図"><figcaption>青をこの位置に置くことで蓋を避け、青・緑・黄をすべて活かしながら連結数を稼ぐ例。</figcaption></figure><figure class="figure"><img src="/puyo/death-tower/assets/extend-before-cap.jpg" width="256" height="448" loading="lazy" alt="ネクスト判断で蓋より伸ばしを優先するぷよ図"><figcaption>ネクスト判断を使い、複数色の連結を伸ばして致死へ近づける例。</figcaption></figure></div>
+<div class="point"><p><b>判断の要点：</b>蓋を置けることと、今置くべきことは別です。下の色に同色を足せる可能性があるなら、その連結を伸ばしてから蓋を検討します。</p></div>
+<p class="source">出典：<a href="https://x.com/mot_csb/status/976298203900334085" rel="nofollow">蓋をしない置き方（2018年3月21日）</a>／<a href="https://x.com/mot_csb/status/979963223385387010" rel="nofollow">蓋より伸ばしを優先（2018年3月31日）</a></p>
+</section>
+
+<section class="section" id="shelf"><p class="eyebrow">SHELVING</p><h2>棚上げ――候補色を残しながら手を進める</h2>
+<p>棚上げの価値は、色を高い場所へ逃がすこと自体ではありません。<b>複数色を後から使える可能性を残し、次のぷよを置ける盤面を作ること</b>にあります。</p>
+<div class="visual-grid"><figure class="figure"><img src="/puyo/death-tower/assets/shelf-sandwich.png" width="256" height="448" loading="lazy" alt="赤ゾロ2組を活かす棚上げとはさみうちのぷよ図"><figcaption>赤ゾロ2組を活かす状況。棚上げから、両側の色を使う「はさみうち」へつなぐ発想です。</figcaption></figure><figure class="figure"><img src="/puyo/death-tower/assets/shelf-vs-uncapped.jpg" width="1200" height="1130" loading="lazy" alt="AB両方を棚上げした形と蓋をしない形の比較"><figcaption>左は連結が未確定になる代わりにAB両方を棚上げして柔軟性を確保。右は蓋を避けてタテ連結を1個増やす形。</figcaption></figure><figure class="figure"><img src="/puyo/death-tower/assets/shelf-low-placement.png" width="256" height="448" loading="lazy" alt="高く置かず低い位置で手を進める棚上げのぷよ図"><figcaption>高い位置へとりあえず置くのではなく、低い位置に置いて手を進める例。赤を早めに諦める代償と引き換えに安定性を得ます。</figcaption></figure></div>
+<div class="point"><p><b>良い棚上げの条件：</b>①将来つなげる色が明確、②現在の中心列より無理に高くしない、③次の置き場所が増える。単に高い所へ保留すると「悪い棚上げ」になりやすくなります。</p></div>
+<p class="source">出典：<a href="https://x.com/mot_csb/status/538943693562970114" rel="nofollow">棚上げとはさみ打ち（2014年11月30日）</a>／<a href="https://x.com/mot_csb/status/665825017943293952" rel="nofollow">棚上げと蓋なしの比較（2015年11月15日）</a>／<a href="https://x.com/mot_csb/status/1193351670085771264" rel="nofollow">低い位置で手を進める（2019年11月10日）</a></p>
+</section>
+
+<section class="section" id="multi"><p class="eyebrow">MULTICOLOR EXTENSION</p><h2>多色伸ばし――複数のタネを同時に育てる</h2>
+<p>伸ばしは一色だけに限定されません。複数の色で連結数を伸ばせる形なら、どの色が来ても有効な置き場所が増え、致死テンパイを早く作れます。</p>
+<div class="visual-grid"><figure class="figure"><img src="/puyo/death-tower/assets/multicolor-extension.png" width="256" height="448" loading="lazy" alt="複数の色を全方向へ伸ばせる多色伸ばしのぷよ図"><figcaption>全色を伸ばせる例。同じ空間を複数色の候補として共有できる場合もあり、ネクストへの対応範囲が広がります。</figcaption></figure><div><div class="point"><p><b>多色伸ばしの意味</b><br>「何色が来ても置ける」だけでなく、2連鎖目に必要な総連結数を、複数のタネへ分散して確保できます。</p></div><ul class="contents"><li>一色の到着だけを待たなくてよい</li><li>ネクストに応じて伸ばす色を選べる</li><li>同じスペースが複数色の候補になる場合がある</li><li>一方を伸ばすことで他方を塞がないか確認する</li></ul></div></div>
+<p class="source">出典：<a href="https://x.com/mot_csb/status/609586272357646337" rel="nofollow">多色伸ばし（2015年6月13日）</a></p>
+</section>
+
+<section class="section" id="reserve"><p class="eyebrow">RESERVE</p><h2>リザーブ――完成までの置き場所を先に読む</h2>
+<p>リザーブは、後から必要色をつなぐために確保しておく場所・ルートです。連結の完成形を先に意識し、ゴミぷよを噛ませる場所まで含めて置き順を考えます。</p>
+<div class="visual-grid"><figure class="figure"><img src="/puyo/death-tower/assets/reserve-map.png" width="204" height="365" loading="lazy" alt="赤のリザーブとゴミぷよを噛ませる場所を四角で示したぷよ図"><figcaption>赤枠が赤のリザーブ、灰色がゴミぷよを噛ませる候補位置。完成ルートを可視化した例です。</figcaption></figure><div><div class="point"><p><b>重要なのは「組むルートが見えること」</b><br>今ある連結だけでなく、どこへ同色を足し、どこへ別色を挟むと完成するかを先に読みます。</p></div><ul class="contents"><li>棚上げした色の接続先を用意する</li><li>蓋が新しいタネとして機能するかを見る</li><li>ゴミぷよを置いても接続が死なない場所を探す</li><li>全色を救えない場合は、優先色を決めて一方を捨てる</li></ul></div></div>
+<p class="source">出典：<a href="https://x.com/mot_csb/status/680925950071054336" rel="nofollow">リザーブの可視化（2015年12月27日）</a></p>
+</section>
+
+<section class="section" id="flow"><h2>実戦の判断手順</h2>
+<div class="decision"><div><h3>今あるタネを数える</h3><p>2連鎖目で消える候補色と、その連結数を確認します。</p></div><div><h3>同色を上へ伸ばせるか見る</h3><p>伸ばせるなら、すぐ蓋をせず連結数を増やす方を先に検討します。</p></div><div><h3>ネクストで別色を使う必要があるか判断する</h3><p>別色をタネにできるなら蓋を置きます。ただし下の色を伸ばす道を閉じる代償を確認します。</p></div><div><h3>候補色を棚上げする</h3><p>今つなげられない色を、低く手を進められる位置か、後から接続できる位置へ残します。</p></div><div><h3>リザーブと完成形を確認する</h3><p>必要色の置き場所、ゴミを挟む場所、諦める色を決めて致死テンパイへ進みます。</p></div></div>
+<p class="notice">蓋・棚上げ・伸ばしは、盤面だけでなくネクストを見て初めて決まります。同じ形でも、次に来る色によって最適な選択は変化します。</p>
+<p><a class="buttonlink" href="/puyo/death-tower/">デスタワー総合メニューへ戻る</a></p>
+</section>
+</div></main>
+
+<footer class="footer"><div class="wrap">Come sono bravo?　｜　作成：MOT<br>ゲームの権利は各権利者に帰属します。</div></footer>
+</body>
+</html>
