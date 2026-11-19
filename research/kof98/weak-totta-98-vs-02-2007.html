@@ -1,0 +1,19 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'98と2002：弱とったーの投げ成立とジャンプ回避猶予（2007年）｜Come sono bravo?</title><meta name="description" content="2007年7月8日の本人フレーム比較から、弱とったーのロック時点とジャンプ回避期限を復元"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:1010px}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.article a{overflow-wrap:anywhere}.scroll{overflow-x:auto}.article table{width:100%;border-collapse:collapse}.article th,.article td{border:1px solid var(--line,#aaa);padding:9px;text-align:left;vertical-align:top}.article th{background:var(--soft,#edf1ed)}.source{font-size:.94rem}.note{border-left:3px solid var(--accent,#56745f);padding:12px;background:var(--soft,#edf1ed)}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof98-top.html">KOF'98</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'98と2002：弱とったーの投げ成立とジャンプ回避猶予（2007年）</h1><p class="note">2007年7月8日の本人フレーム比較から、弱とったーのロック時点とジャンプ回避期限を復元。はてなブログのMOT本人原文に基づく再整理。原文にない条件や結果は補わず、測定・観察・伝聞・未検証を区別する。</p>
+<h2>比較条件：庵を相手に、中央の密着近Dヒット後から入力</h2>
+<p>MOTは2007年7月8日、KOF'98と2002で<strong>「弱とったー」</strong>を比較した。相手キャラを<strong>庵</strong>に統一し、距離による成立の違いを避けるため、<strong>画面中央で密着近Dをヒットさせた後、ノーキャンセル</strong>で弱とったーを出した。</p>
+<p>原文には<strong>技の正式名称や使用キャラ名が明記されていない</strong>ため、このページでは「弱とったー」という本人の表記を維持する。</p>
+<h2>本人の比較結果</h2>
+<div class="scroll"><table><thead><tr><th>比較項目</th><th>KOF'98</th><th>KOF2002</th></tr></thead><tbody>
+<tr><td>相手をロックする時点</td><td><strong>23F目</strong></td><td><strong>27F目</strong></td></tr>
+<tr><td>ジャンプ回避のため、遅くともレバーを8要素に入れる時点</td><td><strong>19F目</strong></td><td><strong>23F目</strong></td></tr>
+<tr><td>ロックと回避入力期限の差</td><td>4F</td><td>4F</td></tr>
+<tr><td>本人の実戦評価</td><td>警戒していない状況では反応が難しいかもしれない</td><td>98より決めにくいと評価</td></tr>
+</tbody></table></div>
+<p>「差4F」は<strong>原文の2つの時点の算術上の差</strong>であり、入力猶予の内部処理が4FであるとROM解析で確定した意味ではない。発生が4F遅いという作品差と、ジャンプ回避期限が4F遅いという作品差を混同しない。</p>
+<h2>ぎりぎりで回避できなかった場合の1F</h2>
+<p>本人は、ぎりぎりでジャンプ回避に失敗すると、<strong>ジャンプ予備動作が1Fだけ出てから投げられる</strong>と記録。理由として、<strong>弱とったーが内部的に成立してからも相手が1Fだけ動ける</strong>と説明した。</p>
+<p>この「内部的に成立」という説明は<strong>本人による当時の機構解釈</strong>。ロック成立・投げ確定・ジャンプ予備動作表示の正確な処理順は、この文章だけでは確定しない。</p>
+<p class="source">原資料：<a href="https://comesonobravo.hatenadiary.org/entry/2007/07/08/164758">2007/07/08「弱とったー比較」</a></p>
+<h2>追試で固定する条件</h2>
+<ol><li>中央・密着近Dヒット・ノーキャンセル・相手庵を維持する。</li><li>レバー8要素を18～24F目で1F刻みに変更し、回避とジャンプ予備動作の表示を分けて記録する。</li><li>KOF'98と2002のそれぞれで同じ条件を再現し、キャラ名・コマンド・内部フラグを原文から推測して補わない。</li></ol>
+<p>関連：<a href="./landing-recovery-downevade-2011-2019.html">着地・ダウン回避の処理</a> ／ <a href="./input-command-frames-2018-2024.html">コマンド受付の実験</a></p><p><a href="./index.html">KOF'98研究アーカイブへ戻る</a> ／ <a href="/kof-kininaru.html#kof98">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?</div></footer></body></html>
