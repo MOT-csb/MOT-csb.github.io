@@ -1,0 +1,17 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'98 大門：236A仕込みで裏投げの走行距離が短くなる現象｜Come sono bravo?</title><meta name="description" content="2024年の本人まとめから、事前の入力が後続行動に影響するKOF'98の例を分離"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:1010px}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.article a{overflow-wrap:anywhere}.scroll{overflow-x:auto}.article table{width:100%;border-collapse:collapse}.article th,.article td{border:1px solid var(--line,#aaa);padding:9px;text-align:left;vertical-align:top}.article th{background:var(--soft,#edf1ed)}.source{font-size:.94rem}.note{border-left:3px solid var(--accent,#56745f);padding:12px;background:var(--soft,#edf1ed)}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof98-top.html">KOF'98</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'98 大門：236A仕込みで裏投げの走行距離が短くなる現象</h1><p class="note">2024年の本人まとめから、事前の入力が後続行動に影響するKOF'98の例を分離。はてなブログに残るMOT本人の記録を原資料とし、当時の測定・考察・未確認事項を区別する。</p>
+<h2>2024年12月29日の本人まとめ</h2>
+<p>MOTは「事前に出した技が反映される行動」のシリーズ比較として、KOF'98について次の例を挙げた。</p>
+<blockquote><strong>大門：仕込み裏投げ</strong> — 236Aと入力した後に裏投げを出すと、走行距離が短くなる。</blockquote>
+<p>原文は<strong>走行距離が短くなるという現象</strong>を述べているが、内部処理・短縮距離のドット数・技を出すまでの受付F・通常入力との定量差は示していない。</p>
+<p class="source">原資料：<a href="https://comesonobravo.hatenadiary.org/entry/2024/12/29/202331">2024/12/29「KOF：事前に出した技が反映される行動についてのまとめ」</a> ／ <a href="https://w.atwiki.jp/kof98/pages/386.html">原文が紹介したKOF98wikiの小ネタ・テクニック</a></p>
+<h2>シリーズ比較：類似現象を同一の仕組みと決めつけない</h2>
+<div class="scroll"><table><thead><tr><th>作品</th><th>本人が挙げた事例</th><th>資料上の位置づけ</th></tr></thead><tbody>
+<tr><td>KOF'94</td><td>通常技キャンセル闇払いの押し合い判定が、事前の立ち／屈み通常技に影響される</td><td>押し合い判定の状態引き継ぎ</td></tr>
+<tr><td>KOF'94・'95</td><td>ハイデルンのストームブリンガーが前の技のダメージ・気絶値を引き継ぐバグ</td><td>ダメージ・気絶値の引き継ぎ</td></tr>
+<tr><td><strong>KOF'98</strong></td><td><strong>大門の236A仕込み裏投げで走行距離が短くなる</strong></td><td>移動距離の変化</td></tr>
+<tr><td>KOF2002</td><td>クーラの強レイスピンがキャンセルで出た場合、直前の技の食らい判定を一部引き継ぐ</td><td>食らい判定の変化</td></tr>
+<tr><td>KOF NEOWAVE</td><td>柴舟の屈Dが前の行動の食らい判定を引き継ぐ</td><td>食らい判定の変化</td></tr>
+</tbody></table></div>
+<p>本人は<strong>02UMでもクーラに同じことが起きたかは疑問形</strong>で記しており、確定とは扱わない。複数作品で類似した「直前の状態の影響」があるが、<strong>ROM内の共通原因が実証されたわけではない</strong>。</p>
+<h2>再現実験の最小比較</h2><ol><li>同じ初期位置・相手キャラで、通常入力の裏投げと236A仕込み後の裏投げを比較。</li><li>236Aを入れるタイミング・保持F・追加操作を1条件ずつ変更。</li><li>走行距離と投げ成立可否を別々に記録し、短縮の原因は推測と明記。</li></ol>
+<p>関連：<a href="./daimon-jigoku-jirai-combo-2023.html">大門の別の入力・連続技研究</a>／<a href="./command-623-timeline-2010-2024.html">入力受付の調査方法</a></p><p><a href="./index.html">KOF'98研究アーカイブへ戻る</a> ／ <a href="/kof-kininaru.html#kof98">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?</div></footer></body></html>
