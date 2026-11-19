@@ -9,6 +9,7 @@
   2. 新デザイン（/assets/research.css）のページの上部メニューを共通メニューにそろえる
   3. KOF研究ページ（research/kofXX/）にパンくずがなければ付ける
   4. 全ページ一覧（/sitemap.html）を作り直す
+  5. トップの検索窓で使う検索用データ（/search-index.json）を作り直す
 """
 import html
 import os
@@ -215,6 +216,25 @@ def build_sitemap(pages):
     )
 
 
+# ---------- 5. 検索用データ ----------
+def build_search_index(pages):
+    import json
+    import unicodedata
+    out = []
+    for p, t in sorted(pages.items()):
+        if p in ("index.html", "sitemap.html") or is_redirect(t):
+            continue
+        b = re.sub(r"<(script|style|head|header|footer|nav)\b[^>]*>.*?</\1>", " ", t, flags=re.S | re.I)
+        b = re.sub(r'<p class="crumb">.*?</p>', " ", b, flags=re.S)
+        b = html.unescape(re.sub(r"<[^>]+>", " ", b))
+        b = unicodedata.normalize("NFKC", b)
+        b = re.sub(r"[’‘`´]", "'", b)
+        b = re.sub(r"\s+", " ", b).strip()
+        label = unicodedata.normalize("NFKC", page_label(t, p)).replace("’", "'")
+        out.append({"u": "/" + p, "t": label, "g": page_group(t, p), "x": b})
+    return json.dumps(out, ensure_ascii=False, separators=(",", ":"))
+
+
 def main():
     pages, changed = {}, 0
     for p in all_pages():
@@ -229,6 +249,11 @@ def main():
     full = os.path.join(ROOT, "sitemap.html")
     if read(full) != sm:
         write(full, sm)
+        changed += 1
+    idx = build_search_index(pages)
+    full = os.path.join(ROOT, "search-index.json")
+    if not os.path.exists(full) or read(full) != idx:
+        write(full, idx)
         changed += 1
     print(f"{changed} files updated")
 

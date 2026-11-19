@@ -25,4 +25,4 @@
 4. **タイトルは「ページ名｜Come sono bravo?」。** 「MOT研究」「MOT KOF'96攻略研究」などの別名は付けない。トップページだけ「Come sono bravo?」。
 5. **左上のロゴ表記は「Come sono bravo?」。** 新デザイン（`/assets/research.css`）のページの上部メニューは共通メニュー（トップ／KOF／作品一覧／MSX／ぷよぷよ／全ページ一覧）にする。作品ごとの移動はパンくず（例：トップ / KOF / KOF'96 / 研究アーカイブ）で行う。
 6. **ページを追加したら、作品のトップ（例：/kof96-top.html、research/kof96/index.html）からリンクを張る。** どこからもリンクされていないページを作らない。
-7. **作業の最後に `python3 tools/normalize_site.py` を実行する。** タイトル・共通メニュー・研究ページのパンくずをそろえ、全ページ一覧（/sitemap.html）を作り直す。sitemap.html は手で編集しない。
+7. **作業の最後に `python3 tools/normalize_site.py` を実行する。** タイトル・共通メニュー・研究ページのパンくずをそろえ、全ページ一覧（/sitemap.html）とトップの検索用データ（/search-index.json）を作り直す。この2つは手で編集しない。
