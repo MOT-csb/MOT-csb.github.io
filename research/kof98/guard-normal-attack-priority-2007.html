@@ -1,0 +1,33 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'98・2002：立ちガード入力と通常技の優先順位（2007年）｜Come sono bravo?</title><meta name="description" content="MOTが2007年6月13日に記録した、立ちガードと通常技の競合条件、立CD・遠距離飛び道具の例外を整理。"><link rel="stylesheet" href="/assets/research.css">
+<style>.article{max-width:970px}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.article a{overflow-wrap:anywhere}.sourcebox{border-left:4px solid var(--accent,#536f5e);background:var(--soft,#eef3ed);padding:12px 16px}.scroll{max-width:100%;overflow-x:auto;margin:15px 0}.article table{border-collapse:collapse;width:100%;min-width:620px}.article th,.article td{border:1px solid var(--line,#abb);padding:10px;text-align:left;vertical-align:top}.article th{background:var(--soft,#eef3ed)}.article li{margin:.4em 0}</style></head>
+<body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof98-top.html">KOF'98</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'98・2002：立ちガード入力と通常技の優先順位（2007年）</h1><p class="sourcebox"><strong>資料区分：</strong>2007年6月13日のMOT本人による仕様の説明。新たなROM解析・再実験による確定ではなく、<strong>2007年時点の本人の整理</strong>として保存する。対象として本人が挙げている作品はKOF'98と2002。</p>
+<h2>立ちガードが通常技より優先される三条件</h2>
+<p>本人の原稿では、近距離でボタンを押しながらガード入力も行うと、基本的には<strong>通常技が優先</strong>される。しかし次の<strong>三条件すべて</strong>が成立した場合、ボタンを押しても<strong>立ちガードが優先</strong>されると説明している。</p>
+<ol>
+<li>自分が事前に攻撃をヒット、またはガードさせている。</li>
+<li>ガード入力が<strong>立ちガード</strong>になっている。</li>
+<li>相手が自分より先にボタンを押しているか、すでに攻撃ポーズに入っている。</li>
+</ol>
+<p>これは単に4方向を入れながら技ボタンを押せばガードになるという説明ではない。<strong>自分側の直前の攻撃状況と相手の攻撃開始</strong>が前提となる。</p>
+<div class="scroll"><table><thead><tr><th>条件</th><th>2007年の本人による扱い</th><th>注意</th></tr></thead><tbody>
+<tr><td>三条件すべて成立</td><td>立ちガードを優先すると説明</td><td>本人の当時の整理。すべての技・間合いでの追試はない</td></tr>
+<tr><td>条件が揃わない近距離の入力競合</td><td>基本的に通常技が優先</td><td>例外・技ごとの入力受付は未整理</td></tr>
+<tr><td>立ちC＋D</td><td>本人は常にガードより優先すると記した</td><td>通常技一般と区別した明示的例外</td></tr>
+<tr><td>遠距離で相手が飛び道具を出したとき</td><td>立ちガード入力と通常技ボタンを併用すると通常技が出るという補足</td><td>距離および直前の攻撃状況が近距離の例と異なる</td></tr>
+</tbody></table></div>
+<h2>本人が挙げた実戦での使い方</h2>
+<h3>キム：遠Aで牽制しつつ、すかしジャンプに備える</h3>
+<p>キムの遠Aなどを相手にヒットさせた牽制のあと、<strong>立ちガード入力と近C暴れ</strong>を兼ねる場面を例示した。相手が先に攻撃すればガード、そうでなければ立ち攻撃になる、という狙いである。</p>
+<h3>空対空を制したあとの着地</h3>
+<p>もう一つの場面として、空対空で競り勝ち、着地後に攻撃を重ねに行く状況を挙げている。相手側の先行入力・攻撃開始に応じた分岐を使うという発想である。</p>
+<p>上記はいずれも<strong>本人が有望と考えた利用例</strong>であり、入力猶予の具体的なフレーム数、キャラ別の再現率は原文にない。</p>
+<h2>2003年の行動優先順位メモとの関係</h2>
+<p><a href="./kof98-action-priority-2003.html">2003年の各行動の優先順位</a>は、ボタン同時押し・特殊技・MAX発動・攻撃避けの関係を整理している。それに対して本件は、<strong>立ちガードが通常技より優先される限定された条件</strong>についての2007年の説明である。両者の優先順位を同じ階層の一つの一覧に合成するのは早い。</p>
+<h2>確認が必要な点</h2>
+<ul><li>「自分が事前に攻撃を当てた」状態がいつまで保持されるか</li>
+<li>相手のボタン入力と攻撃ポーズの境目で優先順位が変化するフレーム</li>
+<li>立ちC＋Dの例外が特殊な入力処理であるかどうか</li>
+<li>キムの牽制後、相手のすかしジャンプと通常の飛び込みで同じ挙動か</li>
+<li>KOF'98と2002の間で条件に違いがあるか</li></ul>
+<h2>本人の原資料</h2><p><a href="https://comesonobravo.hatenadiary.org/entry/2007/06/13/083702">2007/06/13：98＆02 ガードと通常技の優先順位について</a>（MOT本人ブログ）</p>
+<p><a href="./index.html">KOF'98研究アーカイブへ戻る</a> ／ <a href="/kof-kininaru.html#kof98">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜MOTの研究資料</div></footer></body></html>
