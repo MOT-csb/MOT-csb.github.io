@@ -47,6 +47,23 @@
 #timechart-archive .tc-table tr.tc-empty-row{display:none}
 @media(max-width:650px){#timechart-archive .tc-table tr td.tc-label{min-width:155px;max-width:205px}#timechart-archive .tc-guide{padding:12px}}
 </style>
+
+<style>
+/* Unified scale: 16 CSS pixels per game frame, irrespective of segment length. */
+#timechart-archive .tc-table{display:block!important;width:max-content!important;min-width:0!important}
+#timechart-archive .tc-table tr{display:flex!important;align-items:stretch!important;width:max-content!important}
+#timechart-archive .tc-table tr td{display:flex!important;flex-shrink:0!important;align-items:center!important;justify-content:center!important;box-sizing:border-box!important;padding:0!important;font-size:12px!important;line-height:1.15!important;overflow:hidden;min-width:0;max-width:none}
+#timechart-archive .tc-table tr td.tc-label{width:230px!important;min-width:230px!important;max-width:230px!important;flex:0 0 230px!important;justify-content:flex-start!important;white-space:normal!important;padding:5px 9px!important}
+#timechart-archive .tc-table tr td.tc-note{width:360px!important;min-width:360px!important;max-width:360px!important;flex:0 0 360px!important;justify-content:flex-start!important;white-space:normal!important;padding:5px 10px!important}
+#timechart-archive .tc-table tr td.tc-k,#timechart-archive .tc-table tr td.tc-w,#timechart-archive .tc-table tr td.tc-gap{position:relative!important;flex:0 0 0px!important;width:0!important;min-width:0!important;max-width:0!important;border:0!important;overflow:visible!important;z-index:3}
+#timechart-archive .tc-table tr td.tc-k::after,#timechart-archive .tc-table tr td.tc-w::after,#timechart-archive .tc-table tr td.tc-gap::after{content:"";position:absolute;left:-1px;top:0;bottom:0;width:2px}
+#timechart-archive .tc-table tr td.tc-k::after{background:#151a25}
+#timechart-archive .tc-table tr td.tc-w::after{background:white;box-shadow:0 0 0 1px #354458}
+#timechart-archive .tc-table tr td.tc-gap::after{background:repeating-linear-gradient(#64748b 0px 3px,white 3px 6px)}
+#timechart-archive .tc-table tr td.tc-one{font-size:11px!important}
+#timechart-archive .tc-table tr td.tc-inferred:empty::after{content:"1";font-weight:800}
+@media(max-width:650px){#timechart-archive .tc-table tr td.tc-label{width:185px!important;min-width:185px!important;max-width:185px!important;flex:0 0 185px!important}}
+</style>
 </head>
 <body>
 <header><div class="wrap">
@@ -68,7 +85,7 @@
 （このページのフレームデータは、特にことわりのない場合はすべて似非南原さんが運営されているサイト<a href="http://www43.tok2.com/home/esenambara/game/kof/">KOFのこと</a>のものです。）
 
 <section class="tc-guide" aria-label="タイムチャートの凡例">
-<p><strong>旧版のタイムチャートを復元しました。</strong> 色分けされた区間の数字は元原稿のフレーム数です。図が横に長い場合はスクロールできます。</p>
+<p><strong>旧版のタイムチャートを復元しました。<span style="font-weight:800;color:#154b85">全図共通：1F＝16px。</span></strong> 色分けされた区間の数字は元原稿のフレーム数です。図が横に長い場合はスクロールできます。</p>
 <ul class="tc-legend">
 <li><span class="tc-chip tc-g" aria-hidden="true"></span>灰：発生前・隙・硬直など</li>
 <li><span class="tc-chip tc-r" aria-hidden="true"></span>赤：攻撃判定</li>
@@ -94,14 +111,14 @@ KOF2002の舞の弱龍炎舞
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第1図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">攻撃判定</td>
-<td class="tc-g" style="width:98px;min-width:98px;" title="灰色の区間（発生前・隙・硬直など）">14</td>
-<td class="tc-r" style="width:24px;min-width:24px;" title="攻撃判定がある区間">3</td>
-<td class="tc-k" style="width:9px;min-width:9px;" title="元図の黒い区切り"></td>
-<td class="tc-r" style="width:24px;min-width:24px;" title="攻撃判定がある区間">3</td>
-<td class="tc-k" style="width:9px;min-width:9px;" title="元図の黒い区切り"></td>
-<td class="tc-r" style="width:27px;min-width:27px;" title="攻撃判定がある区間">4</td>
-<td class="tc-g" style="width:133px;min-width:133px;" title="灰色の区間（発生前・隙・硬直など）">19</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">攻撃判定</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:224px;min-width:224px;max-width:224px;flex:0 0 224px;" data-frames="14">14</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:48px;min-width:48px;max-width:48px;flex:0 0 48px;" data-frames="3">3</td>
+<td class="tc-k" title="元図の黒い区切り" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:48px;min-width:48px;max-width:48px;flex:0 0 48px;" data-frames="3">3</td>
+<td class="tc-k" title="元図の黒い区切り" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:64px;min-width:64px;max-width:64px;flex:0 0 64px;" data-frames="4">4</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:304px;min-width:304px;max-width:304px;flex:0 0 304px;" data-frames="19">19</td>
 </tr>
 
 </table></div>
@@ -120,52 +137,52 @@ KOF2002の舞の弱龍炎舞
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第2図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">攻撃判定</td>
-<td class="tc-g" style="width:42px;min-width:42px;" title="灰色の区間（発生前・隙・硬直など）">3</td>
-<td class="tc-r" style="width:42px;min-width:42px;" title="攻撃判定がある区間">3</td>
-<td class="tc-k" style="width:9px;min-width:9px;" title="元図の黒い区切り"></td>
-<td class="tc-r" style="width:41px;min-width:41px;" title="攻撃判定がある区間">3</td>
-<td class="tc-g" style="width:392px;min-width:392px;" title="灰色の区間（発生前・隙・硬直など）">28</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">攻撃判定</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:48px;min-width:48px;max-width:48px;flex:0 0 48px;" data-frames="3">3</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:48px;min-width:48px;max-width:48px;flex:0 0 48px;" data-frames="3">3</td>
+<td class="tc-k" title="元図の黒い区切り" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:48px;min-width:48px;max-width:48px;flex:0 0 48px;" data-frames="3">3</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:448px;min-width:448px;max-width:448px;flex:0 0 448px;" data-frames="28">28</td>
 </tr>
 <tr class="tc-empty-row">
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第3図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">ガード時</td>
-<td class="tc-empty" style="width:56px;min-width:56px;"></td>
-<td class="tc-l" style="width:70px;min-width:70px;" title="ガード・ヒット時の区間（明緑）">5</td>
-<td class="tc-d" style="width:168px;min-width:168px;" title="ガード・ヒット時の区間（深緑）">12</td>
-<td class="tc-l" style="width:70px;min-width:70px;" title="ガード・ヒット時の区間（明緑）">5</td>
-<td class="tc-note" style="width:300px;min-width:300px;">（レオナ最低で16f不利、最高で11f不利）</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ガード時</td>
+<td class="tc-empty" style="width:64px;min-width:64px;max-width:64px;flex:0 0 64px;" data-frames="4"></td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:80px;min-width:80px;max-width:80px;flex:0 0 80px;" data-frames="5">5</td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:192px;min-width:192px;max-width:192px;flex:0 0 192px;" data-frames="12">12</td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:80px;min-width:80px;max-width:80px;flex:0 0 80px;" data-frames="5">5</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">（レオナ最低で16f不利、最高で11f不利）</td>
 </tr>
 <tr class="tc-empty-row">
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第4図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">ヒット時</td>
-<td class="tc-empty" style="width:56px;min-width:56px;"></td>
-<td class="tc-l" style="width:70px;min-width:70px;" title="ガード・ヒット時の区間（明緑）">5</td>
-<td class="tc-d" style="width:196px;min-width:196px;" title="ガード・ヒット時の区間（深緑）">14</td>
-<td class="tc-l" style="width:70px;min-width:70px;" title="ガード・ヒット時の区間（明緑）">5</td>
-<td class="tc-note" style="width:300px;min-width:300px;">（レオナ最低で14f不利、最高で9f不利）</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ヒット時</td>
+<td class="tc-empty" style="width:64px;min-width:64px;max-width:64px;flex:0 0 64px;" data-frames="4"></td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:80px;min-width:80px;max-width:80px;flex:0 0 80px;" data-frames="5">5</td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:224px;min-width:224px;max-width:224px;flex:0 0 224px;" data-frames="14">14</td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:80px;min-width:80px;max-width:80px;flex:0 0 80px;" data-frames="5">5</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">（レオナ最低で14f不利、最高で9f不利）</td>
 </tr>
 
 </table></div>
@@ -177,37 +194,37 @@ KOF2002の舞の弱龍炎舞
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第5図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">攻撃判定</td>
-<td class="tc-g" style="width:70px;min-width:70px;" title="灰色の区間（発生前・隙・硬直など）">5</td>
-<td class="tc-r" style="width:28px;min-width:28px;" title="攻撃判定がある区間">2</td>
-<td class="tc-gap" style="width:9px;min-width:9px;" title="元図の空白の細い区切り"></td>
-<td class="tc-r" style="width:41px;min-width:41px;" title="攻撃判定がある区間">3</td>
-<td class="tc-gap" style="width:9px;min-width:9px;" title="元図の空白の細い区切り"></td>
-<td class="tc-r" style="width:181px;min-width:181px;" title="攻撃判定がある区間">13</td>
-<td class="tc-g" style="width:308px;min-width:308px;" title="灰色の区間（発生前・隙・硬直など）">22</td>
-<td class="tc-k" style="width:9px;min-width:9px;" title="元図の黒い区切り"></td>
-<td class="tc-g" style="width:265px;min-width:265px;" title="灰色の区間（発生前・隙・硬直など）">19</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">攻撃判定</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:80px;min-width:80px;max-width:80px;flex:0 0 80px;" data-frames="5">5</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:32px;min-width:32px;max-width:32px;flex:0 0 32px;" data-frames="2">2</td>
+<td class="tc-gap" title="元図の空白の細い区切り" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:48px;min-width:48px;max-width:48px;flex:0 0 48px;" data-frames="3">3</td>
+<td class="tc-gap" title="元図の空白の細い区切り" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:208px;min-width:208px;max-width:208px;flex:0 0 208px;" data-frames="13">13</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:352px;min-width:352px;max-width:352px;flex:0 0 352px;" data-frames="22">22</td>
+<td class="tc-k" title="元図の黒い区切り" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:304px;min-width:304px;max-width:304px;flex:0 0 304px;" data-frames="19">19</td>
 </tr>
 <tr class="tc-empty-row">
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第6図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">無敵</td>
-<td class="tc-b" style="width:70px;min-width:70px;" title="元図の青色（全身無敵）">5</td>
-<td class="tc-note" style="width:300px;min-width:300px;">全身無敵…5</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">無敵</td>
+<td class="tc-b" title="元図の青色（全身無敵）" style="width:80px;min-width:80px;max-width:80px;flex:0 0 80px;" data-frames="5">5</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">全身無敵…5</td>
 </tr>
 
 </table></div>
@@ -223,35 +240,35 @@ KOF2002の舞の弱龍炎舞
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第7図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">攻撃判定</td>
-<td class="tc-g" style="width:24px;min-width:24px;" title="灰色の区間（発生前・隙・硬直など）">1</td>
-<td class="tc-gap" style="width:9px;min-width:9px;" title="元図の空白の細い区切り"></td>
-<td class="tc-g" style="width:97px;min-width:97px;" title="灰色の区間（発生前・隙・硬直など）">7</td>
-<td class="tc-r" style="width:56px;min-width:56px;" title="攻撃判定がある区間">4</td>
-<td class="tc-g" style="width:56px;min-width:56px;" title="灰色の区間（発生前・隙・硬直など）">4</td>
-<td class="tc-k" style="width:9px;min-width:9px;" title="元図の黒い区切り"></td>
-<td class="tc-g" style="width:363px;min-width:363px;" title="灰色の区間（発生前・隙・硬直など）">26</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">攻撃判定</td>
+<td class="tc-g tc-one" title="灰色の区間（発生前・隙・硬直など）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1">1</td>
+<td class="tc-gap" title="元図の空白の細い区切り" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:112px;min-width:112px;max-width:112px;flex:0 0 112px;" data-frames="7">7</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:64px;min-width:64px;max-width:64px;flex:0 0 64px;" data-frames="4">4</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:64px;min-width:64px;max-width:64px;flex:0 0 64px;" data-frames="4">4</td>
+<td class="tc-k" title="元図の黒い区切り" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:416px;min-width:416px;max-width:416px;flex:0 0 416px;" data-frames="26">26</td>
 </tr>
 <tr class="tc-empty-row">
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第8図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">無敵</td>
-<td class="tc-b" style="width:24px;min-width:24px;" title="元図の青色（全身無敵）">1</td>
-<td class="tc-gap" style="width:9px;min-width:9px;" title="元図の空白の細い区切り"></td>
-<td class="tc-b" style="width:97px;min-width:97px;" title="元図の青色（全身無敵）">7</td>
-<td class="tc-note" style="width:300px;min-width:300px;">全身無敵…8</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">無敵</td>
+<td class="tc-b tc-one" title="元図の青色（全身無敵）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1">1</td>
+<td class="tc-gap" title="元図の空白の細い区切り" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-b" title="元図の青色（全身無敵）" style="width:112px;min-width:112px;max-width:112px;flex:0 0 112px;" data-frames="7">7</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">全身無敵…8</td>
 </tr>
 
 </table></div>
@@ -262,36 +279,36 @@ KOF2002の舞の弱龍炎舞
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第9図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">攻撃判定</td>
-<td class="tc-g" style="width:24px;min-width:24px;" title="灰色の区間（発生前・隙・硬直など）">1</td>
-<td class="tc-gap" style="width:9px;min-width:9px;" title="元図の空白の細い区切り"></td>
-<td class="tc-g" style="width:97px;min-width:97px;" title="灰色の区間（発生前・隙・硬直など）">7</td>
-<td class="tc-r" style="width:70px;min-width:70px;" title="攻撃判定がある区間">5</td>
-<td class="tc-g" style="width:70px;min-width:70px;" title="灰色の区間（発生前・隙・硬直など）">5</td>
-<td class="tc-k" style="width:9px;min-width:9px;" title="元図の黒い区切り"></td>
-<td class="tc-g" style="width:391px;min-width:391px;" title="灰色の区間（発生前・隙・硬直など）">28</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">攻撃判定</td>
+<td class="tc-g tc-one" title="灰色の区間（発生前・隙・硬直など）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1">1</td>
+<td class="tc-gap" title="元図の空白の細い区切り" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:112px;min-width:112px;max-width:112px;flex:0 0 112px;" data-frames="7">7</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:80px;min-width:80px;max-width:80px;flex:0 0 80px;" data-frames="5">5</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:80px;min-width:80px;max-width:80px;flex:0 0 80px;" data-frames="5">5</td>
+<td class="tc-k" title="元図の黒い区切り" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:448px;min-width:448px;max-width:448px;flex:0 0 448px;" data-frames="28">28</td>
 </tr>
 <tr class="tc-empty-row">
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第10図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">無敵</td>
-<td class="tc-b" style="width:24px;min-width:24px;" title="元図の青色（全身無敵）">1</td>
-<td class="tc-gap" style="width:9px;min-width:9px;" title="元図の空白の細い区切り"></td>
-<td class="tc-b" style="width:55px;min-width:55px;" title="元図の青色（全身無敵）">4</td>
-<td class="tc-u" style="width:42px;min-width:42px;" title="元図の青緑色（部分無敵）">3</td>
-<td class="tc-note" style="width:300px;min-width:300px;">全身無敵…5＋膝上無敵…3</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">無敵</td>
+<td class="tc-b tc-one" title="元図の青色（全身無敵）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1">1</td>
+<td class="tc-gap" title="元図の空白の細い区切り" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-b" title="元図の青色（全身無敵）" style="width:64px;min-width:64px;max-width:64px;flex:0 0 64px;" data-frames="4">4</td>
+<td class="tc-u" title="元図の青緑色（部分無敵）" style="width:48px;min-width:48px;max-width:48px;flex:0 0 48px;" data-frames="3">3</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">全身無敵…5＋膝上無敵…3</td>
 </tr>
 
 </table></div>
@@ -301,59 +318,59 @@ KOF2002の舞の弱龍炎舞
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第11図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">攻撃判定</td>
-<td class="tc-g" style="width:56px;min-width:56px;" title="灰色の区間（発生前・隙・硬直など）">4</td>
-<td class="tc-r" style="width:42px;min-width:42px;" title="攻撃判定がある区間">3</td>
-<td class="tc-g" style="width:70px;min-width:70px;" title="灰色の区間（発生前・隙・硬直など）">5</td>
-<td class="tc-g" style="width:28px;min-width:28px;" title="灰色の区間（発生前・隙・硬直など）">2</td>
-<td class="tc-r" style="width:42px;min-width:42px;" title="攻撃判定がある区間">3</td>
-<td class="tc-g" style="width:42px;min-width:42px;" title="灰色の区間（発生前・隙・硬直など）">3</td>
-<td class="tc-r" style="width:42px;min-width:42px;" title="攻撃判定がある区間">3</td>
-<td class="tc-g" style="width:266px;min-width:266px;" title="灰色の区間（発生前・隙・硬直など）">19</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">攻撃判定</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:64px;min-width:64px;max-width:64px;flex:0 0 64px;" data-frames="4">4</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:48px;min-width:48px;max-width:48px;flex:0 0 48px;" data-frames="3">3</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:80px;min-width:80px;max-width:80px;flex:0 0 80px;" data-frames="5">5</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:32px;min-width:32px;max-width:32px;flex:0 0 32px;" data-frames="2">2</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:48px;min-width:48px;max-width:48px;flex:0 0 48px;" data-frames="3">3</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:48px;min-width:48px;max-width:48px;flex:0 0 48px;" data-frames="3">3</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:48px;min-width:48px;max-width:48px;flex:0 0 48px;" data-frames="3">3</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:304px;min-width:304px;max-width:304px;flex:0 0 304px;" data-frames="19">19</td>
 </tr>
 <tr class="tc-empty-row">
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第12図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">ガード時</td>
-<td class="tc-empty" style="width:70px;min-width:70px;"></td>
-<td class="tc-l" style="width:28px;min-width:28px;" title="ガード・ヒット時の区間（明緑）">2</td>
-<td class="tc-d" style="width:98px;min-width:98px;" title="ガード・ヒット時の区間（深緑）">7</td>
-<td class="tc-l" style="width:24px;min-width:24px;" title="ガード・ヒット時の区間（明緑）">1</td>
-<td class="tc-d" style="width:308px;min-width:308px;" title="ガード・ヒット時の区間（深緑）">22</td>
-<td class="tc-note" style="width:300px;min-width:300px;">（？）</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ガード時</td>
+<td class="tc-empty" style="width:80px;min-width:80px;max-width:80px;flex:0 0 80px;" data-frames="5"></td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:32px;min-width:32px;max-width:32px;flex:0 0 32px;" data-frames="2">2</td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:112px;min-width:112px;max-width:112px;flex:0 0 112px;" data-frames="7">7</td>
+<td class="tc-l tc-one" title="ガード・ヒット時の区間（明緑）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1">1</td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:352px;min-width:352px;max-width:352px;flex:0 0 352px;" data-frames="22">22</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">（？）</td>
 </tr>
 <tr class="tc-empty-row">
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第13図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">ヒット時</td>
-<td class="tc-empty" style="width:70px;min-width:70px;"></td>
-<td class="tc-l" style="width:28px;min-width:28px;" title="ガード・ヒット時の区間（明緑）">2</td>
-<td class="tc-d" style="width:448px;min-width:448px;" title="ガード・ヒット時の区間（深緑）">32</td>
-<td class="tc-note" style="width:300px;min-width:300px;">（？）</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ヒット時</td>
+<td class="tc-empty" style="width:80px;min-width:80px;max-width:80px;flex:0 0 80px;" data-frames="5"></td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:32px;min-width:32px;max-width:32px;flex:0 0 32px;" data-frames="2">2</td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:512px;min-width:512px;max-width:512px;flex:0 0 512px;" data-frames="32">32</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">（？）</td>
 </tr>
 
 </table></div>
@@ -369,48 +386,48 @@ KOF2002の舞の弱龍炎舞
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第14図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">攻撃判定</td>
-<td class="tc-g" style="width:84px;min-width:84px;" title="灰色の区間（発生前・隙・硬直など）">6</td>
-<td class="tc-r" style="width:112px;min-width:112px;" title="攻撃判定がある区間">8</td>
-<td class="tc-g" style="width:140px;min-width:140px;" title="灰色の区間（発生前・隙・硬直など）">10</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">攻撃判定</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:96px;min-width:96px;max-width:96px;flex:0 0 96px;" data-frames="6">6</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:128px;min-width:128px;max-width:128px;flex:0 0 128px;" data-frames="8">8</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:160px;min-width:160px;max-width:160px;flex:0 0 160px;" data-frames="10">10</td>
 </tr>
 <tr class="tc-empty-row">
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第15図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">ガード時</td>
-<td class="tc-empty" style="width:98px;min-width:98px;"></td>
-<td class="tc-l" style="width:98px;min-width:98px;" title="ガード・ヒット時の区間（明緑）">7</td>
-<td class="tc-d" style="width:140px;min-width:140px;" title="ガード・ヒット時の区間（深緑）">10</td>
-<td class="tc-l" style="width:98px;min-width:98px;" title="ガード・ヒット時の区間（明緑）">7</td>
-<td class="tc-note" style="width:300px;min-width:300px;">（ジョー最低で五分、最高で7f有利）</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ガード時</td>
+<td class="tc-empty" style="width:112px;min-width:112px;max-width:112px;flex:0 0 112px;" data-frames="7"></td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:112px;min-width:112px;max-width:112px;flex:0 0 112px;" data-frames="7">7</td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:160px;min-width:160px;max-width:160px;flex:0 0 160px;" data-frames="10">10</td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:112px;min-width:112px;max-width:112px;flex:0 0 112px;" data-frames="7">7</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">（ジョー最低で五分、最高で7f有利）</td>
 </tr>
 <tr class="tc-empty-row">
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-empty" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第16図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">ヒット時</td>
-<td class="tc-empty" style="width:98px;min-width:98px;"></td>
-<td class="tc-l" style="width:98px;min-width:98px;" title="ガード・ヒット時の区間（明緑）">7</td>
-<td class="tc-d" style="width:168px;min-width:168px;" title="ガード・ヒット時の区間（深緑）">12</td>
-<td class="tc-l" style="width:98px;min-width:98px;" title="ガード・ヒット時の区間（明緑）">7</td>
-<td class="tc-note" style="width:300px;min-width:300px;">（ジョー最低で2f有利、最高で9f有利）</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ヒット時</td>
+<td class="tc-empty" style="width:112px;min-width:112px;max-width:112px;flex:0 0 112px;" data-frames="7"></td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:112px;min-width:112px;max-width:112px;flex:0 0 112px;" data-frames="7">7</td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:192px;min-width:192px;max-width:192px;flex:0 0 192px;" data-frames="12">12</td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:112px;min-width:112px;max-width:112px;flex:0 0 112px;" data-frames="7">7</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">（ジョー最低で2f有利、最高で9f有利）</td>
 </tr>
 
 </table></div>
@@ -420,23 +437,23 @@ KOF2002の舞の弱龍炎舞
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第17図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">攻撃判定</td>
-<td class="tc-g" style="width:98px;min-width:98px;" title="灰色の区間（発生前・隙・硬直など）">7</td>
-<td class="tc-r" style="width:28px;min-width:28px;" title="攻撃判定がある区間">2</td>
-<td class="tc-g" style="width:70px;min-width:70px;" title="灰色の区間（発生前・隙・硬直など）">5</td>
-<td class="tc-r" style="width:112px;min-width:112px;" title="攻撃判定がある区間">8</td>
-<td class="tc-g" style="width:266px;min-width:266px;" title="灰色の区間（発生前・隙・硬直など）">19</td>
-<td class="tc-k" style="width:9px;min-width:9px;" title="元図の黒い区切り"></td>
-<td class="tc-g" style="width:153px;min-width:153px;" title="灰色の区間（発生前・隙・硬直など）">11</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">攻撃判定</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:112px;min-width:112px;max-width:112px;flex:0 0 112px;" data-frames="7">7</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:32px;min-width:32px;max-width:32px;flex:0 0 32px;" data-frames="2">2</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:80px;min-width:80px;max-width:80px;flex:0 0 80px;" data-frames="5">5</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:128px;min-width:128px;max-width:128px;flex:0 0 128px;" data-frames="8">8</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:304px;min-width:304px;max-width:304px;flex:0 0 304px;" data-frames="19">19</td>
+<td class="tc-k" title="元図の黒い区切り" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:176px;min-width:176px;max-width:176px;flex:0 0 176px;" data-frames="11">11</td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第18図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">無敵</td>
-<td class="tc-c" style="width:126px;min-width:126px;" title="元図の水色（無敵時間表示）">9</td>
-<td class="tc-note" style="width:300px;min-width:300px;">上半身9</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">無敵</td>
+<td class="tc-c" title="元図の水色（無敵時間表示）" style="width:144px;min-width:144px;max-width:144px;flex:0 0 144px;" data-frames="9">9</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">上半身9</td>
 </tr>
 
 </table></div>
@@ -454,14 +471,14 @@ KOF2002の舞の弱龍炎舞
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第19図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">攻撃判定</td>
-<td class="tc-g" style="width:98px;min-width:98px;" title="灰色の区間（発生前・隙・硬直など）">14</td>
-<td class="tc-r" style="width:24px;min-width:24px;" title="攻撃判定がある区間">3</td>
-<td class="tc-k" style="width:9px;min-width:9px;" title="元図の黒い区切り"></td>
-<td class="tc-r" style="width:24px;min-width:24px;" title="攻撃判定がある区間">3</td>
-<td class="tc-k" style="width:9px;min-width:9px;" title="元図の黒い区切り"></td>
-<td class="tc-r" style="width:27px;min-width:27px;" title="攻撃判定がある区間">4</td>
-<td class="tc-g" style="width:133px;min-width:133px;" title="灰色の区間（発生前・隙・硬直など）">19</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">攻撃判定</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:224px;min-width:224px;max-width:224px;flex:0 0 224px;" data-frames="14">14</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:48px;min-width:48px;max-width:48px;flex:0 0 48px;" data-frames="3">3</td>
+<td class="tc-k" title="元図の黒い区切り" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:48px;min-width:48px;max-width:48px;flex:0 0 48px;" data-frames="3">3</td>
+<td class="tc-k" title="元図の黒い区切り" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:64px;min-width:64px;max-width:64px;flex:0 0 64px;" data-frames="4">4</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:304px;min-width:304px;max-width:304px;flex:0 0 304px;" data-frames="19">19</td>
 </tr>
 
 </table></div>
@@ -473,23 +490,23 @@ KOF2002の舞の弱龍炎舞
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第20図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">攻撃判定</td>
-<td class="tc-g" style="width:49px;min-width:49px;" title="灰色の区間（発生前・隙・硬直など）">7</td>
-<td class="tc-r" style="width:24px;min-width:24px;" title="攻撃判定がある区間">2</td>
-<td class="tc-g" style="width:35px;min-width:35px;" title="灰色の区間（発生前・隙・硬直など）">5</td>
-<td class="tc-r" style="width:56px;min-width:56px;" title="攻撃判定がある区間">8</td>
-<td class="tc-g" style="width:133px;min-width:133px;" title="灰色の区間（発生前・隙・硬直など）">19</td>
-<td class="tc-k" style="width:9px;min-width:9px;" title="元図の黒い区切り"></td>
-<td class="tc-g" style="width:76px;min-width:76px;" title="灰色の区間（発生前・隙・硬直など）">11</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">攻撃判定</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:112px;min-width:112px;max-width:112px;flex:0 0 112px;" data-frames="7">7</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:32px;min-width:32px;max-width:32px;flex:0 0 32px;" data-frames="2">2</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:80px;min-width:80px;max-width:80px;flex:0 0 80px;" data-frames="5">5</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:128px;min-width:128px;max-width:128px;flex:0 0 128px;" data-frames="8">8</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:304px;min-width:304px;max-width:304px;flex:0 0 304px;" data-frames="19">19</td>
+<td class="tc-k" title="元図の黒い区切り" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:176px;min-width:176px;max-width:176px;flex:0 0 176px;" data-frames="11">11</td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第21図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">無敵</td>
-<td class="tc-c" style="width:63px;min-width:63px;" title="元図の水色（無敵時間表示）">9</td>
-<td class="tc-note" style="width:300px;min-width:300px;">上半身9</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">無敵</td>
+<td class="tc-c" title="元図の水色（無敵時間表示）" style="width:144px;min-width:144px;max-width:144px;flex:0 0 144px;" data-frames="9">9</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">上半身9</td>
 </tr>
 
 </table></div>
@@ -502,51 +519,51 @@ KOF2002の舞の弱龍炎舞
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第22図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">攻撃判定</td>
-<td class="tc-g" style="width:24px;min-width:24px;" title="灰色の区間（発生前・隙・硬直など）"></td>
-<td class="tc-gap" style="width:9px;min-width:9px;" title="元図の空白の細い区切り"></td>
-<td class="tc-g" style="width:90px;min-width:90px;" title="灰色の区間（発生前・隙・硬直など）">13</td>
-<td class="tc-r" style="width:28px;min-width:28px;" title="攻撃判定がある区間">4</td>
-<td class="tc-gap" style="width:9px;min-width:9px;" title="元図の空白の細い区切り"></td>
-<td class="tc-r" style="width:55px;min-width:55px;" title="攻撃判定がある区間">8</td>
-<td class="tc-w" style="width:9px;min-width:9px;" title="元図の白い区切り"></td>
-<td class="tc-r" style="width:24px;min-width:24px;" title="攻撃判定がある区間"></td>
-<td class="tc-g" style="width:24px;min-width:24px;" title="灰色の区間（発生前・隙・硬直など）"></td>
-<td class="tc-r" style="width:24px;min-width:24px;" title="攻撃判定がある区間"></td>
-<td class="tc-g" style="width:24px;min-width:24px;" title="灰色の区間（発生前・隙・硬直など）"></td>
-<td class="tc-r" style="width:24px;min-width:24px;" title="攻撃判定がある区間"></td>
-<td class="tc-g" style="width:24px;min-width:24px;" title="灰色の区間（発生前・隙・硬直など）"></td>
-<td class="tc-r" style="width:24px;min-width:24px;" title="攻撃判定がある区間"></td>
-<td class="tc-g" style="width:24px;min-width:24px;" title="灰色の区間（発生前・隙・硬直など）"></td>
-<td class="tc-r" style="width:24px;min-width:24px;" title="攻撃判定がある区間"></td>
-<td class="tc-g" style="width:24px;min-width:24px;" title="灰色の区間（発生前・隙・硬直など）"></td>
-<td class="tc-r" style="width:24px;min-width:24px;" title="攻撃判定がある区間"></td>
-<td class="tc-g" style="width:24px;min-width:24px;" title="灰色の区間（発生前・隙・硬直など）"></td>
-<td class="tc-r" style="width:24px;min-width:24px;" title="攻撃判定がある区間"></td>
-<td class="tc-g" style="width:24px;min-width:24px;" title="灰色の区間（発生前・隙・硬直など）"></td>
-<td class="tc-r" style="width:24px;min-width:24px;" title="攻撃判定がある区間"></td>
-<td class="tc-g" style="width:24px;min-width:24px;" title="灰色の区間（発生前・隙・硬直など）"></td>
-<td class="tc-r" style="width:24px;min-width:24px;" title="攻撃判定がある区間"></td>
-<td class="tc-g" style="width:24px;min-width:24px;" title="灰色の区間（発生前・隙・硬直など）"></td>
-<td class="tc-r" style="width:24px;min-width:24px;" title="攻撃判定がある区間"></td>
-<td class="tc-g" style="width:24px;min-width:24px;" title="灰色の区間（発生前・隙・硬直など）"></td>
-<td class="tc-r" style="width:24px;min-width:24px;" title="攻撃判定がある区間"></td>
-<td class="tc-g" style="width:24px;min-width:24px;" title="灰色の区間（発生前・隙・硬直など）"></td>
-<td class="tc-r" style="width:24px;min-width:24px;" title="攻撃判定がある区間"></td>
-<td class="tc-g" style="width:49px;min-width:49px;" title="灰色の区間（発生前・隙・硬直など）">7</td>
-<td class="tc-k" style="width:9px;min-width:9px;" title="元図の黒い区切り"></td>
-<td class="tc-g" style="width:237px;min-width:237px;" title="灰色の区間（発生前・隙・硬直など）">34</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">攻撃判定</td>
+<td class="tc-g tc-one tc-inferred" title="灰色の区間（発生前・隙・硬直など）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-gap" title="元図の空白の細い区切り" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:208px;min-width:208px;max-width:208px;flex:0 0 208px;" data-frames="13">13</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:64px;min-width:64px;max-width:64px;flex:0 0 64px;" data-frames="4">4</td>
+<td class="tc-gap" title="元図の空白の細い区切り" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:128px;min-width:128px;max-width:128px;flex:0 0 128px;" data-frames="8">8</td>
+<td class="tc-w" title="元図の白い区切り" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-r tc-one tc-inferred" title="攻撃判定がある区間" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-g tc-one tc-inferred" title="灰色の区間（発生前・隙・硬直など）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-r tc-one tc-inferred" title="攻撃判定がある区間" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-g tc-one tc-inferred" title="灰色の区間（発生前・隙・硬直など）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-r tc-one tc-inferred" title="攻撃判定がある区間" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-g tc-one tc-inferred" title="灰色の区間（発生前・隙・硬直など）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-r tc-one tc-inferred" title="攻撃判定がある区間" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-g tc-one tc-inferred" title="灰色の区間（発生前・隙・硬直など）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-r tc-one tc-inferred" title="攻撃判定がある区間" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-g tc-one tc-inferred" title="灰色の区間（発生前・隙・硬直など）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-r tc-one tc-inferred" title="攻撃判定がある区間" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-g tc-one tc-inferred" title="灰色の区間（発生前・隙・硬直など）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-r tc-one tc-inferred" title="攻撃判定がある区間" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-g tc-one tc-inferred" title="灰色の区間（発生前・隙・硬直など）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-r tc-one tc-inferred" title="攻撃判定がある区間" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-g tc-one tc-inferred" title="灰色の区間（発生前・隙・硬直など）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-r tc-one tc-inferred" title="攻撃判定がある区間" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-g tc-one tc-inferred" title="灰色の区間（発生前・隙・硬直など）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-r tc-one tc-inferred" title="攻撃判定がある区間" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-g tc-one tc-inferred" title="灰色の区間（発生前・隙・硬直など）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-r tc-one tc-inferred" title="攻撃判定がある区間" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-g tc-one tc-inferred" title="灰色の区間（発生前・隙・硬直など）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-r tc-one tc-inferred" title="攻撃判定がある区間" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:112px;min-width:112px;max-width:112px;flex:0 0 112px;" data-frames="7">7</td>
+<td class="tc-k" title="元図の黒い区切り" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:544px;min-width:544px;max-width:544px;flex:0 0 544px;" data-frames="34">34</td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第23図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">無敵</td>
-<td class="tc-c" style="width:24px;min-width:24px;" title="元図の水色（無敵時間表示）"></td>
-<td class="tc-gap" style="width:9px;min-width:9px;" title="元図の空白の細い区切り"></td>
-<td class="tc-c" style="width:119px;min-width:119px;" title="元図の水色（無敵時間表示）">17</td>
-<td class="tc-note" style="width:300px;min-width:300px;">全身18</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">無敵</td>
+<td class="tc-c tc-one tc-inferred" title="元図の水色（無敵時間表示）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-gap" title="元図の空白の細い区切り" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-c" title="元図の水色（無敵時間表示）" style="width:272px;min-width:272px;max-width:272px;flex:0 0 272px;" data-frames="17">17</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">全身18</td>
 </tr>
 
 </table></div>
@@ -557,10 +574,10 @@ KOF2002の舞の弱龍炎舞
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第24図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">攻撃判定</td>
-<td class="tc-g" style="width:70px;min-width:70px;" title="灰色の区間（発生前・隙・硬直など）">10</td>
-<td class="tc-r" style="width:56px;min-width:56px;" title="攻撃判定がある区間">8</td>
-<td class="tc-g" style="width:49px;min-width:49px;" title="灰色の区間（発生前・隙・硬直など）">7</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">攻撃判定</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:160px;min-width:160px;max-width:160px;flex:0 0 160px;" data-frames="10">10</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:128px;min-width:128px;max-width:128px;flex:0 0 128px;" data-frames="8">8</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:112px;min-width:112px;max-width:112px;flex:0 0 112px;" data-frames="7">7</td>
 </tr>
 
 </table></div>
@@ -571,34 +588,34 @@ KOF2002の舞の弱龍炎舞
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第25図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">攻撃判定</td>
-<td class="tc-g" style="width:35px;min-width:35px;" title="灰色の区間（発生前・隙・硬直など）">5</td>
-<td class="tc-r" style="width:56px;min-width:56px;" title="攻撃判定がある区間">8</td>
-<td class="tc-g" style="width:91px;min-width:91px;" title="灰色の区間（発生前・隙・硬直など）">13</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">攻撃判定</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:80px;min-width:80px;max-width:80px;flex:0 0 80px;" data-frames="5">5</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:128px;min-width:128px;max-width:128px;flex:0 0 128px;" data-frames="8">8</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:208px;min-width:208px;max-width:208px;flex:0 0 208px;" data-frames="13">13</td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第26図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">ガード時</td>
-<td class="tc-empty" style="width:42px;min-width:42px;"></td>
-<td class="tc-l" style="width:49px;min-width:49px;" title="ガード・ヒット時の区間（明緑）">7</td>
-<td class="tc-d" style="width:70px;min-width:70px;" title="ガード・ヒット時の区間（深緑）">10</td>
-<td class="tc-l" style="width:49px;min-width:49px;" title="ガード・ヒット時の区間（明緑）">7</td>
-<td class="tc-note" style="width:300px;min-width:300px;">（ユリ最低で3f不利、最高で4f有利）</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ガード時</td>
+<td class="tc-empty" style="width:96px;min-width:96px;max-width:96px;flex:0 0 96px;" data-frames="6"></td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:112px;min-width:112px;max-width:112px;flex:0 0 112px;" data-frames="7">7</td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:160px;min-width:160px;max-width:160px;flex:0 0 160px;" data-frames="10">10</td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:112px;min-width:112px;max-width:112px;flex:0 0 112px;" data-frames="7">7</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">（ユリ最低で3f不利、最高で4f有利）</td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第27図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">ヒット時</td>
-<td class="tc-empty" style="width:42px;min-width:42px;"></td>
-<td class="tc-l" style="width:49px;min-width:49px;" title="ガード・ヒット時の区間（明緑）">7</td>
-<td class="tc-d" style="width:84px;min-width:84px;" title="ガード・ヒット時の区間（深緑）">12</td>
-<td class="tc-l" style="width:49px;min-width:49px;" title="ガード・ヒット時の区間（明緑）">7</td>
-<td class="tc-note" style="width:300px;min-width:300px;">（ユリ最低で1f不利、最高で6f有利）</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ヒット時</td>
+<td class="tc-empty" style="width:96px;min-width:96px;max-width:96px;flex:0 0 96px;" data-frames="6"></td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:112px;min-width:112px;max-width:112px;flex:0 0 112px;" data-frames="7">7</td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:192px;min-width:192px;max-width:192px;flex:0 0 192px;" data-frames="12">12</td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:112px;min-width:112px;max-width:112px;flex:0 0 112px;" data-frames="7">7</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">（ユリ最低で1f不利、最高で6f有利）</td>
 </tr>
 
 </table></div>
@@ -609,32 +626,32 @@ KOF2002の舞の弱龍炎舞
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第28図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">攻撃判定</td>
-<td class="tc-g" style="width:112px;min-width:112px;" title="灰色の区間（発生前・隙・硬直など）">16</td>
-<td class="tc-r" style="width:24px;min-width:24px;" title="攻撃判定がある区間">2</td>
-<td class="tc-k" style="width:9px;min-width:9px;" title="元図の黒い区切り"></td>
-<td class="tc-r" style="width:27px;min-width:27px;" title="攻撃判定がある区間">4</td>
-<td class="tc-g" style="width:84px;min-width:84px;" title="灰色の区間（発生前・隙・硬直など）">12</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">攻撃判定</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:256px;min-width:256px;max-width:256px;flex:0 0 256px;" data-frames="16">16</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:32px;min-width:32px;max-width:32px;flex:0 0 32px;" data-frames="2">2</td>
+<td class="tc-k" title="元図の黒い区切り" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:64px;min-width:64px;max-width:64px;flex:0 0 64px;" data-frames="4">4</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:192px;min-width:192px;max-width:192px;flex:0 0 192px;" data-frames="12">12</td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第29図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">ガード時</td>
-<td class="tc-empty" style="width:119px;min-width:119px;"></td>
-<td class="tc-l" style="width:35px;min-width:35px;" title="ガード・ヒット時の区間（明緑）">5</td>
-<td class="tc-d" style="width:112px;min-width:112px;" title="ガード・ヒット時の区間（深緑）">16</td>
-<td class="tc-l" style="width:35px;min-width:35px;" title="ガード・ヒット時の区間（明緑）">5</td>
-<td class="tc-note" style="width:300px;min-width:300px;">（ラルフ最低で4f有利、最高で9f有利）</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ガード時</td>
+<td class="tc-empty" style="width:272px;min-width:272px;max-width:272px;flex:0 0 272px;" data-frames="17"></td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:80px;min-width:80px;max-width:80px;flex:0 0 80px;" data-frames="5">5</td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:256px;min-width:256px;max-width:256px;flex:0 0 256px;" data-frames="16">16</td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:80px;min-width:80px;max-width:80px;flex:0 0 80px;" data-frames="5">5</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">（ラルフ最低で4f有利、最高で9f有利）</td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第30図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">ヒット時</td>
-<td class="tc-note" style="width:300px;min-width:300px;">ダウン</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ヒット時</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">ダウン</td>
 </tr>
 
 </table></div>
@@ -648,31 +665,31 @@ KOF2002の舞の弱龍炎舞
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第31図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">攻撃判定</td>
-<td class="tc-g" style="width:24px;min-width:24px;" title="灰色の区間（発生前・隙・硬直など）"></td>
-<td class="tc-gap" style="width:9px;min-width:9px;" title="元図の空白の細い区切り"></td>
-<td class="tc-g" style="width:27px;min-width:27px;" title="灰色の区間（発生前・隙・硬直など）">4</td>
-<td class="tc-r" style="width:35px;min-width:35px;" title="攻撃判定がある区間">5</td>
-<td class="tc-g" style="width:35px;min-width:35px;" title="灰色の区間（発生前・隙・硬直など）">4</td>
-<td class="tc-r" style="width:28px;min-width:28px;" title="攻撃判定がある区間">4</td>
-<td class="tc-g" style="width:35px;min-width:35px;" title="灰色の区間（発生前・隙・硬直など）">5</td>
-<td class="tc-r" style="width:28px;min-width:28px;" title="攻撃判定がある区間">4</td>
-<td class="tc-g" style="width:35px;min-width:35px;" title="灰色の区間（発生前・隙・硬直など）">5</td>
-<td class="tc-r" style="width:28px;min-width:28px;" title="攻撃判定がある区間">4</td>
-<td class="tc-g" style="width:35px;min-width:35px;" title="灰色の区間（発生前・隙・硬直など）">5</td>
-<td class="tc-r" style="width:28px;min-width:28px;" title="攻撃判定がある区間">4</td>
-<td class="tc-g" style="width:238px;min-width:238px;" title="灰色の区間（発生前・隙・硬直など）">34</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">攻撃判定</td>
+<td class="tc-g tc-one tc-inferred" title="灰色の区間（発生前・隙・硬直など）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-gap" title="元図の空白の細い区切り" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:64px;min-width:64px;max-width:64px;flex:0 0 64px;" data-frames="4">4</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:80px;min-width:80px;max-width:80px;flex:0 0 80px;" data-frames="5">5</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:64px;min-width:64px;max-width:64px;flex:0 0 64px;" data-frames="4">4</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:64px;min-width:64px;max-width:64px;flex:0 0 64px;" data-frames="4">4</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:80px;min-width:80px;max-width:80px;flex:0 0 80px;" data-frames="5">5</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:64px;min-width:64px;max-width:64px;flex:0 0 64px;" data-frames="4">4</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:80px;min-width:80px;max-width:80px;flex:0 0 80px;" data-frames="5">5</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:64px;min-width:64px;max-width:64px;flex:0 0 64px;" data-frames="4">4</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:80px;min-width:80px;max-width:80px;flex:0 0 80px;" data-frames="5">5</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:64px;min-width:64px;max-width:64px;flex:0 0 64px;" data-frames="4">4</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:544px;min-width:544px;max-width:544px;flex:0 0 544px;" data-frames="34">34</td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第32図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">無敵</td>
-<td class="tc-c" style="width:24px;min-width:24px;" title="元図の水色（無敵時間表示）"></td>
-<td class="tc-gap" style="width:9px;min-width:9px;" title="元図の空白の細い区切り"></td>
-<td class="tc-c" style="width:24px;min-width:24px;" title="元図の水色（無敵時間表示）">3</td>
-<td class="tc-note" style="width:300px;min-width:300px;">全身4</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">無敵</td>
+<td class="tc-c tc-one tc-inferred" title="元図の水色（無敵時間表示）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-gap" title="元図の空白の細い区切り" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-c" title="元図の水色（無敵時間表示）" style="width:48px;min-width:48px;max-width:48px;flex:0 0 48px;" data-frames="3">3</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">全身4</td>
 </tr>
 
 </table></div>
@@ -683,36 +700,36 @@ KOF2002の舞の弱龍炎舞
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第33図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">攻撃判定</td>
-<td class="tc-g" style="width:24px;min-width:24px;" title="灰色の区間（発生前・隙・硬直など）">3</td>
-<td class="tc-r" style="width:24px;min-width:24px;" title="攻撃判定がある区間">3</td>
-<td class="tc-k" style="width:9px;min-width:9px;" title="元図の黒い区切り"></td>
-<td class="tc-r" style="width:69px;min-width:69px;" title="攻撃判定がある区間">10</td>
-<td class="tc-g" style="width:70px;min-width:70px;" title="灰色の区間（発生前・隙・硬直など）">10</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">攻撃判定</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:48px;min-width:48px;max-width:48px;flex:0 0 48px;" data-frames="3">3</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:48px;min-width:48px;max-width:48px;flex:0 0 48px;" data-frames="3">3</td>
+<td class="tc-k" title="元図の黒い区切り" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:160px;min-width:160px;max-width:160px;flex:0 0 160px;" data-frames="10">10</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:160px;min-width:160px;max-width:160px;flex:0 0 160px;" data-frames="10">10</td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第34図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">ガード時</td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-l" style="width:84px;min-width:84px;" title="ガード・ヒット時の区間（明緑）">12</td>
-<td class="tc-d" style="width:35px;min-width:35px;" title="ガード・ヒット時の区間（深緑）">5</td>
-<td class="tc-l" style="width:84px;min-width:84px;" title="ガード・ヒット時の区間（明緑）">12</td>
-<td class="tc-note" style="width:300px;min-width:300px;">（クローン京最低で5f不利、最高で7f有利）</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ガード時</td>
+<td class="tc-empty" style="width:64px;min-width:64px;max-width:64px;flex:0 0 64px;" data-frames="4"></td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:192px;min-width:192px;max-width:192px;flex:0 0 192px;" data-frames="12">12</td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:80px;min-width:80px;max-width:80px;flex:0 0 80px;" data-frames="5">5</td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:192px;min-width:192px;max-width:192px;flex:0 0 192px;" data-frames="12">12</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">（クローン京最低で5f不利、最高で7f有利）</td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第35図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">ヒット時</td>
-<td class="tc-empty" style="width:28px;min-width:28px;"></td>
-<td class="tc-l" style="width:84px;min-width:84px;" title="ガード・ヒット時の区間（明緑）">12</td>
-<td class="tc-d" style="width:49px;min-width:49px;" title="ガード・ヒット時の区間（深緑）">7</td>
-<td class="tc-l" style="width:84px;min-width:84px;" title="ガード・ヒット時の区間（明緑）">12</td>
-<td class="tc-note" style="width:300px;min-width:300px;">（クローン京最低で4f不利、最高で9f有利）</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ヒット時</td>
+<td class="tc-empty" style="width:64px;min-width:64px;max-width:64px;flex:0 0 64px;" data-frames="4"></td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:192px;min-width:192px;max-width:192px;flex:0 0 192px;" data-frames="12">12</td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:112px;min-width:112px;max-width:112px;flex:0 0 112px;" data-frames="7">7</td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:192px;min-width:192px;max-width:192px;flex:0 0 192px;" data-frames="12">12</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">（クローン京最低で4f不利、最高で9f有利）</td>
 </tr>
 
 </table></div>
@@ -724,36 +741,36 @@ KOF2002の舞の弱龍炎舞
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第36図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:230px;min-width:230px;max-width:235px;" title="区間名・条件">攻撃判定</td>
-<td class="tc-g" style="width:49px;min-width:49px;" title="灰色の区間（発生前・隙・硬直など）">7</td>
-<td class="tc-r" style="width:24px;min-width:24px;" title="攻撃判定がある区間">2</td>
-<td class="tc-g" style="width:77px;min-width:77px;" title="灰色の区間（発生前・隙・硬直など）">11</td>
-<td class="tc-r" style="width:24px;min-width:24px;" title="攻撃判定がある区間">2</td>
-<td class="tc-g" style="width:119px;min-width:119px;" title="灰色の区間（発生前・隙・硬直など）">17</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">攻撃判定</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:112px;min-width:112px;max-width:112px;flex:0 0 112px;" data-frames="7">7</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:32px;min-width:32px;max-width:32px;flex:0 0 32px;" data-frames="2">2</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:176px;min-width:176px;max-width:176px;flex:0 0 176px;" data-frames="11">11</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:32px;min-width:32px;max-width:32px;flex:0 0 32px;" data-frames="2">2</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:272px;min-width:272px;max-width:272px;flex:0 0 272px;" data-frames="17">17</td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第37図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:230px;min-width:230px;max-width:235px;" title="区間名・条件">ガード時(2段目空振り）</td>
-<td class="tc-empty" style="width:56px;min-width:56px;"></td>
-<td class="tc-l" style="width:24px;min-width:24px;" title="ガード・ヒット時の区間（明緑）"></td>
-<td class="tc-d" style="width:112px;min-width:112px;" title="ガード・ヒット時の区間（深緑）">16</td>
-<td class="tc-l" style="width:24px;min-width:24px;" title="ガード・ヒット時の区間（明緑）"></td>
-<td class="tc-note" style="width:300px;min-width:300px;">（ビリー最低で14f不利、最高で13f不利）</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ガード時(2段目空振り）</td>
+<td class="tc-empty" style="width:128px;min-width:128px;max-width:128px;flex:0 0 128px;" data-frames="8"></td>
+<td class="tc-l tc-one tc-inferred" title="ガード・ヒット時の区間（明緑）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:256px;min-width:256px;max-width:256px;flex:0 0 256px;" data-frames="16">16</td>
+<td class="tc-l tc-one tc-inferred" title="ガード・ヒット時の区間（明緑）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">（ビリー最低で14f不利、最高で13f不利）</td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第38図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:230px;min-width:230px;max-width:235px;" title="区間名・条件">ヒット時（2段目空振り）</td>
-<td class="tc-empty" style="width:56px;min-width:56px;"></td>
-<td class="tc-l" style="width:24px;min-width:24px;" title="ガード・ヒット時の区間（明緑）"></td>
-<td class="tc-d" style="width:126px;min-width:126px;" title="ガード・ヒット時の区間（深緑）">18</td>
-<td class="tc-l" style="width:24px;min-width:24px;" title="ガード・ヒット時の区間（明緑）"></td>
-<td class="tc-note" style="width:300px;min-width:300px;">（ビリー最低で12f不利、最高で10f不利）</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ヒット時（2段目空振り）</td>
+<td class="tc-empty" style="width:128px;min-width:128px;max-width:128px;flex:0 0 128px;" data-frames="8"></td>
+<td class="tc-l tc-one tc-inferred" title="ガード・ヒット時の区間（明緑）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:288px;min-width:288px;max-width:288px;flex:0 0 288px;" data-frames="18">18</td>
+<td class="tc-l tc-one tc-inferred" title="ガード・ヒット時の区間（明緑）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">（ビリー最低で12f不利、最高で10f不利）</td>
 </tr>
 
 </table></div>
@@ -761,22 +778,22 @@ KOF2002の舞の弱龍炎舞
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第39図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:230px;min-width:230px;max-width:235px;" title="区間名・条件">ガード時(2段目もガード）</td>
-<td class="tc-empty" style="width:56px;min-width:56px;"></td>
-<td class="tc-l" style="width:24px;min-width:24px;" title="ガード・ヒット時の区間（明緑）"></td>
-<td class="tc-d" style="width:203px;min-width:203px;" title="ガード・ヒット時の区間（深緑）">29</td>
-<td class="tc-note" style="width:300px;min-width:300px;">（ビリー1f不利）</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ガード時(2段目もガード）</td>
+<td class="tc-empty" style="width:128px;min-width:128px;max-width:128px;flex:0 0 128px;" data-frames="8"></td>
+<td class="tc-l tc-one tc-inferred" title="ガード・ヒット時の区間（明緑）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:464px;min-width:464px;max-width:464px;flex:0 0 464px;" data-frames="29">29</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">（ビリー1f不利）</td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第40図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:230px;min-width:230px;max-width:235px;" title="区間名・条件">ヒット時（2段目もヒット）</td>
-<td class="tc-empty" style="width:56px;min-width:56px;"></td>
-<td class="tc-l" style="width:24px;min-width:24px;" title="ガード・ヒット時の区間（明緑）"></td>
-<td class="tc-d" style="width:217px;min-width:217px;" title="ガード・ヒット時の区間（深緑）">31</td>
-<td class="tc-note" style="width:300px;min-width:300px;">（ビリー1f有利）</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ヒット時（2段目もヒット）</td>
+<td class="tc-empty" style="width:128px;min-width:128px;max-width:128px;flex:0 0 128px;" data-frames="8"></td>
+<td class="tc-l tc-one tc-inferred" title="ガード・ヒット時の区間（明緑）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:496px;min-width:496px;max-width:496px;flex:0 0 496px;" data-frames="31">31</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">（ビリー1f有利）</td>
 </tr>
 
 </table></div>
@@ -787,36 +804,36 @@ KOF2002の舞の弱龍炎舞
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第41図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:230px;min-width:230px;max-width:235px;" title="区間名・条件">攻撃判定</td>
-<td class="tc-g" style="width:49px;min-width:49px;" title="灰色の区間（発生前・隙・硬直など）">7</td>
-<td class="tc-r" style="width:24px;min-width:24px;" title="攻撃判定がある区間">2</td>
-<td class="tc-g" style="width:77px;min-width:77px;" title="灰色の区間（発生前・隙・硬直など）">11</td>
-<td class="tc-r" style="width:24px;min-width:24px;" title="攻撃判定がある区間">2</td>
-<td class="tc-g" style="width:98px;min-width:98px;" title="灰色の区間（発生前・隙・硬直など）">14</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">攻撃判定</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:112px;min-width:112px;max-width:112px;flex:0 0 112px;" data-frames="7">7</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:32px;min-width:32px;max-width:32px;flex:0 0 32px;" data-frames="2">2</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:176px;min-width:176px;max-width:176px;flex:0 0 176px;" data-frames="11">11</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:32px;min-width:32px;max-width:32px;flex:0 0 32px;" data-frames="2">2</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:224px;min-width:224px;max-width:224px;flex:0 0 224px;" data-frames="14">14</td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第42図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:230px;min-width:230px;max-width:235px;" title="区間名・条件">ガード時(2段目空振り）</td>
-<td class="tc-empty" style="width:56px;min-width:56px;"></td>
-<td class="tc-l" style="width:24px;min-width:24px;" title="ガード・ヒット時の区間（明緑）"></td>
-<td class="tc-d" style="width:112px;min-width:112px;" title="ガード・ヒット時の区間（深緑）">16</td>
-<td class="tc-l" style="width:24px;min-width:24px;" title="ガード・ヒット時の区間（明緑）"></td>
-<td class="tc-note" style="width:300px;min-width:300px;">（ビリー最低で11f不利、最高で10f不利）</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ガード時(2段目空振り）</td>
+<td class="tc-empty" style="width:128px;min-width:128px;max-width:128px;flex:0 0 128px;" data-frames="8"></td>
+<td class="tc-l tc-one tc-inferred" title="ガード・ヒット時の区間（明緑）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:256px;min-width:256px;max-width:256px;flex:0 0 256px;" data-frames="16">16</td>
+<td class="tc-l tc-one tc-inferred" title="ガード・ヒット時の区間（明緑）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">（ビリー最低で11f不利、最高で10f不利）</td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第43図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:230px;min-width:230px;max-width:235px;" title="区間名・条件">ヒット時（2段目空振り）</td>
-<td class="tc-empty" style="width:56px;min-width:56px;"></td>
-<td class="tc-l" style="width:24px;min-width:24px;" title="ガード・ヒット時の区間（明緑）"></td>
-<td class="tc-d" style="width:126px;min-width:126px;" title="ガード・ヒット時の区間（深緑）">18</td>
-<td class="tc-l" style="width:24px;min-width:24px;" title="ガード・ヒット時の区間（明緑）"></td>
-<td class="tc-note" style="width:300px;min-width:300px;">（ビリー最低で9f不利、最高で8f不利）</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ヒット時（2段目空振り）</td>
+<td class="tc-empty" style="width:128px;min-width:128px;max-width:128px;flex:0 0 128px;" data-frames="8"></td>
+<td class="tc-l tc-one tc-inferred" title="ガード・ヒット時の区間（明緑）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:288px;min-width:288px;max-width:288px;flex:0 0 288px;" data-frames="18">18</td>
+<td class="tc-l tc-one tc-inferred" title="ガード・ヒット時の区間（明緑）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">（ビリー最低で9f不利、最高で8f不利）</td>
 </tr>
 
 </table></div>
@@ -824,22 +841,22 @@ KOF2002の舞の弱龍炎舞
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第44図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:230px;min-width:230px;max-width:235px;" title="区間名・条件">ガード時(2段目もガード）</td>
-<td class="tc-empty" style="width:56px;min-width:56px;"></td>
-<td class="tc-l" style="width:24px;min-width:24px;" title="ガード・ヒット時の区間（明緑）"></td>
-<td class="tc-d" style="width:203px;min-width:203px;" title="ガード・ヒット時の区間（深緑）">29</td>
-<td class="tc-note" style="width:300px;min-width:300px;">（ビリー2f有利）</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ガード時(2段目もガード）</td>
+<td class="tc-empty" style="width:128px;min-width:128px;max-width:128px;flex:0 0 128px;" data-frames="8"></td>
+<td class="tc-l tc-one tc-inferred" title="ガード・ヒット時の区間（明緑）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:464px;min-width:464px;max-width:464px;flex:0 0 464px;" data-frames="29">29</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">（ビリー2f有利）</td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第45図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:230px;min-width:230px;max-width:235px;" title="区間名・条件">ヒット時（2段目もヒット）</td>
-<td class="tc-empty" style="width:56px;min-width:56px;"></td>
-<td class="tc-l" style="width:24px;min-width:24px;" title="ガード・ヒット時の区間（明緑）"></td>
-<td class="tc-d" style="width:217px;min-width:217px;" title="ガード・ヒット時の区間（深緑）">31</td>
-<td class="tc-note" style="width:300px;min-width:300px;">（ビリー4f有利）</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ヒット時（2段目もヒット）</td>
+<td class="tc-empty" style="width:128px;min-width:128px;max-width:128px;flex:0 0 128px;" data-frames="8"></td>
+<td class="tc-l tc-one tc-inferred" title="ガード・ヒット時の区間（明緑）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:496px;min-width:496px;max-width:496px;flex:0 0 496px;" data-frames="31">31</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">（ビリー4f有利）</td>
 </tr>
 
 </table></div>
@@ -850,40 +867,40 @@ KOF2002の舞の弱龍炎舞
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第46図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件"></td>
-<td class="tc-head" style="width:84px;min-width:84px;">発生</td>
-<td class="tc-head" style="width:84px;min-width:84px;">持続</td>
-<td class="tc-head" style="width:84px;min-width:84px;">硬直</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta"></td>
+<td class="tc-head" style="width:96px;min-width:96px;max-width:96px;flex:0 0 96px;" data-frames="6">発生</td>
+<td class="tc-head" style="width:96px;min-width:96px;max-width:96px;flex:0 0 96px;" data-frames="6">持続</td>
+<td class="tc-head" style="width:96px;min-width:96px;max-width:96px;flex:0 0 96px;" data-frames="6">硬直</td>
 </tr>
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">攻撃判定</td>
-<td class="tc-g" style="width:42px;min-width:42px;" title="灰色の区間（発生前・隙・硬直など）">6</td>
-<td class="tc-r" style="width:42px;min-width:42px;" title="攻撃判定がある区間">6</td>
-<td class="tc-g" style="width:42px;min-width:42px;" title="灰色の区間（発生前・隙・硬直など）">6</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">攻撃判定</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:96px;min-width:96px;max-width:96px;flex:0 0 96px;" data-frames="6">6</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:96px;min-width:96px;max-width:96px;flex:0 0 96px;" data-frames="6">6</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:96px;min-width:96px;max-width:96px;flex:0 0 96px;" data-frames="6">6</td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第47図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">ガード時</td>
-<td class="tc-empty" style="width:49px;min-width:49px;"></td>
-<td class="tc-l" style="width:35px;min-width:35px;" title="ガード・ヒット時の区間（明緑）">5</td>
-<td class="tc-d" style="width:84px;min-width:84px;" title="ガード・ヒット時の区間（深緑）">12</td>
-<td class="tc-l" style="width:35px;min-width:35px;" title="ガード・ヒット時の区間（明緑）">5</td>
-<td class="tc-note" style="width:300px;min-width:300px;">（アテナ最低で6f有利、最高で11f有利）</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ガード時</td>
+<td class="tc-empty" style="width:112px;min-width:112px;max-width:112px;flex:0 0 112px;" data-frames="7"></td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:80px;min-width:80px;max-width:80px;flex:0 0 80px;" data-frames="5">5</td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:192px;min-width:192px;max-width:192px;flex:0 0 192px;" data-frames="12">12</td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:80px;min-width:80px;max-width:80px;flex:0 0 80px;" data-frames="5">5</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">（アテナ最低で6f有利、最高で11f有利）</td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第48図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">ヒット時</td>
-<td class="tc-empty" style="width:49px;min-width:49px;"></td>
-<td class="tc-l" style="width:35px;min-width:35px;" title="ガード・ヒット時の区間（明緑）">5</td>
-<td class="tc-d" style="width:98px;min-width:98px;" title="ガード・ヒット時の区間（深緑）">14</td>
-<td class="tc-l" style="width:35px;min-width:35px;" title="ガード・ヒット時の区間（明緑）">5</td>
-<td class="tc-note" style="width:300px;min-width:300px;">（アテナ最低で8f有利、最高で13f有利）</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ヒット時</td>
+<td class="tc-empty" style="width:112px;min-width:112px;max-width:112px;flex:0 0 112px;" data-frames="7"></td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:80px;min-width:80px;max-width:80px;flex:0 0 80px;" data-frames="5">5</td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:224px;min-width:224px;max-width:224px;flex:0 0 224px;" data-frames="14">14</td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:80px;min-width:80px;max-width:80px;flex:0 0 80px;" data-frames="5">5</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">（アテナ最低で8f有利、最高で13f有利）</td>
 </tr>
 
 </table></div>
@@ -897,36 +914,36 @@ KOF2002の舞の弱龍炎舞
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第49図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">攻撃判定</td>
-<td class="tc-g" style="width:24px;min-width:24px;" title="灰色の区間（発生前・隙・硬直など）">3</td>
-<td class="tc-r" style="width:24px;min-width:24px;" title="攻撃判定がある区間">3</td>
-<td class="tc-k" style="width:9px;min-width:9px;" title="元図の黒い区切り"></td>
-<td class="tc-r" style="width:69px;min-width:69px;" title="攻撃判定がある区間">10</td>
-<td class="tc-g" style="width:70px;min-width:70px;" title="灰色の区間（発生前・隙・硬直など）">10</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">攻撃判定</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:48px;min-width:48px;max-width:48px;flex:0 0 48px;" data-frames="3">3</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:48px;min-width:48px;max-width:48px;flex:0 0 48px;" data-frames="3">3</td>
+<td class="tc-k" title="元図の黒い区切り" style="width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:160px;min-width:160px;max-width:160px;flex:0 0 160px;" data-frames="10">10</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:160px;min-width:160px;max-width:160px;flex:0 0 160px;" data-frames="10">10</td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第50図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">ガード時</td>
-<td class="tc-empty" style="width:24px;min-width:24px;"></td>
-<td class="tc-l" style="width:91px;min-width:91px;" title="ガード・ヒット時の区間（明緑）">13</td>
-<td class="tc-d" style="width:28px;min-width:28px;" title="ガード・ヒット時の区間（深緑）">4</td>
-<td class="tc-l" style="width:91px;min-width:91px;" title="ガード・ヒット時の区間（明緑）">13</td>
-<td class="tc-note" style="width:300px;min-width:300px;">（クローン京最低で6f不利、最高で7f有利）</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ガード時</td>
+<td class="tc-empty" style="width:48px;min-width:48px;max-width:48px;flex:0 0 48px;" data-frames="3"></td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:208px;min-width:208px;max-width:208px;flex:0 0 208px;" data-frames="13">13</td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:64px;min-width:64px;max-width:64px;flex:0 0 64px;" data-frames="4">4</td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:208px;min-width:208px;max-width:208px;flex:0 0 208px;" data-frames="13">13</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">（クローン京最低で6f不利、最高で7f有利）</td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第51図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">ヒット時</td>
-<td class="tc-empty" style="width:24px;min-width:24px;"></td>
-<td class="tc-l" style="width:91px;min-width:91px;" title="ガード・ヒット時の区間（明緑）">13</td>
-<td class="tc-d" style="width:42px;min-width:42px;" title="ガード・ヒット時の区間（深緑）">6</td>
-<td class="tc-l" style="width:91px;min-width:91px;" title="ガード・ヒット時の区間（明緑）">13</td>
-<td class="tc-note" style="width:300px;min-width:300px;">（クローン京最低で4f不利、最高で9f有利）</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ヒット時</td>
+<td class="tc-empty" style="width:48px;min-width:48px;max-width:48px;flex:0 0 48px;" data-frames="3"></td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:208px;min-width:208px;max-width:208px;flex:0 0 208px;" data-frames="13">13</td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:96px;min-width:96px;max-width:96px;flex:0 0 96px;" data-frames="6">6</td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:208px;min-width:208px;max-width:208px;flex:0 0 208px;" data-frames="13">13</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">（クローン京最低で4f不利、最高で9f有利）</td>
 </tr>
 
 </table></div>
@@ -937,36 +954,36 @@ KOF2002の舞の弱龍炎舞
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第52図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:230px;min-width:230px;max-width:235px;" title="区間名・条件">攻撃判定</td>
-<td class="tc-g" style="width:49px;min-width:49px;" title="灰色の区間（発生前・隙・硬直など）">7</td>
-<td class="tc-r" style="width:24px;min-width:24px;" title="攻撃判定がある区間">2</td>
-<td class="tc-g" style="width:77px;min-width:77px;" title="灰色の区間（発生前・隙・硬直など）">11</td>
-<td class="tc-r" style="width:24px;min-width:24px;" title="攻撃判定がある区間">2</td>
-<td class="tc-g" style="width:98px;min-width:98px;" title="灰色の区間（発生前・隙・硬直など）">14</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">攻撃判定</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:112px;min-width:112px;max-width:112px;flex:0 0 112px;" data-frames="7">7</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:32px;min-width:32px;max-width:32px;flex:0 0 32px;" data-frames="2">2</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:176px;min-width:176px;max-width:176px;flex:0 0 176px;" data-frames="11">11</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:32px;min-width:32px;max-width:32px;flex:0 0 32px;" data-frames="2">2</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:224px;min-width:224px;max-width:224px;flex:0 0 224px;" data-frames="14">14</td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第53図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:230px;min-width:230px;max-width:235px;" title="区間名・条件">ガード時(2段目空振り）</td>
-<td class="tc-empty" style="width:49px;min-width:49px;"></td>
-<td class="tc-l" style="width:24px;min-width:24px;" title="ガード・ヒット時の区間（明緑）">2</td>
-<td class="tc-d" style="width:105px;min-width:105px;" title="ガード・ヒット時の区間（深緑）">15</td>
-<td class="tc-l" style="width:24px;min-width:24px;" title="ガード・ヒット時の区間（明緑）">2</td>
-<td class="tc-note" style="width:300px;min-width:300px;">（ビリー最低で10f不利、最高で8f不利）</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ガード時(2段目空振り）</td>
+<td class="tc-empty" style="width:112px;min-width:112px;max-width:112px;flex:0 0 112px;" data-frames="7"></td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:32px;min-width:32px;max-width:32px;flex:0 0 32px;" data-frames="2">2</td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:240px;min-width:240px;max-width:240px;flex:0 0 240px;" data-frames="15">15</td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:32px;min-width:32px;max-width:32px;flex:0 0 32px;" data-frames="2">2</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">（ビリー最低で10f不利、最高で8f不利）</td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第54図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:230px;min-width:230px;max-width:235px;" title="区間名・条件">ヒット時（2段目空振り）</td>
-<td class="tc-empty" style="width:49px;min-width:49px;"></td>
-<td class="tc-l" style="width:24px;min-width:24px;" title="ガード・ヒット時の区間（明緑）">2</td>
-<td class="tc-d" style="width:119px;min-width:119px;" title="ガード・ヒット時の区間（深緑）">17</td>
-<td class="tc-l" style="width:24px;min-width:24px;" title="ガード・ヒット時の区間（明緑）">2</td>
-<td class="tc-note" style="width:300px;min-width:300px;">（ビリー最低で8f不利、最高で6f不利）</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ヒット時（2段目空振り）</td>
+<td class="tc-empty" style="width:112px;min-width:112px;max-width:112px;flex:0 0 112px;" data-frames="7"></td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:32px;min-width:32px;max-width:32px;flex:0 0 32px;" data-frames="2">2</td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:272px;min-width:272px;max-width:272px;flex:0 0 272px;" data-frames="17">17</td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:32px;min-width:32px;max-width:32px;flex:0 0 32px;" data-frames="2">2</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">（ビリー最低で8f不利、最高で6f不利）</td>
 </tr>
 
 </table></div>
@@ -974,22 +991,22 @@ KOF2002の舞の弱龍炎舞
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第55図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:230px;min-width:230px;max-width:235px;" title="区間名・条件">ガード時(2段目もガード）</td>
-<td class="tc-empty" style="width:49px;min-width:49px;"></td>
-<td class="tc-l" style="width:24px;min-width:24px;" title="ガード・ヒット時の区間（明緑）">2</td>
-<td class="tc-d" style="width:203px;min-width:203px;" title="ガード・ヒット時の区間（深緑）">29</td>
-<td class="tc-note" style="width:300px;min-width:300px;">（ビリー2f有利）</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ガード時(2段目もガード）</td>
+<td class="tc-empty" style="width:112px;min-width:112px;max-width:112px;flex:0 0 112px;" data-frames="7"></td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:32px;min-width:32px;max-width:32px;flex:0 0 32px;" data-frames="2">2</td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:464px;min-width:464px;max-width:464px;flex:0 0 464px;" data-frames="29">29</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">（ビリー2f有利）</td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第56図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:230px;min-width:230px;max-width:235px;" title="区間名・条件">ヒット時（2段目もヒット）</td>
-<td class="tc-empty" style="width:49px;min-width:49px;"></td>
-<td class="tc-l" style="width:24px;min-width:24px;" title="ガード・ヒット時の区間（明緑）">2</td>
-<td class="tc-d" style="width:217px;min-width:217px;" title="ガード・ヒット時の区間（深緑）">31</td>
-<td class="tc-note" style="width:300px;min-width:300px;">（ビリー4f有利）</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ヒット時（2段目もヒット）</td>
+<td class="tc-empty" style="width:112px;min-width:112px;max-width:112px;flex:0 0 112px;" data-frames="7"></td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:32px;min-width:32px;max-width:32px;flex:0 0 32px;" data-frames="2">2</td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:496px;min-width:496px;max-width:496px;flex:0 0 496px;" data-frames="31">31</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">（ビリー4f有利）</td>
 </tr>
 
 </table></div>
@@ -1000,40 +1017,40 @@ KOF2002の舞の弱龍炎舞
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第57図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件"></td>
-<td class="tc-head" style="width:84px;min-width:84px;">発生</td>
-<td class="tc-head" style="width:84px;min-width:84px;">持続</td>
-<td class="tc-head" style="width:84px;min-width:84px;">硬直</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta"></td>
+<td class="tc-head" style="width:96px;min-width:96px;max-width:96px;flex:0 0 96px;" data-frames="6">発生</td>
+<td class="tc-head" style="width:96px;min-width:96px;max-width:96px;flex:0 0 96px;" data-frames="6">持続</td>
+<td class="tc-head" style="width:96px;min-width:96px;max-width:96px;flex:0 0 96px;" data-frames="6">硬直</td>
 </tr>
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">攻撃判定</td>
-<td class="tc-g" style="width:42px;min-width:42px;" title="灰色の区間（発生前・隙・硬直など）">6</td>
-<td class="tc-r" style="width:42px;min-width:42px;" title="攻撃判定がある区間">6</td>
-<td class="tc-g" style="width:42px;min-width:42px;" title="灰色の区間（発生前・隙・硬直など）">6</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">攻撃判定</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:96px;min-width:96px;max-width:96px;flex:0 0 96px;" data-frames="6">6</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:96px;min-width:96px;max-width:96px;flex:0 0 96px;" data-frames="6">6</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:96px;min-width:96px;max-width:96px;flex:0 0 96px;" data-frames="6">6</td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第58図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">ガード時</td>
-<td class="tc-empty" style="width:42px;min-width:42px;"></td>
-<td class="tc-l" style="width:42px;min-width:42px;" title="ガード・ヒット時の区間（明緑）">6</td>
-<td class="tc-d" style="width:77px;min-width:77px;" title="ガード・ヒット時の区間（深緑）">11</td>
-<td class="tc-l" style="width:42px;min-width:42px;" title="ガード・ヒット時の区間（明緑）">6</td>
-<td class="tc-note" style="width:300px;min-width:300px;">（アテナ最低で5f有利、最高で11f有利）</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ガード時</td>
+<td class="tc-empty" style="width:96px;min-width:96px;max-width:96px;flex:0 0 96px;" data-frames="6"></td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:96px;min-width:96px;max-width:96px;flex:0 0 96px;" data-frames="6">6</td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:176px;min-width:176px;max-width:176px;flex:0 0 176px;" data-frames="11">11</td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:96px;min-width:96px;max-width:96px;flex:0 0 96px;" data-frames="6">6</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">（アテナ最低で5f有利、最高で11f有利）</td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第59図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">ヒット時</td>
-<td class="tc-empty" style="width:42px;min-width:42px;"></td>
-<td class="tc-l" style="width:42px;min-width:42px;" title="ガード・ヒット時の区間（明緑）">6</td>
-<td class="tc-d" style="width:91px;min-width:91px;" title="ガード・ヒット時の区間（深緑）">13</td>
-<td class="tc-l" style="width:42px;min-width:42px;" title="ガード・ヒット時の区間（明緑）">6</td>
-<td class="tc-note" style="width:300px;min-width:300px;">（アテナ最低で7f有利、最高で13f有利）</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">ヒット時</td>
+<td class="tc-empty" style="width:96px;min-width:96px;max-width:96px;flex:0 0 96px;" data-frames="6"></td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:96px;min-width:96px;max-width:96px;flex:0 0 96px;" data-frames="6">6</td>
+<td class="tc-d" title="ガード・ヒット時の区間（深緑）" style="width:208px;min-width:208px;max-width:208px;flex:0 0 208px;" data-frames="13">13</td>
+<td class="tc-l" title="ガード・ヒット時の区間（明緑）" style="width:96px;min-width:96px;max-width:96px;flex:0 0 96px;" data-frames="6">6</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">（アテナ最低で7f有利、最高で13f有利）</td>
 </tr>
 
 </table></div>
@@ -1047,28 +1064,28 @@ KOF2002の舞の弱龍炎舞
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第60図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件"></td>
-<td colspan="2" class="tc-head" style="width:84px;min-width:84px;">発生</td>
-<td class="tc-head" style="width:84px;min-width:84px;">持続</td>
-<td class="tc-head" style="width:84px;min-width:84px;">硬直</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta"></td>
+<td colspan="2" class="tc-head" style="width:288px;min-width:288px;max-width:288px;flex:0 0 288px;" data-frames="18">発生</td>
+<td class="tc-head" style="width:176px;min-width:176px;max-width:176px;flex:0 0 176px;" data-frames="11">持続</td>
+<td class="tc-head" style="width:688px;min-width:688px;max-width:688px;flex:0 0 688px;" data-frames="43">硬直</td>
 </tr>
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">攻撃判定</td>
-<td class="tc-g" style="width:24px;min-width:24px;" title="灰色の区間（発生前・隙・硬直など）"></td>
-<td class="tc-g" style="width:112px;min-width:112px;" title="灰色の区間（発生前・隙・硬直など）">17</td>
-<td class="tc-r" style="width:77px;min-width:77px;" title="攻撃判定がある区間">11</td>
-<td class="tc-g" style="width:301px;min-width:301px;" title="灰色の区間（発生前・隙・硬直など）">43</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">攻撃判定</td>
+<td class="tc-g tc-one tc-inferred" title="灰色の区間（発生前・隙・硬直など）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:272px;min-width:272px;max-width:272px;flex:0 0 272px;" data-frames="17">17</td>
+<td class="tc-r" title="攻撃判定がある区間" style="width:176px;min-width:176px;max-width:176px;flex:0 0 176px;" data-frames="11">11</td>
+<td class="tc-g" title="灰色の区間（発生前・隙・硬直など）" style="width:688px;min-width:688px;max-width:688px;flex:0 0 688px;" data-frames="43">43</td>
 </tr>
 
 </table></div>
 <div class="tw tc-chart" role="region" aria-label="色分けしたタイムチャート第61図" tabindex="0"><table class="tc-table">
 
 <tr>
-<td class="tc-label" style="width:166px;min-width:166px;max-width:235px;" title="区間名・条件">無敵</td>
-<td class="tc-c" style="width:24px;min-width:24px;" title="元図の水色（無敵時間表示）"></td>
-<td class="tc-c" style="width:91px;min-width:91px;" title="元図の水色（無敵時間表示）">14</td>
-<td class="tc-c" style="width:24px;min-width:24px;" title="元図の水色（無敵時間表示）">3</td>
-<td class="tc-note" style="width:300px;min-width:300px;">全身14/上半身3</td>
+<td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">無敵</td>
+<td class="tc-c tc-one tc-inferred" title="元図の水色（無敵時間表示）" style="width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1"></td>
+<td class="tc-c" title="元図の水色（無敵時間表示）" style="width:224px;min-width:224px;max-width:224px;flex:0 0 224px;" data-frames="14">14</td>
+<td class="tc-c" title="元図の水色（無敵時間表示）" style="width:48px;min-width:48px;max-width:48px;flex:0 0 48px;" data-frames="3">3</td>
+<td class="tc-note" style="width:360px;min-width:360px;max-width:360px;flex:0 0 360px;" data-frames="meta">全身14/上半身3</td>
 </tr>
 
 </table></div>
