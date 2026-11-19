@@ -1,0 +1,35 @@
+name: Normalize site
+on:
+  push:
+    branches:
+      - main
+      - chatgpt/kof98-archive-batch-20261119
+    paths:
+      - '**/*.html'
+      - '**/*.htm'
+      - 'tools/normalize_site.py'
+      - '.github/workflows/normalize-site.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: normalize-site-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  normalize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Run site normalization
+        run: |
+          python3 tools/normalize_site.py
+          if ! git diff --quiet || [ -n "$(git ls-files --others --exclude-standard)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "site: regenerate navigation, sitemap and search index"
+            git push origin "HEAD:${{ github.ref_name }}"
+          fi
