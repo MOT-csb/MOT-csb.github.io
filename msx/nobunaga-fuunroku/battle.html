@@ -149,6 +149,68 @@
 </ul>
 <p class="small">確かめた範囲：召し抱えの判定、戦闘中に全滅した部隊の武将の扱い、コンピュータの処分、逃がした武将の行き先、戦の終わり方と戦後の処理、退却先と逃げる国がないときの扱いまでです。爆死の判定に使われる茶器は、茶器の表で古天明平蜘蛛であることを確かめました。</p>
 </section>
+<section class="section" id="map"><h2>戦場の地図は攻めてくる国で決まる</h2>
+<p>野戦の地図は、攻められる国と、攻めてくる国の組み合わせで決まります。組み合わせごとに次の4通りがあります。</p>
+<ul class="contents">
+<li><b>国の地図</b>：攻められる国ごとの地図です。</li>
+<li><b>平原</b>：平地に森が点々とある、どの国でも共通の地図です。</li>
+<li><b>山地</b>：山岳（通れない）が多い、共通の地図です。山岳と森の間を抜けて進むことになります。</li>
+<li><b>海</b>：ほとんどが海で、小さな島がいくつかある共通の地図です。海を越えて攻めるときに使われます。</li>
+</ul>
+<p>プレイヤーが<b>海から攻められて守る</b>ときは、「海上で闘い〜」と聞かれます。「はい」を選ぶと、陸地が2マスだけの完全な海の戦場になります。「いいえ」なら上の「海」の地図です。鉄甲船を持っていれば、海の上で大砲が使え、受ける損害も減ります（<a href="#damage">③ 地形の値</a>）。</p>
+<div class="table-scroll"><table><thead><tr><th>攻められる国</th><th>国の地図になる相手</th><th>平原になる相手</th><th>山地になる相手</th><th>海になる相手</th></tr></thead><tbody>
+<tr><td>陸奥</td><td>陸前</td><td>－</td><td>出羽</td><td>－</td></tr>
+<tr><td>陸前</td><td>下野・上野</td><td>陸奥・常陸</td><td>出羽・越後</td><td>－</td></tr>
+<tr><td>出羽</td><td>陸前</td><td>越後</td><td>陸奥</td><td>－</td></tr>
+<tr><td>越後</td><td>信濃</td><td>出羽・越中</td><td>陸前・上野</td><td>－</td></tr>
+<tr><td>常陸</td><td>下総</td><td>陸前</td><td>下野</td><td>－</td></tr>
+<tr><td>下野</td><td>上野</td><td>常陸・下総</td><td>陸前</td><td>－</td></tr>
+<tr><td>下総</td><td>武蔵</td><td>下野・安房</td><td>常陸</td><td>－</td></tr>
+<tr><td>安房</td><td>武蔵・相模</td><td>－</td><td>下総</td><td>－</td></tr>
+<tr><td>上野</td><td>越後・信濃</td><td>武蔵</td><td>陸前・下野</td><td>－</td></tr>
+<tr><td>武蔵</td><td>上野</td><td>下総・相模</td><td>甲斐</td><td>安房</td></tr>
+<tr><td>能登</td><td>越中</td><td>加賀</td><td>－</td><td>－</td></tr>
+<tr><td>越中</td><td>加賀</td><td>越後</td><td>飛騨</td><td>能登</td></tr>
+<tr><td>相模</td><td>甲斐</td><td>武蔵</td><td>駿河</td><td>安房</td></tr>
+<tr><td>甲斐</td><td>相模・駿河</td><td>信濃</td><td>武蔵</td><td>－</td></tr>
+<tr><td>駿河</td><td>相模</td><td>甲斐・遠江</td><td>信濃</td><td>－</td></tr>
+<tr><td>信濃</td><td>三河・美濃</td><td>越後・甲斐</td><td>上野・駿河・遠江</td><td>－</td></tr>
+<tr><td>遠江</td><td>信濃</td><td>駿河・三河</td><td>－</td><td>－</td></tr>
+<tr><td>飛騨</td><td>美濃</td><td>－</td><td>越中</td><td>－</td></tr>
+<tr><td>三河</td><td>信濃</td><td>遠江・尾張</td><td>－</td><td>－</td></tr>
+<tr><td>加賀</td><td>越前</td><td>能登</td><td>越中</td><td>－</td></tr>
+<tr><td>伊勢</td><td>尾張</td><td>紀伊</td><td>近江・伊賀・大和</td><td>－</td></tr>
+<tr><td>越前</td><td>美濃</td><td>加賀</td><td>近江</td><td>丹後</td></tr>
+<tr><td>美濃</td><td>尾張</td><td>近江</td><td>越前・飛騨・信濃</td><td>－</td></tr>
+<tr><td>尾張</td><td>三河</td><td>美濃・伊勢</td><td>－</td><td>－</td></tr>
+<tr><td>近江</td><td>山城・伊賀・美濃</td><td>－</td><td>丹後・伊勢・越前</td><td>－</td></tr>
+<tr><td>伊賀</td><td>山城・近江</td><td>－</td><td>伊勢</td><td>－</td></tr>
+<tr><td>丹後</td><td>丹波・因幡</td><td>越前</td><td>近江</td><td>－</td></tr>
+<tr><td>山城</td><td>摂津</td><td>近江</td><td>大和・丹波・伊賀</td><td>－</td></tr>
+<tr><td>大和</td><td>山城</td><td>摂津</td><td>伊勢</td><td>－</td></tr>
+<tr><td>紀伊</td><td>阿波・讃岐</td><td>摂津</td><td>伊勢</td><td>播磨</td></tr>
+<tr><td>摂津</td><td>播磨・讃岐・阿波</td><td>－</td><td>山城・大和・丹波</td><td>紀伊</td></tr>
+<tr><td>丹波</td><td>山城・摂津</td><td>－</td><td>丹後・因幡</td><td>－</td></tr>
+<tr><td>播磨</td><td>摂津</td><td>備前</td><td>因幡</td><td>讃岐・阿波・紀伊</td></tr>
+<tr><td>因幡</td><td>出雲</td><td>丹後</td><td>丹波・播磨</td><td>－</td></tr>
+<tr><td>備前</td><td>讃岐・伊予</td><td>播磨・安芸</td><td>出雲</td><td>－</td></tr>
+<tr><td>出雲</td><td>石見</td><td>因幡</td><td>備前</td><td>－</td></tr>
+<tr><td>安芸</td><td>周防</td><td>備前</td><td>石見</td><td>伊予</td></tr>
+<tr><td>石見</td><td>周防</td><td>出雲</td><td>安芸</td><td>－</td></tr>
+<tr><td>周防</td><td>豊後</td><td>安芸</td><td>石見</td><td>伊予・肥前</td></tr>
+<tr><td>讃岐</td><td>播磨・備前</td><td>伊予</td><td>阿波</td><td>摂津・紀伊</td></tr>
+<tr><td>阿波</td><td>摂津・播磨</td><td>土佐</td><td>讃岐</td><td>紀伊</td></tr>
+<tr><td>伊予</td><td>安芸・周防</td><td>讃岐</td><td>土佐</td><td>備前・豊後</td></tr>
+<tr><td>土佐</td><td>伊予</td><td>－</td><td>阿波</td><td>－</td></tr>
+<tr><td>豊後</td><td>伊予</td><td>肥前</td><td>肥後・日向</td><td>周防</td></tr>
+<tr><td>肥前</td><td>豊後</td><td>肥後</td><td>－</td><td>周防</td></tr>
+<tr><td>肥後</td><td>肥前</td><td>日向・薩摩</td><td>豊後</td><td>－</td></tr>
+<tr><td>日向</td><td>豊後</td><td>－</td><td>肥後・薩摩</td><td>－</td></tr>
+<tr><td>薩摩</td><td>日向</td><td>肥後</td><td>－</td><td>－</td></tr>
+</tbody></table></div>
+<p class="small">確かめた範囲：地図の選び方と、国ごとの組み合わせ（両シナリオ共通）、海から攻められたプレイヤーへの問いまでです。同じ2国でも、どちらが攻めるかで地図が変わることがあります（例：陸前が陸奥を攻めると陸奥の国の地図、陸奥が陸前を攻めると平原）。籠城戦の地図は別です。</p>
+</section>
+
 <section class="section"><h2>戦闘コマンドの整理</h2><div class="table-scroll"><table><thead><tr><th>主なコマンド</th><th>内容</th></tr></thead><tbody><tr><td>移動</td><td>部隊を移動させる</td></tr><tr><td>攻撃</td><td>通常攻撃・突撃・鉄砲・大砲・門壊など</td></tr><tr><td>待機</td><td>機動力を回復（上限10）</td></tr><tr><td>退却</td><td>退却・城内への移動</td></tr><tr><td>情報</td><td>兵数や部隊情報などの確認</td></tr><tr><td>伝令</td><td>出陣・開門・降伏勧告</td></tr><tr><td>委任</td><td>部隊の行動を任せる</td></tr></tbody></table></div></section>
 <section class="section"><h2>騎馬隊の価値</h2><p>騎馬隊の強みは、単に攻撃の数値だけではありません。戦場を素早く移動し、敵との距離を調整しながら有利な状況を作れることにもあります。</p><p>特に奇襲を狙う場合は、この機動力が戦術の選択肢を増やします。</p></section>
 <section class="section"><h2>戦闘力が高い武将</h2><p>上杉謙信のような高戦闘力の武将は、攻撃側で非常に頼りになります。とくに戦闘力96以上の武将については、数値のわずかな違い以上に攻撃面で差が出るという特徴があります。</p><p>ただし、実戦での強さは兵数、相手の配置、本陣かどうか、攻撃回数によっても大きく左右されます。</p><p><a href="stats.html">戦闘力の見方へ →</a></p></section></div></main>
