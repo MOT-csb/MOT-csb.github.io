@@ -92,6 +92,18 @@
   #timechart-archive .tc-mobile-notes strong{font-weight:850}
 }
 </style>
+<style>
+/* Leona crouching C: optional first-active-frame-only explanatory comparison. */
+#timechart-archive .tc-first-hit-example{border:1px solid #91adc5;border-radius:11px;padding:12px 13px;margin:16px 0 20px;background:#f5f9fe;color:#162e48}
+#timechart-archive .tc-first-hit-example h3{font-size:17px;margin:0 0 7px}
+#timechart-archive .tc-first-hit-example p{margin:5px 0 9px;font-size:13px;line-height:1.6}
+#timechart-archive .tc-first-hit-example .tc-first-contact{box-shadow:inset 0 0 0 3px #f7ed64!important;position:relative!important;z-index:1}
+#timechart-archive .tc-first-hit-example .tc-first-contact::after{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:#f7ed64}
+#timechart-archive .tc-first-hit-result{display:flex;flex-wrap:wrap;gap:8px;margin:9px 0}
+#timechart-archive .tc-first-hit-result span{display:inline-block;border-radius:6px;background:#dfebf8;padding:6px 10px;font-weight:850;font-size:14px}
+#timechart-archive .tc-first-hit-example .tw.tc-chart{margin:10px 0}
+@media(max-width:600px){#timechart-archive .tc-first-hit-example{padding:10px 8px}#timechart-archive .tc-first-hit-example h3{font-size:15px}#timechart-archive .tc-first-hit-result span{font-size:12px}}
+</style>
 </head>
 <body>
 <header><div class="wrap">
@@ -163,7 +175,18 @@ KOF2002の舞の弱龍炎舞
 多段技：白、<br/>
 多段技ではないが攻撃部位が異なる部分に複数回現れる技：黒<br/>
 と区別しようと思います。</p>
-<p>KOF2002のレオナの屈みC（多段技はないが攻撃部位が異なる部分に2回現れる）</p>
+<p><section class="tc-first-hit-example" aria-labelledby="tc-leona-first-hit-heading">
+<h3 id="tc-leona-first-hit-heading">追加比較図：レオナの屈みCを最初の持続1Fで当てた場合</h3>
+<p>まずは<strong>持続当てを考慮せず、攻撃判定が出た最初の1Fで接触した場合</strong>だけを見ます。黄色の枠がその接触時点です。以降の赤い区間は技自体の攻撃判定が残る時間であり、そこでもう一度当てたという意味ではありません。</p>
+<div class="tw tc-chart" data-sync-group="tech-02-first-contact" role="region" aria-label="レオナ屈みC：最初の攻撃判定で接触した場合の攻撃側と相手側の比較図" tabindex="0"><table class="tc-table"><tbody>
+<tr><td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">攻撃判定（初段で接触）</td><td class="tc-g" title="発生まで3F" style="--tc-mobile-width:36px;--tc-mobile-wide-width:48px;width:48px;min-width:48px;max-width:48px;flex:0 0 48px;" data-frames="3">3</td><td class="tc-r tc-first-contact" title="最初の攻撃判定1Fで接触（持続当てなし）" style="--tc-mobile-width:12px;--tc-mobile-wide-width:16px;width:16px;min-width:16px;max-width:16px;flex:0 0 16px;" data-frames="1">1</td><td class="tc-r" title="接触後も残る最初の判定2F" style="--tc-mobile-width:24px;--tc-mobile-wide-width:32px;width:32px;min-width:32px;max-width:32px;flex:0 0 32px;" data-frames="2">2</td><td class="tc-k" title="攻撃部位が変わる境界（0F）" style="--tc-mobile-width:0px;--tc-mobile-wide-width:0px;width:0px;min-width:0px;max-width:0px;flex:0 0 0px;" data-frames="0"></td><td class="tc-r" title="2回目の攻撃部位3F" style="--tc-mobile-width:36px;--tc-mobile-wide-width:48px;width:48px;min-width:48px;max-width:48px;flex:0 0 48px;" data-frames="3">3</td><td class="tc-g" title="戻り28F" style="--tc-mobile-width:336px;--tc-mobile-wide-width:448px;width:448px;min-width:448px;max-width:448px;flex:0 0 448px;" data-frames="28">28</td></tr>
+<tr><td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">相手：ガード時</td><td class="tc-empty" title="元原稿の接触前4F" style="--tc-mobile-width:48px;--tc-mobile-wide-width:64px;width:64px;min-width:64px;max-width:64px;flex:0 0 64px;" data-frames="4"></td><td class="tc-l" style="--tc-mobile-width:60px;--tc-mobile-wide-width:80px;width:80px;min-width:80px;max-width:80px;flex:0 0 80px;" data-frames="5">5</td><td class="tc-d" style="--tc-mobile-width:144px;--tc-mobile-wide-width:192px;width:192px;min-width:192px;max-width:192px;flex:0 0 192px;" data-frames="12">12</td><td class="tc-l" style="--tc-mobile-width:60px;--tc-mobile-wide-width:80px;width:80px;min-width:80px;max-width:80px;flex:0 0 80px;" data-frames="5">5</td><td class="tc-empty" title="時間軸を揃えるための余白11F" style="--tc-mobile-width:132px;--tc-mobile-wide-width:176px;width:176px;min-width:176px;max-width:176px;flex:0 0 176px;" data-frames="11"></td></tr>
+<tr><td class="tc-label" title="区間名・条件" style="width:230px;min-width:230px;max-width:230px;flex:0 0 230px;" data-frames="meta">相手：ヒット時</td><td class="tc-empty" title="元原稿の接触前4F" style="--tc-mobile-width:48px;--tc-mobile-wide-width:64px;width:64px;min-width:64px;max-width:64px;flex:0 0 64px;" data-frames="4"></td><td class="tc-l" style="--tc-mobile-width:60px;--tc-mobile-wide-width:80px;width:80px;min-width:80px;max-width:80px;flex:0 0 80px;" data-frames="5">5</td><td class="tc-d" style="--tc-mobile-width:168px;--tc-mobile-wide-width:224px;width:224px;min-width:224px;max-width:224px;flex:0 0 224px;" data-frames="14">14</td><td class="tc-l" style="--tc-mobile-width:60px;--tc-mobile-wide-width:80px;width:80px;min-width:80px;max-width:80px;flex:0 0 80px;" data-frames="5">5</td><td class="tc-empty" title="時間軸を揃えるための余白9F" style="--tc-mobile-width:108px;--tc-mobile-wide-width:144px;width:144px;min-width:144px;max-width:144px;flex:0 0 144px;" data-frames="9"></td></tr>
+</tbody></table></div>
+<div class="tc-first-hit-result"><span>ガード時：レオナが16F不利</span><span>ヒット時：レオナが14F不利</span></div>
+<p>フレーム数と硬直差は下の原図から<strong>最初の攻撃判定で接触した場合</strong>を抜き出したものです。ここでは持続の後半を当てて硬直差が変わる場合を表示しません。</p>
+</section>
+KOF2002のレオナの屈みC（多段技はないが攻撃部位が異なる部分に2回現れる）</p>
 発生…3、持続3＋3、硬直28 
 
 <div class="tw tc-chart" data-sync-group="tech-02" role="region" aria-label="色分けしたタイムチャート第2図" tabindex="0"><table class="tc-table">
