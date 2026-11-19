@@ -1,0 +1,23 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'98 防御力：2005年の本人実測と2025年の計算仮説・数値不一致｜Come sono bravo?</title><meta name="description" content="2005年の実測による防御力順位と2025年の計算式を照合し、本文と数値表の不一致を明示"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:1010px}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.article a{overflow-wrap:anywhere}.scroll{overflow-x:auto}.article table{width:100%;border-collapse:collapse}.article th,.article td{border:1px solid var(--line,#aaa);padding:9px;text-align:left;vertical-align:top}.article th{background:var(--soft,#edf1ed)}.source{font-size:.93rem}.note{border-left:3px solid var(--accent,#56745f);padding:12px;background:var(--soft,#edf1ed)}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof98-top.html">KOF'98</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'98 防御力：2005年の本人実測と2025年の計算仮説・数値不一致</h1><p class="note">2005年の実測による防御力順位と2025年の計算式を照合し、本文と数値表の不一致を明示。MOT本人のはてなブログ原文を一次資料とし、実測・本人推測・資料間の不一致を区別する。</p>
+<h2>2005年10月：実際の体力減少で調査した順位</h2>
+<p>2005年10月23日、MOTは表京の通常版弱無式を2回決めた後の残り体力を「CHALLENGER!」表示の位置で比較し、キャラ別の耐久力を調査した。初めは屈Bの追加ヒット回数で測る予定だったが、調査方法を変更している。</p>
+<div class="scroll"><table><thead><tr><th>2005年10月24日の本人分類</th><th>キャラ</th></tr></thead><tbody>
+<tr><td>低め</td><td>表裏ビリー</td></tr>
+<tr><td>標準</td><td>表裏京、紅丸、表裏テリー、表裏アンディ、表裏ジョー、表裏ロバート、表裏ユリ、レオナ、クラーク、アテナ、ケンスウ、チン、ちづる、表裏舞、キング、キム、チョイ、表裏社、表裏シェルミー、表裏クリス、山崎、マリー、庵、マチュア、バイス、ハイデルン、柴舟、D!、ラッキー、真吾</td></tr>
+<tr><td>高め</td><td>五郎、表裏リョウ、ラルフ、タクマ</td></tr>
+<tr><td>高い</td><td>チャン、ブライアン、表ルガール</td></tr>
+<tr><td>規格外</td><td>裏ルガール</td></tr></tbody></table></div>
+<p>本人は「表裏」をまとめたキャラも個別に調査したと記載し、ランダム補正があるため目安だと明記している。防御力の高低は実戦上の被ダメージから見た分類であり、内部数値の算出式を証明したものではない。</p>
+<p class="source">原資料：<a href="https://comesonobravo.hatenadiary.org/entry/50137635">2005/10/23：当初の調査方法</a>／<a href="https://comesonobravo.hatenadiary.org/entry/50137915">2005/10/23：測定方法変更後の結果</a>／<a href="https://comesonobravo.hatenadiary.org/entry/50141388">2005/10/24：防御力分類のまとめ</a></p>
+<h2>2025年4月：防御値から受けるダメージを推定する仮説</h2>
+<p>2025年の記事は『KOF97』ムックの説明を手掛かりに、<strong>与えるダメージ＝攻撃力×（キャラごとの防御値÷255）</strong>と推定している。数値が低いほど受けるダメージが小さい、という方向性は2005年の実測分類と整合する。ただし<strong>計算式自体は本人の仮説</strong>であり、KOF'98の実際の内部計算がこの式と一致することは未確認。</p>
+<div class="scroll"><table><thead><tr><th>対象</th><th>防御値</th><th>掲載された数値表</th><th>本文中の例示</th></tr></thead><tbody>
+<tr><td>オメガルガール（裏ルガール）</td><td>144</td><td>144÷255＝56.47％</td><td>約45％</td></tr>
+<tr><td>ビリー</td><td>220</td><td>220÷255＝86.27％</td><td>約69％</td></tr></tbody></table></div>
+<h2>不一致①：同一記事の計算式・表・本文が合わない</h2>
+<p>上の数値は同じ2025年記事内に併記されているが、<strong>144÷255は約45％にならず、220÷255も約69％にならない</strong>。参考として144÷320＝45％、220÷320＝68.75％で、本文の約45％・約69％に近い。ただし、<strong>320という分母が実際のゲーム仕様である根拠はない</strong>。原稿作成過程の原因も不明。</p>
+<h2>不一致②：防御力の高低を表す日本語が逆転</h2>
+<p>2025年の記事は、数値が小さいほど防御力が高いと説明する一方で、144のオメガルガールを「防御力が最も低い」、220のビリーを「防御力が最も高い」と表現している。2005年の本人実測では、<strong>裏ルガールは「規格外」、ビリーは「低め」</strong>。防御値の大小と実際の耐久力の大小が文章内で混同された可能性があるが、意図は未確認。</p>
+<p class="source">原資料：<a href="https://comesonobravo.hatenadiary.org/entry/2025/04/15/124835">2025/04/15：防御力計算方法の推定</a></p>
+<h2>未解決の検証課題</h2><ol><li>内部の防御値が、ムック記載の数値どおりか原資料を確認する。</li><li>同一の技・体力・キャラ・ランダム条件でダメージを再測定し、÷255という式を検証する。</li><li>整数丸め、根性補正、ランダム補正の有無を切り分ける。</li><li>2025年本文の「約45％」「約69％」がどの計算に基づくか確認する。</li></ol>
+<p>矛盾・記述差の管理：<a href="/kof-kininaru.html#kof98">KOF'98「気になること」</a></p><p><a href="./index.html">KOF'98研究アーカイブへ戻る</a> ／ <a href="/kof-kininaru.html#kof98">気になること（矛盾・要検証）</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?</div></footer></body></html>
