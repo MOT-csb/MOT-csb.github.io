@@ -7,6 +7,37 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/csb.css">
+<style>
+/* 94 power-charge cancellation: frame-by-frame chart only; unaffected tables retain global styles. */
+#kof94-tame-guide{color-scheme:light;background:#fff;color:#172638;border:2px solid #b8cadd;border-radius:12px;margin:14px 0 24px;overflow:hidden;box-shadow:0 2px 8px rgba(15,23,42,.06)}
+#kof94-tame-guide .tame-intro{margin:0;padding:12px 16px;background:#e8eff8;color:#182c44;font-size:14px;line-height:1.65}
+#kof94-tame-guide .tame-scroll{overflow-x:auto;max-width:100%;padding:12px 12px 16px;scrollbar-color:#7286a0 #e6edf5}
+#kof94-tame-guide .tame-scroll:focus-visible{outline:3px solid #2457b4;outline-offset:-4px}
+#kof94-tame-guide .tame-timeline{border-collapse:separate;border-spacing:0;table-layout:fixed;width:max-content;min-width:860px;margin:0;background:#fff;color:#172638;line-height:1.35;font-size:13px}
+#kof94-tame-guide .tame-timeline caption{text-align:left;font-size:15px;font-weight:800;color:#152b46;padding:0 0 9px}
+#kof94-tame-guide .tame-timeline th,#kof94-tame-guide .tame-timeline td{box-sizing:border-box;border:1px solid #c7d3e1;padding:4px 1px;text-align:center;vertical-align:middle;white-space:nowrap}
+#kof94-tame-guide .tame-timeline thead th{background:#dae6f3;color:#1b3452;font-size:11px;font-weight:800;height:38px;width:29px;min-width:29px}
+#kof94-tame-guide .tame-timeline thead th.tame-label{background:#c9dbee;width:220px;min-width:220px;font-size:13px}
+#kof94-tame-guide .tame-timeline thead th.tame-keyframe{background:#ffdc82;color:#503400;border-left:2px solid #b3770a;border-right:2px solid #b3770a}
+#kof94-tame-guide .tame-timeline tbody th{width:220px;min-width:220px;background:#f0f5fb;color:#132c49;text-align:left;padding:9px 10px;font-size:13px;line-height:1.4;white-space:normal}
+#kof94-tame-guide .tame-timeline tbody th small{display:block;margin-top:5px;color:#445a71;font-size:11px;font-weight:500;line-height:1.45}
+#kof94-tame-guide .tame-timeline tbody td{height:61px;width:29px;min-width:29px;font-size:11px;font-weight:800;color:#607086}
+#kof94-tame-guide .tame-timeline tbody td.tame-wait{background:#f3f6fa;color:#a7b6c8}
+#kof94-tame-guide .tame-timeline tbody tr:nth-child(even) td.tame-wait{background:#eaf0f6}
+#kof94-tame-guide .tame-timeline tbody td.tame-reference{background:#fff0c9;color:#8d651c;border-left:2px dashed #b3770a;border-right:2px dashed #b3770a}
+#kof94-tame-guide .tame-timeline tbody td.tame-a{background:#224eaa;color:#fff;font-size:13px}
+#kof94-tame-guide .tame-timeline tbody td.tame-b{background:#aa4c0c;color:#fff;font-size:13px}
+#kof94-tame-guide .tame-timeline tbody td.tame-abc{background:#09675c;color:#fff;font-size:10px;letter-spacing:-.02em}
+#kof94-tame-guide .tame-timeline tbody td.tame-release{background:#445469;color:#fff;font-size:12px}
+#kof94-tame-guide .tame-legend{display:flex;gap:8px 16px;flex-wrap:wrap;align-items:center;padding:12px 16px 6px;margin:0;list-style:none;border-top:1px solid #c7d3e1;color:#23384f;font-size:13px}
+#kof94-tame-guide .tame-legend li{display:inline-flex;align-items:center;gap:6px}
+#kof94-tame-guide .tame-swatch{width:20px;height:17px;border:1px solid rgba(0,0,0,.2);border-radius:3px;display:inline-block;flex:none}
+#kof94-tame-guide .tame-swatch.a{background:#224eaa}#kof94-tame-guide .tame-swatch.b{background:#aa4c0c}
+#kof94-tame-guide .tame-swatch.abc{background:#09675c}#kof94-tame-guide .tame-swatch.release{background:#445469}
+#kof94-tame-guide .tame-swatch.reference{background:#fff0c9;border:2px dashed #b3770a}
+#kof94-tame-guide .tame-footnote{font-size:12px;line-height:1.65;color:#3e5269;padding:0 16px 12px;margin:5px 0 0}
+@media(max-width:700px){#kof94-tame-guide .tame-scroll{padding:10px 6px 14px}#kof94-tame-guide .tame-timeline thead th.tame-label,#kof94-tame-guide .tame-timeline tbody th{position:sticky;left:0;z-index:2;box-shadow:2px 0 4px rgba(15,23,42,.12)}#kof94-tame-guide .tame-timeline thead th.tame-label{z-index:3}}
+</style>
 </head>
 <body>
 <header><div class="wrap">
@@ -26,94 +57,24 @@
 ・1フレームでも入力が遅れると最速より遅いタイミングで技が出てしまうのでギリギリ入る小技連打気絶段などはミスは許されません。<br/>
 ・最速パワータメキャンセルはその数字＋3フレーム後からABC同時押しを2フレ行うことでできます。
 <p>例えば16と書いてある場合のタイムチャートは以下のとおりになります</p>
-<div class="tw"><table>
-
-<tr>
-<td>最速連打キャンセル<br/>
-0フレーム：A、16フレーム：A</td>
-<td>
-<div class="tw"><table>
-
-<tr>
-<td>0</td>
-<td>16</td>
-</tr>
-<tr>
-<td><br/>
-</td>
-<td><br/>
-</td>
-</tr>
-
-</table></div>
-</td>
-</tr>
-<tr>
-<td> A最速パワータメキャンセルC<br/>
-0：A、19～20：ABC、21：離す</td>
-<td>
-<div class="tw"><table>
-
-<tr>
-<td>0</td>
-<td><br/>
-</td>
-<td>16</td>
-<td>19</td>
-<td>21</td>
-</tr>
-<tr>
-<td><br/>
-</td>
-<td><br/>
-</td>
-<td><br/>
-</td>
-<td><br/>
-</td>
-<td><br/>
-</td>
-</tr>
-
-</table></div>
-</td>
-</tr>
-<tr>
-<td> A最速パワータメキャンセルB<br/>
-0：A、18：B、19～20：ABC、21：離す</td>
-<td>
-<div class="tw"><table>
-
-<tr>
-<td>0</td>
-<td><br/>
-</td>
-<td>16<br/>
-</td>
-<td>18</td>
-<td>19</td>
-<td>21</td>
-</tr>
-<tr>
-<td><br/>
-</td>
-<td><br/>
-</td>
-<td><br/>
-</td>
-<td><br/>
-</td>
-<td><br/>
-</td>
-<td><br/>
-</td>
-</tr>
-
-</table></div>
-</td>
-</tr>
-
-</table></div>
+<section id="kof94-tame-guide" aria-label="KOF94 パワーためキャンセル入力タイムチャート">
+<p class="tame-intro">横軸は<strong>1マス＝1フレーム（1/60秒）</strong>です。色の付いたマスが入力するタイミング。横に入りきらない場合はスクロールできます。</p>
+<div class="tame-scroll" role="region" aria-label="0～21フレームの入力タイムチャート" tabindex="0">
+<table class="tame-timeline">
+<caption>最速連打キャンセルが16Fの技を例にした入力比較</caption>
+<thead><tr><th scope="col" class="tame-label">操作／経過フレーム</th><th scope="col">0</th><th scope="col">1</th><th scope="col">2</th><th scope="col">3</th><th scope="col">4</th><th scope="col">5</th><th scope="col">6</th><th scope="col">7</th><th scope="col">8</th><th scope="col">9</th><th scope="col">10</th><th scope="col">11</th><th scope="col">12</th><th scope="col">13</th><th scope="col">14</th><th scope="col">15</th><th scope="col" class="tame-keyframe">16</th><th scope="col">17</th><th scope="col">18</th><th scope="col">19</th><th scope="col">20</th><th scope="col">21</th></tr></thead>
+<tbody><tr><th scope="row">最速連打キャンセル<small>0F：A、16F：A</small></th><td class="tame-a" title="0F：Aを押す">A</td><td class="tame-wait" title="1F：新しい入力なし">·</td><td class="tame-wait" title="2F：新しい入力なし">·</td><td class="tame-wait" title="3F：新しい入力なし">·</td><td class="tame-wait" title="4F：新しい入力なし">·</td><td class="tame-wait" title="5F：新しい入力なし">·</td><td class="tame-wait" title="6F：新しい入力なし">·</td><td class="tame-wait" title="7F：新しい入力なし">·</td><td class="tame-wait" title="8F：新しい入力なし">·</td><td class="tame-wait" title="9F：新しい入力なし">·</td><td class="tame-wait" title="10F：新しい入力なし">·</td><td class="tame-wait" title="11F：新しい入力なし">·</td><td class="tame-wait" title="12F：新しい入力なし">·</td><td class="tame-wait" title="13F：新しい入力なし">·</td><td class="tame-wait" title="14F：新しい入力なし">·</td><td class="tame-wait" title="15F：新しい入力なし">·</td><td class="tame-a" title="16F：Aを押す">A</td><td class="tame-wait" title="17F：新しい入力なし">·</td><td class="tame-wait" title="18F：新しい入力なし">·</td><td class="tame-wait" title="19F：新しい入力なし">·</td><td class="tame-wait" title="20F：新しい入力なし">·</td><td class="tame-wait" title="21F：新しい入力なし">·</td></tr><tr><th scope="row">A最速パワータメキャンセルC<small>0F：A／19～20F：ABC／21F：離す</small></th><td class="tame-a" title="0F：Aを押す">A</td><td class="tame-wait" title="1F：新しい入力なし">·</td><td class="tame-wait" title="2F：新しい入力なし">·</td><td class="tame-wait" title="3F：新しい入力なし">·</td><td class="tame-wait" title="4F：新しい入力なし">·</td><td class="tame-wait" title="5F：新しい入力なし">·</td><td class="tame-wait" title="6F：新しい入力なし">·</td><td class="tame-wait" title="7F：新しい入力なし">·</td><td class="tame-wait" title="8F：新しい入力なし">·</td><td class="tame-wait" title="9F：新しい入力なし">·</td><td class="tame-wait" title="10F：新しい入力なし">·</td><td class="tame-wait" title="11F：新しい入力なし">·</td><td class="tame-wait" title="12F：新しい入力なし">·</td><td class="tame-wait" title="13F：新しい入力なし">·</td><td class="tame-wait" title="14F：新しい入力なし">·</td><td class="tame-wait" title="15F：新しい入力なし">·</td><td class="tame-reference" title="16F：最速連打キャンセルの基準（この行では新しい入力なし）">│</td><td class="tame-wait" title="17F：新しい入力なし">·</td><td class="tame-wait" title="18F：新しい入力なし">·</td><td class="tame-abc" title="19F：ABC同時押し・1F目">ABC</td><td class="tame-abc" title="20F：ABC同時押し・2F目">ABC</td><td class="tame-release" title="21F：ボタンを離す">離</td></tr><tr><th scope="row">A最速パワータメキャンセルB<small>0F：A／18F：B／19～20F：ABC／21F：離す</small></th><td class="tame-a" title="0F：Aを押す">A</td><td class="tame-wait" title="1F：新しい入力なし">·</td><td class="tame-wait" title="2F：新しい入力なし">·</td><td class="tame-wait" title="3F：新しい入力なし">·</td><td class="tame-wait" title="4F：新しい入力なし">·</td><td class="tame-wait" title="5F：新しい入力なし">·</td><td class="tame-wait" title="6F：新しい入力なし">·</td><td class="tame-wait" title="7F：新しい入力なし">·</td><td class="tame-wait" title="8F：新しい入力なし">·</td><td class="tame-wait" title="9F：新しい入力なし">·</td><td class="tame-wait" title="10F：新しい入力なし">·</td><td class="tame-wait" title="11F：新しい入力なし">·</td><td class="tame-wait" title="12F：新しい入力なし">·</td><td class="tame-wait" title="13F：新しい入力なし">·</td><td class="tame-wait" title="14F：新しい入力なし">·</td><td class="tame-wait" title="15F：新しい入力なし">·</td><td class="tame-reference" title="16F：最速連打キャンセルの基準（この行では新しい入力なし）">│</td><td class="tame-wait" title="17F：新しい入力なし">·</td><td class="tame-b" title="18F：Bを押す">B</td><td class="tame-abc" title="19F：ABC同時押し・1F目">ABC</td><td class="tame-abc" title="20F：ABC同時押し・2F目">ABC</td><td class="tame-release" title="21F：ボタンを離す">離</td></tr></tbody>
+</table>
+</div>
+<ul class="tame-legend" aria-label="色の凡例">
+<li><span class="tame-swatch a" aria-hidden="true"></span>A入力</li>
+<li><span class="tame-swatch b" aria-hidden="true"></span>B入力</li>
+<li><span class="tame-swatch abc" aria-hidden="true"></span>ABC同時押し</li>
+<li><span class="tame-swatch release" aria-hidden="true"></span>離す</li>
+<li><span class="tame-swatch reference" aria-hidden="true"></span>16F基準（入力なし）</li>
+</ul>
+<p class="tame-footnote">灰色のマスは新しいボタン入力を示さない経過フレームです。19F・20Fの2マスでABCを押し、21Fで離します。黄色の16Fは最速連打の基準位置であり、下2行で16Fにボタンを押す意味ではありません。</p>
+</section>
 <p>［最速連打キャンセルフレームの表］</p>
 <p>・×の技は連打キャンセルに対応していません。<br/>
 ・16or17と20の違いはかなりわかりやすいですが、16と17の違いは普通にプレイしているだけだとわかりにくいと思います。</p>
