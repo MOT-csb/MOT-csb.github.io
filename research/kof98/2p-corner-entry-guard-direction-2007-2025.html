@@ -1,0 +1,32 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'98：2P側の画面端入り込み・位置交換とガード方向｜Come sono bravo?</title><meta name="description" content="2007～2025年のMOT原資料から、2P限定端めくり、前転による端への入り込み、ガード方向の変化を整理"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:1000px}.article h2{margin-top:2rem}.article a{overflow-wrap:anywhere}.note{border-left:3px solid #687e7b;padding:12px;background:#f3f7f6;color:#253b38}.scroll{overflow-x:auto}.article table{width:100%;min-width:580px;border-collapse:collapse}.article td,.article th{padding:9px;border:1px solid #aaa;text-align:left;vertical-align:top}.article th{background:#edf1ee}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/kof-top.html">KOF</a><span aria-hidden="true"> / </span><a href="/kof98-top.html">KOF'98</a><span aria-hidden="true"> / </span><a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'98：2P側の画面端入り込み・位置交換とガード方向</h1><p class="note">MOT本人の2007年ブログおよび2011～2025年のX投稿を時系列に整理する。<strong>本人が報告した操作結果</strong>、<strong>対戦動画からの推定</strong>、<strong>処理上の原因についての仮説</strong>を区別する。画面端で必ず位置交換が発生するという一般則ではない。</p>
+<h2>2007年：2P限定の端めくり</h2>
+<p>2007年10月23日、MOTはKOF'98の<strong>2P限定端めくり</strong>について、KOF'96・'97でも同様の動作が可能らしいと記録した。短い原稿であり、成立キャラ・ジャンプ種別・入力手順・実測条件は掲載していない。</p>
+<p class="source">原資料：<a href="https://comesonobravo.hatenadiary.org/entry/2007/10/23/131308">2007/10/23：98 2P限定端めくり</a>。</p>
+<h2>後年のX投稿を条件別に整理</h2>
+<div class="scroll"><table><thead><tr><th>年代</th><th>報告・解釈</th><th>資料上の位置づけ</th></tr></thead><tbody>
+<tr><td>2011/06/29</td><td>端で前方ジャンプ側が入り込むかは、KOF'98では2P優先、KOF2002では地上側優先なのではないかと考察</td><td><strong>処理優先順位についての本人仮説</strong></td></tr>
+<tr><td>2020/09/25</td><td>両キャラが画面端に接しているとガード方向が逆になる、と説明。通常は地上の押し合い判定によってこの状態になりにくいとも補足</td><td><strong>本人による仕様説明</strong>。成立経路は限定される</td></tr>
+<tr><td>2023/03/24</td><td>対戦動画で千鶴が中央側にレバーを入れ、京が端側に入ったように見える場面を紹介</td><td><strong>動画観察と入力意図の推測</strong></td></tr>
+<tr><td>2023/05/10</td><td>2P側が1P側を端に追い詰め、前転で密着したあと、端方向へレバーを入れると位置を入れ替えて端に入り込めると説明</td><td><strong>本人が述べた具体的な操作条件</strong></td></tr>
+<tr><td>2025/07/12</td><td>2Pで画面端に入り込めることは、十分知られていない要素の一つではないかとコメント</td><td><strong>認知度に関する本人の評価</strong></td></tr>
+</tbody></table></div>
+<h2>2023年の前転例：検証手順として使える部分</h2>
+<ol>
+<li>1Pキャラを画面端へ追い詰め、2Pキャラがその手前に立つ。</li>
+<li>2Pキャラで前転し、1Pキャラがいる画面端に密着する。</li>
+<li>2P側のレバーを画面端方向へ入れて、位置交換が起こるか確認する。</li>
+<li>位置交換の前後で双方のガード方向・攻撃方向を別々に記録する。</li>
+</ol>
+<p>この手順は2023年の本人説明を検証用に分解したもので、<strong>全キャラ・左右の端・1Pと2Pを入れ替えた条件で成立すると確認されたわけではない</strong>。</p>
+<h2>ガード方向の反転と内部要因の区別</h2>
+<p>2020年の本人説明では、通常は押し合い判定のため両キャラが同時に画面端へ密着しにくいとされる。2023年の投稿では、<strong>前転中に押し合い判定が無効化され続けるためではないか</strong>と理由を推測した。押し合い判定の停止時間や左右優先の内部仕様を、ROM解析で確認した記録ではない。</p>
+<p>同じ端の話でも、<a href="./corner-crouch-guard-pose-jump-2007.html">屈伸ガードポーズ解除</a>や<a href="./corner-forward-hop-jcd-crouch-guard-2008.html">前方中JCDによるしゃがみガードへのヒット</a>は、攻撃の成立条件が異なる。これらを位置交換現象だけで説明しない。</p>
+<h2>残る検証項目</h2>
+<ul><li>2P端入り込みがジャンプと前転の両方で成立する条件</li><li>1P／2P優先説と、地上／空中・押し合い判定のどの要因が必要か</li><li>画面端のガード方向反転が発生する正確な位置関係</li><li>端へ入った側と追い詰められた側での攻守・ノックバックの変化</li></ul>
+<h2>本人の原資料</h2><ul>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2007/10/23/131308">2007/10/23 ブログ：2P限定端めくり</a></li>
+<li><a href="https://x.com/mot_csb/status/85933738432790528">2011/06/29 X：KOF'98の2P優先説・2002との対比</a></li>
+<li><a href="https://x.com/mot_csb/status/1309531692659601409">2020/09/25 X：両キャラが端にいるときのガード方向</a></li>
+<li><a href="https://x.com/mot_csb/status/1639191581944336384">2023/03/24 X：千鶴の対戦動画から位置交換を推測</a></li>
+<li><a href="https://x.com/mot_csb/status/1656305060220121088">2023/05/10 X：前転後の2P側位置交換と押し合い判定の仮説</a></li>
+<li><a href="https://x.com/mot_csb/status/1943865193471389770">2025/07/12 X：2P端入り込みの認知度について</a></li></ul><p><a href="./index.html">KOF'98研究アーカイブへ戻る</a> ／ <a href="/kof-kininaru.html#kof98">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?</div></footer></body></html>
