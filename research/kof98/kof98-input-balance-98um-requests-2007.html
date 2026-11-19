@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KOF'98：2007年の入力・技調整に関する改善提案と98UMへの要望｜Come sono bravo?</title><meta name="description" content="2007年9月3日のKOF98UMへの要望案を、KOF98の当時の仕様理解と本人による改善希望に分けて整理する。">
+<link rel="stylesheet" href="/assets/research.css">
+<style>.article{max-width:940px}.article h2{margin-top:2rem}.article a{overflow-wrap:anywhere}.source-note{border-left:4px solid var(--accent,#456f5b);background:var(--soft,#edf2ed);padding:13px 16px;line-height:1.7}.scroll-table{overflow-x:auto;max-width:100%;margin:14px 0 20px}.article table{width:100%;min-width:650px;border-collapse:collapse}.article th,.article td{border:1px solid var(--line,#b7c1b9);padding:10px;vertical-align:top;text-align:left}.article th{background:var(--soft,#edf2ed)}.article li{margin:.3em 0}.article code{overflow-wrap:anywhere}</style>
+</head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof98-top.html">KOF'98</a> / <a href="./index.html">研究アーカイブ</a></div></div>
+<main class="main"><div class="wrap article"><h1>KOF'98：2007年の入力・技調整に関する改善提案と98UMへの要望</h1>
+<p class="source-note"><strong>原資料の位置づけ：</strong>2007年9月3日のMOT本人ブログは、KOF'98UMの公式サイトに送る要望を検討するための<strong>草案</strong>であり、当時のKOF'98に対する本人の理解と、将来の調整を求める意見が混在している。<strong>要望が実際に送信された、あるいは98UMに実装されたという資料ではない。</strong></p>
+<h2>当時の仕様理解：入力関係の三つの問題</h2>
+<div class="scroll-table"><table><thead><tr><th>対象</th><th>2007年の本人による98の説明</th><th>提案していた変更</th></tr></thead><tbody>
+<tr><td>ラウンド開始前の入力</td><td>98では開始前の入力を受け付けず、開幕タメ技は不可能と説明。94～95では可能、96～01では不可、02では可能という作品比較を記述</td><td>ラウンド開始前からのコマンド入力受付を可能にする</td></tr>
+<tr><td>レバー入力の保持F</td><td>98は同じ方向を2F以上入力する必要がある必殺技が多く、素早い入力では出にくいと説明。02では1Fでよくなったと述べる</td><td>レバー入力を1Fでも成立するよう緩和する</td></tr>
+<tr><td>タメ技の4要素の継続</td><td>しゃがみガードから後退へ移ると4要素タメが継続しないという98の問題を提示。本人は94～95で継続、96～02では非継続、03以降は未確認と記す</td><td>4要素内の姿勢・方向変更でもタメを維持する</td></tr>
+</tbody></table></div>
+<p>これらは<strong>2007年の本人の作品比較</strong>であり、当ページでは新たな実機計測を行っていない。現在の<a href="./input-command-frames-2018-2024.html">KOF'98入力受付研究</a>では2024年の別説明との不一致も記録しており、この草案だけで確定仕様を宣言しない。</p>
+<h2>攻撃避け・飛び込み・派生技に関する改善希望</h2>
+<div class="scroll-table"><table><thead><tr><th>テーマ</th><th>2007年の改善案</th><th>狙いとして本人が述べたこと</th></tr></thead><tbody>
+<tr><td>EXTの攻撃避け</td><td>攻撃避け後のカウンター攻撃はCまたはDだけで発動するようにする</td><td>ABの連打で意図せずカウンター攻撃が出ることを防ぐ</td></tr>
+<tr><td>ジャンプ攻撃と低姿勢技</td><td>原則としてジャンプ攻撃の打点を下げるとスライディング系の技を潰せるようにする</td><td>特別な性能の技を除き、使用時の扱いにくさを軽減する</td></tr>
+<tr><td>空中必殺技の方向</td><td>相手を飛び越えて空中必殺技を入力したら、原則として反対方向へ出るようにする</td><td>裏リョウの空中虎煌拳などの利用機会を広げる。舞・ロバート・キム・チョイの強化が大きくなる可能性にも言及</td></tr>
+<tr><td>追加技・派生技</td><td>空振り時でも派生技を出せるようにする。アンディの斬影拳→疾風横拳を庵の葵花に近い自由度へ</td><td>キャラの選択肢と操作の自由度を増やす</td></tr>
+</tbody></table></div>
+<h2>バランス調整に関する二つの方針</h2>
+<p>本人は、特殊な長所を持たない技がガードされるだけで簡単に反撃されると実戦で使いにくいと考え、<strong>通常の技はガードされても反撃されにくい性能を基準にする</strong>という調整方針を提案した。具体例として千鶴の236Cについて、ガードされても有利になるくらいでよいとの大胆な案も示している。</p>
+<p>さらに、すべてのキャラに<strong>発生5～9F程度で、ある程度のリーチがある反撃用の技を最低1種類</strong>用意するよう要望したいと記した。ゲージ消費・ダウンの可否などでバランスを取る考え方である。<strong>いずれもゲーム内で確認されたフレーム値の一覧ではなく、調整方針の提案</strong>である。</p>
+<h2>要望を送るか悩んでいた点</h2>
+<p>本人は要望の<strong>文章表現</strong>、公式フォームの<strong>450字制限</strong>、多数の要望を一度に送ると重要点が伝わりにくくなることを問題にしていた。草案からわかるのは要望内容の検討までで、送信・採用の経緯は確認できない。</p>
+<h2>資料区分と追跡課題</h2>
+<ul>
+<li><strong>当時の本人の認識：</strong>98の開幕前入力、コマンド保持F、タメ方向変更の扱い。</li>
+<li><strong>本人の提案：</strong>EXT攻撃避け、J攻撃対低姿勢技、空中必殺技の方向、派生技、反撃技の最低保証、ガード時硬直の調整。</li>
+<li><strong>未確認：</strong>この要望が実際に送信されたか、98UMでどの変更が採用されたか、後年の本人検証で各仕様理解が改訂されたか。</li>
+</ul>
+<h2>原資料・関連研究</h2>
+<p><a href="https://comesonobravo.hatenadiary.org/entry/2007/09/03/122020">2007/09/03：98UMへの要望について悩んでいること（本人原文）</a></p>
+<p>関連：<a href="./kof98-2002-system-differences-2008.html">98と2002のシステム差分</a> ／ <a href="./backstep-input-98-vs-02-2007.html">バックステップ入力</a> ／ <a href="./input-command-frames-2018-2024.html">コマンド入力受付・後年の説明</a></p>
+<p><a href="./index.html">KOF'98研究アーカイブに戻る</a> ／ <a href="/kof-kininaru.html#kof98">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜MOTの研究資料</div></footer></body></html>
