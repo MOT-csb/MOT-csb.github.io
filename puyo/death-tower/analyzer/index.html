@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>デスタワー盤面アナライザー｜Come sono bravo?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;800&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: 研究ノート。落ち着いて、数字ははっきり
+   IDEA: 対戦台の2画面。自分と相手のフィールドが並び、間に判定が出る
+   PICTURE: ぷよの盤面そのもの（6×13）。宙のぷよは半透明
+   COLOUR and TYPE: 深い藍の筐体に白い盤面、ぷよ4色、アクセントは赤。丸ゴシック見出し
+   LAYOUT: 盤面2枚＋中央の判定、その下に組ぷよ別の表 */
+:root{color-scheme:light dark;--bg:light-dark(#eef1f6,#0d1220);--panel:light-dark(#ffffff,#161d33);--ink:light-dark(#141a2b,#e9edf7);--mut:light-dark(#5b6478,#9aa4bd);--line:light-dark(#d7dce6,#2a3352);--acc:#d6293a;--well:light-dark(#1c2440,#0a0f1c)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Noto Sans JP",system-ui,sans-serif;overflow-x:clip}
+h1,h2,.big{font-family:"M PLUS Rounded 1c","Noto Sans JP",sans-serif}
+h1{font-size:clamp(26px,4vw,40px);line-height:1.1;margin:0 0 6px;text-wrap:balance}
+h2{font-size:20px;margin:0 0 10px}
+.band{padding:clamp(20px,3.5vw,48px) max(4vw,14px);max-width:1240px;margin:auto}
+.lead{color:var(--mut);margin:0 0 18px;max-width:70ch}
+.arena{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr) minmax(0,1fr);gap:18px;align-items:start}
+.side{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px}
+.side h2{display:flex;justify-content:space-between;align-items:baseline}
+.side h2 small{font-size:13px;color:var(--mut);font-family:"Noto Sans JP"}
+.well{background:var(--well);border-radius:10px;padding:8px;display:grid;grid-template-columns:repeat(6,1fr);gap:2px;aspect-ratio:6/13.6;max-width:260px;margin:0 auto 10px}
+.cell{border-radius:50%;aspect-ratio:1}
+.cell.top{outline:1px dashed #ffffff22;border-radius:4px}
+.p{box-shadow:inset -3px -4px 0 #0003,inset 3px 3px 0 #fff5}
+.fl{opacity:.38}
+.b{background:#e23b3b}.c{background:#2f6fe0}.d{background:#f1c40f}.e{background:#2fae4f}.f{background:#9a4fd0}.g{background:#c9ccd3;border-radius:30%}.i{background:#6c717d;border-radius:3px}.h{background:#222}.j{background:conic-gradient(#e33,#fc0,#3c3,#39f,#e33)}.k{background:#dff4ff}
+label{font-size:13px;color:var(--mut);display:block;margin:6px 0 3px}
+input,select,textarea{width:100%;font:16px/1.4 ui-monospace,monospace;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:light-dark(#fff,#0f1528);color:var(--ink)}
+button{font:700 15px "Noto Sans JP";min-height:44px;padding:0 16px;border-radius:10px;border:0;background:var(--acc);color:#fff;cursor:pointer}
+button.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #2f6fe0;outline-offset:2px}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.judge{background:var(--panel);border:2px solid var(--ink);border-radius:14px;padding:16px}
+.big{font-size:clamp(34px,5vw,52px);font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.kv{display:grid;grid-template-columns:1fr auto;gap:4px 12px;font-variant-numeric:tabular-nums;margin:8px 0}
+.kv dt{color:var(--mut)}.kv dd{margin:0;text-align:right;font-weight:700;white-space:nowrap}
+.verdict{margin-top:12px;padding:12px;border-radius:10px;background:light-dark(#fff3f4,#2a1218);border-left:5px solid var(--acc);font-weight:700}
+.meter{height:10px;background:var(--line);border-radius:6px;overflow:hidden;margin:4px 0 10px}.meter i{display:block;height:100%;background:var(--acc)}
+table{width:100%;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums}
+th,td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:left}
+td.n{text-align:right;white-space:nowrap}
+.tag{display:inline-block;width:14px;height:14px;border-radius:50%;vertical-align:-2px;margin-right:2px}
+.note{font-size:13px;color:var(--mut)}
+.scroll{overflow-x:auto}
+.ok{color:#1d9a46;font-weight:700}.ng{color:var(--mut)}
+@media(max-width:900px){.arena{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.judge{grid-column:1/-1;order:3}}
+@media(max-width:600px){.arena{grid-template-columns:minmax(0,1fr)}table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px}.stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:8em;text-align:start}.stack td::before{content:attr(data-l);float:inline-start;width:7.5em;margin-inline-start:-8em;white-space:normal;color:var(--mut)}.stack td:empty{display:none}}
+@media(prefers-reduced-motion:no-preference){.meter i{transition:width .5s}}
+</style><script>new MutationObserver(()=>{for(const c of document.querySelectorAll('.stack td:not([data-l])')){let i=0,p=c;while(p=p.previousElementSibling)i+=p.colSpan;c.dataset.l=c.closest('table').rows[0].cells[i]?.textContent||''}}).observe(document,{childList:true,subtree:true})</script></head>
+<body>
+<div class="band">
+<p class="note" style="margin:0 0 8px"><a href="/" style="color:inherit">Come sono bravo?</a> / <a href="/puyo/death-tower/" style="color:inherit">デスタワー</a> / 盤面アナライザー　｜　<a href="/puyo/death-tower/theory/" style="color:inherit">盤面計算による分析</a></p>
+<h1>デスタワー盤面アナライザー</h1>
+<p class="lead">旧ぷよシミュレータの盤面コードを入れると、次の組ぷよごとに「撃てるか・何個送れるか」を数えます。相手の盤面も入れると、致死量と撃ち合いの確率を出します。</p>
+
+<div class="arena">
+ <section class="side" aria-labelledby="hA">
+  <h2 id="hA">自分 <small id="hAsub"></small></h2>
+  <div class="well" id="wellA"></div>
+  <label for="codeA">盤面コード（URL全体でも可）</label>
+  <input id="codeA" type="text" autocomplete="off">
+  <label for="presetA">2016年の記事の盤面</label>
+  <select id="presetA"></select>
+ </section>
+
+ <section class="judge" aria-live="polite">
+  <h2>判定</h2>
+  <div class="note">次の1組で相手を倒せる確率</div>
+  <div class="big" id="pLethal">–</div>
+  <div class="meter"><i id="mLethal" style="width:0"></i></div>
+  <dl class="kv" id="kv"></dl>
+  <div class="verdict" id="verdict">盤面を入れてください</div>
+  <div class="row"><button id="run2">2組先まで計算</button><button class="ghost" id="swap">左右を入れかえ</button></div>
+  <p class="note" id="p2"></p>
+ </section>
+
+ <section class="side" aria-labelledby="hB">
+  <h2 id="hB">相手 <small id="hBsub"></small></h2>
+  <div class="well" id="wellB"></div>
+  <label for="codeB">盤面コード（空欄なら下の致死量を使う）</label>
+  <input id="codeB" type="text" autocomplete="off">
+  <label for="presetB">2016年の記事の盤面</label>
+  <select id="presetB"></select>
+  <label for="manual">相手がいないときの致死量（おじゃま個数）</label>
+  <input id="manual" type="number" min="1" max="200" value="48">
+ </section>
+</div>
+</div>
+
+<div class="band">
+ <div class="row" style="margin:0 0 10px;align-items:center">
+  <h2 style="margin:0;flex:1">自分の盤面：次の組ぷよ別</h2>
+  <label for="cols" style="margin:0">出現4色</label>
+  <select id="cols" style="width:auto"><option value="auto">自動</option><option value="bcde">赤青黄緑</option><option value="bdef">赤黄緑紫</option><option value="bcdf">赤青黄紫</option><option value="cdef">青黄緑紫</option></select>
+ </div>
+ <div class="scroll"><table class="stack" id="tbl"><thead><tr><th>組ぷよ</th><th>出る確率</th><th>おじゃま</th><th>連鎖</th><th>置き方</th><th>致死</th></tr></thead><tbody></tbody></table></div>
+ <p class="note">計算の前提：6列×13段、13段目（最上段）は消去判定に入れない。得点はサイトのシミュレーターv0.3の初代用ボーナス（連鎖0,8,16,32…／色数0,3,6,12／連結5個2〜11個以上10）、おじゃまぷよレート70。致死量は「6×（12−相手の3列目の段数）」の近似。宙に浮いたぷよは操作中・候補として盤面から外す。回し方の制限・窒息・おじゃまの落下上限は入れていない。「2組先」は1組目の置き場所を最善に選んだ場合。</p>
+</div>
+
+<script>
+{
+const NAME={b:'赤',c:'青',d:'黄',e:'緑',f:'紫',g:'おじゃま',h:'黒',i:'ブロック',j:'虹',k:'白'};
+const PRE=[
+['（選ぶ）',''],
+['中盤・最初','a27ba5ea4eca4dca4dca4eda3ebea2e2d2acbcdb3'],
+['中盤・青黄待ち','a27ba4cea4eca4dca4dca3deda3ebea2e2d2acbcdb3'],
+['リザーブ前','a18ca5ea11ea5baea5ea5ea5dca4b2a3dcbac'],
+['リザーブ後','a44ea5ea3caea3e2dca2edb2a2bdcbac'],
+['3連鎖移行・最初','a11ca5ba5ia2ca5ca12eba4eba3ecea3d2ea3b2c2d3bce'],
+['3連鎖移行案','a30cda7eda4eba2baeba2cecedacd2e2acb2c2d3bce'],
+['起爆前に緑を捨てる','a26cda9eca12ba5ba4cbdba2dcb2a2d2c2'],
+['5式アマチュア回避','a26ba5ca12ba3bada3d2ea3deca2e2cdadc2d2c2'],
+['5式アマチュア発生','a26ca5ba12ba3bada3d2ea3deca2e2cdadc2d2c2']];
+const $=id=>document.getElementById(id);
+function expand(code){code=(code||'').trim();const q=code.indexOf('?');if(q>=0)code=code.slice(q+1);
+ let s='';const re=/([a-k])(\d*)/g;let m;while(m=re.exec(code))s+=m[1].repeat(m[2]?+m[2]:1);
+ if(s.length!==78)throw Error('78マスになりません（'+s.length+'マス）');const g=[];for(let r=0;r<13;r++)g.push(s.slice(r*6,r*6+6).split(''));return g}
+function parse(code){const g=expand(code),st=g.map(r=>r.map(()=>'a')),fl=[];
+ for(let c=0;c<6;c++){let r=12;while(r>=0&&g[r][c]!=='a'){st[r][c]=g[r][c];r--}for(;r>=0;r--)if(g[r][c]!=='a')fl.push([r,c])}
+ return {raw:g,b:st,fl}}
+const COLORS='bcdef';
+function groups(b){const seen=new Set(),out=[];
+ for(let r=1;r<13;r++)for(let c=0;c<6;c++){const ch=b[r][c];if(!COLORS.includes(ch)||seen.has(r*6+c))continue;
+  const stk=[[r,c]],comp=[];seen.add(r*6+c);
+  while(stk.length){const [y,x]=stk.pop();comp.push([y,x]);for(const [dy,dx] of [[1,0],[-1,0],[0,1],[0,-1]]){const yy=y+dy,xx=x+dx;if(yy>=1&&yy<13&&xx>=0&&xx<6&&!seen.has(yy*6+xx)&&b[yy][xx]===ch){seen.add(yy*6+xx);stk.push([yy,xx])}}}
+  out.push([ch,comp])}return out}
+function gravity(b){for(let c=0;c<6;c++){const col=[];for(let r=0;r<13;r++)if(b[r][c]!=='a')col.push(b[r][c]);while(col.length<13)col.unshift('a');for(let r=0;r<13;r++)b[r][c]=col[r]}}
+function chain(b0){const b=b0.map(r=>r.slice()),steps=[];
+ for(;;){const pops=groups(b).filter(g=>g[1].length>=4);if(!pops.length)break;const kill=new Set();
+  for(const [,comp] of pops)for(const [y,x] of comp){kill.add(y*6+x);for(const [dy,dx] of [[1,0],[-1,0],[0,1],[0,-1]]){const yy=y+dy,xx=x+dx;if(yy>=1&&yy<13&&xx>=0&&xx<6&&b[yy][xx]==='g')kill.add(yy*6+xx)}}
+  steps.push(pops.map(([ch,comp])=>[ch,comp.length]));for(const k of kill)b[Math.floor(k/6)][k%6]='a';gravity(b)}
+ return steps}
+const gb=n=>({4:0,5:2,6:3,7:4,8:5,9:6,10:7})[n]??10,cb=n=>[0,0,8,16,32,64,128,256,512,999][Math.min(n,9)],colb=n=>[0,0,3,6,12,24][Math.min(n,5)];
+function oja(steps){let t=0;steps.forEach((s,i)=>{const n=s.reduce((a,x)=>a+x[1],0),cs=new Set(s.map(x=>x[0])).size;const bo=Math.max(1,Math.min(999,cb(i+1)+colb(cs)+s.reduce((a,x)=>a+gb(x[1]),0)));t+=n*10*bo});return Math.floor(t/70)}
+function top(b,c){for(let r=0;r<13;r++)if(b[r][c]!=='a')return r-1;return 12}
+function placements(b,a,c2){const out=[];
+ for(let col=0;col<6;col++)for(let o=0;o<3;o++){if(a===c2&&o===1)continue;const nb=b.map(r=>r.slice());
+  if(o<2){const t=top(b,col);if(t<1)continue;const lo=o===0?a:c2,hi=o===0?c2:a;nb[t][col]=lo;nb[t-1][col]=hi;out.push([nb,col,o])}
+  else{if(col>4)continue;const t1=top(b,col),t2=top(b,col+1);if(t1<0||t2<0)continue;nb[t1][col]=a;nb[t2][col+1]=c2;out.push([nb,col,o])}}
+ return out}
+function pairs(cols){const p=[];for(let i=0;i<4;i++)for(let j=i;j<4;j++)p.push([cols[i],cols[j],(i===j?1:2)/16]);return p}
+const desc=st=>st.map(s=>s.map(([ch,n])=>NAME[ch]+n).join('+')).join(' → ');
+const h3=b=>b.reduce((n,r)=>n+(r[2]!=='a'?1:0),0);
+function autoCols(...bs){const seen=new Set();for(const b of bs)if(b)for(const r of b.raw)for(const ch of r)if('bcdef'.includes(ch))seen.add(ch);
+ if(seen.has('f')&&!seen.has('c'))return 'bdef';if(seen.has('f')&&seen.has('c'))return [...seen].slice(0,4).join('').padEnd(4,'e');return 'bcde'}
+function analyse(b,cols,th){const rows=[];let pf=0,pl=0,sum=0;
+ for(const [a,c,w] of pairs(cols)){let best=null;
+  for(const [nb,col,o] of placements(b,a,c)){const st=chain(nb);if(st.length>=2){const x=oja(st);if(!best||x>best.x)best={x,st,col,o}}}
+  if(best){pf+=w;sum+=w*best.x;if(best.x>=th)pl+=w}rows.push({a,c,w,best})}
+ return {rows,pf,pl,avg:pf?sum/pf:0}}
+function lethal1(b,cols,th){let p=0;for(const [a,c,w] of pairs(cols)){if(placements(b,a,c).some(([nb])=>{const st=chain(nb);return st.length>=2&&oja(st)>=th}))p+=w}return p}
+function lethal2(b,cols,th){let P=0;for(const [a,c,w] of pairs(cols)){let best=0;
+ for(const [nb] of placements(b,a,c)){const st=chain(nb);if(st.length>=2&&oja(st)>=th){best=1;break}if(st.length)continue;best=Math.max(best,lethal1(nb,cols,th));if(best===1)break}P+=w*best}return P}
+function well(el,P){el.innerHTML='';if(!P){el.innerHTML=Array(78).fill('<div class="cell"></div>').join('');return}
+ const fl=new Set(P.fl.map(([r,c])=>r*6+c));let h='';for(let r=0;r<13;r++)for(let c=0;c<6;c++){const ch=P.raw[r][c];h+='<div class="cell'+(r===0?' top':'')+(ch!=='a'?' p '+ch:'')+(fl.has(r*6+c)?' fl':'')+'" title="'+(13-r)+'段目'+(c+1)+'列'+(ch!=='a'?' '+NAME[ch]:'')+'"></div>'}el.innerHTML=h}
+const pct=x=>Math.round(x*100)+'%';
+const oname=(col,o,a,c)=>o===2?(col+1)+'-'+(col+2)+'列 横（'+NAME[a]+'左）':(col+1)+'列 縦（下'+NAME[o===0?a:c]+'）';
+let A=null,B=null,cols='bcde',thA=48,thB=48;
+function safe(code){try{return code.trim()?parse(code):null}catch(e){return {err:e.message}}}
+function update(){A=safe($('codeA').value);B=safe($('codeB').value);$('p2').textContent='';
+ well($('wellA'),A&&!A.err?A:null);well($('wellB'),B&&!B.err?B:null);
+ $('hAsub').textContent=A?.err||(A?'3列目 '+h3(A.b)+'段':'');$('hBsub').textContent=B?.err||(B?'3列目 '+h3(B.b)+'段':'');
+ const tb=$('tbl').tBodies[0];if(!A||A.err){tb.innerHTML='';$('pLethal').textContent='–';$('mLethal').style.width='0';$('kv').innerHTML='';$('verdict').textContent='自分の盤面コードを入れてください';return}
+ cols=$('cols').value==='auto'?autoCols(A,B&&!B.err?B:null):$('cols').value;
+ const hasB=B&&!B.err;thB=hasB?6*(12-h3(B.b)):Math.max(1,+$('manual').value||48);thA=6*(12-h3(A.b));
+ const R=analyse(A.b,cols,thB);
+ tb.innerHTML=R.rows.map(({a,c,w,best})=>'<tr><td><span class="tag '+a+'"></span><span class="tag '+c+'"></span> '+NAME[a]+NAME[c]+'</td><td class="n">'+(w*16)+'/16</td><td class="n">'+(best?best.x+'個':'—')+'</td><td>'+(best?desc(best.st):'<span class="ng">2連鎖にならない</span>')+'</td><td>'+(best?oname(best.col,best.o,a,c):'')+'</td><td>'+(best&&best.x>=thB?'<span class="ok">致死</span>':'')+'</td></tr>').join('');
+ $('pLethal').textContent=pct(R.pl);$('mLethal').style.width=pct(R.pl);
+ let kv='<dt>撃てる確率（2連鎖以上）</dt><dd>'+pct(R.pf)+'</dd><dt>撃ったときの平均おじゃま</dt><dd>'+R.avg.toFixed(1)+'個</dd><dt>相手の致死量'+(hasB?'':'（手入力）')+'</dt><dd>'+thB+'個</dd><dt>自分の致死量</dt><dd>'+thA+'個</dd>';
+ let v;
+ if(hasB){const pB=lethal1(B.b,cols,thA);kv+='<dt>相手が次の1組で自分を倒す確率</dt><dd>'+pct(pB)+'</dd>';
+  v=R.pl>=pB?'次の1組では自分の方が倒しやすい':'次の1組では相手の方が倒しやすい。3列目を下げる手も比べたい';}
+ else v=R.pl>0?'致死量に届く組ぷよがある':'次の1組では致死量に届かない';
+ $('kv').innerHTML=kv;$('verdict').textContent=v}
+for(const id of ['presetA','presetB'])$(id).innerHTML=PRE.map(([n,c])=>'<option value="'+c+'">'+n+'</option>').join('');
+$('presetA').onchange=e=>{if(e.target.value){$('codeA').value=e.target.value;update()}};
+$('presetB').onchange=e=>{if(e.target.value){$('codeB').value=e.target.value;update()}};
+for(const id of ['codeA','codeB','manual'])$(id).addEventListener('input',update);
+$('cols').onchange=update;
+$('swap').onclick=()=>{const t=$('codeA').value;$('codeA').value=$('codeB').value;$('codeB').value=t;update()};
+$('run2').onclick=()=>{if(!A||A.err)return;$('p2').textContent='計算中…';
+ setTimeout(()=>{const a=lethal2(A.b,cols,thB);let s='2組以内に相手を倒せる確率：'+pct(a);
+  if(B&&!B.err)s+='／相手が2組以内に自分を倒す確率：'+pct(lethal2(B.b,cols,thA));$('p2').textContent=s},30)};
+$('codeA').value=PRE[2][1];$('codeB').value=PRE[5][1];update();
+}
+</script>
+</body></html>
