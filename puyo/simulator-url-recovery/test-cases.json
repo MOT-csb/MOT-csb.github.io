@@ -1,0 +1,107 @@
+{
+  "description": "旧ブログ原文から転記した盤面URLと、仮の左上→右下6列×13行展開結果。色・走査順・表示領域は未確定。",
+  "source": "comesonobravo.hatenadiary.org.export.txt",
+  "generated_date": "2026-11-20",
+  "cases": [
+    {
+      "title": "はさみうちで重要な段差把握例・最初の配置",
+      "source_basename": "441350924.html",
+      "code": "a11ea5ba5ia13bca11ca5cda3e2da3b2c2a2ebeca",
+      "rows": [
+        "aaaaaa",
+        "aaaaae",
+        "aaaaab",
+        "aaaaai",
+        "aaaaaa",
+        "aaaaaa",
+        "abcaaa",
+        "aaaaaa",
+        "aacaaa",
+        "aacdaa",
+        "aeedaa",
+        "abbcca",
+        "aebeca"
+      ]
+    },
+    {
+      "title": "はさみうちで重要な段差把握例・2列目に青をかませる",
+      "source_basename": "441350924.html",
+      "code": "a18eba11ba5ca12ca5cda3e2da3b2c2a2ebeca",
+      "rows": [
+        "aaaaaa",
+        "aaaaaa",
+        "aaaaaa",
+        "ebaaaa",
+        "aaaaaa",
+        "abaaaa",
+        "acaaaa",
+        "aaaaaa",
+        "aacaaa",
+        "aacdaa",
+        "aeedaa",
+        "abbcca",
+        "aebeca"
+      ]
+    },
+    {
+      "title": "はさみうちで重要な段差把握例・赤を4列目に置く",
+      "source_basename": "441350924.html",
+      "code": "a11ea5ba5ia14cba10ca5cda3e2da3b2c2a2ebeca",
+      "rows": [
+        "aaaaaa",
+        "aaaaae",
+        "aaaaab",
+        "aaaaai",
+        "aaaaaa",
+        "aaaaaa",
+        "aacbaa",
+        "aaaaaa",
+        "aacaaa",
+        "aacdaa",
+        "aeedaa",
+        "abbcca",
+        "aebeca"
+      ]
+    },
+    {
+      "title": "黄のリザーブを意識した後回し・変更前",
+      "source_basename": "441984369.html",
+      "code": "a18ca5ea11ea5baea5ea5ea5dca4b2a3dcbac",
+      "rows": [
+        "aaaaaa",
+        "aaaaaa",
+        "aaaaaa",
+        "caaaaa",
+        "eaaaaa",
+        "aaaaaa",
+        "eaaaaa",
+        "baeaaa",
+        "aaeaaa",
+        "aaeaaa",
+        "aadcaa",
+        "aabbaa",
+        "adcbac"
+      ]
+    },
+    {
+      "title": "黄のリザーブを意識した後回し・変更後",
+      "source_basename": "441984369.html",
+      "code": "a44ea5ea3caea3e2dca2edb2a2bdcbac",
+      "rows": [
+        "aaaaaa",
+        "aaaaaa",
+        "aaaaaa",
+        "aaaaaa",
+        "aaaaaa",
+        "aaaaaa",
+        "aaaaaa",
+        "aaeaaa",
+        "aaeaaa",
+        "caeaaa",
+        "eedcaa",
+        "edbbaa",
+        "bdcbac"
+      ]
+    }
+  ]
+}
