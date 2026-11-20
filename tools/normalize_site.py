@@ -30,6 +30,15 @@ GLOBAL_NAV = (
     "</nav>"
 )
 
+# アクセス解析（全ページの </head> の直前に入れる）。空なら何も入れない（入っていれば外す）
+# GoatCounter はサイトコード（https://○○.goatcounter.com の○○）、Cloudflare はトークンを書く
+ANALYTICS = {
+    "goatcounter": "",
+    "cloudflare": "",
+}
+ANALYTICS_BEGIN = "<!-- analytics -->"
+ANALYTICS_END = "<!-- /analytics -->"
+
 # research/kofXX/ のパンくず
 RESEARCH = {
     "kof94": ("KOF'94", "/kof94-top.html"),
@@ -57,6 +66,9 @@ def all_pages():
     for root, dirs, files in os.walk(ROOT):
         dirs[:] = [d for d in dirs if not d.startswith(".") and d != "tools"]
         for f in files:
+            # Google Search Console の所有権確認ファイルはページとして扱わない
+            if re.fullmatch(r"google[0-9a-f]+\.html", f):
+                continue
             if f.endswith((".htm", ".html")):
                 yield os.path.relpath(os.path.join(root, f), ROOT).replace(os.sep, "/")
 
@@ -81,6 +93,30 @@ HIDDEN = {
 
 def is_redirect(t):
     return bool(re.search(r'http-equiv=["\']refresh', t, re.I))
+
+
+# ---------- 0. アクセス解析 ----------
+def analytics_tag():
+    parts = []
+    if ANALYTICS.get("goatcounter"):
+        parts.append(
+            '<script data-goatcounter="https://%s.goatcounter.com/count" async '
+            'src="//gc.zgo.at/count.js"></script>' % ANALYTICS["goatcounter"]
+        )
+    if ANALYTICS.get("cloudflare"):
+        parts.append(
+            "<script defer src=\"https://static.cloudflareinsights.com/beacon.min.js\" "
+            "data-cf-beacon='{\"token\": \"%s\"}'></script>" % ANALYTICS["cloudflare"]
+        )
+    return ANALYTICS_BEGIN + "".join(parts) + ANALYTICS_END if parts else ""
+
+
+def fix_analytics(path, t):
+    t = re.sub(re.escape(ANALYTICS_BEGIN) + r".*?" + re.escape(ANALYTICS_END), "", t, flags=re.S)
+    tag = analytics_tag()
+    if not tag or is_redirect(t):
+        return t
+    return re.sub(r"</head>", lambda m: tag + m.group(0), t, count=1, flags=re.I)
 
 
 # ---------- 1. タイトル ----------
@@ -267,12 +303,12 @@ def main():
     for p in all_pages():
         full = os.path.join(ROOT, p)
         t = read(full)
-        n = t if p == "sitemap.html" else fix_research_crumbs(p, fix_nav(p, fix_title(p, t)))
+        n = t if p == "sitemap.html" else fix_analytics(p, fix_research_crumbs(p, fix_nav(p, fix_title(p, t))))
         if n != t:
             write(full, n)
             changed += 1
         pages[p] = n
-    sm = build_sitemap(pages)
+    sm = fix_analytics("sitemap.html", build_sitemap(pages))
     full = os.path.join(ROOT, "sitemap.html")
     if read(full) != sm:
         write(full, sm)
