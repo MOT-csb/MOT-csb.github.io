@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>KOF'98・2002：コマンド投げ同士の相殺と位置交換（2023年のMOT記録）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:980px}.article h2{margin-top:2rem}.article a{overflow-wrap:anywhere}.note{border-left:4px solid var(--accent,#456d5b);background:var(--soft,#edf2ed);padding:12px 16px}</style></head>
+<body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/kof-top.html">KOF</a><span aria-hidden="true"> / </span><a href="/kof98-top.html">KOF'98</a><span aria-hidden="true"> / </span><a href="./index.html">研究アーカイブ</a></div></div>
+<main class="main"><div class="wrap article"><h1>KOF'98・2002：コマンド投げ同士の相殺と位置交換（2023年のMOT記録）</h1>
+<p class="note"><strong>資料区分：</strong>2023年5月10日のMOT本人のX投稿にある現象・操作条件と、内部処理についての本人の推測を分けて保存。KOF'98と2002を対象とする本人の説明であり、今回新たにゲーム内部を解析した結果ではない。</p>
+<h2>1．本人が説明した位置交換の条件</h2>
+<p>2023年5月10日の本人投稿は、KOF'98と2002で<strong>コマンド投げ同士が相殺</strong>したとき、キャラクターの押し合い判定が通常とは異なるように見えると説明している。具体的な条件は次のとおり。</p>
+<ol><li>両キャラクターが<strong>密着</strong>している。</li><li>両者が<strong>632146系のコマンド投げ</strong>を出し、互いの投げが相殺する。</li><li>両者が<strong>6方向とボタンを押し続けている</strong>。</li></ol>
+<p>この状態では、<strong>両者が前進し、互いの位置が入れ替わってしまう</strong>と本人が記録した。</p>
+<h2>2．原因についての本人仮説</h2>
+<p>MOTは、投げの相殺が起こると<strong>押し合い判定の処理がスキップされるのではないか</strong>と考察した。ただし原文は「スルーするっぽい」という推測表現であり、内部処理を解析して確定したという主張ではない。</p>
+<p>同日の別投稿では、KOF'94・'95の攻撃避け、ラッキービジョン、KOF'96以降の緊急回避、打撃後に相手が緊急回避した状況などを、押し合い判定との関係で並べている。<strong>それぞれの押し合い判定の扱いは同一だと断定していない。</strong></p>
+<h2>3．別の位置交換現象と区別する</h2>
+<p>2023年には、KOF'98の2P側が1P側を画面端に追い込み、前転して密着した後に端方向へレバーを入れることで位置交換が起こるとも説明している。こちらは<strong>投げ相殺ではなく前転を経由</strong>する現象で、原資料が挙げる成立条件は別である。</p>
+<h2>4．確認が必要な点</h2>
+<ul><li>両者の押し合い判定そのものが消えるのか、押し合いの更新処理が行われないだけなのか。</li><li>632146系以外、投げ間合い・位置・1P／2P、作品ごとに同じ現象が起きるか。</li><li>投げ相殺の直後から、何Fの間だけ相互に前進できるか。</li></ul>
+<p>これらは<strong>今回の本人投稿からは確定できない追加の確認事項</strong>である。</p>
+<h2>原資料・関連研究</h2>
+<p><a href="https://x.com/mot_csb/status/1656107117517078530">2023/05/10：632146系コマンド投げ相殺と位置交換</a> ／ <a href="https://x.com/mot_csb/status/1656093423454265345">同日：押し合い判定についての横断メモ</a> ／ <a href="https://x.com/mot_csb/status/1656305060220121088">同日：前転からの2P側位置交換（別現象）</a></p>
+<p><a href="./2p-corner-entry-guard-direction-2007-2025.html">画面端の2P側入り込みとガード方向</a> ／ <a href="./corner-guardcancel-backroll-position-swap-2007.html">画面端GC後転からの位置交換</a> ／ <a href="/kof-kininaru.html#kof98">気になること</a></p>
+<p><a href="./index.html">KOF'98研究アーカイブに戻る</a></p>
+</div></main><footer class="footer"><div class="wrap">Come sono bravo?｜MOT本人資料を再構成</div></footer></body></html>
