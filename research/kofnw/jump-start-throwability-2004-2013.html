@@ -1,0 +1,40 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF NEOWAVE：ジャンプ開始時の投げられ判定とダッシュ投げ対策の研究史｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kofnw-top.htm">KOF NEOWAVE</a> / <a href="/research/kofnw/">研究アーカイブ</a> / <b>ジャンプと投げられ判定</b></div></div><main class="main"><div class="wrap">
+<h1>ジャンプ開始時の投げられ判定と、ダッシュ投げを見せるJDf案</h1>
+<p>MOTの2004年の<a href="/nwsystem-kannkei.htm">システム関係情報</a>と<a href="/nwsaisyu-wazakaiseki.htm">柴舟技解析</a>、2013年6月3日の本人X投稿を横断した研究史。<strong>本人が未確定とした全体仕様、第三者の雑誌情報として掲載したキャラ別事項、本人が後年に考えた戦術案を混同しない。</strong> 2026年の新しい実機確認・内部解析ではない。</p>
+<h2>2004年システム原稿：全体仕様は未解決</h2>
+<p>2004年8月1日作成・9月4日最終更新のMOT原稿では、KOF2002と共通すると思われる投げられ判定の条件（起き上がり・着地・硬直解除直後、ダウン回避直後、屈伸によるガードポーズ延長など）を整理。一方で、<strong>ジャンプ攻撃を出した後、相手の対空無敵投げを見て再度ジャンプしても投げられることがある</strong>と記している。</p>
+<p>原因候補には「ジャンプ攻撃を出すと着地で投げられる」「小・中ジャンプのジャンプしかかりに投げられ判定がある」など複数の説明が挙げられ、MOTは<strong>自身も確信を持てていない</strong>と明記。実際にどのキャラクター・ジャンプ種別・投げ・フレームで起きたかはこの原稿から確定できない。</p>
+<h2>2004年柴舟技解析：ジャンプ開始時の個別記載</h2>
+<p>2004年8月21日作成・10月16日最終更新の<a href="/nwsaisyu-wazakaiseki.htm">柴舟技解析</a>には、「NW柴舟の特殊な点」の表があり、表の見出しに<strong>『アルカディア』からの情報</strong>であることが明記されている。そこには、ジャンプの開始直後、<strong>まだ地上判定である間に投げられ判定が残っている</strong>という趣旨の記載がある。</p>
+<div class="tw"><table><thead><tr><th>資料</th><th>記録内容</th><th>確実性と対象</th></tr></thead><tbody>
+<tr><td>2004年システム関係情報</td><td>小・中ジャンプの出始めに投げられ判定があるという説を含むが、ほかにも着地時の別説があり未決着</td><td><strong>本人の未解決事項</strong>。全キャラ共通の成立条件は不明</td></tr>
+<tr><td>2004年柴舟技解析「特殊な点」</td><td>柴舟のジャンプ開始時、地上判定が残る段階で投げられ判定も残る</td><td><strong>『アルカディア』情報としてMOTが収録した個別記載</strong>。MOTの独自実測と断定しない</td></tr>
+<tr><td>同じ柴舟の表・小／中ジャンプ攻撃</td><td>攻撃動作中に被弾してもカウンターヒットにならないという特殊な挙動を収録</td><td>同じく誌面情報としての収録。投げられ判定の直接の説明とは別</td></tr>
+<tr><td>同じ柴舟の表・飛び退き</td><td>地上の出始め・着地以外に無敵がありそうだが、投げに対しても無敵かは不明</td><td>飛び退きと通常のジャンプは別行動。投げ無敵の有無は未確定</td></tr>
+</tbody></table></div>
+<p>この二つの2004年資料は、<strong>柴舟のジャンプ開始時に投げられる可能性という論点で接続する</strong>。ただし、柴舟に関する誌面情報が全キャラにそのまま当てはまるか、元のシステム原稿でMOTが述べた対空無敵投げとの遭遇場面を説明できるかまでは不明であり、<strong>全体の謎が解決したわけではない</strong>。</p>
+<h2>2013年6月3日：ダッシュ投げフェイント→屈みJDfという本人の別の案</h2>
+<p>同日の<a href="https://x.com/mot_csb/status/341357918983184384">本人投稿</a>でMOTは、JDfが使えるモードを研究し尽くすと強いのではないかという当時の評価を示した。約26分後には、<a href="https://x.com/mot_csb/status/341364405734346752">ダッシュ投げを見せた後の最短ダッシュ→しゃがみジャストディフェンス</a>を構想した。</p>
+<p>狙いは、相手がダッシュ投げを防ごうと出した打撃をJDfで受け、そこから打撃で反撃すること。<strong>本人が案として提示したもので、成立・相手ごとの再現性・JDf後の確定反撃を実測確認したとする投稿ではない。</strong></p>
+<p>この案は<strong>相手から投げられるジャンプ開始時の現象とは、攻守の方向も局面も違う</strong>。関連する投げへの読み合いであるため同じ研究史に併記するが、2013年の案が2004年の投げられ判定の疑問を解決したわけではない。2014年11月の<a href="/research/kofnw/jdf-gc-history-2004-2024.html">弱攻撃後の歩き屈みJDfや着地JDf案</a>とも異なる起点を持つ。</p>
+<h2>本人Xアーカイブに対する今回の再検索</h2>
+<p>提供されたXアーカイブの全4パート（合計170,410投稿）を対象に、<strong>「投げられ判定」「被投げ判定」「ジャンプ予備」「着地直後」「空中投げ」「ダッシュ投げ」などの語で再検索</strong>し、KOFNWに関係する投稿を原文で照合した。</p>
+<p>2013年のダッシュ投げ→屈みJDf案、2024年の柴舟D投げと対GB攻撃の投げ案は見つかった。しかし、<strong>2004年に残されたNEOWAVEのジャンプ開始時／ジャンプ攻撃後の投げられ判定を、全キャラ・ジャンプ種別・フレーム別に確定させる本人の後年報告</strong>は、今回の検索範囲では特定できなかった。検索語の限界があり、投稿や外部動画に結果がないと断定しない。</p>
+<h2>次に照合すべき点</h2>
+<ul>
+<li>柴舟のジャンプ開始直後に投げられ判定が残るという誌面情報の版・条件・原図。MOTが別の場所で自分でも追試した記録がないか</li>
+<li>地上判定の残る予備動作に投げられ判定があるのは柴舟のみか、ほかのキャラや小・中・大ジャンプでも再現するか</li>
+<li>ジャンプ攻撃後の着地で投げられ判定が復活するという説と、ジャンプし始めに投げられ判定があるという説を独立して確認できるか</li>
+<li>2013年の最短ダッシュ→屈みJDfが、相手の投げ警戒打撃に対して機能する具体的な入力・距離・技の条件</li>
+</ul>
+<p>未解決のものは<a href="/kof-kininaru.html#kofnw">「気になること」</a>に記録する。旧原稿は旧URLを維持し、第三者誌面データの表を新たに転載しない。</p>
+<h2>一次資料</h2>
+<ul>
+<li><a href="/nwsystem-kannkei.htm">MOT「KOFNEOWAVEシステム関係情報」（2004/8/1〜9/4）</a>：「投げられ判定」</li>
+<li><a href="/nwsaisyu-wazakaiseki.htm">MOT「KOFNEOWAVE柴舟技解析」（2004/8/21〜10/16）</a>：「NW柴舟の特殊な点（アルカディア情報）」</li>
+<li><a href="https://x.com/mot_csb/status/341357918983184384">2013/6/3：GBモードとJDfの将来性への本人評価</a></li>
+<li><a href="https://x.com/mot_csb/status/341364405734346752">2013/6/3：最短ダッシュ→屈みジャスト案</a></li>
+<li><a href="./heat-dash-throw-notes-2004-2005.html">2004〜2005年のダッシュヒート・通常投げ・被投げ条件の記録</a></li>
+<li><a href="./jdf-gc-history-2004-2024.html">JDf／GC緊急回避の研究史（2004〜2024年）</a></li>
+</ul>
+<p><a href="/research/kofnw/">KOF NEOWAVE研究アーカイブ</a> ／ <a href="/kof-kininaru.html#kofnw">気になること</a> ／ <a href="/kofnw-top.htm">作品トップ</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
