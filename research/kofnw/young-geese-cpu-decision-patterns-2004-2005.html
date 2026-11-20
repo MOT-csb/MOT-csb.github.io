@@ -1,0 +1,40 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>若ギースCPU攻略の行動分岐と危険条件（2004〜2005年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kofnw-top.htm">KOF NEOWAVE</a> / <a href="/research/kofnw/">研究アーカイブ</a> / <b>若ギースCPU攻略分岐</b></div></div><main class="main"><div class="wrap"><h1>若ギースCPU攻略：待ち方・反撃・失敗条件の分岐表</h1>
+<p>MOTが2004年8月14日に作成し2005年3月4日まで更新した<a href="/nwygeese-wazakaiseki.htm">「KOFNW若ギース技解析＆倒し方」</a>から、CPU相手の3つの攻略パターンと行動条件を分岐表として取り出す。<a href="./young-geese-hitbox-2004-2024.html">既存の若ギース研究史</a>が概要・後年の判定研究を扱うのに対して、本記事は<strong>旧攻略文の実行手順・例外・選択肢の衝突</strong>に焦点を当てる。ゲームの内部AIアルゴリズムを逆アセンブルした結果ではない。</p>
+<h2>最初に区別すること</h2><ul>
+<li><strong>相手はCPU若ギース</strong>。2004年原稿はダメージを原則CPU版で記述し、プレイヤー版のダメージは本人が詳しくないと明記。</li>
+<li><strong>MAX2モードのゲージ満タン</strong>と、<strong>体力低下によりMAX超必殺技を使える状態</strong>は別の条件。旧原稿の「MAX2」は選択モードであり、レイジングストームの項目はMAX超必殺技。技一覧は「MAX2なし」としている。</li>
+<li>以下のCPU行動は<strong>旧原稿の観測に基づくパターン</strong>であって、全試行で必ず成立する決定論的なCPU仕様ではない。「おそらく全キャラ」など本人の留保を残す。</li>
+</ul>
+<h2>パターン1：遠距離で屈みガードして待つ</h2>
+<div class="tw"><table><thead><tr><th>分岐条件</th><th>原稿が観測・推奨する行動</th><th>注意事項</th></tr></thead><tbody>
+<tr><td>開始：距離を取り、屈みガード</td><td>CPUは遠距離から屈みB／屈みDを空振りしたり、飛び退いたりする。ゲージMAXになるとダッシュして投げを狙う</td><td>立ちガードだと烈風拳・スライディングを出してきて危険と記述</td></tr>
+<tr><td>ダッシュを見たとき</td><td>引きつけて通常技で止め、連続技や屈みDでダウンを奪う。再び距離を取り屈みガードへ戻る</td><td>本人は連続技の種類を限定せず、容易でダウンを奪える手段を選ぶよう推奨</td></tr>
+<tr><td>MAX超必殺技を使える低体力時</td><td>ダッシュから打ち上げレイジングストームを出す危険があるため、遠めから屈みDなどで止める</td><td>CPU版は大ダメージ。画面中央では落下中の大きい烈風拳で追撃され、満タンからKOされる場合があると記録。ただし追撃は空振りの場合もある</td></tr>
+<tr><td>投げを誘う場合</td><td>ダッシュを引きつけて垂直小Jし、投げの空振りへ連続技</td><td>低体力時も通常投げを狙う傾向があるとの説明。MAX超必殺技の危険が消えるという意味ではない</td></tr>
+</tbody></table></div>
+<p>原稿はこれを最も簡単な攻略と位置づけ、<strong>全キャラでも可能ではないか</strong>と推測。例示連続技に庵の屈みC→八稚女、テリーの近立C×2→特殊技C→MAXパワーゲイザーを挙げるが、キャラクターごとの保証は行っていない。遠距離で屈んでいる相手へCPUが下段技を反復する理由については「アルゴリズムがそう組まれているみたい」という<strong>本人の推測</strong>であり、内部処理を確認した結果ではない。</p>
+<h2>パターン2：浮かせ→非ダウン追撃→着地重ね</h2><p>浮かせ技からダウンさせない通常技で追撃し、若ギースの着地に攻撃を重ねると、CPUがガードせず連続して攻められるという旧作からのパターン。ただし<strong>重ねの時刻がずれるとガードされる</strong>。さらにMAX2モードかつ体力が少ないときは、重ねたところへMAX超必殺技を使われる危険を明記し、その段階ではパターン1に切り替えるよう本人が勧めている。</p>
+<h2>パターン3：開始間合いからレバーNで飛翔日輪斬を待つ</h2><p>無敵技のあるキャラでGBモードを選択しているときの対策。原稿には開始間合い・レバーNでのCPU行動として、以下の<strong>条件付きの代表例</strong>が列記されている。</p>
+<div class="tw"><table><thead><tr><th>CPUの観測された連係</th><th>反撃案</th><th>取り違えると危険な選択</th></tr></thead><tbody>
+<tr><td>飛翔日輪斬→スライディング→烈風拳</td><td>飛翔日輪斬の下降中を無敵技で迎撃。またはスライディング後の烈風拳を見越してジャンプから連続技</td><td>烈風拳を読んで飛んだ際、エクスプロージョンボール分岐には上昇中に食らう危険</td></tr>
+<tr><td>飛翔日輪斬→スライディング→エクスプロージョンボール</td><td>スライディングを屈みJDfして反撃、もしくはエクスプロージョンボールをガードして反撃</td><td>遠距離でガードした場合は長い単発技程度しか反撃できないことがある</td></tr>
+<tr><td>飛翔日輪斬→屈みB→屈みD</td><td>飛翔日輪斬を直接無敵技で迎撃する戦術が有効</td><td>スライディング待ちの屈みJDf案では攻撃機会を失う</td></tr>
+<tr><td>ジャンプ攻撃→？／烈風拳→？</td><td>ジャンプ攻撃は飛翔日輪斬の想定と同タイミングの無敵技で返せると本人が記録。烈風拳には見てからJDf→再度N待ち</td><td>「？」以下のCPU行動は未記入。攻撃確定を補わない</td></tr>
+</tbody></table></div>
+<p>飛翔日輪斬そのものをJDfしても多段技のため反撃しにくく、原稿では推奨していない。<strong>社でレバーN待ちするとCPUが中ジャンプする</strong>との別観測もあり、全キャラで同じ分岐が現れると一般化しない。</p>
+<h2>技性能の参照条件：CPUとプレイヤーの差</h2>
+<div class="tw"><table><thead><tr><th>技</th><th>CPU版を中心とする原稿記録</th><th>プレイヤー版の記録・留保</th></tr></thead><tbody>
+<tr><td>屈みB</td><td>屈み待ち相手へ空振りを重ねることがある</td><td>ダメージが高く連打しやすいと記録。CPU行動パターンとは別</td></tr>
+<tr><td>烈風拳</td><td>通常飛び道具を貫通する2種類。ヒット約3割、見た目より判定が小さいため小中ジャンプで越えられることがある</td><td>プレイヤー使用時の具体的ダメージ表はなし</td></tr>
+<tr><td>飛翔日輪斬</td><td>上昇中の無敵、めくり、下降中への無敵技迎撃が対策の柱</td><td>原稿はCPUへの対策中心。ガード後の若ギース側有利も旧原稿の記述として保持</td></tr>
+<tr><td>デッドリーレイブ</td><td>ガード不能の乱舞技。ヒット約7割、ジャンプでも回避できない。アンディ遠立Cを吸い込む現象を本人確認</td><td>ダメージが低く、ある程度近いと技が出せないらしいと記載。発生しない間合いは未特定</td></tr>
+<tr><td>レイジングストーム</td><td>旧表ではMAX超必殺技。ヒット約8割（？）、打ち上げ後の烈風拳追撃可能性</td><td>ダメージがかなり低い「みたい」と留保。ガード不能の打ち上げは投げ技かもしれないと推測</td></tr>
+</tbody></table></div>
+<h2>未解決事項と帰属</h2><ul>
+<li>屈み待ちCPUの分岐が全キャラ同一か、ゲージ満タン・残体力・距離以外の条件を使うかは<strong>未確認</strong>。</li>
+<li>飛翔日輪斬→スライディング後の烈風拳／エクスプロージョンボール分岐の発生条件は未確認。レバーN時の「？」欄を推測で埋めない。</li>
+<li>屈みCの打撃防御ポイントが全身にあるというMOTの観察由来の推定、エクスプロージョンボールが屈みガード不能かもしれないという仮説は確定情報ではない。</li>
+<li>2005年1月30日の更新情報の大部分は<strong>サッキーさんからの提供</strong>。時期を特定せず全項目をMOT本人の実測成果としない。</li>
+</ul>
+<p>一次資料：<a href="/nwygeese-wazakaiseki.htm">MOT「KOFNW若ギース技解析＆倒し方」（2004/8/14〜2005/3/4）</a>。原HTMLの方向アイコン等は<a href="/nwygeese-wazakaiseki.htm">元ページ</a>を参照。関連記事：<a href="./young-geese-hitbox-2004-2024.html">若ギースのCPU攻略・後年の判定考察</a> ／ <a href="./move-analysis-source-audit-2004-2005.html">技解析原稿の資料区分</a>。</p>
+<p><a href="/research/kofnw/">研究アーカイブへ戻る</a> ／ <a href="/kof-kininaru.html#kofnw">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?</div></footer></body></html>
