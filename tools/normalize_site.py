@@ -132,6 +132,7 @@ GROUP_ORDER = [
     "KOF'97", "KOF'98", "KOF'98 研究アーカイブ", "KOF'98UM", "KOF'99", "KOF2000",
     "KOF2001", "KOF2002", "KOF2002UM", "KOF2003", "KOF NEOWAVE", "KOF XI",
     "餓狼伝説", "サムライスピリッツ", "その他の格闘ゲーム",
+    "アイドルマスター シンデレラガールズ",
     "MSX", "信長の野望・武将風雲録（MSX2版）", "ぷよぷよ・デスタワー", "サイト共通・その他",
 ]
 
@@ -181,6 +182,8 @@ def _page_group(t, path):
     if path.startswith("research/"):
         k = path.split("/")[1]
         return (RESEARCH[k][0] + " 研究アーカイブ") if k in RESEARCH else "KOFシリーズ"
+    if path.startswith("social/idolmaster-cinderella-girls/"):
+        return "アイドルマスター シンデレラガールズ"
     if path.startswith("msx/nobunaga-fuunroku/"):
         return "信長の野望・武将風雲録（MSX2版）"
     if path.startswith("msx/"):
