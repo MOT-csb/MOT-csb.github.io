@@ -57,6 +57,18 @@ def all_pages():
 
 # 全ページ一覧と検索に出さないページ（URLは残す）。理由も書いておく
 HIDDEN = {
+    "seorii-top.html",  # クラッシュ攻略トップ（crush-top.html）の初期版
+    "timechart-gakusann.html",  # timechart.html の旧版（85%一致）
+    "スタッフロール.html",  # 94staff.html の旧版（91%一致）
+    "ローリングへの反撃技表.html",  # cvss2-rorin-hanngeki.html の旧版（97%一致）
+    "02umtop-1.html",  # 本文が空
+    "frame-ann.html",  # 本文が空
+    "02umtop-2.html",  # KOF2002UMトップのキャラ一覧の旧版
+    "02umtop-3.html",  # KOF2002UMトップのキャラ一覧の旧版
+    "02umtop-4.html",  # KOF2002UMトップのキャラ一覧の旧版
+    "02umtop-5.html",  # KOF2002UMトップのキャラ一覧の旧版
+    "02umtop-6.html",  # KOF2002UMトップのキャラ一覧の旧版
+    "02umtop-7.html",  # KOF2002UMトップのキャラ一覧の旧版
     "02K'-maxima-koutyokusa.html",  # K’のページの複製。マキシマの正式版は 02maxima-kakuwaza-koutyokusa.html
 }
 
