@@ -35,6 +35,7 @@ RESEARCH = {
     "kof94": ("KOF'94", "/kof94-top.html"),
     "kof96": ("KOF'96", "/kof96-top.html"),
     "kof98": ("KOF'98", "/kof98-top.html"),
+    "kof99": ("KOF'99", "/kof99-top.html"),
 }
 
 
