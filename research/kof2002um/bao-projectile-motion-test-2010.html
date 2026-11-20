@@ -1,0 +1,20 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF2002UM 包の飛び道具6種と動作フレーム測定方法（2010年）｜Come sono bravo?</title><meta name="description" content="2010年の包の飛び道具6種とジャンプ入力境界を用いたフレーム測定"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:980px}.article h2{margin-top:2rem}.article table{width:100%;min-width:700px;border-collapse:collapse}.article th,.article td{border:1px solid #b7c2be;padding:8px;text-align:left;vertical-align:top}.article th{background:#e6efea}.scroll{overflow:auto}.note{background:#edf3ef;border-left:3px solid #517b65;padding:12px}.src{font-size:.92em}.article a{overflow-wrap:anywhere}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof02um-top.html">KOF2002UM</a> / <a href="./index.html">研究アーカイブ</a> / <b>包の調査方法</b></div></div><main class="main"><div class="wrap article"><h1>KOF2002UM：包の飛び道具6種と動作フレーム測定方法（2010年）</h1>
+<p class="note"><strong>MOT本人が2010年1月7日に確認した記録。</strong>したらばの包スレで話題になった飛び道具を調べた記事を、測定手順・入力境界・暗転の差引きも含めて再構成。本人は空中飛び道具を今回調べていないと明記している。</p>
+<h2>本人が明記した測定方法</h2>
+<p>コマンド入力が成立した後、上方向の<strong>「8」入力を何フレーム継続すると垂直小ジャンプできるか</strong>を測る。動作中にはジャンプできず、動作終了後にジャンプできる境界を調査する方法である。</p>
+<p>超必殺技について、原文では<strong>暗転中の28F</strong>を引いて技の全体モーションを算出している。これは<strong>本人の当時の計算方法</strong>であり、異なる環境の暗転時間が同じだと検証した記録ではない。</p>
+<h2>6種類の記録とジャンプ入力境界</h2>
+<div class="scroll"><table><thead><tr><th>技（一覧の表記）</th><th>原文のジャンプ入力境界</th><th>暗転控除</th><th>全体F</th><th>発生F</th><th>原文注記</th></tr></thead><tbody><tr><td>２１４Ａ</td><td>51Fでは跳ばず／52Fで小J</td><td>控除なし</td><td>51F</td><td>19F</td><td>原文の詳細検証</td></tr>
+<tr><td>２３６Ａ</td><td>51Fでは跳ばず／52Fで小J</td><td>控除なし</td><td>51F</td><td>17F</td><td>原文の詳細検証</td></tr>
+<tr><td>２３６Ｂ</td><td>52Fでは跳ばず／53Fで小J</td><td>控除なし</td><td>52F</td><td>23F</td><td>原文の詳細検証</td></tr>
+<tr><td>２１４２１４Ａ</td><td>96Fでは跳ばず／97Fでジャンプ</td><td>28F</td><td>68F</td><td>5F</td><td>原文の詳細検証</td></tr>
+<tr><td>２１４２１４Ｃ（一覧表の表記）</td><td>104Fでは跳ばず／105Fでジャンプ</td><td>28F</td><td>76F</td><td>13F</td><td>詳細段落の見出しは２１４２１４Ａと記載</td></tr>
+<tr><td>２１４２１４ＡＣ同時</td><td>95Fでは跳ばず／96Fでジャンプ</td><td>28F</td><td>67F</td><td>5F</td><td>原文の詳細検証</td></tr></tbody></table></div>
+<p>最初の3技の全体Fは51F・51F・52F。超必殺技3種は、原記事の計算でそれぞれ <strong>96−28=68F</strong>、<strong>104−28=76F</strong>、<strong>95−28=67F</strong>。表の「発生F」は原文冒頭の一覧に記載された値を転記した。</p>
+<h2>原文中にあるコマンド表記の食い違い</h2>
+<p><strong>AIが資料照合で発見した要確認点：</strong>冒頭の6技一覧では、全体76Fの技を<strong>「２１４２１４Ｃ」</strong>と記す。一方、詳細な測定部分の「104Fではジャンプせず／105Fでジャンプする」という段落は、技の見出しが<strong>「２１４２１４Ａ」</strong>となり、68Fの段落と同じコマンドになっている。</p>
+<p>数値・式・原文見出しを変更せず、上表は「一覧の表記」と「詳細段落の食い違い」を明示した。<strong>76Fの実験対象がCだったと、独立した確認なしに確定しない。</strong></p>
+<h2>他の資料との位置づけ</h2>
+<p>2010年3月16日にMOTが更新した<a href="./projectile-motion-list-2010.html">飛び道具の全体モーション一覧（35技）</a>にも、包の全体Fと発生Fが同じ数値で採録されている。3月記事では硬直値も掲載され、数値上は全体Fから発生Fを引いた値と一致する。ただし硬直を独立して計測したか否かは原文に記載されていない。</p>
+<p class="src">出典：<a href="https://comesonobravo.hatenadiary.org/entry/2010/01/07/152300">2010/01/07『02UM：包の各種飛び道具の全体モーションの長さ』</a>（MOT提供ブログ・エクスポート）／<a href="./sources/bao-projectile-motion-2010.txt">測定方法・全6技・疑義を含む原文テキスト</a>。</p>
+<p class="src">関連：<a href="./index.html">02UM研究アーカイブ</a>／<a href="/kof-kininaru.html#kof02um">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo? ｜ 作成：MOT</div></footer></body></html>
