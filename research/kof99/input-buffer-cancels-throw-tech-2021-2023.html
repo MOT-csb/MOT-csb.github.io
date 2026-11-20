@@ -3,7 +3,7 @@
 <header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
 <div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof99-top.html">KOF'99</a> / <a href="/research/kof99/index.html">研究アーカイブ</a> / <b>入力・キャンセル</b></div></div>
 <main class="main"><div class="wrap article"><h1>KOF'99 入力・連打キャンセル・SC・GCかわし・投げ外し（2021～2023年）</h1>
-<p class="note">MOT本人の2021年5月・6月、2023年5月・7月のXアーカイブから、KOF'99の操作に関する研究を時系列で整理。<strong>本人による観察・評価、動作原因の本人仮説、キャラクターと条件を限定した確認</strong>を明確に区別する。KOF'98や2002シリーズとの比較は本人の比較研究として扱い、他作品の仕様を99へ転用しない。原投稿にない確定F数、内部的な入力バッファ処理、全キャラ共通の投げ外し猶予は補わない。</p>
+<p class="note">MOT本人の2021年5月・6月、2023年5月・7月のXアーカイブから、KOF'99の操作に関する研究を時系列で整理。<strong>本人による観察・評価、動作原因の本人仮説、キャラクターと条件を限定した確認</strong>を明確に区別する。KOF'98や2002シリーズとの比較は本人の比較研究として扱い、他作品の仕様を99へ転用しない。投げ外しの原Googleシートの実数値は表記・対戦条件ごと回収したが、他の入力系の原投稿にない確定F数、内部的な入力バッファ処理、全キャラ共通の投げ外し猶予は補わない。</p>
 
 <h2>2021年5月28日の本人整理：操作性が悪く感じられる理由</h2>
 <p><a href="https://x.com/mot_csb/status/1398424355839778817">2021年5月28日（UTC）の本人X</a>は、KOF'99の操作性が悪いのではないかという疑問について、次の要素を列挙している。</p>
@@ -42,7 +42,15 @@
 
 <h2>通常投げの投げ外し猶予と歩き小足</h2>
 <p><a href="https://x.com/mot_csb/status/1392824274230988804">2021年5月13日のMOT本人投稿</a>では、通常投げ外しの猶予について<strong>主人公チーム4キャラのみ</strong>を調べたと明記。総じて猶予が短く、<strong>見てから外す猶予はない</strong>という本人の確認結果を述べた。本人は、KOF'98と同様にレバーを<strong>4か6</strong>に入力する必要があるため、<strong>歩き小足との二択</strong>が可能と解釈している。</p>
-<p>投稿添付の画像には元の詳細データが存在するが、今回<strong>画像の各セルを読み取っていない</strong>ため、4キャラの個別投げ外し猶予・受付フレーム数値を創作しない。<a href="https://x.com/mot_csb/status/1653754823672750088">2023年5月3日の本人投稿</a>でも、98同様に通常投げと歩き小足で崩せる「っぽい」とした。同研究は<strong>2021年の主人公チーム4キャラでの確認を起点とする</strong>ものであり、99の全キャラへの厳密なフレーム検証が終わったという資料ではない。</p>
+<p>当時の本人<a href="https://kofplayers.hatenablog.jp/entry/2021/05/14/000611">「KOF99：攻略メニュー」</a>にリンクされた<a href="https://docs.google.com/spreadsheets/d/1rMiSy-e8fYzntDPMqdr-_Y4LmxuDfNRrAgZSkFClpm8/edit">本人の原Googleスプレッドシート「KOF99通常投げの投げ外し猶予」</a>を2026年11月20日に直接読み出し、<strong>「シート1」A3:C7の元セル値</strong>を回収した。元表は<strong>2P側が真吾で、1P側の通常投げを受けている場合</strong>の結果であり、全キャラ同士で共通の数値ではない。</p>
+<div class="scroll"><table><thead><tr><th>1Pのキャラ</th><th>C投げ（原表数値）</th><th>D投げ（原表数値）</th></tr></thead><tbody>
+<tr><th scope="row">K'</th><td>6</td><td>3</td></tr>
+<tr><th scope="row">マキシマ</th><td>11</td><td>12</td></tr>
+<tr><th scope="row">紅丸</th><td>13</td><td>12</td></tr>
+<tr><th scope="row">真吾</th><td>13</td><td>13</td></tr>
+</tbody></table></div>
+<p>原表の注記は「真吾に対しての結果」「投げ外しできる隙間Fを調査」。K'のC投げについて、<strong>1PがCボタンを押してから6F以内に2P真吾が4または6＋任意のボタンを押せば投げ外し可能で、隙間は5F</strong>と明記している。<strong>表の「6」をそのまま「6Fの隙間」と置き換えない</strong>。この計数方法のままデータを保持し、他の行でも計測上の隙間と入力締切を混同しない。</p>
+<p><a href="https://x.com/mot_csb/status/1653754823672750088">2023年5月3日の本人投稿</a>でも、98同様に通常投げと歩き小足で崩せる「っぽい」とした。同研究は<strong>2021年の4キャラ・対真吾という限定条件</strong>であり、99の全キャラへの厳密なフレーム検証が終わったという資料ではない。</p><a href="https://x.com/mot_csb/status/1653754823672750088">2023年5月3日の本人投稿</a>でも、98同様に通常投げと歩き小足で崩せる「っぽい」とした。同研究は<strong>2021年の主人公チーム4キャラでの確認を起点とする</strong>ものであり、99の全キャラへの厳密なフレーム検証が終わったという資料ではない。</p>
 
 <h2>既存の本人研究とのつながり</h2>
 <ul>
@@ -52,6 +60,6 @@
 <li><a href="/99yu-zyunni.html">2003年の旧「ボタン・行動の優先順位」</a>は別の本人一次資料として維持。古い原稿の条件や記載値を無断で更新しない。</li>
 </ul>
 <h2>未解決・要照合</h2>
-<p>弱攻撃連打キャンセルのキャラ別猶予F、CM/AM中の押し戻し量、SC入力がヒットストップ外でも受け付けられるか、ST暗転中に受付停止する入力の種類、主人公チーム4キャラの投げ外し猶予と全キャラへの適用、GC前転→かわし移動攻撃のキャラ別・距離別成立は、MOT本人テキストだけでは確定できない。<a href="/kof-kininaru.html#kof99">気になること</a>へ登録する。</p>
+<p>弱攻撃連打キャンセルのキャラ別猶予F、CM/AM中の押し戻し量、SC入力がヒットストップ外でも受け付けられるか、ST暗転中に受付停止する入力の種類、投げ外し表の対真吾以外の適用と未記入キャラの数値、GC前転→かわし移動攻撃のキャラ別・距離別成立は、MOT本人テキストだけでは確定できない。<a href="/kof-kininaru.html#kof99">気になること</a>へ登録する。</p>
 <p><a href="/research/kof99/index.html">KOF'99研究目次へ戻る</a> ／ <a href="/kof-kininaru.html#kof99">気になること</a></p>
 </div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
