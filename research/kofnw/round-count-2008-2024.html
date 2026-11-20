@@ -1,0 +1,28 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF NEOWAVE：ラウンドカウントの減少速度と2002UM比較（2008〜2024年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kofnw-top.htm">KOF NEOWAVE</a> / <a href="/research/kofnw/">研究アーカイブ</a> / <b>ラウンドカウントの速度</b></div></div><main class="main"><div class="wrap">
+<h1>KOF NEOWAVE：ラウンドカウントの減少速度と2002UM比較</h1>
+<p>MOTが2024年12月28〜29日に行った<strong>配信動画のコマ送りによるラウンドカウンターの調査</strong>を、2008年のKOF2002UMに関する旧本人見解と区別して保存する。ここで示すF数は当該記録での測定・推定であり、ゲームプログラムの内部カウンターを解析した確定仕様値ではない。</p>
+<h2>2024年の調査手順と発見</h2>
+<div class="tw"><table><thead><tr><th>時点</th><th>MOTによる確認・計算</th><th>確実性・出典</th></tr></thead><tbody>
+<tr><td>2024/12/28</td><td>第2回ナイス杯（KOF NEOWAVE）の配信を調査。動画は1/30秒ごとにフレームが進むと思われ、<strong>25コマでゲーム内1カウント</strong>減少したため、25÷30秒＝<strong>50/60秒</strong>、60Hz換算で<strong>50F程度</strong>と記録</td><td><a href="https://x.com/mot_csb/status/1873022761314205910">2024/12/28 本人投稿</a>。動画の1/30秒単位については「おそらく」と留保</td></tr>
+<tr><td>2024/12/28</td><td>02系の1カウントと同じなら、なぜKOFNWが速く感じるのか疑問を述べ、10カウント経過による回復増加を意識した戦術にも言及</td><td><a href="https://x.com/mot_csb/status/1873022909524181151">同日投稿</a> ／ <a href="https://x.com/mot_csb/status/1873027474222874735">同日追記</a>。体感と戦術上の考察</td></tr>
+<tr><td>2024/12/29</td><td>さらに<strong>1F送り</strong>で確かめ、KOFNWは1カウント50Fらしいという見解を維持</td><td><a href="https://x.com/mot_csb/status/1873184326713786660">2024/12/29 本人投稿</a>。使用したゲーム内部データの解析ではなく映像確認</td></tr>
+<tr><td>2024/12/29</td><td>同日のKOF2002UMの大会配信をコマ送りし、<strong>1カウント＝60F</strong>とみられると記録。NEOWAVEの方が速いと判断</td><td><a href="https://x.com/mot_csb/status/1873207923494797593">2024/12/29 本人投稿</a>。こちらも「みたい」という推定表現</td></tr>
+<tr><td>2024/12/29</td><td>NEOWAVEと02UMで1カウントにつき10F異なるので、60カウント分で600Fの差になると計算。タイムオーバーまでの実時間と体力回復判断に影響し得ると考察</td><td><a href="https://x.com/mot_csb/status/1873208735713378698">2024/12/29 本人投稿</a>。本人は1ラウンドが実質60カウントか61カウントかを保留</td></tr>
+</tbody></table></div>
+<h2>60カウント分の差（MOTの計算）</h2>
+<div class="tw"><table><thead><tr><th>想定値</th><th>NEOWAVE：50F/カウント</th><th>2002UM：60F/カウント</th></tr></thead><tbody>
+<tr><td>10カウント経過</td><td>500F（60Hzで約8.33秒）</td><td>600F（60Hzで10秒）</td></tr>
+<tr><td>60カウント経過</td><td>3,000F（60Hzで50秒）</td><td>3,600F（60Hzで60秒）</td></tr>
+<tr><td>差分</td><td colspan="2">60カウントなら600F＝60Hz換算で10秒の差</td></tr>
+</tbody></table></div>
+<p>上表は<strong>1カウントの推定値にカウント数を掛けた比較</strong>である。開始値の60/61問題、ラウンド開始・終了の端数、演出停止や計測動画の速度は確定しておらず、1ラウンドの総時間の実測ではない。</p>
+<h2>2008年のKOF2002UMに関する本人の異なる見積り</h2>
+<p>MOTは2008年11月14日のブログ記事「02UM：ネオジオ博士のKOF2002講座　第２回目感想（長文です）」で、公式の変更点を見た印象として、<strong>KOF2002は1カウント50F、KOF2002UMは1カウント70F</strong>という数値を記録している。同記事は数値を示す直前に<strong>見た感じである</strong>と留保している。</p>
+<p>この<strong>2008年の70Fの目視推定と、2024年の60Fという動画コマ送り記録は異なる</strong>。本人がいつ・なぜ見解を修正したか、各時点でのゲーム版、動画条件、測定単位が一致しているかは確認できない。2008年の70Fを実測値に格上げせず、2024年の60Fに合わせて過去原文を改変しない。</p>
+<p>出典：<a href="https://comesonobravo.hatenadiary.org/archive/2008/11">本人旧ブログ2008年11月の記事一覧</a>、2008/11/14 08:46:09「02UM：ネオジオ博士のKOF2002講座　第２回目感想（長文です）」、本人提供エクスポート内の <code>BASENAME: 2008/11/14/084609</code>。</p>
+<h2>過去のKOF2002の1カウントについて</h2>
+<p>MOTは2007/8/17の別のKOF2002ガードクラッシュ回復記事で、<strong>1カウント50F、10カウント500F</strong>として計算している。2020/9/14のX投稿でも、KOF2002は50F/カウントだったはずだが2002UMは違うようだと述べている。<strong>作品の違う数値をそのまま2002UMやNEOWAVEの確定値としない。</strong></p>
+<ul><li><a href="https://comesonobravo.hatenadiary.org/archive/2007/08">本人旧ブログ2007年8月</a>（2007/8/17「02:ガークラ値の回復速度についての目安」、<code>BASENAME: 2007/08/17/155111</code>）</li><li><a href="https://x.com/mot_csb/status/1305321991725965313">2020/9/14の本人投稿</a></li></ul>
+<h2>未解決事項</h2>
+<ul><li>2008年のKOF2002UM・70F推定と、2024年の60F観測の差の理由</li><li>NEOWAVEのラウンド開始値が実質60カウントか61カウントか</li><li>映像のフレーム送りでの計測条件と、内部タイマー処理が一致しているか</li><li>時間経過による体力回復量・回復条件に対する実際の影響</li></ul>
+<p>数値の食い違いは<a href="/kof-kininaru.html#kofnw">気になること</a>にも残す。新しい解析研究を行ったのではなく、本人の旧資料を時系列で回収した記録である。</p><p><a href="/research/kofnw/">KOF NEOWAVE研究アーカイブ</a> ／ <a href="/kof-kininaru.html#kofnw">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
