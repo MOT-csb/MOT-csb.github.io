@@ -1,0 +1,28 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'97：2003～2004年のシステム・キャラクター初期メモ整理｜Come sono bravo?</title><meta name="description" content="MOT本人のKOF'97旧攻略原稿を一次資料として、数値、条件、当時の評価、未確認事項を分けて保存。"><link rel="stylesheet" href="/assets/research.css"><style>.article table{width:100%;border-collapse:collapse}.article th,.article td{border:1px solid var(--line,#bbb);padding:8px;text-align:left;vertical-align:top}.article a{overflow-wrap:anywhere}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof97-top.html">KOF'97</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'97：2003～2004年のシステム・キャラクター初期メモ整理</h1>
+<p>MOT本人の旧サイト<a href="/97memo.html">KOF'97についてのメモ</a>（2003/11/26公開、2004/3/20最終更新）のうち、別記事と重なりにくい<strong>ボタン入力・処理落ち・技の振る舞い・相手別条件</strong>を分類した。元のページは移動せず、2003～2004年の本人による記録として保存する。</p>
+<h2>システム関係：同時押し、通常投げ、溜めとヒット処理</h2>
+<table><thead><tr><th>事項</th><th>旧原稿での記録</th><th>扱い</th></tr></thead><tbody>
+<tr><td>同時押しのボタン優先順位</td><td><strong>A ＞ B ＞ C ＞ D</strong>。ABCD同時押しではMAX発動しない</td><td>2003～2004年本人メモの仕様記述</td></tr>
+<tr><td>通常投げ不成立時の保険</td><td>通常投げを狙う際に弱攻撃を同時押しすれば、投げ不成立時に出る技を弱攻撃にできる</td><td>当時の入力利用案。<a href="./normal-throw-guard-pose-2020.html">2020年のレバー方向・ガードポーズ検証</a>とは別の条件</td></tr>
+<tr><td>開幕の溜め</td><td><strong>開幕タメ不可</strong>と記載</td><td>チャージ操作のどの入力方向／キャラまで検証したかは未記載</td></tr>
+<tr><td>ヒット・ガードの処理</td><td>ヒットまたはガードのエフェクトが残っている間、次の攻撃をヒット・ガードさせられると記録</td><td>具体的な成立Fや全技の条件は未記載。<a href="/kof-hit-gurad-syori.htm">シリーズ共通処理記事</a>と併読</td></tr>
+<tr><td>炎の技と処理落ち</td><td>裏クリスの「ししをかむほのお」や京の連続入力技のヒット時、処理落ちが激しいと本人が観察</td><td>CPU負荷・タスクオーバーとの関連づけは当時の本人の解釈であり、今回エミュレータで再測定したものではない</td></tr>
+</tbody></table>
+<h2>技・キャラ別の細かな挙動</h2>
+<table><thead><tr><th>キャラ</th><th>2003～2004年のメモ</th><th>未確認・留保</th></tr></thead><tbody>
+<tr><td>京</td><td>琴月の2段目は削りダメージを与えられない</td><td>同じ現象の全作品比較は当該原稿にない</td></tr>
+<tr><td>テリー</td><td>パワーウェイブの最初の攻撃判定にはダウン効果があり、それ以降の攻撃判定はダウンを奪えない。遠Bの早さ・長さと対空3Cを高く評価</td><td>クラークを詰ませられるかは本人の当時の可能性判断</td></tr>
+<tr><td>アンディ</td><td><code>436＋A/C</code>で撃壁が成立すれば撃壁、成立しなくても斬影拳は暴発しないと記載。屈Bキャンセルから<code>163214＋A</code>の入力で撃壁が成立しなければ弱飛翔拳が出ることを<strong>本人が確認</strong></td><td>撃壁 ＞ 飛翔拳 ＞ 斬影拳という技の優先順位は本人が「おそらく」とした推測</td></tr>
+<tr><td>ジョー</td><td>ハリケーンの<code>16</code>入力後、<code>1・4・N・6</code>の方向からボタンを押しても成立すると記録</td><td>KOF'99の<code>41236</code>入力後の許容方向に関する別作品の例との比較。<a href="./joe-original-move-analysis-2004.html">2004年技解析</a>と<a href="./command-shortcuts-joe-2015.html">2015年のコマンド研究</a>は別に保存</td></tr>
+<tr><td>レオナ</td><td>強ボルティックランチャーの出始めは全身無敵</td><td>無敵の持続Fは未記載。覚醒レオナには時間切れ負けポーズがない「みたい」と留保</td></tr>
+<tr><td>ラルフ</td><td>立CDの硬直が長い。斜めJBの持続が短く、垂直小JBのリーチが短いという本人評価</td><td>どの技も定量Fの記載なし</td></tr>
+<tr><td>キム</td><td><code>6A</code>後の<code>23646＋B/D</code>では鳳凰脚でなく天舞脚が出やすいという記録。強半月斬はヒットしてもダウンしない</td><td>コマンド受付の内部優先順位は原稿にはない</td></tr>
+<tr><td>社・クリス</td><td>社の斜めJBを短いリーチによる密着2択に利用できると評価。裏クリスが時間切れ勝ちした際、位置関係によって前のキャラから炎が出るという演出上の挙動を記録</td><td>発生Fや演出の全条件は未記載</td></tr>
+</tbody></table>
+<p>上のレバー数字は元HTMLに埋め込まれた<code>1.gif</code>等の方向アイコンの<strong>出現順に対応する数字</strong>を転記したもの。リンク先原文の記述を超えた成立コマンドの一般化はしていない。</p>
+<h2>リョウ：本人の観察と第三者由来情報を分ける</h2>
+<p>旧メモは、MAX状態の極限流連舞拳後の追撃として、<strong>猛虎雷神刹・飛燕疾風脚の膝部分・天地覇煌拳</strong>を挙げ、対象を<strong>京・真吾・紅丸・大門・ビリーに限定</strong>。ただしこの部分は原稿中に<strong>「97が好きさ」さん情報</strong>と明記されており、MOTが全対象を本人自身で確認した結果とは扱わない。</p>
+<p>続くMOT本人の記述には、<strong>ADV限定かつMAX状態・相手ビリー</strong>の条件下で、連舞拳→MAX天地覇煌拳→気絶→JD→近C→連舞拳→強虎咆により、2ゲージを使う即死準連続技の構想が残されている。こちらは本人原稿の記述として保存するが、気絶後に全て連続ヒットすることを保証したと読み替えない。旧リョウ攻略は<a href="/kof97ryo.htm">原ページ</a>を維持する。</p>
+<h2>参照先</h2>
+<p><a href="/97memo.html">2003～2004年のMOT本人原稿「KOF'97についてのメモ」</a> ／ <a href="./joe-original-move-analysis-2004.html">ジョーの2004年技解析</a> ／ <a href="./normal-throw-guard-pose-2020.html">後ろ入れ通常投げの2020年の別調査</a> ／ <a href="./stun-guard-duration-2007-2020.html">2007年の気絶・弾き持続値</a>。</p>
+<p>2026/11/20：提供済み旧HTML・画像参照ファイル名を直接確認して初期メモを項目別に整理。第三者から提供された追撃情報と本人の見解を混同しない。</p><hr><p><a href="./index.html">KOF'97研究アーカイブ</a> ／ <a href="/kof-kininaru.html#kof97">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
