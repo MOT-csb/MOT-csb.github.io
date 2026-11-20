@@ -33,6 +33,7 @@ GLOBAL_NAV = (
 # research/kofXX/ のパンくず
 RESEARCH = {
     "kof94": ("KOF'94", "/kof94-top.html"),
+    "kof95": ("KOF'95", "/kof95-top.html"),
     "kof96": ("KOF'96", "/kof96-top.html"),
     "kof98": ("KOF'98", "/kof98-top.html"),
     "kof99": ("KOF'99", "/kof99-top.html"),
@@ -128,7 +129,7 @@ def fix_research_crumbs(path, t):
 
 # ---------- 4. 全ページ一覧 ----------
 GROUP_ORDER = [
-    "KOFシリーズ", "KOF'94", "KOF'94 研究アーカイブ", "KOF'94・'95", "KOF'95", "KOF'96", "KOF'96 研究アーカイブ",
+    "KOFシリーズ", "KOF'94", "KOF'94 研究アーカイブ", "KOF'94・'95", "KOF'95", "KOF'95 研究アーカイブ", "KOF'96", "KOF'96 研究アーカイブ",
     "KOF'97", "KOF'98", "KOF'98 研究アーカイブ", "KOF'98UM", "KOF'99", "KOF2000",
     "KOF2001", "KOF2002", "KOF2002UM", "KOF2003", "KOF NEOWAVE", "KOF XI",
     "餓狼伝説", "サムライスピリッツ", "その他の格闘ゲーム",
