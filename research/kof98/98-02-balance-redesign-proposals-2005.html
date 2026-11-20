@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'98・2002：2005年の調整版構想とEXT改良案｜Come sono bravo?</title><meta name="description" content="MOTが2005年12月に書いたKOF'98・2002調整版への提案。EXTゲージ、ガードキャンセル、食らい判定、CPU戦、カード戦績を原文に沿って整理。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:1000px}.article h2{margin-top:2rem}.article a{overflow-wrap:anywhere}.note{border-left:4px solid var(--accent,#51735d);background:var(--soft,#edf2ed);padding:12px 16px}.scroll{max-width:100%;overflow-x:auto}.article table{border-collapse:collapse;min-width:610px;width:100%}.article th,.article td{border:1px solid var(--line,#b7c0b9);padding:10px;text-align:left;vertical-align:top}.article th{background:var(--soft,#edf2ed)}</style></head>
+<body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/kof-top.html">KOF</a><span aria-hidden="true"> / </span><a href="/kof98-top.html">KOF'98</a><span aria-hidden="true"> / </span><a href="./index.html">研究アーカイブ</a></div></div>
+<main class="main"><div class="wrap article"><h1>KOF'98・2002：2005年の調整版構想とEXT改良案</h1>
+<p class="note"><strong>資料区分：</strong>2005年12月13～22日のMOT本人による<strong>改良版への提案・意見</strong>を整理したもの。KOF'98や2002の既存仕様を示す一覧ではなく、提案された新仕様は実装済みとも確認済みとも扱わない。2007年の98UM向け要望草案とは時期・内容が異なる。</p>
+<h2>1．改良版を望んだ理由（2005年12月14日）</h2>
+<p>MOTは、当時発売されたサムライスピリッツ天下一剣客伝の旧作システム・過去キャラクターの再現やドット絵に好印象を持ち、KOFでも交代・ストライカーのない、'98・2002の改善版が作れないかと考えた。新作のXIとは別系統の企画として期待したもので、具体的な製品計画や採用決定について述べた記事ではない。</p>
+<h2>2．EXTモードへの提案（2005年12月13日）</h2>
+<div class="scroll"><table><thead><tr><th>対象</th><th>MOT本人が提案した仕様</th><th>原文上の留保</th></tr></thead><tbody>
+<tr><td>パワーため</td><td>ABC同時押しを保持してゲージをためる。しゃがみ状態でABC同時押しを開始しても可能にする。</td><td>新しい操作方法の案。</td></tr>
+<tr><td>自然増加</td><td>時間経過でゲージを増やす。ただし自然増加だけではMAXにならず、直前で停止する。</td><td>自力でためるか、ガードでMAXにするかを選択できる構想。</td></tr>
+<tr><td>MAX中の効果</td><td>一定時間の攻撃力上昇と、MAX中に1回だけ超必殺技を使用できる仕組みを想定。</td><td>提案であり現行仕様の説明ではない。</td></tr>
+<tr><td>体力とゲージ</td><td>体力減少に応じてパワーゲージの長さを短縮する案。</td><td>本人自身が不要かもしれないと留保した。</td></tr>
+<tr><td>挑発</td><td>挑発で相手のゲージを減らす。ただし蓄積済みのストックは減らさない。</td><td>EXT用の調整案。</td></tr>
+<tr><td>ガードキャンセル</td><td>GC緊急回避の代わりに必殺技または超必殺技をガードキャンセルで出せるようにする。GC必殺技使用時にもMAX状態は終了。</td><td>新規提案。KOF'98の現行仕様ではない。</td></tr>
+<tr><td>ジャンプ着地</td><td>当時の本人が98・02に存在するとしたジャンプ着地の1Fの隙を、必殺技または攻撃避けでキャンセルできるようにする。</td><td>着地の1Fに関する本人の当時の説明と改善案を分離する。</td></tr>
+</tbody></table></div>
+<p>この構想の中心は、<strong>相手を攻めている間も自然増加を得られるが、MAX到達の方法には選択を残す</strong>という設計にあった。個々の数値・発生時間などは原文では指定されていない。</p>
+<h2>3．しゃがみ時の食らい判定への問題意識（12月15日）</h2>
+<p>MOTはKOF2002の強いキャラクターについて、しゃがみ時の食らい判定が低くなり、相手のジャンプ攻撃や百合折りを回避しやすい傾向を問題視した。例として<strong>チョイ、ビリー、山崎</strong>を挙げ、強キャラで比較的大きい食らい判定を持つ例として<strong>ウィップ、アンヘル</strong>を挙げている。</p>
+<p>この節は<strong>KOF2002に対する2005年の本人評価</strong>であり、KOF'98の全キャラのしゃがみ判定を比較・確定した結果ではない。2002の判定についての意見を98の仕様説明に混ぜない。</p>
+<h2>4．CPU戦と店舗運営の改良案（12月22日）</h2>
+<div class="scroll"><table><thead><tr><th>項目</th><th>提案内容</th></tr></thead><tbody>
+<tr><td>ハイスコア</td><td>ハイスコア画面に使用キャラを表示。ルーレット選択の部分は不明表示を許容する。</td></tr>
+<tr><td>CPUの使用キャラ</td><td>CPU戦にも裏キャラが登場するようにする。</td></tr>
+<tr><td>CPUの行動</td><td>固定パターン一辺倒ではなく学習機能を採用する案。対応が難しいキャラにはアルゴリズムを用意し、サーバーから定期的に更新する構想。</td></tr>
+<tr><td>CPUの反応</td><td>対戦して面白くなくなる過度の超反応は控える。</td></tr>
+<tr><td>背景</td><td>歴代シリーズの背景を流用する案。ただし本人は海賊版のような印象を与えかねないとも留保。</td></tr>
+<tr><td>カード戦績</td><td>ネットワークに接続できなくても筐体内で戦績を更新し、キャラ別に1・2・3番手を分けて集計。多少の集計ずれでカードが使用不能にならない仕様を希望。</td></tr>
+<tr><td>試合開始前の表示</td><td>ラウンド直前にそのキャラの戦績を表示する提案。</td></tr>
+</tbody></table></div>
+<p>2005年の記事のCPU学習・サーバー配信は<strong>アイデアの段階</strong>であり、具体的な機械学習アルゴリズムや通信仕様を提示したものではない。</p>
+<h2>5．2007年98UM向け要望との区別</h2>
+<p>2007年の本人ブログには、ラウンド開始前の入力受付、レバー方向の必要F、タメ技の方向維持などを中心とする<strong>別の要望草案</strong>がある。本ページはその草案の完成版ではなく、2005年の改良版構想を独立して記録したもの。</p>
+<p><a href="./kof98-input-balance-98um-requests-2007.html">関連：2007年の98UM向け入力・技調整要望</a> ／ <a href="./ext-power-charge-cancel-2009.html">関連：KOF'98 EXTの操作と実測</a></p>
+<h2>原資料（MOT本人の旧ブログ）</h2>
+<ul>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/50264726">2005/12/13：98＆02 調整話（EXTの改良案）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/50266720">2005/12/14：調整版を望んだ理由</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/50269246">2005/12/15：しゃがみ時の食らい判定（2002）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/50284577">2005/12/22：CPU・カード・背景・戦績の案</a></li>
+</ul>
+<p><a href="./index.html">KOF'98研究アーカイブへ戻る</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?</div></footer></body></html>
