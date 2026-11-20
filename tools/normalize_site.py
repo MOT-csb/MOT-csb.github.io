@@ -55,6 +55,12 @@ def all_pages():
                 yield os.path.relpath(os.path.join(root, f), ROOT).replace(os.sep, "/")
 
 
+# 全ページ一覧と検索に出さないページ（URLは残す）。理由も書いておく
+HIDDEN = {
+    "02K'-maxima-koutyokusa.html",  # K’のページの複製。マキシマの正式版は 02maxima-kakuwaza-koutyokusa.html
+}
+
+
 def is_redirect(t):
     return bool(re.search(r'http-equiv=["\']refresh', t, re.I))
 
@@ -186,7 +192,7 @@ def _page_group(t, path):
 def build_sitemap(pages):
     groups = defaultdict(list)
     for p, t in pages.items():
-        if p in ("index.html", "sitemap.html") or is_redirect(t):
+        if p in ("index.html", "sitemap.html") or p in HIDDEN or is_redirect(t):
             continue
         groups[page_group(t, p)].append((page_label(t, p), p))
     order = {g: i for i, g in enumerate(GROUP_ORDER)}
@@ -222,7 +228,7 @@ def build_search_index(pages):
     import unicodedata
     out = []
     for p, t in sorted(pages.items()):
-        if p in ("index.html", "sitemap.html") or is_redirect(t):
+        if p in ("index.html", "sitemap.html") or p in HIDDEN or is_redirect(t):
             continue
         b = re.sub(r"<(script|style|head|header|footer|nav)\b[^>]*>.*?</\1>", " ", t, flags=re.S | re.I)
         b = re.sub(r'<p class="crumb">.*?</p>', " ", b, flags=re.S)
