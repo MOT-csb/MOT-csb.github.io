@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>敵が並ぶ数のしくみ｜ドラゴンクエストII（MSX版）｜Come sono bravo?</title><meta name="description" content="MSX版『ドラゴンクエストII』で、あくましんかん・バーサーカー・オークキングが4匹、キラーマシーンが2匹で並ぶ理由。敵は横幅で並べられ、画面の右端を超える敵は出てこない。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap">
+<link rel="stylesheet" href="/assets/research.css">
+<style>
+.lineup{margin:14px 0 6px;overflow-x:auto}
+.lineup .row{display:grid;grid-template-columns:repeat(38,minmax(14px,1fr));gap:2px;min-width:560px}
+.lineup .cell{height:22px;border-radius:2px;background:rgba(127,127,127,.12)}
+.lineup .cell.out{background:rgba(127,127,127,.04);outline:1px dashed rgba(127,127,127,.35)}
+.lineup .enemy{height:22px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden}
+.lineup .e6{background:#7a5bd6}.lineup .e8{background:#2f8f8a}.lineup .ng{background:transparent;color:inherit;border:2px dashed #d0574f}
+.lineup .ruler{display:grid;grid-template-columns:repeat(38,minmax(14px,1fr));gap:2px;min-width:560px;font-size:10px;opacity:.7;margin-top:2px}
+.lineup .cap{font-size:13px;margin:4px 0 12px}
+</style></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/dragon-quest-2/">ドラゴンクエストII（MSX版）</a><span aria-hidden="true"> / </span><b>敵が並ぶ数のしくみ</b></div><p class="kicker">BATTLE / ENEMY LINEUP</p><h1>敵が並ぶ数のしくみ</h1><p>MSX版では、あくましんかん・バーサーカー・オークキングが<b>4匹</b>並んで出てきます。モンスターごとに最大数が決まっているのではなく、<b>敵の横幅</b>と<b>画面の右端</b>で、並べられる数が決まります。</p></div></div><main class="main"><div class="wrap">
+
+<section class="section"><h2>結論</h2>
+<ul class="contents">
+<li>敵は、画面の左から<b>1匹ずつ</b>横に並べられます。</li>
+<li>敵にはそれぞれ<b>横幅</b>（文字数）があり、となりの敵との間は<b>1文字</b>あきます。</li>
+<li>次の敵を置いたときに、その<b>右端が31文字目に届く</b>なら、その敵は置かれません。そこで敵の追加が終わります。</li>
+<li>抽選で決まった数が多くても、並べられた数だけが戦闘に出てきます。</li>
+<li>並べ終わったあと、全体が画面の中央に寄せられます。</li>
+</ul>
+</section>
+
+<section class="section"><h2>幅6の敵は4匹まで</h2>
+<p>あくましんかん・バーサーカー・オークキングは、どれも<b>幅6</b>です。左端を3文字目から始めて、幅6＋すきま1で並べると、4匹目の右端は29文字目までに収まります。5匹目は右端が36文字目になるので、置かれません。</p>
+<div class="lineup" aria-label="幅6の敵を並べた図">
+<div class="row">
+<div class="cell" style="grid-column:1/3"></div>
+<div class="enemy e6" style="grid-column:3/9">1匹目</div>
+<div class="enemy e6" style="grid-column:10/16">2匹目</div>
+<div class="enemy e6" style="grid-column:17/23">3匹目</div>
+<div class="enemy e6" style="grid-column:24/30">4匹目</div>
+<div class="enemy ng" style="grid-column:31/37">5匹目 ×</div>
+</div>
+<div class="ruler"><span style="grid-column:1">1</span><span style="grid-column:10">10</span><span style="grid-column:20">20</span><span style="grid-column:31;color:#d0574f;font-weight:700">31</span></div>
+<p class="cap">横の1マスが1文字。赤い数字の31文字目に届く敵は置かれない。</p>
+</div>
+<div class="table-scroll"><table><thead><tr><th>何匹目</th><th>左端（文字目）</th><th>右端（文字目）</th><th>結果</th></tr></thead><tbody>
+<tr><td>1匹目</td><td>3</td><td>8</td><td>置かれる</td></tr>
+<tr><td>2匹目</td><td>10</td><td>15</td><td>置かれる</td></tr>
+<tr><td>3匹目</td><td>17</td><td>22</td><td>置かれる</td></tr>
+<tr><td>4匹目</td><td>24</td><td>29</td><td>置かれる</td></tr>
+<tr><td>5匹目</td><td>31</td><td>36</td><td><b>置かれない</b>（ここで追加が終わる）</td></tr>
+</tbody></table></div>
+<p>あくましんかんの群れは<b>3〜6匹</b>で抽選されます。3匹なら3匹のまま、<b>4匹・5匹・6匹</b>のときは、どれも4匹になります。画面からは、元が何匹で抽選されたのかは区別できません。</p>
+</section>
+
+<section class="section"><h2>幅が違う敵が混ざるとき</h2>
+<p>種類が違っても、並べ方は同じです。前の敵の右に1文字あけて、次の敵を置いていきます。<b>キラーマシーンは幅8</b>と広いので、たくさんは並びません。</p>
+<div class="lineup" aria-label="ブリザード1匹とキラーマシーンを並べた図">
+<div class="row">
+<div class="cell" style="grid-column:1/3"></div>
+<div class="enemy e6" style="grid-column:3/9">ブリザード</div>
+<div class="enemy e8" style="grid-column:10/18">キラーマシーン</div>
+<div class="enemy e8" style="grid-column:19/27">キラーマシーン</div>
+<div class="enemy ng" style="grid-column:28/36">3匹目 ×</div>
+</div>
+<div class="ruler"><span style="grid-column:1">1</span><span style="grid-column:10">10</span><span style="grid-column:20">20</span><span style="grid-column:31;color:#d0574f;font-weight:700">31</span></div>
+<p class="cap">ブリザード（幅6）のあとには、キラーマシーン（幅8）が2匹までしか入らない。</p>
+</div>
+<ul class="contents">
+<li>ブリザード1匹のあとにキラーマシーンが3匹以上抽選されても、出てくるのは<b>ブリザード1匹＋キラーマシーン2匹</b>です。3匹目のキラーマシーンは、右端が35文字目になって置かれません。</li>
+<li>グループの順番も関係します。前のグループで画面がいっぱいになると、あとのグループの敵は1匹も出てきません。たとえば、バーサーカーが5匹抽選されて4匹で画面が埋まると、そのあとに抽選されたほかの敵は出てこず、<b>バーサーカー4匹だけ</b>の戦闘になります。</li>
+</ul>
+</section>
+
+<section class="section"><h2>主な敵の幅</h2>
+<div class="table-scroll"><table><thead><tr><th>敵</th><th>幅</th><th>同じ敵だけで並べたときの最大数</th></tr></thead><tbody>
+<tr><td>あくましんかん</td><td>6</td><td>4匹</td></tr>
+<tr><td>バーサーカー</td><td>6</td><td>4匹</td></tr>
+<tr><td>オークキング</td><td>6</td><td>4匹</td></tr>
+<tr><td>ブリザード</td><td>6</td><td>4匹</td></tr>
+<tr><td>キラーマシーン</td><td>8</td><td>3匹</td></tr>
+</tbody></table></div>
+<p class="small">キラーマシーンだけで並べると、3匹目の右端は28文字目、4匹目は36文字目になるので、3匹まで並びます。</p>
+</section>
+
+<section class="section"><p><a href="/msx/dragon-quest-2/">ドラゴンクエストII（MSX版）のトップへ →</a></p></section></div></main>
+<footer class="footer"><div class="wrap">MOT ゲーム攻略・検証ノート　｜　攻略・観戦・研究メモ<br>ゲームの権利は各権利者に帰属します。</div></footer></body></html>
