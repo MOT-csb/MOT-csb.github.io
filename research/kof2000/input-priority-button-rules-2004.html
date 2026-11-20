@@ -1,0 +1,38 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF2000：ボタン・行動優先順位とコマンド入力の原研究（2004年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:1050px}.article h2{margin-top:2rem}.article table{width:100%;border-collapse:collapse}.article th,.article td{padding:.65rem;border:1px solid var(--line,#aaa);text-align:left;vertical-align:top}.article th{background:var(--soft,#eff3f0)}.note{padding:12px 16px;border-left:4px solid var(--accent,#416958);background:var(--soft,#eff3f0)}.scroll{overflow-x:auto}.article a{overflow-wrap:anywhere}.src{font-size:.9em}.article li{margin:.45em 0}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof00-top.html">KOF2000</a> / <a href="/research/kof2000/index.html">研究アーカイブ</a> / <b>KOF2000：ボタン・行動優先順位とコマンド入力の原研究（2004年）</b></div></div><main class="main"><div class="wrap article"><h1>KOF2000：ボタン・行動優先順位とコマンド入力の原研究（2004年）</h1>
+<p class="note">MOT本人が2004年3月23日に作成し、3月25日に更新した<a href="/00yu-zyunni.html">「KOF2000の各行動の優先順位の分析について」</a>を分類・再構成。原稿の確認済み事項・本人の推測・未調査事項を分け、未確認の優先順位を断定しない。旧原本のURLと原文はそのまま維持。</p>
+<h2>1. ボタンの優先順位と行動の階層</h2>
+<p>本人の原稿は、<strong>スタートボタン ＞ A ＞ B ＞ C ＞ D</strong>をボタン自体の優先順位とし、セレクトボタンは不明とした。行動については次の上下関係を提案している。</p>
+<div class="scroll"><table><thead><tr><th>元原稿の並び</th><th>行動</th><th>当時の本人が留保した点</th></tr></thead><tbody>
+<tr><td>高</td><td>スタートボタン（挑発）</td><td>挑発は立っていないと出せない、という入力条件も別記</td></tr>
+<tr><td>次の段</td><td>ABC：カウンターモード発動、BCD：アーマーモード発動</td><td><strong>次の段と優先順位が同じかもしれない</strong>と本人が記載</td></tr>
+<tr><td>その次の段</td><td>AB：緊急回避、BC：ストライカー呼び出し、CD：ふっ飛ばし攻撃</td><td>同じ高さと思われるが同時には試せない、と本人が説明</td></tr>
+<tr><td>さらに下</td><td>必殺技 → 特殊技 → 通常投げ → 通常技</td><td>階層全体を本人は推定形で提示</td></tr>
+</tbody></table></div>
+<p>上の段の優先順位がいつ・どの入力競合で作用するのかを、全組み合わせで実測した確定表とは扱わない。元原稿の「同じかもしれない」「同時には試せない」という留保を保存する。</p>
+<h2>2. 同時押しとボタン保持による成立条件</h2>
+<ul>
+<li>AB・BC・CD・ABC・BCDは、<strong>余分なボタンが押されると成立しない</strong>という本人記録。</li>
+<li>ガードキャンセル緊急回避、ガードキャンセルCD、受け身（ダウン回避）も、<strong>余分なボタンで成立しない</strong>。</li>
+<li>ABCDのいずれかを押しっぱなしにした状態では、<strong>大／中ジャンプ、前ダッシュ、飛び退き、（超）必殺技が出せない</strong>という本人記録。</li>
+<li>挑発は立ち状態でないと出せない。</li>
+<li>本人は「謎の時間」の存在も記録したが、その定義とフレーム数は元原稿にない。現在の用語に勝手に置き換えない。</li>
+</ul>
+<p>本項は2004年当時の本人の整理であり、KOF2002やKOF2002UMの入力仕様を後から混ぜた資料ではない。</p>
+<h2>3. ジャンプ・コマンド入力の本人メモ</h2>
+<div class="scroll"><table><thead><tr><th>対象</th><th>2004年のMOTの記録</th><th>留保</th></tr></thead><tbody>
+<tr><td>中・大ジャンプ</td><td>↙／↓／↘ のいずれか → ↖／↑／↗ のいずれか、という入力で成立し、間にニュートラルを挟む必要はない</td><td>小・中・大ジャンプの動作は2002などと同様という本人の比較。各方向の例外はこの元資料にはない</td></tr>
+<tr><td>←↙↓↘→系</td><td>← →（↙／↓／↘ のいずれか）→（→／↗ のいずれか）でも成立すると記録</td><td>本人はKOF'99・2002と同様と比較</td></tr>
+<tr><td>→↓↘系</td><td>入力中の↓を↙／↓／↘、元原稿で↘と表した部分を↖／↑／↗に置き換え可能、と記録</td><td>通常のコマンド常識に合わせて書き換えず、<strong>原文の方向表記を保持</strong>。入力手順・条件の再確認が必要</td></tr>
+<tr><td>必殺技コマンドの最終レバー部分</td><td>KOF'99・2002と同じという本人の説明</td><td>この原稿には独立したフレーム数・方向別表はない</td></tr>
+</tbody></table></div>
+<h2>4. MAX超必殺技が出せないときのAC／BD</h2>
+<p>MAX版超必殺技もある技について、<strong>MAX版を出せない状態でACまたはBDを同時押ししても、ノーマル版は出せる</strong>とMOTは記載。<strong>ゲージ3つ未満では試した</strong>と明記する一方、<strong>カウンターモード発動中は未調査</strong>としている。KOF2002とは異なるとも記載。すべての不可条件・技・キャラに同じ結果が出たと補わない。</p>
+<h2>5. 当時の未調査と本人メモ</h2>
+<ul>
+<li><strong>未調査：</strong>アンディがジャンプ攻撃ヒット後に←↙↓↘→＋A／Cと入力した場合、近距離立ちAまたは近距離立ちC初段→撃壁背水掌となるか。</li>
+<li><strong>本人メモ：</strong>アンディのC投げでは、なぜか2段目にゲージが増える。</li>
+</ul>
+<p>前者は本人が明確に「まだ調べてないもの」とした項目。後者についても原因・増加量を補わない。<a href="/KOF2000・アンディ.html">KOF2000アンディ旧攻略</a>には近C初段から撃壁背水掌への連続技や、別の立ち回り・技性能が記載されているが、上記の<strong>ジャンプ攻撃後の省略入力手順まで確認済みになったわけではない</strong>。</p>
+<h2>関連研究と資料の来歴</h2>
+<p>一次原文：<a href="/00yu-zyunni.html">2004年3月23～25日の旧ページ</a>。<a href="./striker-call-hitstop-timing-2020.html">2020年のST呼び出し・ヒットストップ研究</a>は別時点の実験・観察。<a href="./bao-ikuyo-whiff-cancel-2015-2025.html">2015～2025年の空振りキャンセル・入力技術</a>とも、操作の成立条件が同一と断定しない。</p>
+<p><a href="/research/kof2000/index.html">KOF2000研究アーカイブ</a> ／ <a href="/kof-kininaru.html#kof2000">気になること</a> ／ <a href="/kof00-top.html">作品トップ</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
