@@ -1,0 +1,63 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF NEOWAVE：MOTの簡易改善案（2005年12月30日）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kofnw-top.htm">KOF NEOWAVE</a> / <a href="/research/kofnw/">研究アーカイブ</a> / <b>2005年の簡易改善案</b></div></div><main class="main"><div class="wrap">
+<h1>KOF NEOWAVE：MOTの簡易改善案（2005年12月30日）</h1>
+<p>MOTが2005年12月30日に旧ブログで発表したゲームの改善提案を、原文の<strong>6分類・提案の選択肢・数値</strong>を保って整理したものです。<strong>本ページの改善案は実装済み仕様ではありません。</strong> 特に「できるようにする」「可能にする」は変更を求める意味であり、当時のゲームで実行できたことを示しません。</p>
+<p>原資料：<a href="https://comesonobravo.hatenadiary.org/archive/2005/12">MOT旧はてなブログ・2005年12月の記事一覧</a>（2005/12/30「NW：簡易改善案」）。原文は本人提供の <code>comesonobravo.hatenadiary.org.export.txt</code> 内、<code>BASENAME: 16834604</code> に保存。 原稿冒頭は、大幅なシステム変更を避けるという方針です。</p>
+<h2>1. カード＆ネット関係：接続の待ち時間</h2>
+<ul><li>ネット接続に費やす時間を極力減らす。</li><li>接続が一定時間（<strong>例：10秒</strong>）成立しなければ、プレイヤーに継続するかどうか確認する。</li></ul>
+<p>「10秒」は改善案で示した例示値であり、当時の実際のタイムアウト値を調べた結果ではありません。</p>
+<h2>2. 戦績関係：初心者狩りの抑止とポイント設計</h2>
+<div class="tw"><table><thead><tr><th>MOTの提案</th><th>原稿の条件</th></tr></thead><tbody>
+<tr><td>格差がある対戦でのポイント獲得制限</td><td>勝率またはキャラのポイント差が一定以上の場合、数値が高い側が勝っても利益を得られないようにする。</td></tr>
+<tr><td>キャラクター順序を区別した成績</td><td>1人目・2人目・3人目それぞれの戦績も表示する。</td></tr>
+<tr><td>ラウンド開始時の戦績表示</td><td>キャラの戦績を表示し、何らかのボタン操作で非表示にできるようにする。</td></tr>
+<tr><td>体力差に応じたポイント変動</td><td>ラウンド開始時の体力差が一定以上（<strong>例：50％</strong>）なら、体力の多い側が勝ってもポイント増なし。少ない側が勝てば獲得ポイントを割増。</td></tr>
+<tr><td>ランキング順位の基準</td><td>勝利数ではなくポイントによって順位づけする。</td></tr>
+</tbody></table></div>
+<p>勝率差・ポイント差にどの閾値を設定するか、50％の差をどの方法で計算するか、割増率はいくらにするかは原稿では決められていません。これらを新しい確定ルールとして補いません。</p>
+<h2>3. ゲーム内容（全体）：演出、入力受付、ヒート、練習</h2>
+<ul>
+<li>ラウンド開始前の掛け合いを少なくとも旧作程度に充実させる。京対柴舟、龍虎キャラ対若ギースの掛け合いがない点を具体例に挙げる。</li>
+<li><strong>ラウンド開始前のコマンド＆レバー受付</strong>を認める。本人はKOF2002では可能だったと対比している。</li>
+<li>ヒートモードを時間による体力消耗から変更し、<strong>相手へダメージを与えたとき増加分の4分の1に相当する体力を消費</strong>する仕組み、またはモードごとの特典付与へ改める。元記事は代替案として提示。</li>
+<li>相手の攻撃を受けてもヒートモードが解除されないようにする。</li>
+<li>ボーナスゲームで選択モードに合った練習ができるようにする。</li>
+</ul>
+<p><a href="/nwsystem-kannkei.htm">2004年の本人システム原稿</a>では、ラウンド開始前入力を受け付けないようだとし、ヒート解除条件に攻撃を食らう・ガードする（JDfを含む）ことも挙げています。<strong>これは2005年改善案に先行する仕様説明であり、後年に実装が変更された証拠ではありません。</strong></p>
+<h2>4. SCモード：ループ抑止と独自練習</h2>
+<div class="tw"><table><thead><tr><th>改善提案</th><th>原文の選択条件</th></tr></thead><tbody>
+<tr><td>MAX超必殺技の制限</td><td><strong>使用不可</strong>、または<strong>ゲージ3つ消費</strong>のいずれか。</td></tr>
+<tr><td>SC使用後のゲージ増加を一時停止</td><td>相手がダウンするまで、またはゲーム内カウントが<strong>5</strong>進むまでゲージが増加しないようにする。</td></tr>
+<tr><td>ヒート中のキャンセル拡張</td><td>ヒート状態に限り、あらゆる通常技・特殊技がキャンセル可能になるようにする。</td></tr>
+<tr><td>SCモード向けボーナスゲーム</td><td>大量のザコキャラクターに連続技で応戦する練習。</td></tr>
+</tbody></table></div>
+<p>MOTはこの節で<strong>ヴァネッサのループ防止</strong>を目的として明示しています。<a href="/nwvanessa-rennzokuwaza.htm">旧ヴァネッサ連続技原稿</a>では、マシンガンアッパーからSC弱前方ビジョン等へ移行して近Cに戻るルートについて、ゲージを一部回収できる仕組みを解説し、2ゲージ使用・3回ループで即死するらしいという伝聞表現を使っています。<strong>改善案の目的と旧コンボ資料は対応するものの、全キャラに対する実測・成立確認を追加で行ったわけではありません。</strong></p>
+<h2>5. GBモード：JDfの効果とヒート時の攻防</h2>
+<ul>
+<li>JDfの硬直差減少を少なくするという調整案。<strong>原文の語順を維持</strong>し、JDfの有利／不利が具体的に何F変化するかは補いません。</li>
+<li>ヒート中にGB攻撃をキャンセルで出せるようにし、さらにキャンセルもできるようにする。</li>
+<li>ヒート中はJDf硬直を必殺技でキャンセル可能にする。</li>
+<li>ボーナスゲームでJDfの練習を可能にする。</li>
+</ul>
+<p>2004年の<a href="/nwjdf-kannkei.htm">JDf原稿</a>は、一度挙げたJDf硬直キャンセル可能説を<strong>「不可能」と訂正済み</strong>です。2005年の「ヒート中に必殺技でキャンセル可能にする」は<strong>追加したい新仕様</strong>なので、この二つは矛盾する検証結果ではありません。</p>
+<h2>6. 原文の「MAXモード」節：回避とMAX2の使用機会</h2>
+<p>原文の見出しは「MAXモード」です。現行研究記事で用いられる「MAX2モード」に勝手に見出しを統一せず、そのまま保ちます。</p>
+<ul>
+<li>「攻撃避け」を使用可能にする。</li>
+<li>ゲージMAX中は残り体力にかかわらずMAX超必殺技を使用可能にする。</li>
+<li>残り体力が減ったとき、ノーマル超必殺技を使い放題にする、または体力消耗のない常時ヒート状態とする。</li>
+<li>ヒート中はゲージや残り体力にかかわらずノーマル超必殺技を使用可能にする。</li>
+<li>エンディングのスタッフロールでMAX2を出せるようにする。</li>
+<li>ボーナスゲームでMAX2の練習を可能にする。<strong>バイス</strong>を使うときは相手にジャンプを続けさせるか、空中に浮かせるなどして対応する案。</li>
+</ul>
+<p>この節の原文には複数案のうちいくつかを選ぶ意図が明示されています。列挙した案を全部同時に採用する仕様書とは扱いません。</p>
+<h2>実際の仕様と提案を見分けるための関連資料</h2>
+<div class="tw"><table><thead><tr><th>論点</th><th>2004年の本人原稿（当時の仕様説明）</th><th>2005年の本人提案</th></tr></thead><tbody>
+<tr><td>ラウンド前入力</td><td>入力を受け付けていないようだと記録</td><td>受付可能にする</td></tr>
+<tr><td>JDf硬直のキャンセル</td><td>可能説を訂正し、不可能と記録</td><td>ヒート中の必殺技キャンセルを新たに認める</td></tr>
+<tr><td>ヒート解除</td><td>被弾・ガード（JDf含む）で解除</td><td>被弾しても解除されないようにする</td></tr>
+<tr><td>SCループ</td><td>ヴァネッサの連続技原稿にゲージ回収を伴うループの伝聞記録</td><td>SC後のゲージ回復制限等で抑制</td></tr>
+</tbody></table></div>
+<h2>後年の調査で確認したいこと</h2>
+<p>JDfの「硬直差減少」の指す量や向き、SC後のゲージ増加制限の二つの終了条件が「または」の選択肢なのか併用なのか、MAXモードの呼称と正式名称の関係などは、原稿だけでは設計詳細を確定できません。実際のゲームに存在する値として転記せず、<a href="/kof-kininaru.html#kofnw">確認事項へ分離</a>しました。</p>
+<h2>出典</h2>
+<ul><li><a href="https://comesonobravo.hatenadiary.org/archive/2005/12">MOT旧はてなブログ・2005年12月の記事一覧</a>（2005/12/30「NW：簡易改善案」）。原文は本人提供の <code>comesonobravo.hatenadiary.org.export.txt</code> 内、<code>BASENAME: 16834604</code> に保存。</li><li><a href="/nwsystem-kannkei.htm">KOFNEOWAVEシステム関係情報（2004年）</a></li><li><a href="/nwjdf-kannkei.htm">KOFNWのジャストディフェンスについて（2004年）</a></li><li><a href="/nwvanessa-rennzokuwaza.htm">KOFNWヴァネッサ連続技（旧原稿）</a></li></ul><nav class="foot-nav"><a href="/research/kofnw/">KOF NEOWAVE研究アーカイブへ</a><a href="/kofnw-top.htm">作品トップへ</a><a href="/kof-kininaru.html#kofnw">気になること</a></nav></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
