@@ -1,0 +1,57 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'99 入力・連打キャンセル・SC・GCかわし・投げ外し（2021～2023年）｜Come sono bravo?</title><meta name="description" content="MOTの2021～2023年のKOF99操作性研究。ヒットストップ、連打キャンセル、CM/AMノックバック、SCの入力、GCかわし攻撃のキャラ別評価、4キャラ限定の投げ外し確認を整理。"><link rel="stylesheet" href="/assets/research.css">
+<style>.article{max-width:1090px}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.article table{width:100%;border-collapse:collapse}.article td,.article th{border:1px solid var(--line,#aab);padding:9px;vertical-align:top;text-align:left}.article thead th{background:var(--soft,#eff2ef)}.scroll{overflow-x:auto}.note{border-left:4px solid var(--accent,#416958);padding:12px 14px;background:var(--soft,#eff2ef)}.article a{overflow-wrap:anywhere}</style></head><body>
+<header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof99-top.html">KOF'99</a> / <a href="/research/kof99/index.html">研究アーカイブ</a> / <b>入力・キャンセル</b></div></div>
+<main class="main"><div class="wrap article"><h1>KOF'99 入力・連打キャンセル・SC・GCかわし・投げ外し（2021～2023年）</h1>
+<p class="note">MOT本人の2021年5月・6月、2023年5月・7月のXアーカイブから、KOF'99の操作に関する研究を時系列で整理。<strong>本人による観察・評価、動作原因の本人仮説、キャラクターと条件を限定した確認</strong>を明確に区別する。KOF'98や2002シリーズとの比較は本人の比較研究として扱い、他作品の仕様を99へ転用しない。原投稿にない確定F数、内部的な入力バッファ処理、全キャラ共通の投げ外し猶予は補わない。</p>
+
+<h2>2021年5月28日の本人整理：操作性が悪く感じられる理由</h2>
+<p><a href="https://x.com/mot_csb/status/1398424355839778817">2021年5月28日（UTC）の本人X</a>は、KOF'99の操作性が悪いのではないかという疑問について、次の要素を列挙している。</p>
+<div class="scroll"><table><thead><tr><th>要素</th><th>本人が挙げた説明</th><th>区分</th></tr></thead><tbody>
+<tr><td>02系の操作に慣れている</td><td>KOF'02系の操作に慣れた自分の感覚による比較であり、本人は98にも近い感覚と説明。</td><td>操作経験・体感の可能性</td></tr>
+<tr><td>弱攻撃のヒットストップ</td><td>99では弱攻撃のヒットストップが長い。本人は98とほぼ同じと比較。</td><td>本人の仕様に関する記述。個別技のF数はこの投稿にない。</td></tr>
+<tr><td>技の硬直</td><td>技の硬直が全体的に長い。</td><td>本人の比較的な感覚・評価。全技の実測表ではない。</td></tr>
+<tr><td>連打キャンセルの許容幅</td><td>弱攻撃の連打キャンセルの幅が短くなっている。</td><td>本人の操作性に関する指摘。厳密な許容F数は未掲載。</td></tr>
+<tr><td>ST呼び出し等の暗転</td><td>暗転中に入力を受け付けない。</td><td>本人の挙動に関する説明。暗転の種類や受付条件の網羅的検証ではない。</td></tr>
+<tr><td>CM中のSC</td><td>カウンターモード（CM）中のスーパーキャンセル（SC）がいつでも可能なことが、操作に癖を生む。</td><td>具体的な入力上の疑問は下段の本人投稿で詳述。</td></tr>
+</tbody></table></div>
+<p>これは複数要因を挙げた本人の<strong>操作性に関する分析</strong>であり、個々のゲーム処理の原因まで機械語やフレーム測定で確定したという記録ではない。</p>
+
+<h2>CM中のスーパーキャンセルが早すぎる可能性</h2>
+<p><a href="https://x.com/mot_csb/status/1398426227396923392">同日続きの本人投稿</a>では、SCはKOF'02等と比べて入力面に癖があり、<strong>ヒットストップ中以外でもSCを認めているのではないか</strong>と推測。その場合、入力を早く完成させすぎると<strong>元の必殺技の攻撃判定が出る前にSCしてしまう</strong>可能性があると考察している。</p>
+<p>これは<strong>本人が「おそらく」「しそう」と述べた内部原因の仮説</strong>であり、通常時／CM中の全技においてヒット前SCが成立すると確認したことにはしない。技・キャラ別の入力可能F数やSCの最適タイミングは別途検証が必要。</p>
+
+<h2>2021年6月4日：連打キャンセルとCM/AMのノックバック</h2>
+<p><a href="https://x.com/mot_csb/status/1400720832679190530">2021年6月4日の本人X</a>は次の3項目をまとめた。</p>
+<ol>
+<li><strong>弱攻撃の連打キャンセルのタイミングがシビアになり、遅くなっているキャラが多い。</strong></li>
+<li><strong>CMとAM中はノックバックが大きい。</strong></li>
+<li><strong>CM／AM中の弱攻撃→弱攻撃が届きにくくなったり、届かなくなる。</strong></li>
+</ol>
+<p>本人は「多い」「なってたり」という相対評価をしているため、<strong>全キャラの全弱攻撃が不成立</strong>とは書かない。モード中のダメージ増加・連続技が変化する理由を、この投稿から単一原因に断定しない。</p>
+
+<h2>GC前転・かわし移動攻撃：入力上の注意と実戦性</h2>
+<p><a href="https://x.com/mot_csb/status/1391230255025713154">2021年5月9日の本人投稿</a>では、GC前転→GCかわし移動攻撃は有力だが、<strong>距離が近すぎるとすり抜けてかわし移動攻撃が空振りする</strong>可能性があると指摘。<a href="https://x.com/mot_csb/status/1391230533884026881">同日のGC後転投稿</a>では、前転を狙う際に後転が漏れることを避けるため、<strong>3+AB</strong>という入力を提案している。</p>
+<p><strong>2023年7月24日の本人比較</strong>は、同じGCかわし移動始動連続技でもキャラによって得失があることを示した（<a href="https://x.com/mot_csb/status/1683391851989204992">本人原文</a>）。</p>
+<div class="scroll"><table><thead><tr><th>キャラ</th><th>本人が挙げた評価</th><th>注意</th></tr></thead><tbody>
+<tr><th scope="row">ラルフ</th><td>ゲージ回収ができる点は長所。反面、成立がキャラ限定で、かわし攻撃の発生が遅い。</td><td>本人が利点・欠点を併記。</td></tr>
+<tr><th scope="row">リョウ</th><td>難易度がそこそこ高く、失敗して弱飛燕疾風脚をガードされると反撃される。</td><td>リスクを含む戦術評価。</td></tr>
+<tr><th scope="row">ウィップ</th><td>2ゲージが必要という点が欠点。</td><td>ゲージ条件を省略しない。</td></tr>
+</tbody></table></div>
+<p>2023年7月22～24日に本人が実際に試した<a href="./king-gc-evasion-tornado95-2021-2023.html">対キング「トルネードキック95」のGCかわし攻撃の確定・非確定</a>は別記事にある。ラルフの特定の連続技による確認結果を、すべてのキャラの確定反撃へ広げない。</p>
+
+<h2>通常投げの投げ外し猶予と歩き小足</h2>
+<p><a href="https://x.com/mot_csb/status/1392824274230988804">2021年5月13日のMOT本人投稿</a>では、通常投げ外しの猶予について<strong>主人公チーム4キャラのみ</strong>を調べたと明記。総じて猶予が短く、<strong>見てから外す猶予はない</strong>という本人の確認結果を述べた。本人は、KOF'98と同様にレバーを<strong>4か6</strong>に入力する必要があるため、<strong>歩き小足との二択</strong>が可能と解釈している。</p>
+<p>投稿添付の画像には元の詳細データが存在するが、今回<strong>画像の各セルを読み取っていない</strong>ため、4キャラの個別投げ外し猶予・受付フレーム数値を創作しない。<a href="https://x.com/mot_csb/status/1653754823672750088">2023年5月3日の本人投稿</a>でも、98同様に通常投げと歩き小足で崩せる「っぽい」とした。同研究は<strong>2021年の主人公チーム4キャラでの確認を起点とする</strong>ものであり、99の全キャラへの厳密なフレーム検証が終わったという資料ではない。</p>
+
+<h2>既存の本人研究とのつながり</h2>
+<ul>
+<li><a href="./gauge-priority-mode-management-2021-2024.html">2021年のゲージ運用①～⑧</a>にはGC前転・GCCD・CM/AMの使用方針を保存。ここでは<strong>操作条件と入力タイミング</strong>だけを中心に整理する。</li>
+<li><a href="./gccd-recovery-advantage-2021.html">GCCD硬直差32キャラ表</a>には各キャラの硬直差・CH追撃の本人データがある。GCかわし移動攻撃とGCCDを同じ行動として扱わない。</li>
+<li><a href="./landing-crouch-guard-invincible-2015-2025.html">着地屈ガード無敵</a>はジャンプ攻撃後の屈ガードポーズに関する別現象。連打キャンセルの入力猶予そのものとは別の問題として保存済み。</li>
+<li><a href="/99yu-zyunni.html">2003年の旧「ボタン・行動の優先順位」</a>は別の本人一次資料として維持。古い原稿の条件や記載値を無断で更新しない。</li>
+</ul>
+<h2>未解決・要照合</h2>
+<p>弱攻撃連打キャンセルのキャラ別猶予F、CM/AM中の押し戻し量、SC入力がヒットストップ外でも受け付けられるか、ST暗転中に受付停止する入力の種類、主人公チーム4キャラの投げ外し猶予と全キャラへの適用、GC前転→かわし移動攻撃のキャラ別・距離別成立は、MOT本人テキストだけでは確定できない。<a href="/kof-kininaru.html#kof99">気になること</a>へ登録する。</p>
+<p><a href="/research/kof99/index.html">KOF'99研究目次へ戻る</a> ／ <a href="/kof-kininaru.html#kof99">気になること</a></p>
+</div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
