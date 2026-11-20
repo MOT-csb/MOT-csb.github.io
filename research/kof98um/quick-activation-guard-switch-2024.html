@@ -1,0 +1,21 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'98UMFE：紅丸・表京のクイック発動によるガード切り替え不可連係（2024年本人確認）｜Come sono bravo?</title><meta name="description" content="MOT本人のX原投稿に基づくKOF98UMFEガード切り替え不可連係の確認報告。2008年仮説との経緯を保存。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:990px}.article h2{margin-top:2rem}.article table{border-collapse:collapse;width:100%}.article th,.article td{border:1px solid var(--line,#aaa);padding:9px;text-align:left;vertical-align:top}.article th{background:var(--soft,#edf1ed)}.note{background:var(--soft,#edf1ed);border-left:4px solid #567;padding:12px 16px}code{overflow-wrap:anywhere}</style></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof98um-top.html">KOF'98UM</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'98UMFE：紅丸・表京のクイック発動によるガード切り替え不可連係（2024年本人確認）</h1><p class="note"><strong>資料区分：</strong>MOT本人の2024年11月10～15日のX投稿を、提供済みXアーカイブから原文確認。2008年に提案した攻撃側ヒットストップ消去を使う連係について、<strong>2024年には98UMFEの紅丸と表京で本人が「確認」と報告</strong>している。一方、防御側は人力で、本人は他者による追試も求めている。<strong>初期98UMでの成立と、全入力条件での防御不可能性は別途確認が必要</strong>。</p>
+<h2>2008年：成立条件を仮定した研究案</h2><p>2008年、MOTはジャンプ攻撃の攻撃側ヒットストップをクイック発動で消し、相手が立ちガードから下段ガードに切り替えられない間に着地屈Bを当てる可能性を考えていた。2008年3月21日の試遊ではCPUにガードされたという記録もあるため、<strong>当時は確定済みのガード不能とは扱えない</strong>。<a href="./quick-activation-study-2008.html">2008年の元研究</a>参照。</p>
+<h2>2024年11月10日：紅丸の本人確認</h2>
+<p>MOTが98UMFEの紅丸で確認した連係は、<strong>前小JD（最低打点）→クイック発動（最速）→屈B（最速）</strong>。本人は、立ちガードのヒットストップ中に屈Bが決まったと記している。防御側が人力だったため、本人は他者の再確認を希望した。</p>
+<p><strong>紅丸側のコマンド登録（原投稿の値をそのまま保存）</strong></p>
+<pre><code>9(2F) N(21F) D(1F) N(9F) ABC(1F) N(3F) B(1F) 2(6F)</code></pre>
+<p>上記は<strong>原投稿にある登録内容</strong>であり、記号ごとの入力継続時間の解釈や別設定での再現性を勝手に補わない。</p>
+<p><a href="https://x.com/i/web/status/1855556373498695885">MOT本人の2024/11/10投稿（コマンド登録と動画添付）</a> ／ <a href="https://x.com/i/web/status/1855559383209668799">後続の動画公開案内</a></p>
+<h2>2024年11月11日：表京の本人確認</h2>
+<p>表京についても、MOTは<strong>前小JD（最低打点）→クイック発動（最速）→屈B（最速）</strong>で立ちガードのヒットストップ中に屈Bが決まるのを確認したと報告した。</p>
+<p>投稿には検証動画の内容として、①立ちガードからガード段切り替えを狙う、②屈ガードのままで受ける（連続技）、の二つの条件が示されている。<strong>動画内容の詳細はこの整理で直接検証していない</strong>。本人は紅丸の場合と同様、防御側が人力である点に注意し、他者の追試を求めている。</p>
+<p><a href="https://x.com/i/web/status/1855895104026034386">MOT本人の2024/11/11確認投稿</a> ／ <a href="https://x.com/i/web/status/1855900062838370468">YouTube投稿案内</a> ／ <a href="https://x.com/i/web/status/1855900433992101972">60FPS動画への言及（本人は推定と記録）</a></p>
+<h2>2024年11月15日：通常版の無式への発展</h2><p>MOTは98UM(FE)のクイック発動使用ガード不能について、中ジャンプと通常版の無式を使った状況にも言及し、遠めの距離で成立することに注目した。ただし、実戦では相手も後退するため、もう少し近い距離が必要ではないかと留保した。この投稿だけでは攻撃側・防御側のキャラ、版、手順と成立の網羅条件は特定できない。</p>
+<p><a href="https://x.com/i/web/status/1857367330453585954">MOT本人の2024/11/15投稿</a></p>
+<h2>確定情報・未解決情報を区別</h2>
+<table><thead><tr><th>分類</th><th>内容</th></tr></thead><tbody>
+<tr><td>本人確認済み（98UMFE）</td><td>紅丸・表京の前小JD（最低打点）→最速QM→最速屈Bが、本人の記録した人力防御テストで立ちガードからの切り替えに勝った。</td></tr>
+<tr><td>原投稿で確認できる条件</td><td>紅丸側コマンド登録のフレーム内訳。表京側の動画の2種類の防御条件。</td></tr>
+<tr><td>未確認</td><td>初期98UMでの同条件の成立、完全に最適な防御操作への成立、相手キャラごとの差、版や入力デバイスによる差。</td></tr>
+<tr><td>追加研究案</td><td>2021年のMOTはクイック発動のタイミングで消せるヒットストップの長さが変わるのではと疑問を提示。入力発動時刻の検証につながるが、本ページの2例だけでは一般則は確定しない。</td></tr></tbody></table>
+<p><a href="https://x.com/i/web/status/1357156733299269633">2021/02/04のヒットストップ長の本人疑問</a> ／ <a href="https://x.com/i/web/status/1855552571395695069">2024/11/10、初期98UMではコマンド登録をしていなかったとの本人説明</a></p><p><a href="./index.html">KOF'98UM研究目次</a> ／ <a href="/kof-kininaru.html#kof98um">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?</div></footer></body></html>
