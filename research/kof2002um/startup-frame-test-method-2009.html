@@ -1,0 +1,40 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF2002UM：発生フレーム調査法の原記録と入力の隙間（2009年）｜Come sono bravo?</title><meta name="description" content="MOTの2009年KOF2002UMフレーム調査法の原文と検証条件を保存"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:970px}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.article table{width:100%;min-width:690px;border-collapse:collapse}.article th,.article td{border:1px solid #bbc9c2;padding:9px;text-align:left;vertical-align:top}.article th{background:#e6efea}.scroll{overflow:auto}.note{background:#edf3ef;border-left:3px solid #517b65;padding:12px}.src{font-size:.92em}.article a{overflow-wrap:anywhere}code{overflow-wrap:anywhere}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof02um-top.html">KOF2002UM</a> / <a href="./index.html">研究アーカイブ</a> / <b>発生Fの調査方法</b></div></div><main class="main"><div class="wrap article"><h1>KOF2002UM：発生フレーム調査法の原記録と入力の隙間（2009年）</h1><p class="note">MOT本人が2009年10月22日に公開した「発生フレーム調査法」「その2」「その3」を、測定手順・計算規則・原著者の留保を区別して保存したもの。<strong>原著者は「以下の調査方法は02によるもの」と明記し、2002UMへの転用を「流用できるはず」と推測した。</strong>本ページは2002UMで全方式が検証完了したという新しい主張ではない。</p>
+<p class="src">原資料：<a href="https://comesonobravo.hatenadiary.org/entry/2009/10/22/091559">2009/10/22『発生フレーム調査法』</a>／<a href="https://comesonobravo.hatenadiary.org/entry/2009/10/22/091730">同『その2』</a>／<a href="https://comesonobravo.hatenadiary.org/entry/2009/10/22/091824">同『その3』</a>（MOT提供のブログ・エクスポートを直接確認）。</p>
+<h2>「隙間」の定義</h2>
+<p>MOTはボタン押下を行っていない時間を「隙間」と呼び、コマンド入力中のレバー操作フレームも、先の技のボタンから次の技のボタンまでの間として含める。本人の例：<strong>アンディ近C→AB同時押し</strong>では、Cの後にニュートラル5Fならクイック緊急回避が出るが、4Fでは出ないと説明。</p>
+<p>リョウの立ちCD→虎煌拳では、CD（1F）→2（1F）→3（1F）→6（1F）→N（7F）→A（1F）のうち、2・3・6・N(7F)を合計した<strong>10Fが隙間</strong>。入力のうちニュートラルだけを測定するものではない。</p>
+<h2>入力方法別の当時の計算法</h2>
+<div class="scroll"><table><thead><tr><th>利用する入力</th><th>対象</th><th>当時の計算</th><th>本人が挙げた例</th><th>注意</th></tr></thead><tbody><tr><td>クイック緊急回避・クイック発動</td><td>通常技</td><td>隙間－2F</td><td>アンディ近C：隙間5F→発生3F</td><td>ヒットストップのない技には使えない</td></tr>
+<tr><td>クイック緊急回避・クイック発動</td><td>特殊技</td><td>隙間－2F</td><td>アンディ3A初段：隙間10F→発生8F</td><td></td></tr>
+<tr><td>クイック緊急回避・クイック発動</td><td>立ちCD</td><td>隙間＋2F</td><td>ウィップ立ちCD：隙間14F→発生16F</td><td>通常技と補正の向きが逆</td></tr>
+<tr><td>通常キャンセル</td><td>通常技・特殊技</td><td>隙間－4F</td><td>京近C：隙間7F→発生3F</td><td>通常技／特殊技の同じ規則</td></tr>
+<tr><td>通常キャンセル</td><td>立ちCD</td><td>隙間</td><td>リョウ立ちCD：隙間10F→発生10F</td><td></td></tr>
+<tr><td>通常キャンセル</td><td>ジャンプ攻撃</td><td>隙間－4F</td><td>アンディ小JA：隙間8F→発生4F</td><td>JCDの発生と混同しない</td></tr>
+<tr><td>どこでもキャンセル（押しっぱなし無し）</td><td>ジャンプ攻撃</td><td>隙間－4F</td><td>アンディ小JB：隙間10F→発生6F</td><td></td></tr>
+<tr><td>どこでもキャンセル（押しっぱなし無し）</td><td>ジャンプCD</td><td>隙間</td><td>アンディ小JCD：隙間16F→発生16F</td><td>2009/07の記事に別のJCD調査の不正確さへの警告あり</td></tr>
+<tr><td>どこでもキャンセル（押しっぱなし無し）</td><td>キャンセル不可の特殊技</td><td>隙間－4F</td><td>K′6B：隙間18F→発生14F</td><td></td></tr>
+<tr><td>どこでもキャンセル（押しっぱなし無し）</td><td>必殺技</td><td>原則：隙間－1F（当時の推定）</td><td>京荒咬み：隙間13F→発生12F</td><td>アンディ撃壁で違う値になり、例外・再確認が必要</td></tr>
+<tr><td>どこでもキャンセル（押しっぱなし無し）</td><td>打撃投げの必殺技</td><td>隙間－2F（当時の推定）</td><td>ロバート連舞脚：隙間14F→発生12F</td><td>2009/10/22その2で「おそらく」と説明</td></tr>
+<tr><td>硬直差を利用した反撃</td><td>キャンセル法で調べられない技</td><td>特定の公式なし</td><td>不利フレーム既知の技に反撃成立するかを調べる</td><td>目押しと間合いで信頼性が変わる</td></tr></tbody></table></div>
+<p>「原則」「例外」は2009年10月22日の<strong>本人の暫定推測</strong>であり、全必殺技で実験して一般化した確定法ではない。立ちCDはクイック系で+2F、通常キャンセルで隙間そのまま、どこキャンでJCDは隙間そのままと、技区分で補正量が違う。</p>
+<h2>その2：連続ガード・連続技から発生を絞る目安</h2>
+<div class="scroll"><table><thead><tr><th>当時の判定条件</th><th>発生の推定範囲</th></tr></thead><tbody><tr><td>弱攻撃キャンセルで連続ガード</td><td>9F以内</td></tr>
+<tr><td>弱攻撃キャンセルでコンボにはなるが連続ガードではない</td><td>10～11F</td></tr>
+<tr><td>弱攻撃からコンボ不成立、強攻撃キャンセルで連続ガード</td><td>12～17F</td></tr>
+<tr><td>強攻撃キャンセルでコンボにはなるが連続ガードではない</td><td>18～19F</td></tr>
+<tr><td>強攻撃からコンボ不成立、立ちCDキャンセルで連続ガード</td><td>19～21F</td></tr>
+<tr><td>立ちCDキャンセルでも連続ガードにならない</td><td>22F以上</td></tr></tbody></table></div>
+<p>これは本人が<strong>おおよその目星を付ける</strong>方法として掲げたもので、実際の距離で調べられる技が限られると注記。18～19Fと19～21Fの境界に19Fが重なる部分も、原文のまま保つ。</p>
+<h2>その3：技の動作開始と「発生」の起点を区別</h2>
+<p>京の荒咬みは動作開始を1F目と数えると発生12F。立ち状態から236Aが成立すると、<strong>コマンド完成後の2F目に動作が始まり、13F目に攻撃判定が出る</strong>との本人説明。コマンド完成からの経過時間を、そのまま「発生12F」という値と混同しない。</p>
+<p>本人が説明した登録例は <code>2(1) → 3(1) → 6(1) → A(1) → N(10) → 2(1) → 3(1) → 6(1) → C(1)</code>。MAX発動状態で荒咬み→どこキャン毒咬みになり、N(10)をN(9)にすると九傷が出るという境界を提示。ここでの「隙間」はN(10)+2(1)+3(1)+6(1)=<strong>13F</strong>。</p>
+<h2>キャンセル版の特殊技の取り出し方（2009年3月）</h2>
+<p>MOTは2009年3月16日、<strong>超必殺技が出せない状態で通常技キャンセル超必殺技の入力を行う</strong>と、生で出した特殊技がキャンセル版になる「超必殺技仕込み」を説明。02UMでも可能かを<strong>BRさんに確認してもらい、可能だった</strong>と記録。これは2002で検証しただけの10月の一般計算とは異なり、02UMの成立確認が明記された事例。</p>
+<p class="src">出典：<a href="https://comesonobravo.hatenadiary.org/entry/2009/03/16/171912">2009/03/16 キャンセル版特殊技の各種フレーム調査方法</a>。</p>
+<h2>JCD調査方法の誤差警告（2009年7月）</h2>
+<p>2009年7月6日、MOTはそれまで紹介した<strong>JCDの発生フレーム調査方法に誤りがあり、不正確な数値が存在する可能性</strong>を表明。正確な方法は当時未確定とし、<strong>発生10F以上の小ジャンプ攻撃では1Fずれる可能性</strong>、ジャンプ上昇中に攻撃を出すと下降中より接地が1F遅れるという問題を挙げている。</p>
+<p><strong>重要な区別：</strong>7月6日の訂正警告が、10月22日記事のどこキャン法まで否定したとまでは原文に書かれていない。ただし過去のJCD数値を全件確認済みとする根拠もない。調査法の版と実際の適用条件の再検証が必要。</p>
+<p class="src">出典：<a href="https://comesonobravo.hatenadiary.org/entry/2009/07/06/155750">2009/07/06『JCDの発生フレーム調査方法について』</a>。</p>
+<h2>未完成・未確認事項</h2>
+<ul><li>10月22日その1の「どこキャン法」の必殺技欄は<strong>未完成</strong>。その2の仮説を原記事その1の確定公式として上書きしない。</li><li>MOTはその2の例外値を見てアンディ撃壁、K′6Bの再確認を課題に挙げたが、この記事に結果はない。</li><li>目押しが必要な技への反撃法は、安定した確認方法として扱えない旨を原著者が記している。</li><li>本記事に載せた入力方法の<strong>02UM実機・家庭用の詳細な検証環境</strong>は、原文にない場合は補っていない。</li></ul>
+<p class="src">関連：<a href="./motion-totalframes-test-method-2009.html">全体モーションの計測方法</a>／<a href="./bao-projectile-motion-test-2010.html">包への実際の適用記録（2010年）</a>／<a href="./index.html">02UM研究目次</a>／<a href="/kof-kininaru.html#kof02um">気になること</a>。</p></div></main><footer class="footer"><div class="wrap">Come sono bravo? ｜ 作成：MOT</div></footer></body></html>
