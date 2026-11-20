@@ -1,0 +1,22 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'95：連舞拳・連舞脚の相打ちと1P／2P側の硬直差（2023年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof95-top.html">KOF'95</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap"><h1>KOF'95：連舞拳・連舞脚の相打ちと1P／2P側の硬直差（2023年）</h1>
+<p>2023年7月13～14日のMOT本人のX投稿を基に、<strong>極限流連舞拳／連舞脚同士の相打ち</strong>、連舞拳と弱・強攻撃の相打ち、1P・2Pによる硬直差、追撃可能な例を整理する。MOTが「確認した」と書いた結果をそのまま収録し、硬直差が生じるプログラム上の原因は仮説として区別する。</p>
+<h2>7月13日：連舞系同士の相打ちと位置入替</h2>
+<p>MOTは過去の動画に登場した<strong>連舞拳／連舞脚同士の相打ち</strong>を見て、かつての研究を忘れていたと報告。リョウの連舞拳でも同じ結果を確認し、<strong>条件によって位置を入れ替えながらの相打ちになり、そこから1P側は連続技が可能</strong>と記録した。ただし、この投稿にはその位置入替を成立させる入力フレームや全キャラの条件は書かれていない。<a href="https://x.com/mot_csb/status/1679340811455188992">2023/07/13の本人投稿</a> ／ <a href="https://x.com/mot_csb/status/1679341281426952192">同日のリョウ追試</a>。</p>
+<h2>7月14日：連舞拳を弱・強攻撃と相打ちさせた測定</h2>
+<table><thead><tr><th>連舞拳を出す側</th><th>弱攻撃と相打ち</th><th>強攻撃と相打ち</th></tr></thead><tbody>
+<tr><td><strong>1P連舞拳</strong></td><td><strong>+10F</strong></td><td><strong>±0F</strong></td></tr>
+<tr><td><strong>2P連舞拳</strong></td><td><strong>+1F</strong></td><td><strong>−9F</strong></td></tr>
+</tbody></table>
+<p>出典：<a href="https://x.com/mot_csb/status/1679695502244462592">MOTによる2023/07/14の測定結果・動画付き投稿</a>。各数値は<strong>連舞拳側の硬直差</strong>。例えば1Pの弱攻撃相打ちで+10F、2Pでは+1Fであり、片側だけの値を技の普遍的な硬直差として記載しない。弱攻撃と強攻撃とでは、いずれも結果が10F異なる。</p>
+<h2>追加追撃と本人の原因仮説</h2>
+<p>MOTは<strong>1P連舞拳を弱攻撃と相打ちさせてから屈Dがつながる</strong>ことを確認している。同投稿の「連舞拳1段目のヒット硬直が1Pと2Pで違うっぽい」という説明は<strong>本人の推測</strong>であり、ゲーム内部のヒット硬直処理の違いを逆アセンブルで確定した結果ではない。</p>
+<p>2P側の連舞拳を弱攻撃と相打ちさせた場合に同じ屈Dが連続ヒットするか、各弱・強攻撃のキャラクター別結果、相打ち時の位置入替の必要条件はこの投稿群には記載されていない。</p>
+<h2>同じ研究系列の2023年11月8日の後続測定</h2>
+<p>2023年11月8日、MOTは以前の連舞拳（脚）同士の相打ち研究を引き合いに出し、庵の葵花同士・ラルフのガトリングアタック同士でも1P・2Pで相打ち後の硬直が異なると報告した。<a href="./player-side-clash-recovery-2023.html">庵・ラルフの測定値と不成立例はこちら</a>。本ページの<strong>連舞拳1P+10F／2P+1F</strong>とは別の技・条件なので数値を混同しない。</p>
+<p>また、<a href="./ryo-dash-renbuken-input-2023.html">リョウのダッシュ連舞拳入力</a>は入力暴発を避ける別研究であり、本ページの相打ち時の硬直差を直接扱っているわけではない。</p>
+<h2>追加確認が必要な点</h2><ul>
+<li>連舞拳・連舞脚同士の相打ちで位置が入れ替わる具体的な距離・タイミング。</li>
+<li>1P連舞拳の弱攻撃相打ち→屈D以外に、1P側・2P側で成立する追撃の一覧。</li>
+<li>ヒット硬直の差が1P／2Pの更新順や、ヒットストップ、接地処理のどれに起因するか。</li>
+</ul>
+<p>上記は本人の原資料から浮かぶ照合課題であり、独自に原因を確定したものではない。</p><p><a href="./index.html">KOF'95研究アーカイブへ戻る</a> ／ <a href="/kof-kininaru.html#kof95">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
