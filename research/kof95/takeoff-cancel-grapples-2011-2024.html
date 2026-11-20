@@ -1,0 +1,18 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'95：離陸キャンセル・打撃投げ・JCD空キャンセルの原資料（2011～2024年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof95-top.html">KOF'95</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap"><h1>KOF'95：離陸キャンセル・打撃投げ・JCD空キャンセルの原資料（2011～2024年）</h1>
+<p>MOTの2011年と2024年の原稿から、KOF'94と'95のジャンプ攻撃開始処理の違い、離陸キャンセル入力、特殊な打撃投げが空中の相手に反応する例外を整理する。「離陸キャンセル」は2011年の本人投稿で<strong>ビート北野氏が呼んでいた名称</strong>として紹介された用語であり、MOT本人による命名とはしない。</p>
+<h2>2011年1月31日：94と95の昇りジャンプ攻撃の差</h2>
+<table><thead><tr><th>作品</th><th>本人の説明</th></tr></thead><tbody><tr><td>KOF'94</td><td>最速タイミングでも、ジャンプの予備動作が終わってからジャンプ攻撃の動作に移行する。</td></tr><tr><td>KOF'95</td><td><strong>ジャンプ予備動作をキャンセルしてジャンプ攻撃が動作を開始する</strong>。</td></tr></tbody></table>
+<p>出典：<a href="https://x.com/mot_csb/status/31881238604161025">2011/01/31の本人投稿</a>。個別技の発生Fやジャンプ予備動作の長さをこの投稿から創作しない。</p>
+<h2>2024年3月17日：打撃投げを持つリョウ・ロバートの例外</h2>
+<p>MOTは、<strong>リョウの連舞拳とロバートの連舞脚は空中の相手に対しても発動してしまう</strong>と記録。したがって、相手が空中にいる時に<code>412369+C(D)</code>と入力しても、意図した別の行動ではなく連舞拳・連舞脚が出るという制約がある。</p>
+<p>本人はこの点を離陸キャンセルと打撃投げの関係として説明し、入力法の使いにくい例として評価している。出典：<a href="https://x.com/mot_csb/status/1769208100366786618">2024/03/17の本人投稿</a>。この投稿だけから、全キャラクターの打撃投げへ適用できるという結論は出さない。</p>
+<h2>2011年6月21日：キムのJCD空キャンセル飛翔脚</h2>
+<p>2011年の対戦動画の感想で、MOTは<strong>キムがJCDを空キャンセルして飛翔脚を出すと、飛翔脚の性能が変化し、ヒット時・ガード時の全段が当たりやすくなる</strong>と解説した。</p>
+<p>これは動画解説として書かれた技術説明であり、全キャラ・全高度での成立確認を意味しない。出典：<a href="https://x.com/mot_csb/status/83032827406454785">2011/06/21の投稿と対戦動画リンク</a>。</p>
+<h2>3系統の違い</h2><ul>
+<li><strong>予備動作のキャンセル：</strong>KOF'94と'95で昇りジャンプ攻撃の処理が異なるという2011年の本人説明。</li>
+<li><strong>空中の相手にも発動する打撃投げ：</strong>リョウ・ロバートの入力優先による2024年の例外。</li>
+<li><strong>JCDの空キャンセル：</strong>キムの飛翔脚に関する2011年の動画解説。</li>
+</ul>
+<p>これらは名称に「キャンセル」が含まれていても同一の現象ではなく、元原稿の目的・適用範囲に従って分けて掲載する。関連：<a href="./athena-phoenix-arrow-reflector-2023.html">アテナのJCD空キャンフェニックスアロー</a> ／ <a href="./frame-data-sources-2011.html">2011年キャラ別原データ</a>。</p>
+<p><a href="./index.html">KOF'95研究アーカイブへ戻る</a> ／ <a href="/kof-kininaru.html#kof95">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
