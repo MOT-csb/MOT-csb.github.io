@@ -1,0 +1,27 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ストライカー：呼び出し・登場位置・ヒットストップの時間処理（2020年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:1040px}.note{padding:12px 16px;border-left:4px solid var(--accent,#416958);background:var(--soft,#eff3f0)}.article table{width:100%;border-collapse:collapse}.article th,.article td{padding:9px;border:1px solid var(--line,#b4b4b4);vertical-align:top}.article th{background:var(--soft,#eff3f0)}.scroll{overflow-x:auto}.src{font-size:.9em}.article li{margin:.5em 0}.article a{overflow-wrap:anywhere}</style></head><body>
+<header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof00-top.html">KOF2000</a> / <a href="/research/kof2000/index.html">研究アーカイブ</a> / <b>ストライカー：呼び出し・登場位置・ヒットストップの時間処理（2020年）</b></div></div>
+<main class="main"><div class="wrap article"><h1>ストライカー：呼び出し・登場位置・ヒットストップの時間処理（2020年）</h1>
+<p class="note">MOT本人の2020年9～10月のX連続投稿を時系列で集約。「確認した」と記録した内容、観察、仕組みの仮説を区別する。ゲーム内部の処理を独自に解析した記事ではない。</p>
+<h2>ヒットストップ中にST呼び出しを受け付ける技</h2>
+<div class="scroll"><table><tr><th>攻撃の種類</th><th>ヒットストップ中の呼び出し</th><th>元投稿の確度</th></tr>
+<tr><td>通常技</td><td>呼べない</td><td>2020/9/6に調査中の本人が整理</td></tr>
+<tr><td>ジャンプ攻撃</td><td>呼べる</td><td>同上。細かな違いがあるという記録</td></tr>
+<tr><td>特殊技</td><td>呼べる</td><td>同上。後続投稿でも可能として説明</td></tr>
+<tr><td>必殺技</td><td>呼べる</td><td>同上。後続投稿でも可能として説明</td></tr></table></div>
+<p class="src">本人投稿（2020/9/6）：<a href="https://x.com/mot_csb/status/1302517580586864640">1302517580586864640</a> ／ <a href="https://x.com/mot_csb/status/1302636749315768320">1302636749315768320</a></p>
+<h2>呼び出し位置によるSTアナザー庵の動作開始</h2>
+<p>2020/9/6の本人の具体的記録では、自キャラが端に追い込まれた状態だと<strong>14F目からST動作開始</strong>、自キャラが端からある程度離れた状態だと<strong>1F目からST動作開始</strong>。これはSTアナザー庵の例であり、全ストライカー・全位置で一律の値とは扱わない。</p>
+<p class="src">本人投稿：<a href="https://x.com/mot_csb/status/1302636392128720896">1302636392128720896</a></p>
+<h2>本体とSTのヒットストップ</h2>
+<ul>
+<li>本人は、自キャラの攻撃で生じたヒットストップにSTが拘束されず、STがその停止時間中に相手へヒットすることを記録。2020年10月にも同趣旨を整理している。<a href="https://x.com/mot_csb/status/1302594936030638080">1302594936030638080</a> ／ <a href="https://x.com/mot_csb/status/1314759611098955778">1314759611098955778</a></li>
+<li>STへ攻撃を当てた場合、そのヒットストップ中にも相手本体の時間が経過していることを2020/9/22に本人が<strong>確認</strong>。相手本体への連続技のつながり方に影響する。<a href="https://x.com/mot_csb/status/1308545013744168960">1308545013744168960</a></li>
+<li>STが相手キャラに与えたヒットストップ中に自キャラの攻撃がヒットしないのではないか、という別の論点は2020/9/6時点では本人の未確認仮説。<a href="https://x.com/mot_csb/status/1302595360292892672">1302595360292892672</a></li>
+</ul>
+<h2>呼び出しタイミングと連続技</h2>
+<p>本人は、早めにSTを登場させると連続技になりやすく、遅めの登場では本体側の残り硬直が相対的に短くなり、後続の連続技につなげやすくなると説明。タイミングごとに攻撃の当否が違うため、単に最速を推奨する記録ではない。<a href="https://x.com/mot_csb/status/1302636749315768320">1302636749315768320</a></p>
+<p>STアナザー庵の突進部分のヒットストップは<strong>ガード時32F／ヒット時45F</strong>という数値を本人が記録。STジョーとの比較では、突進部分の攻撃判定の大きさの差よりもダウン追撃可能な判定の種類が違うのではないかと推測した。<a href="https://x.com/mot_csb/status/1302637397868331009">1302637397868331009</a> ／ <a href="https://x.com/mot_csb/status/1302638966340947968">1302638966340947968</a></p>
+<h2>未整理の条件</h2>
+<p>通常技以外での呼び出し受け付け時間の全技例外、端からの距離によるSTアナザー庵の開始Fの切り替わり、STのヒットストップと本体の硬直差が成立技に及ぼす全条件は、本人投稿にない値を補わず「気になること」に残す。</p>
+<p>関連：<a href="./clark-st-joe-timing-2020.html">クラーク＋STジョーの呼び出しタイミング表</a> ／ <a href="./striker-seth-counterplay-2020.html">対STセスの検証</a>。<p><a href="/research/kof2000/index.html">KOF2000研究目次</a> ／ <a href="/kof-kininaru.html#kof2000">気になること</a> ／ <a href="/kof00-top.html">作品トップ</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
