@@ -1,0 +1,25 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF NEOWAVE：柴舟の屈みDと判定継承の研究史（2004〜2024年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kofnw-top.htm">KOF NEOWAVE</a> / <a href="/research/kofnw/">研究アーカイブ</a> / <b>柴舟の屈みD</b></div></div><main class="main"><div class="wrap">
+<h1>柴舟の屈みD：無敵・ガード切替・判定継承の研究史</h1>
+<p>2004年のMOTによる技解析に記録された柴舟の屈みDを、2012年・2017年の本人投稿と2024年12月29日のブログに照らして整理する。<strong>アルカディアからの情報、MOTの回想、後年の現象説明を区別</strong>し、別々の仕様が同一原因だとは断定しない。</p>
+<h2>原資料を時系列で照合</h2>
+<div class="tw"><table><thead><tr><th>時点</th><th>原資料にある記述</th><th>位置づけ</th></tr></thead><tbody>
+<tr><td>2004年8月21日公開・10月16日最終更新</td><td>屈みDは攻撃判定が出る直前まで下半身無敵と説明。さらに攻撃判定が出る前に特定のレバー入力を維持して攻撃を受けると、攻撃動作を中断して屈みガードへ切り替わるらしいと記す。</td><td><a href="/nwsaisyu-wazakaiseki.htm">柴舟技解析</a>で<strong>アルカディア情報</strong>と明記。MOT自身の実測と断定しない</td></tr>
+<tr><td>2012年8月25日</td><td>柴舟の屈Dがガードに化ける現象があったと本人が回想。無敵という表現ではなく、ガードへの切替に言及している。</td><td><a href="https://x.com/mot_csb/status/239329283959582720">本人X投稿</a>。記憶を述べたもので新規検証ではない</td></tr>
+<tr><td>2017年11月10日</td><td>柴舟の屈Dの謎の無敵について、他者の動画等に結びつく可能性を示した。</td><td><a href="https://x.com/mot_csb/status/928980629865209856">本人X投稿</a>。「これですかね」という未確定の問い</td></tr>
+<tr><td>2024年12月29日</td><td>KOF作品を横断する「事前に出した技が反映される行動」の一覧で、NW柴舟の屈Dは事前の行動の<strong>食らい判定を引き継ぐ</strong>と説明。参照動画を提示した。</td><td><a href="https://comesonobravo.hatenadiary.org/entry/2024/12/29/202331">本人ブログ</a>。動画に基づく説明だが判定継承の詳細条件・フレーム数は当該記事にない</td></tr>
+</tbody></table></div>
+<h2>三つの現象を混同しない</h2>
+<ol>
+<li><strong>下半身・足元無敵</strong>：2004年の原稿がアルカディアの情報として紹介した性能。どのFまで無敵なのかの独自計測値は原稿にない。</li>
+<li><strong>屈みDから屈みガードへの切り替わり</strong>：2004年の原稿に記載、2012年に本人が回想。攻撃側の技・レバー入力・動作中のタイミングの再現条件は今回の資料だけでは厳密には確定しない。</li>
+<li><strong>直前の技の食らい判定を引き継ぐ</strong>：2024年の本人ブログで説明された別の観点。これがガードへの切替を引き起こすとまでは当該記事に書かれていない。</li>
+</ol>
+<p>なお、2004年の技解析では、原資料中のレバー方向は画像アイコンで示されている。テキスト抽出だけから方向を補完しない。個別の条件は<a href="/nwsaisyu-wazakaiseki.htm">元の図付き原稿</a>を参照する。</p>
+<h2>関連する柴舟の技・コンボの原稿</h2>
+<p><a href="/nwsaisyu-rennzokuwaza.htm">柴舟の連続技（2004年版）</a>では近C、鉈車、神懸、GB攻撃、大蛇薙の追撃などを、モード別・条件別に整理している。後年の屈みDに関する論点によって、これらの旧レシピが変更されたとする根拠はない。<a href="https://x.com/mot_csb/status/1829685462342254853">2024年8月31日の投稿</a>では別論点として柴舟のD投げ2段目の投げ抜け可能性と、被投げ後の起き攻め・1F投げに関する疑問も記録されている。</p>
+<h2>未解決として残すこと</h2>
+<p>2004年のアルカディア記載、2017年の映像との関係、2024年の食らい判定継承の説明に関して、発生F、持続F、入力方向、直前の行動ごとの再現例は未照合。<a href="/kof-kininaru.html#kofnw">「気になること」</a>では推測で一つの原因に統合しない。</p>
+<h2>一次資料</h2>
+<ul><li><a href="/nwsaisyu-wazakaiseki.htm">2004年：柴舟技解析（MOT編集・アルカディア情報の明示あり）</a></li><li><a href="/nwsaisyu-rennzokuwaza.htm">2004年：柴舟連続技</a></li>
+<li><a href="https://x.com/mot_csb/status/239329283959582720">2012年：屈みDからガードへの切り替わりに言及</a></li><li><a href="https://x.com/mot_csb/status/928980629865209856">2017年：屈みDの無敵に関する疑問</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2024/12/29/202331">2024年：事前に出した技が反映される行動についてのまとめ</a></li></ul><p><a href="/research/kofnw/">KOF NEOWAVE研究アーカイブ</a> ／ <a href="/kof-kininaru.html#kofnw">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
