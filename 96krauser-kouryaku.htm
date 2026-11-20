@@ -7,6 +7,109 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/csb.css">
+<style>
+/* クラウザー攻略のみ：古い二重テーブルを狭い画面で縦読み表示する。
+   本文・技名・数値・原文の並びは変更しない。 */
+main > .wrap > .tw > table { table-layout: auto; }
+main > .wrap > .tw > table > tbody > tr > td { width: 50%; }
+main .cmd { white-space: nowrap; }
+@media (max-width: 960px) {
+  main > .wrap { max-width: 800px; }
+  main > .wrap > .tw {
+    overflow: visible;
+    border: 0;
+    background: transparent;
+    border-radius: 0;
+  }
+  main > .wrap > .tw > table,
+  main > .wrap > .tw > table > tbody,
+  main > .wrap > .tw > table > tbody > tr,
+  main > .wrap > .tw > table > tbody > tr > td {
+    display: block;
+    width: 100%;
+  }
+  main > .wrap > .tw > table > tbody > tr > td {
+    padding: 0;
+    border: 0;
+    background: transparent !important;
+    color: var(--ink) !important;
+    font: inherit !important;
+    overflow-wrap: anywhere;
+  }
+  main > .wrap > .tw > table > tbody > tr > td + td {
+    margin-top: 36px;
+  }
+  main > .wrap > .tw > table > tbody > tr > td > b:first-child {
+    display: block;
+    margin: 12px 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid var(--ink);
+    font-size: 23px;
+    line-height: 1.45;
+  }
+  main > .wrap > .tw > table > tbody > tr > td > p > b {
+    font-size: 21px;
+  }
+  /* 属性・技名・性能を、横長の表から1技1カードへ。 */
+  main > .wrap > .tw > table > tbody > tr > td .tw {
+    overflow: visible;
+    border: 0;
+    background: transparent;
+    margin: 12px 0 22px;
+    border-radius: 0;
+  }
+  main > .wrap > .tw > table > tbody > tr > td .tw table,
+  main > .wrap > .tw > table > tbody > tr > td .tw tbody {
+    display: block;
+    width: 100%;
+  }
+  main > .wrap > .tw > table > tbody > tr > td .tw tr {
+    display: block;
+    margin: 0 0 12px;
+    padding: 12px 15px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--card);
+  }
+  main > .wrap > .tw > table > tbody > tr > td .tw tr:first-child {
+    display: none; /* 列名は各カードの表示上の役割へ置換 */
+  }
+  main > .wrap > .tw > table > tbody > tr > td .tw td {
+    display: block;
+    width: 100%;
+    padding: 2px 0;
+    border: 0;
+    background: transparent !important;
+    color: var(--ink) !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+  }
+  main > .wrap > .tw > table > tbody > tr > td .tw td:first-child {
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    color: var(--sub) !important;
+  }
+  main > .wrap > .tw > table > tbody > tr > td .tw td:nth-child(2):not(:last-child) {
+    margin: 3px 0 8px;
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    line-height: 1.65;
+  }
+  main > .wrap > .tw > table > tbody > tr > td .tw td:nth-child(2):last-child {
+    margin-top: 6px;
+  }
+}
+@media (max-width: 600px) {
+  header { padding: 20px 16px 24px; }
+  main { padding: 20px 16px 44px; }
+  main > .wrap { width: 100%; }
+  main > .wrap > .tw > table > tbody > tr > td .tw tr { padding: 12px 13px; }
+  main > .wrap > .tw > table > tbody > tr > td > p { line-height: 1.9; }
+  main .cmd { font-size: 0.95em; }
+}
+</style>
 </head>
 <body>
 <header><div class="wrap">
