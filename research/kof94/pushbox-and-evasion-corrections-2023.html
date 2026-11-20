@@ -1,0 +1,20 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'94：攻撃避け・押し合い判定・突進技の訂正記録（2023年）｜Come sono bravo?</title><meta name="description" content="KOF'94のMOT本人による旧ブログとX投稿の研究記録を、確定結果・当時の評価・仮説・未確認条件に分けて整理。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:980px}.article p,.article li{line-height:1.85}.article h2{margin-top:1.8em}.srcbox{background:#f1f5f2;border-left:4px solid #52745b;padding:10px 14px}.scroll{max-width:100%;overflow-x:auto}.article table{border-collapse:collapse;min-width:620px;width:100%;font-size:14px}.article th,.article td{border:1px solid #b4c6b9;padding:9px;text-align:left;vertical-align:top}.article th{background:#eaf0ec}.article td{overflow-wrap:anywhere}.article a{overflow-wrap:anywhere}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof94-top.html">KOF'94</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'94：攻撃避け・押し合い判定・突進技の訂正記録（2023年）</h1>
+<p class="srcbox"><strong>一次資料：</strong>2023年5月9～27日のMOT本人X投稿。<strong>先の記憶に基づく推測</strong>と<strong>その後に本人が調べて訂正した結果</strong>を区別。技ごとのすり抜けの原因は、観測された現象と推測を分けて扱う。</p>
+<h2>チャン：スルーアタック→鉄球大暴走の再確認</h2>
+<p>2023年5月10日、MOTは、チャンのスルーアタックキャンセル鉄球大暴走を相手が攻撃避けでかわせなかった記憶から、押し合い判定が地面下なのかもしれないと推測した。<a href="https://x.com/mot_csb/status/1656092714243616768">訂正前の投稿</a></p>
+<p>しかし同日、その後の確認で<strong>KOF'94のスルーアタックの押し合い判定は普通に地上にある</strong>ことを報告。さらに<strong>チャンのスルーアタック→鉄球大暴走は攻撃避けですり抜けられた</strong>と訂正した。<strong>訂正後の確認結果を優先</strong>する。KOF'95のカウンター攻撃が攻撃避けの押し合い判定を引き継ぐようだという部分は別作品に対する推測。<a href="https://x.com/mot_csb/status/1656127675747172352">同日の本人訂正と確認</a></p>
+<h2>ラッキー：ラッキービジョンの表示とすり抜け</h2>
+<p>2023年5月9日の本人記録によれば、ラッキービジョンでは<strong>押し合い判定自体は表示されるが、実際には押し合いが発生せずにすり抜ける</strong>。避け属性を付加したときは押し合い判定自体が地面下へ移動し、相手が攻撃避けしていてもすり抜けたと報告している。</p>
+<p>押し合い判定とは別の処理ですり抜けているのではないか、という部分は本人の<strong>内部原因の推測</strong>。表示される判定と実際のすり抜けを観測したこととは分ける。<a href="https://x.com/mot_csb/status/1655779688437125121">2023年5月9日の本人投稿</a></p>
+<h2>アンディ：斬影拳と攻撃避け属性</h2>
+<p>2023年5月27日、MOTは<strong>ABずらし入力の斬影拳で相手の攻撃避けをすり抜けない</strong>ことを確認した。斬影拳が一定距離内に入った瞬間だけ攻撃判定を出すタイプではないようだ、と考察。技を出しながら突進するために、攻撃避け属性を付加して押し合い判定を地面下へ移動すると、相手の攻撃避けと干渉したという説明である。これは本人の見解を保持したもので、コード解析で内部ロジックを確定したものではない。<a href="https://x.com/mot_csb/status/1662358367254507520">2023年5月27日の本人確認</a></p>
+<h2>関連するユリの移動判定の観測</h2>
+<p>同年5月14日、本人はユリの<strong>離陸属性飛燕鳳凰脚</strong>を調査し、屈みチョイを一定距離からすり抜けることを確認。ただし<strong>密着では不可</strong>、また<strong>屈みリョウはすり抜けない</strong>と記録した。相手の屈み状態だけで結果が一律に決まらない例として区別して保存する。<a href="https://x.com/mot_csb/status/1657596407493312515">2023年5月14日の本人確認</a></p>
+<h2>整理した結論と残る課題</h2>
+<ul>
+<li>チャンのスルーアタック自体が地下に潜るという<strong>旧推測は本人によって訂正済み</strong>。</li>
+<li>ラッキービジョンのすり抜けは本人観測。<strong>内部処理の原因は仮説</strong>。</li>
+<li>斬影拳は攻撃避けへのすり抜け不成立を本人確認。技別の処理への一般化はしない。</li>
+<li>飛燕鳳凰脚のすり抜けは<strong>相手・距離条件付き</strong>で確認。</li>
+</ul>
+<p><a href="./takeoff-input-exceptions-2020-2025.html">離陸入力の技別例外</a> ／ <a href="./attack-avoid-frames-2011.html">攻撃避けフレーム</a> ／ <a href="/94andy.html">旧アンディ攻略</a>。</p><h2>関連ページ</h2><p><a href="./index.html">KOF'94研究アーカイブ</a> ／ <a href="/kof-kininaru.html#kof94">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
