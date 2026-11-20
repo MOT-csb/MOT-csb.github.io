@@ -1,0 +1,23 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'94～'98：236コマンド後に許されるレバー方向の比較（2024年の本人調査）｜Come sono bravo?</title><meta name="description" content="MOTが2024年に比較したKOF94〜98の236入力後のレバー方向と必殺技発動可否。原表の○△×と検証範囲を保存。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:1020px}.article h2{margin-top:2rem}.article a{overflow-wrap:anywhere}.note{padding:12px 16px;border-left:4px solid var(--accent,#537);background:var(--soft,#edf1ed)}.scroll{overflow-x:auto}.article table{width:100%;min-width:760px;border-collapse:collapse;text-align:center}.article td,.article th{border:1px solid var(--line,#aab);padding:9px;text-align:center;vertical-align:top}.article th{background:var(--soft,#edf1ed)}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/kof-top.html">KOF</a><span aria-hidden="true"> / </span><a href="/kof98-top.html">KOF'98</a><span aria-hidden="true"> / </span><a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'94～'98：236コマンド後に許されるレバー方向の比較（2024年の本人調査）</h1><p class="note"><strong>資料区分：</strong>2024年9月3日のMOT本人のブログ調査。<strong>236コマンド入力を終えた後、レバーを別方向に入れてボタンを押しても必殺技が発動するか</strong>というテーマに限定した作品間比較。コマンド完成までの最低保持フレーム数を調べた表ではない。</p>
+<h2>調査対象と表の読み方</h2>
+<p>京の闇払い（KOF'94・'95）または荒咬み（KOF'96～'98）を用いて、236入力後のレバー方向を確認した。</p>
+<ul><li><strong>○：</strong>レバーをその方向へ入れてからボタンを押す場合も含めて発動する。</li><li><strong>△：</strong>該当方向とボタンを同時入力すると発動するが、方向を先に入力した場合は発動しない。</li><li><strong>×：</strong>レバー方向とボタンを同時入力しても発動しない。</li></ul>
+<p>表の各セルは、<strong>236完成後のレバー方向</strong>を示す。元記事の789・4N6・123を、一方向ずつ分けて掲載した。Nはニュートラル。</p>
+<h2>原文に記された検証結果</h2>
+<div class="scroll"><table><thead><tr><th>作品</th><th>使用技</th><th>7</th><th>8</th><th>9</th><th>4</th><th>N</th><th>6</th><th>1</th><th>2</th><th>3</th></tr></thead><tbody>
+<tr><th>KOF'94</th><td>闇払い</td><td>○</td><td>○</td><td>○</td><td>○</td><td>○</td><td>○</td><td>△</td><td>△</td><td>△</td></tr>
+<tr><th>KOF'95</th><td>闇払い</td><td>○</td><td>○</td><td>○</td><td>○</td><td>○</td><td>○</td><td>○</td><td>○</td><td>○</td></tr>
+<tr><th>KOF'96</th><td>荒咬み</td><td>○</td><td>○</td><td>○</td><td>○</td><td>○</td><td>○</td><td>○</td><td>○</td><td>○</td></tr>
+<tr><th>KOF'97</th><td>荒咬み</td><td>○</td><td>○</td><td>○</td><td>○</td><td>○</td><td>○</td><td>○</td><td>○</td><td>○</td></tr>
+<tr><th>KOF'98</th><td>荒咬み</td><td>×</td><td>○</td><td>○</td><td>×</td><td>○</td><td>○</td><td>×</td><td>×</td><td>×</td></tr>
+</tbody></table></div>
+<p><strong>最も重要な差分：</strong>本人は、KOF'97以前の調査対象技では236完成後の方向に幅広い許容がある一方、KOF'98の荒咬みでは、7・4・1・2・3への入力で発動できなくなると確認した。例えば<strong>236→4＋A/CではKOF'98の荒咬みが出ない</strong>という調査結果である。</p>
+<h2>KOF'94の留保と、後続作品への言及</h2>
+<p>MOTは、<strong>KOF'94は必殺技によって入力受付の挙動が異なる可能性がある</strong>と明記。表の'94闇払いの結果を'94の全技へ一般化しない。</p>
+<p>また本人は、KOF2002、KOF'98UM、KOF2002UMでも<strong>236入力後に4＋ボタンでは発動しない</strong>挙動を確認したと述べている。ただし、<strong>上表の9方向すべてを後続3作品で検証したという表は原文にはない</strong>ため、後続作品の完全な9方向表を新たに作らない。</p>
+<h2>本人の考察と検証範囲</h2>
+<p>本人は、<strong>KOF'98で入力系が変更され、その後の作品にも継承された</strong>と考察する。これはシリーズ全体の入力判定ソースコードや内部処理を解析して同一性を証明したものではなく、記載された操作と発動結果に基づく説明である。</p>
+<p>調査対象は236系のみ。<strong>623・63214・214・タメ技、コマンド完成前の入力、同時押しの優先順位</strong>には、この表だけで結論を出さない。</p>
+<h2>原資料と関連研究</h2>
+<p>原資料：<a href="https://comesonobravo.hatenadiary.org/entry/2024/09/03/072820">2024/09/03：KOFシリーズ前半の必殺技のレバー入力後に認められるレバー方向に関する調査</a>（MOT本人の旧ブログ）</p>
+<p><a href="./input-command-frames-2018-2024.html">KOF'98：入力に必要なフレームと623系の例外</a> ／ <a href="./command-623-timeline-2010-2024.html">KOF'98：623コマンドの入力研究</a> ／ <a href="./kof98-2002-system-differences-2008.html">KOF'98と2002の違い</a></p><p><a href="./index.html">KOF'98研究アーカイブへ戻る</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?</div></footer></body></html>
