@@ -1,0 +1,23 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'95：GC対策とMAX時のGC仕込み入力（2011～2024年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof95-top.html">KOF'95</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap"><h1>KOF'95：GC対策とMAX時のGC仕込み入力（2011～2024年）</h1><p>MOT自身が2011・2023・2024年にXへ記録した、ガードキャンセル（GC）への対処と入力仕込みの資料を、<strong>実際に確認したもの</strong>と<strong>成立しそうだと考えたもの</strong>に分けて整理する。GCのヒットストップ中の仕組みは<a href="./gc-hitstop-invincible-cancel-2023.html">2023年6月の別記事</a>にあり、本稿では対戦選択肢に焦点を当てる。</p>
+<h2>GC反撃に対する具体的な本人の確認</h2>
+<table><thead><tr><th>ケース</th><th>本人の記録</th><th>資料</th></tr></thead><tbody>
+<tr><td>京の前方JD先端当て vs リョウのGC弱虎咆</td><td><strong>GC弱虎咆を空振りさせられることを確認</strong>と報告。ただしGC強虎咆は食らってしまうらしいと留保。</td><td><a href="https://x.com/mot_csb/status/1679694405635305472">2023/07/14</a></td></tr>
+<tr><td>庵の屈B⇒弱鬼焼き vs ルガールのGCジェノサイドカッター</td><td>屈BへのGCだけでなく、弱鬼焼き1段目へのGCも弱鬼焼き2段目で潰せるらしいと投稿。本人は実戦向けのネタと評価したが、ルガールが知っていればGCせず反撃する可能性も考慮。</td><td><a href="https://x.com/mot_csb/status/1768434724991885656">2024/03/15</a></td></tr>
+</tbody></table>
+<h2>相手MAXを意識したGCへの対処：2011年と2023年の案</h2>
+<table><thead><tr><th>提案</th><th>考え方・未確認事項</th><th>原資料</th></tr></thead><tbody>
+<tr><td>紅丸のGC雷光拳へ単発弱攻撃</td><td>単発の弱攻撃はGC雷光拳を合わせづらくさせ、仮にGCされても硬直が長くなければガードが間に合いそうという当時の見解。ただし削りダメージ後に反撃しても採算が悪い可能性。</td><td><a href="https://x.com/mot_csb/status/117236530073972737">2011/09/23</a></td></tr>
+<tr><td>相手MAX中、屈ガードに当たらない打撃を使う</td><td>GC必殺技コマンド入力で相手が立った時だけ攻撃が当たるのではないか、という2011年の本人の<strong>疑問・提案</strong>。成功確認ではない。</td><td><a href="https://x.com/mot_csb/status/117165391960219648">2011/09/23</a></td></tr>
+<tr><td>ジャンプから何も出さず投げ／ダッシュ投げ／歩き投げ</td><td>MAX中のGCに通常打撃で触る危険があるため、投げの割合を増やすという本人の戦術評価。</td><td><a href="https://x.com/mot_csb/status/1666066587382845441">2023/06/06</a></td></tr>
+<tr><td>相手のMAX直前に打撃から投げへ切り替える</td><td>相手が次のガードでMAXになってGCしようとしているなら、ゲージMAX直前で投げを狙う案。</td><td><a href="https://x.com/mot_csb/status/1689511877699858432">2023/08/10</a></td></tr>
+<tr><td>ジャンプ攻撃をあえて食らってGC飛燕斬</td><td>レバー下入れっぱなしでジャンプ攻撃を食らい、後続の地上打撃にGC飛燕斬を当てるという「動画で見たネタ？」を本人が紹介。MAX飛燕斬2ヒットでダメージ勝ちという想定だが、普通に立ガードしてGCすればよいのではと本人が疑問を述べる。<strong>本人の確認結果ではない。</strong></td><td><a href="https://x.com/mot_csb/status/1683388915024302081">2023/07/24</a></td></tr>
+</tbody></table>
+<h2>2024年7月：ガードと攻撃で分岐するGC仕込み入力</h2>
+<table><thead><tr><th>キャラクター</th><th>MOTの具体的な入力と分岐</th><th>本人の位置づけ</th></tr></thead><tbody>
+<tr><td>ビリー</td><td>密着より少し離れた距離で <code>23632 ＞ 1+C ＞ 4+CD</code>。相手がガードなら屈Cのみ（キャンセルで何も出ない）、相手が攻撃ならGC超火炎旋風棍。</td><td>本人は「になるっぽい」と記録。動画付きだが今回独立した再測定は行っていない。<a href="https://x.com/mot_csb/status/1810903070290890842">2024/07/10</a></td></tr>
+<tr><td>ハイデルン</td><td>MAX中の屈A→ムーンスラッシャーを入力し、相手がガードなら屈A止め、相手が攻撃ならGCムーンスラッシャー。<strong>屈Aにキャンセルがかからない点を利用</strong>と本人が説明。</td><td>実用性を評価した<strong>案</strong>。超必殺技も仕込めそうと追加で推測。<a href="https://x.com/mot_csb/status/1810904473243467866">2024/07/10</a></td></tr>
+<tr><td>ハイデルンの超必殺技</td><td>1ためでも出せる点を生かし、GCムーンスラッシャーをGC超必殺技へ置き換える案。屈Aへの仕込みも提示。</td><td>本人の検討段階。「結構決まりそう」「仕込めそう」であり、確定ポイント全件を確認したとは言わない。<a href="https://x.com/mot_csb/status/1812020791258808539">2024/07/13</a></td></tr>
+<tr><td>紅丸</td><td>MAX中に、GC雷光拳／通常投げ（間合い外から投げ失敗の暴れを刈る）／屈B始動連続技／カウンター攻撃⇒雷光拳の択を提示。</td><td>対戦上の<strong>複数選択肢の提案</strong>。すべてを同じ入力で自動分岐できると断定しない。<a href="https://x.com/mot_csb/status/1812017633275052302">2024/07/13</a></td></tr>
+</tbody></table>
+<h2>原稿の確度と照合先</h2>
+<p>京のGC弱虎咆の空振りは本人が確認と明言した事項。それ以外には「っぽい」「いけそう」「かも」「見たネタ？」と明記された案を含むため、<strong>2024年7月の仕込みを全件検証済みとは扱わない</strong>。また、2024年の<a href="./new-unblockable-attribute-2024.html">新ガード不能とMAX時のGCの使い分け</a>や<a href="./kim-gc-hououkyaku-2023.html">キムのGC鳳凰脚</a>も関連するが、原資料ごとの条件は維持する。</p><p><a href="./index.html">KOF'95研究アーカイブへ戻る</a> ／ <a href="/kof-kininaru.html#kof95">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
