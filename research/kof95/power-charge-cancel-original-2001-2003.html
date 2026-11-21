@@ -1,0 +1,18 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'95：パワーためキャンセルの原理・ボタン別分岐と旧連続技（2001～2003年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof95-top.html">KOF'95</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap"><h1>KOF'95：パワーためキャンセルの原理・ボタン別分岐と旧連続技（2001～2003年）</h1>
+<p>MOTが2001/8/27に作成し2003/10/27まで更新した<a href="/9495tamekyann.html">「KOF'94・'95 パワー溜めキャンセルについて」</a>を、本人提供ZIPのHTMLから再整理。これは本人が後年のフレーム解析で新たに確認した記事ではなく、<strong>当時の研究記録を再利用できる形にしたもの</strong>。原文は発見者について「おそらく関西のプレイヤー」とし、ゲーメストのKOF'95記事を参考にしたと書く。<strong>MOTがこの仕組みの最初の発見者であるとはしない</strong>。</p>
+<h2>基本原理：連打キャンセルとパワーためを介した疑似キャンセル</h2>
+<ol><li>KOF'94・'95では、弱攻撃の一部に<strong>連打キャンセル可能</strong>という設定がある。すべての弱攻撃が対象ではない</li><li>連打キャンセル可能な弱攻撃のヒット後の動作は、<strong>ABCのパワーため</strong>でキャンセルできる</li><li>パワーためをすぐに中断すると、ボタンの優先関係からC攻撃が出る。したがって<strong>弱攻撃 → 一瞬ABCでパワーため → C攻撃</strong>という疑似キャンセルが成立する</li></ol>
+<p>MOTはアンディの屈A→屈Cのような、通常はつながらない攻撃の組み合わせが連続技になることと、元々つながる攻撃の難度を下げられる点を利点として挙げる。</p>
+<h2>ボタン・姿勢による分岐</h2><table><thead><tr><th>パワーための入力と姿勢</th><th>旧原稿の結果</th></tr></thead><tbody>
+<tr><td>立った状態でABCDを一瞬同時押し</td><td>弱攻撃 → <strong>立ちC+D</strong></td></tr>
+<tr><td>しゃがんだ状態でABCDを一瞬同時押し</td><td>弱攻撃 → <strong>屈D</strong></td></tr>
+<tr><td>立った状態でABCを一瞬同時押し → すぐD</td><td>弱攻撃 → <strong>立ちD</strong></td></tr>
+</tbody></table>
+<p>入力のコツとして、ヒットまたはガード時の丸いエフェクトが消える瞬間にABCを一瞬押すと成功しやすい<strong>気がする</strong>と本人が記している。成功フレームを測定した確定値に変換しない。</p>
+<h2>原稿のKOF'95連続技</h2><table><thead><tr><th>キャラ</th><th>原資料の連続技</th></tr></thead><tbody>
+<tr><td>アンディ</td><td>めくりJC → 屈B → <strong>パワーためキャンセル屈C</strong> → 超裂破弾</td></tr>
+<tr><td>キム</td><td>めくりJC → 屈B×2 → <strong>パワーためキャンセル近C（×1）</strong> → 鳳凰脚</td></tr>
+</tbody></table>
+<p>旧表のKOF'94欄はテリー・アンディ・アテナ・ケンスウ・チン・京・ユリ・リョウの8例を挙げるが、上記KOF'95欄にあるのは2例のみ。<strong>KOF'94で示された8連続技をKOF'95でも成立確認済みとして転記しない</strong>。全原稿は<a href="/9495tamekyann.html">旧ページ</a>で参照できる。</p>
+<h2>別研究との接続</h2><p>2023年の<a href="./robert-walk-renbukyaku-power-cancel-2023.html">ロバート立A→歩き立Aのパワーためキャンセル研究</a>は、本人が歩ける区間を4～6Fと記録した後年の検討。2001～2003年の本稿にその数値を遡って付与しない。また、<a href="./joe-bakuretsuken-cancel-2004.html">ジョーの爆裂拳フィニッシュ空キャン</a>はフィニッシュ入力が技を出さず動作をキャンセルする別技術であり、パワーためを一瞬挟む本稿の手順とは異なる。</p>
+<p><a href="./index.html">KOF'95研究アーカイブへ戻る</a> ／ <a href="/kof-kininaru.html#kof95">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
