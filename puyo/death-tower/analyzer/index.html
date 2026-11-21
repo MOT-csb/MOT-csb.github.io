@@ -27,6 +27,14 @@ h2{font-size:20px;margin:0 0 10px}
 .p{box-shadow:inset -3px -4px 0 #0003,inset 3px 3px 0 #fff5}
 .fl{opacity:.38}
 .b{background:#e23b3b}.c{background:#2f6fe0}.d{background:#f1c40f}.e{background:#2fae4f}.f{background:#9a4fd0}.g{background:#c9ccd3;border-radius:30%}.i{background:#6c717d;border-radius:3px}.h{background:#222}.j{background:conic-gradient(#e33,#fc0,#3c3,#39f,#e33)}.k{background:#dff4ff}
+.fieldrow{display:flex;gap:8px;justify-content:center;align-items:flex-start;margin:0 0 10px}.fieldrow .well{margin:0;flex:1;max-width:240px}
+.nexts{display:flex;flex-direction:column;gap:10px;width:66px;flex:none}
+.nx{background:var(--well);border-radius:8px;padding:6px 4px;text-align:center}
+.nx b{display:block;font-size:11px;line-height:1.25;color:#d5dbec;margin-bottom:4px;font-weight:700}
+.nc{display:block;width:34px;height:34px;min-height:0;margin:3px auto;padding:0;border-radius:50%;border:2px dashed #ffffff55;background:transparent}
+.nc.b{background:#e23b3b}.nc.c{background:#2f6fe0}.nc.d{background:#f1c40f}.nc.e{background:#2fae4f}.nc.f{background:#9a4fd0}
+.nc.b,.nc.c,.nc.d,.nc.e,.nc.f{border:2px solid #0006;box-shadow:inset -3px -4px 0 #0003,inset 3px 3px 0 #fff5}
+.nxclr{min-height:30px;padding:0 6px;font-size:12px;background:transparent;color:var(--mut);border:1px solid var(--line);border-radius:6px;margin-top:2px}
 label{font-size:13px;color:var(--mut);display:block;margin:6px 0 3px}
 input,select,textarea{width:100%;font:16px/1.4 ui-monospace,monospace;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:light-dark(#fff,#0f1528);color:var(--ink)}
 button{font:700 15px "Noto Sans JP";min-height:44px;padding:0 16px;border-radius:10px;border:0;background:var(--acc);color:#fff;cursor:pointer}
@@ -36,7 +44,7 @@ button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid 
 .judge{background:var(--panel);border:2px solid var(--ink);border-radius:14px;padding:16px}
 .big{font-size:clamp(34px,5vw,52px);font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
 .kv{display:grid;grid-template-columns:1fr auto;gap:4px 12px;font-variant-numeric:tabular-nums;margin:8px 0}
-.kv dt{color:var(--mut)}.kv dd{margin:0;text-align:right;font-weight:700;white-space:nowrap}
+.kv dt{color:var(--mut)}.kv dt.sub{padding-left:1em;font-size:13px}.kv dd{margin:0;text-align:right;font-weight:700;white-space:nowrap}
 .verdict{margin-top:12px;padding:12px;border-radius:10px;background:light-dark(#fff3f4,#2a1218);border-left:5px solid var(--acc);font-weight:700}
 .meter{height:10px;background:var(--line);border-radius:6px;overflow:hidden;margin:4px 0 10px}.meter i{display:block;height:100%;background:var(--acc)}
 table{width:100%;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums}
@@ -59,7 +67,7 @@ td.n{text-align:right;white-space:nowrap}
 <div class="arena">
  <section class="side" aria-labelledby="hA">
   <h2 id="hA">自分 <small id="hAsub"></small></h2>
-  <div class="well" id="wellA"></div>
+  <div class="fieldrow"><div class="well" id="wellA"></div><div class="nexts" id="nxA"></div></div>
   <label for="codeA">盤面コード（URL全体でも可）</label>
   <input id="codeA" type="text" autocomplete="off">
   <label for="presetA">2016年の記事の盤面</label>
@@ -79,7 +87,7 @@ td.n{text-align:right;white-space:nowrap}
 
  <section class="side" aria-labelledby="hB">
   <h2 id="hB">相手 <small id="hBsub"></small></h2>
-  <div class="well" id="wellB"></div>
+  <div class="fieldrow"><div class="well" id="wellB"></div><div class="nexts" id="nxB"></div></div>
   <label for="codeB">盤面コード（空欄なら下の致死量を使う）</label>
   <input id="codeB" type="text" autocomplete="off">
   <label for="presetB">2016年の記事の盤面</label>
@@ -99,7 +107,7 @@ td.n{text-align:right;white-space:nowrap}
   <select id="cols" style="width:auto"><option value="auto">自動</option><option value="bcde">赤青黄緑</option><option value="bdef">赤黄緑紫</option><option value="bcdf">赤青黄紫</option><option value="cdef">青黄緑紫</option></select>
  </div>
  <div class="scroll"><table class="stack" id="tbl"><thead><tr><th>組ぷよ</th><th>出る確率</th><th>おじゃま</th><th>連鎖</th><th>置き方</th><th>致死</th></tr></thead><tbody></tbody></table></div>
- <p class="note">計算の前提：6列×13段、13段目（最上段）は消去判定に入れない。得点はサイトのシミュレーターv0.3の初代用ボーナス（連鎖0,8,16,32…／色数0,3,6,12／連結5個2〜11個以上10）、おじゃまぷよレート70。致死量は「6×（12−相手の3列目の段数）」の近似。宙に浮いたぷよは操作中・候補として盤面から外す。回し方の制限・窒息・おじゃまの降る位置のばらつきは入れていない。初代では1回に降るおじゃまは30個（5段）で、組ぷよを1つ置くとまた30個降る（本人確認済み）。72個（5040点）以上ならカウンターを除き確実に埋め尽くせる。上限ありのとき「致死」は最初に降る分だけで倒せる場合、「2回で致死」は残りが次に降って倒せる場合。「2組先」は1組目の置き場所を最善に選んだ場合。</p>
+ <p class="note">ネクストぷよ・ネクネクぷよは、盤面の右の丸を押すたびに色が変わります（空→赤→青→黄→緑→紫）。上が子ぷよ、下が軸ぷよです。設定すると、判定欄に、そのネクストで撃った場合と、ネクネクまで待った場合の結果が出ます。計算の前提：6列×13段、13段目（最上段）は消去判定に入れない。得点はサイトのシミュレーターv0.3の初代用ボーナス（連鎖0,8,16,32…／色数0,3,6,12／連結5個2〜11個以上10）、おじゃまぷよレート70。致死量は「6×（12−相手の3列目の段数）」の近似。宙に浮いたぷよは操作中・候補として盤面から外す。回し方の制限・窒息・おじゃまの降る位置のばらつきは入れていない。初代では1回に降るおじゃまは30個（5段）で、組ぷよを1つ置くとまた30個降る（本人確認済み）。72個（5040点）以上ならカウンターを除き確実に埋め尽くせる。上限ありのとき「致死」は最初に降る分だけで倒せる場合、「2回で致死」は残りが次に降って倒せる場合。「2組先」は1組目の置き場所を最善に選んだ場合。</p>
 </div>
 
 <script>
@@ -139,9 +147,9 @@ const gb=n=>({4:0,5:2,6:3,7:4,8:5,9:6,10:7})[n]??10,cb=n=>[0,0,8,16,32,64,128,25
 function oja(steps){let t=0;steps.forEach((s,i)=>{const n=s.reduce((a,x)=>a+x[1],0),cs=new Set(s.map(x=>x[0])).size;const bo=Math.max(1,Math.min(999,cb(i+1)+colb(cs)+s.reduce((a,x)=>a+gb(x[1]),0)));t+=n*10*bo});return Math.floor(t/70)}
 function top(b,c){for(let r=0;r<13;r++)if(b[r][c]!=='a')return r-1;return 12}
 function placements(b,a,c2){const out=[];
- for(let col=0;col<6;col++)for(let o=0;o<3;o++){if(a===c2&&o===1)continue;const nb=b.map(r=>r.slice());
+ for(let col=0;col<6;col++)for(let o=0;o<4;o++){if(a===c2&&(o===1||o===3))continue;const nb=b.map(r=>r.slice());
   if(o<2){const t=top(b,col);if(t<1)continue;const lo=o===0?a:c2,hi=o===0?c2:a;nb[t][col]=lo;nb[t-1][col]=hi;out.push([nb,col,o])}
-  else{if(col>4)continue;const t1=top(b,col),t2=top(b,col+1);if(t1<0||t2<0)continue;nb[t1][col]=a;nb[t2][col+1]=c2;out.push([nb,col,o])}}
+  else{if(col>4)continue;const t1=top(b,col),t2=top(b,col+1);if(t1<0||t2<0)continue;const l=o===2?a:c2,r=o===2?c2:a;nb[t1][col]=l;nb[t2][col+1]=r;out.push([nb,col,o])}}
  return out}
 function pairs(cols){const p=[];for(let i=0;i<4;i++)for(let j=i;j<4;j++)p.push([cols[i],cols[j],(i===j?1:2)/16]);return p}
 const desc=st=>st.map(s=>s.map(([ch,n])=>NAME[ch]+n).join('+')).join(' → ');
@@ -160,8 +168,20 @@ function lethal2(b,cols,th){let P=0;for(const [a,c,w] of pairs(cols)){let best=0
 function well(el,P){el.innerHTML='';if(!P){el.innerHTML=Array(78).fill('<div class="cell"></div>').join('');return}
  const fl=new Set(P.fl.map(([r,c])=>r*6+c));let h='';for(let r=0;r<13;r++)for(let c=0;c<6;c++){const ch=P.raw[r][c];h+='<div class="cell'+(r===0?' top':'')+(ch!=='a'?' p '+ch:'')+(fl.has(r*6+c)?' fl':'')+'" title="'+(13-r)+'段目'+(c+1)+'列'+(ch!=='a'?' '+NAME[ch]:'')+'"></div>'}el.innerHTML=h}
 const pct=x=>Math.round(x*100)+'%';
-const oname=(col,o,a,c)=>o===2?(col+1)+'-'+(col+2)+'列 横（'+NAME[a]+'左）':(col+1)+'列 縦（下'+NAME[o===0?a:c]+'）';
+const oname=(col,o,a,c)=>o>=2?(col+1)+'-'+(col+2)+'列 横（'+NAME[o===2?a:c]+'左）':(col+1)+'列 縦（下'+NAME[o===0?a:c]+'）';
 let A=null,B=null,cols='bcde',thA=48,thB=48;
+const NX={A:{n:['',''],nn:['','']},B:{n:['',''],nn:['','']}};const CYC=['','b','c','d','e','f'];
+function drawNx(s){const el=$('nx'+s);const box=(k,lab)=>'<div class="nx"><b>'+lab+'</b>'+[0,1].map(i=>'<button class="nc '+NX[s][k][i]+'" data-s="'+s+'" data-k="'+k+'" data-i="'+i+'" aria-label="'+lab+(i?'（下・軸ぷよ）':'（上）')+' '+(NX[s][k][i]?NAME[NX[s][k][i]]:'未設定')+'"></button>').join('')+'</div>';
+ el.innerHTML=box('n','ネクスト<br>ぷよ')+box('nn','ネクネク<br>ぷよ')+'<button class="nxclr" data-s="'+s+'">クリア</button>'}
+function bestFire(b,a,c){let best=null;for(const [nb,col,o] of placements(b,a,c)){const st=chain(nb);if(st.length>=2){const x=oja(st);if(!best||x>best.x)best={x,st,col,o,a,c}}}return best}
+function known(P,s,th){const n=NX[s].n,nn=NX[s].nn;if(!n[0]||!n[1])return '';const b=P.b;
+ const f1=bestFire(b,n[1],n[0]);let h='<dt>ネクスト（'+NAME[n[0]]+NAME[n[1]]+'）で撃つと</dt><dd>'+(f1?f1.x+'個'+(eff(f1.x)>=th?'・致死':'')+(f1.x>=72?'・72個以上':''):'撃てない')+'</dd>';
+ if(f1)h+='<dt class="sub">置き方</dt><dd>'+oname(f1.col,f1.o,f1.a,f1.c)+'</dd>';
+ if(nn[0]&&nn[1]){let best=null;for(const [nb,col,o] of placements(b,n[1],n[0])){if(chain(nb).length)continue;const f2=bestFire(nb,nn[1],nn[0]);if(f2&&(!best||f2.x>best.f2.x))best={col,o,f2}}
+  h+='<dt>ネクネク（'+NAME[nn[0]]+NAME[nn[1]]+'）まで待つと</dt><dd>'+(best?best.f2.x+'個'+(eff(best.f2.x)>=th?'・致死':'')+(best.f2.x>=72?'・72個以上':''):'撃てない')+'</dd>';
+  if(best)h+='<dt class="sub">ネクストの置き方</dt><dd>'+oname(best.col,best.o,n[1],n[0])+'</dd>'}
+ else{let q=0;for(const [nb] of placements(b,n[1],n[0])){if(chain(nb).length)continue;q=Math.max(q,lethal1(nb,cols,th))}h+='<dt>ネクストを置いたあと、次の1組で致死の確率</dt><dd>'+pct(q)+'</dd>'}
+ return h}
 function safe(code){try{return code.trim()?parse(code):null}catch(e){return {err:e.message}}}
 function update(){A=safe($('codeA').value);B=safe($('codeB').value);$('p2').textContent='';
  well($('wellA'),A&&!A.err?A:null);well($('wellB'),B&&!B.err?B:null);
@@ -177,12 +197,15 @@ function update(){A=safe($('codeA').value);B=safe($('codeB').value);$('p2').text
  if(hasB){const pB=lethal1(B.b,cols,thA);kv+='<dt>相手が次の1組で自分を倒す確率</dt><dd>'+pct(pB)+'</dd>';
   v=R.pl>=pB?'次の1組では自分の方が倒しやすい':'次の1組では相手の方が倒しやすい。3列目を下げる手も比べたい';}
  else v=R.pl>0?'致死量に届く組ぷよがある':'次の1組では致死量に届かない';
- $('kv').innerHTML=kv;$('verdict').textContent=v}
+ kv+=known(A,'A',thB);if(hasB)kv+=known(B,'B',thA).replace(/<dt>/g,'<dt>相手：').replace(/<dt class="sub">相手：/g,'<dt class="sub">');$('kv').innerHTML=kv;$('verdict').textContent=v}
 for(const id of ['presetA','presetB'])$(id).innerHTML=PRE.map(([n,c])=>'<option value="'+c+'">'+n+'</option>').join('');
 $('presetA').onchange=e=>{if(e.target.value){$('codeA').value=e.target.value;update()}};
 $('presetB').onchange=e=>{if(e.target.value){$('codeB').value=e.target.value;update()}};
 for(const id of ['codeA','codeB','manual'])$(id).addEventListener('input',update);
 $('cap').onchange=update;
+document.addEventListener('click',e=>{const c=e.target.closest('.nc');if(c){const s=c.dataset.s,k=c.dataset.k,i=+c.dataset.i;const v=NX[s][k][i];NX[s][k][i]=CYC[(CYC.indexOf(v)+1)%CYC.length];drawNx(s);update();return}
+ const x=e.target.closest('.nxclr');if(x){const s=x.dataset.s;NX[s]={n:['',''],nn:['','']};drawNx(s);update()}});
+drawNx('A');drawNx('B');
 $('cols').onchange=update;
 $('swap').onclick=()=>{const t=$('codeA').value;$('codeA').value=$('codeB').value;$('codeB').value=t;update()};
 $('run2').onclick=()=>{if(!A||A.err)return;$('p2').textContent='計算中…';
