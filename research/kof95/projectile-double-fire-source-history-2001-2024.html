@@ -1,7 +1,17 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'95：飛び道具連射の旧記録と複合コマンドの追試・失敗例（2001～2024年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof95-top.html">KOF'95</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap"><h1>KOF'95：飛び道具連射の旧記録と複合コマンドの追試・失敗例（2001～2024年）</h1>
 <p>旧ホームページの<strong>飛び道具2個同時出現</strong>に関する記録、2011年ユリの複合コマンド試験、2023年リョウの連舞拳との関係の考察、2024年ロバートでの不成立試験を年代別に整理した資料。<strong>旧サイトで成立が記録された現象</strong>と<strong>今回回収できた入力実験・未解明の仕組み</strong>を区別する。</p>
-<h2>2001～2004年：旧ホームページの原記述</h2>
-<p>MOT作成の<a href="/95kyoui-gennsyou.html">旧「KOF'95 驚異現象」</a>は飛び道具連射について、<strong>通常は画面に1個しか出せない飛び道具を2つ同時に出せる</strong>現象だと説明し、<strong>KOF'94とは成立条件が異なる</strong>と明記している。旧原稿の当該一覧では、全キャラに共通する具体的コマンドは記載されていない。したがってここで推測の手順を補わない。</p>
+<h2>2001～2003年：旧原稿の連射手順を追加回収</h2>
+<p><a href="/95kyoui-gennsyou.html">旧「KOF'95 驚異現象」</a>には概要があるが、<strong>別のMOT原稿<a href="/9495rennsya.html">「KOF'94・'95 飛び道具連射について」（2001/8/27作成、2003/10/8最終更新）</a>に具体的な手順が記載されていた</strong>。従来本ページで旧原稿に具体的手順がないと記したのは、こちらの別ページを未照合だったため。以下で情報を補正する。これはMOTの旧記録であり、今回の実機再検証ではない。</p>
+<table><thead><tr><th>対象</th><th>KOF'95の旧原稿にある手順</th><th>成立条件・注記</th></tr></thead><tbody>
+<tr><td>飛び道具を持つ全キャラ</td><td>①飛び道具を出す→②攻撃を食らう→③もう一度飛び道具を出す</td><td>'94にも同じ方法あり。<strong>飛び道具→ダッシュ／バックステップ→再発射</strong>は'95で不成立</td></tr>
+<tr><td>リョウ</td><td>①弱の虎煌拳・空中虎煌拳・覇王翔吼拳のいずれかを発射→②<code>41236+C</code>で極限流連舞拳を入力（強虎煌拳に化ける）→③連射モード</td><td>弱飛び道具をガードされた場合や相手ダウン中など、<strong>連舞拳の成立しない状況では強虎煌拳へのすり替えも不成立</strong>と旧原稿が説明</td></tr>
+<tr><td>タクマ</td><td>①龍虎乱舞をヒットさせる→②最後の覇王至高拳を弱へ切替→③連射モード</td><td>実戦では成立してもKOに近い状況になりやすく、有用性が高いとは限らないという本人評価</td></tr>
+<tr><td>アテナ</td><td>①クリスタルシュートを<strong>空振り</strong>させる→②連射モード</td><td>ヒット・ガード・飛び道具相殺では不可と説明</td></tr>
+<tr><td>ユリ</td><td>①弱雷煌拳→②弱覇王翔吼拳→③弱虎煌拳→④連射モード</td><td>技順を保全。2011年の別の複合入力が失敗したことと矛盾しない</td></tr>
+<tr><td>キング</td><td>①弱ダブルストライク→②連射モード</td><td>工夫すると画面に<strong>3個</strong>の飛び道具を出せると記録</td></tr>
+<tr><td>Ωルガール</td><td>①烈風拳→②カイザーウェイブ→③烈風拳→④以後交互に連射可能</td><td>カイザーウェイブ→烈風拳からの開始は不可<strong>「らしい」</strong>という留保。極限流一派の二種併用とは区別</td></tr>
+</tbody></table>
+<p>MOTは一度連射モードに入れば、<strong>画面内に飛び道具が残る限り継続する</strong>と説明。『94と95では連射手順が違う』だけでなく、技・入力順・失敗条件をまとめて旧一次資料へたどれるようにした。</p>
 <h2>2011年：ユリの連射コマンド試験</h2>
 <p>MOTは画面端同士でユリの<code>236A</code>を出した後、複合入力で連射できるかを試し、<strong><code>2363214A</code>では<code>214A</code>、<code>63214236A</code>では<code>623A</code>が出たため、その2手順では不成立</strong>と記録。一方、<strong>別の方法で連射モードに入れること自体は知っている</strong>と明記。<a href="https://x.com/mot_csb/status/52744610149187584">2011/03/29の本人による失敗記録</a> ／ <a href="./yuri-projectile-command-tests-2011.html">入力2例の詳細記事</a>。</p>
 <h2>2023年：リョウの連舞拳を利用する方法と他キャラへの拡張</h2>
@@ -11,13 +21,13 @@
 <p>この結果は<strong>ロバートの上記入力が不成立</strong>という事実であり、ロバートにはいかなる連射手段も存在しないという意味ではない。リョウの方法を同じ構造でロバートへ適用できるとも言えない。</p>
 <h2>原資料の確度別一覧</h2>
 <table><thead><tr><th>事項</th><th>判定</th><th>根拠</th></tr></thead><tbody>
-<tr><td>95で飛び道具を画面内に2個出す現象</td><td><strong>旧MOT原稿に成立を記載</strong></td><td><a href="/95kyoui-gennsyou.html">旧「驚異現象」</a></td></tr>
-<tr><td>94と95では成立条件が違う</td><td><strong>旧MOT原稿の説明</strong></td><td><a href="/95kyoui-gennsyou.html">旧「驚異現象」</a></td></tr>
+<tr><td>95で飛び道具を画面内に2個出す現象</td><td><strong>旧MOT原稿に具体的手順を記載</strong></td><td><a href="/9495rennsya.html">旧「飛び道具連射」</a> ／ <a href="/95kyoui-gennsyou.html">旧「驚異現象」</a></td></tr>
+<tr><td>94と95では成立条件が違う</td><td><strong>ダッシュ経由は94のみ、被弾後再発射は双方</strong></td><td><a href="/9495rennsya.html">旧「飛び道具連射」</a></td></tr>
 <tr><td>2011年ユリの2種類の複合入力</td><td><strong>本人が不成立を確認</strong></td><td><a href="./yuri-projectile-command-tests-2011.html">ユリ記事</a></td></tr>
 <tr><td>リョウの連舞拳を使う連射方法</td><td><strong>2023・2024年の本人が既知の方法として言及</strong></td><td><a href="https://x.com/mot_csb/status/1680430996989280257">2023年投稿</a></td></tr>
 <tr><td>ジョーへの応用</td><td><strong>本人の未確認仮説</strong></td><td><a href="https://x.com/mot_csb/status/1680430996989280257">2023年投稿</a></td></tr>
 <tr><td>ロバートの2024年に試した複合入力</td><td><strong>本人が不成立を確認</strong></td><td><a href="https://x.com/mot_csb/status/1770070924764876815">2024年投稿</a></td></tr>
 </tbody></table>
 <h2>未解決の手順・条件</h2>
-<p>旧ホームページに具体的な受付コマンドの全手順がないこと、リョウの連舞拳がなぜ重複出現に使えるのかという内部処理、ジョー・ロバート・ユリでの成立・不成立の境界、94との処理差を、<strong>今回プログラム解析で確定したとは記さない</strong>。既存の<a href="./command-buffer-facing-2011-2024.html">コマンド受付・位置入替の研究</a>とも同一現象と断定しない。</p>
+<p>旧ホームページには上記の実行手順が残る一方、各操作の<strong>フレーム単位の受付範囲・内部処理の説明</strong>は未記載。リョウの連舞拳がなぜ重複出現に使えるのかという内部処理、ジョー・ロバート・ユリでの成立・不成立の境界、94との処理差を、<strong>今回プログラム解析で確定したとは記さない</strong>。既存の<a href="./command-buffer-facing-2011-2024.html">コマンド受付・位置入替の研究</a>とも同一現象と断定しない。</p>
 <p><a href="./index.html">KOF'95研究アーカイブへ戻る</a> ／ <a href="/kof-kininaru.html#kof95">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
