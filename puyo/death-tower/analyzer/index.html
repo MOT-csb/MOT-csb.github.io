@@ -87,7 +87,7 @@ td.n{text-align:right;white-space:nowrap}
   <label for="manual">相手がいないときの致死量（おじゃま個数）</label>
   <input id="manual" type="number" min="1" max="200" value="48">
   <label for="cap">1回に降るおじゃまの上限</label>
-  <select id="cap"><option value="0">上限なし</option><option value="30">30個（5段）まで※初代では未確認</option></select>
+  <select id="cap"><option value="30" selected>30個（5段）まで※資料上の値</option><option value="0">上限なし</option></select>
  </section>
 </div>
 </div>
@@ -99,7 +99,7 @@ td.n{text-align:right;white-space:nowrap}
   <select id="cols" style="width:auto"><option value="auto">自動</option><option value="bcde">赤青黄緑</option><option value="bdef">赤黄緑紫</option><option value="bcdf">赤青黄紫</option><option value="cdef">青黄緑紫</option></select>
  </div>
  <div class="scroll"><table class="stack" id="tbl"><thead><tr><th>組ぷよ</th><th>出る確率</th><th>おじゃま</th><th>連鎖</th><th>置き方</th><th>致死</th></tr></thead><tbody></tbody></table></div>
- <p class="note">計算の前提：6列×13段、13段目（最上段）は消去判定に入れない。得点はサイトのシミュレーターv0.3の初代用ボーナス（連鎖0,8,16,32…／色数0,3,6,12／連結5個2〜11個以上10）、おじゃまぷよレート70。致死量は「6×（12−相手の3列目の段数）」の近似。宙に浮いたぷよは操作中・候補として盤面から外す。回し方の制限・窒息・おじゃまの降る位置のばらつきは入れていない。おじゃまの落下上限は選択式（30個は解説資料の記述で、初代の実機では未確認）。上限ありのとき「致死」は最初に降る分だけで倒せる場合、「2回で致死」は残りが次に降って倒せる場合。「2組先」は1組目の置き場所を最善に選んだ場合。</p>
+ <p class="note">計算の前提：6列×13段、13段目（最上段）は消去判定に入れない。得点はサイトのシミュレーターv0.3の初代用ボーナス（連鎖0,8,16,32…／色数0,3,6,12／連結5個2〜11個以上10）、おじゃまぷよレート70。致死量は「6×（12−相手の3列目の段数）」の近似。宙に浮いたぷよは操作中・候補として盤面から外す。回し方の制限・窒息・おじゃまの降る位置のばらつきは入れていない。おじゃまの落下上限は選択式（30個は1992年版などの解説資料の記述で、本人の実機確認は未）。上限ありのとき「致死」は最初に降る分だけで倒せる場合、「2回で致死」は残りが次に降って倒せる場合。「2組先」は1組目の置き場所を最善に選んだ場合。</p>
 </div>
 
 <script>
