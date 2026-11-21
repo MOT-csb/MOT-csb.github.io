@@ -1,0 +1,4 @@
+date,source,extracted_candidates,verified_content,existing_article_verified,newly_integrated,new_articles,unmatched_or_needs_review,notes
+2026-11-21,X archive (4 JS files),504,0,0,0,0,504,"42 posts start with RT @; exclude or classify after authorship check; regex over-inclusive"
+2026-11-21,Hatena blog export,187,0,0,0,0,187,"Includes cross-title mentions and other KOF games; title explicit KOF96: 18"
+2026-11-21,TOTAL,691,0,0,0,0,691,"Original text retained in downloadable conversation CSV. These are candidates only; NOT 691 missing site entries. GitHub existing 2026-11-21 source inventory already lists 133 blog / 461 X with different matching rule. Existing research index and AGENTS.md verified; 81 HTML files per pre-existing inventory. Full record-level comparison pending. KOF2002UM excluded."
