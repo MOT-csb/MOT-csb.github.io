@@ -1,5 +1,5 @@
 date,total_candidates,content_checked,existing_article_verified,newly_integrated,new_articles,unmatched_or_needs_review,github_updates,notes
-2026-11-22,691,40,29,11,0,651,10,"Stage 6: 11 original tweets checked, 6 already covered and 5 new source claims integrated across 4 existing articles. Original-site five files are a separate pool. Full ledger is in conversation attachments. normalize_site.py, sitemap/search-index and live HTTP checks not performed."
+2026-11-22,691,50,35,15,0,641,14,"Stage 7: 10 more personally-authored X posts checked; 6 existing coverage and 4 claims added to 4 existing articles. Original website ZIP archived separately. normalize_site.py, sitemap/search-index and live Pages checks pending."
 source_id,coverage,existing_article,notes
 1801412027359105531,existing,research/kof96/geese-neutral-counterplay.html,2024 Geese evaluation
 1781477857786495328,existing,research/kof96/geese-neutral-counterplay.html,2024 Geese evaluation
@@ -41,3 +41,13 @@ source_id,coverage,existing_article,notes
 357146035572838401,existing,research/kof96/iori-2011-frame-analysis.html,Aoi hana -4F
 355567393000538112,existing,research/kof96/command-throw-ranges-2011.html,Command throw range comparison
 355567823298375680,existing,research/kof96/command-throw-ranges-2011.html,Vice negative gain range
+356640383687589889,integrated,research/kof96/joe-combo-meter.html,stage 7 strong Screw Upper late spacing observation
+644809255325863938,integrated,research/kof96/kim-frame-tech-2011.html,stage 7 1996 Kim Phoenix kick weak vs strong travel
+424566368470450176,integrated,research/kof96/attack-avoid.html,stage 7 attack avoid and throw tech strategy
+452083370520899585,integrated,research/kof96/chin-mochizukiyoi-8d-defense.html,stage 7 throwable property and invincibility interpretation
+1609510352185856002,existing,research/kof96/mr-big-grand-blaster-2023.html,stage 7 grand blaster standing CD
+1759863775388471768,existing,research/kof96/goro-kakuteijirai.html,stage 7 earthquake timing chart
+1642531644107259904,existing,research/kof96/goro-kakuteijirai.html,stage 7 taunt timing recipe
+139946844020158464,existing,research/kof96/benimaru-frame-risk-2011.html,stage 7 Benimaru normal speed
+143209840964149248,existing,research/kof96/joe-frame-tech-2011.html,stage 7 Joe evaluation
+347870739703140352,existing,research/kof96/krauser-max-throw-combos.html,stage 7 MAX low JD and superplex
