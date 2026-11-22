@@ -197,3 +197,16 @@
 - 原文入り回収台帳 `kof98_recovery_ledger_20261122_phase14.csv`（1718行）、今回8件 `kof98_verified_phase14_20261122.csv` は本会話内の実ファイル。
 - **累計1718件**＝個別照合82件（既存掲載47、追記25、新規記事統合6、対象外確定4）＋暫定対象外529＋未照合1107。未照合は未収録を意味しない。
 - 前回第13段階の進捗記録とサイト更新を再確認。GitHub PagesのHTTP表示確認、サイト正規化、sitemap/search-index再生成、公開痕跡監査は今回も未実施。
+
+## 第15段階（2026-11-22）— X原文7件の照合・既存記事への統合
+
+- **個別照合7件、既存記事5ページへ追記7件、新規記事0件。** 本人Xアーカイブの原文を確認し、GitHub既存記事の重複を照合した。
+- [レオナのGCCD暗転キャンセル研究](./leona-gccd-flash-conditional-cancel-2008.html)に2016年3月の本人2投稿：表クリスの<strong>GCCDを受けたときだけディレクをキャンセルしてつかむ</strong>未確認案（[X 714086451676209152](https://x.com/mot_csb/status/714086451676209152)）、GCCDのフラッシュに合わせた条件付きキャンセルは以前から存在したはずという本人回想（[X 714110551303917568](https://x.com/mot_csb/status/714110551303917568)）。さらに5月の<strong>GCCDとキャンセル超必の時間停止</strong>に関する本人見解（[X 736346027121250304](https://x.com/mot_csb/status/736346027121250304)）を追記。2008年の確定研究として誤記しない。commit `ca3d1688`。
+- [ロバートの6A・連舞脚・端入力研究](./robert-renbu-and-corner-input-2015-2019.html)へ、2016年5月の<strong>屈D→6Aを2D→2146Aとして龍撃拳の暴発を防ぐ案</strong>（[X 729123730064973825](https://x.com/mot_csb/status/729123730064973825)）を追加。本人が「いいかも」「防げそう」と留保する未検証案。commit `822c132d`。
+- [システム作品差メモ](./kof98-2002-system-differences-2008.html)へ、2016年10月の中段技発生記録：<strong>舞6B 98・02とも29F、庵6B 98は25F、レオナ6B 02は26F</strong>（[X 789309143374925824](https://x.com/mot_csb/status/789309143374925824)）。30Fの中段技を見てからガードできるかは本人の疑問であり、成功実測ではない。commit `e59ac1c7`。
+- [京の無式入力受付研究](./kyo-2362a-hold-36-input-2009.html)へ、2016年6月の<strong>低め打点のJD先端→ヒット確認→無式</strong>という本人の未検証案（[X 743565420699877376](https://x.com/mot_csb/status/743565420699877376)）を追加。commit `b8e5e36d`。
+- [全キャラ地上通常技硬直差](./all-characters-normal-frame-advantage-2005.html)へ、2016年5月の<strong>クラーク近C1段目の特殊ヒットストップを図解して理解しやすくする</strong>という本人の提案（[X 736461554732793857](https://x.com/mot_csb/status/736461554732793857)）を追加。投稿に停止F値はない。commit `6b871193`。
+- 今回の原文・個別照合台帳は `kof98_recovery_ledger_20261122_phase15.csv`（全1718件）／ `kof98_verified_phase15_20261122.csv`（7件）として会話ファイルに作成済み。
+- **累計1718候補＝個別照合89件（既存掲載47、既存記事への追記32、新規記事へ統合6、対象外確定4）＋暫定対象外529＋未照合1100。**
+- 今回の照合で、2024年の弾速データが[既存の飛び道具比較](./projectile-speed-hitbox-hitstop-2016-2024.html)と[2024年の独立弾速記事](./projectile-velocity-psycho-ball-yamibarai-2024.html)の双方に載る**既存の内容重複**を確認。既存URLを維持しつつ統合・相互リンクを検討する（本段階では変更していない）。
+- `tools/normalize_site.py` と `tools/audit_public_traces.py` の実行、検索索引・sitemap再生成、GitHub Pages HTTP表示確認は未実施。
