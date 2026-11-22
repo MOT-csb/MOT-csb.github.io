@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Read-only audit of reader-visible HTML/Markdown for analysis and workflow traces.
+"""Read-only audit of reader-visible published HTML/HTM for analysis and workflow traces.
 
 Never alters published pages. Reports are created outside repository and uploaded
 as a CI artifact; candidates require human review before editing.
@@ -58,8 +58,9 @@ def clip(s, a, b, radius=90):
 
 def run(out: Path):
     files = sorted(p for p in ROOT.rglob("*") if p.is_file()
-                   and p.suffix.lower() in (".html",".htm",".md")
+                   and p.suffix.lower() in (".html",".htm")
                    and ".git" not in p.parts and ".github" not in p.parts)
+    markdown_records = sum(1 for p in ROOT.rglob("*.md") if ".git" not in p.parts and ".github" not in p.parts)
     results = []
     totals = collections.Counter()
     failed = []
@@ -90,6 +91,7 @@ def run(out: Path):
                             "more_hits_omitted":max(0,len(hits)-60)})
     payload = {
         "examined_files":len(files),
+        "repository_markdown_records_not_scanned":markdown_records,
         "files_with_candidates":len(results),
         "candidate_hits":dict(totals),
         "read_errors":failed,
@@ -98,6 +100,7 @@ def run(out: Path):
     out.parent.mkdir(parents=True,exist_ok=True)
     out.write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding="utf8")
     print("FILES_SCANNED",len(files))
+    print("REPOSITORY_MARKDOWN_RECORDS_EXCLUDED",markdown_records)
     print("FILES_WITH_CANDIDATES",len(results))
     print("CANDIDATE_COUNTS",json.dumps(dict(totals),ensure_ascii=False))
     print("READ_ERRORS",len(failed))
