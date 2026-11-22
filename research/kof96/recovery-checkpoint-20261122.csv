@@ -1,5 +1,5 @@
 date,total_candidates,content_checked,existing_article_verified,newly_integrated,new_articles,unmatched_or_needs_review,github_updates,notes
-2026-11-22,691,72,46,26,0,619,25,"Stage 10: 10 source texts rechecked from mounted original inventory; 5 covered, 5 integrated in existing articles. Benimaru JCD misfile corrected same turn. Original archive files separate. normalize_site.py and sitemap/search-index rebuild pending."
+2026-11-22,691,73,46,27,0,618,26,"Krauser followup: 2011 Yuri original verified as pre-existing coverage; 2013 earlier counted as existing now upgraded to integrated (missing recalled unblockable). October 2011 blog note checked separately. normalize_site.py and index rebuild pending."
 source_id,coverage,existing_article,notes
 1801412027359105531,existing,research/kof96/geese-neutral-counterplay.html,2024 Geese evaluation
 1781477857786495328,existing,research/kof96/geese-neutral-counterplay.html,2024 Geese evaluation
@@ -50,7 +50,7 @@ source_id,coverage,existing_article,notes
 1642531644107259904,existing,research/kof96/goro-kakuteijirai.html,stage 7 taunt timing recipe
 139946844020158464,existing,research/kof96/benimaru-frame-risk-2011.html,stage 7 Benimaru normal speed
 143209840964149248,existing,research/kof96/joe-frame-tech-2011.html,stage 7 Joe evaluation
-347870739703140352,existing,research/kof96/krauser-max-throw-combos.html,stage 7 MAX low JD and superplex
+347870739703140352,integrated,research/kof96/krauser-max-throw-combos.html,stage 7 combo already listed; follow-up recovered previously omitted weak low Blitz Ball unblockable recollection with unidentified opponent
 514362628764749824,integrated,research/kof96/reversal-backjump-defense.html,stage 8 dash start uncancellable and forward roll risks
 1647573351689515010,integrated,research/kof96/guard-stance-throw-defense.html,stage 8 whiff induced guard pose and throw comparison
 257493235629445120,integrated,research/kof96/leona-voltic-guardbreak.html,stage 8 weak Voltic hitbox color legend only
@@ -73,3 +73,5 @@ source_id,coverage,existing_article,notes
 126101581182668800,existing,research/kof96/command-throw-fallback.html,stage 10 Clark SAB input 412362+D failsafe
 132619612952080384,existing,research/kof96/iori-2011-frame-analysis.html,stage 10 corner JD crouch C weak Aoi Hana near C stun
 143210808724303874,existing,research/kof96/joe-combo-meter.html,stage 10 Joe JD near C normal Screw near red flashing
+
+114502312629764096,existing,research/kof96/krauser-artillery.html,2011 Yuri corner C throw to fastest weak low Blitz Ball to CD confirmed and new cross-reference in combo article
