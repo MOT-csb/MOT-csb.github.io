@@ -1,5 +1,5 @@
 date,total_candidates,content_checked,existing_article_verified,newly_integrated,new_articles,unmatched_or_needs_review,github_updates,notes
-2026-11-22,691,56,37,19,0,635,18,"Stage 8: 6 additional original X posts checked (4 integrated into 4 existing articles, 2 existing topic coverage). Original image frames and technical values not reconstructed. Separate website ZIP originals excluded. normalize_site.py and search/sitemap rebuild pending."
+2026-11-22,691,62,41,21,0,629,20,"Stage 9: 6 source records checked; 4 verified existing and 2 integrated into established articles (backjump input hypothesis and Clark defense test). Original-site ZIP sources separate. normalize_site.py and sitemap/search-index rebuild not executed."
 source_id,coverage,existing_article,notes
 1801412027359105531,existing,research/kof96/geese-neutral-counterplay.html,2024 Geese evaluation
 1781477857786495328,existing,research/kof96/geese-neutral-counterplay.html,2024 Geese evaluation
@@ -57,3 +57,9 @@ source_id,coverage,existing_article,notes
 1731525908950114617,integrated,research/kof96/ralf-original-frame-data-2011.html,stage 8 Ralf small mid JCD cross-version comparison
 240284701540089857,existing,research/kof96/reversal-backjump-defense.html,stage 8 backward superjump defense strategy known nonuniversal
 394670585575256064,existing,research/kof96/reversal-backjump-defense.html,stage 8 backward superjump air guard concept only
+120342690595471361,integrated,research/kof96/reversal-backjump-defense.html,stage9 Back-jump 7 then 1 hold hypothesis
+120363407009529856,integrated,research/kof96/kof96-defense-rank-2025.html,stage9 Clark survived eleven Yuri far-C hits versus Kyo Benimaru KO
+133724540747530242,existing,research/kof96/kyo-2011-tech-notes.html,stage9 Dokugami Tsumi yomi early command timing
+128445853315768321,existing,research/kof96/mature-cr-a-link-timing-2011.html,stage9 Crouch A interval 18-20F
+119668195773792256,existing,research/kof96/ryo-raijingou-counterplay.html,stage9 Raijingou startup and guard gap
+119366843038306304,existing,research/kof96/ryo-raijingou-counterplay.html,stage9 Raijingou GP feet exclusion and Iori exception
