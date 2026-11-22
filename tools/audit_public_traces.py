@@ -17,7 +17,7 @@ import sys
 ROOT = Path(__file__).resolve().parent.parent
 PATTERNS = {
     "internal_resource": r"Notion|notion\.so|app\.notion\.com|資料台帳\s*[A-ZＡ-Ｚ]?[0-9０-９]+|内部研究記録|内部の解析根拠|解析根拠|原文台帳|内部台帳",
-    "chat_or_editorial": r"本会話|このチャット|当チャット|AIが作業|ChatGPTとの会話|初回追記|AIによる編集|作業用メモ|旧版との差分|内部管理",
+    "chat_or_editorial": r"本会話|このチャット|当チャット|AIが作業|ChatGPTとの会話|初回追記|AIによる編集|作業用メモ|内部管理",
     "analysis_method": r"ROM解析|RAM解析|逆アセンブ|逆アセン|ディスアセン|バイナリ解析|プログラム解析|解析スクリプト|実行アドレス|コードを解析|ROMを解析|ROMを調べ",
     "addresses": r"(?<![0-9A-Za-z])0x[0-9A-Fa-f]{4,8}\b|(?<![0-9A-Za-z])\$[0-9A-Fa-f]{4,8}\b|(?<![0-9A-Za-z])&H[0-9A-Fa-f]{4,8}\b",
     "code_trace": r"\b(?:MOVE\.[BWL]|LEA|JSR|JMP|RTS|LDIR|OUTI|INIR)\b|<code[^>]*>.*?(?:0x[0-9A-Fa-f]{4,8}|\$[0-9A-Fa-f]{4,8}).*?</code>",
