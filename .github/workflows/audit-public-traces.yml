@@ -1,0 +1,26 @@
+name: Audit public analysis traces
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/audit_public_traces.py'
+      - '.github/workflows/audit-public-traces.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scan every published HTML, HTM and Markdown file
+        run: python3 tools/audit_public_traces.py --output /tmp/csb-audit/public-traces.json
+      - name: Upload full candidate review report (no public page edits)
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-analysis-traces-audit
+          path: /tmp/csb-audit/public-traces.json
+          retention-days: 14
