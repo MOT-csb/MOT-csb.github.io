@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ノックバックのない技とリバーサル通常投げ（KOFシリーズ）｜Come sono bravo?</title><meta name="description" content="KOF'98～2002・NEOWAVE・'98UM・2002UMに共通するノックバックなし技と通常投げの現象、KOF2002で判明した内部処理、例外、作品別の確認範囲。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:1000px}.article h2{margin-top:2rem}.article table{border-collapse:collapse;width:100%}.article th,.article td{border:1px solid var(--line,#aab6b2);padding:10px;text-align:left;vertical-align:top}.article th{background:var(--soft,#e9f1eb)}.scroll{overflow-x:auto}.note{border-left:4px solid var(--accent,#557866);padding:12px 16px;background:var(--soft,#e9f1eb)}.article a{overflow-wrap:anywhere}</style></head>
+<body><header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="./index.html">シリーズ共通研究</a></div></div>
+<main class="main"><div class="wrap article"><h1>ノックバックのない技とリバーサル通常投げ（KOFシリーズ）</h1>
+<p class="note"><strong>共通する現象：</strong>MOT本人によれば、ノックバックのない攻撃の該当部分を起き上がりに重ねられると、リバーサル通常投げが成立せず、通常技に化ける現象は<strong>KOF'98・'99・2000・2001・2002・NEOWAVE・'98UM・2002UM</strong>に共通する。一方、以下で詳述する<strong>内部の判定条件と処理順が特定されているのは無印KOF2002</strong>である。作品ごとの内部実装がすべて同一だと断定するものではない。</p>
+<h2>1. 実戦では何が起こるか</h2>
+<p>通常投げは起き上がりの切り返しにも使えるが、ノックバックが発生しない攻撃の特定部分を正しく重ねられた場合、投げ入力をしても相手をつかめず、入力ボタンに応じた通常技が出ることがある。例えばC投げを試みたとき、近距離立ちCが出て重ねた攻撃に負ける。<strong>攻撃する側の技全体が投げに強いという意味ではなく、該当するコマの状態が重要</strong>である。</p>
+<h2>2. 無印KOF2002で判明した内部処理</h2>
+<p>無印KOF2002では、各技のアニメーションの<strong>コマごとに投げの成否とノックバックに関わる状態</strong>を持たせている。投げ判定と、攻撃を受けた側の後退処理は、別々の処理でありながら、この同じコマ単位の状態を参照する。</p>
+<div class="scroll"><table><thead><tr><th>コマの状態</th><th>投げの成立</th><th>ノックバックとの関係</th></tr></thead><tbody>
+<tr><td>通常状態</td><td>この設定だけでは投げを無効にしない</td><td>この設定による後退抑制はない</td></tr>
+<tr><td>すべての投げを無効にする状態</td><td>通常投げ・コマンド投げとも失敗する</td><td>ノックバックの抑制とは別の状態</td></tr>
+<tr><td>通常投げだけを無効にする状態</td><td>通常投げは失敗し、コマンド投げは対象外</td><td>通常技の攻撃中には該当例が見つかっていない</td></tr>
+<tr><td><strong>ノックバックなし＋通常投げだけを無効にする状態</strong></td><td><strong>通常投げは失敗するが、コマンド投げは一律には無効にならない</strong></td><td><strong>ヒット・ガード時の後退速度をゼロにする</strong></td></tr>
+</tbody></table></div>
+<p>最後の状態では、投げ判定が通常投げを失敗させる。一方、攻撃を受けた側の後退処理では、この状態に由来する情報を使って後退速度をゼロにする。つまり、<strong>「ノックバックがないから距離の問題で投げられない」のではなく、後退を止める仕組みと通常投げを拒否する仕組みが同じコマ設定に結びついている</strong>。</p>
+<p>投げの成立判定は、攻撃判定の有無や攻撃判定そのものの位置だけで決まるわけではない。相手の現在コマの状態と、投げ判定・投げられ判定の範囲の重なりを参照する。したがって攻撃判定が残っている時間と、投げに対する性質を混同しない。</p>
+<h2>3. なぜ通常投げが通常技に化けるのか</h2>
+<ol><li>起き上がりが完了すると、同じフレームで立ち状態の入力処理に入り、通常投げの成立判定まで進む。</li><li>通常投げの入力条件を満たしていても、相手の該当コマが通常投げを無効にする状態なら投げは失敗する。</li><li><strong>投げに失敗すると、同じフレーム内で通常技の選択へ進む。</strong>そのためC投げのつもりの入力が近距離立ちCになる場合がある。C投げの失敗後にD投げを自動的に試すわけではない。</li><li>コマンド投げは通常投げと入力から判定までの経路が異なり、技の開始動作が進んだあとで投げ判定を行うため、通常投げと同一視できない。</li></ol>
+<h2>4. 対象作品と確かめられている範囲</h2>
+<div class="scroll"><table><thead><tr><th>作品</th><th>共通現象の位置づけ</th><th>内部の仕組み</th></tr></thead><tbody>
+<tr><td>KOF'98</td><td rowspan="8">MOT本人が2026年11月22日に、少なくともこの8作品で共通すると明示</td><td>個別の処理経路・適用技一覧は未照合</td></tr>
+<tr><td>KOF'99</td><td>個別の処理経路・適用技一覧は未照合</td></tr>
+<tr><td>KOF2000</td><td>個別の処理経路・適用技一覧は未照合</td></tr>
+<tr><td>KOF2001</td><td>個別の処理経路・適用技一覧は未照合</td></tr>
+<tr><td><strong>KOF2002（無印）</strong></td><td><strong>コマ単位の状態、投げ判定と後退処理の参照関係、投げ失敗後の通常技選択を確認済み</strong></td></tr>
+<tr><td>KOF NEOWAVE</td><td>個別の処理経路・適用技一覧は未照合</td></tr>
+<tr><td>KOF'98UM</td><td>個別の処理経路・適用技一覧は未照合</td></tr>
+<tr><td>KOF2002UM</td><td>共通現象は対象。無印2002との内部実装の同一性は未照合</td></tr>
+</tbody></table></div>
+<p>この8作品で共通することは本人からの確認情報として扱う。<strong>個々の技の有効コマ、フレーム数、例外まで8作品で同じとはしない。</strong></p>
+<h2>5. 無印2002の技別の結果と例外</h2>
+<p>無印KOF2002では、通常技の攻撃中に該当する状態が<strong>14キャラクター・28段</strong>で確認されている。多くは多段技の初段であり、例えばキムの近距離立ちC、レオナの近距離立ちD、バイスの近距離立ちD、クーラの近距離立ちC・Dなどが該当する。バイスの近距離立ちDでは、1段目の<strong>3フレーム</strong>だけが該当し、次の段は通常状態に戻る。</p>
+<p>別の状態の例として、ウィップのしゃがみAは<strong>13～16F目</strong>に通常投げとコマンド投げの両方が無効になる。ただしこの技ではノックバックは発生する。<strong>「投げられない」なら必ず「ノックバックがない」という逆方向の一般化はできない。</strong></p>
+<p>MAX発動時の投げ無敵もキャラクターごとに違い、クイックMAX発動には同じ投げ無敵はない。これは無印2002についての別の確認結果であり、他作品まで自動的に広げない。</p>
+<p>詳細な技の例と成立条件は<a href="/research/kof2002/knockback-normal-throw-2026.html">KOF2002：ノックバックと通常投げの関係</a>を参照。</p>
+<h2>6. 攻略への応用と残る照合事項</h2>
+<p>起き攻めでは、相手のリバーサル通常投げを潰す狙いで、ノックバックのない該当部分を重ねることができる。ただし、コマンド投げなどの別の切り返しを一律に封じるわけではない。KUSANAGIの6B1段目での密着起き攻めは<a href="/research/kof2002/kusanagi-6b-guardcrush-2024.html">本人の応用案</a>として位置づけ、6B固有の適用コマと連続技の成立条件は引き続き照合対象とする。</p>
+<p>他作品では、実際の対象技・段・コマの一覧、通常投げが失敗する分岐の詳細、コマンド投げの扱い、無印2002と同じ実装かどうかを、それぞれ既存資料と照合する。<strong>これらは共通現象そのものを未確認に戻すものではない。</strong></p>
+<h2>関連研究</h2><ul><li><a href="./index.html">KOFシリーズ共通仕様・バグの研究索引</a></li><li><a href="/research/kof2002/knockback-normal-throw-2026.html">無印2002：具体的な技と例外</a></li><li><a href="/research/kof98/normal-throws-series-comparison-mot-2015.html">通常投げ・投げ外しの作品別比較（別テーマ）</a></li><li><a href="/kof-kininaru.html#kof02">気になること（技別・作品別の未照合事項）</a></li></ul>
+<p>2026年11月22日：8作品での共通範囲についてMOT本人が補足。仕組みの具体的な説明は無印KOF2002の確認済み研究に基づく。</p>
+</div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
