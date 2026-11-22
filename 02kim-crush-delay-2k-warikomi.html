@@ -16,6 +16,10 @@
 
 /* 反撃確定技早見表に合わせた技名＋版バッジの標準表記 */
 .kim-variants{display:inline-flex!important;flex-direction:row!important;flex-wrap:wrap;gap:3px;align-items:center;vertical-align:middle;margin-left:5px}.kim-variant{display:inline-block!important;font-size:.76rem;line-height:1.5;font-weight:700;border:1px solid #a6b7b2;background:#e7eeeb;color:#264e4c;border-radius:4px;padding:0 5px;white-space:nowrap}.kim-move{display:block}.kim-move .kim-variants{display:inline-flex!important}.kim-guide td .kim-variants{display:inline-flex!important}
+
+/* コマンド入力早見表：テンキー主表示と方向記号の併記 */
+.kim-input-guide{margin:2rem 0;line-height:1.8}.kim-input-guide h3{margin:1.5rem 0 .6rem}.kim-input-key{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1.2rem;align-items:center;padding:1rem;border:1px solid #b8c9c4;border-radius:12px;background:rgba(80,120,115,.06)}.kim-input-key h3{margin:.1rem 0 .5rem}.kim-input-key p{margin:.4rem 0}.kim-keypad{display:grid;grid-template-columns:repeat(3,3rem);gap:4px}.kim-keypad span{display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid #a9bdb7;border-radius:6px;background:rgba(130,165,153,.12);font-weight:700;line-height:1.3;padding:3px}.kim-keypad small{font-weight:500}.kim-input-scroll{overflow-x:auto;border:1px solid #b8c9c4;border-radius:10px}.kim-input-table{border-collapse:collapse;width:100%;min-width:690px;font-size:.94rem;line-height:1.6}.kim-input-table th,.kim-input-table td{padding:.7rem .8rem;border:1px solid #d4dedb;text-align:left;vertical-align:top}.kim-input-table thead th{background:#274a48;color:#fff}.kim-input-table tbody tr:nth-child(even){background:rgba(80,120,115,.055)}.kim-input-table tbody th{width:19%;white-space:nowrap}.kim-input-table tbody td:nth-child(2){width:43%}.kim-input-table code{font-size:1.1em;font-weight:700}.kim-input-table small{display:block;color:#526660;font-size:.85rem;margin-top:.18rem;font-weight:400}.kim-input-alt{display:block;margin-top:.45rem}.kim-input-note{padding:.65rem .9rem;border-left:4px solid #a87f43;background:rgba(170,127,67,.07)}.kim-input-original{margin:1rem 0;padding:.85rem 1rem;border:1px solid #b8c9c4;border-radius:9px}.kim-input-original summary{cursor:pointer;font-weight:700}.kim-input-original-text{margin-top:1rem}
+@media(max-width:720px){.kim-input-key{grid-template-columns:1fr}.kim-keypad-wrap{justify-self:center}.kim-input-scroll{overflow:visible;border:0}.kim-input-table{display:block;min-width:0}.kim-input-table thead{display:none}.kim-input-table tbody{display:block}.kim-input-table tr{display:grid;gap:0;margin:.6rem 0;border:1px solid #b8c9c4;border-radius:9px;overflow:hidden}.kim-input-table tbody th{width:auto;padding:.6rem .8rem;background:rgba(80,120,115,.11);border:0}.kim-input-table tbody td{width:auto!important;padding:.55rem .8rem;border:0}.kim-input-table tbody td:nth-child(2){border-bottom:1px solid #d4dedb}.kim-input-table tbody td:nth-child(2)::before{content:"入力方法";display:block;font-size:.75rem;font-weight:700;color:#42615a}.kim-input-table tbody td:nth-child(3)::before{content:"注意点";display:block;font-size:.75rem;font-weight:700;color:#42615a}}
 </style>
 </head>
 <body>
@@ -267,8 +271,27 @@
 
 
 </div></details>
+<section class="kim-input-guide" aria-labelledby="kim-guard-input">
 <h2 id="kim-guard-input">割り込み技を仕込みつつ立ちガードを維持する入力</h2>
-<p>また、2Kは屈みガードできない技なので、割り込み技を狙う場合は9K～ディレイ2Kが連続ガードになっている場合に備えて立ちガードできるように入力する必要があります。<br/>
+<p>キムの三連撃～9K～ディレイ2Kは、追加2Kが連続ガードになる場合もある。<strong>ディレイ2Kはしゃがみガード不可</strong>なので、無敵技などを仕込みながら、技が出ない場合も立ちガードできるようにするのがMOTの対策の基本となる。</p>
+<div class="kim-input-key"><div><h3>方向の読み方</h3><p>技のコマンドは<strong>テンキー表記を主表示</strong>にし、その下に<strong>方向記号</strong>を添えた。テンキー表記は対戦経験者が正確に再現しやすく、方向記号は初めて見る人が直感的に理解しやすいため、両方を併記する。</p><p><strong>N</strong>はニュートラル（レバーを離す）。「＋ボタン」は最後に該当ボタンを押すこと。いずれもキャラクターが右向きの場合で、左向きでは左右が反転する。</p></div><div class="kim-keypad-wrap"><div class="kim-keypad" aria-label="テンキー方向：7左上、8上、9右上、4左、5ニュートラル、6右、1左下、2下、3右下"><span>7<small>↖</small></span><span>8<small>↑</small></span><span>9<small>↗</small></span><span>4<small>←</small></span><span>5<small>N</small></span><span>6<small>→</small></span><span>1<small>↙</small></span><span>2<small>↓</small></span><span>3<small>↘</small></span></div></div></div>
+<h3>コマンド別の入力早見表</h3>
+<p>表はMOTの原稿にある<strong>12種類の入力例</strong>を、コマンドの種類・推奨入力・注意点に整理したもの。入力が常に成功するという保証ではない。「謎」「難しめ」「問題なし」などの評価は当時の本人記録に従う。</p>
+<div class="kim-input-scroll"><table class="kim-input-table"><thead><tr><th scope="col">技のコマンド</th><th scope="col">9Kガード後の推奨入力</th><th scope="col">注意点</th></tr></thead><tbody>
+<tr><th scope="row"><code>236</code><small>↓↘→</small></th><td><span class="kim-input-step">9Kを立ちガード → N → <strong>236＋ボタン</strong></span></td><td>一度ニュートラルに戻してから入力する。</td></tr>
+<tr><th scope="row"><code>236236</code><small>↓↘→↓↘→</small></th><td>9Kを立ちガード → N → <strong>236236＋ボタン</strong></td><td>本人評価：<strong>難しめ</strong>。</td></tr>
+<tr><th scope="row"><code>214</code><small>↓↙←</small></th><td>9Kをガード → <strong>214＋ボタン</strong></td><td>本人評価：問題なし。</td></tr>
+<tr><th scope="row"><code>214214</code><small>↓↙←↓↙←</small></th><td>9Kをガード → <strong>214214＋ボタン</strong></td><td>本人評価：問題なし。</td></tr>
+<tr><th scope="row"><code>623</code><small>→↓↘</small></th><td><strong>方法A：</strong>9Kを立ちガード → <strong>623＋ボタン</strong><span class="kim-input-alt">方法B：9Kをガード → <strong>632146＋ボタン</strong></span></td><td>方法Aでは、<strong>6123</strong>という入力にならないよう注意。方法Bは元原稿にある別入力。</td></tr>
+<tr><th scope="row"><code>421</code><small>←↓↙</small></th><td>9Kをガード → <strong>4214＋ボタン</strong><small>←↓↙←</small></td><td><strong>421で止めるとしゃがんだままになる</strong>ため、4まで入れる。</td></tr>
+<tr><th scope="row"><code>41236</code><small>←↙↓↘→</small></th><td>9Kを立ちガード → <strong>2146＋ボタン</strong><small>↓↙←→</small></td><td>本人は2146で入力する必要があると考えた一方、<strong>41236でもしゃがまずに済む現象</strong>を記録。理由は「謎」としており、解決済みとは扱わない。</td></tr>
+<tr><th scope="row"><code>632146</code><small>→↘↓↙←→</small></th><td>9Kをガード → <strong>632146＋ボタン</strong></td><td>本人評価：問題なし。</td></tr>
+<tr><th scope="row"><code>2タメ8</code><small>↓溜め→↑</small></th><td><strong>1方向を保持</strong>して9Kをしゃがみガード → ガード硬直が終わるタイミングで4を通してタメ解放 → <strong>7／8／9</strong><small>↙溜め → ← → ↖／↑／↗ を短時間で入力</small></td><td>原文の要点は<strong>1タメ→4→7・8・9</strong>。レバー方向の切り替えとタメ解放のタイミングに注意。</td></tr>
+<tr><th scope="row"><code>2141236</code><small>↓↙←↙↓↘→</small></th><td>9Kをガード → <strong>2142146＋ボタン</strong><small>↓↙←↓↙←→</small></td><td>原文では<strong>21426でも出る</strong>ことを利用すると説明。</td></tr>
+<tr><th scope="row"><code>2363214</code><small>↓↘→↘↓↙←</small></th><td><strong>9Kをしゃがみガード</strong> → <strong>2363214＋ボタン</strong></td><td>本人は、しゃがみガードからの方が入力しやすいはずと評価。</td></tr>
+</tbody></table></div>
+<p class="kim-input-note"><strong>補足：</strong>立ちガードを維持する考え方は全入力に一律に当てはめるものではなく、原文には<strong>しゃがみガードから始める2タメ8系・2363214系</strong>も含まれる。表では例外をそのまま残した。</p>
+<details class="kim-input-original"><summary>2006年の入力説明を原文のまま読む</summary><div class="kim-input-original-text"><p>また、2Kは屈みガードできない技なので、割り込み技を狙う場合は9K～ディレイ2Kが連続ガードになっている場合に備えて立ちガードできるように入力する必要があります。<br/>
 ここで代表的な必殺技コマンドのオススメな入力方法を列記します。</p>
 <p>236系：9Kを立ちガード～レバーN～236＋ボタン<br/>
 236236系：9Kを立ちガード～レバーN～236236＋ボタン（難しめかと）<br/>
@@ -282,6 +305,8 @@
 2要素タメ8系：1入れっぱなしで9Kを屈みガード後、9Kのガード硬直が解けるタイミングに合わせて4を通してタメを解放する（1タメ～4～7or8or9を短い時間で入力）<br/>
 2141236系：9Kをガードした後、2142146＋ボタン（21426でも出るのを利用）<br/>
 2363214系：9Kを屈みガードした後、2363214＋ボタン（屈みガードからの方が入力しやすいはず）</p>
+</div></details>
+</section>
 <nav class="foot-nav"><a href="/kof02-top.html">KOF2002のトップへ</a><a href="/kof-top.html">KOFシリーズへ</a><a href="/">入口へ</a></nav>
 </div></main>
 <footer><div class="wrap">Come sono bravo?｜作成：MOT</div></footer>
