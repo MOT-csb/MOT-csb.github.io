@@ -1,5 +1,5 @@
 date,total_candidates,content_checked,existing_article_verified,newly_integrated,new_articles,unmatched_or_needs_review,github_updates,notes
-2026-11-22,691,62,41,21,0,629,20,"Stage 9: 6 source records checked; 4 verified existing and 2 integrated into established articles (backjump input hypothesis and Clark defense test). Original-site ZIP sources separate. normalize_site.py and sitemap/search-index rebuild not executed."
+2026-11-22,691,72,46,26,0,619,25,"Stage 10: 10 source texts rechecked from mounted original inventory; 5 covered, 5 integrated in existing articles. Benimaru JCD misfile corrected same turn. Original archive files separate. normalize_site.py and sitemap/search-index rebuild pending."
 source_id,coverage,existing_article,notes
 1801412027359105531,existing,research/kof96/geese-neutral-counterplay.html,2024 Geese evaluation
 1781477857786495328,existing,research/kof96/geese-neutral-counterplay.html,2024 Geese evaluation
@@ -63,3 +63,13 @@ source_id,coverage,existing_article,notes
 128445853315768321,existing,research/kof96/mature-cr-a-link-timing-2011.html,stage9 Crouch A interval 18-20F
 119668195773792256,existing,research/kof96/ryo-raijingou-counterplay.html,stage9 Raijingou startup and guard gap
 119366843038306304,existing,research/kof96/ryo-raijingou-counterplay.html,stage9 Raijingou GP feet exclusion and Iori exception
+129845316232024064,integrated,research/kof96/throw-guard-system.html,stage 10 unavailable super-throw still works for throw neutralization
+129844049426391040,integrated,research/kof96/attack-avoid.html,stage 10 BCD 1F overlap and crouch prevents accidental taunt or CD
+126299420710019072,integrated,research/kof96/guard-unblockable-overview.html,stage 10 guard crush 18F tentative, strong attack block 17 hit 19
+140637476246130688,integrated,research/kof96/benimaru-frame-risk-2011.html,stage 10 Benimaru JCD hitbox placement hypothesis, misfile corrected
+126254155386994689,integrated,research/kof96/iori-2011-frame-analysis.html,stage 10 whiffed weak Aoi Hana follow-up input before initial motion
+126122334787616769,existing,research/kof96/mr-big-iori-punishes.html,stage 10 BIG punish versus Iori Aoi Hana
+126124527360016384,existing,research/kof96/mr-big-iori-punishes.html,stage 10 BIG against Choi air guard does not guarantee 623C
+126101581182668800,existing,research/kof96/command-throw-fallback.html,stage 10 Clark SAB input 412362+D failsafe
+132619612952080384,existing,research/kof96/iori-2011-frame-analysis.html,stage 10 corner JD crouch C weak Aoi Hana near C stun
+143210808724303874,existing,research/kof96/joe-combo-meter.html,stage 10 Joe JD near C normal Screw near red flashing
