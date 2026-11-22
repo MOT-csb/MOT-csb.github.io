@@ -1,5 +1,5 @@
 date,total_candidates,content_checked,existing_article_verified,newly_integrated,new_articles,unmatched_or_needs_review,github_updates,notes
-2026-11-22,691,29,23,6,0,662,6,"Stage 5 added 17 claim-level checks: 15 pre-existing coverage, 2 integrated into defense rank page. Separate original-site archive 5 documents checked during stages 3 and 4, not counted in 691. Full ledger saved as chat attachment. normalize_site.py and sitemap/search-index regeneration NOT run."
+2026-11-22,691,40,29,11,0,651,10,"Stage 6: 11 original tweets checked, 6 already covered and 5 new source claims integrated across 4 existing articles. Original-site five files are a separate pool. Full ledger is in conversation attachments. normalize_site.py, sitemap/search-index and live HTTP checks not performed."
 source_id,coverage,existing_article,notes
 1801412027359105531,existing,research/kof96/geese-neutral-counterplay.html,2024 Geese evaluation
 1781477857786495328,existing,research/kof96/geese-neutral-counterplay.html,2024 Geese evaluation
@@ -30,3 +30,14 @@ source_id,coverage,existing_article,notes
 1912336037965136108,existing,research/kof96/kof96-defense-rank-2025.html,stage 5 claim-level audit
 1912335148428968047,integrated,research/kof96/kof96-defense-rank-2025.html,stage 5 claim-level audit
 1912294339516198985,integrated,research/kof96/kof96-defense-rank-2025.html,stage 5 claim-level audit
+169327403909394432,integrated,research/kof96/athena-2011-frame-teleport.html,Athena Chin hypothesis
+169326625584971776,integrated,research/kof96/throw-guard-system.html,Anti-throw invincible reversal hypothesis
+169321535335694336,integrated,research/kof96/throw-guard-system.html,Taunt super throw defensive matchup hypothesis
+143499869775069184,integrated,research/kof96/kof96-frame-source-catalog-2011.html,2F hit-mark observation and measurement method
+355582036519563265,integrated,research/kof96/iori-2011-frame-analysis.html,MAX jump D Kuzukaze loop hypothesis
+140648255263473664,existing,research/kof96/benimaru-frame-risk-2011.html,Raikoken 3 hit minus 40F
+140649879327346688,existing,research/kof96/benimaru-frame-risk-2011.html,Raikoken execution risk
+145718476114366464,existing,research/kof96/athena-2011-frame-teleport.html,Athena CD8F A9F
+357146035572838401,existing,research/kof96/iori-2011-frame-analysis.html,Aoi hana -4F
+355567393000538112,existing,research/kof96/command-throw-ranges-2011.html,Command throw range comparison
+355567823298375680,existing,research/kof96/command-throw-ranges-2011.html,Vice negative gain range
