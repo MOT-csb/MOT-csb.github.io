@@ -1,5 +1,5 @@
 date,total_candidates,content_checked,existing_article_verified,newly_integrated,new_articles,unmatched_or_needs_review,github_updates,notes
-2026-11-22,691,12,8,4,0,679,5,"4 existing articles updated and common questions page updated; coverage is claim-level only, not full-source all-line fidelity. Full CSV ledger saved in conversation attachment. normalize_site.py and sitemap/search-index regeneration not run (no checkout/network in local runtime)."
+2026-11-22,691,29,23,6,0,662,6,"Stage 5 added 17 claim-level checks: 15 pre-existing coverage, 2 integrated into defense rank page. Separate original-site archive 5 documents checked during stages 3 and 4, not counted in 691. Full ledger saved as chat attachment. normalize_site.py and sitemap/search-index regeneration NOT run."
 source_id,coverage,existing_article,notes
 1801412027359105531,existing,research/kof96/geese-neutral-counterplay.html,2024 Geese evaluation
 1781477857786495328,existing,research/kof96/geese-neutral-counterplay.html,2024 Geese evaluation
@@ -13,3 +13,20 @@ source_id,coverage,existing_article,notes
 617556318077915136,integrated,research/kof96/joe-frame-tech-2011.html,2015 weak Hurricane data and discrepancy
 553060267165110272,integrated,research/kof96/kyo-2011-tech-notes.html,2015 Dokugami through Batsuyomi data
 494820134976901121,existing,research/kof96/mature-counter-2011.html,Mature standing CD 6F and evaluation
+1801425538575437869,existing,research/kof96/reversal-backjump-defense.html,stage 5 claim-level audit
+1750928063897215424,existing,research/kof96/reversal-backjump-defense.html,stage 5 claim-level audit
+1297029714389819393,existing,research/kof96/reversal-backjump-defense.html,stage 5 claim-level audit
+463215814892470272,existing,research/kof96/reversal-backjump-defense.html,stage 5 claim-level audit
+1759905104873078915,existing,research/kof96/quake-defense.html,stage 5 claim-level audit
+1940302316592406621,existing,research/kof96/andy-2011-tech-notes.html,stage 5 claim-level audit
+120863096788107264,existing,research/kof96/andy-2011-tech-notes.html,stage 5 claim-level audit
+1888875238768730499,existing,research/kof96/evasion-frames.html,stage 5 claim-level audit
+1888862116943450580,existing,research/kof96/anti-air-specials-2011.html,stage 5 claim-level audit
+1888861742702420292,existing,research/kof96/anti-air-specials-2011.html,stage 5 claim-level audit
+1888861597076250905,existing,research/kof96/anti-air-specials-2011.html,stage 5 claim-level audit
+1888863115229741329,existing,research/kof96/anti-air-specials-2011.html,stage 5 claim-level audit
+1914451331156467718,existing,research/kof96/input-revisions.html,stage 5 claim-level audit
+2002614298234048597,existing,research/kof96/input-window.html,stage 5 claim-level audit
+1912336037965136108,existing,research/kof96/kof96-defense-rank-2025.html,stage 5 claim-level audit
+1912335148428968047,integrated,research/kof96/kof96-defense-rank-2025.html,stage 5 claim-level audit
+1912294339516198985,integrated,research/kof96/kof96-defense-rank-2025.html,stage 5 claim-level audit
