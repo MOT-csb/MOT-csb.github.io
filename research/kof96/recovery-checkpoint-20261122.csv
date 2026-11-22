@@ -1,5 +1,5 @@
 date,total_candidates,content_checked,existing_article_verified,newly_integrated,new_articles,unmatched_or_needs_review,github_updates,notes
-2026-11-22,691,74,46,28,0,617,32,"Stage 12: 2011-09-28 primary Hatena 27-character standing CD and JCD full frame table restored into existing 4-character summary. Krauser dedicated guardbreak links cross-connected. Existing 4-character CSV preserved. normalize_site.py and sitemap/search index not regenerated; live site not checked."
+2026-11-22,691,77,46,31,0,614,36,"Stage 13: Athena Joe Leona original 2011 frame texts recovered into existing articles with blank fields and source-specific exceptions preserved. 3 Hatena source items checked. Normalize/index rebuild and live Pages checks pending."
 source_id,coverage,existing_article,notes
 1801412027359105531,existing,research/kof96/geese-neutral-counterplay.html,2024 Geese evaluation
 1781477857786495328,existing,research/kof96/geese-neutral-counterplay.html,2024 Geese evaluation
@@ -77,3 +77,7 @@ source_id,coverage,existing_article,notes
 114502312629764096,existing,research/kof96/krauser-artillery.html,2011 Yuri corner C throw to fastest weak low Blitz Ball to CD confirmed and new cross-reference in combo article
 
 hatena:227971012.html,integrated,research/kof96/standing-cd-jcd-selected.html,2011-09-28 primary 27 characters standing CD startup and guard disadvantage plus JCD startup and active frames. Full data restored retaining 3+5 4+4+4 3+3
+
+hatena:239903542.html,integrated,research/kof96/athena-2011-frame-teleport.html,stage 13 2011 Athena full move frame table, air weak SCB 2F original vs separately confirmed 1F preserved
+hatena:238513132.html,integrated,research/kof96/joe-frame-tech-2011.html,stage 13 2011 Joe full normal jump special and super frames, 2021 tactical update separated
+hatena:232356042.html,integrated,research/kof96/leona-2011-tech-notes.html,stage 13 2011 Leona full frame table, multihit and spacing-dependent guard values preserved
