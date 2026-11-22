@@ -1,0 +1,15 @@
+date,total_candidates,content_checked,existing_article_verified,newly_integrated,new_articles,unmatched_or_needs_review,github_updates,notes
+2026-11-22,691,12,8,4,0,679,5,"4 existing articles updated and common questions page updated; coverage is claim-level only, not full-source all-line fidelity. Full CSV ledger saved in conversation attachment. normalize_site.py and sitemap/search-index regeneration not run (no checkout/network in local runtime)."
+source_id,coverage,existing_article,notes
+1801412027359105531,existing,research/kof96/geese-neutral-counterplay.html,2024 Geese evaluation
+1781477857786495328,existing,research/kof96/geese-neutral-counterplay.html,2024 Geese evaluation
+1781472797560344918,existing,research/kof96/match-theory-meter-2011.html,Super-move evaluation criteria
+1781472239294234627,existing,research/kof96/match-theory-meter-2011.html,MAX conditions
+1781470916201128344,integrated,research/kof96/geese-neutral-counterplay.html,Raging Storm comparison agenda
+1760882385586172305,integrated,research/kof96/match-theory-meter-2011.html,Character disparity observation
+1760875849015013445,existing,research/kof96/stun-followup-options.html,Stun and power-meter constraints
+1760819786433573075,existing,research/kof96/stun-followup-options.html,Stun follow-up options
+1759862584029913547,existing,research/kof96/goro-kakuteijirai.html,Earthquake counterplay claim
+617556318077915136,integrated,research/kof96/joe-frame-tech-2011.html,2015 weak Hurricane data and discrepancy
+553060267165110272,integrated,research/kof96/kyo-2011-tech-notes.html,2015 Dokugami through Batsuyomi data
+494820134976901121,existing,research/kof96/mature-counter-2011.html,Mature standing CD 6F and evaluation
