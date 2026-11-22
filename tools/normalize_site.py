@@ -92,6 +92,7 @@ HIDDEN = {
     "02umtop-6.html",  # KOF2002UMトップのキャラ一覧の旧版
     "02umtop-7.html",  # KOF2002UMトップのキャラ一覧の旧版
     "02K'-maxima-koutyokusa.html",  # K’のページの複製。マキシマの正式版は 02maxima-kakuwaza-koutyokusa.html
+    "research/kof2002/questions-and-research-plans-2024.html",  # 2024年の疑問11項目は kof-kininaru.html に統合。旧URLは転送専用
 }
 
 
