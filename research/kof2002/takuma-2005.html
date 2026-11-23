@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>タクマ：ガークラ値と確定ガークラ連係・めくりの使い分け・立ち回り・調整案（2005年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body>
+<header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<section class="hero"><div class="wrap"><p class="breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof02-top.html">KOF2002</a> / <a href="/research/kof2002/index.html">研究アーカイブ</a></p><p class="kicker">KOF2002（無印）｜キャラクター研究</p><h1>タクマ：ガークラ値と確定ガークラ連係・めくりの使い分け・立ち回り・調整案</h1><p>タクマはメインで使う飛燕疾風脚のガークラ値が0で、虎煌拳<span class="tag">強</span>や覇王至高拳<span class="tag">強</span>はガードを弾いて蓄積を消してしまうので、ガークラを狙うのはかなり困難です。それでも近Cのガークラ値26を軸に、近C≫虎煌拳<span class="tag">弱</span>でためて、赤点滅したら確定ガークラ連係につなぐ動きは組めます。めくりは、通常・大ジャンプならJD、小・中ジャンプならJBが使いやすくなっています。ここでは2005年のブログ記事から、タクマのガークラ・めくり・立ち回りをまとめます。KOF2002UMは扱いません。</p></div></section><main class="main"><div class="wrap">
+
+<section class="section"><h2>記号と用語</h2>
+<ul>
+<li><strong>＞</strong>：キャンセルなしでつなぐ ／ <strong>≫</strong>：キャンセルしてつなぐ ／ <strong>～</strong>：続けて行動する。</li>
+<li><strong>ガークラ値</strong>：ガードさせたときに蓄積するガードクラッシュ値。<strong>ガード弾き</strong>：ガードした相手を弾く効果。弾かれるとそれまでのガークラ値の蓄積がなくなります。</li>
+<li><strong>赤点滅・体力枠点滅</strong>：ガードクラッシュ寸前の状態。<strong>Q発動</strong>：クイックMAX発動。<strong>GCC+D</strong>：ガードキャンセルふっとばし攻撃。</li>
+<li>技の版は名前の後ろに<span class="tag">弱</span><span class="tag">強</span>で示します。</li>
+</ul>
+</section>
+
+<section class="section"><h2>ガークラ</h2>
+<h3>各技のガークラ値（2005年）</h3>
+<table>
+<thead><tr><th>技</th><th>A</th><th>B</th><th>C</th><th>D</th></tr></thead>
+<tbody>
+<tr><td>近距離立ち</td><td>8</td><td>5</td><td>26</td><td>17</td></tr>
+<tr><td>遠距離立ち</td><td>9</td><td>5</td><td>14</td><td>17</td></tr>
+<tr><td>屈み</td><td>5</td><td>4</td><td>16</td><td>22</td></tr>
+<tr><td>垂直通常ジャンプ</td><td>7</td><td>4</td><td>15</td><td>16</td></tr>
+<tr><td>前方通常・大ジャンプ</td><td>7</td><td>3</td><td>14</td><td>15</td></tr>
+<tr><td>後方通常・大ジャンプ</td><td>6</td><td>3</td><td>14</td><td>14</td></tr>
+<tr><td>小ジャンプ</td><td>6</td><td>3</td><td>14</td><td>14</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th>技</th><th>ガークラ値</th></tr></thead>
+<tbody>
+<tr><td>立ちC+D</td><td>19</td></tr>
+<tr><td>GCC+D</td><td>0</td></tr>
+<tr><td>通常・大ジャンプC+D</td><td>13</td></tr>
+<tr><td>小・中ジャンプC+D</td><td>14</td></tr>
+<tr><td>6B</td><td>13（キャンセル版は8）</td></tr>
+<tr><td>虎煌拳</td><td><span class="tag">弱</span>17 ／ <span class="tag">強</span>20（ガード弾き）</td></tr>
+<tr><td>飛燕疾風脚</td><td><span class="tag">弱</span><span class="tag">強</span>とも0+0</td></tr>
+<tr><td>無頼岩</td><td><span class="tag">弱</span>0 ／ <span class="tag">強</span>0</td></tr>
+<tr><td>覇王至高拳</td><td><span class="tag">弱</span>0 ／ <span class="tag">強</span>0（ガード弾き）</td></tr>
+<tr><td>超必殺技・MAX2</td><td>すべて0</td></tr>
+</tbody>
+</table>
+<ul>
+<li>虎煌拳<span class="tag">強</span>は、ガークラ値が20なのにガード弾き効果があるという謎の性能です。</li>
+<li>ムックのデータでは無頼岩<span class="tag">弱</span>のガークラ値が5となっていますが、実際は0のようです。</li>
+</ul>
+
+<h3>ガークラが難しい理由（2005年）</h3>
+<p>近Cのガークラ値26は光りますが、メインの技である飛燕疾風脚<span class="tag">弱</span><span class="tag">強</span>のガークラ値が0で、さらに虎煌拳<span class="tag">強</span>（と覇王至高拳<span class="tag">強</span>）をガードさせてガード弾きになるとガークラ値の蓄積がなくなってしまいます。普通の技でガークラさせようとすると、虎煌拳<span class="tag">強</span>、無頼岩<span class="tag">弱</span><span class="tag">強</span>、覇王至高拳<span class="tag">弱</span><span class="tag">強</span>を使えなくなるのも痛いところです。</p>
+<p>ただし、飛び込みからの上下段の選択攻撃は冷静に見られるとかなりの確率で防がれるので、相手によってはガークラ狙いの立ち回りのほうがよいかもしれない、としています（2005年5月）。</p>
+
+<h3>ガークラ値をためる（2005年）</h3>
+<ul>
+<li>近C≫虎煌拳<span class="tag">弱</span>を軸にすると、なかなかたまりやすいようです。</li>
+<li>ジャンプ攻撃から狙うと虎煌拳<span class="tag">弱</span>が届かないことが多いので、ジャンプ攻撃から着地ダッシュして近C≫虎煌拳<span class="tag">弱</span>を混ぜます。ダッシュ近C≫虎煌拳<span class="tag">弱</span>は、623の技がないので粗い入力でも大丈夫なのがよいところです。</li>
+<li>飛燕疾風脚<span class="tag">強</span>はガークラ値こそないものの、ガードさせてゲージを増やすのに使えるので、ジャンプ攻撃からは近C≫飛燕疾風脚<span class="tag">強</span>も混ぜます。</li>
+<li>JC+D＞ダッシュ近C≫虎煌拳<span class="tag">弱</span>と、JD＞近C止めかキャンセル飛燕疾風脚<span class="tag">強</span>でのガークラ稼ぎが有効なようです。</li>
+<li>コメントでの提案を受けて、近Aをはさむと安定感が増し、近A＞近Cが連続技になることにも気づいた、と書いています。</li>
+</ul>
+
+<h3>赤点滅したら（2005年）</h3>
+<table>
+<thead><tr><th>確定ガークラ連係</th><th>メモ</th></tr></thead>
+<tbody>
+<tr><td>JD＞近C≫飛燕疾風脚<span class="tag">強</span></td><td>ジャンプから歩かなくてよく、仮に近Cでガークラしなくてもリスクが小さい。</td></tr>
+<tr><td>JD＞ダッシュ近C≫6B≫飛燕疾風脚<span class="tag">強</span>か龍虎乱舞<span class="tag">弱</span><span class="tag">強</span></td><td>6Bをはさむので確定ガークラになる。着地後にダッシュする必要があるので割り込まれる心配がある（端なら心配ない）。</td></tr>
+<tr><td>近C≫Q発動＋ダッシュ近C≫MAX龍虎乱舞<span class="tag">弱</span><span class="tag">強</span></td><td>最低2ゲージ必要。</td></tr>
+</tbody>
+</table>
+<p>10月2日の記事では、近C≫Q発動＋ダッシュ近Cで確定ガークラにして、タイマーを使って龍虎乱舞<span class="tag">弱</span><span class="tag">強</span>か、もう1ゲージ使ってMAX龍虎乱舞を入れるのがよい、としています。タクマは動きが鈍いので、強引にガークラを狙いにいくと逆にダメージを受ける、とも書いています。</p>
+</section>
+
+<section class="section"><h2>めくりとジャンプ攻撃（2005年）</h2>
+<table>
+<thead><tr><th>ジャンプ</th><th>使いやすい技</th><th>理由</th></tr></thead>
+<tbody>
+<tr><td>通常・大ジャンプ</td><td>JD</td><td>JDでめくりやすく、JBだと狙える間合いと打点がシビア。</td></tr>
+<tr><td>小・中ジャンプ</td><td>JB</td><td>小・中ジャンプはチョイを除く全キャラに対して、屈まれないと飛び越せない。JDは庵などに屈まれると当てられないが、JBは屈まれても当たり、打点の調整もあまり考えずにヒットし、地上技にも安定してつながる。</td></tr>
+</tbody>
+</table>
+<ul>
+<li>屈んだチンには、めくり小・中JBすら当たりません。</li>
+<li>屈み食らいの高さがテリー以上なら、めくり小・中JDでも当たります。</li>
+<li>JC+D（カウンターヒット）から龍虎乱舞が当たらないのが悲しいところです。厳密には、端の相手に着地寸前でJC+Dをカウンターヒットさせ、着地後すぐに出せば龍虎乱舞<span class="tag">弱</span>が一応つながります。ほかのラッシュキャラである庵やキムはつながります。</li>
+<li>画面中央でJC+D（カウンターヒット）＞昇り大JDから中JBとすると、屈んでいる相手をちょうどめくれます。</li>
+<li>中JC+Dの先端当ての飛び込みは、なかなかいやらしい攻めです。テリーの中JC+D先端当てと同じような使い方になりますが、テリーより飛距離と高さが低いので、対空技で返しにくい角度での飛び込みになっています。</li>
+</ul>
+</section>
+
+<section class="section"><h2>立ち回り（2005年）</h2>
+<p>遠距離ではできることが少ないので、なんとか接近してラッシュをかけたいキャラです。ただし、ジャンプ力がなく移動速度も遅いので、簡単にはいきません。</p>
+<table>
+<thead><tr><th>場面</th><th>使う技・行動</th></tr></thead>
+<tbody>
+<tr><td>地上牽制</td><td>屈みD（性能がかなり高い）、飛燕疾風脚<span class="tag">弱</span>、立ちC+D</td></tr>
+<tr><td>ジャンプでの牽制・空対空</td><td>JC+D</td></tr>
+<tr><td>ジャンプ防止</td><td>遠B</td></tr>
+<tr><td>対空</td><td>屈みC、MAX龍虎乱舞</td></tr>
+<tr><td>起き上がり</td><td>ガード、先行入力大J、後転</td></tr>
+<tr><td>暴れ</td><td>屈みD</td></tr>
+<tr><td>カウンター</td><td>龍虎乱舞<span class="tag">強</span></td></tr>
+<tr><td>反撃</td><td>屈みD、飛燕疾風脚<span class="tag">強</span></td></tr>
+<tr><td>接近</td><td>中JC+D、飛燕疾風脚<span class="tag">強</span></td></tr>
+<tr><td>ジャンプ攻撃の後</td><td>屈みB</td></tr>
+<tr><td>崩し</td><td>屈みD、6B、めくりJBかD、空J～屈みB、覇王至高拳<span class="tag">強</span></td></tr>
+<tr><td>対垂直ジャンプ</td><td>虎煌拳<span class="tag">強</span></td></tr>
+<tr><td>GCC+D対策</td><td>ジャンプ攻撃を低めに当てる</td></tr>
+<tr><td>GCC+Dをガードした後の反撃</td><td>屈みD、龍虎乱舞<span class="tag">弱</span></td></tr>
+<tr><td>ゲージため</td><td>（記事では「？」のまま）</td></tr>
+<tr><td>ゲージの使い道</td><td>GCC+D、龍虎乱舞<span class="tag">弱</span>（連続技）、龍虎乱舞<span class="tag">強</span>（カウンター）。弱攻撃始動の連続技に龍虎乱舞<span class="tag">弱</span>を使いたいので、ゲージはほしい。</td></tr>
+</tbody>
+</table>
+
+<h3>虎煌拳<span class="tag">強</span>と垂直ジャンプ（2005年）</h3>
+<p>届く間合い限定ですが、相手の垂直通常ジャンプを見てからタイミングを合わせて虎煌拳<span class="tag">強</span>を出せば、着地前までに潰せるようです。逆に、牽制目的の虎煌拳<span class="tag">強</span>の動作を見てから大ジャンプされたら、ジャンプ攻撃が確定するのか、という疑問も書いています。虎煌拳<span class="tag">強</span>のリーチは、ジョーのハリケーンアッパー<span class="tag">弱</span>のリーチとほとんど同じです。</p>
+</section>
+
+<section class="section"><h2>タクマの調整案（2005年）</h2>
+<p>タクマを攻めキャラにしたい、という調整案の記事です。虎煌拳と覇王至高拳が飛ばなくなったことから、開発者はラッシュキャラのイメージで調整したと思われるのに、ふたを開けてみると接近自体が難しいという結果だったので、ある程度強引に接近できる性能がよいのでは、としています。</p>
+<ul>
+<li>通常技で通常の飛び道具を消せるようにする（屈みA連打でかき消せる案）。</li>
+<li>接近しやすくするため、リーチがあり下方向に強いジャンプ強攻撃を付ける。</li>
+<li>虎煌拳<span class="tag">強</span>の攻撃判定を端まで伸ばす（ただしコメント欄でのやりとりを受けて、端まで届くと危険か、とも書いています）。</li>
+<li>遠Dを、性能はそのままでキャンセル可能にする。</li>
+<li>鬼人撃を超必殺技ではない必殺技にし、'99のケンスウの龍連打のように投げ条件なしで出せるミニ乱舞にする案。ガードされても有利で、弱攻撃キャンセルで連続技になるが連続ガードにはならず、強攻撃キャンセルだと初段が届かない、という性能です。</li>
+</ul>
+<p>コメントへの返信では、タクマは狙いがはっきりしている（接近から上下段やめくりでのラッシュなど）のに、そこへ行く過程を対処されやすく、本命の攻めすら冷静に対応されると決めにくいのがつらい、アテナにどうやったら勝てるか思いつかない、とも書いています。</p>
+</section>
+
+<section class="section"><h2>似ているが別の話</h2>
+<ul>
+<li>タクマの遠Dの上半身無敵でビリーの6Aに勝つ話は<a href="./billy-counterplay-2004-2009.html">対ビリー</a>のページに、ケンスウの遠Bに遠Dで勝てる話は<a href="./kensou-2005-2009.html">ケンスウ</a>のページにあります。</li>
+<li>技ごとの硬直差（2008年の追加分を含む）は旧ページの<a href="/02takuma-kakuwaza-koutyokusa.html">KOF2002　タクマの各技のヒットorガード時の硬直差について</a>にあります。</li>
+</ul>
+</section>
+
+<section class="section"><h2>気になること</h2>
+<ul>
+<li>牽制目的の虎煌拳<span class="tag">強</span>の動作を見てから大ジャンプされた場合に、ジャンプ攻撃が確定するのかは疑問のままです。</li>
+<li>タクマでアテナにどう勝つか思いつかない（アテナのミス待ちになりそう）、と書いています。</li>
+</ul>
+</section>
+
+<section class="section"><h2>関連ページ</h2>
+<ul>
+<li><a href="/02takuma-rennzokuwaza.htm">KOF2002タクマ連続技</a>（旧ページ）</li>
+<li><a href="/02takuma-kakuwaza-koutyokusa.html">KOF2002　タクマの各技のヒットorガード時の硬直差について</a></li>
+<li><a href="/02takuma-crush.htm">KOF2002クラッシュ攻略（対タクマ）</a>（旧ページ）</li>
+<li><a href="/02takuma-crush-kyouhienn-hanngeki.html">KOF2002クラッシュ攻略（対タクマ－強飛燕疾風脚ガード後の確定反撃について）</a></li>
+</ul>
+</section>
+
+<section class="section"><h2>出典</h2>
+<ul>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/20621509">2005/05/01：02：タクマ</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/30673864">2005/08/25：02：タクマ（立ち回りメモ）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/50046775">2005/09/19：02：タクマ（調整案）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/50076062">2005/09/29：02：タクマ（めくりについて）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/50082623">2005/10/02：02：タクマ</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/50082732">2005/10/02：02：タクマ（各技のガークラ値）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/50144616">2005/10/25：02：タクマ（ガークラ狙いの動き）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/50227281">2005/11/27：02：タクマ（立ち回りメモ）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/50301819">2005/12/30：02：タクマ（立ち回り関係）</a></li>
+</ul>
+</section>
+
+</div></main></body></html>
