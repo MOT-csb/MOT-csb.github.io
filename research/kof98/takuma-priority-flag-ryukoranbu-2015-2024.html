@@ -1,13 +1,31 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'98 タクマ：弱龍虎乱舞の有利フラグによる硬直差変化｜Come sono bravo?</title><meta name="description" content="MOT本人の2015年のフラグ検証と2024年の-5F／-16F差を時系列で保存"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:1010px}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.article .scroll{overflow-x:auto;max-width:100%}.article table{border-collapse:collapse;min-width:580px;width:100%}.article td,.article th{border:1px solid var(--line,#aab);padding:10px;text-align:left;vertical-align:top}.article th{background:var(--soft,#edf1ed)}.article .note{padding:12px 16px;border-left:4px solid var(--accent,#56745f);background:var(--soft,#edf2ed)}.article a{overflow-wrap:anywhere}.article .meta{font-size:.9rem;color:var(--muted,#666)}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/kof-top.html">KOF</a><span aria-hidden="true"> / </span><a href="/kof98-top.html">KOF'98</a><span aria-hidden="true"> / </span><a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'98 タクマ：弱龍虎乱舞の有利フラグによる硬直差変化</h1><p class="meta">2026年11月19日再編集。MOT本人のX投稿アーカイブからの復元です。確認済み・本人評価・未検証の仮説を区別し、</p>
-<h2>同じ弱龍虎乱舞でもガード後の硬直差が11F違う</h2>
-<p>2024年12月29日、MOTは<strong>タクマの弱龍虎乱舞</strong>について、タクマ側の優先権の状態によってガード後の硬直差が異なると説明しています。</p>
-<div class="scroll"><table><thead><tr><th>タクマ側の状態</th><th>本人の記録</th><th>両者の差</th></tr></thead><tbody><tr><td>優先権あり（有利フラグ）</td><td>タクマ側-5F</td><td>なしの状態と11F差</td></tr><tr><td>優先権なし</td><td>タクマ側-16F</td><td>ありの状態と11F差</td></tr></tbody></table></div>
-<p>本人は<strong>ヒットストップ11Fが硬直差に影響している</strong>と記載した一方、2024年当時は「理由は不明」と明言していました。<strong>これは2024年時点の研究史です。</strong>2026年10月の調査では、タクマと防御側の処理順により、ガード側が参照するタクマの攻撃コマ／着地コマのヒットストップ属性が異なることが判明しました。<a href="./priority-flag-11f-test-matrix.html">11F差の機構説明</a>／<a href="/research/kof-series/priority-flag-processing-order.html">98・2002の共通仕様</a>を参照。<strong>理由不明のままではありません。</strong></p>
-<h2>2015年：緊急回避ではフラグが切り替わらない</h2>
-<p>2015年7月17日、MOTはKOF'96からNWまでのヒットフラグが<strong>緊急回避で切り替わるか</strong>を検証し、KOF'98ではタクマの弱龍虎乱舞、2002ではキムの弱飛翔脚を使いました。その結果、<strong>緊急回避ではフラグは切り替わらない</strong>と報告しています。</p>
-<p>同日、タクマ側が有利フラグを持つ状況を作って<strong>前転→弱龍虎乱舞で反撃を誘って狩る</strong>一発ネタを提案。しかしこれは「使えるかも」という<strong>戦術仮説</strong>であって、実戦で反撃狩りが成立したという記録ではありません。</p>
-<h2>検証用の比較項目</h2>
-<div class="scroll"><table><thead><tr><th>固定したい要素</th><th>比較条件</th></tr></thead><tbody><tr><td>優先権</td><td>タクマあり／なし</td></tr><tr><td>緊急回避</td><td>あり／なし。ただし2015年の本人検証ではフラグ変化なし</td></tr><tr><td>弱龍虎乱舞</td><td>ガード時の硬直差とヒットストップ</td></tr><tr><td>内部原因</td><td>ヒットストップとガード判定の時間配分を切り分ける</td></tr></tbody></table></div>
-<p class="note">2015年の「前転を使って乱舞を狙う」という着想と、2024年の「硬直差が11F変化する」という値は相互に関係するものの、<strong>狙った状況を安定して作る手順は今回の資料だけでは確定しません。</strong></p>
-<h2>本人の原資料</h2><ul><li><a href="https://x.com/mot_csb/status/622009026641932288">2015/07/17：緊急回避ではヒットフラグが切り替わらないという本人の実験</a></li><li><a href="https://x.com/mot_csb/status/622010295519588352">2015/07/17：前転→弱龍虎乱舞を使った反撃狩りの構想</a></li><li><a href="https://x.com/mot_csb/status/1873264964879958151">2024/12/29：優先権あり-5F／なし-16Fと理由未解明の説明</a></li></ul>
-<p>関連：<a href="/research/kof98/guard-input-superflash-98-vs-02.html">ガード入力と暗転の作品差</a>／<a href="/kof-kininaru.html#kof98">未解決事項リスト</a>。</p><p><a href="./index.html">← KOF'98攻略研究アーカイブへ戻る</a></p></div></main><footer class="footer"><div class="wrap">MOT攻略研究アーカイブ</div></footer></body></html>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'98 タクマ：弱龍虎乱舞の有利フラグによる硬直差変化｜Come sono bravo?</title><meta name="description" content="MOT本人の2015年のフラグ検証と2024年の-5F／-16F差を時系列で保存"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:1010px}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.article .scroll{overflow-x:auto;max-width:100%}.article table{border-collapse:collapse;min-width:580px;width:100%}.article td,.article th{border:1px solid var(--line,#aab);padding:10px;text-align:left;vertical-align:top}.article th{background:var(--soft,#edf1ed)}.article .note{padding:12px 16px;border-left:4px solid var(--accent,#56745f);background:var(--soft,#edf2ed)}.article a{overflow-wrap:anywhere}.article .meta{font-size:.9rem;color:var(--muted,#666)}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/kof-top.html">KOF</a><span aria-hidden="true"> / </span><a href="/kof98-top.html">KOF'98</a><span aria-hidden="true"> / </span><a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'98 タクマ：龍虎乱舞［弱］のガード後硬直差が11F変わる</h1>
+<p>タクマの龍虎乱舞［弱］は、ガードされた場合でも<strong>タクマが先に処理されるかどうか</strong>によって硬直差が変わります。</p>
+<div class="scroll"><table><thead><tr><th>タクマ側の処理順</th><th>ガード側のヒットストップ</th><th>ガード後の硬直差</th></tr></thead><tbody>
+<tr><td>先に処理される（有利フラグ）</td><td>11F</td><td><strong>5F不利</strong></td></tr>
+<tr><td>後に処理される（不利フラグ）</td><td>0F</td><td><strong>16F不利</strong></td></tr>
+</tbody></table></div>
+<p>差は<strong>11F</strong>。同じ技を同じようにガードさせても、相手の反撃可能なタイミングが大きく変わります。ここでいう有利・不利フラグは、技をガードさせた後のフレーム有利・不利ではなく、<strong>2人のキャラクターの処理順</strong>を指します。</p>
+<h2>なぜ11F変わるのか</h2>
+<p>龍虎乱舞［弱］がガードされると、タクマは突進動作から着地動作へ移ります。この2つの動作では、ヒットストップを計算するための設定が異なります。</p>
+<ul>
+<li><strong>突進中の攻撃コマ：</strong>ヒットストップは0F。</li>
+<li><strong>着地動作の最初のコマ：</strong>ヒットストップは11F。</li>
+</ul>
+<p>タクマ側が先に処理される場合、タクマ自身の処理中に突進から着地へ切り替わってから、相手がガード時の停止時間を計算します。相手が参照するのは<strong>着地動作の11F</strong>です。</p>
+<p>逆にガード側が先に処理される場合、まだタクマは突進中です。相手は<strong>突進動作の0F</strong>を参照します。</p>
+<p>タクマ自身の停止はどちらの場合も0Fなので、ガードした相手だけが11F長く止まるかどうかが変わり、その差が硬直差に現れます。技の硬直が直接11F短縮されるのではありません。</p>
+<h2>前転から狙えるか？</h2>
+<p>緊急回避では、キャラクターの処理優先権が切り替わらないという記録があります。そのため、タクマが有利フラグを持つ状況で<strong>前転→龍虎乱舞［弱］</strong>を狙い、ガード後の隙の小ささを利用して反撃を誘う、という戦術案が考えられます。</p>
+<p>ただし、これは<strong>反撃を誘って狩れるかもしれない</strong>という着想です。実際の間合い、前転後の状況、相手の反撃技まで含めた成立条件は確定していません。</p>
+<h2>同じ仕組みがほかの技にもある？</h2>
+<p>この現象が起こるには、少なくとも<strong>攻撃が接触した後、攻撃側の処理中に次の動作へ切り替わり、その前後でヒットストップの設定が違う</strong>必要があります。単にガード後の動作が変わるだけでは十分ではありません。</p>
+<p>龍虎乱舞の強版・MAX版やほかのキャラクターの技に同じ差があるかは、別途確認が必要です。</p>
+<h2>関連資料</h2>
+<ul>
+<li><a href="https://x.com/mot_csb/status/622009026641932288">2015年7月17日：緊急回避とヒットフラグ</a></li>
+<li><a href="https://x.com/mot_csb/status/622010295519588352">2015年7月17日：前転から龍虎乱舞［弱］を狙う案</a></li>
+<li><a href="https://x.com/mot_csb/status/1873264964879958151">2024年12月29日：ガード時の-5F／-16F</a></li>
+<li><a href="./priority-flag-11f-test-matrix.html">龍虎乱舞［弱］と処理順の詳細</a></li>
+<li><a href="/research/kof-series/priority-flag-processing-order.html">有利・不利フラグと処理順の共通仕様</a></li>
+</ul>
+<p><a href="./index.html">KOF'98研究アーカイブへ戻る</a></p></div></main><footer class="footer"><div class="wrap">MOT攻略研究アーカイブ</div></footer></body></html>
