@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ケンスウの発生フレームとガード時の硬直差（2009年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body>
+<header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<section class="hero"><div class="wrap"><p class="breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof02um-top.html">KOF2002UM</a> / <a href="/research/kof2002um/index.html">研究アーカイブ</a></p><p class="kicker">KOF2002UM｜キャラクター別フレームデータ</p><h1>ケンスウの発生フレームとガード時の硬直差</h1><p>KOF2002UMのケンスウについて、各技の発生フレームと、ガードさせたときの硬直差を一覧にした表です。調査はなんたらくん・BRさんによるものです。無印KOF2002のデータは扱いません。</p></div></section><main class="main"><div class="wrap">
+
+<section class="section"><h2>記号と表の見方</h2>
+<ul>
+<li><strong>発生</strong>：攻撃判定が出るまでのフレーム数。<strong>ガード時の硬直差</strong>：ガードさせた後の有利（＋）・不利（－）のフレーム数。数値は原表の表記のままです。</li>
+<li>補足欄の「2段目G時」「密着G時」などは、その条件でガードさせたときの値であることを示します。「└」の行は、直前の技の段ごと・条件ごと・派生の値です。</li>
+<li><strong>単発／キャンセル</strong>：特殊技を単独で出した場合と、通常技からキャンセルして出した場合です。</li>
+<li>技の版は名前の後ろに<span class="tag">弱</span><span class="tag">強</span>で示します。</li>
+</ul>
+</section>
+
+<section class="section"><h2>技ごとの発生と硬直差</h2>
+<p>原表は区分の見出しを付けずに、通常技から順に並べています。</p>
+<table>
+<thead><tr><th>技</th><th>発生</th><th>ガード時の硬直差</th><th>補足</th></tr></thead>
+<tbody>
+<tr><td>近A</td><td>6F</td><td>+1F</td><td></td></tr>
+<tr><td>近B</td><td>5F</td><td>-1F</td><td></td></tr>
+<tr><td>近C</td><td>9F</td><td>-5F</td><td></td></tr>
+<tr><td>近D</td><td>6F</td><td></td><td></td></tr>
+<tr><td>└ [表ケンスウ]</td><td></td><td>-6F</td><td></td></tr>
+<tr><td>└ [裏ケンスウ]</td><td></td><td>-8F</td><td></td></tr>
+<tr><td>遠A</td><td>6F</td><td>+1F</td><td></td></tr>
+<tr><td>遠B</td><td>6F</td><td>-3F</td><td></td></tr>
+<tr><td>遠C[初段]</td><td>14F</td><td></td><td></td></tr>
+<tr><td>└ [2段目]</td><td></td><td>-7F</td><td></td></tr>
+<tr><td>遠D</td><td>9F</td><td>-8F</td><td></td></tr>
+<tr><td>屈A</td><td>4F</td><td>+1F</td><td></td></tr>
+<tr><td>屈B</td><td>7F</td><td>+1F</td><td></td></tr>
+<tr><td>屈C</td><td>8F</td><td>-3F</td><td></td></tr>
+<tr><td>屈D</td><td>8F</td><td>-8F</td><td></td></tr>
+<tr><td>CD</td><td>21F</td><td>-4F</td><td></td></tr>
+<tr><td>単発6A</td><td>18F</td><td>-6F</td><td>表ケンスウ</td></tr>
+<tr><td>単発6A</td><td>16F</td><td>-7F</td><td>裏ケンスウ</td></tr>
+<tr><td>キャンセル6A</td><td>18F</td><td>-7F</td><td>表裏同じ</td></tr>
+<tr><td>6B</td><td>13F</td><td>-1F～+4F</td><td>表裏同じ</td></tr>
+<tr><td>超球弾<span class="tag">弱</span></td><td>18F</td><td>-8F</td><td>密着G時</td></tr>
+<tr><td>超球弾<span class="tag">強</span></td><td>22F</td><td>-11F</td><td>密着G時</td></tr>
+<tr><td>龍連牙・地龍</td><td>12F</td><td>-12F</td><td>最終段G時</td></tr>
+<tr><td>龍連牙・天龍</td><td>8F</td><td></td><td></td></tr>
+<tr><td>龍顎砕<span class="tag">弱</span></td><td>8F</td><td></td><td></td></tr>
+<tr><td>龍顎砕<span class="tag">強</span></td><td>8F</td><td></td><td></td></tr>
+<tr><td>穿弓腿<span class="tag">弱</span></td><td>13F</td><td>-9F</td><td></td></tr>
+<tr><td>穿弓腿<span class="tag">強</span></td><td>15F</td><td>-13F</td><td></td></tr>
+<tr><td>龍爪撃<span class="tag">弱</span></td><td></td><td>+0F</td><td>最終段G時</td></tr>
+<tr><td>龍爪撃<span class="tag">強</span></td><td></td><td>-3F</td><td>最終段G時</td></tr>
+<tr><td>神龍凄煌裂脚</td><td>14F</td><td></td><td></td></tr>
+<tr><td>神龍天舞脚</td><td>10F</td><td></td><td></td></tr>
+<tr><td>MAX2</td><td>3F</td><td>-7F</td><td>密着G時</td></tr>
+</tbody>
+</table>
+</section>
+
+<section class="section"><h2>KOF2002（無印）からの変化</h2>
+<ul>
+<li>立ちC+D：動作開始直後に、食らい判定が後ろに下がらなくなったようです。</li>
+<li>神龍天舞脚：発生が早くなっているようです。弱攻撃キャンセルで連続技になったり、GCC+Dガード後の反撃に使えたりするかもしれない、としています。</li>
+</ul>
+</section>
+
+<section class="section"><h2>似ているが別の話</h2>
+<ul>
+<li>無印KOF2002のケンスウの硬直差は旧ページ<a href="/02kensou-kakuwaza-koutyokusa.html">KOF2002　ケンスウの各技のヒットorガード時の硬直差について</a>にあります。作品が違うので、この表とは別のデータです。</li>
+</ul>
+</section>
+
+<section class="section"><h2>気になること</h2>
+<ul>
+<li>神龍天舞脚の発生が早くなった点については、調査希望としています。</li>
+</ul>
+</section>
+
+<section class="section"><h2>関連ページ</h2>
+<ul>
+<li><a href="/research/kof2002/kensou-2005-2009.html">ケンスウ：遠Bと各キャラの対処・421D対空・龍爪撃でのGCC+D無効化・立ち回りと対ケンスウ</a>（無印KOF2002の研究）</li>
+<li><a href="./startup-frame-test-method-2009.html">発生フレームの計測法（2009年）</a></li>
+<li><a href="./index.html">KOF2002UM 研究アーカイブ</a></li>
+</ul>
+</section>
+
+<section class="section"><h2>出典</h2>
+<ul>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2009/06/20/122500">2009/6/20：02UM：ケンスウの発生＆硬直差フレーム</a></li>
+</ul>
+
+<p>記事の更新履歴：09/03/09作成、09/06/20更新</p>
+
+</section>
+
+</div></main></body></html>

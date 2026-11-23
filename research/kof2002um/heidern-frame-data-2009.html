@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ハイデルンの発生フレームとガード時の硬直差（2009～2010年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body>
+<header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<section class="hero"><div class="wrap"><p class="breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof02um-top.html">KOF2002UM</a> / <a href="/research/kof2002um/index.html">研究アーカイブ</a></p><p class="kicker">KOF2002UM｜キャラクター別フレームデータ</p><h1>ハイデルンの発生フレームとガード時の硬直差</h1><p>KOF2002UMのハイデルンについて、各技の発生フレームと、ガードさせたときの硬直差を一覧にした表です。調査はなんたらくんによるものです。ヒット時の硬直差は、ガード時の値に＋2Fすると求められます。無印KOF2002のデータは扱いません。</p></div></section><main class="main"><div class="wrap">
+
+<section class="section"><h2>記号と表の見方</h2>
+<ul>
+<li><strong>発生</strong>：攻撃判定が出るまでのフレーム数。<strong>ガード時の硬直差</strong>：ガードさせた後の有利（＋）・不利（－）のフレーム数。数値は原表の表記のままです。</li>
+<li>補足欄の「2段目G時」「密着G時」などは、その条件でガードさせたときの値であることを示します。「└」の行は、直前の技の段ごと・条件ごと・派生の値です。</li>
+<li><strong>強攻撃&gt;技</strong>：強攻撃から続けて技を出したときの値です（原表の表記）。</li>
+<li><strong>G不</strong>：ガード不能。</li>
+<li><strong>有利フラグ／不利フラグ</strong>：事前にこちらが攻撃をヒットかガードさせていると有利フラグが立ち、逆だと不利フラグが立ちます。</li>
+<li>技の版は名前の後ろに<span class="tag">弱</span><span class="tag">強</span>で示します。</li>
+<li>GC緊急回避された時の硬直差は、ガード時の値に＋8Fします。</li>
+</ul>
+</section>
+
+<section class="section"><h2>技ごとの発生と硬直差</h2>
+<h3>通常技</h3>
+<table>
+<thead><tr><th>技</th><th>発生</th><th>ガード時の硬直差</th><th>補足</th></tr></thead>
+<tbody>
+<tr><td>近A</td><td>4F</td><td>-4F</td><td></td></tr>
+<tr><td>近B</td><td>6F</td><td>-6F</td><td></td></tr>
+<tr><td>近C</td><td>6F</td><td>+0F</td><td>2段目G時</td></tr>
+<tr><td>近D</td><td>6F</td><td>-7F</td><td></td></tr>
+<tr><td>遠A</td><td>4F</td><td>-4F</td><td></td></tr>
+<tr><td>遠B</td><td>6F</td><td>-8F</td><td></td></tr>
+<tr><td>遠C</td><td>10F</td><td>-10F</td><td></td></tr>
+<tr><td>遠D</td><td>26F</td><td>-10F</td><td></td></tr>
+<tr><td>屈A</td><td>4F</td><td>-2F</td><td></td></tr>
+<tr><td>屈B</td><td>3F</td><td>-6F</td><td></td></tr>
+<tr><td>屈C</td><td>7F</td><td>-2F</td><td></td></tr>
+<tr><td>屈D</td><td>7F</td><td>-9F</td><td></td></tr>
+</tbody>
+</table>
+<h3>立ちCD</h3>
+<table>
+<thead><tr><th>技</th><th>発生</th><th>ガード時の硬直差</th><th>補足</th></tr></thead>
+<tbody>
+<tr><td>立ちCD</td><td>26F</td><td>-4F</td><td></td></tr>
+</tbody>
+</table>
+<h3>特殊技</h3>
+<table>
+<thead><tr><th>技</th><th>発生</th><th>ガード時の硬直差</th><th>補足</th></tr></thead>
+<tbody>
+<tr><td>6B</td><td></td><td></td><td></td></tr>
+<tr><td>└ [初段]</td><td>19F</td><td></td><td></td></tr>
+<tr><td>└ [2段目]</td><td>22F</td><td>-7F</td><td></td></tr>
+</tbody>
+</table>
+<h3>必殺技</h3>
+<table>
+<thead><tr><th>技</th><th>発生</th><th>ガード時の硬直差</th><th>補足</th></tr></thead>
+<tbody>
+<tr><td>クロスカッター<span class="tag">弱</span></td><td>18F?</td><td>-7F</td><td>密着G時／発生はもっと早いかも</td></tr>
+<tr><td>クロスカッター<span class="tag">強</span></td><td>18F?</td><td>-9F</td><td>密着G時／発生はもっと早いかも</td></tr>
+<tr><td>ムーンスラッシャー<span class="tag">弱</span></td><td></td><td></td><td></td></tr>
+<tr><td>└ [発生]</td><td>9F</td><td></td><td></td></tr>
+<tr><td>└ [相手ハイデルンで立ちG]</td><td></td><td>-24F</td><td></td></tr>
+<tr><td>└ [相手ハイデルンで屈みG]</td><td></td><td>-20F</td><td></td></tr>
+<tr><td>ムーンスラッシャー<span class="tag">強</span></td><td>10F</td><td>-26F</td><td></td></tr>
+<tr><td>ネックローリング(家庭用)</td><td>9F</td><td></td><td></td></tr>
+<tr><td>ストームブリンガー</td><td>9F</td><td></td><td></td></tr>
+<tr><td>強攻撃&gt;ストームブリンガー</td><td></td><td>-15F</td><td></td></tr>
+</tbody>
+</table>
+<h3>超必殺技</h3>
+<table>
+<thead><tr><th>技</th><th>発生</th><th>ガード時の硬直差</th><th>補足</th></tr></thead>
+<tbody>
+<tr><td>各種ファイナルブリンガー</td><td>6F</td><td></td><td></td></tr>
+<tr><td>ハイデルンエンド<span class="tag">弱</span></td><td></td><td></td><td></td></tr>
+<tr><td>└ [発生]</td><td>11F</td><td></td><td></td></tr>
+<tr><td>└ [有利フラグ]</td><td></td><td>-17F</td><td></td></tr>
+<tr><td>└ [不利フラグ]</td><td></td><td>-28F</td><td></td></tr>
+<tr><td>ハイデルンエンド<span class="tag">強</span></td><td></td><td></td><td></td></tr>
+<tr><td>└ [発生]</td><td>14F</td><td></td><td></td></tr>
+<tr><td>└ [有利フラグ]</td><td></td><td>-21F</td><td></td></tr>
+<tr><td>└ [不利フラグ]</td><td></td><td>-32F</td><td></td></tr>
+<tr><td>MAXハイデルンエンド</td><td></td><td></td><td></td></tr>
+<tr><td>└ [発生]</td><td>14F</td><td></td><td></td></tr>
+<tr><td>└ [有利フラグ]</td><td></td><td>-21F</td><td></td></tr>
+<tr><td>└ [不利フラグ]</td><td></td><td>-32F</td><td></td></tr>
+</tbody>
+</table>
+<h3>MAX2</h3>
+<table>
+<thead><tr><th>技</th><th>発生</th><th>ガード時の硬直差</th><th>補足</th></tr></thead>
+<tbody>
+<tr><td>MAX2</td><td></td><td></td><td></td></tr>
+<tr><td>└ [初段のロック部分]</td><td>12F</td><td>G不</td><td></td></tr>
+<tr><td>└ [衝撃波]</td><td></td><td>+13F</td><td>画面中央時</td></tr>
+</tbody>
+</table>
+</section>
+
+<section class="section"><h2>気になること</h2>
+<ul>
+<li>クロスカッター<span class="tag">弱</span>：発生18F?（発生はもっと早いかも）</li>
+<li>クロスカッター<span class="tag">強</span>：発生18F?（発生はもっと早いかも）</li>
+</ul>
+</section>
+
+<section class="section"><h2>関連ページ</h2>
+<ul>
+<li><a href="./startup-frame-test-method-2009.html">発生フレームの計測法（2009年）</a></li>
+<li><a href="./index.html">KOF2002UM 研究アーカイブ</a></li>
+</ul>
+</section>
+
+<section class="section"><h2>出典</h2>
+<ul>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2009/03/15/094900">2009/3/15：02UM：ハイデルンの発生＆硬直差フレーム</a></li>
+</ul>
+
+<p>記事の更新履歴：2010/8/27：最終更新（レイアウト変更）、2009/3/15：作成</p>
+
+</section>
+
+</div></main></body></html>
