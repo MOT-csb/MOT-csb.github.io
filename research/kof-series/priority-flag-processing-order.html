@@ -1,0 +1,90 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'98・2002の有利フラグ／不利フラグと処理順｜Come sono bravo?</title><meta name="description" content="KOF'98・2002の有利フラグ・不利フラグ・謎のフラグを統合。処理順、11F硬直差、投げ、当て身、暗転同時投げ、クリティカルの成立条件と未解決事項。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:1060px}.article h2{margin-top:2.3rem}.article h3{margin-top:1.4rem}.article a{overflow-wrap:anywhere}.scroll{overflow-x:auto}.article table{width:100%;border-collapse:collapse;min-width:680px}.article th,.article td{border:1px solid #aaa;padding:9px;vertical-align:top;text-align:left}.article th{background:var(--soft,#edf1ed)}.note{padding:12px 16px;border-left:4px solid #68856b;background:var(--soft,#eef3ef)}.small{font-size:.94rem}.article li{margin:.5em 0}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="./index.html">シリーズ共通研究</a></div></div><main class="main"><div class="wrap article">
+<h1>KOF'98・2002の有利フラグ／不利フラグ／謎のフラグ：処理順と実戦への影響</h1>
+<p class="note"><strong>研究の結論：</strong>有利フラグは、攻撃がフレーム上で何F有利かを示す値ではない。<strong>1フレーム中に1P・2Pのどちらのキャラクターを先に処理するかという順序</strong>を指す歴史的な呼称である。KOF'98とKOF2002ではそれぞれこの処理構造が確認されている。MOTが以前「謎のフラグ」「投げフラグ」「ヒットフラグ」と呼んだ諸現象の重要な共通基盤だが、<strong>同じフラグであらゆる現象が説明できるわけではない</strong>。</p>
+<p>このページは、MOTの2007年の謎のフラグ実験、2010～2015年の本人調査、2024年の本人再整理と、後年に確認されたKOF'98・2002の内部処理を結び直した横断索引。<strong>「作品別に確認された処理」「本人が実際に確認した現象」「過去の本人仮説」「条件未確定」を区別する。</strong></p>
+<h2>1. 名称・状態・更新</h2>
+<div class="scroll"><table><thead><tr><th>項目</th><th>判明している仕様</th><th>留保</th></tr></thead><tbody>
+<tr><td>有利フラグ</td><td>先に処理される側。攻撃・飛び道具の判定が相手に接触すれば、ガードされても当てた側が先になるよう順序更新の予約が入る。投げ成立でも並べ替えが行われる</td><td>現在のガード硬直差や体力優位を意味しない</td></tr>
+<tr><td>不利フラグ</td><td>後に処理される側。相手が先に動作状態を変更した後の情報を読む場合と、自分の処理を先に行って古い情報を読む場合とで結果が分かれる</td><td>必ず不利益になるという意味ではない。技・状況によって有利な結果もある</td></tr>
+<tr><td>ラウンド開始</td><td>1P側が先。MOTが2010・2011・2024年に記録</td><td>次の接触等で変わる</td></tr>
+<tr><td>切り替えのタイミング</td><td>接触判定が当てた側を記録し、キャラ2人の処理が終わる段階で次の並びを更新。<strong>接触した瞬間に、そのフレーム内で即座に順序が変わるわけではない</strong></td><td>入力→接触→更新→次のキャラ処理という各時点を分離することが重要</td></tr>
+<tr><td>見分け方</td><td>2011年のMOTは、フラグ側のキャラが手前に表示される現象、密着時の前後関係による判別を記録</td><td>表示の前後とキャラ処理順は別の管理情報。観察上の目安を内部の同一変数とみなさない</td></tr>
+<tr><td>緊急回避</td><td>2015年にMOTは'96～NWを対象に調べ、<strong>緊急回避自体でヒットフラグは切り替わらない</strong>と報告</td><td>技が別に相手へ触れた場合、前転後の攻防条件とは分ける</td></tr>
+</tbody></table></div>
+<p>攻撃が当たった側を優先するという仕様はKOF'98・2002の両方で個別に確認済み。ただし、<strong>攻撃・投げ・飛び道具・特殊な技自身の変更命令</strong>がすべて同じ瞬間・同条件で処理されるとまでは一般化しない。KOF2002には一部の技から処理順を自分へ切り替える動作もある。</p>
+<h2>2. なぜ1F単位の差が生まれるのか</h2>
+<ol><li>1フレーム中、<strong>先に処理するキャラA</strong>の状態が進む。</li><li>次に、<strong>後に処理するキャラB</strong>の状態が進む。</li><li>相手の今の動作・投げられる状態・攻撃判定などを読む処理があれば、<strong>相手を読む時点</strong>により結果が異なり得る。</li><li>ヒット・ガード処理や投げ成立などで次の並び順の更新が予約／実行される。</li></ol>
+<p>すべての技で差が出るわけではない。例えば<strong>攻撃側が接触後すぐ別モーションに変わり、前後でヒットストップ属性が違う場合</strong>、防御側がどちらの属性を読むかで停止時間が変わる。これは複数の技で実際に確認されている仕組みである。</p>
+<h3>ヒットストップ属性：'98と2002で確認された8種類</h3>
+<div class="scroll"><table><thead><tr><th>属性</th><th>攻撃側</th><th>防御側</th><th>意味</th></tr></thead><tbody>
+<tr><td>0</td><td>11F</td><td>11F</td><td>標準的な11F同士の例</td></tr><tr><td>1</td><td>7F</td><td>7F</td><td>短い停止</td></tr><tr><td>2</td><td>2F</td><td>2F</td><td>非常に短い停止</td></tr><tr><td>3</td><td>8F</td><td>11F</td><td>防御側が3F長い</td></tr><tr><td>4</td><td>0F</td><td>0F</td><td>停止がない属性</td></tr><tr><td>5</td><td>5F</td><td>13F</td><td>防御側が8F長い</td></tr><tr><td>6</td><td>32F</td><td>32F</td><td>長い停止。別の特殊処理を伴う技もある</td></tr><tr><td>7</td><td>15F</td><td>15F</td><td>長めの停止</td></tr>
+</tbody></table></div>
+<p>この表の数値は<strong>内部の属性対応表</strong>であり、技に当てた最終的な硬直差と同義ではない。属性の切り替え、先後処理、個別の上書き、後続動作によって結果は変わる。</p>
+<h2>3. 代表例：フラグでヒットストップ・硬直差が11F変わる</h2>
+<div class="scroll"><table><thead><tr><th>作品・技</th><th>攻撃側が先</th><th>防御側が先</th><th>確認された仕組み</th></tr></thead><tbody>
+<tr><td><strong>KOF'98 タクマ：龍虎乱舞［弱］、ガード時</strong></td><td>ガード側11F停止／タクマ側-5F</td><td>ガード側0F停止／タクマ側-16F</td><td>突進の攻撃コマが属性4（0F）。タクマの処理で着地コマの属性0（11F）へ切り替わる。ガード側が読むタイミングで11F差</td></tr>
+<tr><td><strong>KOF2002 キム：飛翔脚、ガード時</strong></td><td>ガード側11F停止、GC前転可能という本人記録</td><td>ガード側0F停止、GC前転不可という本人記録</td><td>攻撃コマの属性4（0F）→跳ね返りの属性0（11F）。キム自身の停止は0Fで、ガード側が参照する状態が異なる</td></tr>
+<tr><td><strong>KOF2002 アンヘル：レッドスカイ オブ ヤポネシア［弱］［強］、ガード時</strong></td><td>アンヘル側+6F</td><td>アンヘル側-5F</td><td>接触後に属性4→属性0へ切り替わる。11Fの違いが硬直差へ反映</td></tr>
+</tbody></table></div>
+<p>タクマの11F差と、2002のキム・アンヘルの11F差は<strong>同じ種類の読み取り順の問題</strong>として説明できる。一方、すべての乱舞・突進・空中技がこれに該当するわけではない。</p>
+<h3>アンヘル「じゃーん」連発への実戦反撃（2002）</h3>
+<p>MOTの2024年記事では、レッドスカイ オブ ヤポネシアを連続でガードする状況について、<strong>アンヘル側に有利フラグがあるなら連係の隙間6F</strong>（発生5F以内が割り込む／6Fは相打ち）と記録。<strong>アンヘル側が不利フラグなら隙間17F</strong>（発生16F以内が候補）としている。間合い・技の当たり判定も必要で、数値だけでは保証しない。</p>
+<p>関連：<a href="https://comesonobravo.hatenadiary.org/entry/503951873.html">MOTの2024年連係・割り込み記事</a>、<a href="https://comesonobravo.hatenadiary.org/entry/504333976.html">弱強とも+6F／-5Fと反撃技一覧</a>。</p>
+<h2>4. 投げの成否、ジャンプ回避、投げ相殺</h2>
+<p>投げる側は<strong>自分の処理の番で、相手のその時点の投げられる状態</strong>を確認する。相手が同じフレーム中にジャンプ予備動作・投げ無敵へ移ったかどうかは、処理順で変わり得る。2002のバイスのゴアフェスト対レバー上入れっぱなしの京について、MOTは有利側の投げに<strong>1F分の成立しやすさ</strong>を記録した。後年の内部確認は、この読み取り順の構造を裏づける。</p>
+<ul>
+<li><strong>2011年：</strong>庵の弱攻撃→クイックMAX発動→屑風について、弱攻撃ヒットの有利11Fに対し屑風発生12Fでもジャンプで回避できなくなるという本人記録。<strong>硬直中への確定投げではない</strong>ことと、投げ回避不能になる現象を分ける。屑風自身の投げ無敵のため相手の投げ相殺が成立しないという別条件もある。</li>
+<li><strong>2014年：</strong>同時通常投げを小ジャンプ着地に合わせた本人実験では、ジャンプ側に有利フラグがあると投げ相殺、不利フラグがあるとジャンプ側の通常投げ成立というケースを記録。特定の着地・同時押し条件であり、すべての投げ対投げに一般化しない。</li>
+<li><strong>2007年の2002研究：</strong>1Fコマンド投げ同士では必殺投げ対必殺投げ、超必殺投げ対超必殺投げの相殺、必殺投げ対超必殺投げの超必側勝利を記録。ただし<strong>原文は98未確認と明記</strong>。</li>
+</ul>
+<p>原資料：<a href="https://comesonobravo.hatenadiary.org/entry/2007/11/20/102031">2007年投げの同時成立</a>、<a href="https://comesonobravo.hatenadiary.org/entry/400519631.html">2014年6月の本人Xまとめ</a>。<a href="./knockback-normal-throw.html">ノックバックなし技と通常投げ</a>は近接するが、投げられ判定と通常投げ失敗後の分岐を扱う<strong>別の共通仕様</strong>である。</p>
+<h2>5. 当て身投げの成否（2002）</h2>
+<p>当て身側の当て身判定・自分の食らい判定・相手の攻撃判定が同時に重なる条件では、処理順によって<strong>当て身成功</strong>と<strong>相手の打撃ヒット</strong>に分かれることがある。</p>
+<ol><li><strong>当て身側が先：</strong>相手のまだ有効な攻撃判定を捕まえる→相手側の攻撃処理が抑制される→当て身成功。</li><li><strong>打撃側が先：</strong>打撃が食らい判定へ当たる→その攻撃判定が使用済みになる→当て身側は対象を捕まえられず打撃ヒット。</li></ol>
+<p>これは2002について処理の順番と判定使用済みの仕組みが確認されている。<strong>KOF'98の全当て身技について同じ処理が確定したとは書かない</strong>。</p>
+<h2>6. クリティカルとオフェンシブ／ディフェンシブ（KOF'98）</h2>
+<p>クリティカル自体の抽選は、該当する攻撃コマで<strong>1/4</strong>。処理順によって「クリティカルが出る確率」が変わるのではない。発生時に双方の停止時間を32へ設定するが、<strong>後に処理される攻撃側がその値を自分の通常停止値で上書きするかどうか</strong>で挙動が異なる。</p>
+<div class="scroll"><table><thead><tr><th>順番</th><th>攻撃側の停止</th><th>防御側の停止</th><th>呼び分け</th></tr></thead><tbody>
+<tr><td>攻撃側が先</td><td>後からクリティカル値32に上書きされ、長く停止</td><td>32F</td><td>オフェンシブ</td></tr><tr><td>防御側が先</td><td>後から通常の停止値に上書きされる</td><td>32F</td><td>ディフェンシブ</td></tr></tbody></table></div>
+<p>クリティカル属性を持つコマは限定されるため、技を出せば常に25％でクリティカルになるという意味ではない。<a href="../kof98/critical-offensive-defensive-processing-order.html">クリティカルの詳細</a>に、ラルフキックや真吾の対象・例外を整理済み。</p>
+<h2>7. 謎のフラグと超必殺技・暗転同時投げ</h2>
+<p>2007年11月のMOT本人は、1F予備動作を挟んで暗転する超必殺技と1Fコマンド投げが同時に成立した場面で、<strong>超必側にフラグがあれば暗転して投げ不成立、投げ側にフラグがあれば投げ成立で暗転しない</strong>と記録。テリーのパワーゲイザーにも同じことが起きると述べている。これは当時の「謎のフラグ」の代表例。</p>
+<p>一方、2024年の本人による<strong>暗転同時投げ</strong>のまとめは、<strong>コマンド成立と同時に暗転する0F暗転技へ、有利フラグを持つ側が投げを合わせる</strong>別の状況を扱う。KOF98・99・2002等で、投げのダメージ・気絶値が前に出していた技の数値に置き換わったり、投げの動作が変化するという記録がある。こちらを2007年の1F予備動作型の勝敗条件と混同しない。</p>
+<p><strong>例外：</strong>KOF2002のレオナの覚醒には暗転前1Fがあるが、投げ無敵がないため、タイミングを1Fずらせば暗転同時投げが成立するとの本人確認。<strong>この例では投げ側に有利フラグがなくても狙える</strong>と2024年に整理されている。一般の0F暗転技での有利フラグ条件を、全例に無理に当てはめない。</p>
+<p>原資料：<a href="https://comesonobravo.hatenadiary.org/entry/2007/11/20/100432">2007年の謎のフラグ</a>、<a href="https://comesonobravo.hatenadiary.org/entry/503737736.html">2024年の暗転同時投げ</a>、<a href="https://comesonobravo.hatenadiary.org/entry/503737633.html">レオナの覚醒という例外</a>。</p>
+<h2>8. 起き上がり・ガード・見切れてバグは分けて扱う</h2>
+<ul>
+<li><strong>同時空振りからのガード／後退（KOF'98）：</strong>2015年、MOTは同キャラが同じ技を同時に空振りし、後ろ入れっぱなしにすると、有利フラグ側は立ちガード、不利側は後退すると記録。<strong>どの技・間合い・再現手順かは元X本文にない。</strong></li>
+<li><strong>起き上がりのガード不能：</strong>2015年、MOTは飛び道具等を特定タイミングで重ねる場合のヒットフラグ影響を疑問として提示。<strong>この投稿だけでは内部原因を確定できない</strong>。既知のガードポーズ解除や投げ成立とは別に照合する。</li>
+<li><strong>最低打点小JB対GCCD：</strong>2016年、MOTは京の小JBを最低打点で出すと大門のGCCDをガードでき、1P／2P・有利／不利フラグは関係なさそうだと報告。<strong>フラグと無関係な条件もある</strong>例。</li>
+<li><strong>見切れてバグ：</strong>KOF'98千鶴の三籟の布陣、KOF'96・'97・'98の大門による弱地雷震と打撃の特殊な組み合わせで本人報告あり。<strong>弱地雷震の再現では大門が不利フラグであることが条件</strong>。一方、本人の2024年記事ではKOF2001・2002では再現できず、2002では弱地雷震がヒットしたとする。<strong>「同じフラグなら同じバグが起きる」とは扱わない。</strong></li>
+</ul>
+<p>原資料：<a href="https://x.com/mot_csb/status/644072227709673472">2015年空振り実験</a>、<a href="https://x.com/mot_csb/status/658779661145542657">2015年ガード不能の疑問</a>、<a href="https://x.com/mot_csb/status/735409346394349568">2016年の最低打点小JB</a>、<a href="https://comesonobravo.hatenadiary.org/entry/504336762.html">2024年「見切れてバグ」</a>。詳細：<a href="../kof98/daimon-unfavorable-flag-mikirete-2024.html">大門と不利フラグの見切れてバグ</a>。</p>
+<h2>9. 作品別・確認状態のまとめ</h2>
+<div class="scroll"><table><thead><tr><th>論点</th><th>KOF'98</th><th>KOF2002</th></tr></thead><tbody>
+<tr><td>キャラの処理順に対応する有利／不利フラグ</td><td>内部処理まで確認</td><td>内部処理まで確認</td></tr>
+<tr><td>ヒット・ガードによる順序更新</td><td>確認済み</td><td>確認済み（飛び道具も所有者側）</td></tr>
+<tr><td>ヒットストップ属性の8分類</td><td>確認済み</td><td>確認済み</td></tr>
+<tr><td>接触後のアニメ切替で11F差</td><td>タクマ龍虎乱舞［弱］</td><td>キム飛翔脚、アンヘル レッドスカイ</td></tr>
+<tr><td>投げ成立の先後とジャンプ移行の1F差</td><td>個別成立例の整理が必要</td><td>処理構造と本人の具体例あり</td></tr>
+<tr><td>当て身・攻撃判定の処理順</td><td>本資料では同一処理未確認</td><td>判定使用済みを含む仕組みを確認</td></tr>
+<tr><td>クリティカルの先後別停止</td><td>内部処理を確認</td><td>同じクリティカル仕様は前提にしない</td></tr>
+<tr><td>暗転同時投げ</td><td>本人の現象報告あり</td><td>本人の現象報告、レオナ覚醒例外あり</td></tr>
+<tr><td>弱地雷震の見切れてバグ</td><td>本人が再現を報告</td><td>同条件で再現できなかったと本人報告</td></tr>
+</tbody></table></div>
+<h2>10. これから埋めるべき空白</h2>
+<ol><li><strong>フラグの遷移表：</strong>ラウンド開始→通常技ヒット／ガード→飛び道具→投げ→相打ち→同時投げ→緊急回避の各事例で、旧い観測と作品別の処理を一致させる。</li>
+<li><strong>全技への適用：</strong>攻撃コマと次コマでヒットストップ属性が異なり、同じ手番内に切り替わる技を98・2002別に一覧化する。強版・MAX版へ勝手に拡張しない。</li>
+<li><strong>投げの入力成立と投げ判定：</strong>同時成立時の投げ無敵・ジャンプ予備動作・投げ相殺・暗転前後を1F単位で分類する。</li>
+<li><strong>歴史的名称の対応：</strong>2007年「謎のフラグ」、後年の「投げフラグ」「ヒットフラグ」「有利フラグ」を、どの現象を指していたか元原稿単位で照合し、別の状態変数と混同しない。</li>
+<li><strong>個別バグ：</strong>起き上がりのガード不能、千鶴の分身と弱地雷震の見切れてバグに関する成立条件を、確認済みの処理順だけで説明できるか確認する。</li>
+</ol>
+<h2>一次資料・各作品の詳細記事</h2>
+<ul>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2007/11/20/100432">2007年：02の「謎のフラグ」</a>／<a href="https://comesonobravo.hatenadiary.org/entry/2007/11/20/102031">同時コマンド投げ</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/503951873.html">2024年：アンヘル・レッドスカイへの割り込み</a>／<a href="https://comesonobravo.hatenadiary.org/entry/503737888.html">キムの飛翔脚対策</a></li>
+<li><a href="../kof98/priority-flag-11f-test-matrix.html">KOF'98 タクマ弱龍虎乱舞：11F差の仕組み</a>／<a href="../kof98/critical-offensive-defensive-processing-order.html">KOF'98のクリティカルと処理順</a></li>
+<li><a href="../kof98/takuma-priority-flag-ryukoranbu-2015-2024.html">タクマの2015～2024年の本人調査と戦術案</a>／<a href="../kof98/daimon-unfavorable-flag-mikirete-2024.html">大門の見切れてバグ</a></li>
+<li><a href="../kof98/index.html">KOF'98研究アーカイブ</a>／<a href="../kof2002/index.html">KOF2002研究アーカイブ</a>／<a href="./index.html">KOFシリーズ共通研究</a>／<a href="/kof-kininaru.html#kof98">気になること</a></li>
+</ul>
+<p class="small">数値・成立条件はMOTの一次資料と既存の研究記録に限定。本文は読者向けに結果と処理機構を説明したもので、解析アドレス・内部の作業ログ・未確認の再現実験を掲載していない。</p></div></main><footer class="footer"><div class="wrap">Come sono bravo?</div></footer></body></html>
