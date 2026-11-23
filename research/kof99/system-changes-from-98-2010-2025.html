@@ -1,0 +1,68 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'99：KOF'98からの変化とシステムの細部｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:950px}.article h2{margin-top:2em}.article p,.article li{line-height:1.85}.scroll{max-width:100%;overflow-x:auto}.article table{border-collapse:collapse;min-width:600px;width:100%}.article th,.article td{padding:9px;border:1px solid #b4c2b7;text-align:left;vertical-align:top}.article th{background:#edf3ef}.ver{display:inline-block;font-size:.78em;line-height:1.4;border:1px solid #7f9a86;border-radius:4px;padding:0 .4em;margin-left:.35em;background:#f6faf7}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof99-top.html">KOF'99</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article">
+<h1>KOF'99：KOF'98からの変化とシステムの細部</h1>
+<p>KOF'99は、KOF'98から技のキャンセルや発生、対空技などが弱くなる方向で調整されています。一方で、交代したキャラがゲージ0から始まること、暗転前に数Fかかる技が多いこと、新キャラの多くにジャンプ攻撃後の着地屈ガード無敵があることなど、前後の作品とは違う仕組みもあります。</p>
+
+<h2>原則：KOF'98から弱くなった部分</h2>
+<p>98→99の調整について、2021年9月の投稿では「できることを減らす」、「強かった部分を弱くする」だったと振り返り、翌日に「KOF97→KOF98→KOF99がずっとマイルド調整でしたね。」と続けています。具体的には次のような違いが挙げられています。</p>
+<div class="scroll"><table><thead><tr><th>項目</th><th>KOF'97・'98</th><th>KOF'99</th></tr></thead><tbody>
+<tr><td>屈B→屈A→必殺技</td><td>当たり前のようにつながる</td><td>つながらなくなっている（原文ではキャラを特定していません）</td></tr>
+<tr><td>キャンセル</td><td>キャンセルできた技</td><td>キャンセルがきかなくなった技がある</td></tr>
+<tr><td>技の発生</td><td>―</td><td>発生が遅くなった技がある</td></tr>
+<tr><td>対空技</td><td>―</td><td>軒並み弱くなっている</td></tr>
+<tr><td>通常投げ関係</td><td colspan="2">98と基本的には同じっぽい（2021年5月の見立て）</td></tr>
+</tbody></table></div>
+<p>補足：KOF'99でも、<a href="./robert-crouching-matchups-combos-2021.html">ロバート</a>の屈B→屈A→強旋燕連舞脚のように、相手によって成立する屈B→屈A→必殺技は記録されています。</p>
+<p>MAX版超必殺技の調整については、KOF'99のMAX版超必殺技は体力が減ると出せるので、性能がいいとそれはそれで不評を買う可能性もあった、という見方を示しています。新キャラの一部の技は尖った性能だという評価は<a href="./gauge-priority-mode-management-2021-2024.html">ゲージ運用とモードの考え方</a>にあります。</p>
+<p>補足：KOF'99では、ガードクラッシュモーションやST呼び出しにも無敵があります。</p>
+
+<h2 id="gauge0">交代したキャラはゲージ0から始まる</h2>
+<p>KOF'99では、出てきたキャラのゲージが0の状態で始まります。KOF'98や'02なら、こちらにゲージがあればゲージ消費連続技などで相手の1～2番手を倒し、3番手同士の対決に持ち込みやすくなります。KOF'99ではそれができないので、3番手が相手の1～2番手と戦う状況はかなり厳しくなります。</p>
+<p>この状況について、次のように場合分けしています。</p>
+<div class="scroll"><table><thead><tr><th>3番手が出てきたときの状況</th><th>考え方</th></tr></thead><tbody>
+<tr><td>①相手も3番手で、体力が減っている</td><td>そのままリードを広げる</td></tr>
+<tr><td>②相手も3番手で、お互い体力満タン</td><td>ゲージとSTボム次第</td></tr>
+<tr><td>③相手が1～2番手</td><td>厳しい。相手にゲージとSTボムが多いほど厳しい。ゲージがなく積極的に動けないので、体力を減らさないようにリスクを取らないのが大事かもしれない</td></tr>
+</tbody></table></div>
+<p>③の場合は、ひたすら固く立ち回って3番手同士の対決に持ち込み、そこで超必殺技やSTボムから勝負を仕掛けて体力の逆転を狙う流れがよさそう、としています。</p>
+<p>逆に1～2番手は、ゲージを余らせたまま負ける可能性があるので、できれば計画的に使い切ります。超必殺技を決める機会が少ないなら、GCCDやGC前転→かわし移動攻撃に使う、ゲージが3つたまったらカウンターモード発動から勝負をかける（攻撃力が上がるのも大きい）、という使い方が挙げられています。どの使い方がよいかは、キャラによって変わってきそうだとしています。</p>
+<p>出場順そのものの考察（1番手は相手のゲージがない状態が多い、など）は<a href="./gauge-priority-mode-management-2021-2024.html">ゲージ運用とモードの考え方</a>にあります。</p>
+
+<h2>暗転前の時間と空中追撃の設定</h2>
+<ul>
+<li>KOF'98や'02では、暗転する技のほとんどは暗転前に1Fかかります。KOF'99では暗転前に数Fかかる技が多く、暗転の処理が98とも02とも違います。ラルフの馬乗りバルカンパンチのように、動作開始と同時に暗転する技もあります（<a href="./ralf-frame-and-strategy-2024.html">ラルフ</a>）。</li>
+<li>技には、空中追撃に使えない設定のものがあります。同じ技でも作品によって使えたり使えなかったりし、ラルフの馬乗りは99では空中追撃に使えますが、02では使えなくなっています。</li>
+<li>空中追撃に使えない技でも、カウンターヒット直後にはつながる場合があります。何Fまでつながるかは確認していません。</li>
+</ul>
+
+<h2>例外その1：着地屈ガード無敵が新キャラに多い</h2>
+<p>ジャンプ攻撃をヒットまたはガードさせて、着地に屈ガードを入力すると、着地後の屈ガードポーズ中に無敵になる現象があります。KOF'99では、KOF'98に登場しなかったキャラにこの無敵があるものが多く、なぜかKOF'98からいるラルフにもあります。KOF'98のラルフのJBでは無理で、屈ガードになります。</p>
+<p>この無敵はGCCDされなくても起こせます。例えばラルフ同キャラ戦で次のような動きができます。</p>
+<ol>
+<li>中JD（早出し）をガードさせ、着地に屈Gを入力する。</li>
+<li>相手ラルフの屈Dが空振りする。</li>
+<li>屈Dで差し返す。</li>
+</ol>
+<p>JB・JD・JCDで可能です。キャラ別の結果は<a href="./landing-crouch-guard-invincible-2015-2025.html">着地屈ガード無敵</a>にあります。</p>
+
+<h2>例外その2：GCCDカウンター発動からの地上引き込み</h2>
+<p>地上引き込みは、地上カウンターヒット直後の2F以内に打撃や飛び道具が当たり、相手が浮かずに地上で食らう現象です。KOF'99では、GCCDカウンター発動でも地上引き込みができます。具体的な手順は投稿に書かれていません。2020年の投稿では、分かったときはうれしかったものの、「安定させられる人いないだろうという判断をした」と振り返っています。</p>
+
+<h2>似ているが別の話：竜巻槍打のバグ</h2>
+<p>竜巻槍打バグはKOF2002UMの現象として知られていますが、KOF'99でも怪現象が出るようです。この仕様自体はKOF'99から存在しているが、KOF'99にはクイック発動がないので極端なことにはならない、という見立てです。KOF'99で竜巻槍打と重ねた飛び道具の勝ち負けは<a href="./athena-special-phoenix-st-2015-2024.html">アテナ</a>のページにあります。</p>
+
+<h2>気になること</h2>
+<ul>
+<li>着地屈ガード無敵について、「なんで99でいきなり可能になったのかが謎」。</li>
+<li>KOF'99は相手を画面端に追い詰めると対空ストライカーで攻めにくくなるらしいが、ウィップはそれを無視できるかも？</li>
+<li>竜巻槍打のバグは、KOF2002UMのコンボ動画でリョウの弱暫烈拳ヒット後に押し合い判定が消えていたように見えたので、KOF'99でもその方向から存在を確かめるとよいかもしれません。</li>
+<li>GCCDカウンター発動の地上引き込みについての返信では、KOF2000で仕様が変わったという情報を受けています。ここでいう仕様が何かは、前後の投稿が残っていないため分かりません。</li>
+</ul>
+
+<h2>出典（X投稿）</h2>
+<p>調整：<a href="https://x.com/mot_csb/status/1434906836877021187">98→99の調整</a>（2021/9/6） ／ <a href="https://x.com/mot_csb/status/1435056000269111296">ずっとマイルド調整</a> ／ <a href="https://x.com/mot_csb/status/1396314684647612420">屈B→屈A→必殺技</a>（2021/5/23） ／ <a href="https://x.com/mot_csb/status/1381866311739867136">対空技</a>（2021/4/13） ／ <a href="https://x.com/mot_csb/status/1396040549799325700">通常投げ関係</a>（2021/5/22） ／ <a href="https://x.com/mot_csb/status/1393393082662416386">MAX版超必殺技</a>（2021/5/15） ／ <a href="https://x.com/mot_csb/status/1808599525377876032">98と比べて弱体化</a>（2024/7/3） ／ <a href="https://x.com/mot_csb/status/1363411756765257731">ガードクラッシュモーションとST呼び出しの無敵</a>（2021/2/21）</p>
+<p>ゲージ：<a href="https://x.com/mot_csb/status/1401192231373926402">3番手登場時の場合分け</a>（2021/6/5） ／ <a href="https://x.com/mot_csb/status/1401192807545507840">相手1～2番手</a> ／ <a href="https://x.com/mot_csb/status/1401193105290776583">固く立ち回る</a> ／ <a href="https://x.com/mot_csb/status/1401194781821136904">1～2番手のゲージ</a> ／ <a href="https://x.com/mot_csb/status/1401194960012025858">キャラによる違い</a></p>
+<p>暗転・空中追撃：<a href="https://x.com/mot_csb/status/1364418134321418240">99の暗転の処理</a>（2021/2/24） ／ <a href="https://x.com/mot_csb/status/29631493071">空中追撃に使えない設定</a>（2010/11/4） ／ <a href="https://x.com/mot_csb/status/29631718848">CH直後</a></p>
+<p>着地屈ガード無敵：<a href="https://x.com/mot_csb/status/1389586284885135364">GCCDされなくても起こせる</a>（2021/5/4） ／ <a href="https://x.com/mot_csb/status/1389597464248815616">98のラルフでは無理</a> ／ <a href="https://x.com/mot_csb/status/1389752778289868801">98→99で追加されたキャラ</a>（5/5） ／ <a href="https://x.com/mot_csb/status/1657238463635402752">KOF98に登場しなかったキャラに無敵が多い</a>（2023/5/13）</p>
+<p>そのほか：<a href="https://x.com/mot_csb/status/1311688050859147264">GCCDカウンター発動の地上引き込み</a>（2020/10/1） ／ <a href="https://x.com/mot_csb/status/29631943302">地上引き込みの条件</a>（2010/11/4） ／ <a href="https://x.com/mot_csb/status/1907036992048865725">竜巻槍打の仕様は99から</a>（2025/4/1） ／ <a href="https://x.com/mot_csb/status/1758360395436474551">99でも怪現象</a>（2024/2/16） ／ <a href="https://x.com/mot_csb/status/658593142413783040">ウィップと対空ストライカー</a>（2015/10/26）</p>
+<p>関連：<a href="./gauge-priority-mode-management-2021-2024.html">ゲージ運用とモードの考え方</a> ／ <a href="./landing-crouch-guard-invincible-2015-2025.html">着地屈ガード無敵</a> ／ <a href="./ralf-frame-and-strategy-2024.html">ラルフ</a> ／ <a href="./index.html">KOF'99研究アーカイブ</a></p>
+</div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
