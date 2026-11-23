@@ -1,0 +1,91 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>多段化：出せない超必殺技の入力で通常技が多段ヒットする（KOFシリーズ）｜Come sono bravo?</title><meta name="description" content="KOF'96・'99などで、超必殺技を出せない状態で通常技などを超必殺技のコマンドでキャンセルしようとすると、その技が多段ヒットする現象。作品・技ごとの例と、似ている別の現象。">
+<link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:960px}.article table{min-width:0;width:100%}.article th,.article td{overflow-wrap:anywhere;vertical-align:top}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}.lead{font-size:1.05em}.vt{display:inline-block;font-size:.85em;line-height:1.45;padding:0 6px;margin-left:4px;border:1px solid var(--line,#ccd);border-radius:4px;font-weight:600;white-space:nowrap}.legend{font-size:.92em;color:var(--sub,#555)}.src li{font-size:.92em}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h2{font-size:1.15em;margin-top:1.2rem}details.more h3{font-size:1.05em}@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}.article th,.article td{min-width:96px}}</style></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/kof-top.html">KOF</a><span aria-hidden="true"> / </span><a href="/research/kof-series/">シリーズ共通</a><span aria-hidden="true"> / </span><b>多段化</b></div></div><main class="main"><div class="wrap article"><h1>多段化：出せない超必殺技の入力で通常技が多段ヒットする</h1>
+
+<p class="lead">KOF'96やKOF'99では、超必殺技を出せない状態で、通常技などを超必殺技のコマンドでキャンセルしようとすると、その技が多段ヒットするようになります。これを「多段化」と呼んでいます。超必殺技は出ませんが、ヒット数が増え、硬直差も変わります。</p>
+
+<p>たとえばKOF'96のギースは、超必殺技を出せないときに屈Cを超必殺技のコマンドでキャンセルしようとすると、屈Cが2ヒットします。そのため、J攻撃＞屈C（2ヒット）という連続技になります。</p>
+
+<p class="legend">記号：＞＝キャンセルなしでつなぐ。Gはガードさせたとき、Hはヒットさせたときの硬直差（＋が有利）です。</p>
+
+<h2>やり方</h2>
+<ol class="flow">
+<li>ゲージがないなど、超必殺技を出せない状態にする。</li>
+<li>通常技（作品によっては特殊技）を出し、キャンセルできるタイミングで超必殺技のコマンドを入力する。</li>
+<li>超必殺技は出ず、元の技が多段ヒットする。</li>
+</ol>
+<p>なぜ多段ヒットになるのか、内部の流れはまだ分かっていません。2010年には「96の超必殺技入力による多段も、おそらくバグでしょうけど楽しめましたし」と書いています。</p>
+
+<h2>作品ごとの違い</h2>
+<table>
+<thead><tr><th>作品</th><th>多段化</th></tr></thead>
+<tbody>
+<tr><td>KOF'96</td><td>通常技でできる</td></tr>
+<tr><td>KOF'99</td><td>特殊技などでできる</td></tr>
+<tr><td>KOF2000・2001</td><td>できたはず、という記憶（マリーとクーラでできた覚えがある）</td></tr>
+<tr><td>KOF'98〜2002</td><td>多段化の記録はありません。同じ入力で、特殊技がキャンセル版の性能になる「特殊技仕込み」が知られています</td></tr>
+</tbody>
+</table>
+
+<h2>KOF'96の例</h2>
+<table>
+<thead><tr><th>キャラ・技</th><th>多段化したとき</th><th>メモ</th></tr></thead>
+<tbody>
+<tr><td>ギース 屈C</td><td>2ヒット</td><td>J攻撃＞屈C（2ヒット）の連続技</td></tr>
+<tr><td>リョウ 近B</td><td>3ヒット。G−1F・H＋1F（通常はG−5F・H−3F）</td><td>—</td></tr>
+<tr><td>リョウ 近C</td><td>3ヒット。G＋1F・H＋3F（通常はG−5F・H−3F）</td><td>—</td></tr>
+<tr><td>クラーク 近B</td><td>G＋1F・H＋3F（通常はG−1F・H＋1F）</td><td>攻撃避けのコマンドでも2ヒットになる（下の詳しい話）</td></tr>
+<tr><td>レオナ 斜めジャンプD</td><td>2ヒット。気絶値も上がる</td><td>多段化させた斜めJDを2セット当てると気絶リーチ</td></tr>
+</tbody>
+</table>
+
+<details class="more"><summary>詳しい話：レオナのガード崩し、多段化と補正、入力のコツ</summary>
+<h3>レオナ：多段化するかどうかで崩す</h3>
+<p>KOF'96のレオナは、Vスラ（Vスラッシャー）が出せないときに、JDやJCDを多段化するかどうかでガード崩しができそう、と2011年に書いています。多段化した斜めJDは2ヒットして気絶値も上がり、2セット当てると気絶リーチになります（2020年）。</p>
+
+<h3>クラーク：攻撃避けのコマンドでも2ヒット</h3>
+<p>KOF'96のクラークは、近距離立ちBを当てたときに攻撃避け（B＋C＋D、大門とクラーク専用）のコマンドを入れても、2ヒットに多段化できます（2004年の優先順位の分析より）。遠Bに攻撃避けを入れても多段ヒットにはなりませんでした（2011年）。</p>
+<p>クラークの近B（ガード）→スーパーアルゼンチンバックブリーカー（ボタン押しっぱなしで投げ成立を継続）の連係は、近Bを立ちガードすればリバーサル後方大ジャンプで回避できた覚えがある、と2020年に書いています。クラークが近Bを多段化してくれれば立ちガードに移行できるので狙いやすそう、という見立てです。この投稿には作品名が書かれていません。</p>
+
+<h3>多段化と補正（KOF2000）</h3>
+<p>多段化すると半数補正（2段目以降のダメージなどが半分ずつになる補正）がかかるので、ガードクラッシュ値はそこまで劇的には増えないだろう、と2021年に答えています。ただ、アーマーモード中はガードクラッシュ値が2倍になるようなので、半数補正がかかっても高い数値になりそうです。「多分ですけど」という前置きつきの見立てです。</p>
+
+<h3>入力のコツ</h3>
+<p>ふっとばし攻撃の入力（C＋D）で多段化が安定するのは、ふっとばし自体の同時押し猶予が長いせいかもしれない、と2021年に書いています（「よくわかってない」とのこと）。この投稿にも作品名は書かれていません。</p>
+</details>
+
+<h2>似ているが別の話</h2>
+<ul>
+<li><strong>特殊技仕込み（KOF'98〜2002・2002UM）</strong>：超必殺技を出せない状態で通常技キャンセル超必殺技を入力すると、そのあと生で出した特殊技がキャンセル版の性能になります。2002UMでも可能でした（BRさんが確認）。多段化とは別の現象です。</li>
+<li><strong>仕込み地震判定コンボ</strong>：ダウンさせる技に出せない超必殺技のコマンドを仕込むと、ダウン中の相手に地震判定が当たるようになります。→ <a href="/kof-kakuteizirai.html">確定地雷震まとめ</a>（「似ているが別の話」の節）</li>
+<li><strong>出せない超投げで地震判定を無効化</strong>：起き上がりに出せない超投げを入力して確定地雷震を回避する方法です。→ <a href="/kof-kakuteizirai.html">確定地雷震まとめ</a></li>
+<li><strong>飛び道具の多段化</strong>：飛び道具を消しつつ相手に攻撃をヒットさせると飛び道具の判定が復活し、本来多段ヒットしない技が多段ヒットしたり、半数補正のはずが単発補正になったりする、という仕様だと思う、と2015年に書いています。</li>
+<li><strong>技そのものが多段ヒットするもの</strong>：KOF'98の表ビリーのMAX版超火炎旋風棍は、最後に飛ばす飛び道具部分が多段化します。→ <a href="/research/kof98/billy-max-fire-wheel-pseudo-corner-2008.html">MAX超火炎旋風棍からの疑似端現象</a></li>
+</ul>
+<p>出せない技の入力が別の挙動につながる現象の比べ方は、<a href="/research/kof98/daimon-jigoku-jirai-combo-2023.html">KOF'98 大門：地獄極楽入力を挟む弱地雷震</a>の「不成立コマンドを利用する現象の整理」にもまとめています。</p>
+
+<h2>気になること</h2>
+<ul>
+<li>なぜ多段ヒットになるのか。KOF'98以降でも多段化は起きるのか。</li>
+<li>KOF'99・2000で、どのキャラのどの技が多段化するか。KOF'99・2000の通常技・特殊技の多段化は、やる極さんがまとめていました。</li>
+<li>KOF2000・2001のマリーとクーラは「できた覚えあり」という記憶で、条件は未確認です。</li>
+</ul>
+
+<details class="more"><summary>出典</summary>
+<ul class="src">
+<li>多段化の定義（KOF'96・'99）：本人の説明（2026/11/23）</li>
+<li><a href="/kof-huragu.html">KOFシリーズ フラグ関係まとめ</a>（KOF'96：通常技に超必殺技入力、KOF'99：特殊技に超必殺技入力、KOF2000・01など：マリーとクーラでできた覚えあり）</li>
+<li><a href="/kousinnyotei.htm">更新予定</a>（「KOF'96・'99・2000の通常技＆特殊技の多段化」）</li>
+<li><a href="/’９６ギース.htm">KOF'96 ギース</a>、<a href="/96geese-rennzokuwaza.htm">KOF'96 ギース連続技</a>（2004年）。→ <a href="/research/kof96/geese-jc-max-loop.html">ギースの研究ページ</a></li>
+<li>「KOF96：リョウのフレームデータ」（2011/10/31）→ <a href="/research/kof96/ryo-original-frame-data-2011.html">リョウの原本フレーム表</a></li>
+<li>「クラークのフレームデータ」（2011/9/23）→ <a href="/research/kof96/clark-frame-2011.html">クラークのフレームデータ</a></li>
+<li><a href="/96yu-zyunni.html">KOF'96の各行動の優先順位の分析について</a>（2004年）</li>
+<li>「2011/10のツイッターメモその２（キャラ別編）」（2011/10/21）</li>
+<li>「02UM：キャンセル版特殊技の各種フレーム調査方法」（2009/3/16）</li>
+<li>X投稿：<a href="https://x.com/mot_csb/status/26536311738">96の超必殺技入力による多段（2010/10/6）</a>、<a href="https://x.com/mot_csb/status/29657399198">シリーズを通してまとめたい（2010/11/4）</a>、<a href="https://x.com/mot_csb/status/112047057426059264">クラークの遠B（2011/9/9）</a>、<a href="https://x.com/mot_csb/status/556804745533194240">飛び道具の判定の復活（2015/1/18）</a>、<a href="https://x.com/mot_csb/status/1300026387747618816">クラークの近B→SAB（2020/8/30）</a>、<a href="https://x.com/mot_csb/status/1328349202619920384">レオナの斜めJD（2020/11/16）</a>、<a href="https://x.com/mot_csb/status/1372552067319926786">ふっとばし入力（2021/3/18）</a>、<a href="https://x.com/mot_csb/status/1397735250197835778">半数補正とアーマーモード（2021/5/27）</a></li>
+</ul>
+<h3>更新履歴</h3>
+<ul class="src"><li>2026/11/24 作成</li></ul>
+</details>
+
+<p><a href="/research/kof-series/">KOFシリーズ共通仕様・バグ研究へ</a> ／ <a href="/kof-huragu.html">フラグ関係まとめへ</a></p>
+</div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
