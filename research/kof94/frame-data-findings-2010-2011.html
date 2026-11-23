@@ -1,0 +1,73 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'94：フレームデータを並べて分かったこと｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:950px}.article h2{margin-top:2em}.article p,.article li{line-height:1.85}.scroll{max-width:100%;overflow-x:auto}.article table{border-collapse:collapse;min-width:600px;width:100%}.article th,.article td{padding:9px;border:1px solid #b4c2b7;text-align:left;vertical-align:top}.article th{background:#edf3ef}.ver{display:inline-block;font-size:.78em;line-height:1.4;border:1px solid #7f9a86;border-radius:4px;padding:0 .4em;margin-left:.35em;background:#f6faf7}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof94-top.html">KOF'94</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article">
+<h1>KOF'94：フレームデータを並べて分かったこと（2010～2011年）</h1>
+<p>全キャラのフレームデータを並べると、対戦中には気づきにくい性質がいくつも見えてきます。リョウの屈B→屈Dはためキャンなしで連続技になり、京の屈B→近Cには1Fの猶予があります。システム面では、236コマンドの受付が12Fと短く、ダッシュはコマンド成立後の5F間のレバー操作で出なくなることがあります。</p>
+<p>このページでは、数値の表には現れにくい気づきをまとめます。各技の数値は<a href="./frame-data-sources-2010-2011.html">フレームデータ原資料一覧</a>と各チームのページにあります。表記は「発生」が攻撃判定の出るまでのフレーム数、「G」「H」がガード後・ヒット後の硬直差（+なら攻撃側有利）です。</p>
+
+<h2>システム全体</h2>
+<h3>入力の受付</h3>
+<ul>
+<li><strong>236コマンドの受付時間は12F</strong>と見られます。'98や2002は20Fあるので、かなり短く感じます。『ALL ABOUT KOF'95』にはレバー入力の数×4Fと書かれており、236はレバー入力が3つで12Fなので、KOF'94でも同じ考え方が当てはまるのかもしれません。</li>
+<li><strong>ダッシュ</strong>は、6N6のコマンドが成立してから5F後に動作を始めます。この5Fの間にレバーを6かNに入れるとダッシュが出ないようです。ダッシュが妙に出にくく感じるのはこのせいかもしれません。6と6の間は9F空いても成立し、間のNは8・7・4・1・2でも代用できます。</li>
+<li><strong>昇りジャンプ攻撃</strong>を出したいとき、レバー上よりボタンの方が一瞬だけ早いと、ジャンプはできるのにジャンプ攻撃が出ないタイミングがあります。'98や2002にはない現象です。</li>
+</ul>
+<h3>ジャンプとジャンプ攻撃</h3>
+<ul>
+<li>ほとんどのキャラのジャンプの予備動作は2Fしかありません。そのため、起き攻めで見切りにくいめくりジャンプ攻撃を狙われたら、リバーサルのジャンプで回避を狙うのもよさそうです。KOF'95も予備動作が3Fとそこそこ短いので、有効かもしれません。</li>
+<li>ジャンプ強攻撃は、ジョーを調べた時点で「J強攻撃は発生3F持続8Fがデフォっぽい」と書いています。</li>
+<li>ジャンプ弱攻撃はほぼ全部、着地まで攻撃判定が続きます。ユリのJAだけは例外的にジャンプの途中で技が終わります。</li>
+</ul>
+<h3>挑発で相手のゲージを減らす</h3>
+<ol>
+<li>Cボタンを押して5F後から、挑発動作とともに相手のパワーゲージが減り始めます。</li>
+<li>減少は16Fかけて続きます。</li>
+<li>14F目で挑発を前進や後退でキャンセルしても、16F目まで減少が続きます。そのため、14F目でキャンセルするのが最適のタイミングのはずです。</li>
+</ol>
+<h3>底力（体力0ドットの攻撃力上昇）</h3>
+<p>残り体力が0ドットになると攻撃力が上がります。これを底力と呼んでいます。たとえば、ヘビィ・D！の超必殺技を体力0ドット＋パワーMAXで決めると、相手の体力が満タンでもKOできます。KOF'95にもあると思っていたものの、どうもないようです（<a href="./kof94-95-system-differences-2004-2005.html">'94・'95のシステム比較</a>）。</p>
+
+<h2>キャラ別</h2>
+<div class="scroll"><table><thead><tr><th>キャラ</th><th>分かったこと</th></tr></thead><tbody>
+<tr><td>リョウ</td><td>屈Dの発生は4Fで、「あのリーチで4Fとか鬼技ですね」と評しています。屈Bのヒット後は+4Fなので、屈B→屈Dは猶予なしですが、ためキャンなしでも連続技になります。調べ終えた感想は「KOF94リョウの優遇されっぷりに軽く驚かされる結果になりました。」</td></tr>
+<tr><td>ジョー</td><td>屈B→近Cまたは近Dが余裕で連続技になります。</td></tr>
+<tr><td>京</td><td>近Cの発生は2Fです。屈Bのヒット後は+3Fなので、屈B→近Cには1Fの猶予があります（それまでは猶予なしだと思っていた）。奈落落としには着地硬直がまったくないようです。</td></tr>
+<tr><td>テリー</td><td>ライジングタックルの発生が8Fと遅いので、詐欺飛びがしやすい部類かもしれません。</td></tr>
+<tr><td>ケンスウ</td><td>ジャンプが遅いだけでなく、技の発生が全体的に遅めです。技の振りが遅いのは'96からではなく'94からでした。立ちCD→弱超球弾にすれば飛ばれても対空が間に合いやすいかと考えたものの、立ちCDと強攻撃のガード硬直が変わらないので意味がない、と分かりました。</td></tr>
+<tr><td>キング</td><td>「高性能すぎだろこのキャラ……」</td></tr>
+<tr><td>ラルフ・クラーク</td><td>2人の間には微妙な違いがあります。ラルフの遠Cには、屈Bは対策にならないようです。</td></tr>
+<tr><td>ユリ</td><td>遠Dの出る前の動作は2002とほとんど同じで、判定も2002と同じように推移します（出始めは腰から上が無敵）。全体的に、動作は凝っているものの発生が遅い印象です。</td></tr>
+<tr><td>ヘビィ・D！</td><td>R.S.D. <span class="ver">弱</span>は発生6F、ガード後+6F、ヒット後+10Fで、「なかなかヤクイです」。</td></tr>
+<tr><td>ラッキー</td><td>サイクロンブレイクは、相手キャラによって強攻撃から連続技になるかどうかや硬直差が違うようです。</td></tr>
+<tr><td>舞</td><td>ムササビの舞にリョウのスルーアタックを合わせたところ、潰されました。攻撃判定がかなり低い位置まであるようです。</td></tr>
+</tbody></table></div>
+
+<h2>攻略本の記述との違い</h2>
+<ul>
+<li>入力受付についてのゲーメストの調査結果には間違いがあるようです。分かりやすい例では、リョウは613と入力すれば覇王翔吼拳は暴発しません（ゲーメストには暴発すると書かれていました）。</li>
+<li>ゲーメストのKOF'94ムックには、チャンの連続技としてJD＞屈Dが載っていたと記憶していますが、間違いだった気がする、と書いています。</li>
+</ul>
+
+<h2>データから考えた攻め方</h2>
+<h3>ハイデルン：攻撃避けへの対応</h3>
+<p>攻撃避けに対しては、ダッシュストームブリンガーが一番リターンが大きい行動です。ただし避けを見てから確定させるのは難しい（無理かもしれない）ので、屈D・遠B・立ちCDを避けの終わりに重ねるのが無難です。避ける側はそれを見越して、避け→弱の無敵技か、もう一度避けるか、という読み合いになります。</p>
+<h3>タクマ：強飛燕疾風脚の後の追撃</h3>
+<p>強飛燕疾風脚がヒットした後の追撃をJDにしている対戦を見て、強虎煌拳にすれば気絶になったはず、と書いています。</p>
+<h3>アテナ：通常投げを垂直ジャンプでかわした後</h3>
+<p>背の高いキャラの通常投げを垂直ジャンプでかわせれば、フェニックスアロー <span class="ver">弱</span>の多段ヒットで気絶を狙えるかもしれません。ただ、相手が投げ暴れをしていなかった場合、アテナのジャンプが遅すぎて危険な気もする、としています。</p>
+
+<h2>気になること</h2>
+<ul>
+<li>アンディの斬影拳を画面端でヒットさせても距離が離れない理由。「もしかしたら空中判定だったりするのかな？」</li>
+<li>近距離でのサイクロンブレイクの擬似中段は、見てからガードできるレベルなのか。</li>
+<li>ハイデルンのスルーアタック＞ストームブリンガーで空キャン＞屈Dや立ちCDが連続技になるか。</li>
+<li>ハイデルンの屈Dを攻撃避けでかわせた場合に、発生の早い技（キムや舞の超必殺技など）が確定するキャラはいないか。</li>
+<li>画面端でダウンさせた場合には端めくりがあります。これについての読み合いの材料。</li>
+<li>リョウのループ連続技（原文の表記で「屈B→屈C→強弱飛燕疾風脚→屈B→…」）の可否と猶予。</li>
+</ul>
+<p>ムーンスラッシャーの大ダメージについては<a href="./player-side-frame-differences-2011-2023.html">1P・2Pの違い</a>にまとめています。</p>
+
+<h2>出典（X投稿）</h2>
+<p>システム：<a href="https://x.com/mot_csb/status/21900396477808642">236コマンドの受付</a>（2011/1/3） ／ <a href="https://x.com/mot_csb/status/24640440649121792">ダッシュ</a>（1/11） ／ <a href="https://x.com/mot_csb/status/24630925006475264">昇りジャンプ攻撃</a>（1/11） ／ <a href="https://x.com/mot_csb/status/31880823326113792">ジャンプの予備動作</a>（1/31） ／ <a href="https://x.com/mot_csb/status/19596907680628736">J強攻撃とジョー</a>（2010/12/28） ／ <a href="https://x.com/mot_csb/status/26535975071">ユリのJA</a>（2010/10/6） ／ <a href="https://x.com/mot_csb/status/24642388819447809">挑発</a>（2011/1/11） ／ <a href="https://x.com/mot_csb/status/31881649012604928">底力</a>（1/31） ／ <a href="https://x.com/mot_csb/status/23700920445440000">端めくり</a>（1/8）</p>
+<p>キャラ別：<a href="https://x.com/mot_csb/status/20133409108000768">リョウの調査予定</a>（2010/12/29） ／ <a href="https://x.com/mot_csb/status/20139421923807232">リョウの屈D</a> ／ <a href="https://x.com/mot_csb/status/20150859455275008">リョウの感想</a> ／ <a href="https://x.com/mot_csb/status/22588070918356992">京の近C</a>（2011/1/5） ／ <a href="https://x.com/mot_csb/status/22589003685433344">屈B→近Cの猶予</a> ／ <a href="https://x.com/mot_csb/status/22606748426706944">奈落落とし</a> ／ <a href="https://x.com/mot_csb/status/18947958879813633">ライジングタックル</a>（2010/12/26） ／ <a href="https://x.com/mot_csb/status/18947709306146816">クラックの硬直差</a> ／ <a href="https://x.com/mot_csb/status/21381151985770496">ケンスウの発生</a>（2011/1/2） ／ <a href="https://x.com/mot_csb/status/21382473099255810">立ちCD→超球弾</a> ／ <a href="https://x.com/mot_csb/status/21496707762098176">キング</a> ／ <a href="https://x.com/mot_csb/status/26587862598164480">ラルフ・クラーク</a>（1/16） ／ <a href="https://x.com/mot_csb/status/27733406800420864">ユリの遠D</a>（1/19） ／ <a href="https://x.com/mot_csb/status/27710425697099776">R.S.D.</a> ／ <a href="https://x.com/mot_csb/status/28064239306407936">サイクロンブレイク</a>（1/20） ／ <a href="https://x.com/mot_csb/status/27727029029830656">ムササビの舞</a>（1/19）</p>
+<p>攻略本との違い・攻め方：<a href="https://x.com/mot_csb/status/21899776110891009">ゲーメストの受付調査</a>（2011/1/3） ／ <a href="https://x.com/mot_csb/status/18131483080261632">チャンの連続技</a>（2010/12/24） ／ <a href="https://x.com/mot_csb/status/20319140661170176">ハイデルンと攻撃避け</a>（2010/12/30） ／ <a href="https://x.com/mot_csb/status/20319656082415616">スルーアタック＞ブリンガー</a> ／ <a href="https://x.com/mot_csb/status/20318397824770048">屈Dを避けたとき</a> ／ <a href="https://x.com/mot_csb/status/27928785525411841">タクマの追撃</a>（2011/1/20） ／ <a href="https://x.com/mot_csb/status/27930190101352449">アテナ</a>（1/20） ／ <a href="https://x.com/mot_csb/status/21382994195382272">斬影拳</a>（1/2）</p>
+<p>関連：<a href="./frame-data-sources-2010-2011.html">フレームデータ原資料一覧</a> ／ <a href="./frame-data-art-of-fighting-team-2010-2011.html">龍虎チーム</a> ／ <a href="./frame-data-fatal-fury-team-2010-2011.html">餓狼チーム</a> ／ <a href="./frame-data-japan-team-2010-2011.html">日本チーム</a> ／ <a href="./frame-data-ikari-team-2010-2011.html">怒チーム</a> ／ <a href="./frame-data-women-team-2011.html">女性格闘家チーム</a> ／ <a href="./frame-data-sports-team-2011.html">アメリカンスポーツチーム</a> ／ <a href="./frame-data-psycho-team-2010-2023.html">サイコソルジャーチーム</a> ／ <a href="./jump-airtime-2003-vs-2011.html">ジャンプ時間</a> ／ <a href="./index.html">KOF'94研究アーカイブ</a></p>
+</div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
