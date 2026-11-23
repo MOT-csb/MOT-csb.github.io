@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ビリーの使い方：6Aと屈みCの連係・GCC+D無効化・入力のコツ・連続技のダメージ・ガークラ値（2005～2009年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body>
+<header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<section class="hero"><div class="wrap"><p class="breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof02-top.html">KOF2002</a> / <a href="/research/kof2002/index.html">研究アーカイブ</a></p><p class="kicker">KOF2002（無印）｜キャラクター研究</p><h1>ビリーの使い方：6Aと屈みCの連係・GCC+D無効化・入力のコツ・連続技のダメージ・ガークラ値</h1><p>ビリーの6Aはガークラ値が14+14と高く、屈みC≫6Aだけで48たまります。ただし屈みCからの6Aは2段目が空振りしやすく、密着でもユリ・メイリー・クーラの屈み食らいには1段目が空振りして連続技になりません。ここでは2005～2009年のブログ記事から、ビリーの立ち回り、6Aと屈みCの使い分け、GCC+Dを空振りさせる方法、入力のコツ、連続技のダメージ、ガークラ値をまとめます。ビリーと戦う側の対策は<a href="./billy-counterplay-2004-2009.html">対ビリーのページ</a>にあります。KOF2002UMは扱いません。</p></div></section><main class="main"><div class="wrap">
+
+<section class="section"><h2>記号と用語</h2>
+<ul>
+<li><strong>＞</strong>：キャンセルなしでつなぐ ／ <strong>≫</strong>・<strong>→</strong>：キャンセルしてつなぐ ／ <strong>～</strong>：追加入力・続けて行動する</li>
+<li><strong>G／H</strong>：ガード時／ヒット時の硬直差。＋は有利、－は不利。</li>
+<li><strong>6A</strong>：レバー6とAで出す2段の特殊技。<strong>三節棍</strong>：三節棍中段打ち（追加技が<strong>火炎</strong>三節棍中段打ち）。<strong>強襲飛翔棍</strong>：飛び上がって突進する必殺技。<strong>雀落とし</strong>：対空の必殺技。<strong>旋風棍</strong>：連打の必殺技。<strong>大旋風</strong>：超必殺技。<strong>超火炎旋風棍</strong>：超必殺技。</li>
+<li><strong>火龍追撃棍</strong>（214+B）：上段の当て身投げ。<strong>水龍追撃棍</strong>（214+D）：中段の当て身投げ。どちらも当て身が成功すると打撃（発動攻撃）が出ます。</li>
+<li><strong>GCC+D</strong>（GCCD）：ガード中にC+Dで出すガードキャンセル吹き飛ばし攻撃。<strong>Q発動</strong>：クイック発動。<strong>どこキャン</strong>：発動中にできる、必殺技を必殺技でキャンセルする操作。</li>
+<li><strong>ガークラ値</strong>：ガードさせたときにたまるガードクラッシュの値。</li>
+</ul>
+<p>性能の評価は<a href="/02billy-seinouhyouka.htm">ビリー性能評価</a>、基本の連続技は<a href="/02billy-rennzokuwaza.htm">ビリー連続技</a>にあります。</p>
+</section>
+
+<section class="section"><h2>立ち回りの基本</h2>
+<p>ビリーは6Aを軸に発生とリーチに優れた技が多く、ほぼ全キャラに五分以上の立ち回りができます。2005年8月の立ち回りメモです。</p>
+<table>
+<thead><tr><th>場面</th><th>使う技</th></tr></thead>
+<tbody>
+<tr><td>地上の牽制</td><td>6A、屈みA、三節棍<span class="tag">弱</span><span class="tag">強</span></td></tr>
+<tr><td>ジャンプでの牽制</td><td>JC、JC+D、垂直通常JA</td></tr>
+<tr><td>ジャンプ防止</td><td>6A、遠B</td></tr>
+<tr><td>対空</td><td>屈みC、上段当て身（火龍追撃棍）、後方昇りJC、GCC+D</td></tr>
+<tr><td>起き上がり</td><td>ガードが基本</td></tr>
+<tr><td>暴れ</td><td>屈みC</td></tr>
+<tr><td>カウンター（ぶっぱなし）</td><td>大旋風<span class="tag">強</span></td></tr>
+<tr><td>反撃</td><td>6A、屈みA、屈みC</td></tr>
+<tr><td>接近</td><td>中JC+D、ダッシュ～6A</td></tr>
+<tr><td>J攻撃の後に出す技</td><td>屈みC</td></tr>
+<tr><td>崩し</td><td>6Aを中心にしたガードクラッシュ、昇りJB、昇り垂直通常JC</td></tr>
+<tr><td>垂直ジャンプへの対策</td><td>雀落とし<span class="tag">弱</span></td></tr>
+<tr><td>GCC+D対策</td><td>屈みC≫中段当て身（水龍追撃棍）</td></tr>
+<tr><td>ゲージため</td><td>6Aをガードさせてためる</td></tr>
+</tbody>
+</table>
+<h3>技ごとのメモ</h3>
+<ul>
+<li><strong>小JC+D：</strong>飛び込みで、相手の高い位置のJ攻撃に勝ちやすいのが地味に強い点です。</li>
+<li><strong>6B：</strong>先端でガードさせれば五分のようなので、活用できないか考えています。</li>
+<li><strong>大旋風<span class="tag">強</span>：</strong>強強襲飛翔棍より全身無敵が長いので、ぶっぱなすならこちらの方がよい場面があるかもしれない、としています。</li>
+<li><strong>MAX2：</strong>相手をつかんでから乱舞するタイプの超必殺技には、原則として負けます。勝てるのはリョウ、ロバート、タクマ、キム、表社（MAX2）、アンヘルの乱舞くらいです。</li>
+<li><strong>強襲飛翔棍<span class="tag">強</span>の着地位置：</strong>出した直後からレバーを4に入れっぱなし、離す、6に入れっぱなしで、着地位置がかなり変わります。ぶっぱなしでガードされた後、レバーを倒す方向を変えれば、相手が反撃をミスすることもありそうだ、としています。</li>
+<li><strong>端に追い込んだとき：</strong>相手にゲージがない状況では、追い詰められた側の前転の頻度がとても重要です。前転の頻度はプレイヤーによって全然違うので、対戦前にその状況での相手の前転の頻度を観察しておくとよい、と書いています。</li>
+</ul>
+</section>
+
+<section class="section"><h2>6Aと屈みCの使い分け</h2>
+<h3>屈みC≫6Aか、屈みC≫弱三節棍～火炎か</h3>
+<p>基本的には弱三節棍～火炎の方がよい、としています。三節棍～火炎がヒットすればダウンを奪え、ダッシュで端に追い詰めつつ起き攻めを狙えるからです。ガードされた場合、火炎の後はビリーが不利ですが、反撃を受ける危険はまずありません。暴れで屈みCを出すことを考えても、ある程度のヒット率が期待できます。ただし端に追い詰めた場合は6Aの方がよい、としています。</p>
+<table>
+<thead><tr><th>連係</th><th>ダメージ</th><th>ガークラ値</th><th>ゲージ増加</th></tr></thead>
+<tbody>
+<tr><td>屈みC≫6A（2段）</td><td>計26</td><td>計48</td><td>計26</td></tr>
+<tr><td>屈みC≫三節棍<span class="tag">弱</span>～火炎</td><td>計32</td><td>計38</td><td>計38</td></tr>
+</tbody>
+</table>
+<h3>6Aの2段目が空振りする条件</h3>
+<ul>
+<li>屈みCからキャンセルして出した6Aは、2段目が空振りしやすくなります。弱攻撃からのキャンセルではノックバックが短いので、まず空振りしません（2005年2月）。</li>
+<li>端以外で、屈みCを密着でガードさせていない場合に空振りしやすく、実戦ではJ攻撃＞屈みC≫6Aのときによく起こります（相手側から見た話として2005年6月）。</li>
+</ul>
+<h3>屈んだ相手への屈みC≫6A</h3>
+<p>ユリ、メイリー、クーラが相手だと、密着でも屈みC≫6Aの6A1段目が空振りして連続技になりません。これらのキャラは、屈みCと6A2段目の間の隙に無敵技などで割り込めます。チンとチョイの屈み食らいには連続技になります。密着以外は確認していません。</p>
+<p>近C始動なら、近C≫ディレイ6Aとすれば上の3人にも連続技にできます（2008年9月）。</p>
+<h3>端の相手への6A＞屈みC</h3>
+<p>端の相手に6A＞屈みCが連続技になるかどうかを全キャラで調べた記事が、おえっぷさんのブログで2005年9月30日に公開されていました。2008年12月に「kof02ビリー前A＞下C全キャラ考察」として紹介しています。</p>
+</section>
+
+<section class="section"><h2>GCC+Dを空振りさせる</h2>
+<p>ビリーには屈みC≫214Dという有名なGCC+D無効化の方法があります。ただし、GCC+Dされなかった場合にビリーが不利になるという難点があり、相手がしっかりしていると反撃される恐れもあります。反撃されなくても仕切り直しになります。ほかにも次の方法があります。</p>
+<h3>密着6A1段目</h3>
+<table>
+<thead><tr><th>密着6A1段目にGCC+Dされたときの結果</th><th>相手キャラ</th></tr></thead>
+<tbody>
+<tr><td>6Aの2段目がヒットする</td><td>ウィップ、テリー</td></tr>
+<tr><td>両者空振りする</td><td>バイス（ビリー＋12F）、ラルフ（ビリー＋10F）</td></tr>
+</tbody>
+</table>
+<p>6A1段目なら、ガードされても有利を取れます。相手が起き上がりにリバーサル大Jをしていた場合は空中ヒットしてダウンを奪えます。無効化できる相手は少ないものの、狙う価値はあるとしています。</p>
+<p>通常技≫214Dと比べると、次の違いがあります。</p>
+<ul>
+<li>対ウィップ：どちらでもGCC+Dを無効化できます。</li>
+<li>対テリー：密着だと通常技≫214DがGCC+Dに負けるので、密着時だけ6Aが有効です。</li>
+<li>対バイス：密着だと通常技≫214Dの攻撃部分が空振りするので、密着時だけ6Aが有効です。</li>
+<li>対ラルフ：間合いに関係なく通常技≫214Dの攻撃部分が空振りします。密着時は6Aが有効で、それ以外の距離は工夫が必要です。</li>
+</ul>
+<h3>密着屈みB≫屈みA</h3>
+<p>タイミングによって結果に多少の差が出ます。</p>
+<table>
+<thead><tr><th>結果</th><th>相手キャラ</th></tr></thead>
+<tbody>
+<tr><td>屈みAが空振り（基本）</td><td>K'、アンディ、庵、バイス、レオナ、ラルフ、セス、ラモン、リョウ、タクマ、ユリ、シェルミー、チョイ、クーラ、アンヘル、ルガール</td></tr>
+<tr><td>屈みAが空振り（ヒットする場合あり）</td><td>社</td></tr>
+<tr><td>屈みAが空振り（屈みBの先端当てでもよい）</td><td>クリス、マリー</td></tr>
+<tr><td>屈みAがヒット（基本）</td><td>ロバート、ビリー</td></tr>
+<tr><td>屈みAがヒット（ほぼ密着以外は相打ち）</td><td>ジョー、五郎</td></tr>
+<tr><td>屈みAがヒット（間合い関係なし）</td><td>クラーク</td></tr>
+<tr><td>屈みAがヒット（連打キャンセルが早いと負ける？）</td><td>山崎</td></tr>
+<tr><td>屈みAがヒット（負ける場合もある）</td><td>キム</td></tr>
+<tr><td>遅れてGCC+Dがヒット</td><td>ウィップ、テリー、紅丸、マチュア、チン</td></tr>
+</tbody>
+</table>
+<p>補足：ユリは最初の記事に入っていませんでしたが、屈みAで空振りさせられると後から訂正しています。密着屈みAだけでGCC+Dを空振りさせられるのはラルフです。</p>
+<h3>垂直ノーマルJC</h3>
+<p>ビリーの垂直ノーマルJCは攻撃判定が下に極端に大きいので、高めの打点でガードさせれば多くのキャラのGCC+Dを空振りさせられるようです。ただ、この状況で相手がGCC+Dをしたくなるかは疑問で、この出し方だと屈まれると空振りする、としています（2009年5月）。</p>
+<p>水龍追撃棍で相手のGCC+Dを取る連係（屈みC≫水龍追撃棍）のキャラ別の結果は、<a href="/02kakukyara-gccd-mukouka-kannkei.htm">各キャラのGCC+D無効化関係</a>にあります。</p>
+</section>
+
+<section class="section"><h2>入力のコツ</h2>
+<h3>屈みB×n≫強襲飛翔棍<span class="tag">弱</span>で6Bを暴発させない</h3>
+<ol>
+<li>屈みB×nは連打でなく目押しで入力します。連打すると、強襲飛翔棍を入力する際の6で6Bが暴発する可能性が残ります。</li>
+<li>KOF2002では、弱攻撃から特殊技へのキャンセルは早めにしないと出ません。ビリーでも屈みB≫6Bは少し遅めにキャンセルすると出ません。</li>
+<li>そこで、屈みB×nの後の強襲飛翔棍のキャンセルを少し遅めにすれば、少なくとも6Bの暴発は防げます。遅すぎると出なかったり、キャンセルなしで出たりします。</li>
+</ol>
+<p>補足：コメント欄で教わった同時押しの出し方を試すと、タイミングを合わせやすく暴発もしなかった、と書いています。右向きの方が成功しにくいので、向きによって出し方を変えるのもありだとしています。</p>
+<p>特殊技が早めのキャンセルでしか出ないことは、屈みBかC≫6Aを狙うときにも重要です。早めに6Aでキャンセルすれば、屈みBかCが空振りしてもキャンセルできるようになります。</p>
+<h3>空振りキャンセルの活用</h3>
+<p>屈みC≫空振りキャンセル弱三節棍のように、相手の屈みAを潰せる空振りキャンセル対応技から必殺技を出す形は、中間距離～遠距離でダッシュ屈みAを嫌う場面に使えます。ほかのキャラの例は<a href="./billy-counterplay-2004-2009.html">対ビリーのページ</a>にあります。</p>
+<h3>発動中の屈みC</h3>
+<p>発動中は屈みCを任意のタイミングでどこでもキャンセルできるので、次のことができるかもしれない、と2009年6月に書いています。</p>
+<ul>
+<li>屈みC→少し遅めにヒット確認して弱三節棍の連続技。</li>
+<li>屈みC→ガードされているのを確認して、少し遅めに弱三節棍か両当て身投げ。</li>
+<li>屈みC→盛大に空振り→だめもとで両当て身投げ。</li>
+</ul>
+</section>
+
+<section class="section"><h2>連続技とダメージ</h2>
+<h3>画面中央の連続技のダメージ比較</h3>
+<p>庵を相手に満タンから確認した値です。調査は各1回だけなので参考値です。KOF2002には根性補正がないので、庵が相手ならどの状況で決めてもこのダメージになるはず、としています。</p>
+<table>
+<thead><tr><th>連続技</th><th>消費ゲージ</th><th>ダメージ（体力103中）</th></tr></thead>
+<tbody>
+<tr><td>近D≫Q発動+ダッシュ屈みC≫MAX大旋風（5ヒット）</td><td>3</td><td>66</td></tr>
+<tr><td>近D≫Q発動+ダッシュ屈みB≫超火炎旋風棍<span class="tag">弱</span>（6ヒット）</td><td>2</td><td>57</td></tr>
+<tr><td>屈みB×4≫強襲飛翔棍<span class="tag">弱</span>（5ヒット）＞大旋風<span class="tag">弱</span>（1ヒットのみ）</td><td>1</td><td>50</td></tr>
+<tr><td>屈みB≫超火炎旋風棍<span class="tag">弱</span>（6ヒット）</td><td>1</td><td>47</td></tr>
+<tr><td>屈みB×4≫強襲飛翔棍<span class="tag">弱</span>（5ヒット）＞昇り大JC</td><td>0</td><td>41</td></tr>
+<tr><td>近D≫三節棍<span class="tag">弱</span>～火炎</td><td>0</td><td>29</td></tr>
+</tbody>
+</table>
+<p>補足：MAX大旋風の連続技はダッシュ近Dにした方が、昇り大JCは昇り大JDにした方がダメージが上がりますが、この調査では成功しませんでした。単発のダメージは近D 13、近C 12、屈みC 12です。</p>
+<p>ビリーの近Dは一部の低い姿勢に空振りします。クリスのツイスタードライブ<span class="tag">弱</span><span class="tag">強</span>（MAX版も）の隙の前半や、舞の花嵐<span class="tag">弱</span><span class="tag">強</span>の隙（最初の部分で確認）に空振りします。舞の花嵐を屈みガードした後は、前進すれば背後から連続技を決められます。舞には正面からだと屈みC≫弱超火炎旋風棍が空振りしますが、背後からならつながります。</p>
+<h3>その他の連続技</h3>
+<ul>
+<li><strong>雀落とし：</strong>密着付近で屈みCか近D≫雀落とし<span class="tag">弱</span><span class="tag">強</span>が、キャラ限定・立ち限定で連続技になります。確認できたのは山崎とチャンです。近Cからはなぜかできません。雀落としは相手がのけぞり状態でないと当たりません。発動中なら三節棍≫雀落とし<span class="tag">弱</span><span class="tag">強</span>もつながります。</li>
+<li><strong>端での6A2段目の空中カウンターヒット：</strong>雀落とし<span class="tag">弱</span>と超火炎旋風棍<span class="tag">弱</span><span class="tag">強</span>で追撃できます。超火炎旋風棍は6Aを出す距離に左右されません。</li>
+<li><strong>水龍追撃棍始動：</strong>水龍追撃棍（1段目）≫SC大旋風（弱？）は、近めでないと大旋風の1段目が空振りします。発動中なら、水龍追撃棍≫どこキャン弱三節棍≫どこキャン強強襲飛翔棍＞昇りJCなどがつながります。弱三節棍で前にせり出すため強強襲飛翔棍が届くのが意外だ、としています。発動中で端なら、水龍追撃棍（1～3段目）≫どこキャン強強襲飛翔棍＞弱超火炎旋風棍が、タイマーさえ残っていれば計1ゲージで済みます。</li>
+<li><strong>屈みA対空からの連続技案：</strong>着地する相手と密着するのが条件で、屈みA（地上ヒット）→Q発動+弱超火炎旋風棍が連続技になりそうだ、と2008年3月に書いています（強だとつながりません）。ただしその後、屈みAで対空すると空中ヒットになる可能性があり、地上に引き込むのは難しいと訂正しています。屈みAは屈みBより食らい判定が低く、食らい判定の上側が前に大きく移動するので、屈みBでは返せない飛び込みも返せるものがある、という説明もしています。</li>
+</ul>
+</section>
+
+<section class="section"><h2>D投げを崩しに使う</h2>
+<p>ビリーのD投げは投げ抜け猶予13F・発生5Fで、見てから投げ抜けできない性能です。そこでD投げと、D投げを読んだ暴れを潰す打撃での崩しを狙いたくなりますが、D投げ失敗で暴発する近Dは、屈まれるとマキシマ・大門・チャン以外には空振りするので危険です。</p>
+<ol>
+<li>暴発する技を変えたくても、6Aと6Bがあるため弱攻撃と同時押しするにはレバー後ろでADかBD同時押しが必要で、完全密着でないと狙えません。</li>
+<li>そこで、D投げをレバー前で狙いつつ、キャンセル6Aまで入れ込みます。D投げでなく近Dが出ても、空振りキャンセルで6Aが出て、ガードされても有利を取れます。</li>
+<li>これを印象づければ、近D（空振り）＞D投げという連係も狙えるかもしれない、としています。ただしチンとチョイには、屈まれると6Aまで空振りするので使えません。</li>
+</ol>
+<ul>
+<li>相手が端にいるときにD投げを決めると、端で背向けダウンを奪えます。</li>
+<li>中央側へ投げた場合、背向けで受け身不能のダウンを奪っていても、ジャンプでのめくりは狙えません。ただ、D投げ後に最速でダッシュし続ければ、起き上がる相手にちょうど投げ間合いで重なるので、再びD投げと暴れ潰しの択一を仕掛けられそうです。</li>
+<li>D投げ＞最速で弱強襲飛翔棍（空振り）とすれば疑似的な画面端に追い込めますが、硬直差ではビリーがやや不利になる可能性すらあり、ネタの域だとしています。強襲飛翔棍の最中にレバー6を入れるかどうかで着地位置を調整して、的を外すことはできると思う、としています。</li>
+<li>暴れ潰しは、屈みB×2でヒット確認するか、屈みC≫6Aか弱三節棍を決め打ちするくらいしか思いつかない、としています。</li>
+<li>近D（空振り）に弱三節棍を入れ込んでも、距離が近すぎて火炎が空振りします。214Dを入れ込むと密着で空振りするので危険すぎる、としています。</li>
+</ul>
+</section>
+
+<section class="section"><h2>ガークラ値</h2>
+<p>2005年9月の記事の値です。</p>
+<table>
+<thead><tr><th>分類</th><th>ガークラ値</th></tr></thead>
+<tbody>
+<tr><td>近距離</td><td>A 6／B 4／C 16／D 19</td></tr>
+<tr><td>遠距離</td><td>A 6／B 4／C 20／D 14</td></tr>
+<tr><td>屈み</td><td>A 5／B 5／C 20／D 17+8</td></tr>
+<tr><td>立ちC+D／GCC+D</td><td>13／0</td></tr>
+<tr><td>垂直通常J</td><td>A 3／B 5／C 13／D 16</td></tr>
+<tr><td>前方通常・大J</td><td>A 3／B 5／C 13／D 17</td></tr>
+<tr><td>後方通常・大J</td><td>A 3／B 4／C 13／D 15</td></tr>
+<tr><td>小J</td><td>A 3／B 4／C 13／D 15</td></tr>
+<tr><td>JC+D</td><td>通常・大J 11／小中J 15</td></tr>
+<tr><td>6A／6B</td><td>14+14／18</td></tr>
+<tr><td>強襲飛翔棍</td><td><span class="tag">弱</span>上昇11、下降8+4／<span class="tag">強</span>上昇11+5、下降8+4</td></tr>
+<tr><td>三節棍中段打ち</td><td><span class="tag">弱</span>18／<span class="tag">強</span>21（火炎は弱強とも0）</td></tr>
+<tr><td>旋風棍</td><td>3×n</td></tr>
+<tr><td>雀落とし</td><td><span class="tag">弱</span>16／<span class="tag">強</span>19</td></tr>
+<tr><td>火龍追撃棍／水龍追撃棍</td><td>0／0</td></tr>
+<tr><td>超必殺技・MAX2</td><td>すべて0</td></tr>
+</tbody>
+</table>
+<p>全体的に高いわけではありませんが、主力の6Aが14+14＝28とかなり高いので、ガードクラッシュを狙いやすいキャラです。特に屈みC≫6Aで計48たまるのが大きい、としています。ビリーのガークラ値が1回復するのにかかる時間は106Fと遅く、回復しにくいことは<a href="/02billy-crush.htm">クラッシュ攻略（対ビリー）</a>にあります。</p>
+</section>
+
+<section class="section"><h2>似ているが別の話</h2>
+<ul>
+<li><strong>6Aの2段目が空振りする話と、6Aの1段目が屈みに空振りする話：</strong>前者は屈みCのノックバックで距離が離れるため、後者はユリ・メイリー・クーラの屈みの低さのためです。</li>
+<li><strong>密着6AでのGCC+D無効化と、6A1段目へのGCC+D：</strong>前者はビリー側から見た無効化、後者は相手側がGCC+Dでカウンターヒットを取る話で、<a href="./billy-counterplay-2004-2009.html">対ビリーのページ</a>で扱います。</li>
+</ul>
+</section>
+
+<section class="section"><h2>気になること</h2>
+<ul>
+<li>6Bを先端でガードさせると五分になるようなので、何かに活用できないか、という疑問が残っています。</li>
+<li>水龍追撃棍（1段目）≫SC大旋風が弱でよいのかは「（？）」付きで書かれています。</li>
+<li>通常技≫214Dも密着6Aも使えない距離のラルフに対して、何らかのGCC+D無効化ができるはずだ、としたままです。</li>
+<li>密着屈みB≫屈みAでの山崎の結果は「連打キャンセルが早いと負ける？」と疑問の形です。</li>
+<li>屈んだ相手への屈みC≫6Aは、密着以外では確認していません。</li>
+<li>2007年8月に、対キムと対クーラについて02したらばの五強スレ2の100付近で深い意見交換がされているのでまとめたい、と書いていますが、まとめの記事は見当たりません。</li>
+</ul>
+</section>
+
+<section class="section"><h2>関連ページ</h2>
+<ul>
+<li><a href="./billy-counterplay-2004-2009.html">対ビリー：6A・三節棍・屈みC・当て身投げへの対処とキャラ別の対策</a></li>
+<li><a href="./billy-sansetsukon-counterplay-2008-2025.html">ビリー：三節棍対策の旧研究整理</a></li>
+<li><a href="./billy-shusho-hishokon-jc-jd-2024.html">ビリー：強襲飛翔棍からのJC／JD</a></li>
+<li><a href="/02billy-seinouhyouka.htm">ビリー性能評価</a></li>
+<li><a href="/02billy-rennzokuwaza.htm">ビリー連続技</a></li>
+<li><a href="/02billy-kakuwaza-koutyokusa.html">ビリーの各技の硬直差</a></li>
+<li><a href="/02billy-crush.htm">クラッシュ攻略（対ビリー）</a></li>
+<li><a href="/02kakukyara-gccd-mukouka-kannkei.htm">各キャラのGCC+D無効化関係</a></li>
+</ul>
+</section>
+
+<section class="section"><h2>出典</h2>
+<ul>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/30498096">2005/08/20：ビリー（立ち回りメモ）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/17749846">2005/04/01：ビリー</a> — 小JC+Dの飛び込み</li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2007/06/22/125947">2007/06/22：ビリー（技性能メモ)</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/15448053">2005/03/02：ビリー</a> — MAX2と乱舞タイプの超必殺技</li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2008/11/25/035500">2008/11/25：ビリー（強強襲飛翔棍の移動距離確認）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/50073107">2005/09/28：ビリー（思ったこと）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/24696513">2005/06/09：ビリー＆レモンさんへ</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/13508197">2005/02/02：ビリー</a> — 6A2段目の空振り</li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2009/11/21/214847">2009/11/21：ビリー（屈んだ相手への屈みＣ≫６Ａの連続ヒットの可否）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2008/09/14/204527">2008/09/14：ビリー（密着で屈んだ相手への屈みＣ≫６Ａ１段目のヒット可否）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2008/12/01/144102">2008/12/01：kof02ビリー前A＞下C全キャラ考察</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2008/09/04/204800">2008/09/04：ビリー（密着６AでのGCC+D無効化について）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2008/09/08/224736">2008/09/08：ビリー（密着屈みＢ≫屈みＡと密着屈みＡでのＧＣＣ＋Ｄ無効化</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2009/05/21/142723">2009/05/21：ビリー（垂直ノーマルＪＣでのＧＣＣ＋Ｄ無効化）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/50271760">2005/12/16：ビリー（入力関係）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2009/06/16/155045">2009/06/16：ビリー（屈みＣと生発動案）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2008/12/25/204138">2008/12/25：ビリー中央連続技のダメージ比較</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/30568928">2005/08/22：ビリー</a> — 屈みCか近D≫雀落とし</li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2007/09/07/145458">2007/09/07：ビリー（端で６Ａ２段目空中カウンターヒット後の追撃）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/18157242">2005/04/06：ビリー</a> — 水龍追撃棍始動の連続技</li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/20184840">2005/04/27：ビリー</a> — 水龍追撃棍≫SC大旋風の間合い</li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2008/03/06/000002">2008/03/06：ビリー（屈みＡ対空始動連続技案）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2007/04/11/194323">2007/04/11：ビリー（Ｄ投げの崩し能力活用案）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/50044775">2005/09/18：ビリー（各技のガークラ値）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2007/08/23/130057">2007/08/23：ビリー（対キム＆対クーラ）</a></li>
+</ul>
+</section>
+
+</div></main></body></html>
