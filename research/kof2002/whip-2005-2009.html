@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ウィップ：立ち回り・近Dのヒットストップ・GCC+D無効化・C投げの入力・硬直差と対ウィップ（2005～2009年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body>
+<header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<section class="hero"><div class="wrap"><p class="breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof02-top.html">KOF2002</a> / <a href="/research/kof2002/index.html">研究アーカイブ</a></p><p class="kicker">KOF2002（無印）｜キャラクター研究</p><h1>ウィップ：立ち回り・近Dのヒットストップ・GCC+D無効化・C投げの入力・硬直差と対ウィップ</h1><p>ウィップの近Dは、相手側のヒットストップの方が長い特殊な技です。そのため、近D→Q発動＋近Bは立ちガードした相手に刺さり、近D→クイック緊急回避は相手がGCC+Dしなくても-2Fで済みます。立ちC+Dは、普通にガードさせても多くのキャラのGCC+Dを空振りさせられます。ここでは2005～2009年のブログ記事から、ウィップの立ち回り・GCC+D無効化・C投げの入力・ガークラ値・硬直差と、対ウィップの対処をまとめます。KOF2002UMは扱いません。</p></div></section><main class="main"><div class="wrap">
+
+<section class="section"><h2>記号と用語</h2>
+<ul>
+<li><strong>＞</strong>：キャンセルなしでつなぐ ／ <strong>≫</strong>・<strong>→</strong>：キャンセルしてつなぐ ／ <strong>～</strong>：追加入力・続けて行動する</li>
+<li><strong>ソニックスローター</strong>（ソニック）：無敵のある突進技。<strong>ブーメランショット</strong>（ブーメラン）・<strong>フックショット</strong>・<strong>アサシンストライク</strong>・<strong>ストリングショット</strong>（タイプA・B“コード：力”・C）：必殺技。<strong>デザートイーグル</strong>：超必殺技。</li>
+<li><strong>ヒットストップ</strong>：攻撃が当たった瞬間に両者が止まる時間。ヒットストップ中は、ガードの立ちと屈みを切り替えられません。</li>
+<li><strong>クイック緊急回避</strong>：通常技をキャンセルしてMAX発動と同時に緊急回避する技術。<strong>Q発動</strong>：通常技をキャンセルしてMAX発動すること。</li>
+<li><strong>GCC+D</strong>：ガードキャンセル吹き飛ばし攻撃。<strong>G</strong>：ガード時の硬直差 ／ <strong>H</strong>：ヒット時の硬直差。</li>
+<li>コマンドは右向きの数字表記です（例：214=↓↙←）。</li>
+</ul>
+<p>連続技は<a href="/02whip-rennzokuwaza.htm">ウィップ連続技</a>、ほかの技の硬直差は<a href="/02whip-kakuwaza-koutyokusa.html">ウィップの各技の硬直差</a>にあります。</p>
+</section>
+
+<section class="section"><h2>立ち回りの基本</h2>
+<p>いくつかの強力な技を軸にした立ち回りが強いキャラです。2005年8月の立ち回りメモは次のとおりです。</p>
+<table>
+<thead><tr><th>場面</th><th>使う技・行動</th></tr></thead>
+<tbody>
+<tr><td>地上牽制</td><td>立ちC+D、屈みB、屈みD</td></tr>
+<tr><td>Jの牽制</td><td>垂直通常JA</td></tr>
+<tr><td>J防止</td><td>立ちC+D</td></tr>
+<tr><td>対空</td><td>ソニックスローター<span class="tag">強</span></td></tr>
+<tr><td>起き上がり</td><td>ガード、リバーサル大J、ソニックスローター<span class="tag">弱</span><span class="tag">強</span>、歩いて通常投げ</td></tr>
+<tr><td>暴れ</td><td>屈みC、立ちC+D</td></tr>
+<tr><td>カウンター</td><td>ソニックスローター<span class="tag">強</span>、ストリングショット“コード：力”</td></tr>
+<tr><td>対飛び道具</td><td>大JC+D</td></tr>
+<tr><td>反撃</td><td>ソニックスローター<span class="tag">弱</span>、屈みD</td></tr>
+<tr><td>接近</td><td>大JC+D、中JD</td></tr>
+<tr><td>J攻撃の後</td><td>近B</td></tr>
+<tr><td>崩し</td><td>めくりJC、空J～近Bか通常投げ</td></tr>
+<tr><td>垂直Jに対して</td><td>ダッシュ～ソニックスローター<span class="tag">強</span></td></tr>
+<tr><td>GCC+D対策</td><td>J攻撃を低めに、立ちC+D</td></tr>
+<tr><td>GCC+Dをガードした後</td><td>屈みB</td></tr>
+<tr><td>ゲージ溜め</td><td>ストリングショット～キャンセル、近D≫6A×5≫ストリングショット、JD（×2）</td></tr>
+</tbody>
+</table>
+<p>屈みB≫ヒット確認でブーメランショット<span class="tag">弱</span>かソニックスローターは必須です。</p>
+<h3>むねじさんの動きをまねしてみたメモ（2006年）</h3>
+<ul>
+<li>前方中Jからの早出しJCは、早めに当てにいきやすく、早出し技として優秀です。</li>
+<li>近めの間合いでの昇り前方大JCも嫌らしく、ガードはさせやすいです。</li>
+<li>スタート間合い付近で空中戦になりそうな空気なら、昇り前方大JCで空対空と空対地の両方をカバーしやすい気がします。</li>
+<li>近B×2≫屈みBのつなぎは遅めです。</li>
+<li>遠距離で相手の飛び道具に反応して出す前方中JC+Dは、昇りで出すくらいでちょうどいいです。</li>
+<li>端に追い詰めた相手を垂直小JD（先端当て）で固める場合、小Jの頂点くらいでDを押すとちょうどいいです。</li>
+<li>立ちC+Dなどで煽って、相手が前方大Jなどでウィップをぎりぎり飛び越えた場合は、落ち着いて少し前進～相手の着地に屈みB重ね～ヒット確認してブーメランかソニックが嫌らしいです。</li>
+</ul>
+</section>
+
+<section class="section"><h2>近Dのヒットストップ</h2>
+<p>攻撃をガードさせると、ガード硬直の前にヒットストップがあり、その間はガードの立ちと屈みを切り替えられません。普通はヒットストップは両者に同じだけかかるので、実際には影響しないことがほとんどです。ところがウィップの近Dは、相手側のヒットストップの方が長くなっています。このことから次の2つが起こります。</p>
+<h3>近D→Q発動＋近Bのガード不能</h3>
+<ol>
+<li>近Dを相手が立ちガードします。</li>
+<li>近DをQ発動でキャンセルし、近Bを出します。</li>
+<li>相手はまだヒットストップ中なので、屈みガードに切り替えられず、近Bを食らいます。</li>
+</ol>
+<p>面白いネタですが、相手が立ちガードしてくれるなら最初から近Bを当てればいいだけなので、今のところ大した意味はない、としています。</p>
+<ul>
+<li>クーラの近D1段目≫Q発動＞屈みBでも同じことができました。</li>
+<li>JAでも狙えそうで、相手が屈みガードしていたら確定しそうです（ただ、これも最初からJAを出せばいい、という話になります）。</li>
+<li>ヴァネッサの3Bは、おそらくヒットストップが普通のタイプなので狙えないだろう、としています。レオナのボルティックランチャー<span class="tag">弱</span>はヒットストップがないようで、簡単にガードの段を切り替えられました。アンヘルの6Bのヒットストップが特殊かどうかは、確かめてみる、としています。</li>
+<li>起き上がり前の相手はしゃがみ属性でも、起き上がった直後から立ち・屈みを自由に変えられるので、起き上がりに重ねて狙うのは無理だろう、とコメントで答えています。</li>
+</ul>
+<h3>近D→クイック緊急回避でのGCC+D無効化</h3>
+<p>通常技→クイック緊急回避でGCC+Dをかわす方法は、相手がGCC+Dしてこなかった場合、ガードされていると大幅に不利になります（例：強攻撃をガードされていた場合は-10F）。しかしウィップの近D→クイック緊急回避なら、相手がGCC+Dしてこなかった場合でも-2Fで済みます。近Dのヒットストップが特殊で、相手の硬直が実質的に長くなっているためです。</p>
+<ul>
+<li>-2Fなので、ほとんどのキャラは打撃技で反撃できません。完全に読まれていたら投げられるとは思いますが、狙う価値はあるとしています。</li>
+<li>リバーサルで通常投げを狙われた場合、クイック緊急回避の硬直を投げられるので、投げ外しできません。</li>
+</ul>
+</section>
+
+<section class="section"><h2>GCC+Dを空振りさせる</h2>
+<h3>立ちC+D</h3>
+<p>普通にガードさせた場合の結果です（2005年9月）。最初の調査で、ビリーとチョイのGCC+Dは空振りすると書いていましたが、どちらもヒットしてしまう調査ミスだったので、最初から調べ直したものです。</p>
+<table>
+<thead><tr><th>結果</th><th>キャラ</th></tr></thead>
+<tbody>
+<tr><td>間合いに関係なく空振りさせられる</td><td>K'、マキシマ、アンディ、クローン京、バイス、レオナ、ラルフ、ヴァネッサ、セス、ラモン、リョウ、アテナ、舞、ユリ、メイ・リー、クリス、マリー、キム、チャン、クーラ、K9999、アンヘル</td></tr>
+<tr><td>間合いに関係なく食らう</td><td>ウィップ、テリー、ジョー、紅丸、庵、マチュア、ロバート、タクマ、ケンスウ、チン、社、シェルミー、ビリー、チョイ、ルガール</td></tr>
+<tr><td>間合いに関係なくガードが間に合う</td><td>京、大門、クラーク、山崎（山崎は先端当てなら空振りさせられる）</td></tr>
+</tbody>
+</table>
+<p>持続部分をガードさせれば、空振りさせられるキャラはもっと増えるはずです。</p>
+<h3>密着の近C</h3>
+<p>密着で近Cをガードさせると、K'・クローン京・紅丸・庵・マチュア・バイス・レオナ・ラルフ・リョウ・社・チャン・K9999のGCC+Dを空振りさせられます（2005年4月。3月の記事ではチャンが入っていません）。</p>
+<h3>対アンヘル</h3>
+<p>屈みBか近C≫少しディレイをかけたストリングショット・タイプBとすると、屈みBか近CにGCC+Dされても空振りさせつつヒットさせられるようです。</p>
+</section>
+
+<section class="section"><h2>C投げの入力</h2>
+<p>普通にC投げを狙うと、投げが成立しなかったときに近Cか遠Cが出ます。近Cはまだいいとして、遠Cが出るとまずいので、入力を比べています（2009年）。</p>
+<table>
+<thead><tr><th>入力</th><th>投げ不成立時に出る技</th><th>評価</th></tr></thead>
+<tbody>
+<tr><td>4か6＋C</td><td>近Cか遠C</td><td>上記のとおり。近Cに化けた場合のフォローを考えるのも面白そうです。</td></tr>
+<tr><td>6＋AC同時押し</td><td>6A</td><td>×</td></tr>
+<tr><td>4＋AC同時押し</td><td>近Aか遠A</td><td>近Aは屈まれると空振りするキャラが多く、遠Aはうれしくありません。4に入れながらなので、入力が甘いと一瞬後退が混じって投げが成立しないのも難点です。</td></tr>
+<tr><td>4か6＋BCD同時押し</td><td>近Bか遠B</td><td>近Bは下段で、連打キャンセルと必殺技キャンセルでフォローできます。遠Bも隙が少なく悪くありません。ただしBCD同時押しをミスるとMAX発動が暴発します。1ゲージ未満ならこれで安定です。</td></tr>
+<tr><td>（発動中）4か6＋BC同時押し</td><td>近Bか遠B</td><td>MAX発動が暴発しないのが最大の利点で、発動していないと使えないのが最大の難点です。</td></tr>
+</tbody>
+</table>
+<p>結論は、BCDの完全同時押しをマスターしよう、です。</p>
+<h3>端の相手を崩せるか</h3>
+<p>掲示板に「端の相手をウィップは崩せない」という書き込みがあったことから、ゲージのある相手に端にこもられた場合に崩せるかを考えた記事です（2009年）。相手にゲージがなければ、6Aを基本に露骨にガークラ値を稼げるので、それは除いています。</p>
+<ul>
+<li>ウィップのC投げは投げ外しの猶予が短く、見てから外すのは不可能なレベルです。</li>
+<li>そのため相手は、投げを狙われると思ったら読みで投げ外しを入力する必要があり、ACDかBCDの同時押しで、暴発する技をAかBにするのがセオリーです。</li>
+<li>ウィップ側は、その暴発技をつぶす選択肢を用意して択一攻撃を狙います。入力を工夫すれば、C投げ失敗時の暴発技を近Bなどに変えられます。</li>
+</ul>
+<p>崩しの例として、次のものを挙げています。</p>
+<ul>
+<li>小J攻撃の打点を極端に下げるか、J攻撃を出さずに着地C投げ。</li>
+<li>小JDの打点を調節して、小JD1段か2段→近B。</li>
+<li>J攻撃を出さずに着地C投げと、一瞬だけ遅らせて着地近B。</li>
+<li>J攻撃を出さずに着地して二度跳び。</li>
+<li>J攻撃をJAかJBにして、あえてガード硬直を短くしてC投げか近B（崩しになっていないかも、としています）。</li>
+</ul>
+<p>2005年の時点では、端の相手がガンガードした場合にどう崩すかを疑問として挙げていました。読者からC投げが外しにくいことを教わり、確かにかなり抜けにくいようだが、2002は屈みガードでも投げ外しできるので近Bとの択一になるかは微妙、JDのガークラ値も地味に高いので、ガードが安定するキャラに繰り返すのもありそう、と答えています。</p>
+<p>大JDを空振りして着地に超必殺技を出すネタ（掲示板の書き込み）には、着地硬直が1Fあるのは前提としつつ、激しい流れだとその隙をきちんと攻撃できない人も多く、大会で狙う価値はある、と感想を書いています。それより空振りC投げを狙えばいいのでは、という気もする、とも添えています。</p>
+</section>
+
+<section class="section"><h2>硬直差（2008年2月）</h2>
+<table>
+<thead><tr><th>技</th><th>硬直差</th></tr></thead>
+<tbody>
+<tr><td>屈みA</td><td>G-3F、H-1F（ヒットストップか硬直が特殊）</td></tr>
+<tr><td>6A（1段止め、近め）</td><td>G-21F、H-19F（距離が離れる）</td></tr>
+<tr><td>6A（1段止め、遠め）</td><td>G-17F、H-15F（距離が離れない）</td></tr>
+<tr><td>6A（2段止め）</td><td>G-18F、H-16F</td></tr>
+<tr><td>6A（3段止め）</td><td>G-17F、H-15F</td></tr>
+<tr><td>6A（4段止め）</td><td>G-18F、H-16F</td></tr>
+<tr><td>6A（5段目）</td><td>G-19F</td></tr>
+<tr><td>ストリングショット・タイプA</td><td>立ちガード-9F</td></tr>
+<tr><td>ストリングショット・タイプB“コード：力”</td><td>G+1F、H+16F</td></tr>
+<tr><td>ストリングショット・タイプC</td><td>屈みガード-18F</td></tr>
+</tbody>
+</table>
+<p>補足：6Aの1段目は、近めで当てると距離が離れ、遠めだと離れません。2段目以降は、1段目からつなげると遠めで当てることになるので、遠めの場合だけを確かめています。</p>
+<h3>フックショット</h3>
+<p>フックショットは、リーチぎりぎり（本当にぎりぎり）でガードさせると有利を取れます。有利の限界は相手キャラや打点で微妙に変わるようですが、8F有利までは確認しています。リーチぎりぎりが当たるのは端同士に近い遠距離なので、ウィップを相手にする側は、その距離ではフックショットをガードしてカウンターヒット始動の連続技を狙うより、反応して無敵技で返すことに意識を割いた方がいいかもしれません。ウィップ側からすれば、無敵技を合わせられない限り、ガードされても有利で、相手がダッシュやジャンプしてくればヒットを狙える優秀な行動です。</p>
+</section>
+
+<section class="section"><h2>割り込みのソニックスローター<span class="tag">弱</span></h2>
+<p>割り込みの63214＋B（ソニックスローター<span class="tag">弱</span>）が確定する状況です（2005年6月）。</p>
+<ul>
+<li>マキシマの近C（1段目）≫6A</li>
+<li>マキシマの（通常技≫）6A≫ベイパーキャノン<span class="tag">強</span>（<span class="tag">弱</span>は連続ガード）</li>
+<li>テリーの近C（×2）≫バーンナックル<span class="tag">弱</span></li>
+<li>ジョーの（通常技≫）6B≫「弱カカト」</li>
+<li>京の（通常技≫）6B≫RED kick<span class="tag">弱</span></li>
+</ul>
+<p>対マチュア：マチュアの小JBの1段目をガードした後、2段目までにソニックで割り込めるのは間違いないとして、ブーメラン<span class="tag">弱</span><span class="tag">強</span>・屈みC・屈みDで割り込めるかを確かめたところ、早出しの小JBなら屈みCとブーメラン<span class="tag">強</span>で勝てましたが、普通に小Jの頂点で出されると無理でした。</p>
+<p>ソニックスローターの最初の2段のダメージは、攻略本では<span class="tag">弱</span><span class="tag">強</span><span class="tag">MAX</span>共通で8＋8ですが、実際は共通で0＋0です。少し離れた間合いで当てるとダメージ0の2段目が空振りするらしく、2段目にダメージがあると錯覚しそうになるそうです（デチオさん情報）。</p>
+</section>
+
+<section class="section"><h2>ガークラ値</h2>
+<p>2005年9月の一覧です（「＋」は段ごとの値）。</p>
+<table>
+<thead><tr><th>技</th><th>A</th><th>B</th><th>C</th><th>D</th></tr></thead>
+<tbody>
+<tr><td>近距離立ち</td><td>4</td><td>5</td><td>15</td><td>20</td></tr>
+<tr><td>遠距離立ち</td><td>4</td><td>5</td><td>10＋5</td><td>16</td></tr>
+<tr><td>屈み</td><td>3</td><td>3</td><td>14＋7</td><td>11</td></tr>
+<tr><td>垂直通常J</td><td>5</td><td>7</td><td>14</td><td>22</td></tr>
+<tr><td>前方通常大J</td><td>5</td><td>6</td><td>10</td><td>16＋8</td></tr>
+<tr><td>後方通常大J</td><td>4</td><td>5</td><td>10</td><td>15＋7</td></tr>
+<tr><td>小J</td><td>4</td><td>5</td><td>10</td><td>15＋7</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th>技</th><th>ガークラ値</th></tr></thead>
+<tbody>
+<tr><td>立ちC+D</td><td>12</td></tr>
+<tr><td>通常大JC+D</td><td>12</td></tr>
+<tr><td>小中JC+D</td><td>15</td></tr>
+<tr><td>6A</td><td>13×5（キャンセル版も同じ）</td></tr>
+<tr><td>ブーメランショット</td><td><span class="tag">弱</span><span class="tag">強</span>0</td></tr>
+<tr><td>アサシンストライク</td><td>A18、B18、C16、D16</td></tr>
+<tr><td>フックショット</td><td><span class="tag">弱</span><span class="tag">強</span>18</td></tr>
+<tr><td>ストリングショット</td><td>A・B・Cすべて0</td></tr>
+<tr><td>デザートイーグル</td><td><span class="tag">弱</span><span class="tag">強</span>0×n</td></tr>
+<tr><td>ソニックスローター</td><td><span class="tag">弱</span><span class="tag">強</span><span class="tag">MAX</span>0</td></tr>
+<tr><td>MAX2</td><td>0（ガード不能）</td></tr>
+</tbody>
+</table>
+<p>近D≫6A×5（計85）に尽きます。あとは高性能な小中JDの値も高いです。1番手なら破格のガークラ性能を持つキャラの一人です。</p>
+</section>
+
+<section class="section"><h2>対ウィップ</h2>
+<h3>立ちC+Dへの対策（2007年）</h3>
+<table>
+<thead><tr><th>対策</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>空振りへの差し込み</td><td>基本です。立ちC+Dの空振りを確認してから、リーチの長い技、弾速の速い飛び道具、ダッシュでの接近などで、空振りの硬直に技を重ねにいきます。ウィップ側は全身無敵なのでダメージには直結しませんが、硬直が解けた直後の行動を制約できます。</td></tr>
+<tr><td>下方向にリーチが長く判定も強めの小中J攻撃を合わせる</td><td>やや特殊な方法です。立ちC+Dの攻撃判定が出ているときも頭に食らい判定があるのを利用して、そこを狙います。Jの滞空時間がある程度短く、J攻撃が下方向にリーチのある技でないと難しいです。また、ウィップが立ちC+Dを置ける状況ではフレームの関係で難しく、互いに動ける状況で、ウィップが立ちC+Dを出すより少し早く小中Jしている必要があります。例：庵の小中JC、レオナの小中JD・小中JC+D（垂直小Jでもできる間合いあり）、クリスの小中JD、大門の小中JD。</td></tr>
+<tr><td>発生が早くリーチの長い技で発生勝ちを狙う</td><td>直接届く技に限られます。例：ジョーの遠D、ビリーの6A、クリスの3B、ジョーの3B（クリスとジョーの3Bは低姿勢なのも理由）。</td></tr>
+</tbody>
+</table>
+<h3>フックショットをガードした後</h3>
+<p>安定して決まる反撃は次のとおりです（2005年9月）。フックショットのガード後の反撃は空中カウンターヒットになるので、SCすればたぶんつながるはず、とコメントしています。</p>
+<ul>
+<li>ロバート：背牙龍<span class="tag">弱</span><span class="tag">強</span></li>
+<li>紅丸：雷光拳<span class="tag">弱</span></li>
+<li>裏シェルミー：「弱あんこくらいこうけん」</li>
+<li>庵：八稚女<span class="tag">強</span></li>
+<li>マキシマ：ベイパーキャノン<span class="tag">弱</span>～追撃（カウンターヒット）</li>
+<li>ジョー：近A≫214＋B＞遠Dなども入ります。</li>
+</ul>
+<p>2006年には、ほかのキャラの反撃連続技案も挙げ、確認した人に教えてほしいと呼びかけています：リョウは立ちC+D≫641236＋C、ビリーは屈みC≫214＋A、クラークは近C（×1）≫623＋A、ユリは近C≫623＋A≫2363214＋BかD、バイスは214＋AかC＞214＋AかC、レオナは昇り前方大JBかD≫2363214＋C、クーラは214＋AかC＞各種追撃。</p>
+<h3>そのほか</h3>
+<ul>
+<li>垂直通常JC（ガード）＞屈みBはまず連続ガードになっているので、後転しようとしても食らいます。</li>
+<li>めくり通常（？）JCからの近Bは、表裏が分からない場合があります。めくり通常JCをガードした後、1232123…と入力し続ける「屈みガードポーズ継続法（仮）」で防げるかもしれない、という案です。</li>
+<li>先鋒のウィップは最初ソニックが使えないので攻め込みやすくなります。ダウンを奪ったり接近したりした後のもつれや様子見のとき、歩いて通常投げで対処してくるウィップ使いが多いようです。ウィップは連打しやすい弱攻撃が近Bしかなく暴れにくいこと、通常投げを決めた後は有利な状態で起き攻めできることから、リスクとリターンの効率で投げを選んでいるのだろう、と分析しています。ゲージのないウィップに接近できたら、通常投げに注意して投げ抜けを確実に成功させると、殺されにくくなります（特に端に追い詰めた後）。</li>
+<li>アンディ：対空は空破弾<span class="tag">弱</span>（早出しが必要）でかなり返せますが、大Jに空振りするとダッシュから連続技を食らいます。</li>
+<li>ジョー：離れてタイガーキック<span class="tag">強</span>で待つとき、早出しの中JC+Dで飛び込まれると、623の最初の6の部分で食らっています。対空タイガーキック<span class="tag">強</span>を2～3回成功させた後のじりじりした展開が苦手で、対空GCC+Dに頼ると空J～近Bを食らいがちです。ウィップ側も安易に飛べないときに、飛ばれないタイミングでハリケーンアッパー<span class="tag">弱</span>で煽れればいいが難しい、屈みAで煽るとよいかも、としています。</li>
+<li>大門の確定地雷震のウィップ用レシピは<a href="/02goro-kakuteizirai-kmw-i.html">確定地雷震（対K’、マキシマ、ウィップ）</a>と<a href="./daimon-play-2005-2009.html">大門のページ</a>にあります。</li>
+</ul>
+</section>
+
+<section class="section"><h2>似ているが別の話</h2>
+<ul>
+<li><strong>ヒットストップと有利フラグ</strong>：<a href="/research/kof-series/priority-flag-processing-order.html">キャラ処理順と11F硬直差</a>は、近Dのヒットストップの長さの違いとは別の仕組みです。</li>
+</ul>
+</section>
+
+<section class="section"><h2>気になること</h2>
+<ul>
+<li>近D→Q発動＋近Bのガード不能ネタは、今のところ大した意味がなく、発展すれば面白い、という段階です。</li>
+<li>アンヘルの6Bのヒットストップが特殊かどうか。</li>
+<li>端でガンガードする相手をウィップが崩せるか。2009年にアンケートを作っていますが、結果は記事にありません。</li>
+<li>2006年に挙げたフックショットガード後の反撃連続技案（リョウ・ビリー・クラーク・ユリ・バイス・レオナ・クーラ）は、確認を呼びかけた段階です。</li>
+<li>立ちC+Dの持続部分をガードさせた場合に、GCC+Dを空振りさせられるキャラがどこまで増えるか。</li>
+</ul>
+</section>
+
+<section class="section"><h2>関連ページ</h2>
+<ul>
+<li><a href="/02whip-rennzokuwaza.htm">ウィップ連続技</a></li>
+<li><a href="/02whip-kakuwaza-koutyokusa.html">ウィップの各技のヒット・ガード時の硬直差</a></li>
+<li><a href="/02kakukyara-gccd-mukouka-kannkei.htm">各キャラのGCC+D無効化関係</a></li>
+</ul>
+</section>
+
+<section class="section"><h2>出典</h2>
+<p>MOTのブログ「Come sono bravo?」（はてなダイアリー）の記事です。</p>
+<ul>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/30541372">2005/08/21：ウィップ（立ち回りメモ）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/50508961">2006/04/15：ウィップ（個人的メモ）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2008/02/07/010220">2008/02/07：ウィップ（ガード不能ネタ）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2007/08/06/211245">2007/08/06：ウィップ（近距離立ちＤ→クイック緊急回避によるＧＣＣ＋Ｄ無効化）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/50057877">2005/09/23：ウィップ（立ちＣ＋Ｄ対ＧＣＣ＋Ｄ）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/50051301">2005/09/20：ウィップの立ちＣ＋Ｄ対ビリー＆チョイのＧＣＣ＋Ｄ</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/15635242">2005/03/05：ウィップ</a> — 密着近CでのGCC+D空振り</li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/19282656">2005/04/18：ウィップ</a> — 密着近CでのGCC+D空振り</li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2008/02/07/225109">2008/02/07：ウィップ（対アンヘル　ＧＣＣ＋Ｄ無効化関係）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2009/01/17/135916">2009/01/17：ウィップでＣ投げを狙う場合の入力方法</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2009/01/18/114055">2009/01/18：ウィップ（アンケート－端の相手を崩せるか－）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/50142615">2005/10/24：ウィップ（端の相手に対して）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2007/09/04/224327">2007/09/04：ウィップ（したらばウィップスレ713さんへの感想）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2008/02/07/225017">2008/02/07：硬直差メモ（ウィップ）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2008/10/07/001900">2008/10/07：ウィップ（フックショットの硬直差について）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/24834286">2005/06/10：ウィップ</a> — 割り込みの63214＋B</li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/50235695">2005/12/01：ウィップ（対マチュア）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/50531337">2006/04/29：ウィップ（ソニックスローター－ムックデータについて）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/50063015">2005/09/25：ウィップ（各技のガークラ値）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2007/06/22/190811">2007/06/22：対ウィップ（立ちＣＤ対策）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/50023183">2005/09/11：対ウィップ（対フックショット）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/50023551">2005/09/11：対ウィップ（対フックショット）</a> — 反撃技の追加</li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/50384415">2006/02/07：対ウィップ（フックショットガード後の反撃連続技案）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/19158230">2005/04/17：対ウィップ</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/50508033">2006/04/15：対ウィップ</a> — 屈みガードポーズ継続法（仮）</li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/50060631">2005/09/24：対ウィップ（一番手時）</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/50076115">2005/09/29：対ウィップ</a> — アンディ・ジョー</li>
+</ul>
+</section>
+
+</div></main></body></html>
