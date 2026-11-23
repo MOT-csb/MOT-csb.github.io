@@ -1,0 +1,69 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'94：必殺技のコマンド受付とボタンを押すときのレバー方向｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:950px}.article h2{margin-top:2em}.article p,.article li{line-height:1.85}.scroll{max-width:100%;overflow-x:auto}.article table{border-collapse:collapse;min-width:600px;width:100%}.article th,.article td{padding:9px;border:1px solid #b4c2b7;text-align:left;vertical-align:top}.article th{background:#edf3ef}.ver{display:inline-block;font-size:.78em;line-height:1.4;border:1px solid #7f9a86;border-radius:4px;padding:0 .4em;margin-left:.35em;background:#f6faf7}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof94-top.html">KOF'94</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article">
+<h1>KOF'94：必殺技のコマンド受付とボタンを押すときのレバー方向</h1>
+<p>KOF'94の必殺技には、レバー入力を完成させた後、ボタンを押す瞬間にレバーがどこに入っているかで出る・出ないが変わるものがあります。京の鬼焼き・朧車は、ボタンを押すときにレバーが下要素（1・2・3）に入っていると出ません。逆にリョウの623+AかCは、2・3・6・Nのどれかに入れながら押さないと出ません。同じ623コマンドでも技ごとに違うので、技ごとに確かめるしかありません。</p>
+<p>表の中の「4(2)」のような表記は、「レバー4を2F入れる」という意味です。</p>
+
+<h2>原則：ボタンを押すときのレバー方向で決まる</h2>
+<div class="scroll"><table><thead><tr><th>技</th><th>ボタンを押すときに出せるレバー方向</th><th>出ない方向・注意</th></tr></thead><tbody>
+<tr><td>京：鬼焼き（623+AかC）・朧車（421+BかD）</td><td>下要素以外（623→N+Aなどが安定）</td><td>1・2・3</td></tr>
+<tr><td>ケンスウ：421+BかD</td><td>下要素以外</td><td>1・2・3（京と同じタイプ）</td></tr>
+<tr><td>リョウ：623+AかC</td><td>2・3・6・N</td><td>ほかの方向でも、レバーとボタンが完全に同時なら出る</td></tr>
+<tr><td>キング：623+BかD</td><td>2・3・6・N（リョウと同じタイプ）</td><td>7か8→ジャンプ、9→236BかD、4→214BかD、1→屈BかD が出る</td></tr>
+<tr><td>キング：421+BかD</td><td>1・2・N</td><td>それ以外の方向では出ない。4214と4まで入れてしまうとNでも出ない</td></tr>
+<tr><td>ユリ：百烈びんた（623+AかC）</td><td>1・2・3・N・6</td><td>4→砕破、7・8・9→ジャンプ（AかCと同時でない限り）</td></tr>
+<tr><td>ユリ：虎煌拳（236+AかC）</td><td>N・6</td><td>216でも出る</td></tr>
+</tbody></table></div>
+<p>補足：京の結果は鬼焼き・朧車についてのもので、ほかの同じコマンドの技が同じ仕組みとは限りません。</p>
+<p>2024年には、236の入力完成後のレバー方向を作品をまたいで調べています（<a href="./command-directions-2024.html">236入力完成後のレバー方向調査</a>）。2003年の原稿にある技ごとの省略入力は<a href="./command-recognition-2003.html">コマンド認識の旧研究</a>にあります。</p>
+
+<h2>例外その1：レバーの止め方で別の技を出し分ける</h2>
+<h3>キングの421+BかD</h3>
+<p>421→1で止めて入れっぱなし＋BかD、と入力するのが確実です。4まで戻すとNに戻しても出なくなります。</p>
+<h3>ユリのダッシュ百烈びんた</h3>
+<p>ダッシュ百烈びんたは、66～6236と入力してもびんたになります。それでも虎煌拳に化けることがあるのは、623の6が入っていないと認識されている可能性が高い、と考えています。対策は次の2つです。</p>
+<ol>
+<li>23の前に6を入れることを意識する。</li>
+<li>虎煌拳はレバー完成後にNか6に入れないと出ないので、3で止めることを意識する。</li>
+</ol>
+<p>補足：砕破は234でも出ます。</p>
+<h3>アンディの斬影拳と昇龍弾</h3>
+<ul>
+<li>1タメから236+AかCと入力すると斬影拳が出ますが、23（3で止める）+AかCとすると昇龍弾になります。昇龍弾を出したいなら3で止めます。</li>
+<li>昇龍弾は13（3で止める）+AかCでも出ます。</li>
+<li>斬影拳は、1タメ→3→6かN＋AかCでも出ます。</li>
+</ul>
+
+<h2>例外その2：最小限の入力</h2>
+<div class="scroll"><table><thead><tr><th>技</th><th>最小限の入力</th><th>補足</th></tr></thead><tbody>
+<tr><td>京：421BC同時押し（近C→自動キャンセル朧車 <span class="ver">強</span>）</td><td>4(2) 2(1) 1(2) BC(1)</td><td>BC同時押しが1Fでよく、2も1Fでよい</td></tr>
+<tr><td>テリー：バーンナックル</td><td>2(1) 1(2) 4(1) A(1)</td><td>2は3に変えてもよい</td></tr>
+<tr><td>ジョー：タイガーキック</td><td>1か2(1) 1か2か3(1) 6(2) 9(2) BかD(1)</td><td></td></tr>
+<tr><td>アテナ：リフレクター（41236+BかD）</td><td>4と6は最低2F、ボタンは1F</td><td>123の部分は下を参照</td></tr>
+</tbody></table></div>
+<h3>アテナのリフレクターの123の部分</h3>
+<div class="scroll"><table><thead><tr><th>入力</th><th>結果</th></tr></thead><tbody>
+<tr><td>1(2) 3(2)</td><td>出る</td></tr>
+<tr><td>1(1) 2(1) 3(2)</td><td>出る</td></tr>
+<tr><td>1(2) 2(1) 3(1)</td><td>出る</td></tr>
+<tr><td>2(2) 3(2)</td><td>出ない</td></tr>
+<tr><td>1(2) 2(2)</td><td>出ない</td></tr>
+</tbody></table></div>
+<p>最初は「123の部分で合計4F必要で、1と3は最低1F必要、2は1と3で代用できる」と考えましたが、それでは1(3) 3(1)や1(1) 3(3)で出ないことが説明できません。そこで、1と3には最低2Fずつ必要で、2は1と3の役目を果たせる、という説を立て、「最後の説が合ってるっぽい。」と結論づけています。</p>
+
+<h2>大ジャンプの入力</h2>
+<ul>
+<li>大ジャンプは普通、69のように9（上要素）の前に関係ない方向を入れる必要があります。ところがチョイは9だけで大ジャンプできました。「出しやすさの違いはそういう違いだったのか……！」</li>
+<li>レバー7か9だけで大ジャンプできるのは、紅丸・ヘビィ・D！・チョイ・クラークの4人です。</li>
+<li>テリーで前方大ジャンプを3→9→Nと入力する場合、「3(1F)→9(3F)」か「3(2F)→9(2F)」でないと出ないようです。</li>
+</ul>
+<p>大ジャンプの入力の一般的な説明と使いどころは<a href="./hyperjump-2024.html">大ジャンプの入力と活用</a>にあります。</p>
+
+<h2>似ているが別の話：ジョーのタイガーキックが潰されやすい理由</h2>
+<p>タイガーキックは弱強ともに、1段目の攻撃判定と2段目の攻撃判定の間に1Fだけ無防備な瞬間があります。1段目の攻撃判定が終わるまで全身無敵が続くのに潰されやすいのは、この瞬間に攻撃を受けているためだと考えられています。</p>
+
+<h2>出典（X投稿）</h2>
+<p>レバー方向：<a href="https://x.com/mot_csb/status/34261747124670464">京の鬼焼きと朧車</a>（2011/2/6） ／ <a href="https://x.com/mot_csb/status/34261957884248064">ほかの技は技ごとに確認</a> ／ <a href="https://x.com/mot_csb/status/34264132605706240">リョウの623</a> ／ <a href="https://x.com/mot_csb/status/34265200060276736">ケンスウの421</a> ／ <a href="https://x.com/mot_csb/status/34266391758512130">キングの623</a> ／ <a href="https://x.com/mot_csb/status/34267272381997056">キングの421</a> ／ <a href="https://x.com/mot_csb/status/43243306771156992">ユリの百烈びんた</a>（3/3） ／ <a href="https://x.com/mot_csb/status/43244227420884992">ダッシュびんたと虎煌拳</a> ／ <a href="https://x.com/mot_csb/status/43244363819659264">216と234</a> ／ <a href="https://x.com/mot_csb/status/45085941240573952">アンディの斬影拳と昇龍弾</a>（3/8）</p>
+<p>最小入力：<a href="https://x.com/mot_csb/status/52746495425908736">京の421BC</a>（2011/3/29） ／ <a href="https://x.com/mot_csb/status/52749452800299008">テリーのバーンナックル</a> ／ <a href="https://x.com/mot_csb/status/52756370130337792">ジョーのタイガーキック</a> ／ <a href="https://x.com/mot_csb/status/52753448348827648">アテナのリフレクター</a> ／ <a href="https://x.com/mot_csb/status/52754005042012161">続き</a> ／ <a href="https://x.com/mot_csb/status/52754143818948608">さらに続き</a> ／ <a href="https://x.com/mot_csb/status/52757930549841920">タイガーキックの1F</a></p>
+<p>大ジャンプ：<a href="https://x.com/mot_csb/status/37397659325046785">チョイは9だけ</a>（2011/2/15） ／ <a href="https://x.com/mot_csb/status/37516126162255872">7か9だけで出せるキャラ</a> ／ <a href="https://x.com/mot_csb/status/38975011574382592">テリーの大ジャンプの受付</a>（2/19）</p>
+<p>関連：<a href="./command-recognition-2003.html">コマンド認識の旧研究（2003年）</a> ／ <a href="./command-directions-2024.html">236入力完成後のレバー方向調査（2024年）</a> ／ <a href="./hyperjump-2024.html">大ジャンプの入力と活用</a> ／ <a href="./frame-data-findings-2010-2011.html">フレームデータを並べて分かったこと</a> ／ <a href="./index.html">KOF'94研究アーカイブ</a></p>
+</div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
