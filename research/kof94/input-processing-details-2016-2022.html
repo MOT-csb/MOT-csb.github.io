@@ -1,0 +1,86 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'94：入力と処理の細かな仕様（2016～2022年の補足）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:950px}.article h2{margin-top:2em}.article p,.article li{line-height:1.85}.scroll{max-width:100%;overflow-x:auto}.article table{border-collapse:collapse;min-width:600px;width:100%}.article th,.article td{padding:9px;border:1px solid #b4c2b7;text-align:left;vertical-align:top}.article th{background:#edf3ef}.ver{display:inline-block;font-size:.78em;line-height:1.4;border:1px solid #7f9a86;border-radius:4px;padding:0 .4em;margin-left:.35em;background:#f6faf7}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof94-top.html">KOF'94</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article">
+<h1>KOF'94：入力と処理の細かな仕様（2016～2022年の補足）</h1>
+<p>KOF'94のステップは、右側へのステップと左側へのステップで入力の条件も動き出すまでの時間も違います。右側へは6(1) N(1) 6(1)で出て入力完成から5F後に動き出し、左側へは4(1) N(1) 4(6)が必要で、入力完成の次のフレームに動き出します。このページでは、こうした入力と内部処理の細かな仕様について、2016～2022年にXで補足した内容をまとめます。</p>
+<p>「6(1)」は「レバー6を1F入れる」という意味です。</p>
+
+<h2>ステップと大ジャンプの入力</h2>
+<h3>ステップは画面の右か左かで違う</h3>
+<p>旧メモではダッシュを6(1) N(1) 6(1)、バックステップを4(1) N(1) 4(6)としていましたが、これは間違いで、正確には画面の右側へのステップと左側へのステップの違いでした。1P・2Pや、右向き・左向きには関係ないようです。</p>
+<div class="scroll"><table><thead><tr><th>方向</th><th>最短入力</th><th>動き出すまで</th></tr></thead><tbody>
+<tr><td>右側へのステップ</td><td>6(1) N(1) 6(1)</td><td>入力完成から5F後</td></tr>
+<tr><td>左側へのステップ</td><td>4(1) N(1) 4(6)</td><td>入力完成の次のフレーム</td></tr>
+</tbody></table></div>
+<ul>
+<li>お互いに最短で入力した場合は、右側へのステップの方が1F早く動き出します。お互いに2回目のレバーを長めに入力すれば、同時に動き出すはずです（要確認）。</li>
+<li>細かいことを考えたくなければ、2回目のレバーを長めに入力すれば安定して出せるはずです。</li>
+<li>ステップはリバーサルでは出せないのではないか、と考えています。</li>
+</ul>
+<h3>大ジャンプ</h3>
+<p>大ジャンプを出したい場合、実は一瞬だけ6に入れる必要があります。『ALL ABOUT KOF'94』にもこのことは書かれていませんでした。逆に、9だけ入れたつもりが69と入ってしまって大ジャンプになることが多いのでは、という印象も書いています。</p>
+<p>2011年の確認は<a href="./command-lever-direction-2011.html">コマンド受付とレバー方向</a>（7・9だけで大ジャンプできるキャラ）と<a href="./frame-data-findings-2010-2011.html">フレームデータを並べて分かったこと</a>（ダッシュの5F）にあります。</p>
+
+<h2>ボタンとキャンセルの処理</h2>
+<ul>
+<li><strong>関係ないボタン</strong>：KOF'94・'95は、必殺技と関係ないボタンが押されていると必殺技が出ません。これを利用すると、京でジャンプD→着地して236BC同時押しで、近C→闇払いが出せます。</li>
+<li><strong>自動キャンセル</strong>：同じコマンドでも、技によって最後のレバー方向の条件が違います。623の後にNで出るタイプの技なら、623N＋BC同時押しで自動キャンセル（近C→必殺技）になりますが、3で止めないといけない技は623N＋BC同時押しでは出ないはずです（<a href="./command-lever-direction-2011.html">技ごとのレバー方向</a>）。</li>
+<li><strong>横ためと通常投げ</strong>：横ためが完了していても、パンチとキックの同時押しで通常投げができます（<a href="./throw-pressure-simultaneous-reversal-2011-2022.html">ため技キャラの通常投げ</a>）。</li>
+<li><strong>立ってコマンド投げを入力したとき</strong>：通常技が漏れます。KOF'94・'95では、ロバートの連舞脚だけは何も出ません。連舞脚だけ少し違う処理がされているようです。リョウの連舞拳は強虎煌拳が暴発するので、何も出ない状況は作れない（作れるけど難しい？）としています。</li>
+<li><strong>立ちCD</strong>：CD同時押しの直後にはふっとばし攻撃は動き出さず、3～4Fくらい経ってから動き出した覚えがある、と書いています。</li>
+<li><strong>空振りキャンセル</strong>：KOF'94・'95は地上技は空振りキャンセルできませんが、ジャンプ攻撃は空振りキャンセルできます。</li>
+<li><strong>空キャン</strong>：通常技→コマンド投げなどの空キャンは、「ある技の硬直だけキャンセルする」という現象の1つで、サムライスピリッツのモズキャンや2002のクイックMAX発動と同じ種類だ、としています。</li>
+<li><strong>連射機</strong>：連射機を使っても屈B連打のヒット数を稼げなかった、という思い出も書いています（連打キャンセルのタイミングは<a href="./throw-centric-notes-2013-2016.html">15F間隔でほぼ共通</a>）。</li>
+</ul>
+
+<h2>ダメージと当たりの処理</h2>
+<h3>ダメージ・ヒット・得点の順番</h3>
+<p>テリー同キャラ戦で、1Pテリーが2Pテリーに攻撃して確認した結果です。</p>
+<div class="scroll"><table><thead><tr><th>技</th><th>KOF'94</th><th>KOF'95</th></tr></thead><tbody>
+<tr><td>近距離立強K</td><td>ダメージ→次のフレームでヒットと得点</td><td rowspan="3">相手のパワーゲージ増加→次のフレームでダメージとヒット（'95は対戦で得点が表示されない）</td></tr>
+<tr><td>パワーウェイブ</td><td>ダメージ→次のフレームでヒット→その次のフレームで得点</td></tr>
+<tr><td>バーンナックル</td><td>ダメージ→次のフレームでヒットと得点</td></tr>
+</tbody></table></div>
+<h3>そのほか</h3>
+<ul>
+<li>KOF'94にはダメージのランダム補正があります。</li>
+<li>KOF'94・'95は、打撃無敵と投げ無敵が別々に設定されています。</li>
+<li>1Pと2Pで設定ダメージが違うのは、CPU戦を想定しているのかもしれない、と推測しています（CPUかどうかで設定を変えればよかったはずで、制作チームが格闘ゲームのノウハウに乏しかったのかも、とも書いています）。1P・2Pの違いは<a href="./player-side-frame-differences-2011-2023.html">1P・2Pの違い</a>にあります。</li>
+<li>同時に通常投げをした場合は1Pが勝つので、ジャンプ攻撃→通常投げが1P限定で連続技になる場合があるはずです。チャンのC投げは体力が最小のときにダメージが大幅に上がるので、即死連続技になっているかもしれない、とTASの動画を見て書いています。</li>
+</ul>
+<h3>発生1Fの打撃は2P側だけガード不能</h3>
+<p>ジョーの爆裂拳 <span class="ver">強</span>は発生1Fで、KOF'94・'95は1Pから処理されます。そのため、打撃技が出ない状況での爆裂拳 <span class="ver">強</span>は、2P側限定でガード不能になります。KOF'95で見つけた現象ですが、KOF'94でも可能でした。原理はKOF2000の麟の屈B（発生1F）のガード不能と似ていますが、'94・'95は処理の順序が入れ替わらないので2P限定です。発生1Fの打撃技がほかにもあれば同じ結果になるのではないか、と推測しています（<a href="/research/kof95/joe-unblockable-strong-bakuretsu-2022.html">KOF'95のジョーの爆裂拳ガード不能</a>、<a href="/research/kof2000/rin-one-frame-guardbreak-2015-2024.html">KOF2000の麟の屈B</a>）。</p>
+<h3>押し合い判定と打撃投げ</h3>
+<ul>
+<li>KOF'94・'95に比べて、それ以降のKOFはしゃがみ時の押し合い（ぶつかり）判定が高くなっています。おそらくその影響で、必殺技でのめくりがほぼできなくなっています。</li>
+<li>ヘビィ・D！のD投げは、投げの条件で出せる「ガード可能な」打撃技でした。使いどころがほぼなかったそうです。いわゆる打撃投げ（投げの条件で出せる打撃技）の必殺技での登場はKOF'95の極限流連舞拳・連舞脚が最初ですが、その前にこういう技があったことを知る人は少ないかもしれない、としています。</li>
+</ul>
+
+<h2>キャラ別の補足</h2>
+<ul>
+<li><strong>リョウ</strong>：KOF'94が最強クラスだと評価しています。飛び道具、空中飛び道具、無敵対空、即死連続技、永久連続技、発生とリーチに優れた屈D（発生4F）とふっとばし攻撃（発生9F）、めくりジャンプ攻撃がそろっています。</li>
+<li><strong>タクマ</strong>：ジャンプ攻撃の発生が判で押したように3Fなのは、細かく調整する余裕がなかったのかな、と推測できてしまう、としています。おかげで凶悪な昇りJDの中段が生まれました。</li>
+<li><strong>ケンスウ</strong>：MAX中の龍連牙 <span class="ver">強</span>（弱に切り替え）を対戦で試したい、としています。ガードされても隙が少なめで、ヒットすればかなり減らせるので奇襲にもってこいのはずです。攻撃避けされても投げられそうですが、スルーアタックには弱いかもしれません。</li>
+<li><strong>京</strong>：KOF'94の鬼焼きは裏側まで判定が強く、チョイのJCを返せる数少ない技でした（<a href="./choi-jc-unblockable-2011-2024.html">チョイのJC</a>）。轟斧は'94では発生が12Fくらいだったので、クイック発動ができればかなり強そう、とも書いています。</li>
+<li><strong>チョイ</strong>：JCを改めて調べたところ、直接返せる技を持つキャラがほとんどいなかったので、評価が急上昇したのを覚えているそうです。打点の調整が完璧ならガード不能まで狙えます。</li>
+<li><strong>ハイデルン対アンディ</strong>：アンディの斬影拳にスルーアタック→ストームブリンガー（→永久）が決まるなら大きい、と2019年にも書いています。46Bを適度に振れば斬影拳にスルーアタックが刺さるかもしれません（スルーアタックが斬影拳に潰されるなら無理）。</li>
+<li><strong>キム</strong>：投げ→鳳凰脚のダメージが低いのは、相打ち時のダメージらしい、と配信を見て書いています。</li>
+<li><strong>テリー</strong>：KOF'94のようなジャンプの鋭さとJDでのめくりが'96以降はマイルドになった、と書いています。屈Bから気絶で即死が当たり前、という火力も挙げています。</li>
+</ul>
+
+<h2>気になること</h2>
+<ul>
+<li>何フレーム遅らせればガード方向が変わるか。KOF'95については『ALL ABOUT KOF'95』に載っていたものの、'94は自分で調べた方が確実、としています。生ガードで裏に着地した後の地上技は、'95ではうまくガードできなかった覚えがあり、'94では違ったようです。</li>
+<li>リバーサルで出る「1F鬼焼き入力」をKOF'94でも同じ入力で出せました。なぜこの場合にリバーサルで出るのか、理屈が気になる、としています。</li>
+<li>投げられ判定が消える現象と攻撃避けの連発は、対戦ツールを崩壊させかねない仕様に挙げています。ただし、攻撃避けのモーションの長さはキャラによって違うので、まったく失敗せずに攻撃避けを続けるのは難しく、相手は表か裏か分からないように重ねて屈B連打を当てにいけるのでは、とも書いています。</li>
+<li>体力0の攻撃力アップには、上がらない技もあったはずで、パワーゲイザーなど飛び道具系の技に多かった気がする、としています。旧メモにはパワーゲイザーはダメージが減るとも書いており、「ほんとか？」と思うので確認し直したい、とのことです（<a href="./health-zero-damage-images-2011.html">体力0のダメージ比較</a>）。</li>
+<li>テリーの屈B→近Cは、通常のつなぎでもパワーためキャンセルでもつながるはずですが、パワーためキャンセルを使った方が間隔が短くなるので、気絶値の回復も少ないはずです（<a href="./stun-decay-2011-2023.html">気絶値の回復</a>）。</li>
+</ul>
+<p>補足：コンボ表示がないので、下段始動の連続技を一人で確かめるときは、画面端で立ちガード入力を続けているところに当てると、連続技になっているか分かりやすい、と勧めています。</p>
+
+<h2>出典（X投稿）</h2>
+<p>ステップ・大ジャンプ：<a href="https://x.com/mot_csb/status/1290243383240216576">ステップの入力</a>（2020/8/3） ／ <a href="https://x.com/mot_csb/status/1290243550962057219">長めに入力</a> ／ <a href="https://x.com/mot_csb/status/1290244862948683776">動き出すまで</a> ／ <a href="https://x.com/mot_csb/status/1290245062324969472">リバーサル</a> ／ <a href="https://x.com/mot_csb/status/881678013691080705">大ジャンプと6</a>（2017/7/3） ／ <a href="https://x.com/mot_csb/status/1290848957405356037">9と69</a>（2020/8/5）</p>
+<p>ボタンとキャンセル：<a href="https://x.com/mot_csb/status/1322092596043239424">関係ないボタン</a>（2020/10/30） ／ <a href="https://x.com/mot_csb/status/1325830112881733632">623N＋BC</a>（11/9） ／ <a href="https://x.com/mot_csb/status/1326158785576984576">横ためと通常投げ</a>（11/10） ／ <a href="https://x.com/mot_csb/status/1290245790619676674">連舞脚</a>（8/3） ／ <a href="https://x.com/mot_csb/status/756705108432392192">立ちCD</a>（2016/7/23） ／ <a href="https://x.com/mot_csb/status/776349219598704642">ジャンプ攻撃の空振りキャンセル</a>（2016/9/15） ／ <a href="https://x.com/mot_csb/status/732155203135250432">空キャン</a>（2016/5/16） ／ <a href="https://x.com/mot_csb/status/742691689819734016">連射機</a>（2016/6/14）</p>
+<p>ダメージと処理：<a href="https://x.com/mot_csb/status/1300071072235102208">KOF'94の順番</a>（2020/8/30） ／ <a href="https://x.com/mot_csb/status/1300073568118517771">KOF'95の順番</a> ／ <a href="https://x.com/mot_csb/status/1300073736792465408">確認の条件</a> ／ <a href="https://x.com/mot_csb/status/1295337774266978304">ランダム補正</a>（8/17） ／ <a href="https://x.com/mot_csb/status/1454809966448046098">打撃無敵と投げ無敵</a>（2021/10/31） ／ <a href="https://x.com/mot_csb/status/1440907759134777351">1P・2Pの設定ダメージ</a>（2021/9/23） ／ <a href="https://x.com/mot_csb/status/1520765216036126722">TASとチャンのC投げ</a>（2022/5/1） ／ <a href="https://x.com/mot_csb/status/1532355075037097985">KOF'94でも可能</a>（2022/6/2） ／ <a href="https://x.com/mot_csb/status/1532356036241543168">原理</a> ／ <a href="https://x.com/mot_csb/status/1532356181393833986">発生1Fの技</a> ／ <a href="https://x.com/mot_csb/status/1309533470557786112">しゃがみの押し合い判定</a>（2020/9/25） ／ <a href="https://x.com/mot_csb/status/693327250469457920">D!のD投げ</a>（2016/1/30） ／ <a href="https://x.com/mot_csb/status/1530546915758448641">使いどころ</a>（2022/5/28） ／ <a href="https://x.com/mot_csb/status/1319494186115108865">打撃投げの推測</a>（2020/10/23）</p>
+<p>キャラ別：<a href="https://x.com/mot_csb/status/1237189250916839424">リョウ</a>（2020/3/10） ／ <a href="https://x.com/mot_csb/status/1228827231427784704">タクマ</a>（2020/2/15） ／ <a href="https://x.com/mot_csb/status/944891817849319424">ケンスウ</a>（2017/12/24） ／ <a href="https://x.com/mot_csb/status/723670430490353664">京の鬼焼き</a>（2016/4/23） ／ <a href="https://x.com/mot_csb/status/1249844029170126856">轟斧</a>（2020/4/13） ／ <a href="https://x.com/mot_csb/status/723670665149042688">チョイの評価</a>（2016/4/23） ／ <a href="https://x.com/mot_csb/status/1146089405888643072">ハイデルン対アンディ</a>（2019/7/2） ／ <a href="https://x.com/mot_csb/status/1255135474307325964">キムの投げ→鳳凰脚</a>（2020/4/28） ／ <a href="https://x.com/mot_csb/status/984239780534747137">テリーのジャンプ</a>（2018/4/12） ／ <a href="https://x.com/mot_csb/status/1542513714879877120">TASの感想</a>（2022/6/30）</p>
+<p>気になること：<a href="https://x.com/mot_csb/status/1557598828815339520">ガード方向</a>（2022/8/11） ／ <a href="https://x.com/mot_csb/status/1292856894382456833">生ガード裏着地</a>（2020/8/10） ／ <a href="https://x.com/mot_csb/status/1293208736585007110">1F鬼焼き入力</a>（8/11） ／ <a href="https://x.com/mot_csb/status/1402480824864313347">対戦ツールを崩壊させかねない仕様</a>（2021/6/9） ／ <a href="https://x.com/mot_csb/status/1402479253900251138">攻撃避けの連発</a> ／ <a href="https://x.com/mot_csb/status/1337959496065282049">体力0で上がらない技</a>（2020/12/13） ／ <a href="https://x.com/mot_csb/status/1338339950014525446">パワーゲイザー</a>（12/14） ／ <a href="https://x.com/mot_csb/status/1308030321649053697">テリーの屈B→近C</a>（2020/9/21） ／ <a href="https://x.com/mot_csb/status/1331248623565348864">下段始動の確かめ方</a>（2020/11/24）</p>
+<p>関連：<a href="./command-lever-direction-2011.html">コマンド受付とレバー方向</a> ／ <a href="./takeoff-input-exceptions-2020-2025.html">離陸入力と離陸属性</a> ／ <a href="./player-side-frame-differences-2011-2023.html">1P・2Pの違い</a> ／ <a href="./index.html">KOF'94研究アーカイブ</a></p>
+</div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
