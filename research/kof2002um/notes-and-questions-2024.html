@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>KOF2002UM 2024年の研究メモと疑問点｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body>
+<header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<section class="hero"><div class="wrap"><p class="breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof02um-top.html">KOF2002UM</a> / <a href="/research/kof2002um/index.html">研究アーカイブ</a></p><p class="kicker">KOF2002UM｜研究メモ</p><h1>2024年の研究メモと疑問点</h1><p>GC前転したときの硬直差（強攻撃・必殺技で−8F、立ちC+D・GCC+Dで−4F）、ガードクラッシュさせた相手への追撃、表タクマの弱飛燕疾風脚への差し返し、キムの立ち回りなど、2024年に書いたメモと、確かめたいことのリストをまとめました。香澄の竜巻槍打の発生は2009年のデータと別資料で食い違っています。</p></div></section><main class="main"><div class="wrap">
+
+<section class="section"><h2>記号と用語</h2>
+<ul>
+<li><strong>GC前転・GC後転</strong>：ガードキャンセル緊急回避。<strong>GCC+D</strong>：ガードキャンセルふっとばし攻撃。</li>
+<li><strong>地上引き込み</strong>：空中にいる相手に技を当てて、地上やられにすること。</li>
+<li><strong>裏ロバ</strong>：裏ロバート。技名の後ろの <span class="tag">弱</span> <span class="tag">強</span> は技の版です。</li>
+</ul>
+</section>
+
+<section class="section"><h2>GC前転したときの硬直差</h2>
+<p>GC前転の全体動作は25Fで、ガードした技のガード硬直から差し引くと、次の硬直差になります。昔に調べたので多分合っているが一応、としているメモです（2024年9月）。</p>
+<div class="table-scroll"><table>
+<thead><tr><th>ガードした技</th><th>ガード硬直</th><th>GC前転したときの攻撃側の硬直差</th></tr></thead>
+<tbody>
+<tr><th scope="row">弱攻撃</th><td>9F</td><td>−16F</td></tr>
+<tr><th scope="row">強攻撃</th><td>17F</td><td>−8F</td></tr>
+<tr><th scope="row">必殺技（基本）</th><td>17F</td><td>−8F</td></tr>
+<tr><th scope="row">立ちC+D</th><td>17F</td><td>−4F</td></tr>
+<tr><th scope="row">GCC+D</th><td>17F</td><td>−4F</td></tr>
+</tbody>
+</table></div>
+<p>弱攻撃にGC前転しても、普通は何も確定しません。</p>
+</section>
+
+<section class="section"><h2>ガードクラッシュさせた相手への追撃（2024年8月）</h2>
+<p>ガークラ硬直は26F（一部のキャラは異なる）で、その間は投げ無敵なので投げは入りません。</p>
+<ul>
+<li><strong>通常投げ</strong>：決める方法はありません。</li>
+<li><strong>コマンド投げ</strong>：ガークラ動作中の相手に通常技か特殊技をヒットさせ、キャンセルでつなげます。例：アンディでジャンプC+D→屈C（ガークラ）→3A（1段目）→撃壁背水掌。</li>
+<li><strong>ジャンプ攻撃でガークラ→MAX発動→地上技</strong>：ガークラ26F、着地硬直1F、MAX発動21Fなので、ジャンプ攻撃を最低打点でガークラさせた場合に確定するのは発生4F以内の技です。現実的ではないので、事前に生発動しておいたほうがよい、としています。</li>
+</ul>
+</section>
+
+<section class="section"><h2>キャラ別のメモ（2024年）</h2>
+<h3>表タクマの飛燕疾風脚<span class="tag">弱</span>の空振りへの差し返し</h3>
+<p>飛燕疾風脚<span class="tag">弱</span>は足元が無敵なので足払いが負けやすく、ジャンプ防止の効果もあるのでジャンプしても引っかかりやすい技です。ただし2段目のあとにそれなりに隙があるので、リーチと発生に優れた技で差し返せます。硬直中も足元が無敵なので、表タクマの胴体を狙います。2段目が終わってから攻撃するのではなく、飛燕疾風脚<span class="tag">弱</span>の動作が見えたらタイミングを合わせて攻撃すると、差し返しが間に合いやすくなります。</p>
+<h3>ジョンの流滝蹴（空中で2B）の判定</h3>
+<p>「KOF02UMいろいろ」様に掲載されている判定を見ると、2002UMでは珍しく攻撃判定が食らい判定より突き出ている技です。真横や上から来る相手には勝ちにくいものの、ジョン側が上を取った場合は非常に勝ちやすい判定で、対空潰しにも使えるかもしれません。持続も7Fとそこそこ長い、としています。</p>
+<h3>キム：KOF2002と比べた立ち回り</h3>
+<ul>
+<li>飛燕斬<span class="tag">弱</span>：判定はKOF2002と変わっていない感じがします。判定の強い部分をぶつけるには、やや早めに出す必要があるのかもしれません。</li>
+<li>鳳凰飛天脚：無敵が頼りなくなったせいで、対空の圧力がかなり下がっています。</li>
+<li>低いジャンプCは使いやすいまま。ただ近Cの圧力がありません。判定は変わっていないようなので、適度に早出しの中ジャンプCを混ぜるとKOF2002っぽく戦えそうです（その後に近Cを出しにくいので、怖さはあまりない）。</li>
+<li>通常投げを見てから外せなくなっているので、少し露骨にC投げを狙ってもよいかもしれません。C投げ→起き攻めを意識させておくと、ほかの選択肢が通しやすくなりそうです（KOF2002ではC投げを見てから外せたので、近Cからのガークラ稼ぎが主な選択肢になっていた）。</li>
+<li>2002UMのキムはKOF2002ほど強引に攻めにくいので、遠距離での飛翔脚のゲージためもありかもしれません。飛翔脚の硬直が伸びているので連発はしにくいものの、適度に混ぜれば相手を焦らせる効果があるはずです。</li>
+<li>近距離で固められそうなときに相手の屈Bが読めたら、飛燕斬<span class="tag">弱</span>ではなく覇気脚<span class="tag">弱</span>で割り込みます（覇気脚<span class="tag">弱</span>は足元無敵があるはず）。</li>
+</ul>
+<h3>包：ネームレスのドリルを三角飛びでかわす</h3>
+<p>NARUTOさんの配信で見た対戦場面です。包とネームレスが端同士まで離れたところでネームレスがドリルを出し、包が後方ジャンプから三角飛びを出してかわしていました。攻略が進化している、と書いています。</p>
+</section>
+
+<section class="section"><h2>疑問点と確かめたいこと（2024～2025年）</h2>
+<p>動画や投稿を見て気になったことを、確認でき次第反映する前提で書き留めたリストです。</p>
+<h3>システム</h3>
+<ul>
+<li>GCC+DにGC前転すれば打撃技が確定するか。おそらくする、としています。</li>
+<li>通常技の対空→クイック緊急回避もありかもしれません。K′の近A→クイック緊急回避のあとの間合いがよい感じでした。裏ロバートでも使えるかもしれません（そのあと旋燕連舞脚を狙う）。</li>
+<li>GC後転の動作：マチュアの強攻撃→デスペアー<span class="tag">弱</span>の強攻撃にGC後転すると、当たるキャラと当たらないキャラがいます。判定の問題か、GC後転の動作時間の問題かを確かめたい、としています（2025年2月4日追加）。</li>
+</ul>
+<h3>キャラ別</h3>
+<ul>
+<li><strong>チョイ</strong>：対舞で、めくりを忍蜂の対めくり部分で2ヒットさせたあとダウンしないので、鳳凰脚で反撃できるか（2025年2月8日追加）。</li>
+<li><strong>京</strong>：R.E.D.kick<span class="tag">弱</span>をクーラに立ちガードされると、クロウバイツ<span class="tag">強</span>で反撃されるか。</li>
+<li><strong>紅丸</strong>：MAX2をリョウの覇王翔吼拳で消せるか（緊急回避された場合も含め）。</li>
+<li><strong>香澄</strong>：屈Aで大門のジャンプC+Dを返せるようです（これは確定でよいはず。NARUTOさんに教えてもらった）。</li>
+<li><strong>アンディ</strong>：昇龍弾<span class="tag">強</span>の対空は早めがよいか。大ジャンプで飛び越されることがあり、早めに出せば飛び越そうとする相手を巻き込める可能性もあります。そもそも発生が7Fと、無敵対空としては少し遅めです。</li>
+<li><strong>裏ロバート</strong>：屈B→近B→6B→236236BかD。</li>
+<li><strong>対裏ロバート</strong>：龍斬翔は正面にしか攻撃判定がないので、背後に落ちて対策できるか。</li>
+<li><strong>対K′</strong>：めくりの高いジャンプAは、食らい判定の低い技で返せるか。裏ロバートの屈Bで返していました。</li>
+<li><strong>対香澄</strong>：空中重ね当てが読めれば、ダッシュで背後に回って連続技を決められるか。K′が実行していました。</li>
+<li><strong>ネームレス</strong>：高いジャンプAは地上引き込みできないのか。背面から裏ロバートが屈Bを当てたところ、空中ヒットになっていました。</li>
+<li><strong>テリー</strong>：クラックシュート<span class="tag">強</span>はめくりへの対空になるか。なるなら、どこキャンでパワーゲイザーにつながるか、つながる条件は何か。ライジングタックル<span class="tag">強</span>はKOF NEOWAVEのようにめくりを落とせるか。</li>
+<li><strong>包</strong>：GCC+Dがカウンターヒットしたら、クイック発動＋近Dで地上引き込みできないか。</li>
+<li><strong>ネームレス</strong>：絶影の発生は20Fで、おそらく暗転前10F、暗転後10Fくらい。正確なフレームと、MAX2の発生も確かめたい（硬直が長い技を利用して調べる）。</li>
+<li><strong>包</strong>：近C→6Aからの突進技が、右向きなら安定するのに左向きだと安定しないようです（ネームレスで確認）。</li>
+<li><strong>対クーラ</strong>：昇り後方小ジャンプD→レイスピン<span class="tag">弱</span>（逃げながらの中段から、判定の強い技でケアする連係）への対策。垂直ノーマルジャンプ攻撃でレイスピン<span class="tag">弱</span>を横から攻撃する、屈Bなど食らい判定の低い技でかわして連続技、前進してめり込ませてガードし反撃、の3案のどれが有効か。</li>
+</ul>
+<h3>香澄のフレーム</h3>
+<ul>
+<li><strong>竜巻槍打の発生</strong>：2009年にこのブログで載せたデータでは竜巻槍打<span class="tag">弱</span>4F・竜巻槍打<span class="tag">強</span>7F、「KOF02UMいろいろ」様のデータでは竜巻槍打<span class="tag">弱</span>2F・竜巻槍打<span class="tag">強</span>5Fです。おそらく後者が正しいと思われますが、自分でも確かめたい、としています。確認方法は、コマンド登録で「ガード時の硬直差が−1～−8Fくらいの技をガードさせて最速後転」を設定し、香澄側で竜巻槍打を出してみることです。</li>
+<li><strong>白山桃<span class="tag">弱</span>の1段目にGC前転した場合</strong>：1段目のガード時の硬直差が−9F、必殺技のガード硬直が17F、GC前転が25Fなので、おそらく香澄側が−1Fで、発生1Fのコマンド投げだけが確定すると思われる、としています。</li>
+</ul>
+</section>
+
+<section class="section"><h2>コラム：キャラ対策・人読み・タイプ分け（2024年10月）</h2>
+<p>対戦格闘ゲームで勝つための要素を、2002UMを例に3つに分けて説明したコラムです。</p>
+<ol>
+<li><strong>キャラ対策</strong>：相手キャラの技や戦術に事前に備える土台。自分が使うキャラなら強い部分と弱点を深く理解しているので、相手が同じキャラのときに危険な技や隙を自然に把握できます。</li>
+<li><strong>人読み</strong>：相手の行動パターンや癖を観察して次の行動を予測すること。強い行動ほど繰り返し使われるので読みやすく、例えばクーラの遠距離の立ちBやダイヤモンドブレスは、多用されるほど予測しやすくなります。</li>
+<li><strong>タイプ分け</strong>：人読みを発展させ、プレイヤーごとの行動傾向をパターン化して、似たプレイスタイルの相手に有効な対策を汎用的に当てはめること。</li>
+</ol>
+<p>キャラ対策だけではキャラの強弱や相性に左右されやすく、人読みだけでは基本的な技の対処ができずに負けることがあるので、キャラ対策を土台にして人読みを重ね、タイプ分けで複数の相手に対応する、という流れでまとめています。</p>
+</section>
+
+<section class="section"><h2>関連ページ</h2>
+<ul>
+<li><a href="./frame-advantage-reference-2009-2011.html">発生フレームを調べるための硬直差表</a>（GC緊急回避したときの五分の目安を含む）</li>
+<li><a href="./matchup-memos-2009-2010.html">起き攻め・対空・反撃の対戦メモ</a>（テリーのライジングタックル<span class="tag">強</span>でめくりを落とす2009年の確認を含む）</li>
+<li><a href="./kasumi-frame-data-2009.html">香澄のフレームデータ</a></li>
+<li><a href="/kof-kininaru.html#kof02um">KOFシリーズ 気になること：KOF2002UM</a></li>
+<li><a href="./index.html">KOF2002UM研究アーカイブ</a></li>
+</ul>
+</section>
+<section class="section"><h2>出典</h2>
+<ul>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/504165458.html">2024/7/29：KOF2002UM：包（ネームレスのドリルに対して三角飛びで回避）</a>（NARUTOさんの配信より）</li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/504205967.html">2024/8/1：KOF2002UM：疑問点とやりたいことリスト</a>（2025/2/8まで追記）</li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/504283306.html">2024/8/8：KOF2002UM：ジョン　流滝蹴（空中で2B）の判定について</a>（判定は「KOF02UMいろいろ」様の掲載による）</li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/504294753.html">2024/8/9：KOF2002UM：キム　02と比較した立ち回りメモ</a>（元は2021年のX投稿）</li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/504333661.html">2024/8/13：KOF2002UM：ガークラ関係</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2024/09/10/161106">2024/9/10：KOF2002UM：気になること、調べたいこと（随時更新）</a>（2025/2/4まで追記）</li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2024/10/20/094046">2024/10/20：コラム：「キャラ対策」と「人読み」と「タイプ分け」</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2024/11/13/075816">2024/11/13：KOF2002UM：表タクマ対策　弱飛燕疾風脚空振りへの差し返し</a></li>
+<li><a href="https://kof98.ari-jigoku.com/kof02um.html">KOF02UMいろいろ</a></li>
+</ul>
+</section>
+
+</div></main></body></html>
