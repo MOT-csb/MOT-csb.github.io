@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>KOF2002UM 発生フレームを調べるための硬直差表（2009～2011年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body>
+<header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<section class="hero"><div class="wrap"><p class="breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof02um-top.html">KOF2002UM</a> / <a href="/research/kof2002um/index.html">研究アーカイブ</a></p><p class="kicker">KOF2002UM｜システム・技データ</p><h1>発生フレームを調べるための硬直差表（2009～2011年）</h1><p>硬直差が分かっている技のあとに調べたい技を出し、反撃が確定するかどうかで発生フレームを絞る方法と、そのための硬直差表です。±0Fから−44Fまで、アンディ・表裏ロバートを中心に約110件を並べています。2011年に考えた「J攻撃当て法」と、データを読むときの前提（暗転28Fなど）もまとめました。</p></div></section><main class="main"><div class="wrap">
+
+<section class="section"><h2>記号と用語</h2>
+<ul>
+<li><strong>硬直差</strong>：技をヒットまたはガードさせたあと、攻撃した側が動けるようになるまでの差。−3Fなら攻撃した側が3F不利です。</li>
+<li><strong>表裏ロバート</strong>：表ロバートと裏ロバートの両方で同じ値という意味です。</li>
+<li><strong>☆</strong>：硬直差を調べるのに使いやすい技（ヒット・ガード後に距離が離れない、または離れにくい技、密着で狙える技）。</li>
+<li><strong>QAB</strong>：クイック緊急回避。<strong>GC緊急回避</strong>：ガードキャンセル緊急回避。<strong>GCC+D</strong>：ガードキャンセルふっとばし攻撃。</li>
+<li><strong>＞</strong>：つなぎ（例：「立ちC+Dガード＞クイック緊急回避」は、立ちC+Dをガードさせたあとにクイック緊急回避を出した場合）。</li>
+<li>技名の後ろの <span class="tag">弱</span> <span class="tag">強</span> は技の版です。</li>
+</ul>
+</section>
+
+<section class="section"><h2>硬直差から発生フレームを絞る</h2>
+<p>調べたい技を、硬直差が分かっている技のあとに出して、反撃が確定するかどうかを見れば、その技の発生フレームが分かります。表は、ヒットまたはガードさせると五分から不利になる技を、硬直差の順に並べたものです。</p>
+<h3>例その1：飛翔拳ガード後</h3>
+<p>アンディに端へ追い詰められて、近距離で飛翔拳をガードさせられると3F不利です。</p>
+<ol>
+<li>このガード後に反撃が確定した技は、発生3F以内です。</li>
+<li>ガードされて2F不利な技に反撃が確定しなかったなら、発生は2Fより長いことになります。</li>
+<li>あわせると、その技の発生は3Fです。</li>
+</ol>
+<h3>例その2：クイック緊急回避</h3>
+<p>「弱攻撃ガード＞クイック緊急回避（−18F）」には反撃できるが、「弱攻撃ヒット＞クイック緊急回避（−16F）」には反撃できない技の発生は、17Fか18Fのどちらかです。</p>
+<h3>調べるときの注意</h3>
+<ul>
+<li>発生は「発生したフレーム」で当たるかどうかで調べるので、ヒット・ガード後に距離が離れる技を使うと、発生したフレームでは届かない技が出てきます。その場合は、同じ硬直差でも距離が離れにくい技を選びます。</li>
+<li>飛び道具判定の技は、端の相手にヒット・ガードさせると距離が離れません。</li>
+<li>攻撃を受ける側が画面端からほんの少し離れた状態でヒット・ガードさせると、離れる距離が短くなります。</li>
+<li>該当する技がまだ見つかっていない硬直差（−25F、−29F、−34F、−37F～−43F）は、その硬直差で調べる方法がありません。見つかるまでは、発生を特定できない技も出てきます。</li>
+</ul>
+</section>
+
+<section class="section"><h2>硬直差の目安</h2>
+<p>キャンセルや緊急回避と組み合わせたときの限界です。調べやすい技だけを並べた表の見出しに書かれていたものと、全部の技を並べた表の見出しに書かれていたものを合わせています。</p>
+<div class="table-scroll"><table>
+<thead><tr><th>硬直差</th><th>意味</th></tr></thead>
+<tbody>
+<tr><th scope="row">±0F</th><td>五分。何も確定しない</td></tr>
+<tr><th scope="row">−1F</th><td>1Fのコマンド投げは確定する</td></tr>
+<tr><th scope="row">−4F</th><td>立ちC+DにGC緊急回避されると五分になる</td></tr>
+<tr><th scope="row">−8F</th><td>強攻撃や必殺技にGC緊急回避されると五分になる</td></tr>
+<tr><th scope="row">−9F</th><td>弱攻撃キャンセルで連続ガードになる限界の発生</td></tr>
+<tr><th scope="row">−11F</th><td>弱攻撃キャンセルで連続技になる限界の発生</td></tr>
+<tr><th scope="row">−17F</th><td>強攻撃キャンセルで連続ガードになる限界の発生</td></tr>
+<tr><th scope="row">−19F</th><td>強攻撃キャンセルで連続技になる限界の発生</td></tr>
+<tr><th scope="row">−21F</th><td>立ちC+Dキャンセルで連続ガードになる限界の発生</td></tr>
+</tbody>
+</table></div>
+</section>
+
+<section class="section"><h2>硬直差表（判明している技すべて）</h2>
+<p>2009年3月1日に作り、2010年1月19日まで更新した表です。「当て方」が空欄の行は、原文にヒットかガードかの記載がないものです。</p>
+<div class="table-scroll"><table>
+<thead><tr><th>硬直差</th><th>キャラ</th><th>技</th><th>当て方</th><th>調べやすさ</th><th>補足</th></tr></thead>
+<tbody>
+<tr><th scope="row">±0F</th><td>アンディ</td><td>近A</td><td>ガード</td><td>☆</td><td></td></tr>
+<tr><th scope="row">±0F</th><td>表裏ロバート</td><td>近B</td><td>ヒット</td><td>☆</td><td></td></tr>
+<tr><th scope="row">±0F</th><td>表裏ロバート</td><td>近C</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">±0F</th><td>表ロバート</td><td>遠C</td><td>ヒット</td><td></td><td></td></tr>
+<tr><th scope="row">±0F</th><td>表ロバート</td><td>立ちC+D</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">±0F</th><td>表ロバート</td><td>キャンセル版6A</td><td>ヒット</td><td></td><td></td></tr>
+<tr><th scope="row">−1F</th><td>アンディ</td><td>近B</td><td>ヒット</td><td>☆</td><td></td></tr>
+<tr><th scope="row">−1F</th><td>表裏ロバート</td><td>近D2段目</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−1F</th><td>表裏ロバート</td><td>遠A</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−1F</th><td>裏ロバート</td><td>屈A</td><td>ガード</td><td>☆</td><td></td></tr>
+<tr><th scope="row">−1F</th><td>表裏ロバート</td><td>屈B</td><td>ガード</td><td>☆</td><td></td></tr>
+<tr><th scope="row">−1F</th><td>裏ロバート</td><td>遠C</td><td>ヒット</td><td></td><td></td></tr>
+<tr><th scope="row">−1F</th><td>裏ロバート</td><td>3B</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−2F</th><td>アンディ</td><td>激飛翔拳最後の1段</td><td>ヒット</td><td></td><td></td></tr>
+<tr><th scope="row">−2F</th><td>表ロバート</td><td>近B</td><td>ガード</td><td>☆</td><td></td></tr>
+<tr><th scope="row">−2F</th><td>表裏ロバート</td><td>遠B</td><td>ヒット</td><td>☆</td><td></td></tr>
+<tr><th scope="row">−2F</th><td>表ロバート</td><td>遠C</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−2F</th><td>表ロバート</td><td>キャンセル版6A</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−2F</th><td>表ロバート</td><td>端の相手への近D1段目＞6A＞龍神脚<span class="tag">強</span></td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−2F</th><td>裏ロバート</td><td>飛燕旋風脚<span class="tag">弱</span>最後まで</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−3F</th><td>アンディ</td><td>近B</td><td>ガード</td><td>☆</td><td></td></tr>
+<tr><th scope="row">−3F</th><td>アンディ</td><td>近C2段</td><td>ヒット</td><td></td><td></td></tr>
+<tr><th scope="row">−3F</th><td>アンディ</td><td>飛翔拳</td><td>ガード</td><td>☆</td><td>こちら端だと距離離れないので発生調査に使いやすい</td></tr>
+<tr><th scope="row">−3F</th><td>アンディ</td><td>空破弾<span class="tag">弱</span><span class="tag">強</span>最後の1段</td><td>ヒット</td><td></td><td></td></tr>
+<tr><th scope="row">−3F</th><td>裏ロバート</td><td>遠C</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−3F</th><td>裏ロバート</td><td>飛燕旋風脚<span class="tag">強</span>最後まで</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−4F</th><td>アンディ</td><td>遠A</td><td>ヒット</td><td></td><td></td></tr>
+<tr><th scope="row">−4F</th><td>アンディ</td><td>遠B</td><td>ヒット</td><td></td><td></td></tr>
+<tr><th scope="row">−4F</th><td>アンディ</td><td>激飛翔拳最後の1段</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−4F</th><td>表ロバート</td><td>遠B</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−4F</th><td>ヴァネッサ</td><td>アパカ<span class="tag">強</span></td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−5F</th><td>アンディ</td><td>近C2段</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−5F</th><td>アンディ</td><td>近D</td><td>ヒット</td><td></td><td></td></tr>
+<tr><th scope="row">−5F</th><td>アンディ</td><td>遠C</td><td>ヒット</td><td></td><td></td></tr>
+<tr><th scope="row">−5F</th><td>アンディ</td><td>屈C</td><td>ヒット</td><td></td><td></td></tr>
+<tr><th scope="row">−5F</th><td>アンディ</td><td>屈D</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−5F</th><td>アンディ</td><td>3A2段</td><td>ヒット</td><td></td><td></td></tr>
+<tr><th scope="row">−5F</th><td>アンディ</td><td>空破弾<span class="tag">弱</span><span class="tag">強</span>最後の1段</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−6F</th><td>アンディ</td><td>遠A</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−6F</th><td>アンディ</td><td>遠B</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−6F</th><td>共通</td><td>立ちC+Dガード＞クイック緊急回避</td><td></td><td>☆</td><td></td></tr>
+<tr><th scope="row">−7F</th><td>アンディ</td><td>近D</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−7F</th><td>アンディ</td><td>遠C</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−7F</th><td>アンディ</td><td>屈C</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−7F</th><td>アンディ</td><td>3A2段</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−7F</th><td>裏ロバート</td><td>龍虎乱舞<span class="tag">弱</span></td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−7F</th><td>共通</td><td>GCC+Dに対してGC緊急回避</td><td></td><td></td><td></td></tr>
+<tr><th scope="row">−8F</th><td>アンディ</td><td>斬影拳<span class="tag">弱</span></td><td>ヒット</td><td></td><td></td></tr>
+<tr><th scope="row">−8F</th><td>共通</td><td>強攻撃ヒット＞クイック緊急回避</td><td></td><td>☆</td><td></td></tr>
+<tr><th scope="row">−9F</th><td>アンディ</td><td>立ちC+D</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−9F</th><td>表裏ロバート</td><td>遠D</td><td>ヒット</td><td></td><td></td></tr>
+<tr><th scope="row">−9F</th><td>ヴァネッサ</td><td>アパカ<span class="tag">弱</span></td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−9F</th><td>表ロバート</td><td>4A</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−10F</th><td>アンディ</td><td>斬影拳<span class="tag">弱</span></td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−10F</th><td>表裏ロバート</td><td>屈C</td><td>ヒット</td><td></td><td></td></tr>
+<tr><th scope="row">−10F</th><td>共通</td><td>強攻撃ガード＞クイック緊急回避</td><td></td><td>☆</td><td></td></tr>
+<tr><th scope="row">−10F</th><td>裏ロバート</td><td>飛燕旋風脚<span class="tag">弱</span>2段目まで</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−11F</th><td>アンディ</td><td>GCC+D</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−11F</th><td>表裏ロバート</td><td>遠D</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−11F</th><td>表裏ロバート</td><td>屈D</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−11F</th><td>表裏ロバート</td><td>GCC+D</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−12F</th><td>表裏ロバート</td><td>屈C</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−13F</th><td>アンディ</td><td>斬影拳<span class="tag">強</span></td><td>ヒット</td><td></td><td></td></tr>
+<tr><th scope="row">−13F</th><td>アンディ</td><td>斬影流星拳<span class="tag">弱</span></td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−13F</th><td>表裏ロバート</td><td>4Bか6B</td><td>ヒット</td><td></td><td></td></tr>
+<tr><th scope="row">−13F</th><td>裏ロバート</td><td>MAX龍虎乱舞</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−13F</th><td>裏ロバート</td><td>MAX2</td><td></td><td></td><td></td></tr>
+<tr><th scope="row">−14F</th><td>アンディ</td><td>幻影不知火上顎</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−15F</th><td>アンディ</td><td>斬影拳<span class="tag">強</span></td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−15F</th><td>アンディ</td><td>斬影流星拳<span class="tag">強</span></td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−15F</th><td>アンディ</td><td>超裂破弾<span class="tag">弱</span>最後の1段</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−15F</th><td>表裏ロバート</td><td>4Bか6B</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−15F</th><td>表ロバート</td><td>背牙龍<span class="tag">弱</span><span class="tag">強</span></td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−16F</th><td>共通</td><td>弱攻撃ヒット＞クイック緊急回避</td><td></td><td>☆</td><td></td></tr>
+<tr><th scope="row">−17F</th><td>紅丸</td><td>反動三段蹴り<span class="tag">弱</span>2段目</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−18F</th><td>アンディ</td><td>幻影不知火下顎</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−18F</th><td>共通</td><td>弱攻撃ガード＞クイック緊急回避</td><td></td><td></td><td></td></tr>
+<tr><th scope="row">−18F</th><td>表ロバート</td><td>龍虎乱舞<span class="tag">弱</span></td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−18F</th><td>裏ロバート</td><td>飛燕旋風脚<span class="tag">弱</span>初段のみ</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−18F</th><td>京</td><td>大蛇薙<span class="tag">弱</span><span class="tag">強</span>(タメ)</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−19F</th><td>京</td><td>罪詠み</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−19F</th><td>京</td><td>大蛇薙<span class="tag">強</span></td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−20F</th><td>大門（記事では五郎）</td><td>切り株返し</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−21F</th><td>アンディ</td><td>疾風横拳<span class="tag">弱</span><span class="tag">強</span></td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−21F</th><td>アンディ</td><td>超裂破弾<span class="tag">強</span>最後の1段</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−21F</th><td>表ロバート</td><td>龍牙<span class="tag">弱</span>密着</td><td>ガード</td><td></td><td>（？）</td></tr>
+<tr><th scope="row">−21F</th><td>京</td><td>荒咬み～八錆</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−22F</th><td>表裏ロバート</td><td>龍虎乱舞<span class="tag">強</span></td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−22F</th><td>紅丸</td><td>スーパー稲妻キック<span class="tag">弱</span></td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−23F</th><td>表ロバート</td><td>MAX龍虎乱舞</td><td></td><td></td><td></td></tr>
+<tr><th scope="row">−23F</th><td>裏ロバート</td><td>龍斬翔<span class="tag">弱</span></td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−23F</th><td>京</td><td>百八捨弐<span class="tag">弱</span><span class="tag">強</span></td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−24F</th><td>アンディ</td><td>MAX超裂破弾最後の1段</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−24F</th><td>舞</td><td>超必殺忍蜂<span class="tag">強</span></td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−25F</th><td>—</td><td>（該当する技は未確認）</td><td></td><td></td><td></td></tr>
+<tr><th scope="row">−26F</th><td>表ロバート</td><td>龍牙<span class="tag">強</span>密着</td><td>ガード</td><td></td><td>（？）</td></tr>
+<tr><th scope="row">−26F</th><td>庵</td><td>琴月<span class="tag">弱</span></td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−27F</th><td>庵</td><td>MAX八稚女</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−28F</th><td>ネームレス</td><td>623A</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−29F</th><td>—</td><td>（該当する技は未確認）</td><td></td><td></td><td></td></tr>
+<tr><th scope="row">−30F</th><td>庵</td><td>琴月<span class="tag">強</span></td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−30F</th><td>マチュア</td><td>ヘブンズゲイト<span class="tag">強</span></td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−31F</th><td>チョイ</td><td>非猿懺<span class="tag">弱</span>2段目</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−32F</th><td>裏ロバート</td><td>龍斬翔<span class="tag">強</span></td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−32F</th><td>紅丸</td><td>スーパー稲妻キック<span class="tag">強</span></td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−33F</th><td>ラルフ</td><td>MAX2</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−34F</th><td>—</td><td>（該当する技は未確認）</td><td></td><td></td><td></td></tr>
+<tr><th scope="row">−35F</th><td>チョイ</td><td>非猿懺<span class="tag">弱</span>1段目のみ</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−36F</th><td>紅丸</td><td>MAX雷光拳最終段</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−36F</th><td>庵</td><td>鬼焼き<span class="tag">強</span>最終段</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−37F～−43F</th><td>—</td><td>（該当する技は未確認）</td><td></td><td></td><td></td></tr>
+<tr><th scope="row">−44F</th><td>紅丸</td><td>反動三段蹴り<span class="tag">強</span>2段目</td><td>ガード</td><td></td><td></td></tr>
+<tr><th scope="row">−44F</th><td>チョイ</td><td>非猿懺<span class="tag">強</span></td><td>ガード</td><td></td><td></td></tr>
+</tbody>
+</table></div>
+</section>
+
+<section class="section"><h2>J攻撃当て法（2011年7月）</h2>
+<p>ジャンプ攻撃を最低打点で当てたときの有利フレームを使うと、着地後に出した技の発生を調べられます。必殺技だけでなく、通常技や通常版の特殊技の発生も調べられるのが利点です。</p>
+<div class="table-scroll"><table>
+<thead><tr><th>最低打点で当てる技</th><th>有利フレーム</th><th>調べられる発生</th></tr></thead>
+<tbody>
+<tr><th scope="row">ジャンプ攻撃をヒット</th><td>10F</td><td>1～10F</td></tr>
+<tr><th scope="row">ジャンプ強攻撃をガードさせる</th><td>17F</td><td>1～16F</td></tr>
+<tr><th scope="row">ジャンプC+Dをガードさせる</th><td>20F</td><td>1～20F</td></tr>
+</tbody>
+</table></div>
+<ol>
+<li>ジャンプ攻撃をヒットまたはガードさせる。</li>
+<li>調べたい技を着地後最速で出す。</li>
+<li>連続技・連続ガードになるかで発生を判断する。</li>
+</ol>
+<p>ジャンプの上昇から下降にまたがる場合はややこしくなりそう、としています。この方法だけで確定させるより、次のキャンセルの結果である程度アタリを付けてから使うほうが効率がよい、という提案です。</p>
+<div class="table-scroll"><table>
+<thead><tr><th>キャンセル元</th><th>結果</th><th>発生</th></tr></thead>
+<tbody>
+<tr><th scope="row">立ちC+Dキャンセル</th><td>連続ガードになる</td><td>21F以内</td></tr>
+<tr><th scope="row">強攻撃キャンセル</th><td>連続技にならない</td><td>20F以上</td></tr>
+<tr><th scope="row">強攻撃キャンセル</th><td>連続技になるが連続ガードにならない</td><td>18Fか19F</td></tr>
+<tr><th scope="row">強攻撃キャンセル</th><td>連続ガードになる</td><td>17F以内</td></tr>
+<tr><th scope="row">弱攻撃キャンセル</th><td>連続技になるが連続ガードにならない</td><td>10Fか11F</td></tr>
+<tr><th scope="row">弱攻撃キャンセル</th><td>連続ガードになる</td><td>9F以内</td></tr>
+</tbody>
+</table></div>
+<p>補足：クイック発動（QM）を使っても調べられます。例えば地上C+D→クイック発動→最速で調べたい技、とすると、発生21Fまでの技なら連続ガードになるはずです。必殺技や超必殺技では意味がありませんが、通常技・特殊技・地上C+Dなら使えます。</p>
+</section>
+
+<section class="section"><h2>データを読むときの前提（2010年1月）</h2>
+<p>各種データの説明用にまとめたメモです。KOF2002の知識で書いているので、間違っている可能性がある、と断っています。</p>
+<ul>
+<li><strong>キャンセル版と通常版</strong>：特殊技には、普通に立った状態で出す場合のほかに、通常技をキャンセルして出す「キャンセル版」があります。普通に立った状態で出す場合を、このブログでは便宜上「通常版」と呼んでいます。超必殺技が出せない状態で「通常技キャンセル超必殺技」と入力すると、立った状態でキャンセル版を出せます。</li>
+<li><strong>暗転</strong>：暗転の時間は28Fです。暗転させた側は暗転中も自由に入力できますが、暗転させられた側は入力できないと考えてよい、としています。正確には暗転後10Fくらいまでは入力が認められますが、人間の反応速度の問題で活用できることはまずありません。</li>
+<li><strong>半数補正</strong>：ダメージとガークラ値には適用されますが、ゲージ増加量には適用されません。</li>
+<li><strong>受けた側のゲージ増加量</strong>：相手の攻撃を食らうかガードした場合は、1ヒット（1ガード）につき2です。ただしMAX発動中は、食らってもガードしてもゲージは増えません。</li>
+<li><strong>低J攻撃・高J攻撃</strong>：小ジャンプ攻撃と中ジャンプ攻撃はダメージ・ガークラ値・ゲージ増加量が同じなので、まとめて「低J攻撃」と呼ぶことがあります。斜めノーマルジャンプ攻撃と斜め大ジャンプ攻撃も同じなので、まとめて「高J攻撃」と呼ぶことがあります。</li>
+</ul>
+</section>
+
+<section class="section"><h2>気になること</h2>
+<ul>
+<li>「GCC+Dに対してGC緊急回避」は、調べやすい技だけを並べた表では−3Fと−7F（のはず）の両方に載っていて、全部の技を並べた表では−7Fだけに載っています。どちらが正しいのかは原文からは決められません。</li>
+<li>表ロバートの龍牙 <span class="tag">弱</span>（密着ガード −21F）・龍牙 <span class="tag">強</span>（密着ガード −26F）には、原文で「（？）」が付いています。</li>
+<li>裏ロバートのMAX2（−13F）と表ロバートのMAX龍虎乱舞（−23F）は、ヒットかガードかの記載がありません。</li>
+</ul>
+</section>
+
+<section class="section"><h2>関連ページ</h2>
+<ul>
+<li><a href="./startup-frame-test-method-2009.html">発生フレームの計測法（2009年）</a></li>
+<li><a href="./motion-totalframes-test-method-2009.html">技の全体動作の計測法</a></li>
+<li><a href="./andy-frame-data-2025.html">アンディのフレームデータ</a></li>
+<li><a href="./robert-frame-sources-2009-2025.html">ロバートのフレームデータ</a>／<a href="./ura-robert-frame-sources-2009-2025.html">裏ロバートのフレームデータ</a></li>
+<li><a href="./index.html">KOF2002UM研究アーカイブ</a></li>
+</ul>
+</section>
+
+<section class="section"><h2>出典</h2>
+<ul>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2010/01/14/230300">2010/1/14：02UM：各種データの説明用メモ</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2010/01/19/131700">2010/1/19：02UM：発生フレーム調査のための硬直差表</a>（作成 2009/3/1）</li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/216286500.html">2011/7/23：発生フレーム調査方法（J攻撃当て法）</a></li>
+</ul>
+</section>
+
+</div></main></body></html>
