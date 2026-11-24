@@ -1,33 +1,55 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF2002UM 技の全体動作・持続・投げ無敵の調査方法（2009年）｜Come sono bravo?</title><meta name="description" content="MOTの2009年の全体モーション計測、暗転28F、ジャンプ持続・投げ無敵・投げ間合いの調査案を保存"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:970px}.article h2{margin-top:2rem}.article table{width:100%;min-width:690px;border-collapse:collapse}.article th,.article td{border:1px solid #bbc9c2;padding:9px;text-align:left;vertical-align:top}.article th{background:#e6efea}.scroll{overflow:auto}.note{background:#edf3ef;border-left:3px solid #517b65;padding:12px}.src{font-size:.92em}.article a{overflow-wrap:anywhere}code{overflow-wrap:anywhere}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof02um-top.html">KOF2002UM</a> / <a href="./index.html">研究アーカイブ</a> / <b>全体F・持続の調査法</b></div></div><main class="main"><div class="wrap article"><h1>KOF2002UM：技の全体動作フレーム調査法（2009年の原記録）</h1>
-<p class="note">MOT本人が2009年11月9日に公開した、<strong>コマンド登録で動作終了後に最初に垂直小ジャンプできる境界を調べる方法</strong>の復元。原著者は冒頭で、<strong>数値を取ったゲームはKOF2002であり、2002UMにも「同様に可能のはず」</strong>と明記。2002の検証結果を2002UMでの確認済み実測として掲載しない。</p>
-<p class="src">原資料：<a href="https://comesonobravo.hatenadiary.org/entry/2009/11/09/013849">2009/11/09『02UM：各技の動作全体のフレーム数の調査方法』</a>（MOT提供ブログ・エクスポートで原文確認）。</p>
-<h2>本人が提示した6区分の具体例</h2>
-<div class="scroll"><table><thead><tr><th>技の分類</th><th>記録された全体F</th><th>コマンド登録でのジャンプ境界</th><th>元記事の補足</th></tr></thead><tbody><tr><td>立ち通常技</td><td>バイス遠A：全体15F</td><td>A(1), N(4), 8(14)でJせず／8(15)で垂直小J</td><td>動作終了後に8入力を継続した際の境界</td></tr>
-<tr><td>しゃがみ通常技</td><td>バイス屈A：全体15F</td><td>A(1), 2(4), 8(14)でJせず／8(15)で垂直小J</td><td>Nでなく2(4)を使用</td></tr>
-<tr><td>立ちCD</td><td>バイス立ちCD：全体49F</td><td>CD同時(1), 8(48)でJせず／8(49)で垂直小J</td><td></td></tr>
-<tr><td>特殊技</td><td>バイス6A：全体40F</td><td>A(1), 6(4), 8(39)でJせず／8(40)で垂直小J</td><td></td></tr>
-<tr><td>必殺技</td><td>バイス弱ゴアフェスト：全体24F</td><td>6(1),2(1),4(1),6(1),A(1),8(24)でJせず／8(25)で垂直小J</td><td>原文では632146Aを6246Aまで省略可</td></tr>
-<tr><td>超必殺技</td><td>バイス弱ネガティブゲイン：全体43F＋暗転28F</td><td>6(1),2(1),4(1),6(1),2(1),4(1),B(1),8(71)でJせず／8(72)で垂直小J</td><td>71－28＝43F。原文では6321463214Bを624624Bまで省略可</td></tr></tbody></table></div>
-<p>表の「8(14)」などは上入力を14F継続するという原文の入力書式。「Jせず」は垂直小ジャンプが出ない、次の値は垂直小ジャンプになるという境界。<strong>技の攻撃判定の発生Fとは別の「動作全体の長さ」</strong>を測っている。</p>
-<h2>超必殺技での暗転時間の扱い</h2>
-<p>弱ネガティブゲインでは、コマンド完成から上入力71Fで小ジャンプせず、72Fで小ジャンプする。MOTは<strong>71Fから暗転28Fを差し引き、全体動作43F</strong>としている。この暗転28Fは2009年の本人の調査計算法であり、全作品・全技の共通値とは証明されていない。</p>
-<h2>後年の2002UM・包のデータへの接続</h2>
-<p>2010年1月7日の本人記事では、包の飛び道具6種について同じく上入力によるジャンプ境界を実際に調べたと説明。包の超必殺技では暗転28Fを差し引いて68F・76F・67Fを算出している。<strong>2009年はKOF2002での例、2010年は02UMの包での本人測定記録</strong>と区別する。</p>
-<p class="src">関連：<a href="./bao-projectile-motion-test-2010.html">02UM包6技の入力境界と全体F</a>／<a href="./projectile-motion-list-2010.html">02UM飛び道具全体35技の一覧</a>。</p>
-<h2>同じ時期の別のフレーム調査案（発生・持続・投げ無敵）</h2>
-<p>MOTは2009年3月13日、コマンド登録を利用した<strong>ジャンプ予備動作・滞空時間・ジャンプ攻撃の発生と持続・地上攻撃の持続・投げ無敵</strong>についても調査案を公開した。ジャンプ攻撃の発生／持続の一部は<strong>真ノ豪さんからの情報</strong>として紹介されている。</p>
-<div class="scroll"><table><thead><tr><th>調査対象</th><th>原文にある計算・入力方法</th><th>記録上の留保</th></tr></thead><tbody>
-<tr><td>ジャンプ予備動作</td><td>上入力でノーマルJになる境界の数字から2F引く</td><td>02UMでは統一された「らしい」、確認する価値があるとの本人見解</td></tr>
-<tr><td>小ジャンプの滞空</td><td>8(2F)→隙間(?F)→8(2F)。最短連続小Jになる隙間－3F</td><td>隙間を変えて境界を取る</td></tr>
-<tr><td>ノーマルJの滞空</td><td>8(10F)→隙間(?F)→8(2F)。隙間＋5F</td><td>「はず」と留保</td></tr>
-<tr><td>ジャンプ攻撃の発生</td><td>最低打点を取るよう隙間を調節し、滞空時間－隙間F</td><td>真ノ豪さんの情報</td></tr>
-<tr><td>ジャンプ攻撃の持続</td><td>画面端・相手密着でCD(1F)→隙間→8(2F)→隙間→J攻撃(1F)。2回目の隙間を短縮し、攻撃が当たらない境界から算出</td><td>真ノ豪さんの情報。厳密な算出式は元記事に明記なし</td></tr>
-<tr><td>地上技の持続</td><td>画面端・相手密着でCD(1F)→隙間→必殺技コマンド。相手にヒットする隙間の範囲を調べる</td><td>原文では詳細な算出式なし</td></tr>
-<tr><td>投げ無敵</td><td>五分～微有利になる弱攻撃→ノーキャンセルで調べたい技を出す。密着した大門が天地返し等を最速で出し、投げ成立／不成立を比較</td><td>投げ不成立なら無敵がある「はず」という当時の調査案</td></tr>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF2002UM 技の全体動作・持続・投げ無敵の調査方法（2009年）｜Come sono bravo?</title><meta name="description" content="MOTの2009年の全体モーション計測、暗転28F、ジャンプ持続・投げ無敵・投げ間合いの調査案を保存"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:970px}.article h2{margin-top:2rem}.article table{width:100%;min-width:690px;border-collapse:collapse}.article th,.article td{border:1px solid #bbc9c2;padding:9px;text-align:left;vertical-align:top}.article th{background:#e6efea}.scroll{overflow:auto}.note{background:#edf3ef;border-left:3px solid #517b65;padding:12px}.src{font-size:.92em}.article a{overflow-wrap:anywhere}code{overflow-wrap:anywhere}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof02um-top.html">KOF2002UM</a> / <a href="./index.html">研究アーカイブ</a> / <b>全体F・持続の調査法</b></div></div><main class="main"><div class="wrap article"><h1>KOF2002UM：技の全体動作フレーム調査法（2009年）</h1>
+<p>技の全体動作フレームは、技を出した直後に上を入れ続け、何フレーム目で垂直小ジャンプが出るかで分かります。小ジャンプが出た時点が、技の動作が終わって次の行動を受け付けた瞬間です。超必殺技は、そこから暗転の28Fを引きます。</p>
+<p>数値は無印2002で調べたものですが、UMでも同じように調べられるはずです。いずれも家庭用のコマンド登録機能を使います。（ ）内は入力するフレーム数、Nはニュートラルです。</p>
+<h2>技の種類ごとの入力</h2>
+<p>上（8）を入れるフレーム数を1Fずつ増やしていき、垂直小ジャンプが出たフレーム数を全体フレームとします。例はすべてバイスです。</p>
+<div class="tbl"><table><thead><tr><th>種類</th><th>例と全体F</th><th>ジャンプしない入力</th><th>垂直小ジャンプが出る入力</th></tr></thead><tbody>
+<tr><td>立ち通常技</td><td>遠A：15F</td><td>Ａ（１）・Ｎ（４）・８（１４）</td><td>Ａ（１）・Ｎ（４）・８（１５）</td></tr>
+<tr><td>しゃがみ通常技</td><td>屈A：15F</td><td>Ａ（１）・２（４）・８（１４）</td><td>Ａ（１）・２（４）・８（１５）</td></tr>
+<tr><td>立CD</td><td>立CD：49F</td><td>ＣＤ同時（１）・８（４８）</td><td>ＣＤ同時（１）・８（４９）</td></tr>
+<tr><td>特殊技</td><td>6A：40F</td><td>Ａ（１）・６（４）・８（３９）</td><td>Ａ（１）・６（４）・８（４０）</td></tr>
+<tr><td>必殺技</td><td>ゴアフェスト<span class="tag">弱</span>：24F</td><td>６（１）・２（１）・４（１）・６（１）・Ａ（１）・８（２４）</td><td>６（１）・２（１）・４（１）・６（１）・Ａ（１）・８（２５）</td></tr>
+<tr><td>超必殺技</td><td>ネガティブゲイン<span class="tag">弱</span>：43F＋暗転28F</td><td>６（１）・２（１）・４（１）・６（１）・２（１）・４（１）・Ｂ（１）・８（７１）</td><td>６（１）・２（１）・４（１）・６（１）・２（１）・４（１）・Ｂ（１）・８（７２）</td></tr>
 </tbody></table></div>
-<p class="src">原資料：<a href="https://comesonobravo.hatenadiary.org/entry/2009/03/13/125052">2009/03/13『フレームや投げ無敵の調査方法で新たにわかったこと』</a>。原文の「はず」「らしい」を<strong>確定した法則</strong>とは扱わない。</p>
-<h2>投げ間合いの計測案（2009年9月）</h2>
-<p>MOTは2009年9月5日、家庭用プラクティスのコマンド登録で<strong>2Pのチャンを任意Fだけ後退させ、1Pの投げキャラの技が成立する境界を比較する</strong>案を提示した。密着から始め、1Pは横移動しないように垂直ジャンプの下降・着地寸前にコマンドを完成させる。後退Fを変えて投げられる最大境界を測り、間合いをキャラクター・技間で比較する予定。</p>
-<p>これは本人が<strong>調査方法「案」</strong>として提示した記事であり、全投げの測定完了や具体的な間合い数値を示すものではない。</p>
-<p>この後、MOTは<a href="./command-throw-range-list-2010.html">2010年1月30日のコマンド投げ間合い48区分表</a>を掲載。ただしその実施方法は<strong>ネームレスを4入力で後退させる</strong>方式で、2009年の案（チャンを後退させる）と相手キャラが異なるため、実測条件を同一視しない。</p>
-<p class="src">原資料：<a href="https://comesonobravo.hatenadiary.org/entry/2009/09/05/153922">2009/09/05『投げ間合い調査方法案』</a>。関連：<a href="./startup-frame-test-method-2009.html">2009年発生Fの各種計測方法</a>／<a href="./index.html">研究目次</a>／<a href="/kof-kininaru.html#kof02um">気になること</a>。</p></div></main><footer class="footer"><div class="wrap">Come sono bravo? ｜ 作成：MOT</div></footer></body></html>
+<ul>
+<li>通常技と特殊技は、ボタン（1F）の後にN・2・6など技を出すのに必要なレバー方向を4F入れてから、上を入れます。</li>
+<li>ゴアフェストの正規コマンドは632146＋AorCですが、6246＋AorCまで省略できます。ネガティブゲインも6321463214＋BorDを624624＋BorDまで省略できます。</li>
+</ul>
+<h2>ジャンプ・持続・投げ無敵の調べ方（2009年3月）</h2>
+<div class="tbl"><table><thead><tr><th>調べるもの</th><th>入力</th><th>計算</th></tr></thead><tbody>
+<tr><td>ジャンプ予備動作</td><td>8を何F入れたらノーマルジャンプになるか</td><td>ノーマルジャンプになった数－2F</td></tr>
+<tr><td>小ジャンプの滞空時間</td><td>8（2F）・隙間（?F）・8（2F）。最短で連続小ジャンプになる隙間を探す</td><td>隙間－3F</td></tr>
+<tr><td>ノーマルジャンプの滞空時間</td><td>8（10F）・隙間（?F）・8（2F）。着地後最短で小ジャンプが出る隙間を探す</td><td>隙間＋5F（のはず）</td></tr>
+<tr><td>ジャンプ攻撃の発生（真ノ豪さん情報）</td><td>最低打点でジャンプ攻撃が出るように隙間を調整</td><td>滞空時間－隙間</td></tr>
+<tr><td>ジャンプ攻撃の持続（真ノ豪さん情報）</td><td>画面端の相手に密着し、CD同時（1F）・隙間・8（2F）・隙間・ジャンプ攻撃（1F）で最低打点ヒットにする。2回目の隙間を減らしていき、当たらなくなったところから計算</td><td>—</td></tr>
+<tr><td>地上技の持続</td><td>画面端の相手に密着し、CD同時（1F）・隙間・必殺技コマンド。隙間を少しずつ変えて、ヒットする範囲を確かめる</td><td>—</td></tr>
+</tbody></table></div>
+<p>補足：ジャンプ予備動作はUMで統一されたらしいですが、確認しておく価値はあります。無印2002でジョーの小ジャンプ滞空時間を調べると隙間が33Fで、33－3＝30Fになりましたが、実際の滞空時間は29Fでした。この差は、ジョーのジャンプ予備動作が標準の4Fより1F長い5Fだからだと考えられます。</p>
+<h3>投げ無敵</h3>
+<ol>
+<li>調べたいキャラの弱攻撃のうち、ヒットかガードで硬直差が五分～少し有利になる技を探します。</li>
+<li>その技→ノーキャンセルで調べたい技が出るようにコマンド登録します。</li>
+<li>こちらは五郎で相手に密着し、相手に登録した動作をさせます。</li>
+<li>五郎が最速で天地返しか地獄極楽落としを出します。</li>
+</ol>
+<p>調べたい技に投げ無敵があれば投げが成立せず、なければ成立するはずです。</p>
+<h2>投げ間合いの調べ方（2009年9月の案）</h2>
+<p>づねさんがKOF'98UMで近距離認識間合いを調べた方法とほぼ同じです。</p>
+<ol>
+<li>プラクティスモードで、1Pに調べたい投げ技を持つキャラ、2Pに後退の遅いチャンを選びます。</li>
+<li>コマンド登録で、2Pのチャンを任意のフレーム数だけ後退させる動き（4入れっぱなし）を設定します。</li>
+<li>画面中央で1Pと2Pを完全に密着させ、2Pを設定したフレーム数だけ後退させます。</li>
+<li>1Pは左右にずれないように、垂直ジャンプの下降中にコマンド投げのレバー部分を完成させ、着地寸前にレバーを離してボタンを押します。</li>
+<li>チャンの後退距離を調節し、投げられるぎりぎりの後退距離を記録します。</li>
+</ol>
+<p>この方法で、ほとんどの投げ技の間合いを比べられるはずです。</p>
+<details><summary>気になること</summary>
+<ul><li>原文の説明では、全体フレームは「垂直小Ｊになったフレーム数」です。通常技・立CD・特殊技の例はそのとおりですが、必殺技（8（25）で小ジャンプ→24F）と超必殺技（8（72）で小ジャンプ→71－28＝43F）の例は、小ジャンプになった数より1F少ない値になっています。コマンド完成の数え方の違いなのか、どちらかの誤記なのかは分かりません。</li></ul></details>
+<h2>似ているが別の話</h2>
+<p>ここで測っているのは技の動作全体の長さで、攻撃判定が出るまでの発生Fとは別です。発生Fの調べ方は<a href="./startup-frame-test-method-2009.html">発生フレーム調査法と「隙間」</a>にあります。</p>
+<h2>関連ページ</h2>
+<ul>
+<li><a href="./projectile-motion-list-2010.html">飛び道具の全体動作調査（2010年）</a>・<a href="./bao-projectile-motion-test-2010.html">包の飛び道具6種の全体動作</a></li>
+<li>出典：<a href="https://comesonobravo.hatenadiary.org/entry/2009/11/09/013849">02UM：各技の動作全体のフレーム数の調査方法</a>（2009/11/9）、<a href="https://comesonobravo.hatenadiary.org/entry/2009/03/13/125052">02UM：フレームや投げ無敵の調査方法で新たにわかったこと</a>（2009/3/13）、<a href="https://comesonobravo.hatenadiary.org/entry/2009/09/05/153922">02UM：投げ間合い調査方法案</a>（2009/9/5）</li>
+<li><a href="/kof-kininaru.html#kof02um">気になること</a>／<a href="./index.html">KOF2002UM 研究アーカイブ</a></li>
+</ul></div></main><footer class="footer"><div class="wrap">Come sono bravo? ｜ 作成：MOT</div></footer></body></html>
