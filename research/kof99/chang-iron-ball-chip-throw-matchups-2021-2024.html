@@ -16,7 +16,7 @@
 <li><b>アーマーモード</b>：必殺技の削り量が2倍（？）になるのに気付き、端に追い詰めた相手に鉄球大回転 <span class="vt">強</span> を2セットガードさせると約4割減らせることを確認しています。</li>
 <li><b>カウンターモード</b>：削りダメージが倍増するようで、チャン同キャラだと1回で体力の約1/4を削れます（大破壊投げも同じくらいのダメージ）。端に追い詰めたらカウンターモード発動もありかもしれません。</li>
 </ul>
-<p>モード中に削りが増える理由は、ダメージが1.25倍になる影響と見ています（<a href="/research/kof99/gauge-priority-mode-management-2021-2024.html">ゲージとストライカー</a>）。KOF'99は削りに適した技が結構あり、ラルフのMAX版バリバリバルカンパンチ、アテナのMAX版フェニックスファングアロー、チャンのカウンターモード中の鉄球大回転、ジョンのMAX版鳳凰裂爪脚が例に挙がっています。</p>
+<p>モード中に削りが増える理由は、ダメージが1.25倍になる影響と見ています。単純に倍になるのではなく、ダメージ値が一定を超えると削りが1→2になり、その結果2倍になる場合があるようです。鉄球大回転のダメージは19で、同じダメージ19の真吾キック <span class="vt">弱</span> でもカウンターモード時に削りが2倍になるのを確認しています（<a href="/research/kof99/gauge-priority-mode-management-2021-2024.html">ゲージとストライカー</a>）。KOF'99は削りに適した技が結構あり、ラルフのMAX版バリバリバルカンパンチ、アテナのMAX版フェニックスファングアロー、チャンのカウンターモード中の鉄球大回転、ジョンのMAX版鳳凰裂爪脚が例に挙がっています。</p>
 
 <h2>大破壊投げで100％近いダメージ</h2>
 <p>ラルフの馬乗りバルカンパンチは動作開始と同時に暗転します。チャンがラルフの馬乗りバルカンパンチと同時に大破壊投げを決めると、事前に出していた技のダメージに変わります。</p>
@@ -25,6 +25,7 @@
 <li>ラルフの馬乗りバルカンパンチに大破壊投げを合わせる。</li>
 <li>100％近いダメージになる（乱数次第でKOできるかも）。</li>
 </ol>
+<p>チャン側に有利フラグが必要なようです。鉄球粉砕撃 <span class="vt">強</span> を空振りしておくと、余裕で100％以上減らせます。</p>
 
 <h2>投げ間合い</h2>
 <p>完全攻略マニュアル（ネオジオフリークのムック）のデータを表にすると、基本の投げ間合いが24、ラルフ・クラークが28なのに対し、チャンの通常投げは40、大破壊投げは30です（<a href="/research/kof99/throw-range-table-source-2021.html">投げ間合い表</a>）。特に通常投げの間合いが広いのが厄介で、チャンだけが投げられる間合いがあるはずです。</p>
@@ -39,13 +40,19 @@
 <tr><th scope="row">ラルフ</th><td>中段は昇り低JA・昇り低JD（JDは中段としてはやや微妙）。MAX版バリバリバルカンパンチはしゃがみガードでも3割弱削れる。対空に急降下爆弾パンチ（地上版）も有効かもしれない（相打ち上等で弱版が基本、強版も判定が強い）</td></tr>
 <tr><th scope="row">チョイ</th><td>低JDがしゃがんだチャンに中段になる。ストライカーと絡めるとありかも</td></tr>
 </tbody></table>
+<p>行動別には、次のような対策が考えられています。</p>
+<ul>
+<li><b>鉄球粉砕撃</b>：前かわしで回避します。キャラによってはかわし移動攻撃が確定するかもしれません。</li>
+<li><b>立っているチャン</b>：大ジャンプ攻撃を上からかぶせます。チャンのJC・JCDの上から殴りかかるイメージです（しゃがまれると屈B→大破壊投げを食らいそう）。</li>
+<li><b>端の固め</b>、<b>離れてゲージをためる動き</b>：厄介で、要検討としています。</li>
+</ul>
 <p>チャンは「かなり強い」ものの、しゃがみの食らい判定が高いことは「連続技が決まりにくい世界で決まりまくってしまうという減点要素」です。2024年には、KOF'99は連続技のダメージが低いキャラが多く寝技の攻防のようで、チャンは異様に守りが堅かった（STクラークや香澄もある）と振り返っています。</p>
 
 <details class="more"><summary>詳しく：チャンの技の判定・ST呼び出し・GCCD・かわし移動攻撃</summary>
 <ul>
 <li>ST呼び出し動作では、頭部だけに食らい判定があります。対空に使うとジャンプ攻撃を食らいますが、対地なら無敵で抜けつつSTを当てやすくなります。</li>
 <li>GCCDのガード時硬直差は−4Fです（<a href="/research/kof99/gccd-recovery-advantage-2021.html">GCCD硬直差</a>）。</li>
-<li>かわし移動攻撃は攻撃判定の位置が高いので、しゃがみに当たらないキャラが多そうです。表では、しゃがんだラルフに空振りしています（<a href="/research/kof99/evasion-attacks-hitbox-recovery-2021-2025.html">かわし移動攻撃</a>）。</li>
+<li>かわし移動攻撃は攻撃判定の位置が高いので、しゃがみに当たらないキャラが多そうです。表では、しゃがんだラルフに空振りしています。チャンは自分のかわし移動攻撃は空振りしやすいのに、相手のかわし移動攻撃は空振りしないので、かわし移動攻撃を出し合った場合は相当弱そうです。チャン側は、食らい判定がしゃがんだチョイくらいまで低くなる技が有効そうです（<a href="https://x.com/mot_csb/status/1359733298784686082">2021/2/11</a>、<a href="/research/kof99/evasion-attacks-hitbox-recovery-2021-2025.html">かわし移動攻撃</a>）。</li>
 </ul>
 <figure><img src="https://pbs.twimg.com/media/Ev8sFXAVEAIJlZS.png" alt="チャンの遠Aの判定" loading="lazy" style="max-width:48%"> <img src="https://pbs.twimg.com/media/Ev8rFrdUcAIY0JD.png" alt="チャンの屈Aの判定" loading="lazy" style="max-width:48%"><figcaption>左：遠A（<a href="https://x.com/mot_csb/status/1368861289926172673">2021/3/8</a>）　右：屈A（<a href="https://x.com/mot_csb/status/1368860214011772928">2021/3/8</a>）</figcaption></figure>
 </details>
@@ -56,8 +63,8 @@
 
 <h2>出典</h2>
 <ul class="src">
-<li>削り：<a href="https://x.com/mot_csb/status/1393151845166501889">アーマーモード（2021/5/14）</a> ／ <a href="https://x.com/mot_csb/status/1654028086437117952">カウンターモード（2023/5/4）</a> ／ <a href="https://x.com/mot_csb/status/1657620428448501765">削りに適した技（2023/5/14）</a></li>
-<li>大破壊投げ：<a href="https://x.com/mot_csb/status/1393382981939523585">2021/5/15</a> ／ 投げ間合い：<a href="https://x.com/mot_csb/status/1391010946579984388">投げ間合い表（2021/5/8）</a> ／ <a href="https://docs.google.com/spreadsheets/d/1qe4ccsI3DBlq2III7GzkddlfsKLmCPVHVqCZcNybwi8/edit">投げ間合い（Googleスプレッドシート）</a> ／ <a href="https://x.com/mot_csb/status/1392694578499637252">チャン対策（2021/5/13）</a></li>
+<li>削り：<a href="https://x.com/mot_csb/status/1393151845166501889">アーマーモード（2021/5/14）</a> ／ <a href="https://x.com/mot_csb/status/1654028086437117952">カウンターモード（2023/5/4）</a> ／ <a href="https://x.com/mot_csb/status/1654320599710445569">削りが1→2に（2023/5/5）</a> ／ <a href="https://x.com/mot_csb/status/1654321697686958084">弱真吾キック（5/5）</a> ／ <a href="https://x.com/mot_csb/status/1657620428448501765">削りに適した技（2023/5/14）</a></li>
+<li>大破壊投げ：<a href="https://x.com/mot_csb/status/1393382981939523585">2021/5/15</a> ／ <a href="https://x.com/mot_csb/status/1393383392171859970">有利フラグと強鉄球粉砕撃（5/15）</a> ／ 投げ間合い：<a href="https://x.com/mot_csb/status/1391010946579984388">投げ間合い表（2021/5/8）</a> ／ <a href="https://docs.google.com/spreadsheets/d/1qe4ccsI3DBlq2III7GzkddlfsKLmCPVHVqCZcNybwi8/edit">投げ間合い（Googleスプレッドシート）</a> ／ <a href="https://x.com/mot_csb/status/1392694578499637252">チャン対策（2021/5/13）</a> ／ <a href="https://x.com/mot_csb/status/1392695467880816642">行動別の対策（5/13）</a></li>
 <li>評価：<a href="https://x.com/mot_csb/status/1399300130222661642">しゃがみの食らい判定（2021/5/31）</a> ／ <a href="https://x.com/mot_csb/status/1801989553349345706">守りが堅い（2024/6/15）</a></li>
 <li>対策：<a href="https://x.com/mot_csb/status/1364588690270486534">ラルフの中段（2021/2/24）</a> ／ <a href="https://x.com/mot_csb/status/1364423706030710790">MAXバリバリバルカンパンチ（2/24）</a> ／ <a href="https://x.com/mot_csb/status/1365550639665664000">急降下爆弾パンチ（2/27）</a> ／ <a href="https://x.com/mot_csb/status/1369922025024671746">チョイの低JD（3/11）</a> ／ <a href="https://docs.google.com/spreadsheets/d/1fD18mzjFuQ1nX2BmdeOQXpn2VcaG2xbK1lCpT19kNwA/edit">かわし移動攻撃（Googleスプレッドシート）</a></li>
 <li>そのほか：<a href="https://x.com/mot_csb/status/1361462004192403456">ST呼び出し動作（2021/2/15）</a> ／ <a href="https://x.com/mot_csb/status/1395392862775222272">GCCD（5/20）</a> ／ <a href="https://kofplayers.hatenablog.jp/entry/2021/05/14/000611">KOF99：攻略メニュー</a></li>
