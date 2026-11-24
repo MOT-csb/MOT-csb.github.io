@@ -95,6 +95,7 @@ HIDDEN = {
     "research/kof2002/questions-and-research-plans-2024.html",
     "research/kof95/primary-source-inventory-20261121.html",  # 資料回収の作業台帳（読者向けの記事ではない）
     "research/kof95/source-inventory-status-20261121.html",  # 資料回収の作業台帳（読者向けの記事ではない）
+    "research/kof99/source-audit-2026-11-21.html",  # 資料回収の作業台帳（読者向けの記事ではない）
     "social/idolmaster-cinderella-girls/source-audit-2026-11-21.html",  # 資料回収の作業台帳（読者向けの記事ではない）  # 2024年の疑問11項目は kof-kininaru.html に統合。旧URLは転送専用
 }
 
