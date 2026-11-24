@@ -13,8 +13,8 @@
      "name": "京",
      "frame": [
       [
-       "nwkyo-wazakaiseki.htm",
-       "技解析（旧サイト・2004年）"
+       "research/kofnw/waza/kyo.html",
+       "技解析（2004〜2005年）"
       ]
      ],
      "data": [
@@ -39,6 +39,10 @@
       [
        "research/kofnw/kyo-strategy-combos-source-comparison-2004.html",
        "基本戦法・連続技と原稿間の相違"
+      ],
+      [
+       "nwkyo-wazakaiseki.htm",
+       "旧サイトの技解析ページ"
       ]
      ]
     },
@@ -47,8 +51,8 @@
      "name": "紅丸",
      "frame": [
       [
-       "nwbenimaru-wazakaiseki.htm",
-       "技解析（旧サイト・2004年）"
+       "research/kofnw/waza/benimaru.html",
+       "技解析（2004〜2005年）"
       ]
      ],
      "data": [
@@ -61,6 +65,10 @@
       [
        "research/kofnw/benimaru-combos-2004.html",
        "SC・GB・MAX2別の連続技と未確認ルート"
+      ],
+      [
+       "nwbenimaru-wazakaiseki.htm",
+       "旧サイトの技解析ページ"
       ]
      ]
     },
@@ -133,8 +141,8 @@
      "name": "マチュア",
      "frame": [
       [
-       "nwmature-wazakaiseki.htm",
-       "技解析（旧サイト・2004年）"
+       "research/kofnw/waza/mature.html",
+       "技解析（2004〜2005年）"
       ]
      ],
      "data": [
@@ -155,6 +163,10 @@
       [
        "research/kofnw/mature-move-analysis-2004.html",
        "技解析：ジャンプB・デスロウ・SC追撃"
+      ],
+      [
+       "nwmature-wazakaiseki.htm",
+       "旧サイトの技解析ページ"
       ]
      ]
     },
@@ -217,8 +229,8 @@
      "name": "テリー",
      "frame": [
       [
-       "nwterry-wazakaiseki.htm",
-       "技解析（旧サイト・2004年）"
+       "research/kofnw/waza/terry.html",
+       "技解析（2004〜2005年）"
       ]
      ],
      "data": [
@@ -235,6 +247,10 @@
       [
        "research/kofnw/terry-moves-combos-2004.html",
        "技解析・ヒート発動連続技"
+      ],
+      [
+       "nwterry-wazakaiseki.htm",
+       "旧サイトの技解析ページ"
       ]
      ]
     },
@@ -243,8 +259,8 @@
      "name": "アンディ",
      "frame": [
       [
-       "nwandy-wazakaiseki.htm",
-       "技解析（旧サイト・2004年）"
+       "research/kofnw/waza/andy.html",
+       "技解析（2004〜2005年）"
       ]
      ],
      "data": [
@@ -269,6 +285,10 @@
       [
        "research/kofnw/andy-backturned-combos-2004-2011.html",
        "背面連続技と2002からの変更点"
+      ],
+      [
+       "nwandy-wazakaiseki.htm",
+       "旧サイトの技解析ページ"
       ]
      ]
     },
@@ -277,8 +297,8 @@
      "name": "ジョー",
      "frame": [
       [
-       "nwjoe-wazakaiseki.htm",
-       "技解析（旧サイト・2004年）"
+       "research/kofnw/waza/joe.html",
+       "技解析（2004〜2005年）"
       ]
      ],
      "data": [
@@ -299,6 +319,10 @@
       [
        "research/kofnw/joe-move-analysis-2004.html",
        "技解析の戦術評価と確認範囲"
+      ],
+      [
+       "nwjoe-wazakaiseki.htm",
+       "旧サイトの技解析ページ"
       ]
      ]
     }
@@ -445,8 +469,8 @@
      "name": "ラルフ",
      "frame": [
       [
-       "nwralf-wazakaiseki.htm",
-       "技解析（旧サイト・2004年）"
+       "research/kofnw/waza/ralf.html",
+       "技解析（2004〜2005年）"
       ]
      ],
      "data": [
@@ -459,6 +483,10 @@
       [
        "research/kofnw/ralf-move-analysis-2004.html",
        "技解析の対戦評価と限定条件"
+      ],
+      [
+       "nwralf-wazakaiseki.htm",
+       "旧サイトの技解析ページ"
       ]
      ]
     },
@@ -482,8 +510,8 @@
      "name": "柴舟",
      "frame": [
       [
-       "nwsaisyu-wazakaiseki.htm",
-       "技解析（旧サイト・2004年）"
+       "research/kofnw/waza/saisyu.html",
+       "技解析（2004〜2005年）"
       ]
      ],
      "data": [
@@ -500,6 +528,10 @@
       [
        "research/kofnw/saisyu-crouch-d-2004-2024.html",
        "屈みDと判定継承"
+      ],
+      [
+       "nwsaisyu-wazakaiseki.htm",
+       "旧サイトの技解析ページ"
       ]
      ]
     },
@@ -539,8 +571,8 @@
      "name": "ジョン",
      "frame": [
       [
-       "nwjhun-wazakaiseki.htm",
-       "技解析（旧サイト・2004年）"
+       "research/kofnw/waza/jhun.html",
+       "技解析（2004〜2005年）"
       ]
      ],
      "data": [
@@ -565,6 +597,10 @@
       [
        "research/kofnw/jhun-stance-counterplay-2004.html",
        "ジョン対策と構えの読み合い"
+      ],
+      [
+       "nwjhun-wazakaiseki.htm",
+       "旧サイトの技解析ページ"
       ]
      ]
     },
@@ -677,8 +713,8 @@
      "name": "裏クリス",
      "frame": [
       [
-       "nwuchris-wazakaiseki.htm",
-       "技解析（旧サイト・2004年）"
+       "research/kofnw/waza/urachris.html",
+       "技解析（2004〜2005年）"
       ]
      ],
      "data": [
@@ -691,6 +727,10 @@
       [
        "research/kofnw/uchris-move-analysis-2004.html",
        "技解析：必殺技の記録と未記入箇所"
+      ],
+      [
+       "nwuchris-wazakaiseki.htm",
+       "旧サイトの技解析ページ"
       ]
      ]
     }
@@ -704,8 +744,8 @@
      "name": "キム",
      "frame": [
       [
-       "nwkim-wazakaiseki.htm",
-       "技解析（旧サイト・2004年）"
+       "research/kofnw/waza/kim.html",
+       "技解析（2004〜2005年）"
       ]
      ],
      "data": [
@@ -718,6 +758,10 @@
       [
        "research/kofnw/kim-move-analysis-2004.html",
        "技解析：蒼月さん提供情報"
+      ],
+      [
+       "nwkim-wazakaiseki.htm",
+       "旧サイトの技解析ページ"
       ]
      ]
     },
@@ -736,8 +780,8 @@
      "name": "ラモン",
      "frame": [
       [
-       "nwramon-wazakaiseki.htm",
-       "技解析（旧サイト・2004年）"
+       "research/kofnw/waza/ramon.html",
+       "技解析（2004〜2005年）"
       ]
      ],
      "data": [
@@ -750,6 +794,10 @@
       [
        "research/kofnw/ramon-moves-fs-combos-2004.html",
        "技解析・FS連続技"
+      ],
+      [
+       "nwramon-wazakaiseki.htm",
+       "旧サイトの技解析ページ"
       ]
      ]
     }
@@ -763,8 +811,8 @@
      "name": "若ギース",
      "frame": [
       [
-       "nwygeese-wazakaiseki.htm",
-       "技解析＆倒し方（旧サイト・2004年）"
+       "research/kofnw/waza/ygeese.html",
+       "技解析＆倒し方（2004〜2005年）"
       ]
      ],
      "research": [
@@ -775,6 +823,10 @@
       [
        "research/kofnw/young-geese-hitbox-2004-2024.html",
        "CPU攻略と後年の判定考察"
+      ],
+      [
+       "nwygeese-wazakaiseki.htm",
+       "旧サイトの技解析ページ"
       ]
      ]
     }
