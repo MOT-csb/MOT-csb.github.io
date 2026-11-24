@@ -1,93 +1,65 @@
 <!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>KOF'99 攻略研究アーカイブ｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css">
-<style>.article{max-width:1040px}.article h2{margin-top:2rem}.article a{overflow-wrap:anywhere}.article table{width:100%;border-collapse:collapse}.article td,.article th{border:1px solid var(--line,#aaa);padding:8px;vertical-align:top}.article th{background:var(--soft,#eff3f0)}.note{padding:10px 14px;border-left:4px solid var(--accent,#416958);background:var(--soft,#eff3f0)}.scroll{overflow-x:auto}</style>
-</head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
-<div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/kof-top.html">KOF</a><span aria-hidden="true"> / </span><a href="/kof99-top.html">KOF'99</a><span aria-hidden="true"> / </span><a href="/research/kof99/index.html">研究アーカイブ</a><span aria-hidden="true"> / </span><b>研究アーカイブ</b></div></div>
-<main class="main"><div class="wrap article"><h1>KOF'99 攻略研究アーカイブ</h1><p><strong>シリーズ共通仕様：</strong><a href="/research/kof-series/knockback-normal-throw.html">ノックバックなし技とリバーサル通常投げ</a> — KOF'98～2002・NEOWAVE・'98UM・2002UMで共通する現象。無印2002の内部処理と他作品での個別照合を区別する。</p>
-<p class="note">MOTの2003～2004年の旧攻略資料と、2015～2025年の本人ブログ・X投稿を、重複を避けて参照できるようにする研究目次。2026年11月20日に新設。全資料の整理完了を意味しない。</p>
-<p><strong><a href="./source-audit-2026-11-21.html">2026年11月21日：KOF99資料回収・照合台帳（460件の初回分類完了・本人研究の未統合0件／画像20件・動画2件・資料所在2件は内容未照合）</a></strong> — 収録済みの二重掲載を避けるための作業進捗です。</p>
-<h2>まず読むページ</h2><ul><li><a href="./system-changes-from-98-2010-2025.html">KOF'98からの変化とシステムの細部</a>：98→99で弱くなった部分、交代キャラのゲージ0、暗転前の時間、空中追撃の設定、新キャラの着地屈ガード無敵</li></ul>
-<h2>技判定画像・動作資料の元投稿</h2><p><a href="./hitbox-image-sources-2015-2023.html">京・K'・ウィップ・ケンスウ・ジョンなど、元投稿20件をキャラクター・技ごとにたどる資料リンク集</a>。17件には元画像URL、3件には元投稿URLを掲載。画像本体の直接確認は未実施のため、判定の座標・優劣を未確認のまま保存する。</p>
-<h2>2021年公開の原Googleシート：4資料の確認済み範囲</h2>
-<p>元の<a href="https://kofplayers.hatenablog.jp/entry/2021/05/14/000611">MOT本人「KOF99：攻略メニュー」</a>と、2021年の本人X投稿をたどって、以下の実シートを直接照合。<strong>原資料の数値・検証条件を保持し、別の対戦条件や作品へ一般化しない</strong>。Googleシートの原本はサイト作業で変更していない。</p>
-<div class="scroll"><table><thead><tr><th>元資料</th><th>読み出した範囲</th><th>元データの注意点</th></tr></thead><tbody>
-<tr><th scope="row"><a href="https://docs.google.com/spreadsheets/d/1fD18mzjFuQ1nX2BmdeOQXpn2VcaG2xbK1lCpT19kNwA/edit">かわし移動攻撃の硬直差</a></th><td>32キャラ×7数値。代表5相手への屈み空振り表、キャラ別の追撃備考。<a href="./evasion-attacks-hitbox-recovery-2021-2025.html">サイト内の復元・照合記事</a></td><td>3つの並べ替えタブと32キャラ全数値を照合して不一致0件。G時3列「事前弱／事前強／事前CD」の操作上の意味は資料内の説明が不足。攻略メニューでは誤って投げ間合い表と同じURLになっていたが、<a href="https://x.com/mot_csb/status/1396376047206113284">本人の2021/5/23投稿</a>から正しい別URLを特定。</td></tr>
-<tr><th scope="row"><a href="https://docs.google.com/spreadsheets/d/13k5d7ih9eUvwycxFk1j1wkckZ33KO5Dly_RuA4WvIpQ/edit">GCCD後の着地屈ガード無敵</a></th><td>32キャラ×低ジャンプ攻撃5種の〇・✕と段別注記。<a href="./landing-crouch-guard-invincible-2015-2025.html">サイト内の復元・照合記事</a></td><td>元表の注記による<strong>ジョンのGCCDを相手にした結果</strong>。別キャラのGCCDへ同じ結果が出るとは確認していない。2025年の別公開URLとの版差も未照合。</td></tr>
-<tr><th scope="row"><a href="https://docs.google.com/spreadsheets/d/1rMiSy-e8fYzntDPMqdr-_Y4LmxuDfNRrAgZSkFClpm8/edit">通常投げの投げ外し猶予</a></th><td>K'・マキシマ・紅丸・真吾のC投げ／D投げ、計8セル。<a href="./input-buffer-cancels-throw-tech-2021-2023.html">サイト内の復元・照合記事</a></td><td><strong>2P真吾が1Pの投げを外す条件</strong>。K'のC投げにある6F以内の入力期限と「隙間5F」の注記は異なる値として扱う。他の組合せへ流用しない。</td></tr>
-<tr><th scope="row"><a href="https://docs.google.com/spreadsheets/d/1qe4ccsI3DBlq2III7GzkddlfsKLmCPVHVqCZcNybwi8/edit">投げ間合い表</a></th><td>間合い別の記入済み11行（通常・空中・コマンド・超必殺技）。<a href="./throw-range-table-source-2021.html">サイト内の復元記事</a></td><td>元シートによれば出典は<strong>『ザ・キング・オブ・ファイターズ’９９完全攻略マニュアル』</strong>。MOTの独自測定ではなく、ムック由来の二次資料。数値の距離単位は元シートに未記載。</td></tr>
-</tbody></table></div>
-<h2>2015～2025年の本人研究：システムと検証記録</h2>
-<ul>
-<li><a href="./evasion-attacks-hitbox-recovery-2021-2025.html">かわし移動攻撃：本人の原Googleシート32キャラ全フレーム・屈み空振り表、マキシマと紅丸の照合（2021～2025年）</a></li>
-<li><a href="./gauge-priority-mode-management-2021-2024.html">ゲージ運用：2021年の①～⑧連続投稿とCM・AM・STボム管理（2021～2024年）</a></li>
-<li><a href="./input-buffer-cancels-throw-tech-2021-2023.html">2003年の入力優先順位・コマンド簡略入力／2021～2023年のSC・GCかわし・投げ外し（原表数値復元）</a></li>
-<li><a href="./landing-crouch-guard-invincible-2015-2025.html">GCCDに対する着地屈ガード無敵：対ジョンGCCDの32キャラ×5技の原表を復元、他の本人確認と原因仮説</a></li>
-</ul>
-<h2>2024年の本人研究：表示処理と未再現現象</h2>
-<ul><li><a href="./afterimages-and-clipping-bug-2024.html">大ジャンプ残像（京で確認：2個・12F）と見切れてバグ（KOF'99では未確認）の調査記録</a></li></ul>
-<h2>2021年の本人研究：数値資料</h2>
-<ul><li><a href="./gccd-recovery-advantage-2021.html">GCCD硬直差32キャラ一覧（2021年の本人原文から復元）／カウンターヒット追撃</a></li>
-<li><a href="./throw-range-table-source-2021.html">投げ間合い：2021年公開の元Googleシートから通常・空中・コマンド・超必殺技の間合い表を復元（元ムック由来）</a></li>
-</ul>
-<h2>2021～2026年の本人メモ：個別の戦術案・歴史的評価</h2><ul><li><strong>リョウの6Bによる接近案（2021年5月4日）：</strong><a href="https://x.com/mot_csb/status/1389555059269111821">本人原文</a>は、残り時間が少ない状態で相手に逃げられる際、6Bで一気に近づく使い方が面白いかもしれないと述べる。同時に<strong>有効かどうかは不明</strong>としており、確定した接近手段・対策としては扱わない。<a href="./armor-mode-evasion-loop-2024.html">別件：リョウのAM連続技</a>と混同しない。</li><li><strong>KOF'99クラークを含む投げキャラの歴史的評価（2026年3月26日）：</strong><a href="https://x.com/mot_csb/status/2037004346941206574">本人原文</a>では、KOF'94大門、'96クラーク・庵、'98大門・庵、'99クラーク、2003大門などを例に、強力な投げキャラが複数作品に存在すると振り返り、投げ無効時間が比較的長いことが影響しているのではないかと考察した。<strong>キャラの評価と、投げ無効時間が理由という原因仮説は別</strong>であり、この投稿自体が'99クラークの投げ無効Fを測定した証拠ではない。<a href="/research/kof-series/knockback-normal-throw.html">シリーズ共通のノックバック・通常投げ研究</a>は異なる現象を扱うため、同一の技術的根拠と取り違えない。</li></ul>
-<h2>2021～2024年の本人研究：連続技とST</h2>
-<ul>
-<li><a href="./joe-combos-guard-crush-2021.html">ジョー：連続技・STクラーク・ガードクラッシュ（2021年）</a></li>
-<li><a href="./st-position-swap-counterattack-2021-2024.html">位置入れ替えST：ジョーの掲載技とラルフ対テリーの未確認案（2021～2024年）</a></li>
-</ul>
-<h2>2003～2023年の本人研究：K'・テリー</h2><ul>
-<li><a href="./kdash-ain-trigger-crow-bites-2021-2023.html">K'：アイントリガーの弱強差・屈B→クロウバイツ・対空無敵とGCCD</a></li>
-<li><a href="./terry-power-charge-crack-2021-2023.html">テリー：パワーチャージ連続技・3A／3C表記差・クラックシュートとCH追撃</a></li>
-</ul>
-<h2>2021～2024年の本人研究：チャン・キング</h2><ul>
-<li><a href="./chang-iron-ball-chip-throw-matchups-2021-2024.html">チャン：AM／CM中の鉄球大回転の削り・大破壊投げ・投げ間合いと対策（2021～2024年）</a></li>
-<li><a href="./king-gc-evasion-tornado95-2021-2023.html">キング：トルネードキック95へのGCかわし・GCCD・STクラーク未確認案（2021～2023年）</a></li>
-</ul>
-<h2>2021～2023年の本人研究：京・京2・キム</h2>
-<ul>
-<li><a href="./kyo-kyo2-hitboxes-invincibility-st-2021-2023.html">京・京2：鬼焼きの無敵、MAX大蛇薙、STクラーク追撃、強RED（2021～2023年）</a></li>
-<li><a href="./kim-6a-hangetsuzan-hishokyaku-2021.html">キム：6Aの屈み相手別当否、強半月斬、飛翔脚後の追撃、起き攻め（2021年）</a></li>
-</ul>
-<h2>2015～2024年の本人研究：ユリ・アテナ</h2><ul>
-<li><a href="./yuri-combos-matchups-corrections-2021.html">ユリ：236236A/Cの低J追撃、対ジョンの例外、百烈びんたの自己訂正（2021年）</a></li>
-<li><a href="./athena-special-phoenix-st-2015-2024.html">アテナ：特殊フェニックスアローと入力猶予、STユリ連続技、SCBと竜巻槍打（2015～2024年）</a></li>
-</ul>
-<h2>2021～2025年の本人研究：ロバート・ケンスウ</h2><ul>
-<li><a href="./robert-crouching-matchups-combos-2021.html">ロバート：屈みキャラ別の旋燕連舞脚、CM連続技、旧メモの技名差（2021年）</a></li>
-<li><a href="./kensou-anti-air-st-damage-2021-2025.html">ケンスウ：強龍顎砕対空、端永久、ST追撃、カウンターヒット値（2021～2025年）</a></li>
-<li><a href="/99kensou-ryurenda.html">ケンスウ：J強攻撃・JCD→直接龍連打、永久連続ガード（既存記事・脱出手段を訂正）</a></li>
-</ul>
-<h2>2021年の本人研究：藤堂香澄</h2><ul><li><a href="./kasumi-move-and-guard-crush-2021.html">藤堂香澄：弱強竜巻槍打の発生3F／6F、近C・扇溝流しのガードクラッシュ、打撃投げと高JDの戦術（2021年）</a></li></ul>
-<h2>2021～2024年の本人研究：ジョン・真吾</h2><ul>
-<li><a href="./jhun-corner-unblockable-mixups-2021-2024.html">ジョン：端の擬似中段・排気撃ガード不能・立CD対策・未確認の反撃案</a></li>
-<li><a href="./shingo-crouch-throws-stun-2021.html">真吾：打撃投げの屈み相手別当否・気絶値・屈C対空・STの戦術案</a></li>
-</ul>
-<h2>2021～2024年の本人研究：キャラクター別の分析</h2><ul>
-<li><a href="./maxima-quake-time-stop-2012-2024.html">マキシマ：確定地震・時間停止・かわし移動攻撃（2012～2024年）</a></li>
-<li><a href="./choi-guard-crush-unblockable-2021-2024.html">チョイ：6Aガードクラッシュ・通常／MAX鳳凰脚・ガード不能JC（2021～2024年）</a></li>
-</ul>
-<h2>2024年の本人研究：記事化済み</h2><ul>
-<li><a href="./whip-unblockable-jump-gccd-2003-2024.html">ウィップ：ガード不能JC・ジャンプ攻撃判定・屈DとGCCD・C投げ追撃（2003～2024年）</a></li>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>KOF'99 攻略研究アーカイブ｜Come sono bravo?</title>
+<meta name="description" content="KOF&#x27;99の攻略研究ページの目次。システム、キャラ別研究、全キャラの表、2003〜2004年の旧原稿。">
+<link rel="stylesheet" href="/assets/research.css">
+<style>.article{max-width:960px}.article table{width:100%;border-collapse:collapse}.article th,.article td{border:1px solid var(--line,#ccd);padding:6px 8px;overflow-wrap:anywhere;vertical-align:top;text-align:left}.article thead th{background:var(--soft,#eaf0ed)}.article td.num{font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}.lead{font-size:1.05em}.vt{display:inline-block;font-size:.85em;line-height:1.45;padding:0 6px;margin-left:4px;border:1px solid var(--line,#ccd);border-radius:4px;font-weight:600;white-space:nowrap}.legend{font-size:.92em;color:var(--sub,#555)}.src li{font-size:.92em}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h2{font-size:1.15em;margin-top:1.2rem}details.more h3{font-size:1.05em}figure{margin:14px 0}figure img{max-width:100%;height:auto;border:1px solid var(--line,#ccd)}figcaption{font-size:.9em;color:var(--sub,#555)}@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}.article th,.article td{min-width:72px}}</style>
+</head><body>
+<header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof99-top.html">KOF'99</a> / <a href="/research/kof99/index.html">研究アーカイブ</a> / <b>研究アーカイブ</b></div></div>
+<main class="main"><div class="wrap article">
+<h1>KOF'99 攻略研究アーカイブ</h1>
+<p class="lead">KOF'99の攻略研究のページをまとめた目次です。キャラ別のフレームデータやダメージ表は<a href="/kof99-top.html#chara">KOF'99トップのキャラ選択</a>から入れます。</p>
 
-<li><a href="./leona-frame-combos-oki-2021-2024.html">レオナ：ハートアタックのフレーム・グレイトフルデッド・下段始動・起き攻め（2021～2024年）</a></li>
-<li><a href="./ralf-frame-and-strategy-2024.html">ラルフ：通常技・必殺技・後方かわし・ST・連続技（2024年の本人整理）</a></li>
-<li><a href="./striker-clark-gauge-management-2024.html">STクラーク：ゲージ1本をためる運用とSTボム管理（2024年）</a></li>
-<li><a href="./armor-mode-evasion-loop-2024.html">アーマーモード中のかわし移動攻撃：タクマ・リョウの連続技</a></li>
-<li><a href="./striker-clark-unblockable-2024.html">飛び道具空振り→STクラークのガード不能：レオナ・包・チン・香澄</a></li>
-
+<h2>まず読むページ</h2>
+<ul>
+<li><a href="./system-changes-from-98-2010-2025.html">KOF'98からの変化とシステムの細部</a>：98→99で弱くなった部分、交代したキャラのゲージ0、暗転前の時間</li>
+<li><a href="./gauge-priority-mode-management-2021-2024.html">ゲージの使い道とストライカーの呼び方</a>：カウンターモード・アーマーモード・STボムの使い分け</li>
+<li><a href="./gccd-recovery-advantage-2021.html">GCCD硬直差一覧（32キャラ）</a></li>
+<li><a href="./evasion-attacks-hitbox-recovery-2021-2025.html">かわし移動攻撃のフレームと当たらない相手</a>（32キャラ）</li>
 </ul>
-<h2>2003年原資料の横断比較：全32キャラの防御力と屈みガード判定</h2>
-<p><a href="./defense-crouch-guard-cross-2003.html">2003年の全32キャラ防御力・屈みガード判定の横断表</a>：オリジナル京の屈BでKOまでの攻撃回数を5回分合計した測定値（127～142）と、ジョー等の技による屈みガード時の当否4群を原HTMLから再構成。元の<a href="/99bougyoryoku.html">防御力原稿</a>と<a href="/99zakoukankei.html">座高原稿</a>は移動・削除しない。</p>
-<h2>2003～2004年の本人原稿：既存ページを維持</h2><ul>
-<li><a href="/99memo.html">カウンターヒット時の追撃・各キャラの連続技・分割入力メモ（2003）</a></li>
-<li><a href="/99bougyoryoku.html">全キャラ防御力の調査：京の屈B、5回の測定結果と訂正履歴（2003）</a></li>
-<li><a href="/99yu-zyunni.html">ボタン・行動の優先順位（2003）</a></li>
-<li><a href="/99zakoukankei.html">各キャラの屈みガード判定とジョーの技の当否（2003）</a></li>
-<li><a href="/99ralf-rennzokuwaza.htm">ラルフ連続技（2004）</a></li>
-<li><a href="/99jhun-data.htm">ジョン技データ：ダメージ、気絶、ガークラ等（2004、原典ムック併記）</a></li>
-<li><a href="/99staff.htm">エンディングのスタッフロール（2003）</a></li></ul>
-<h2>未解決・確認事項</h2><p><a href="/kof-kininaru.html#kof99">KOF'99についての気になること（本人の未検証案と資料照合の確認事項）</a></p>
-<p><a href="/kof99-top.html">KOF'99 作品トップへ</a></p>
-<p><a href="/research/kof99/index.html">KOF'99 研究アーカイブへ戻る</a> ／ <a href="/kof-kininaru.html#kof99">KOF'99 気になること</a></p>
-</div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
+
+<h2>キャラ別</h2>
+<table><thead><tr><th>チーム</th><th>研究ページ</th></tr></thead><tbody><tr><th scope="row">主人公チーム</th><td><a href="./kdash-ain-trigger-crow-bites-2021-2023.html">K'</a>、<a href="./maxima-quake-time-stop-2012-2024.html">マキシマ</a>、紅丸、<a href="./shingo-crouch-throws-stun-2021.html">真吾</a></td></tr><tr><th scope="row">餓狼伝説チーム</th><td><a href="./terry-power-charge-crack-2021-2023.html">テリー</a>、アンディ、<a href="./joe-combos-guard-crush-2021.html">ジョー</a>、舞</td></tr><tr><th scope="row">龍虎の拳チーム</th><td><a href="./armor-mode-evasion-loop-2024.html">リョウ</a>、<a href="./robert-crouching-matchups-combos-2021.html">ロバート</a>、<a href="./yuri-combos-matchups-corrections-2021.html">ユリ</a>、<a href="./armor-mode-evasion-loop-2024.html">タクマ</a></td></tr><tr><th scope="row">怒チーム</th><td><a href="./leona-frame-combos-oki-2021-2024.html">レオナ</a>、<a href="./ralf-frame-and-strategy-2024.html">ラルフ</a>、クラーク、<a href="./whip-unblockable-jump-gccd-2003-2024.html">ウイップ</a></td></tr><tr><th scope="row">サイコソルジャーチーム</th><td><a href="./athena-special-phoenix-st-2015-2024.html">アテナ</a>、<a href="./kensou-anti-air-st-damage-2021-2025.html">ケンスウ</a>、包、チン</td></tr><tr><th scope="row">韓国チーム</th><td><a href="./kim-6a-hangetsuzan-hishokyaku-2021.html">キム</a>、<a href="./chang-iron-ball-chip-throw-matchups-2021-2024.html">チャン</a>、<a href="./choi-guard-crush-unblockable-2021-2024.html">チョイ</a>、<a href="./jhun-corner-unblockable-mixups-2021-2024.html">ジョン</a></td></tr><tr><th scope="row">女性格闘家チーム</th><td><a href="./king-gc-evasion-tornado95-2021-2023.html">キング</a>、<a href="./kasumi-move-and-guard-crush-2021.html">香澄</a>、シャンフェイ、マリー</td></tr><tr><th scope="row">隠しキャラ</th><td><a href="./kyo-kyo2-hitboxes-invincibility-st-2021-2023.html">京・京2</a>、庵</td></tr></tbody></table>
+<p class="legend">リンクのないキャラは、まだ研究ページがありません（GCCD・かわし移動攻撃・防御力などの全キャラ表には載っています）。リョウ・タクマは「アーマーモードのかわし移動攻撃でお手玉する連続技」のページです。</p>
+
+<h2>システム・テクニック</h2>
+<ul>
+<li><a href="./input-buffer-cancels-throw-tech-2021-2023.html">入力と操作性：優先順位・コマンド・連打キャンセル・投げ外し</a></li>
+<li><a href="./landing-crouch-guard-invincible-2015-2025.html">着地屈ガード無敵：ジャンプ攻撃の後にGCCDを空振りさせる</a></li>
+<li><a href="./striker-clark-unblockable-2024.html">飛び道具空振り→STクラークでガード不能</a></li>
+<li><a href="./striker-clark-gauge-management-2024.html">STクラークは1ゲージためてから</a></li>
+<li><a href="./st-position-swap-counterattack-2021-2024.html">位置を入れ替えてからのSTクラーク</a></li>
+<li><a href="./armor-mode-evasion-loop-2024.html">アーマーモードのかわし移動攻撃でお手玉する連続技</a></li>
+<li><a href="./afterimages-and-clipping-bug-2024.html">大ジャンプの残像と、見切れてバグ</a></li>
+<li><a href="/research/kof-series/knockback-normal-throw.html">ノックバックなし技とリバーサル通常投げ</a>（KOF'98〜2002などシリーズ共通）</li>
+</ul>
+
+<h2>全キャラの表・資料</h2>
+<ul>
+<li><a href="./defense-crouch-guard-cross-2003.html">キャラ別の防御力と、しゃがみガードの高さ</a></li>
+<li><a href="./throw-range-table-source-2021.html">投げ間合い表</a></li>
+<li><a href="./hitbox-image-sources-2015-2023.html">判定画像まとめ</a></li>
+</ul>
+
+<h2>2003〜2004年の旧原稿</h2>
+<ul>
+<li><a href="/99memo.html">KOF'99についてのメモ</a>（カウンターヒット時の追撃・連続技、2003）</li>
+<li><a href="/99yu-zyunni.html">ボタン・行動の優先順位</a>（2003）</li>
+<li><a href="/99bougyoryoku.html">各キャラの防御力について</a>（2003） ／ <a href="/99zakoukankei.html">各キャラの座高関係</a>（2003）</li>
+<li><a href="/99ralf-rennzokuwaza.htm">ラルフ連続技</a>（2004） ／ <a href="/99jhun-data.htm">ジョン技データ</a>（2004） ／ <a href="/99kensou-ryurenda.html">ケンスウの直接龍連打</a></li>
+<li><a href="/99staff.htm">エンディングのスタッフロール</a>（2003）</li>
+</ul>
+
+<details class="more"><summary>詳しく：ページになっていない短いメモ</summary>
+<ul>
+<li>リョウ：残り時間が少ないときに相手に逃げられる場面で、6Bで一気に近づく使い方が面白いかもしれない、という案です。有効かどうかは不明としています（<a href="https://x.com/mot_csb/status/1389555059269111821">2021年5月4日</a>）。</li>
+<li>投げキャラの歴史：KOF'94大門、'96クラーク・庵、'98大門・庵、'99クラーク、2003大門など、強力な投げキャラが複数の作品にいると振り返り、「KOF勢の認知がバグってるか、やはり投げ無効時間が長めのせいか」と書いています（<a href="https://x.com/mot_csb/status/2037004346941206574">2026年3月26日</a>）。</li>
+</ul>
+</details>
+
+<h2>残る疑問</h2>
+<p><a href="/kof-kininaru.html#kof99">KOF'99の気になること</a>にまとめています。</p>
+</div></main>
+<footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer>
+</body></html>
