@@ -1,38 +1,54 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF2000：ボタン・行動優先順位とコマンド入力の原研究（2004年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:1050px}.article h2{margin-top:2rem}.article table{width:100%;border-collapse:collapse}.article th,.article td{padding:.65rem;border:1px solid var(--line,#aaa);text-align:left;vertical-align:top}.article th{background:var(--soft,#eff3f0)}.note{padding:12px 16px;border-left:4px solid var(--accent,#416958);background:var(--soft,#eff3f0)}.scroll{overflow-x:auto}.article a{overflow-wrap:anywhere}.src{font-size:.9em}.article li{margin:.45em 0}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof00-top.html">KOF2000</a> / <a href="/research/kof2000/index.html">研究アーカイブ</a> / <b>KOF2000：ボタン・行動優先順位とコマンド入力の原研究（2004年）</b></div></div><main class="main"><div class="wrap article"><h1>KOF2000：ボタン・行動優先順位とコマンド入力の原研究（2004年）</h1>
-<p class="note">MOT本人が2004年3月23日に作成し、3月25日に更新した<a href="/00yu-zyunni.html">「KOF2000の各行動の優先順位の分析について」</a>を分類・再構成。原稿の確認済み事項・本人の推測・未調査事項を分け、未確認の優先順位を断定しない。旧原本のURLと原文はそのまま維持。</p>
-<h2>1. ボタンの優先順位と行動の階層</h2>
-<p>本人の原稿は、<strong>スタートボタン ＞ A ＞ B ＞ C ＞ D</strong>をボタン自体の優先順位とし、セレクトボタンは不明とした。行動については次の上下関係を提案している。</p>
-<div class="scroll"><table><thead><tr><th>元原稿の並び</th><th>行動</th><th>当時の本人が留保した点</th></tr></thead><tbody>
-<tr><td>高</td><td>スタートボタン（挑発）</td><td>挑発は立っていないと出せない、という入力条件も別記</td></tr>
-<tr><td>次の段</td><td>ABC：カウンターモード発動、BCD：アーマーモード発動</td><td><strong>次の段と優先順位が同じかもしれない</strong>と本人が記載</td></tr>
-<tr><td>その次の段</td><td>AB：緊急回避、BC：ストライカー呼び出し、CD：ふっ飛ばし攻撃</td><td>同じ高さと思われるが同時には試せない、と本人が説明</td></tr>
-<tr><td>さらに下</td><td>必殺技 → 特殊技 → 通常投げ → 通常技</td><td>階層全体を本人は推定形で提示</td></tr>
-</tbody></table></div>
-<p>上の段の優先順位がいつ・どの入力競合で作用するのかを、全組み合わせで実測した確定表とは扱わない。元原稿の「同じかもしれない」「同時には試せない」という留保を保存する。</p>
-<h2>2. 同時押しとボタン保持による成立条件</h2>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ボタン・行動の優先順位と入力のルール｜Come sono bravo?</title><meta name="description" content="KOF2000の同時押しと行動の優先順位。挑発＞モード発動（ABC・BCD）＞緊急回避・ST呼び出し・ふっ飛ばし（AB・BC・CD）＞必殺技＞特殊技＞通常投げ＞通常技。余分なボタンで不成立、ボタン押しっぱなしで出せない行動、ジャンプ・コマンドの入力。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:960px}.article table{min-width:0;width:100%}.article th,.article td{overflow-wrap:anywhere;vertical-align:top}.article a{overflow-wrap:anywhere}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}.lead{font-size:1.05em}.vt{display:inline-block;font-size:.85em;line-height:1.45;padding:0 6px;margin-left:4px;border:1px solid var(--line,#ccd);border-radius:4px;font-weight:600;white-space:nowrap}.legend{font-size:.92em;color:var(--muted,#555)}.src{font-size:.92em}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h3{font-size:1.05em}blockquote{margin:10px 0;padding:8px 14px;border-left:4px solid var(--line,#ccd);background:var(--soft,#f3f5f2);white-space:pre-line}@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}.article th,.article td{min-width:96px}}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof00-top.html">KOF2000</a> / <a href="/research/kof2000/index.html">研究アーカイブ</a> / <b>ボタン・行動の優先順位と入力のルール</b></div></div><main class="main"><div class="wrap article"><h1>ボタン・行動の優先順位と入力のルール</h1>
+<p class="lead">複数の行動の入力が同時に成立したとき、KOF2000では次の順で優先されると考えられます。同時押しの行動は、<strong>余分なボタンが押されていると成立しません</strong>。</p>
+
+<h2>行動の優先順位</h2>
+<ol class="flow">
+<li>スタートボタン（挑発）</li>
+<li>ABC（カウンターモード発動）・BCD（アーマーモード発動）。一つ下の段と同じ優先順位かもしれません。</li>
+<li>AB（緊急回避）・BC（ストライカー呼び出し）・CD（ふっ飛ばし攻撃）。この3つは同じ高さと思われますが、同時には試せません。</li>
+<li>必殺技</li>
+<li>特殊技</li>
+<li>通常投げ</li>
+<li>通常技</li>
+</ol>
+<p>ボタン自体の優先順位は スタート＞A＞B＞C＞D です（セレクトボタンは不明）。'96以降のA優先の同時押しの規則は<a href="/research/kof-series/priority-flag-processing-order.html">有利フラグ・不利フラグ</a>の「'96で変わった2つの優先順位」にあります。</p>
+
+<h2>入力のルール</h2>
+<table><thead><tr><th>入力</th><th>ルール</th></tr></thead><tbody>
+<tr><td>AB・BC・CD・ABC・BCD</td><td>余分なボタンが押されると成立しない</td></tr>
+<tr><td>GC緊急回避・GCCD・受け身（ダウン回避）</td><td>余計なボタンを押すと成立しない</td></tr>
+<tr><td>ABCDのどれかを押しっぱなし</td><td>大・中ジャンプ、前ダッシュ、飛び退き、（超）必殺技が出せない</td></tr>
+<tr><td>挑発</td><td>立っていないと出せない</td></tr>
+<tr><td>中・大ジャンプ</td><td>↙・↓・↘のどれか＞↖・↑・↗のどれか で成立。間にニュートラルを挟む必要はない（小・中・大ジャンプの動作は2002などと同様）</td></tr>
+<tr><td>←↙↓↘→系のコマンド</td><td>←＞（↙・↓・↘のどれか）＞（→・↗のどれか）が入っていれば出る（'99・2002と同様）</td></tr>
+<tr><td>→↓↘系のコマンド</td><td>↓は↙・↓・↘に、↘は↖・↑・↗に置き換えられる（原文どおり。'99・2002と同様）</td></tr>
+<tr><td>必殺技コマンドの最後のレバー部分</td><td>'99・2002と同じ</td></tr>
+</tbody></table>
+
+<h2>MAX版が出せないときのAC・BD</h2>
+<p>MAX版超必殺技があるタイプの超必殺技は、MAX版が出せないときにAC・BDの同時押しをしても、ノーマル版を出せます。ゲージ3つ未満の状態で確認していて、カウンターモード発動中は調べていません。2002とは異なります。</p>
+
+<details class="more"><summary>補足：原文にある「謎の時間」とアンディのメモ</summary>
 <ul>
-<li>AB・BC・CD・ABC・BCDは、<strong>余分なボタンが押されると成立しない</strong>という本人記録。</li>
-<li>ガードキャンセル緊急回避、ガードキャンセルCD、受け身（ダウン回避）も、<strong>余分なボタンで成立しない</strong>。</li>
-<li>ABCDのいずれかを押しっぱなしにした状態では、<strong>大／中ジャンプ、前ダッシュ、飛び退き、（超）必殺技が出せない</strong>という本人記録。</li>
-<li>挑発は立ち状態でないと出せない。</li>
-<li>本人は「謎の時間」の存在も記録したが、その定義とフレーム数は元原稿にない。現在の用語に勝手に置き換えない。</li>
+<li>原文には「謎の時間は存在します。」とだけあり、何を指すかは書かれていません。</li>
+<li>アンディのC投げは、なぜか2段目でゲージが増えます。</li>
+<li>当時まだ調べていなかったこと：アンディでジャンプ攻撃をヒットさせてから←↙↓↘→＋AかCと入力すると、［近距離立ちAか近距離立ちC（1段目）］≫撃壁背水掌になってくれるかどうか。</li>
 </ul>
-<p>本項は2004年当時の本人の整理であり、KOF2002やKOF2002UMの入力仕様を後から混ぜた資料ではない。</p>
-<h2>3. ジャンプ・コマンド入力の本人メモ</h2>
-<div class="scroll"><table><thead><tr><th>対象</th><th>2004年のMOTの記録</th><th>留保</th></tr></thead><tbody>
-<tr><td>中・大ジャンプ</td><td>↙／↓／↘ のいずれか → ↖／↑／↗ のいずれか、という入力で成立し、間にニュートラルを挟む必要はない</td><td>小・中・大ジャンプの動作は2002などと同様という本人の比較。各方向の例外はこの元資料にはない</td></tr>
-<tr><td>←↙↓↘→系</td><td>← →（↙／↓／↘ のいずれか）→（→／↗ のいずれか）でも成立すると記録</td><td>本人はKOF'99・2002と同様と比較</td></tr>
-<tr><td>→↓↘系</td><td>入力中の↓を↙／↓／↘、元原稿で↘と表した部分を↖／↑／↗に置き換え可能、と記録</td><td>通常のコマンド常識に合わせて書き換えず、<strong>原文の方向表記を保持</strong>。入力手順・条件の再確認が必要</td></tr>
-<tr><td>必殺技コマンドの最終レバー部分</td><td>KOF'99・2002と同じという本人の説明</td><td>この原稿には独立したフレーム数・方向別表はない</td></tr>
-</tbody></table></div>
-<h2>4. MAX超必殺技が出せないときのAC／BD</h2>
-<p>MAX版超必殺技もある技について、<strong>MAX版を出せない状態でACまたはBDを同時押ししても、ノーマル版は出せる</strong>とMOTは記載。<strong>ゲージ3つ未満では試した</strong>と明記する一方、<strong>カウンターモード発動中は未調査</strong>としている。KOF2002とは異なるとも記載。すべての不可条件・技・キャラに同じ結果が出たと補わない。</p>
-<h2>5. 当時の未調査と本人メモ</h2>
+</details>
+
+<p class="src">出典：<a href="/00yu-zyunni.html">KOF2000の各行動の優先順位の分析について</a>（2004/3/23作成、3/25更新）。ほかの作品は <a href="/94yuusennzyunni.html">'94</a> ／ <a href="/96yu-zyunni.html">'96</a> ／ <a href="/98yu-zyunni.html">'98</a> ／ <a href="/99yu-zyunni.html">'99</a> ／ <a href="/01yu-zyunni.html">2001</a> ／ <a href="/2002yuusennzyunni.html">2002</a>。</p>
+
+<h2>関連ページ</h2>
 <ul>
-<li><strong>未調査：</strong>アンディがジャンプ攻撃ヒット後に←↙↓↘→＋A／Cと入力した場合、近距離立ちAまたは近距離立ちC初段→撃壁背水掌となるか。</li>
-<li><strong>本人メモ：</strong>アンディのC投げでは、なぜか2段目にゲージが増える。</li>
+<li><a href="./striker-call-hitstop-timing-2020.html">STの呼び出しとヒットストップ</a>：BCでSTを呼べる時と呼べない時。</li>
+<li><a href="./superfreeze-ab-roll-2000-2001-2021.html">暗転中にAB押しっぱなし</a></li>
 </ul>
-<p>前者は本人が明確に「まだ調べてないもの」とした項目。後者についても原因・増加量を補わない。<a href="/KOF2000・アンディ.html">KOF2000アンディ旧攻略</a>には近C初段から撃壁背水掌への連続技や、別の立ち回り・技性能が記載されているが、上記の<strong>ジャンプ攻撃後の省略入力手順まで確認済みになったわけではない</strong>。</p>
-<h2>関連研究と資料の来歴</h2>
-<p>一次原文：<a href="/00yu-zyunni.html">2004年3月23～25日の旧ページ</a>。<a href="./striker-call-hitstop-timing-2020.html">2020年のST呼び出し・ヒットストップ研究</a>は別時点の実験・観察。<a href="./bao-ikuyo-whiff-cancel-2015-2025.html">2015～2025年の空振りキャンセル・入力技術</a>とも、操作の成立条件が同一と断定しない。</p>
-<p><a href="/research/kof2000/index.html">KOF2000研究アーカイブ</a> ／ <a href="/kof-kininaru.html#kof2000">気になること</a> ／ <a href="/kof00-top.html">作品トップ</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
+
+<h2>気になること</h2>
+<ul>
+<li>モード発動（ABC・BCD）と緊急回避・ST呼び出し・ふっ飛ばし（AB・BC・CD）の優先順位は同じか。</li>
+<li>カウンターモード発動中でも、AC・BDでノーマル版超必殺技は出せるか。</li>
+<li>アンディのジャンプ攻撃ヒットから←↙↓↘→＋AかCで、近距離立ちAか近C（1段目）≫撃壁背水掌になるか。</li>
+</ul>
+<p><a href="/research/kof2000/index.html">KOF2000研究アーカイブ</a> ／ <a href="/kof-kininaru.html#kof2000">KOF2000の気になること</a></p>
+</div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
