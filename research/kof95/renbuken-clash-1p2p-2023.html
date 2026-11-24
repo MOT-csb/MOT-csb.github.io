@@ -1,24 +1,33 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'95：連舞拳・連舞脚の相打ちと1P／2P側の硬直差（2023年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof95-top.html">KOF'95</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap"><h1>KOF'95：連舞拳・連舞脚の相打ちと1P／2P側の硬直差（2023年）</h1>
-<p>2023年7月13～14日のMOT本人のX投稿を基に、<strong>極限流連舞拳／連舞脚同士の相打ち</strong>、連舞拳と弱・強攻撃の相打ち、1P・2Pによる硬直差、追撃可能な例を整理する。MOTが「確認した」と書いた結果をそのまま収録し、硬直差が生じるプログラム上の原因は仮説として区別する。</p>
-<h2>7月13日：連舞系同士の相打ちと位置入替</h2>
-<p>MOTは過去の動画に登場した<strong>連舞拳／連舞脚同士の相打ち</strong>を見て、かつての研究を忘れていたと報告。リョウの連舞拳でも同じ結果を確認し、<strong>条件によって位置を入れ替えながらの相打ちになり、そこから1P側は連続技が可能</strong>と記録した。ただし、この投稿にはその位置入替を成立させる入力フレームや全キャラの条件は書かれていない。<a href="https://x.com/mot_csb/status/1679340811455188992">2023/07/13の本人投稿</a> ／ <a href="https://x.com/mot_csb/status/1679341281426952192">同日のリョウ追試</a>。</p>
-<h2>7月14日：連舞拳を弱・強攻撃と相打ちさせた測定</h2>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'95：連舞拳・連舞脚の相打ちと1P・2Pの硬直差｜Come sono bravo?</title><meta name="description" content="KOF&#x27;95で極限流連舞拳・連舞脚が相打ちになると、1P側と2P側で硬直差が大きく違います（1P連舞拳は弱攻撃と相打ちで+10F、2Pは+1F）。同時連舞の相打ちと位置の入れ替わり、1P側の追撃。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:960px}.article table{min-width:0;width:100%}.article th,.article td{overflow-wrap:anywhere;vertical-align:top}.article a{overflow-wrap:anywhere}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}.lead{font-size:1.05em}.vt{display:inline-block;font-size:.85em;line-height:1.45;padding:0 6px;margin-left:4px;border:1px solid var(--line,#ccd);border-radius:4px;font-weight:600;white-space:nowrap}.legend{font-size:.92em;color:var(--sub,#555)}.src li{font-size:.92em}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h2{font-size:1.15em;margin-top:1.2rem}details.more h3{font-size:1.05em}@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}.article th,.article td{min-width:80px}}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof95-top.html">KOF'95</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'95：連舞拳・連舞脚の相打ちと1P・2Pの硬直差</h1>
+<p class="lead">極限流連舞拳（脚）が相打ちになると、1P側と2P側で硬直差が大きく違います。連舞拳1段目のヒット硬直が1Pと2Pで違うようだ、としています（2023年）。</p>
+<h2>弱攻撃・強攻撃と相打ちしたときの硬直差</h2>
 <table><thead><tr><th>連舞拳を出す側</th><th>弱攻撃と相打ち</th><th>強攻撃と相打ち</th></tr></thead><tbody>
-<tr><td><strong>1P連舞拳</strong></td><td><strong>+10F</strong></td><td><strong>±0F</strong></td></tr>
-<tr><td><strong>2P連舞拳</strong></td><td><strong>+1F</strong></td><td><strong>−9F</strong></td></tr>
+<tr><td>1P</td><td>+10F</td><td>±0F</td></tr>
+<tr><td>2P</td><td>+1F</td><td>−9F</td></tr>
 </tbody></table>
-<p>出典：<a href="https://x.com/mot_csb/status/1679695502244462592">MOTによる2023/07/14の測定結果・動画付き投稿</a>。各数値は<strong>連舞拳側の硬直差</strong>。例えば1Pの弱攻撃相打ちで+10F、2Pでは+1Fであり、片側だけの値を技の普遍的な硬直差として記載しない。弱攻撃と強攻撃とでは、いずれも結果が10F異なる。</p>
-<h2>追加追撃と本人の原因仮説</h2>
-<p>MOTは<strong>1P連舞拳を弱攻撃と相打ちさせてから屈Dがつながる</strong>ことを確認している。同投稿の「連舞拳1段目のヒット硬直が1Pと2Pで違うっぽい」という説明は<strong>本人の推測</strong>であり、内部のヒット硬直処理の違いが確定した結果ではない。</p>
-<p>2P側の連舞拳を弱攻撃と相打ちさせた場合に同じ屈Dが連続ヒットするか、各弱・強攻撃のキャラクター別結果、相打ち時の位置入替の必要条件はこの投稿群には記載されていない。</p>
-<h2>2011年の記録：ロバート同キャラの連舞脚</h2>
-<p>2023年7月13日の投稿で忘れていたとされた過去の研究は、2011年3月の投稿にあります。ロバートの同キャラ戦で連舞脚の入力を同時に成立させると1段目が相打ちになり、なぜか1P側が9F先に動き出せるようだ、と記録されています（<a href="https://x.com/mot_csb/status/47537800668651521">2011/3/15</a>）。</p>
-<h2>同じ研究系列の2023年11月8日の後続測定</h2>
-<p>2023年11月8日、MOTは以前の連舞拳（脚）同士の相打ち研究を引き合いに出し、庵の葵花同士・ラルフのガトリングアタック同士でも1P・2Pで相打ち後の硬直が異なると報告した。<a href="./player-side-clash-recovery-2023.html">庵・ラルフの測定値と不成立例はこちら</a>。本ページの<strong>連舞拳1P+10F／2P+1F</strong>とは別の技・条件なので数値を混同しない。</p>
-<p>また、<a href="./ryo-dash-renbuken-input-2023.html">リョウのダッシュ連舞拳入力</a>は入力暴発を避ける別研究であり、本ページの相打ち時の硬直差を直接扱っているわけではない。</p>
-<h2>追加確認が必要な点</h2><ul>
-<li>連舞拳・連舞脚同士の相打ちで位置が入れ替わる具体的な距離・タイミング。</li>
-<li>1P連舞拳の弱攻撃相打ち→屈D以外に、1P側・2P側で成立する追撃の一覧。</li>
-<li>ヒット硬直の差が1P／2Pの更新順や、ヒットストップ、接地処理のどれに起因するか。</li>
+<p>値は連舞拳側から見た硬直差です。1P連舞拳が弱攻撃と相打ちした後は、屈Dがつながるのを確認しています。</p>
+<h2>連舞同士の相打ち</h2>
+<ul>
+<li>ロバートの同キャラ戦で連舞脚の入力を同時に成立させると、1段目が相打ちになりますが、なぜか1P側が9F先に動き出せるようです（2011年）。</li>
+<li>リョウの連舞拳でも同じ結果になりました。リョウの場合は、条件次第で位置を入れ替えながらの相打ちになり、そこから1P側は連続技もできました（2023年）。</li>
 </ul>
-<p>上記は本人の原資料から浮かぶ照合課題であり、独自に原因を確定したものではない。</p><p><a href="./index.html">KOF'95研究アーカイブへ戻る</a> ／ <a href="/kof-kininaru.html#kof95">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
+<p>2023年に動画を見たとき、2011年の研究を「完全に忘れてました。見ても思い出せないレベル。」と書いています。</p>
+<h2>ほかにもありそう</h2>
+<p>'94と'95は1P・2Pで性能の違う技がほかにもいくつかあるので、探してみてもいいかもしれない、としています。多段系の技で、相打ちのときだけ違いが見える感じです。実際に、庵の葵花やラルフのガトリングアタックでも見つかっています。<a href="./player-side-clash-recovery-2023.html">相打ち後の硬直差が1P・2Pで違う技</a>へ。</p>
+<h2>気になること</h2>
+<ul>
+<li>連舞同士の相打ちで位置が入れ替わる条件（距離やタイミング）。</li>
+<li>なぜ1P・2Pでヒット硬直が違うのか。</li>
+</ul>
+<h2>似ているが別の話</h2>
+<ul>
+<li><b>リョウのダッシュ連舞拳</b>：入力の暴発を避ける話です。<a href="./ryo-dash-renbuken-input-2023.html">リョウのダッシュ連舞拳</a>へ。</li>
+<li><b>同時に投げ合ったときの1P優先</b>：<a href="./reversal-normal-throw-landing-invul-2010-2024.html">リバーサル通常投げ</a>へ。</li>
+</ul>
+<h2>出典</h2>
+<ul class="src">
+<li><a href="https://x.com/mot_csb/status/47537800668651521">ロバート同キャラの連舞脚</a>（X、2011/3/15）</li>
+<li><a href="https://x.com/mot_csb/status/1679340811455188992">同時連舞で相打ち</a>・<a href="https://x.com/mot_csb/status/1679341281426952192">リョウでも確認</a>（X、2023/7/13）</li>
+<li><a href="https://x.com/mot_csb/status/1679695502244462592">弱・強攻撃との相打ち</a>・<a href="https://x.com/mot_csb/status/1679868929051852805">ほかにもありそう</a>（X、2023/7/14）</li>
+</ul>
+<p class="legend"><a href="./index.html">KOF'95 研究アーカイブ</a> ／ <a href="/kof95-top.html">KOF'95トップ</a> ／ <a href="/kof-kininaru.html#kof95">KOF'95の気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
