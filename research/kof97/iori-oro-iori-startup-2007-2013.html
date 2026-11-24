@@ -1,54 +1,55 @@
 <!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'97 庵と暴走庵：発生差・入力分岐・八稚女ダメージ資料（2007～2014年）｜Come sono bravo?</title><meta name="description" content="KOF'97 庵と暴走庵：発生差・入力分岐・八稚女ダメージ資料（2007～2014年）のMOT本人一次資料を整理した研究記録。"><link rel="stylesheet" href="/assets/research.css"></head>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'97の庵と暴走庵：1Fの発生差、1623＋Cの出し分け、八稚女のダメージ｜Come sono bravo?</title><meta name="description" content="KOF'97の庵と暴走庵は立ちCDと強鬼焼きの発生が1F違い、暴走庵の1623＋Cは投げ間合いで屑風と強鬼焼きに分かれます。八稚女のムック掲載ダメージも比較。"><link rel="stylesheet" href="/assets/research.css"></head>
 <body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
 <div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/kof-top.html">KOF</a><span aria-hidden="true"> / </span><a href="/kof97-top.html">KOF'97</a><span aria-hidden="true"> / </span><a href="./index.html">研究アーカイブ</a></div></div>
-<main class="main"><div class="wrap article"><!-- chara-nav:start --><nav class="chara-nav" aria-label="キャラクター別のページ"><p class="cn-head"><a href="/kof97-top.html#c-iori">KOF&#x27;97 キャラ選択</a><span>›</span><b>庵</b></p><p class="cn-links"></p><details open><summary>攻略・研究ページ 3件</summary><ul><li><a href="/research/kof97/awakened-leona-orochi-iori-jumps-2024.html">覚醒レオナ・暴走庵の垂直ジャンプ滞空時間（2024年）</a></li><li><a href="/research/kof97/chang-iori-video-observations-2015.html">対戦動画メモ：チャンの大破壊投げ後の接近と庵の百合折り（2015年）</a></li><li><b>庵と暴走庵：発生差・入力分岐・八稚女ダメージ資料（2007～2014年）</b></li></ul></details></nav><!-- chara-nav:end --><h1>KOF'97 庵と暴走庵：発生差・入力分岐・八稚女ダメージ資料（2007～2014年）</h1>
-<p>2007年10月7日のMOT本人原稿にある庵と暴走庵の<strong>発生フレームの差</strong>を記録する。後半には2013年11月4日の入力仮説と、翌5日の暴走庵での実行結果を分けて掲載する。2007年の発生F差と入力分岐の仕組みは別の研究として扱う。</p>
-<h2>庵と暴走庵の発生差（2007/10/7）</h2>
-<table><thead><tr><th>技</th><th>本人の比較結果</th><th>絶対発生F</th></tr></thead><tbody>
-<tr><td>立ちC＋D</td><td>暴走庵の方が庵より1F早い</td><td>原文には記載なし</td></tr>
-<tr><td>強鬼焼き</td><td>暴走庵の方が庵より1F早い</td><td>原文には記載なし</td></tr>
-<tr><td>ジャンプC＋D</td><td>庵の方が暴走庵より1F早い</td><td>原文には記載なし</td></tr>
-</tbody></table>
-<p>これはMOTが公開した<strong>比較結果</strong>であり、各技の実際の発生フレーム数を示した一覧ではない。「1F差」から絶対値を算出して補完しない。</p>
-<h2>2013/11/4の別件：J攻撃ガード後の入力仮説</h2>
-<p>MOTはKOF'97の庵について、相手のジャンプ攻撃をガードした後、<code>1623C</code>と正確に入力できれば状況に応じた行動を選べないか、とXに投稿した。投稿自体が<strong>本人の仮説・未検証案</strong>である。</p>
-<table><thead><tr><th>相手の後続行動</th><th>MOTが想定した分岐</th></tr></thead><tbody>
-<tr><td>地上で非連続ガードの固め</td><td>屑風が出る想定</td></tr>
-<tr><td>地上で連続ガードの固め</td><td>屈ガードになる想定</td></tr>
-<tr><td>再度ジャンプ</td><td>強鬼焼きが出る想定</td></tr>
-</tbody></table>
-<p>11月4日時点の本人の問題意識には、<strong>屑風と強鬼焼きのコマンド優先順位</strong>、連続ガード時の保険、再ジャンプへの対応が含まれていた。ただし、<strong>翌11月5日には暴走庵でのコマンド分岐の成立確認が記録されている</strong>。その事後検証を下記に追加する。</p>
-<h2>2013/11/5：暴走庵の1623＋C分岐【本人確認済み】</h2>
-<table><thead><tr><th>操作・状況</th><th>MOTが確認した挙動</th><th>状態</th></tr></thead><tbody>
-<tr><td>暴走庵：<code>1623＋C</code>、相手が屑風の投げ間合い内</td><td>屑風が出た</td><td>本人確認済み</td></tr>
-<tr><td>暴走庵：<code>1623＋C</code>、相手が屑風の投げ間合い外</td><td>強鬼焼きが出た</td><td>本人確認済み</td></tr>
-<tr><td>暴走庵の屑風の成立間合い</td><td>ほぼ密着でないと成立しない、と記録</td><td>本人が確認した状況・評価</td></tr>
-</tbody></table>
-<p><strong>この確認は暴走庵の投げ間合い内／外での技の分岐</strong>である。前日の構想に含まれる「通常庵で同様か」「ジャンプ攻撃をガードした直後にすべての分岐が機能するか」「連続ガード時に必ず屈ガードできるか」をすべて検証した報告とは扱わない。</p>
-<p>同日MOTは<strong>暴走庵の低JCD→低JCDは打点次第で連続ガードになり、連続ガードにならなくても隙間が1～2Fしかない場面が多いようだ</strong>とも記録。原文が「っぽい」と留保したため、全キャラ・全打点での厳密な硬直差として確定しない。</p>
-<p>暴走庵のジャンプ予備動作4F・小J滞空15F・ノーマルJ滞空20Fについては、<a href="./awakened-leona-orochi-iori-jumps-2024.html">覚醒レオナ・暴走庵の滞空時間を扱った既存記事</a>に保存済みなのでここでは複製しない。</p>
-<h2>2014/1/17：通常庵と暴走庵の八稚女ダメージに関するムックとの相違</h2>
-<p>MOTはほかのプレイヤーとの会話の中で、KOF'97の『ネオジオフリーク』ムックの数値を見直し、<strong>通常版の八稚女は通常庵と暴走庵で値が異なるのに、MAX版のダメージ値は一致している</strong>と述べた。一方、その後の同じ会話では、<strong>実際のダメージは両者でほぼ同じ</strong>という認識を示している。</p>
-<table><thead><tr><th>比較事項</th><th>2014年1月17日の本人の記録</th><th>区分</th></tr></thead><tbody>
-<tr><td>通常版八稚女のムック掲載値</td><td>通常庵と暴走庵で違う。本人が挙げた値は<strong>庵 5×8＋21、暴走庵 5×8＋44</strong>で、「全然違う」と書いている</td><td>本人がムックを見直して指摘</td></tr>
-<tr><td>MAX版八稚女のムック掲載値</td><td>両者で同じ</td><td>本人がムックを見直して指摘</td></tr>
-<tr><td>実際のダメージ</td><td>ほぼ同じと本人は認識</td><td>当時の本人見解。測定条件・値は原投稿にはない</td></tr>
-<tr><td>ムックの相違の原因</td><td>ムック自体、または出版社に提供された元のデータの誤りかもしれない</td><td>本人による原因推測。SNKの提供資料を確認したという意味ではない</td></tr>
-</tbody></table>
-<p>上の5×8＋21／5×8＋44という内訳は、同じ会話の中でムックの値として示されたもので、<strong>実機でダメージを測った値ではありません</strong>。掲載ムックの該当箇所の原本と同条件の実際のダメージを再照合していないため、このページでは数値の正誤を断定せず<a href="/kof-kininaru.html#kof97">気になること</a>へ引き継ぐ。2007年の発生1F差も八稚女のダメージの相違とは別論点である。</p>
-<h2>2004年2月の本人対戦回想：八稚女とジャンプ攻撃の競り合い</h2>
-<p>MOTは旧「餓狼連合掲示板」の2004年2月26日（投稿4997）に、KOF'97で庵を相手に不用意に飛び込むと、かなり早めに出された八稚女の突進中にこちらのジャンプ攻撃が負けていたと回想している。強力な技だった一方、KOF'97にはほかにも強力な技が多く、八稚女だけが特別ではないという<strong>当時の本人の対戦評価</strong>を付した。</p>
-<p>これは当時の本人の体験談であり、八稚女の発生F・無敵F・ジャンプ攻撃との全組み合わせを定量測定した結果ではない。上記の2007年の庵と暴走庵の1F差とは別の記録として保存する。</p>
+<main class="main"><div class="wrap article"><!-- chara-nav:start --><nav class="chara-nav" aria-label="キャラクター別のページ"><p class="cn-head"><a href="/kof97-top.html#c-iori">KOF&#x27;97 キャラ選択</a><span>›</span><b>庵</b></p><p class="cn-links"></p><details open><summary>攻略・研究ページ 3件</summary><ul><li><a href="/research/kof97/awakened-leona-orochi-iori-jumps-2024.html">覚醒レオナ・暴走庵の垂直ジャンプ滞空時間（2024年）</a></li><li><a href="/research/kof97/chang-iori-video-observations-2015.html">対戦動画メモ：チャンの大破壊投げ後の接近と庵の百合折り（2015年）</a></li><li><b>庵と暴走庵：発生差・入力分岐・八稚女ダメージ資料（2007～2014年）</b></li></ul></details></nav><!-- chara-nav:end --><h1>KOF'97の庵と暴走庵：1Fの発生差、1623＋Cの出し分け、八稚女のダメージ</h1>
+<p>KOF'97の暴走庵は、通常の庵より立ちC＋Dと強鬼焼きの発生が1F早く、ジャンプC＋Dは1F遅くなっています。暴走庵は<code>1623＋C</code>と入れると、相手が投げ間合いの内なら屑風、外なら強鬼焼きが出るので、ジャンプ攻撃をガードしたあとの守りに使えます。</p>
+
+<h2>庵と暴走庵の発生の差（2007/10/7）</h2>
+<div class="scroll"><table><thead><tr><th>技</th><th>早いほう</th></tr></thead><tbody>
+<tr><td>立ちC＋D</td><td>暴走庵が1F早い</td></tr>
+<tr><td>強鬼焼き</td><td>暴走庵が1F早い</td></tr>
+<tr><td>ジャンプC＋D</td><td>庵が1F早い</td></tr>
+</tbody></table></div>
+<p>差だけが書かれた記録で、それぞれの発生フレームの値は原稿にありません。</p>
+
+<h2>暴走庵の1623＋C：投げ間合いで屑風と強鬼焼きが出し分かれる</h2>
+<p>2013年11月5日に暴走庵で確かめられた動作です。</p>
+<div class="scroll"><table><thead><tr><th>状況</th><th><code>1623＋C</code>で出る技</th></tr></thead><tbody>
+<tr><td>相手が屑風の投げ間合いの内</td><td>屑風</td></tr>
+<tr><td>相手が屑風の投げ間合いの外</td><td>強鬼焼き</td></tr>
+</tbody></table></div>
+<p>ただし暴走庵の屑風は、ほぼ密着でないと成立しないほど間合いが狭く、通常の庵と比べたスクリーンショットも残っています。</p>
+<p>この入力は、前日11月4日の大会観戦中に考えた案がもとになっています。相手のジャンプ攻撃をガードしたあと<code>1623C</code>と正確に入れておけば、次のように出し分けられないか、というものです。</p>
+<ul>
+<li>相手が地上で連続ガードにならない固めをしてきた → 屑風</li>
+<li>相手が地上で連続ガードになる固めをしてきた → 屈ガード</li>
+<li>相手がもう一度ジャンプしてきた → 強鬼焼き</li>
+</ul>
+<p>翌日に確かめられたのは、暴走庵の投げ間合いの内外での出し分けまでです。通常の庵での動き、ジャンプ攻撃をガードした直後にこの3通りがすべて働くか、連続ガードのときに必ず屈ガードになるかは確かめられていません。前日の時点では屑風と強鬼焼きのどちらが優先されるかも課題に挙がっていました。</p>
+<p>補足：同じ日に、暴走庵の低JCD→低JCDは打点しだいで連続ガードになり、ならなくても隙間が1～2Fしかないことが多い「っぽい」とも書かれています。暴走庵のジャンプ予備動作4F・小ジャンプ15F・ノーマルジャンプ20Fは<a href="./awakened-leona-orochi-iori-jumps-2024.html">覚醒レオナ・暴走庵のジャンプの記事</a>にあります。</p>
+
+<h2>八稚女：ムックでは庵と暴走庵の通常版のダメージが違う</h2>
+<p>KOF'97の『ネオジオフリーク』のムックでは、通常版の八稚女のダメージが庵と暴走庵で大きく違い、MAX版は同じ値です。</p>
+<div class="scroll"><table><thead><tr><th>版</th><th>ムックの値</th></tr></thead><tbody>
+<tr><td>八稚女（通常版）</td><td>庵 5×8＋21、暴走庵 5×8＋44</td></tr>
+<tr><td>八稚女（MAX版）</td><td>庵と暴走庵で同じ</td></tr>
+</tbody></table></div>
+<p>2014年1月17日の会話の中で、ムックを見直して「全然違う。」と指摘したものです。ただ、実際のダメージはほぼ同じという認識で、ムック自体か、出版社に渡された元のデータが間違っているのかもしれない、と推測しています。実際のダメージを同じ条件で測った値はありません。</p>
+<p>補足：2004年2月26日の旧「餓狼連合掲示板」の書き込み（投稿4997）では、KOF'97で庵を相手に不用意に飛び込むと、早めに出された八稚女の突進にジャンプ攻撃が負けていた、と振り返っています。強い技ではあるものの、KOF'97にはほかにも強い技が多く、八稚女だけが特別ではない、という評価です。</p>
+
+<h2>気になること</h2>
+<ul><li>ムックの通常版八稚女の値（庵 5×8＋21、暴走庵 5×8＋44）は誤りなのか。実際のダメージはどれくらい違うのか。</li></ul>
+
 <h2>出典</h2><ul>
-<li><a href="https://comesonobravo.hatenadiary.org/entry/2007/10/07/000031">2007/10/07：97：庵と暴走庵の違い（立ちCDと強鬼焼きについて）</a>（MOT旧ブログ原文、エクスポートで確認）</li>
-<li><a href="https://x.com/mot_csb/status/397320368790073344">2013/11/04：KOF'97庵・1623Cの分岐に関する本人のX投稿</a>（提供Xアーカイブで原文確認）</li>
-<li><a href="https://x.com/mot_csb/status/397522015663296512">2013/11/05：暴走庵1623＋C、投げ間合い内→屑風／外→強鬼焼き（本人確認）</a></li>
-<li><a href="https://x.com/mot_csb/status/397522354881826816">2013/11/05：暴走庵の屑風の間合い</a></li>
-<li><a href="https://x.com/mot_csb/status/397526045819019264">2013/11/05：暴走庵の低JCD→低JCDの連続ガードと隙間（本人の「っぽい」）</a></li>
-<li><a href="https://x.com/mot_csb/status/424148877659209728">2014/01/17：ネオジオフリークムック上の通常・MAX版八稚女の数値差</a></li>
-<li><a href="https://x.com/mot_csb/status/424149544691957760">2014/01/17：ムック掲載の通常版八稚女のダメージ内訳（庵 5×8＋21／暴走庵 5×8＋44）</a></li>
-<li><a href="https://x.com/mot_csb/status/424150368100958208">2014/01/17：ムックの数値に対する本人の疑問</a></li>
-<li><a href="https://x.com/mot_csb/status/424150523885809664">2014/01/17：SNK→芸文社の資料に関する原因推測</a></li>
-<li><a href="https://x.com/mot_csb/status/424150881211142145">2014/01/17：実際のダメージはほぼ同じという本人見解</a></li>
-</ul><p>2026/11/20：2007年の3つの1F差、2013年11月4～5日の入力分岐、2014年1月17日の八稚女のムック掲載値と当時の本人見解を原資料ごとに区別して統合。ムック誤記の有無は未確認。</p><hr><p><a href="./index.html">KOF'97 研究アーカイブへ戻る</a> ／ <a href="/kof-kininaru.html#kof97">KOF'97の気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2007/10/07/000031">2007/10/07：97：庵と暴走庵の違い（立ちCDと強鬼焼きについて）</a>（MOT旧ブログ）</li>
+<li><a href="https://x.com/mot_csb/status/397320368790073344">2013/11/04：庵の1623＋Cの出し分け</a>（X）</li>
+<li><a href="https://x.com/mot_csb/status/397522015663296512">2013/11/05：暴走庵の1623＋C、投げ間合い内は屑風・外は強鬼焼き</a>（X）</li>
+<li><a href="https://x.com/mot_csb/status/397522354881826816">2013/11/05：暴走庵の屑風の間合い</a>（X）</li>
+<li><a href="https://x.com/mot_csb/status/397526045819019264">2013/11/05：暴走庵の低空JCD→低空JCDの連続ガードと隙間</a>（X）</li>
+<li><a href="https://x.com/mot_csb/status/424148877659209728">2014/01/17：ムックの通常版・MAX版八稚女の数値差</a>（X）</li>
+<li><a href="https://x.com/mot_csb/status/424149544691957760">2014/01/17：ムック掲載の通常版八稚女のダメージ内訳</a>（X）</li>
+<li><a href="https://x.com/mot_csb/status/424150368100958208">2014/01/17：ムックの数値への疑問</a>（X）</li>
+<li><a href="https://x.com/mot_csb/status/424150523885809664">2014/01/17：資料の受け渡しで誤記が起きた可能性</a>（X）</li>
+<li><a href="https://x.com/mot_csb/status/424150881211142145">2014/01/17：実際のダメージはほぼ同じという見方</a>（X）</li>
+</ul><hr><p><a href="./index.html">KOF'97 研究アーカイブへ戻る</a> ／ <a href="/kof-kininaru.html#kof97">KOF'97の気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
