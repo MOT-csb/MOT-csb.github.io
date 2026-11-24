@@ -184,7 +184,7 @@ GROUP_ORDER = [
     "KOF NEOWAVE", "KOF NEOWAVE 研究アーカイブ", "KOF XI",
     "餓狼伝説", "サムライスピリッツ", "その他の格闘ゲーム",
     "アイドルマスター シンデレラガールズ",
-    "MSX", "信長の野望・武将風雲録（MSX2版）", "ファミコン", "ぷよぷよ・デスタワー", "サイト共通・その他",
+    "MSX", "信長の野望・武将風雲録（MSX2版）", "ファミコン", "ぷよぷよ・デスタワー", "ぷよぷよ・初代の攻略メモ", "サイト共通・その他",
 ]
 
 
@@ -241,6 +241,8 @@ def _page_group(t, path):
         return "MSX"
     if path.startswith("famicom/"):
         return "ファミコン"
+    if path.startswith("puyo/strategy/"):
+        return "ぷよぷよ・初代の攻略メモ"
     if path.startswith("puyo/"):
         return "ぷよぷよ・デスタワー"
     m = re.search(r'<p class="crumb">(.*?)</p>', t, re.S)
