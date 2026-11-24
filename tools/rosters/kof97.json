@@ -26,15 +26,15 @@
      "research": [
       [
        "research/kof97/command-shortcuts-joe-2015.html",
-       "41236簡略入力の3条件とジョー連続技（2015年）"
+       "コマンド簡略化：41236が16で出る・ボタン押しっぱなしで必殺技を封印"
       ],
       [
        "research/kof97/joe-airguard-heel-2011-2019.html",
-       "ジョー弱カカトと空中ガード：ユリ検証・硬直差の見解（2011～2019年）"
+       "ジョーの黄金のカカト［弱］と空中ガード"
       ],
       [
        "research/kof97/joe-original-move-analysis-2004.html",
-       "ジョー：2004年の技解析・追撃・ガード崩しの原資料整理"
+       "ジョーの技の使い方（2004年の技解析）"
       ]
      ]
     },
@@ -70,7 +70,7 @@
      "research": [
       [
        "research/kof97/orochi-yashiro-2011-frames.html",
-       "裏社：弱くじくだいちの発生22Fとジャンプ回避猶予（2011年）"
+       "裏社のくじくだいち［弱］：発生22F"
       ]
      ]
     },
@@ -95,7 +95,7 @@
      "research": [
       [
        "research/kof97/kyo-naraku-pseudo-overhead-2011-2014.html",
-       "京：奈落落としの擬似中段と空振り時の仕込み案（2011～2014年）"
+       "京の奈落落とし：擬似中段と空振り時の仕込み"
       ]
      ]
     },
@@ -111,11 +111,11 @@
      "research": [
       [
        "research/kof97/benimaru-choi-athena-notes-2014-2015.html",
-       "紅丸・チョイ・アテナ：2014～2015年の技性能・連続技メモ"
+       "紅丸・チョイ・アテナのメモ"
       ],
       [
        "research/kof97/unpublished-drafts-2002-2003.html",
-       "未公開の攻略草稿：牽制・投げ・気絶狙い（2002～2003年）"
+       "紅丸の攻略：1フレームの投げ2種と気絶狙い（2002～2003年の未公開原稿）"
       ]
      ]
     },
@@ -125,11 +125,11 @@
      "research": [
       [
        "research/kof97/goro-jb-landing-crouch-guard-2015.html",
-       "大門：JB後の着地しゃがみガードによる攻撃空振りと3C判定（2015年）"
+       "大門：JBのあと着地しゃがみガードで相手の攻撃をすかせる"
       ],
       [
        "research/kof97/goro-quake-buffered-2020-2024.html",
-       "大門：仕込み地雷震の成立例・不成立例と他作品との違い（2020～2024年）"
+       "大門の仕込み地雷震と確定地雷震の回避"
       ]
      ]
     },
@@ -149,7 +149,7 @@
      "research": [
       [
        "research/kof97/terry-power-charge-2004-2023.html",
-       "テリー：パワーチャージ追撃と永久連続技・後年の作品別評価（2004～2023年）"
+       "テリー：パワーチャージからの追撃と、空振りキャンセルで変わる追撃条件"
       ]
      ]
     },
@@ -159,11 +159,11 @@
      "research": [
       [
        "research/kof97/andy-unpublished-guide-2003.html",
-       "アンディ：2003年未公開攻略草稿"
+       "アンディの攻略（2003年の未公開原稿）"
       ],
       [
-       "research/kof97/unpublished-drafts-2002-2003.html",
-       "2003年の未公開攻略草稿（全体）"
+       "research/kof97/initial-system-character-notes-2003-2004.html",
+       "システムの細かい性質とキャラ別の小ネタ（撃壁の出し分け）"
       ]
      ]
     },
@@ -173,7 +173,7 @@
      "research": [
       [
        "research/kof97/ryo-personal-tier-2024.html",
-       "リョウ：2024年の個人ランクCとシリーズ比較の更新履歴"
+       "リョウは歴代で下位：個人的ランクはC"
       ]
      ]
     },
@@ -189,11 +189,11 @@
      "research": [
       [
        "research/kof97/robert-combos-source-2004.html",
-       "ロバート：2004年の連続技・極限流連舞拳後の追撃とムック誤植"
+       "ロバートの連続技：極限流連舞脚からの追撃"
       ],
       [
        "research/kof97/unpublished-drafts-2002-2003.html",
-       "未公開の短い旧稿：連舞脚と立ち回り"
+       "ロバートの短い攻略メモ：34Dを繰り返す（未公開原稿）"
       ]
      ]
     },
@@ -203,11 +203,11 @@
      "research": [
       [
        "research/kof97/awakened-leona-orochi-iori-jumps-2024.html",
-       "覚醒レオナ・暴走庵の垂直ジャンプ滞空時間（2024年）"
+       "覚醒レオナと暴走庵のジャンプ滞空時間"
       ],
       [
        "research/kof97/leona-moonslasher-charge-2011-2021.html",
-       "レオナ：2011年の空中ガード観察と2021年のムーンスラッシャー溜め入力比較"
+       "レオナ：ムーンスラッシャーの溜め時間とめくりJDからの連係"
       ]
      ]
     },
@@ -217,15 +217,15 @@
      "research": [
       [
        "research/kof97/athena-kim-simultaneous-buttons-2015.html",
-       "キム・アテナ：同時押し特殊性能とKOF'98との比較（2015年）"
+       "キムとアテナ：AB・AD同時押しで技の性能が変わる"
       ],
       [
        "research/kof97/benimaru-choi-athena-notes-2014-2015.html",
-       "紅丸・チョイ・アテナ：2014～2015年の技性能・連続技メモ"
+       "紅丸・チョイ・アテナのメモ"
       ],
       [
        "research/kof97/unpublished-drafts-2002-2003.html",
-       "未公開の攻略草稿：投げ後の追撃とSCB（2002～2003年）"
+       "アテナの攻略：SPT後の追い打ちとSCB（2003年の未公開原稿）"
       ]
      ]
     },
@@ -235,7 +235,7 @@
      "research": [
       [
        "research/kof97/chizuru-mirage-throw-invincibility-2007.html",
-       "神楽ちづる：三籟の布陣後の投げ・無敵状態バグ（2007年）"
+       "千鶴の三籟の布陣のバグ"
       ]
      ]
     },
@@ -245,7 +245,7 @@
      "research": [
       [
        "research/kof97/athena-kim-simultaneous-buttons-2015.html",
-       "キム・アテナ：同時押し特殊性能とKOF'98との比較（2015年）"
+       "キムとアテナ：AB・AD同時押しで技の性能が変わる"
       ]
      ]
     },
@@ -255,7 +255,7 @@
      "research": [
       [
        "research/kof97/chang-iori-video-observations-2015.html",
-       "対戦動画メモ：チャンの大破壊投げ後の接近と庵の百合折り（2015年）"
+       "対戦動画から：チャンの大破壊投げ後の接近と庵の百合折り"
       ]
      ]
     },
@@ -265,11 +265,11 @@
      "research": [
       [
        "research/kof97/benimaru-choi-athena-notes-2014-2015.html",
-       "紅丸・チョイ・アテナ：2014～2015年の技性能・連続技メモ"
+       "紅丸・チョイ・アテナのメモ"
       ],
       [
        "research/kof97/choi-standing-contact-2020.html",
-       "チョイ：立ち接触判定の高さとKOF'96～2002の比較（2020年）"
+       "チョイの立ち状態の接触判定"
       ]
      ]
     },
@@ -279,15 +279,15 @@
      "research": [
       [
        "research/kof97/awakened-leona-orochi-iori-jumps-2024.html",
-       "覚醒レオナ・暴走庵の垂直ジャンプ滞空時間（2024年）"
+       "覚醒レオナと暴走庵のジャンプ滞空時間"
       ],
       [
        "research/kof97/chang-iori-video-observations-2015.html",
-       "対戦動画メモ：チャンの大破壊投げ後の接近と庵の百合折り（2015年）"
+       "対戦動画から：チャンの大破壊投げ後の接近と庵の百合折り"
       ],
       [
        "research/kof97/iori-oro-iori-startup-2007-2013.html",
-       "庵と暴走庵：発生差・入力分岐・八稚女ダメージ資料（2007～2014年）"
+       "庵と暴走庵：1Fの発生差、1623＋Cの出し分け、八稚女のダメージ"
       ]
      ]
     }

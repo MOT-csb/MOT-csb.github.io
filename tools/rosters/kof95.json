@@ -17,6 +17,10 @@
       [
        "research/kof95/character-notes-2011-2024.html#n-kyo",
        "キャラクター別メモ"
+      ],
+      [
+       "research/kof95/new-unblockable-attribute-2024.html",
+       "新ガード不能（中段属性付与）"
       ]
      ]
     },
@@ -27,6 +31,10 @@
       [
        "research/kof95/benimaru-raikoken-counters-max-2011-2024.html",
        "紅丸の雷光拳を当てる場面"
+      ],
+      [
+       "research/kof95/rising-jcd-counters-2023-2024.html",
+       "昇りJCDの強さと対策"
       ]
      ]
     },
@@ -189,7 +197,13 @@
     },
     {
      "id": "ralf",
-     "name": "ラルフ"
+     "name": "ラルフ",
+     "research": [
+      [
+       "research/kof95/character-notes-2011-2024.html#n-others",
+       "キャラクター別メモ（そのほかのキャラ）"
+      ]
+     ]
     },
     {
      "id": "clark",
@@ -231,6 +245,10 @@
       [
        "research/kof95/kensou-crouch-d-delay-cancel-2023.html",
        "ケンスウの屈Dのディレイキャンセルと技の使い分け"
+      ],
+      [
+       "research/kof95/rising-jcd-counters-2023-2024.html",
+       "昇りJCDの強さと対策"
       ]
      ]
     },
@@ -280,6 +298,10 @@
       [
        "research/kof95/character-notes-2011-2024.html#n-mai",
        "キャラクター別メモ"
+      ],
+      [
+       "research/kof95/airborne-supers-commands-priority-2001-2005.html",
+       "空中超必殺技（5キャラの出し方）"
       ]
      ]
     },
@@ -293,6 +315,10 @@
       [
        "research/kof95/yuri-projectile-command-tests-2011.html",
        "ユリの飛び道具連射と複合コマンド"
+      ],
+      [
+       "research/kof95/projectile-double-fire-source-history-2001-2024.html",
+       "飛び道具の連射"
       ]
      ]
     }
@@ -312,6 +338,10 @@
       [
        "research/kof95/character-notes-2011-2024.html#n-kim",
        "キャラクター別メモ"
+      ],
+      [
+       "research/kof95/airborne-supers-commands-priority-2001-2005.html",
+       "空中超必殺技（5キャラの出し方）"
       ]
      ]
     },
@@ -325,12 +355,22 @@
       [
        "research/kof95/chang-ironball-rampage-counterplay-2023.html",
        "チャンの鉄球大暴走への反撃"
+      ],
+      [
+       "research/kof95/character-notes-2011-2024.html#n-others",
+       "キャラクター別メモ（そのほかのキャラ）"
       ]
      ]
     },
     {
      "id": "choi",
-     "name": "チョイ"
+     "name": "チョイ",
+     "research": [
+      [
+       "research/kof95/low-hit-jump-unblockable-2012-2024.html",
+       "低い打点のジャンプ攻撃のガード不能"
+      ]
+     ]
     }
    ]
   },
@@ -377,6 +417,12 @@
      "name": "影二",
      "frame": [
       "research/kof95/eiji-frame-data-2011.html"
+     ],
+     "research": [
+      [
+       "research/kof95/system-details-2010-2025.html",
+       "システムの細部（影二と柴舟の屈A連打）"
+      ]
      ]
     }
    ]
@@ -386,7 +432,13 @@
    "chars": [
     {
      "id": "saisyu",
-     "name": "柴舟"
+     "name": "柴舟",
+     "research": [
+      [
+       "research/kof95/system-details-2010-2025.html",
+       "システムの細部（影二と柴舟の屈A連打）"
+      ]
+     ]
     },
     {
      "id": "rugal",
