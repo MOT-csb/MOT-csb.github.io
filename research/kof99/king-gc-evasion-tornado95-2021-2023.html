@@ -1,48 +1,61 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'99 キング：トルネードキック95へのGCかわし対策・GCCD・ST研究（2021～2023年）｜Come sono bravo?</title><meta name="description" content="MOT本人のKOF99キング研究。トルネードキック95へのGCかわし攻撃の確定確認、GCCD+3F、STクラークとサプライズローズの仮説、屈C判定、2003年JCD CH追撃。"><link rel="stylesheet" href="/assets/research.css">
-<style>.article{max-width:1060px}.article h2{margin-top:2rem}.article table{width:100%;border-collapse:collapse}.article th,.article td{padding:9px;border:1px solid var(--line,#aab);text-align:left;vertical-align:top}.article thead th{background:var(--soft,#edf2ee)}.scroll{overflow-x:auto}.note{border-left:4px solid var(--accent,#416958);padding:12px 14px;background:var(--soft,#edf2ee)}.article a{overflow-wrap:anywhere}</style></head><body>
-<header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof99-top.html">KOF'99</a> / <a href="/research/kof99/index.html">研究アーカイブ</a> / <b>キング研究</b></div></div>
-<main class="main"><div class="wrap article"><!-- chara-nav:start --><nav class="chara-nav" aria-label="キャラクター別のページ"><p class="cn-head"><a href="/kof99-top.html#c-king">KOF&#x27;99 キャラ選択</a><span>›</span><b>キング</b></p><p class="cn-links"></p><details open><summary>攻略・研究ページ 1件</summary><ul><li><b>キング：トルネードキック95へのGCかわし対策・GCCD・ST研究（2021～2023年）</b></li></ul></details></nav><!-- chara-nav:end --><h1>KOF'99 キング：トルネードキック95へのGCかわし対策・GCCD・ST研究（2021～2023年）</h1>
-<p class="note">MOT本人の2013年、2015年、2021年、2023年のX投稿と2003年の旧攻略メモを照合。<strong>キングのGCCD・通常技の評価、キングを相手にしたトルネードキック95の対策、キングを使う場合のST連係の仮説</strong>を混在させず整理した。<strong>2023年7月のGCかわし攻撃検証はラルフの特定ルートでの確認</strong>であり、全キャラの確定反撃一覧ではない。画像・動画本体の測定は行っていない。</p>
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>KOF'99 キング：GCCD・屈C対空とトルネードキック95の対策｜Come sono bravo?</title>
+<meta name="description" content="KOF&#x27;99キングのGCCD（ガード時+3F）と屈Cの判定、トルネードキック95にGCかわし移動攻撃が確定するか、距離ごとの対策。">
+<link rel="stylesheet" href="/assets/research.css">
+<style>.article{max-width:960px}.article table{width:100%;border-collapse:collapse}.article th,.article td{border:1px solid var(--line,#ccd);padding:6px 8px;overflow-wrap:anywhere;vertical-align:top;text-align:left}.article thead th{background:var(--soft,#eaf0ed)}.article td.num{font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}.lead{font-size:1.05em}.vt{display:inline-block;font-size:.85em;line-height:1.45;padding:0 6px;margin-left:4px;border:1px solid var(--line,#ccd);border-radius:4px;font-weight:600;white-space:nowrap}.legend{font-size:.92em;color:var(--sub,#555)}.src li{font-size:.92em}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h2{font-size:1.15em;margin-top:1.2rem}details.more h3{font-size:1.05em}figure{margin:14px 0}figure img{max-width:100%;height:auto;border:1px solid var(--line,#ccd)}figcaption{font-size:.9em;color:var(--sub,#555)}@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}.article th,.article td{min-width:72px}}</style>
+</head><body>
+<header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof99-top.html">KOF'99</a> / <a href="/research/kof99/index.html">研究アーカイブ</a> / <b>キング</b></div></div>
+<main class="main"><div class="wrap article">
+<h1>KOF'99 キング：GCCD・屈C対空とトルネードキック95の対策</h1>
+<p class="lead">キングのGCCDはガードされても+3Fで、発生もかなり早く、「一番性能がいいGCCDかも」という評価です。屈Cも、KOF'99の中では対空技として強い部類です。キングと戦う側は、ガードしても反撃しにくいトルネードキック95に、GCかわし移動攻撃で反撃できます。</p>
 
-<h2>トルネードキック95：ガード後の反撃困難に対する対策</h2>
-<p><a href="https://x.com/mot_csb/status/1682421043930210305">2023年7月21日の本人投稿</a>では、キングのトルネードキック95をガードしても、使用キャラや状況によって反撃できないことを前提に、<strong>通常ガードにこだわらず、かわし移動を合わせる</strong>方法を検討している。本人は他者の配信を視聴しながら気付いたと説明している。</p>
-<div class="scroll"><table><thead><tr><th>回避行動</th><th>本人が提案した次の選択</th><th>2023/7/21時点</th></tr></thead><tbody>
-<tr><th scope="row">前方かわし移動</th><td>かわし移動攻撃まで出す。</td><td rowspan="2"><strong>戦術案</strong>。本人自身、簡単な対策ではなさそうと評価。</td></tr>
-<tr><th scope="row">後方かわし移動</th><td>そのまま戻る、または必殺技でキャンセルする。</td></tr>
-</tbody></table></div>
-<p>この段階ではトルネードキック95をガード後に必ず反撃できるという主張ではなく、<strong>攻撃に合わせてかわし移動を行う</strong>対策の可能性を示したもの。</p>
+<h2>キングの強み</h2>
+<ul>
+<li><b>GCCD</b>：ガード時+3F。カウンターヒット時の追撃技が多数あります（<a href="/research/kof99/gccd-recovery-advantage-2021.html">GCCD硬直差</a>）。ウィップが密着で屈Dをガードさせても、キングのGCCDは持続部分が当たります。</li>
+<li><b>屈C</b>：対空で活躍する判定です。</li>
+<li><b>サプライズローズ</b>：KOF'99は対空が弱いキャラも多いので、中間距離からサプライズローズで接近するのもありかもしれません。</li>
+<li><b>JCDカウンターヒット→ダブルストライク</b>：強トルネードキックより高いダメージになります（2003年のメモ）。</li>
+</ul>
+<figure><img src="https://pbs.twimg.com/media/EvpJxQ5WgAQW6_k.png" alt="キングの屈Cの判定" loading="lazy" style="max-width:48%"> <img src="https://pbs.twimg.com/media/EvpJyUuXYAYoXOv.png" alt="キングの屈Cの判定（攻撃発生時）" loading="lazy" style="max-width:48%"><figcaption>キングの屈Cの判定（<a href="https://x.com/mot_csb/status/1367486592999391234">2021/3/4</a>）</figcaption></figure>
+<p>ST呼び出し動作は、紅丸と同じく見た目は動きますが、食らい判定（青枠）と接触判定（白枠）はそのままです。</p>
+<figure><img src="https://pbs.twimg.com/media/EvJ_L-MVgAQ-3Fp.png" alt="キングのST呼び出し動作の判定" loading="lazy"><figcaption>ST呼び出し動作（<a href="https://x.com/mot_csb/status/1365293490184232963">2021/2/26</a>）</figcaption></figure>
 
-<h2>2023年7月24日：GCかわし攻撃の本人確認</h2>
-<p><a href="https://x.com/mot_csb/status/1683389742082310144">2023年7月24日の本人原文</a>では、<strong>ラルフの「GCかわし攻撃→強ガトリングアタック」で確認</strong>したと前置きして、GCかわし攻撃が確定した技と、確定しなかった技を分類している。</p>
-<div class="scroll"><table><thead><tr><th>本人の分類</th><th>対象技</th><th>資料上の扱い</th></tr></thead><tbody>
-<tr><th scope="row">確定した技</th><td><strong>トルネードキック95</strong></td><td rowspan="3">ラルフの特定ルートによる本人確認結果。その他のキャラのGCかわし攻撃にも共通するとは断定しない。</td></tr>
-<tr><th scope="row">確定した技</th><td><strong>飛虎撃</strong></td></tr>
-<tr><th scope="row">確定した技</th><td><strong>STクラーク1段目（キング使用時）</strong></td></tr>
-<tr><th scope="row">確定しなかった技</th><td>マキシマのかわし攻撃</td><td rowspan="2">この検証条件では「確定しなかった」。すべての距離・キャラに対する絶対的不成立とは限らない。</td></tr>
-<tr><th scope="row">確定しなかった技</th><td>ST香澄1段目（キング使用時）</td></tr>
-</tbody></table></div>
-<p><a href="https://x.com/mot_csb/status/1682543729125773312">7月22日の本人投稿</a>は、GCかわし移動攻撃が確定するポイントをまとめれば連続技を狙えるキャラの評価が上がるかもしれないという調査方針で、<strong>マキシマのかわし攻撃ガード後にも決まるか</strong>を例として挙げている。7月24日の本人確認では<strong>マキシマのかわし攻撃は確定しなかった</strong>ため、22日の疑問を未確認のまま残さず、この確認範囲での結果を反映する。</p>
-<p>なお、トルネードキック95をガード後に必ず通常反撃できるという意味ではない。確認対象は<strong>GCかわし攻撃から強ガトリングアタックへつなぐラルフのルート</strong>である。</p>
+<h2>トルネードキック95の対策</h2>
+<p>ラルフのGCかわし移動攻撃→強ガトリングアタックで、次のように確定するかを確認しています。</p>
+<table><thead><tr><th>結果</th><th>技</th></tr></thead><tbody>
+<tr><th scope="row">確定した</th><td>トルネードキック95／飛虎撃／STクラーク1段目（キング使用時）</td></tr>
+<tr><th scope="row">確定しなかった</th><td>マキシマのかわし移動攻撃／ST香澄1段目（キング使用時）</td></tr>
+</tbody></table>
+<p>距離ごとの対策は次のとおりです。</p>
+<table><thead><tr><th>距離・行動</th><th>結果</th></tr></thead><tbody>
+<tr><th scope="row">2段目が先端になる距離</th><td>読み垂直ジャンプ攻撃で上から攻撃できる</td></tr>
+<tr><th scope="row">それより近い距離</th><td>読み後方ジャンプで1段目を避けつつ、2段目を上から蹴る</td></tr>
+<tr><th scope="row">バックステップ・後ろかわし</th><td>2段目を食らう場合が多いようです</td></tr>
+<tr><th scope="row">2段目にGCかわし移動攻撃</th><td>その後に連続技を狙えるキャラにおすすめ</td></tr>
+</tbody></table>
+<p>ガードしても反撃できないキャラや状況なら、ガードせずに前方かわし移動（→かわし移動攻撃）や後方かわし移動（そのまま戻るかキャンセル必殺技）を合わせるのもありです（どの対策もお気軽ではなさそう）。づねさんの放送を見ていて考えたものです。GCかわし移動攻撃から連続技を狙えるキャラの比較は<a href="/research/kof99/input-buffer-cancels-throw-tech-2021-2023.html">入力と操作性</a>にあります。</p>
 
-<h2>2023年7月24日：トルネードキック95の距離別・読み対策</h2><p><a href="https://x.com/mot_csb/status/1683392592829104129">MOT本人による距離別の対策メモ</a>では、<strong>2段目が先端になる距離</strong>では読み垂直ジャンプ攻撃で上から攻める案、それより近い距離では<strong>読み後方ジャンプで1段目を避け、2段目を上から蹴る</strong>案を記している。一方、バックステップや後方かわし移動は2段目を食らうことが多そうとの評価。2段目へのGCかわし攻撃から連続技を狙えるキャラを勧めている。<strong>「読み」の前提、2段目先端／近距離の区別、かわし移動とGCかわし攻撃の区別</strong>を維持し、全距離で成立する確定対策とはしない。</p><h3>GCかわし始動のキャラ別比較（同日）</h3><p><a href="https://x.com/mot_csb/status/1683391851989204992">同日の本人投稿</a>では、GCかわし移動始動の連続技を比較。<strong>ラルフ</strong>はキャラ限定かつかわし攻撃の発生が遅い点を弱点とする一方、ゲージ回収を評価。<strong>リョウ</strong>は難易度がそこそこ高く、失敗時に弱飛燕疾風脚をガードされると反撃される点を問題視。<strong>ウィップ</strong>は2ゲージを要する点が弱点、と整理している。この比較は本人の戦術評価であり、同一相手・同一距離で計測した確定ダメージランキングではない。</p><h2>2022年2月：STクラーク1段目へのGC前転反撃の観戦記録</h2><p><a href="https://x.com/mot_csb/status/1493924504539578375">2022年2月16日の本人投稿</a>は、KOF'99の対戦動画を見て、<strong>香澄のSTクラーク呼び出しに対し、STクラークの1段目にGC前転して反撃していた</strong>という観察を記録する。本人は確定反撃のように見えたと評価する一方、<strong>「っぽかった」</strong>と留保しているため、全キャラ・全距離での成立を確定したものとはしない。2023年7月24日にラルフの<strong>GCかわし攻撃→強ガトリングアタック</strong>でSTクラーク1段目への反撃を確認した本人投稿とは、<strong>観戦した使用キャラ・時点・反撃ルート</strong>を区別する。</p>
-<h2>キング自身のGCCD：ガードさせて+3F</h2>
-<p><a href="https://x.com/mot_csb/status/1395391272982962179">2021年5月20日の本人投稿</a>は、<strong>キングのGCCDガード時硬直差を+3F</strong>、カウンターヒット時には追撃技が多数あると記載。本人は発生もかなり早く、最も性能のよいGCCDかもしれないと評価している。ただし、<strong>発生の具体的なF数値とCH追撃技の個別一覧はこの投稿にはない</strong>。</p>
-<p>キング自身のGCCD性能の話と、前節のキングのトルネードキック95をラルフのGCかわし攻撃で対策する話は、<strong>攻防の立場・技が異なる</strong>。32キャラの硬直差比較は既存の<a href="./gccd-recovery-advantage-2021.html">GCCD研究記事</a>で確認できる。</p>
-<p><a href="https://x.com/mot_csb/status/658186129099722756">2015年10月25日のウィップ研究</a>には、ウィップがキングに密着で屈Dをガードさせても、キングのGCCDを食らってしまう（持続部分がヒットする）という対比がある。京には同様の屈DガードからGCCDを空振りさせる例があるため、<strong>GCCDの特性と相手側の屈Dの関係がキャラによって異なる</strong>ことを示す限定事例として保持。</p>
+<details class="more"><summary>詳しく：STクラーク1段目への反撃、キングの立ち回り</summary>
+<ul>
+<li>対戦動画では、香澄のSTクラーク呼び出しに対し、STクラーク1段目にGC前転から反撃を決めていて、確定反撃のようでした（2022年）。</li>
+<li>2013年には、KOF'99〜2002系のキングは遠距離から一気に飛び込んで倒そうとすると狙われやすいので、地上牽制が機能する距離まで近づいてダッシュや中ジャンプを混ぜれば、対応ミスや読み勝ちを狙えるかもしれない、と書いています。</li>
+</ul>
+</details>
 
-<h2>屈Cの判定・ST呼び出し動作</h2>
-<p><a href="https://x.com/mot_csb/status/1367486592999391234">2021年3月4日のMOT本人投稿</a>では、キングの屈Cが対空に活躍していた場面を受けて判定を確認し、<strong>99では対空技として強い部類</strong>と評価した。判定画像そのものは今回は解析していないため、食らい判定・攻撃判定のフレームや座標を推測して追加しない。</p>
-<p><a href="https://x.com/mot_csb/status/1365293490184232963">2021年2月26日の本人の判定画像投稿</a>では、キングのST呼び出し動作について、<strong>動作中の見た目は変化するが青枠の食らい判定・白枠の接触判定はそのまま</strong>と記載（紅丸との比較）。画像での枠の配置を今回は再確認できないため、見た目以上に無敵・無防備になると推論しない。</p>
+<h2>気になること</h2>
+<ul>
+<li>キング＆STクラークで、対リョウにSTクラークヒット→サプライズローズの永久はできるか。</li>
+<li>キングのGCCDの発生フレームと、カウンターヒット時の追撃技の具体名。</li>
+</ul>
 
-<h2>STクラーク→サプライズローズ永久：2021年の未解決案</h2>
-<p><a href="https://x.com/mot_csb/status/1393117667393904644">2021年5月14日の本人投稿</a>は、<strong>キング＋STクラークで対リョウ</strong>という条件を明記して、<strong>STクラークヒット→サプライズローズ永久は可能か</strong>と問い掛けている。検証結果の記述はない。<strong>永久連続技が確定したと記載しない。</strong></p>
-<p><a href="https://x.com/mot_csb/status/1659816050375131137">2023年5月20日の本人投稿</a>には、99は対空が弱いキャラも多いことから、中間距離からサプライズローズを出して接近する選択もあり得るという考察がある。こちらは接近手段の提案であり、STクラークを伴う永久連続技の検証ではない。</p>
-
-<h2>2003年の本人旧メモと過去の立ち回り観</h2>
-<p><a href="/99memo.html">2003年のMOT本人「KOF'99についてのメモ」</a>は、<strong>JC＋Dカウンターヒット→ダブルストライク</strong>を高いダメージの追撃として掲載し、強トルネードキックよりも高いダメージと比較した。これは<strong>JCDカウンターヒット後の追撃</strong>の話で、トルネードキック95へのGCかわし対策やSTクラークからの永久案とは違う。</p>
-<p><a href="https://x.com/mot_csb/status/395490928405647360">2013年10月30日の本人投稿</a>では、KOF'99～2002系キング全般の立ち回りについて、遠距離から一気に飛び込むと狙い撃ちされやすく、地上牽制が機能する距離まで近づき、ダッシュや中ジャンプを混ぜて対応ミスを狙う案を提示。<strong>99だけで測定した確定結果ではなく、複数作品を踏まえた本人の古い戦術見解</strong>として収録。</p>
-
-<h2>継続確認が必要な点</h2>
-<p>トルネードキック95に対し、ラルフ以外のGCかわし攻撃ルートが確定するか、同キャラ・位置別の猶予F、キングGCCDの発生数値・CH追撃技一覧、対リョウのSTクラーク→サプライズローズ永久の可否は、今回の本人テキストだけでは確定できない。<a href="/kof-kininaru.html#kof99">気になること</a>へ分けて記録する。</p>
-<p><a href="/research/kof99/index.html">KOF'99研究アーカイブへ</a> ／ <a href="./chang-iron-ball-chip-throw-matchups-2021-2024.html">関連：チャン研究</a> ／ <a href="./st-position-swap-counterattack-2021-2024.html">位置入れ替えST研究</a></p>
-</div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
+<h2>出典</h2>
+<ul class="src">
+<li>トルネードキック95：<a href="https://x.com/mot_csb/status/1682421043930210305">かわし移動を合わせる（2023/7/21）</a> ／ <a href="https://x.com/mot_csb/status/1682543729125773312">GCかわし攻撃の確定ポイント（7/22）</a> ／ <a href="https://x.com/mot_csb/status/1683389742082310144">確定した技・しなかった技（7/24）</a> ／ <a href="https://x.com/mot_csb/status/1683392592829104129">距離ごとの対策（7/24）</a> ／ <a href="https://x.com/mot_csb/status/1683391851989204992">GCかわし移動始動の比較（7/24）</a> ／ <a href="https://x.com/mot_csb/status/1493924504539578375">対戦動画（2022/2/16）</a></li>
+<li>キング：<a href="https://x.com/mot_csb/status/1395391272982962179">GCCD（2021/5/20）</a> ／ <a href="https://x.com/mot_csb/status/1367486592999391234">屈C（3/4）</a> ／ <a href="https://x.com/mot_csb/status/1365293490184232963">ST呼び出し動作（2/26）</a> ／ <a href="https://x.com/mot_csb/status/1659816050375131137">サプライズローズ（2023/5/20）</a> ／ <a href="https://x.com/mot_csb/status/1393117667393904644">サプライズローズ永久（2021/5/14）</a> ／ <a href="https://x.com/mot_csb/status/395490928405647360">立ち回り（2013/10/30）</a> ／ <a href="https://x.com/mot_csb/status/658186129099722756">ウィップの屈D（2015/10/25）</a> ／ <a href="/99memo.html">KOF'99についてのメモ（2003年）</a></li>
+<li>関連：<a href="/research/kof99/ralf-frame-and-strategy-2024.html">ラルフ</a> ／ <a href="/research/kof99/evasion-attacks-hitbox-recovery-2021-2025.html">かわし移動攻撃</a> ／ <a href="/kof-kininaru.html#kof99">気になること</a> ／ <a href="/research/kof99/index.html">KOF'99研究アーカイブ</a></li>
+</ul>
+</div></main>
+<footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer>
+</body></html>
