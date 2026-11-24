@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
-<title>信長の野望・武将風雲録（MSX2版）｜Come sono bravo?</title><meta name="description" content="CPU勢力の侵攻、防衛時の総大将、HEX戦の戦術など、プレイと観戦から考える『武将風雲録』の研究ノート。">
+<title>信長の野望・武将風雲録（MSX2版）｜Come sono bravo?</title><meta name="description" content="MSX2版『信長の野望・武将風雲録』の内政・合戦・外交の計算式、CPUの行動、歴史イベントの条件。計算機つき。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap">
 <link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
-<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><b>信長の野望・武将風雲録（MSX2版）</b></div><p class="kicker">MSX2 / NOBUNAGA'S AMBITION</p><h1>信長の野望・武将風雲録（MSX2版）</h1><p>CPU勢力の侵攻、防衛時の総大将、HEX戦の戦術など、プレイと観戦から考える『武将風雲録』の研究ノート。</p></div></div><main class="main"><div class="wrap"><section class="section"><p class="lead">『武将風雲録』の面白さのひとつは、同じ勢力でも周辺国や兵種、地形によってまるで違った動きが見られることです。ここでは特に、長期観戦とHEX戦の戦い方に注目しています。</p>
+<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><b>信長の野望・武将風雲録（MSX2版）</b></div><p class="kicker">MSX2 / NOBUNAGA'S AMBITION</p><h1>信長の野望・武将風雲録（MSX2版）</h1><p>内政・合戦・外交の計算式、CPUの動き、歴史イベントの条件。</p></div></div><main class="main"><div class="wrap"><section class="section"><p class="lead">MSX2版『武将風雲録』の内政・合戦・外交・イベントが、どんな式と条件で動いているかをまとめています。計算機つきのページでは、自分の国の数値を入れて結果を確かめられます。</p>
 <div class="cards">
-<article class="card"><span class="tag">戦闘</span><h3><a class="stretch" href="battle.html">HEX戦の戦術・特徴</a></h3><p>雨天・夜間の奇襲、騎馬隊の使い方、突撃と本陣の鉄砲隊。</p></article>
-<article class="card"><span class="tag">CPU</span><h3><a class="stretch" href="cpu-ai.html">CPU勢力の行動傾向</a></h3><p>侵攻と防衛、総大将が本陣に留まる状況など。</p></article>
-<article class="card"><span class="tag">比較</span><h3><a class="stretch" href="stats.html">戦闘力の見方</a></h3><p>戦闘力96以上の武将に注目した攻撃面の考察。</p></article>
+<article class="card"><span class="tag">戦闘</span><h3><a class="stretch" href="battle.html">HEX戦の戦術・特徴</a></h3><p>損害の計算式と地形、奇襲、天気と視界、門壊、委任、捕虜。</p></article>
+<article class="card"><span class="tag">CPU</span><h3><a class="stretch" href="cpu-ai.html">CPU勢力の行動傾向</a></h3><p>攻め込むかどうかの条件と確率、毎月の内政、合戦での部隊と総大将の動き。</p></article>
+<article class="card"><span class="tag">戦闘</span><h3><a class="stretch" href="stats.html">戦闘96以上が強いしくみ</a></h3><p>96以上は損害の係数が16〜20に固定。95と96で与える損害は約1.3倍。</p></article>
 <article class="card"><span class="tag">一覧</span><h3><a class="stretch" href="aptitude.html">武将の向き不向き一覧</a></h3><p>大名家を選ぶと、家臣が内政・製造・外交・調略など、どのコマンドに向くかを一覧表で比べられる。</p></article>
 <article class="card"><span class="tag">歴史</span><h3><a class="stretch" href="history.html">歴史イベントの起きる条件</a></h3><p>桶狭間・岐阜改名・安土城・征夷大将軍。条件と効果。</p></article>
 <article class="card"><span class="tag">人事</span><h3><a class="stretch" href="personnel.html">褒美・茶会・教育・茶器没収・委任のしくみ</a></h3><p>褒美は相性で効きが2.6倍違う。茶会・教育・茶器没収と文化度。計算機つき。</p></article>
@@ -20,10 +20,7 @@
 <article class="card"><span class="tag">外交</span><h3><a class="stretch" href="friendship.html">友好度と相性のしくみ</a></h3><p>友好度の正体は16段階の関係値。見えない相性とあわせて、外交・一揆・侵攻への影響。</p></article>
 <article class="card"><span class="tag">外交</span><h3><a class="stretch" href="diplomacy.html">外交の成功条件</a></h3><p>脅迫は兵数の差、同盟・婚姻・貢物は友好度と使者で決まる。誘降・戦争工作・流言の成功率も。脅迫に応じない大名も。</p></article>
 <article class="card"><span class="tag">イベント</span><h3><a class="stretch" href="events.html">月初の来訪イベント・茶器分布・一向一揆・台風</a></h3><p>14人の来訪者、「茶器分布」を開放する条件、一向一揆が起きる条件。</p></article>
-<article class="card"><span class="tag">観戦</span><h3><a class="stretch" href="observations.html">長期観戦メモ</a></h3><p>勢力の拡大や膠着についての記録。</p></article>
+<article class="card"><span class="tag">メモ</span><h3><a class="stretch" href="observations.html">プレイ・観戦メモ</a></h3><p>総大将が動かない、本陣の鉄砲隊、CPUに任せても統一しない、米転がし。</p></article>
 </div></section>
-<section class="section"><h2>注目しているテーマ</h2>
-<p><b>総大将の出撃：</b>攻撃側が兵力で劣ると、総大将が本陣から動かない場面があります。守備側の行動と比較すると興味深い違いが見えてきます。</p>
-<p><b>本陣の鉄砲隊：</b>突撃の連続攻撃が通じにくく、戦闘力の高い武将でも攻略は容易ではありません。</p>
-<p><b>長期観戦：</b>積極的に領土を広げる勢力と、周辺状況が変わるまで動かない勢力があります。</p></section></div></main>
+</div></main>
 <footer class="footer"><div class="wrap">MOT ゲーム攻略・検証ノート　｜　攻略・観戦・研究メモ<br>ゲームの権利は各権利者に帰属します。</div></footer></body></html>

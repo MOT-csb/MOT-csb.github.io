@@ -3,9 +3,7 @@
 <title>CPU勢力の行動傾向｜Come sono bravo?</title><meta name="description" content="MSX2版『武将風雲録』で、CPUが侵攻する場面、守りを固める場面、総大将が出撃しない場面を考えます。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap">
 <link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
-<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>CPUの行動傾向</b></div><p class="kicker">GAMEPLAY / CPU TACTICS</p><h1>CPU勢力の行動傾向</h1><p>MSX2版『武将風雲録』で、CPUが攻め込むかどうかの決まり方、毎月の内政、総大将が出撃しない場面を考えます。</p></div></div><main class="main"><div class="wrap"><section class="section"><h2>他国への侵攻と勢力拡大</h2><p>長期観戦では、国力があっても侵攻を見送る勢力がある一方、周辺勢力の滅亡後に動き始める例も見られます。兵力だけでなく、同盟関係、隣国の状況、直前の戦争結果などが行動傾向を考える手掛かりになります。</p>
-<p>織田家・島津家などは、周辺の条件次第で拡大のしやすさが変わるため、同じ条件で比較していく価値があります。</p></section>
-<section class="section" id="mode"><h2>モードと難易度</h2>
+<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>CPUの行動傾向</b></div><p class="kicker">GAMEPLAY / CPU TACTICS</p><h1>CPU勢力の行動傾向</h1><p>MSX2版『武将風雲録』で、CPUが攻め込むかどうかの決まり方、毎月の内政、合戦での部隊と総大将の動き方をまとめます。</p></div></div><main class="main"><div class="wrap"><section class="section" id="mode"><h2>モードと難易度</h2>
 <p>このサイトの計算式に出てくる難易度は、ゲームを始めるときのモードで決まります。</p>
 <div class="table-scroll"><table><thead><tr><th>モード</th><th>難易度</th><th>プレイヤーの人数</th><th>軍師助言</th><th>そのほか</th></tr></thead><tbody>
 <tr><td>入門モード</td><td>初級1・中級2・上級3から選ぶ</td><td>0〜8人から選ぶ</td><td>最初からＯＮ</td><td>CPUは勢力全体の目標の国を決めません。実力・デモモードだけで起きると書いた歴史イベントは起きません</td></tr>
@@ -213,15 +211,5 @@
 </ul>
 <p class="small">確かめた範囲：両軍の兵糧と兵の数から合戦の方針を決める処理と、攻め手の部隊がそれを見て目標を決める処理、守り手の部隊が目標を決める処理です。攻め手の総大将が前へ出るかどうかの判定と、ほかの部隊の目標の決め方も確かめました。籠城戦で門をねらうときの、城の中の区分けの意味は未確認です。通常の攻撃と突撃の分け方の細部、となりの敵を見る向きの順番は未確認です。プログラムを読んで確かめたもので、実機ではまだ試していません。</p>
 </section>
-<section class="section"><h2>HEX戦での総大将の動き</h2><div class="statement"><p><b>注目している現象：</b>攻撃側の総大将が本陣に留まり、ほかの部隊だけが前進する場合があります。守備側の本陣防衛と分けて考える必要があります。</p></div>
-<p>攻撃側が数で有利な場合と不利な場合では、総大将の振る舞いが変わることがあります。移動できる地形や周辺の敵部隊、兵種の組み合わせも含めて観戦しています。</p></section>
-<section class="section"><h2>総大将が動かない場合の考え方</h2><p>総大将が本陣に留まる場面でも、初めから待機を選んだとは限りません。移動目標の選択、進路の評価、隣接する6方向からの次の一歩の選択を経て、移動先が決まらなければ待機に至る場合があります。</p><p>移動先を決める際には周辺の地形や進路の条件が関係し、評価が同点の候補には一定の確率で選ばれるものもあります。ただし、こうした条件だけで個々の戦闘における待機の原因を断定することはできません。</p><p class="small">特定の戦闘で、どの段階で移動が成立しなかったかは未確認です。</p></section>
-<section class="section"><h2>観戦時に比較したい条件</h2><div class="table-scroll"><table><thead><tr><th>条件</th><th>見るポイント</th></tr></thead><tbody>
-<tr><td>攻撃側・守備側</td><td>総大将が前進するか、本陣を守るか</td></tr>
-<tr><td>兵力差</td><td>数的優勢・劣勢での動きの違い</td></tr>
-<tr><td>部隊の構成</td><td>少数編成・複数編成による動きの違い</td></tr>
-<tr><td>地形</td><td>進軍路や隣接マスによる変化</td></tr>
-<tr><td>周辺国の状況</td><td>同盟・友好関係、隣国の滅亡前後</td></tr>
-</tbody></table></div><p class="small">複数の条件が同時に変わるため、原因の断定には慎重さが必要です。</p></section>
-<section class="section"><p><a href="observations.html">長期観戦メモへ →</a></p></section></div></main>
+<section class="section"><p><a href="observations.html">プレイ・観戦メモへ →</a></p></section></div></main>
 <footer class="footer"><div class="wrap">MOT ゲーム攻略・検証ノート　｜　攻略・観戦・研究メモ<br>ゲームの権利は各権利者に帰属します。</div></footer></body></html>

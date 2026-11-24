@@ -1,15 +1,47 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
-<title>戦闘力の見方｜Come sono bravo?</title><meta name="description" content="MSX2版『武将風雲録』の戦闘力と攻撃の強さについて、実戦上のポイントをまとめます。">
+<title>戦闘96以上が強いしくみ｜信長の野望・武将風雲録（MSX2版）｜Come sono bravo?</title><meta name="description" content="MSX2版『武将風雲録』では戦闘96以上で損害の係数が16〜20に固定され、95以下とは攻撃の強さが段違いになります。95と96の差、謙信が強い理由、本陣への突撃との関係。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap">
 <link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
-<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>戦闘力の見方</b></div><p class="kicker">GAMEPLAY / COMBAT RATINGS</p><h1>戦闘力の見方</h1><p>MSX2版『武将風雲録』の戦闘力と攻撃の強さについて、実戦上のポイントをまとめます。</p></div></div><main class="main"><div class="wrap"><section class="section"><h2>戦闘力はどこまで強さを表すか</h2><p>武将の戦闘力は攻撃・防御を考えるときの重要な目安ですが、戦闘力の数字だけで勝敗が決まるわけではありません。</p><p>相手の兵種、地形、兵数、攻撃の回数などによって、強い武将が必ずしも有利とは限らないところが『武将風雲録』の奥深さです。</p></section>
-<section class="section"><h2>95と96の境目に注目</h2><p>高戦闘力の武将については、戦闘力96以上で攻撃が特に強くなるという話があります。上杉謙信（戦闘力100）が数値以上に強く感じられる理由を考える際も、この境目は注目に値します。</p>
-<div class="table-scroll"><table><thead><tr><th>戦闘力</th><th>注目したい点</th></tr></thead><tbody>
-<tr><td>90前後</td><td>十分に強い武将でも、本陣への攻撃では苦戦する場合がある</td></tr>
-<tr><td>95</td><td>96以上の武将と比較したい境界の直前</td></tr>
-<tr><td>96～99</td><td>高戦闘力帯ならではの攻撃の強さに注目</td></tr>
-<tr><td>100</td><td>上杉謙信など、最上位の武将の攻撃性能を比較したい</td></tr>
-</tbody></table></div><p class="small">このページは戦い方を考えるための整理です。数字ごとの最終的な兵士損害は、戦闘条件によって異なります。</p></section><section class="section"><h2>高戦闘力帯の攻撃係数</h2><p>戦闘力95以下では攻撃係数にばらつきがあり、96以上では戦闘力に応じた固定値が使われます。したがって、96以上の武将は攻撃が安定しやすくなります。これは特定の武将だけの固有能力ではなく、戦闘力による違いです。</p><div class="table-scroll"><table><thead><tr><th>戦闘力</th><th>攻撃係数の特徴</th></tr></thead><tbody><tr><td>80以下</td><td>いつも10</td></tr><tr><td>81〜95</td><td>ふだん10、ときどき11〜（戦闘−70）</td></tr><tr><td>96</td><td>16</td></tr><tr><td>97</td><td>17</td></tr><tr><td>98</td><td>18</td></tr><tr><td>99</td><td>19</td></tr><tr><td>100</td><td>20</td></tr></tbody></table></div><p class="small">この係数がそのまま兵士の損害人数になるわけではありません。損害の式全体は<a href="battle.html#damage">HEX戦の損害の計算式</a>にあります。</p></section>
-<section class="section"><h2>戦闘力以外に大きい要素</h2><p>特に重要なのが、<b>突撃で何回攻撃できるか</b>という違いです。本陣の鉄砲隊に対しては連続攻撃ができず、戦闘力の高い武将でも苦戦します。</p><p><a href="battle.html">HEX戦での具体的な戦術へ →</a></p></section></div></main>
+<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/msx/">MSX</a><span aria-hidden="true"> / </span><a href="/msx/nobunaga-fuunroku/">信長の野望・武将風雲録（MSX2版）</a><span aria-hidden="true"> / </span><b>戦闘96以上が強いしくみ</b></div><p class="kicker">BATTLE / COMBAT RATINGS</p><h1>戦闘96以上が強いしくみ</h1><p>戦闘96以上の武将は、相手に与える損害の係数が16〜20に固定されます。95以下ではほとんどの攻撃で係数10なので、95と96のあいだで攻撃の強さが大きく変わります。</p></div></div><main class="main"><div class="wrap">
+<section class="section"><h2>結論</h2>
+<ul class="contents">
+<li>損害の計算には「戦闘の係数」がかけられます。戦闘80以下はいつも10、81〜95はふだん10で、ときどきだけ11以上になります。</li>
+<li>戦闘96以上は係数が「戦闘−80」に固定されます。96なら16、100なら20です。</li>
+<li>このため、戦闘95と96では基礎戦力はほとんど変わらないのに、与える損害は平均で約1.3倍になります。</li>
+<li>上杉謙信（戦闘100）が数値以上に強く感じられるのはこの係数のためで、謙信だけの特別な処理はありません。戦闘96以上の武将ならだれでも同じです。</li>
+</ul></section>
+<section class="section"><h2>戦闘の係数</h2>
+<div class="table-scroll"><table><thead><tr><th>戦闘</th><th>戦闘の係数</th></tr></thead><tbody>
+<tr><td>80以下</td><td>いつも10</td></tr>
+<tr><td>81〜95</td><td>攻撃のたびに抽選。ふだんは10で、「0〜（戦闘−1）の乱数＋11」が91以上になったときだけ、その値−80（最大20）。11以上になる確率は（戦闘−80）÷戦闘で、戦闘95でも約16%</td></tr>
+<tr><td>96</td><td>いつも16</td></tr>
+<tr><td>97</td><td>いつも17</td></tr>
+<tr><td>98</td><td>いつも18</td></tr>
+<tr><td>99</td><td>いつも19</td></tr>
+<tr><td>100</td><td>いつも20</td></tr>
+</tbody></table></div>
+<p>戦闘95以下では、抽選の結果が100を超えると100に抑えられるので、係数は20を超えません。戦闘96以上は抽選をせず、戦闘の値そのものを使います。</p>
+<p>係数は損害の式の最後のほうでかけられます。式全体は<a href="battle.html#damage">合戦のページの「損害の計算式」</a>にあります。</p></section>
+<section class="section"><h2>同じ条件で比べると</h2>
+<p>兵数100人の部隊が、戦闘80の相手を平地で通常攻撃したときの損害です。訓練度・兵忠は双方50としています。</p>
+<div class="table-scroll"><table><thead><tr><th>攻める側の戦闘</th><th>基礎戦力</th><th>係数</th><th>与える損害</th></tr></thead><tbody>
+<tr><td>50</td><td>850</td><td>10</td><td>50（最低値）</td></tr>
+<tr><td>80</td><td>1354</td><td>10</td><td>50（最低値）</td></tr>
+<tr><td>90</td><td>1546</td><td>平均 約10.6</td><td>平均 約52</td></tr>
+<tr><td>95</td><td>1646</td><td>平均 約11.1（10〜20）</td><td>平均 約54（50〜90）</td></tr>
+<tr><td>96</td><td>1666</td><td>16</td><td>72</td></tr>
+<tr><td>100</td><td>1750</td><td>20</td><td>92</td></tr>
+</tbody></table></div>
+<p>基礎戦力は戦闘95→96で約1.2%しか増えませんが、与える損害は平均54から72に上がります。90→100でも基礎戦力は約13%増にすぎず、損害は52から92になります。</p>
+<p>補足：損害には最低50があるので、この条件では戦闘82以下の差は表に出ません。最低値に届く前の計算では、戦闘50と80の部隊ははっきり違います（基礎戦力で約1.6倍）。兵数が多い部隊どうしなら、その差が損害に現れます。</p>
+</section>
+<section class="section"><h2>戦闘の高さでは埋まらないもの</h2>
+<p>係数が上げるのは1回の攻撃の損害で、1ターンに何回攻撃できるかは別です。突撃は普通なら1ターンに何回も攻撃できますが、本陣にいる相手には1回しか攻撃できません。守り手が本陣に鉄砲隊を置いていると、戦闘100の上杉謙信でも攻め手ではかなり不利になります（<a href="battle.html">合戦のページ</a>）。</p>
+</section>
+<section class="section"><h2>似ているが別の話</h2>
+<p>SFC版『武将風雲録』にも戦闘96以上が強いという話があり、戦闘95と96で与える攻撃の値が2.6倍違うという比較が出回っています。SFC版の数値なので、このページのMSX2版の数値とは別のものです。</p>
+<p><a href="battle.html#damage">損害の計算式へ →</a></p>
+</section>
+</div></main>
 <footer class="footer"><div class="wrap">MOT ゲーム攻略・検証ノート　｜　攻略・観戦・研究メモ<br>ゲームの権利は各権利者に帰属します。</div></footer></body></html>
