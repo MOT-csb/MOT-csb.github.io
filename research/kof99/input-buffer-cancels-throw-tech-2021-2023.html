@@ -16,9 +16,9 @@
 <table><thead><tr><th>理由</th><th>内容</th></tr></thead><tbody>
 <tr><th scope="row">KOF2002系に慣れている</th><td>KOF2002系の操作に慣れていると違和感がある（この点はKOF'98とほぼ同じ）</td></tr>
 <tr><th scope="row">弱攻撃のヒットストップが長い</th><td>KOF'98とほぼ同じ</td></tr>
-<tr><th scope="row">技の硬直</th><td>全体的に長い</td></tr>
-<tr><th scope="row">弱攻撃の連打キャンセル</th><td>幅が短くなっていて、タイミングがシビア（遅くなっている）キャラが多い</td></tr>
-<tr><th scope="row">暗転</th><td>ST呼び出しなどの暗転中に入力を受け付けない</td></tr>
+<tr><th scope="row">技の硬直</th><td>全体的に長い。KOF'98と比べて各技がもっさりしていて、硬直中に次の技を入力しても出ないので、硬直が終わるのを少し待つ必要がある</td></tr>
+<tr><th scope="row">弱攻撃の連打キャンセル</th><td>幅が短くなっていて、タイミングがシビア（遅くなっている）キャラが多い。KOF'98で猶予が2Fくらいあったものが0～1Fになっていると、成功率が大幅に下がる</td></tr>
+<tr><th scope="row">暗転</th><td>ST呼び出しなどの暗転中は、攻撃側も入力を受け付けないようです（きちんとは未確認）。STを呼びながら追撃の超必殺技を入力していると、出ないことになりそうです</td></tr>
 <tr><th scope="row">カウンターモード中のSC</th><td>いつでもSCできる（下記）</td></tr>
 </tbody></table>
 <p>カウンターモードとアーマーモード中はノックバックが大きく、弱攻撃→弱攻撃が届きにくくなったり、届かなくなったりします。</p>
@@ -26,7 +26,13 @@
 <p>KOF'99のSCは、KOF2002などと比べて入力面でも癖があります。おそらくヒットストップ中以外でも受け付けるので、かなり繊細なタイミングで入力を完成させる必要があります。入力が早すぎると、必殺技の攻撃判定が出る前にSCしてしまいそうです。</p>
 
 <h2>通常投げの投げ外し</h2>
-<p>通常投げの投げ外しの猶予は総じて短く、見てから外せる猶予はありません。KOF'98と同様にレバーを4か6に入れる必要があるので、通常投げと歩き小足の2択で崩せます。</p>
+<p>通常投げの投げ外しの猶予は総じて短く、見てから外せる猶予はありません。KOF'98と同様にレバーを4か6に入れる必要があるので、通常投げと歩き小足の2択で崩せます。そのため、屈B始動の連続技があるキャラは評価が上がりそうです。</p>
+<p>ただし守る側には、KOF'98にはなかった対応行動があります。ST呼び出しは頭部以外の打撃無敵と投げ無敵があるので、歩き小足と通常投げの両方に対応できます。かわし移動も投げられ判定がありません。KOF'98の「歩き小足か通常投げ」の読み合いに、守る側の「かわし移動かST呼び出し」が加わった読み合いになっているようで、攻める側はガードや前転を混ぜる必要がありそうです。</p>
+<p>通常投げに対してかわし移動が間に合う範囲は次のとおりです（前方・後方とも同じ結果）。有利フラグ・不利フラグは、1フレームの中で2人のどちらが先に処理されるかのことです（<a href="/research/kof-series/priority-flag-processing-order.html">有利フラグ・不利フラグ</a>）。</p>
+<table><thead><tr><th>攻撃側の状態</th><th>かわし移動が可能な範囲</th></tr></thead><tbody>
+<tr><th scope="row">有利フラグ</th><td>3F以内</td></tr>
+<tr><th scope="row">不利フラグ</th><td>4F以内</td></tr>
+</tbody></table>
 <p>次の表は、真吾が投げられたときに、投げ外しできる隙間のフレーム数を調べた結果です（主人公チームのみ）。例えばK’のC投げは、1P K’がCを押してから6F以内に2P真吾が4か6＋任意のボタンを押せば外せます（隙間は5F）。</p>
 <table><thead><tr><th>投げるキャラ</th><th>C投げ</th><th>D投げ</th></tr></thead><tbody>
 <tr><th scope="row">K’</th><td class="num">6</td><td class="num">3</td></tr>
@@ -95,8 +101,8 @@
 
 <h2>出典</h2>
 <ul class="src">
-<li>操作性：<a href="https://x.com/mot_csb/status/1398424355839778817">操作性が悪いんじゃないの疑惑（2021/5/28）</a> ／ <a href="https://x.com/mot_csb/status/1398426227396923392">カウンターモード中のSC</a> ／ <a href="https://x.com/mot_csb/status/1400720832679190530">連打キャンセルとノックバック（2021/6/4）</a></li>
-<li>投げ外し：<a href="https://x.com/mot_csb/status/1392824274230988804">2021/5/13</a> ／ <a href="https://x.com/mot_csb/status/1653754823672750088">2023/5/3</a> ／ <a href="https://docs.google.com/spreadsheets/d/1rMiSy-e8fYzntDPMqdr-_Y4LmxuDfNRrAgZSkFClpm8/edit">KOF99：通常投げの投げ外し猶予（Googleスプレッドシート）</a> ／ <a href="https://kofplayers.hatenablog.jp/entry/2021/05/14/000611">KOF99：攻略メニュー</a></li>
+<li>操作性：<a href="https://x.com/mot_csb/status/1398424355839778817">操作性が悪いんじゃないの疑惑（2021/5/28）</a> ／ <a href="https://x.com/mot_csb/status/1398425351236198400">硬直</a> ／ <a href="https://x.com/mot_csb/status/1398425586016526338">連打キャンセル</a> ／ <a href="https://x.com/mot_csb/status/1398425897636564995">暗転</a> ／ <a href="https://x.com/mot_csb/status/1398426227396923392">カウンターモード中のSC</a> ／ <a href="https://x.com/mot_csb/status/1400720832679190530">連打キャンセルとノックバック（2021/6/4）</a></li>
+<li>投げ外し：<a href="https://x.com/mot_csb/status/1392824274230988804">2021/5/13</a> ／ <a href="https://x.com/mot_csb/status/1392824405663707141">屈B始動（5/13）</a> ／ <a href="https://x.com/mot_csb/status/1392825434237116419">ST呼び出しの無敵（5/13）</a> ／ <a href="https://x.com/mot_csb/status/1392826808429465603">かわし移動（5/13）</a> ／ <a href="https://x.com/mot_csb/status/1392827993064501248">つかみ技に対するかわし移動（5/13）</a> ／ <a href="https://x.com/mot_csb/status/1392856039742009344">参考にしたKOF2002のデータ（5/13）</a> ／ <a href="https://x.com/mot_csb/status/1653754823672750088">2023/5/3</a> ／ <a href="https://docs.google.com/spreadsheets/d/1rMiSy-e8fYzntDPMqdr-_Y4LmxuDfNRrAgZSkFClpm8/edit">KOF99：通常投げの投げ外し猶予（Googleスプレッドシート）</a> ／ <a href="https://kofplayers.hatenablog.jp/entry/2021/05/14/000611">KOF99：攻略メニュー</a></li>
 <li>GC：<a href="https://x.com/mot_csb/status/1391230255025713154">GC前転（2021/5/9）</a> ／ <a href="https://x.com/mot_csb/status/1391230533884026881">GC後転</a> ／ <a href="https://x.com/mot_csb/status/1683391851989204992">GCかわし移動始動連続技の比較（2023/7/24）</a></li>
 <li>関連：<a href="/research/kof99/throw-range-table-source-2021.html">投げ間合い</a> ／ <a href="/research/kof99/gauge-priority-mode-management-2021-2024.html">ゲージとストライカー</a> ／ <a href="/kof-kininaru.html#kof99">気になること</a> ／ <a href="/research/kof99/index.html">KOF'99研究アーカイブ</a></li>
 </ul>
