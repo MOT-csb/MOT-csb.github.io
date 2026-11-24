@@ -1,42 +1,82 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'97：2003～2004年のシステム・キャラクター初期メモ整理｜Come sono bravo?</title><meta name="description" content="MOT本人のKOF'97旧攻略原稿を一次資料として、数値、条件、当時の評価、未確認事項を分けて保存。"><link rel="stylesheet" href="/assets/research.css"><style>.article table{width:100%;border-collapse:collapse}.article th,.article td{border:1px solid var(--line,#bbb);padding:8px;text-align:left;vertical-align:top}.article a{overflow-wrap:anywhere}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof97-top.html">KOF'97</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'97：2003～2004年のシステム・キャラクター初期メモ整理</h1>
-<p>MOT本人の旧サイト<a href="/97memo.html">KOF'97についてのメモ</a>（2003/11/26公開、2004/3/20最終更新）のうち、別記事と重なりにくい<strong>ボタン入力・処理落ち・技の振る舞い・相手別条件</strong>を分類した。元のページは移動せず、2003～2004年の本人による記録として保存する。</p>
-<h2>システム関係：同時押し、通常投げ、溜めとヒット処理</h2>
-<table><thead><tr><th>事項</th><th>旧原稿での記録</th><th>扱い</th></tr></thead><tbody>
-<tr><td>同時押しのボタン優先順位</td><td><strong>A ＞ B ＞ C ＞ D</strong>。ABCD同時押しではMAX発動しない</td><td>2003～2004年本人メモの仕様記述</td></tr>
-<tr><td>通常投げ不成立時の保険</td><td>通常投げを狙う際に弱攻撃を同時押しすれば、投げ不成立時に出る技を弱攻撃にできる</td><td>当時の入力利用案。<a href="./normal-throw-guard-pose-2020.html">2020年のレバー方向・ガードポーズ検証</a>とは別の条件</td></tr>
-<tr><td>開幕の溜め</td><td><strong>開幕タメ不可</strong>と記載</td><td>チャージ操作のどの入力方向／キャラまで検証したかは未記載</td></tr>
-<tr><td>ヒット・ガードの処理</td><td>ヒットまたはガードのエフェクトが残っている間、次の攻撃をヒット・ガードさせられると記録</td><td>具体的な成立Fや全技の条件は未記載。<a href="/kof-hit-gurad-syori.htm">シリーズ共通処理記事</a>と併読</td></tr>
-<tr><td>炎の技と処理落ち</td><td>裏クリスの「ししをかむほのお」や京の連続入力技のヒット時、処理落ちが激しいと本人が観察</td><td>CPU負荷・タスクオーバーとの関連づけは当時の本人の解釈であり、今回エミュレータで再測定したものではない</td></tr>
-</tbody></table>
-<h2>技・キャラ別の細かな挙動</h2>
-<table><thead><tr><th>キャラ</th><th>2003～2004年のメモ</th><th>未確認・留保</th></tr></thead><tbody>
-<tr><td>京</td><td>琴月の2段目は削りダメージを与えられない</td><td>同じ現象の全作品比較は当該原稿にない</td></tr>
-<tr><td>テリー</td><td>パワーウェイブの最初の攻撃判定にはダウン効果があり、それ以降の攻撃判定はダウンを奪えない。遠Bの早さ・長さと対空3Cを高く評価</td><td>クラークを詰ませられるかは本人の当時の可能性判断</td></tr>
-<tr><td>アンディ</td><td><code>436＋A/C</code>で撃壁が成立すれば撃壁、成立しなくても斬影拳は暴発しないと記載。屈Bキャンセルから<code>163214＋A</code>の入力で撃壁が成立しなければ弱飛翔拳が出ることを<strong>本人が確認</strong></td><td>撃壁 ＞ 飛翔拳 ＞ 斬影拳という技の優先順位は本人が「おそらく」とした推測</td></tr>
-<tr><td>ジョー</td><td>ハリケーンの<code>16</code>入力後、<code>1・4・N・6</code>の方向からボタンを押しても成立すると記録</td><td>KOF'99の<code>41236</code>入力後の許容方向に関する別作品の例との比較。<a href="./joe-original-move-analysis-2004.html">2004年技解析</a>と<a href="./command-shortcuts-joe-2015.html">2015年のコマンド研究</a>は別に保存</td></tr>
-<tr><td>レオナ</td><td>強ボルティックランチャーの出始めは全身無敵</td><td>無敵の持続Fは未記載。覚醒レオナには時間切れ負けポーズがない「みたい」と留保</td></tr>
-<tr><td>ラルフ</td><td>立CDの硬直が長い。斜めJBの持続が短く、垂直小JBのリーチが短いという本人評価</td><td>どの技も定量Fの記載なし</td></tr>
-<tr><td>キム</td><td><code>6A</code>後の<code>23646＋B/D</code>では鳳凰脚でなく天舞脚が出やすいという記録。強半月斬はヒットしてもダウンしない</td><td>コマンド受付の内部優先順位は原稿にはない</td></tr>
-<tr><td>社・クリス</td><td>社の斜めJBを短いリーチによる密着2択に利用できると評価。裏クリスが時間切れ勝ちした際、位置関係によって前のキャラから炎が出るという演出上の挙動を記録</td><td>発生Fや演出の全条件は未記載</td></tr>
-</tbody></table>
-<p>上のレバー数字は元HTMLに埋め込まれた<code>1.gif</code>等の方向アイコンの<strong>出現順に対応する数字</strong>を転記したもの。リンク先原文の記述を超えた成立コマンドの一般化はしていない。</p>
-<h2>リョウ：本人の観察と第三者由来情報を分ける</h2>
-<p>旧メモは、MAX状態の極限流連舞拳後の追撃として、<strong>猛虎雷神刹・飛燕疾風脚の膝部分・天地覇煌拳</strong>を挙げ、対象を<strong>京・真吾・紅丸・大門・ビリーに限定</strong>。ただしこの部分は原稿中に<strong>「97が好きさ」さん情報</strong>と明記されており、MOTが全対象を本人自身で確認した結果とは扱わない。</p>
-<p>続くMOT本人の記述には、<strong>ADV限定かつMAX状態・相手ビリー</strong>の条件下で、連舞拳→MAX天地覇煌拳→気絶→JD→近C→連舞拳→強虎咆により、2ゲージを使う即死準連続技の構想が残されている。こちらは本人原稿の記述として保存するが、気絶後に全て連続ヒットすることを保証したと読み替えない。旧リョウ攻略は<a href="/kof97ryo.htm">原ページ</a>を維持する。</p>
-<h2>2003～2004年のシリーズ横断システムメモ：KOF'97の特徴</h2>
-<p>元資料はMOT本人の<a href="/kofanalysis.htm">旧サイト「KOFシリーズのシステムについてのメモ」</a>（作成2003/6/2、最終更新2004/1/21）。<a href="https://comesonobravo.hatenadiary.org/entry/2025/03/02/201947">2025年のブログ再掲版</a>はAI変換で細部未確認との注記があるため、ここでは旧HTMLの記述を基準にする。以下は当時の記録であり、後年の解析による一律の再検証ではない。</p>
-<table><thead><tr><th>論点</th><th>本人旧原稿がKOF'97について述べたこと</th><th>確度と区分</th></tr></thead><tbody>
-<tr><td>カウンターによる空中追撃</td><td>KOF'96ではダウン技中心だったものが、KOF'97ではダウンしない技のカウンターヒットでも短時間の食らい判定が残るようになった。'98ではさらに残る条件が変わると比較</td><td>2003～04年の本人のシリーズ比較</td></tr>
-<tr><td>MAX状態の浮かせ高さ</td><td>KOF'97以降は浮かせ高さが変わる場合があり、'97ユリの<strong>画面端・空中相手へのMAX弱空牙 → 通常版飛燕烈孔</strong>（EXT推奨）を例示</td><td>旧原稿記載の連続技。全キャラへの一般化は不可</td></tr>
-<tr><td>ボタン優先</td><td>KOF'96以降は<strong>A ＞ B ＞ C ＞ D</strong>。コマンド投げ不成立時に出る弱技を利用できることも挙げる</td><td>旧メモのシステム説明。<a href="/97memo.html">旧KOF'97メモ</a>と対応</td></tr>
-<tr><td>投げ抜け</td><td>KOF'97 ADVについて「投げられた直後にAB同時押し」または「投げられた直後に下要素＋ABCDいずれか」を列挙</td><td>旧原稿の入力例。EXTへの適用や全投げ対象は原文から補わない</td></tr>
-<tr><td>投げられ判定・投げの強さ</td><td>ジャンプ予備動作とダウン回避後に投げられ判定が残ると記載。投げスカりモーションなし、ボタン保持でコマンド投げの成立時間を伸ばせることも理由に挙げる</td><td><a href="./command-throw-jump-guard-2005-2025.html">後年のジャンプ予備動作の本人確認</a>とは証拠の時期を分ける</td></tr>
-<tr><td>空振りキャンセルによる追撃条件変更</td><td>KOF'97のみ、通常技の空振りキャンセルから必殺技を出すと、通常は追撃できない状況でヒットする特殊仕様を記載</td><td>旧原稿の仕様説明。成立する全技一覧の証明ではない。<a href="/huraguhennkou.html">空振りキャンセル研究</a>参照</td></tr>
-</tbody></table>
-<p>旧原稿には、KOF'98以降の<strong>入力受付・投げ成否判定の処理順について本人が「想像」「思う」と明記した仮説</strong>もある。それをKOF'97の内部処理として確定した説明には転用しない。また、'96のコマンドの最後のレバー方向に関する旧記述は2025年の再掲版自身が後年の誤りの可能性を指摘している。</p>
-<h2>体力が減ったときの根性補正と防御力</h2>
-<p>KOF'97までは根性補正（体力が少なくなると受けるダメージが減る補正）が確実にあります。2016年3月8日の会話の中で、話題の作品（返信元の投稿は資料になく特定できません）については「ほぼないか無視できるレベルだった覚えがあります」としたうえで、「97までは確実に根性補正はありました」と書かれています（<a href="https://x.com/mot_csb/status/707219595791192065">2016/3/8の投稿</a>）。補正の量やどの体力から効くかは書かれていません。KOF'98以降の補正については<a href="/research/kof98/defense-rating-2005-2025.html">KOF'98の防御力の記事</a>にまとめています。</p>
-<p>防御力の高さがキャラの強さにつながっている例として、KOF'97のチャンが挙がっています。餓狼MOWのグラントのように、キャラ自体が強いうえに防御力も高いことが強さの一因になる、という説明です（<a href="https://x.com/mot_csb/status/672795647834132480">2015/12/4の投稿</a>）。</p>
-<h2>参照先</h2>
-<p><a href="/97memo.html">2003～2004年のMOT本人原稿「KOF'97についてのメモ」</a> ／ <a href="./joe-original-move-analysis-2004.html">ジョーの2004年技解析</a> ／ <a href="./normal-throw-guard-pose-2020.html">後ろ入れ通常投げの2020年の別調査</a> ／ <a href="./stun-guard-duration-2007-2020.html">2007年の気絶・弾き持続値</a>。</p>
-<p>2026/11/20：提供済み旧HTML・画像参照ファイル名を直接確認して初期メモを項目別に整理。第三者から提供された追撃情報と本人の見解を混同しない。</p><hr><p><a href="./index.html">KOF'97研究アーカイブ</a> ／ <a href="/kof-kininaru.html#kof97">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'97のシステムの細かい性質とキャラ別の小ネタ｜Come sono bravo?</title><meta name="description" content="KOF'97のボタン優先順位、投げ失敗の保険、投げられ判定、空キャン追い打ち、根性補正などのシステムの性質と、京・テリー・アンディ・ジョー・リョウなどキャラ別の小ネタ。"><link rel="stylesheet" href="/assets/research.css"><style>.article table{width:100%;border-collapse:collapse}.article th,.article td{border:1px solid var(--line,#bbb);padding:8px;text-align:left;vertical-align:top}.article a{overflow-wrap:anywhere}.article .scroll{max-width:100%;overflow-x:auto}.article .scroll table{min-width:520px}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof97-top.html">KOF'97</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'97のシステムの細かい性質とキャラ別の小ネタ</h1>
+<p>KOF'97はボタンの優先順位がA＞B＞C＞Dで、投げを狙うときに弱攻撃を同時押ししておけば、投げが成立しなかったときに出る技を弱攻撃にできます。ほかにも、ジャンプの予備動作に投げられ判定が残る、空振りキャンセルで追い打ちの条件が変わる、体力が減ると根性補正がかかるなど、後の作品とは違う性質がいくつもあります。このページでは2003～2004年の旧サイトのメモを中心に、システムとキャラ別の小ネタをまとめます。</p>
+<p>記号の凡例：数字はレバー方向（テンキー配置、6が前・4が後ろ・2が下・Nはニュートラル）、＞はキャンセルなし、≫はキャンセルあり。</p>
+
+<h2>ボタンと入力</h2>
+<div class="scroll"><table><thead><tr><th>性質</th><th>内容</th></tr></thead><tbody>
+<tr><td>ボタンの優先順位</td><td>A＞B＞C＞D（KOF'96以降。KOF'94・'95はD＞C＞B＞A）。ABCD同時押しではMAX発動しない</td></tr>
+<tr><td>投げ失敗の保険</td><td>通常投げを狙うときに弱攻撃と同時押しすると、投げが成立しなかったときに出る技を弱攻撃にできる。コマンド投げが成立しなかったときの暴発を弱に変えるのも同じ理屈</td></tr>
+<tr><td>コマンドの最後のレバー</td><td>最後が6のコマンドなら、レバー6かNでボタンを押しても出る。4に戻すと出ない。旧メモはこれをKOF'96（最後の方向を入れっぱなしにしないと出ない）からの緩和と説明している（KOF'96側の記述は気になること参照）</td></tr>
+<tr><td>開幕のタメ</td><td>開幕タメは不可</td></tr>
+<tr><td>投げ抜け（ADVのみ）</td><td>投げられた直後にAB同時押し、または投げられた直後に下要素＋ABCDいずれかのボタン</td></tr>
+</tbody></table></div>
+<p>補足：通常投げのときのレバー方向とガードポーズの関係は、2020年の<a href="./normal-throw-guard-pose-2020.html">後ろ入れ通常投げの調査</a>で別に扱っています。</p>
+
+<h2>投げられやすさ：KOF'96・'97の投げられ判定</h2>
+<p>KOF'94から'97までは、ジャンプを入力してから実際に空中判定になるまで投げられ判定が残ります。KOF'96と'97はさらに次の性質が重なり、コマンド投げが非常に強くなっています。</p>
+<ol>
+<li>ダウン回避の終了時から投げられ判定が出るので、投げ間合いの外からダウン回避終了直後にコマンド投げを重ねられると回避が難しい</li>
+<li>GC（A＋BかC＋D）はどちらも発生直後から投げられ判定がある</li>
+<li>必殺技はボタン押しっぱなしで成立時間を延ばせる</li>
+<li>投げスカリモーションがない</li>
+</ol>
+<p>このため固めの中の投げや、割り込みのコマンド投げが強力です。実戦での使い方は<a href="./command-throw-jump-guard-2005-2025.html">KOF'97のコマンド投げ</a>にまとめています。</p>
+
+<h2>空中追い打ちとカウンター</h2>
+<ul>
+<li><strong>空振りキャンセルで追い打ちの条件が変わる：</strong>KOF'97では、空中追い打ちできる技のあとに入らないよう設定された技があります。その技も、通常技を空振りキャンセルして出すと追い打ちになります。テリーのパワーチャージ、京の75式改［強］（画面端のみ）が代表例です。詳しくは<a href="/huraguhennkou.html">フラグ関係のバグ</a>と<a href="./terry-power-charge-2004-2023.html">テリーのパワーチャージ</a>にあります。</li>
+<li><strong>カウンターヒットの食らい判定：</strong>KOF'96ではしゃがみD以外のダウンする技をカウンターヒットさせたときだけ追い打ちできました。KOF'97ではダウンしない技でカウンターヒットさせても、短い時間ですが食らい判定が残るようになりました。KOF'98では、上昇中しか食らい判定を残せない技をカウンターヒットさせると、地面につくまで食らい判定が残ります。</li>
+<li><strong>MAX時の浮かせる高さ：</strong>KOF'97以降はMAX時に浮かせる高さが変わり、普段は入らない連続技が入ることがあります。KOF'97の例はユリ（EXT推奨）で、画面端で空中の相手に空牙［弱］（MAX時）＞飛燕烈孔（通常版）。</li>
+</ul>
+
+<h2>ダメージ：根性補正と防御力</h2>
+<p>KOF'97までは根性補正（体力が少なくなると受けるダメージが減る補正）が確実にあります。2016年3月8日の会話では、話題の作品（返信元の投稿は資料になく特定できません）について「ほぼないか無視できるレベルだった覚えがあります」としたうえで、「97までは確実に根性補正はありました」と書かれています。補正の量やどの体力から効くかは書かれていません。KOF'98以降の補正は<a href="/research/kof98/defense-rating-2005-2025.html">KOF'98の防御力の記事</a>にまとめています。</p>
+<p>防御力の高さがキャラの強さにつながっている例として、KOF'97のチャンが挙がっています。餓狼MOWのグラントのように、キャラ自体が強いうえに防御力も高いことが強さの一因になる、という説明です（2015/12/4の投稿）。</p>
+
+<h2>その他のシステム</h2>
+<ul>
+<li>ヒットまたはガードのエフェクトが残っている間に、次の攻撃をヒット・ガードさせられます。シリーズでの扱いは<a href="/kof-hit-gurad-syori.htm">ヒット・ガード処理の解説</a>にあります。</li>
+<li>炎の技を当てると処理落ちが激しくなります。特に裏クリスのししをかむほのおや、京の連続入力系の技です。旧メモでは、タスクオーバーを誘発するのも納得できる処理落ちだと書かれています。</li>
+</ul>
+
+<h2>キャラ別の小ネタ</h2>
+<div class="scroll"><table><thead><tr><th>キャラ</th><th>内容</th></tr></thead><tbody>
+<tr><td>京</td><td>琴月の2段目は削れない</td></tr>
+<tr><td>大門</td><td>CPU大門は相変わらず超受け身＞必殺投げが好き</td></tr>
+<tr><td>テリー</td><td>遠距離立ちBが速くて長い。この技と対空の3Cでクラークを詰ませられそうという見立て。パワーウェイブは最初の攻撃判定だけがダウン技で、その後の攻撃判定ではダウンさせられない</td></tr>
+<tr><td>アンディ</td><td>436＋AかCで、撃壁が成立するときは撃壁、成立しないときも斬影拳は暴発しない。屈B≫163214＋Aでは、撃壁［弱］が成立すれば撃壁、成立しなければ飛翔拳［弱］になる（確認済み）</td></tr>
+<tr><td>ジョー</td><td>ハリケーンアッパーは16のあと1・4・N・6のどれにレバーを移してからボタンを押しても出る。KOF'99では41236のあと4・7・1・2は不可、N・6・8・9は可</td></tr>
+<tr><td>リョウ</td><td>必殺技の暴発をかなり実感できるキャラ。MAX時の追撃は下の節</td></tr>
+<tr><td>レオナ</td><td>ボルテックランチャー［強］の出始めは全身無敵。覚醒レオナには時間切れ負けのポーズがないらしい</td></tr>
+<tr><td>ラルフ</td><td>C＋D後の硬直が長い。斜めJBは持続が短く、垂直小JBはリーチが短い</td></tr>
+<tr><td>キム</td><td>6A後の23646＋BかDでは鳳凰脚ではなく天舞脚が出まくる。半月斬［強］はヒットしてもダウンしない。CPUビリーには遠くから遠距離立ちCで屈Aを潰せるが、MAX大旋風に注意</td></tr>
+<tr><td>社</td><td>斜めJBはリーチが短いので、結果としてこの技で密着しての2択が有効</td></tr>
+<tr><td>クリス</td><td>裏クリスに時間切れで負けたとき、裏クリスが相手の近くの後ろにいると、前のキャラから炎が出てくる</td></tr>
+</tbody></table></div>
+<p>ジョーの技の細かい性能は<a href="./joe-original-move-analysis-2004.html">ジョーの技解析</a>、コマンドの省略は<a href="./command-shortcuts-joe-2015.html">ジョーのコマンド短縮</a>にあります。</p>
+
+<h2>リョウ：MAX時の極限流連舞拳からの追撃</h2>
+<p>MAX状態の極限流連舞拳のあと、猛虎雷神刹、飛燕疾風脚の膝部分、天地覇煌拳を、京・真吾・紅丸・大門・ビリーに限ってヒットさせられます（「97が好きさ」さん情報）。</p>
+<p>これを使うと、ADV限定・MAX状態のビリー相手に、極限流連舞拳＞天地覇煌拳（MAX版）＞気絶＞JD＞近距離立ちC≫極限流連舞拳＞虎咆［強］で、2ゲージの即死準連続技になります。旧リョウ攻略は<a href="/kof97ryo.htm">KOF'97リョウ</a>にあります。</p>
+
+<h2>似ているが別の話：気絶と追い打ち</h2>
+<p>KOF'94・'95では、空中追い打ちできる技で気絶させると空中の相手に1発だけ追撃でき、気絶も続きます。KOF'99では追い打ち可能な技で気絶させても空中追い打ちはできず、旧メモはKOF'96からの現象だろうと推測しています。KOF'97の気絶時間とガード時間は<a href="./stun-guard-duration-2007-2020.html">気絶・ガードの持続</a>にあります。</p>
+
+<h2>気になること</h2>
+<ul>
+<li>アンディの撃壁・飛翔拳・斬影拳は、必殺技の優先順位が撃壁＞飛翔拳＞斬影拳なのだろう、と旧メモでは「おそらく」付きで推測されています。</li>
+<li>テリーでも、ビリー限定でパワーチャージ関連の追い打ちがあった気がする、という書き込みが旧メモにあります。内容は未確認です。</li>
+<li>覚醒レオナに時間切れ負けのポーズがないのかは「みたい」止まりです。</li>
+<li>根性補正がどの体力から、どれくらい効くのかは分かっていません。</li>
+<li>KOF'96のコマンドの最後のレバー方向についての旧記述は、2025年のブログ再掲版で誤りの可能性が指摘されています。</li>
+</ul>
+
+<h2>出典</h2>
+<ul>
+<li><a href="/97memo.html">KOF'97についてのメモ</a>（旧サイト。2003/11/26作成、2004/3/20最終更新）</li>
+<li><a href="/kofanalysis.htm">KOFシリーズのシステムについてのメモ</a>（旧サイト。2003/6/2作成、2004/1/21最終更新）／<a href="https://comesonobravo.hatenadiary.org/entry/2025/03/02/201947">2025年のブログ再掲版</a></li>
+<li><a href="/huraguhennkou.html">KOFシリーズ・フラグ関係のバグについて</a>（旧サイト。2003/10/19作成）</li>
+<li><a href="https://x.com/mot_csb/status/672795647834132480">2015/12/04：チャンと防御力</a>（X）</li>
+<li><a href="https://x.com/mot_csb/status/707219595791192065">2016/03/08：97までは確実に根性補正があった</a>（X）</li>
+</ul>
+<hr><p><a href="./index.html">KOF'97研究アーカイブ</a> ／ <a href="/kof-kininaru.html#kof97">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>

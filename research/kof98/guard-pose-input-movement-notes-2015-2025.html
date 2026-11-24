@@ -1,0 +1,43 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'98 屈ガードポーズの維持・入力・移動の細かい仕様｜Come sono bravo?</title><meta name="description" content="KOF'98で1の屈ガードポーズからレバーを変えたときの維持時間（6は2F、2・3・Nは11F）、バイスの屈ガードの高さの変化、ノックバックの向き、623系の入力、出せない超投げで地震判定を避ける方法など。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:980px}.article h2{margin-top:2rem}.article a{overflow-wrap:anywhere}.source{font-size:.95em}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof98-top.html">KOF'98</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'98 屈ガードポーズの維持・入力・移動の細かい仕様</h1>
+<p>1（左下）を入れっぱなしにして屈ガードポーズを取ったあと、レバーを2か3に変えても、屈ガードポーズは11F維持されます。6に入れると2Fで解けます。123+ABでガードキャンセル前転が出しやすいのは、このためです。ここでは、ガードポーズ・入力・移動にかかわる細かい仕様をまとめます。</p>
+<section><h2>屈ガードポーズはレバーを変えても一定時間残る</h2>
+<p>ロバートの遠Cに対してユリで屈ガードポーズを取り、そこからレバー方向を変えた場合の維持時間です。</p>
+<div class="scroll"><table style="border-collapse:collapse"><thead><tr><th style="border:1px solid #aaa;padding:6px">1の屈ガードポーズから入れた方向</th><th style="border:1px solid #aaa;padding:6px">屈ガードポーズが維持される時間</th></tr></thead><tbody>
+<tr><td style="border:1px solid #aaa;padding:6px">6</td><td style="border:1px solid #aaa;padding:6px">2F</td></tr><tr><td style="border:1px solid #aaa;padding:6px">2</td><td style="border:1px solid #aaa;padding:6px">11F</td></tr><tr><td style="border:1px solid #aaa;padding:6px">3</td><td style="border:1px solid #aaa;padding:6px">11F</td></tr><tr><td style="border:1px solid #aaa;padding:6px">N</td><td style="border:1px solid #aaa;padding:6px">11F</td></tr>
+</tbody></table></div>
+<p>2や3に入れても11F屈ガードが続くので、飛び道具や単発技にガードキャンセル前転をする場合は、屈ガードするタイミングより少し早めに3に入れても大丈夫です。</p>
+<h3>例外：強攻撃に対する屈ガードポーズ</h3>
+<p>強攻撃に対する屈ガードポーズは「軽くガードを構える→体を引いて本格的にガードを構える」の2段階になっていて、最初の軽く構えるポーズからはガードポーズが早く解けてしまうようです（要検証）。</p></section>
+<section><h2>屈ガードの高さが変わるキャラ</h2>
+<ul>
+<li><strong>バイス</strong>：弱攻撃と強攻撃で屈ガードの高さが変わります。弱攻撃に対するガードポーズが低く、弱攻撃をガードすると高くなります。</li>
+<li><strong>アンディ</strong>：屈ガードが高く、屈状態は低くなっています。</li>
+</ul>
+<p>キャラ別のしゃがみガードの判定は<a href="./crouch-guard-hitbox-38-characters-2021.html">しゃがみガード判定</a>にあります。</p></section>
+<section><h2>ジャンプ攻撃後の着地無敵とガードポーズ</h2>
+<p>大門（00ではアンディ）のジャンプ攻撃後の着地無敵の間も、ガードポーズの判定自体は存在しています。判定とは別に、処理自体を無視する流れがあるのではないか、という見立てです。</p></section>
+<section><h2>ノックバックの向きは攻撃側の向きで決まる</h2>
+<p>98や02系では、ノックバックは攻撃側の向きで決まります。そのため、次のことが起きます。</p>
+<ul><li>めくりのジャンプ攻撃がヒットしたあと、相手が引き寄せられる</li><li>ビリーの旋風棍と前転が噛み合うと、距離が離れずに多段ヒットする</li></ul>
+<p>ノックバックと通常投げの関係は<a href="/research/kof-series/knockback-normal-throw.html">ノックバックのない技と通常投げ</a>にあります。</p></section>
+<section><h2>ダッシュと大ジャンプの横の速度</h2>
+<p>98系・02系では、ダッシュと大ジャンプの横方向の移動速度は同じで、ダッシュの速度はキャラによって違う、と考えられています（未確認だが、たぶん合っているという段階）。そうだとすると、相手の後方大ジャンプをダッシュで追いかけて背後に回るには、相手よりダッシュ速度が速い必要があります。この点ではチョイが強そうです。</p></section>
+<section><h2>入力の工夫</h2>
+<ul>
+<li><strong>623系はレバー入力の完成後、レバーをどこに入れても成立する</strong>：ケンスウで表裏の見えない崩しに龍顎砕を入れ込む場合、4213+BかDと入力すれば屈ガードを仕込めそうです（98・02）。</li>
+<li><strong>歩きながら623系で反撃する</strong>：ガード後の反撃で歩き623系の必殺技を狙う場合は、6236と入れっぱなしにすればよさそうです。リョウの623Aや表京の623Aで反撃できる技が少し増えるかもしれません。</li>
+<li><strong>暗転を見てからAB押しっぱなしでは最速の前転は出ない</strong>：そのため、千鶴のダッシュに表社の弱ファイナルインパクトを合わせると、千鶴側はガードが間に合わないようです（そういう状況があるかは不明）。</li>
+</ul></section>
+<section><h2>出せない超投げで地震判定を避ける</h2>
+<p>ゲージ不足などで出ない超必殺投げのコマンドを入れておくと、地震判定を避けられます。起き上がり以外でも可能です。98で確認できた状況は次のとおりです。</p>
+<ul>
+<li>98大門の同キャラ対戦で、天地返し～の地震判定を回避</li>
+<li>98ケンスウ：強版仙気発剄の入力で地震判定を無効化（通常技が暴発します）</li>
+</ul>
+<p>回避したあとは小ジャンプからの連続技で反撃も可能です。ゲージがあってもMAX発動していなければ、MAX超必殺投げのコマンドでも同じことができます。地震判定と出せないコマンドの関係は<a href="./daimon-jigoku-jirai-combo-2023.html">大門の地獄極楽と地雷震</a>にもあります。</p></section>
+<section><h2>似ているが別の話：低ジャンプ攻撃の継続</h2>
+<p>98などでは、低いジャンプ攻撃の状態がそのまま続く現象があります（レオナの昇りJDで分かりやすいもの）。中断されても残る状態の例は<a href="/research/kof94/state-carryover-2001-2025.html">KOF'94・'95の中断されても残る状態</a>にもあります。</p></section>
+<section><h2>気になること</h2>
+<ul><li>ユリに遠Bの持続の最後をヒットさせても2F不利だったので、外部のフレームデータ（KOFのことさん）と少し違うかもしれない、という点が「確認してみよう」のまま残っています（2015/12/15）。</li></ul></section>
+<p class="source">出典（X投稿・日付は日本時間）：<a href="https://x.com/mot_csb/status/585404152143941633">2015/04/07 歩き623系</a> ／ <a href="https://x.com/mot_csb/status/658146685420355585">2015/10/25 4213+BorD</a> ／ <a href="https://x.com/mot_csb/status/660017862547890176">2015/10/30 屈ガードポーズの維持時間</a> ／ <a href="https://x.com/mot_csb/status/660018615266095104">2015/10/30 強攻撃への2段階の屈ガードポーズ</a> ／ <a href="https://x.com/mot_csb/status/660019148311756800">2015/10/30 123+ABでGC前転</a> ／ <a href="https://x.com/mot_csb/status/676770647050088448">2015/12/15 ユリの遠B</a> ／ <a href="https://x.com/mot_csb/status/1084702017304457216">2019/01/14 ダッシュと大ジャンプの速度</a> ／ <a href="https://x.com/mot_csb/status/1382325826511724555">2021/04/14 ノックバックの向き</a> ／ <a href="https://x.com/mot_csb/status/1425119397039931393">2021/08/11 暗転後の前転</a> ／ <a href="https://x.com/mot_csb/status/1656093933523591169">2023/05/10 着地無敵とガードポーズ</a> ／ <a href="https://x.com/mot_csb/status/1707204903477948479">2023/09/28 バイスとアンディの屈ガード</a> ／ <a href="https://x.com/mot_csb/status/1755533902217970163">2024/02/08 天地返しの地震判定の回避</a> ／ <a href="https://x.com/mot_csb/status/1755604840158482469">2024/02/08 起き上がり以外での回避</a> ／ <a href="https://x.com/mot_csb/status/1918261483303256193">2025/05/02 状態の継続の例</a></p>
+<p><a href="./index.html">KOF'98研究アーカイブへ戻る</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?</div></footer></body></html>

@@ -1,80 +1,80 @@
 <!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>KOF'99 ウィップ：ガード不能JC・ジャンプ攻撃判定・屈DとGCCD（2003～2024年）｜Come sono bravo?</title><meta name="description" content="MOT本人の2003年旧メモ、2015・2021年Xのウィップ調査と2024年旧ブログを、ガード不能JC・ジャンプ判定・屈D/GCCD・追撃の条件ごとに整理。">
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>KOF'99 ウィップ：ガード不能JC・ジャンプ攻撃の判定・屈D｜Come sono bravo?</title>
+<meta name="description" content="KOF&#x27;99ウィップの斜めJCのガード不能（猶予・追撃）、小中JCのガード硬直、ジャンプ攻撃の判定、屈DでGCCDを空振りさせる相手。">
 <link rel="stylesheet" href="/assets/research.css">
-<style>.article{max-width:1060px}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.article table{width:100%;border-collapse:collapse}.article th,.article td{border:1px solid var(--line,#aab);padding:9px;text-align:left;vertical-align:top}.article thead th{background:var(--soft,#edf1ee)}.scroll{overflow-x:auto}.note{border-left:4px solid var(--accent,#416958);background:var(--soft,#edf1ee);padding:12px 14px}.article a{overflow-wrap:anywhere}</style></head><body>
-<header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
-<div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof99-top.html">KOF'99</a> / <a href="/research/kof99/index.html">研究アーカイブ</a> / <b>ウィップ研究</b></div></div>
-<main class="main"><div class="wrap article"><!-- chara-nav:start --><nav class="chara-nav" aria-label="キャラクター別のページ"><p class="cn-head"><a href="/kof99-top.html#c-whip">KOF&#x27;99 キャラ選択</a><span>›</span><b>ウィップ</b></p><p class="cn-links"></p><details open><summary>攻略・研究ページ 1件</summary><ul><li><b>ウィップ：ガード不能JC・ジャンプ攻撃判定・屈DとGCCD（2003～2024年）</b></li></ul></details></nav><!-- chara-nav:end --><h1>KOF'99 ウィップ：ガード不能JC・ジャンプ攻撃判定・屈DとGCCD（2003～2024年）</h1>
-<p class="note">MOT本人の2003年の旧サイト原稿、2015年・2021年のX（Twitter）アーカイブ、2024年の旧ブログを原資料として再整理。<strong>本人確認、本人の計測・記載値、戦術評価・推測、未確認を区別</strong>する。新たな実機検証は実施していない。KOF2002のウィップ研究をKOF'99の仕様に転用しない。</p>
+<style>.article{max-width:960px}.article table{width:100%;border-collapse:collapse}.article th,.article td{border:1px solid var(--line,#ccd);padding:6px 8px;overflow-wrap:anywhere;vertical-align:top;text-align:left}.article thead th{background:var(--soft,#eaf0ed)}.article td.num{font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}.lead{font-size:1.05em}.vt{display:inline-block;font-size:.85em;line-height:1.45;padding:0 6px;margin-left:4px;border:1px solid var(--line,#ccd);border-radius:4px;font-weight:600;white-space:nowrap}.legend{font-size:.92em;color:var(--sub,#555)}.src li{font-size:.92em}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h2{font-size:1.15em;margin-top:1.2rem}details.more h3{font-size:1.05em}figure{margin:14px 0}figure img{max-width:100%;height:auto;border:1px solid var(--line,#ccd)}figcaption{font-size:.9em;color:var(--sub,#555)}@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}.article th,.article td{min-width:72px}}</style>
+</head><body>
+<header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof99-top.html">KOF'99</a> / <a href="/research/kof99/index.html">研究アーカイブ</a> / <b>ウィップ</b></div></div>
+<main class="main"><div class="wrap article"><!-- chara-nav:start --><nav class="chara-nav" aria-label="キャラクター別のページ"><p class="cn-head"><a href="/kof99-top.html#c-whip">KOF&#x27;99 キャラ選択</a><span>›</span><b>ウィップ</b></p><p class="cn-links"></p><details open><summary>攻略・研究ページ 1件</summary><ul><li><b>ウィップ：ガード不能JC・ジャンプ攻撃判定・屈DとGCCD（2003～2024年）</b></li></ul></details></nav><!-- chara-nav:end -->
+<h1>KOF'99 ウィップ：ガード不能JC・ジャンプ攻撃の判定・屈D</h1>
+<p class="lead">ウィップの斜めJCは、低い打点で当てるとガード不能になります。打点が低すぎて、立ちガードのガード判定がない部分を攻撃するためです。猶予は3Fくらいあり、慣れれば毎回ガード不能にできるレベルです。起き上がりに重ねれば詐欺飛びにもなります。ガード不能JCからは屈Dで追撃するのが安定です。</p>
 
-<h2>2018年10月：ガード不能JCに関する観戦時の先行メモ</h2><p><a href="https://x.com/mot_csb/status/1055734697546772480">2018年10月26日のMOT本人投稿</a>は、対戦動画「Xiaohai vs Heipi」の<strong>5分17秒付近でウィップのガード不能JCが決まったように見える</strong>という観戦メモ。<strong>「感じがする」</strong>という当時の留保を維持し、動画を今回再検証した確定事例とはしない。後年の本人によるガード不能JC研究の先行観察として区別する。</p>
-<h2>斜めJCのガード不能：確認・猶予・追撃</h2>
-<p>ウィップの斜めJCを低い打点で出すことで、立ちガードでは防げないガード不能が生じる、というMOT本人の研究。<a href="https://comesonobravo.hatenadiary.org/entry/503851339.html">2024年7月3日の本人ブログ「KOFシリーズ：ガード不能ジャンプ攻撃関係」</a>では、本人はこのタイプの攻撃を高く評価し、起き上がりに重ねれば詐欺飛びにもなると説明している。ただし<strong>個々のキャラでの詐欺飛び成立条件や対応技は示していない</strong>。</p>
-<div class="scroll"><table><thead><tr><th>時点</th><th>本人の記載</th><th>資料の扱い</th></tr></thead><tbody>
-<tr><th scope="row">2015/10/25</th><td>ウィップの低JC：ガード不能の打点にする猶予<strong>2F</strong>。ヒットストップは攻撃側5F、相手側13F（差し引き8F）。</td><td><a href="https://x.com/mot_csb/status/658161341148979200">本人Xの数値</a></td></tr>
-<tr><th scope="row">2021/2/3</th><td>JCガード不能からの追撃候補を列挙。本人はガード不能を失敗することもあるため、屈Dが安定ではないかと評価。</td><td><a href="https://x.com/mot_csb/status/1356950464185556993">本人の連続技整理・評価</a></td></tr>
-<tr><th scope="row">2024/6/29</th><td>ウィップの斜めJCは猶予が<strong>3Fくらい</strong>あり、慣れれば毎回ガード不能にできるレベルとの本人評価。</td><td><a href="https://x.com/mot_csb/status/1806866350708801601">本人X投稿</a> ／ <a href="https://comesonobravo.hatenadiary.org/entry/503851339.html">後年の本人ブログ</a></td></tr>
-</tbody></table></div>
-<p><strong>数値差の扱い：</strong>2015年の「2F」と2024年の「3Fくらい」は、原資料で条件・定義の違いが説明されていない。測定差、ジャンプ種別、判定対象などのどれが原因かは不明であり、どちらかを誤りとして統一しない。<a href="/kof-kininaru.html#kof99">気になること</a>へ記録した。</p>
-
-<h3>2021年の「ガード不能JC→追撃」整理</h3>
-<p><a href="https://x.com/mot_csb/status/1356950464185556993">2021年2月3日の本人X</a>に記載された順番で保持する。</p>
-<div class="scroll"><table><thead><tr><th>追撃</th><th>本人の記載上の条件・注意</th></tr></thead><tbody>
-<tr><td>屈C</td><td>成立候補として本人が列挙。</td></tr>
-<tr><td>屈D</td><td>本人はガード不能に失敗することもあるため「おそらく屈Dが安定」と評価。</td></tr>
-<tr><td>屈B→強ブーメラン or 弱・強ソニック</td><td>屈B始動を伴うルートとして列挙。</td></tr>
-<tr><td>直接強ブーメラン or 弱・強ソニック</td><td>屈Bを挟まないルートとして別に列挙。</td></tr>
-</tbody></table></div>
-<p>各ルートの対戦キャラ制限、位置条件、入力猶予、ダメージはこの投稿には書かれていないため追加しない。原文の「おそらく」を確定の意味に変更しない。</p>
-
-<h2>小中JCのヒットストップとガード硬直（2021年）</h2>
-<p><a href="https://x.com/mot_csb/status/1357354389996904453">2021年2月4日の本人投稿</a>による整理：</p>
-<div class="scroll"><table><thead><tr><th>項目</th><th>値</th></tr></thead><tbody>
-<tr><th scope="row">ウィップ側ヒットストップ</th><td>5F</td></tr>
-<tr><th scope="row">相手側ヒットストップ</th><td>13F</td></tr>
-<tr><th scope="row">相手側ガード硬直</th><td>17F</td></tr>
-<tr><th scope="row">相手側の実質ガード硬直（本人の結論）</th><td><strong>25F</strong></td></tr>
-</tbody></table></div>
-<p>13F−5F＝8Fの差に17Fを加える、という本人の算出値。2015年のヒットストップの記録と数値自体は一致している。参考値として本人はKOF'98の小中J強攻撃ガード硬直9F、KOF2002の小中J強攻撃ガード硬直17Fを併記しているが、<strong>これは比較対象作品の参考値</strong>であり、'99側の技にそのまま適用しない。</p>
-<p>2015年の<a href="https://x.com/mot_csb/status/658161341148979200">本人投稿</a>では最低打点の立ちガード→屈Bを考える一方、低く当てるとJC自体がガード不能になるため意図した「立ちガード後」の状態が作れない、という考察をしている。</p>
-
-<h2>ジャンプ攻撃判定：垂直JA・垂直JCと99／02の比較</h2>
-<div class="scroll"><table><thead><tr><th>技・比較</th><th>MOT本人の説明</th><th>注意点・出典</th></tr></thead><tbody>
-<tr><th scope="row">垂直通常JA</th><td>攻撃判定の画像が3枚あり、斜め上→横→斜め下方向に強い。</td><td><a href="https://x.com/mot_csb/status/1356951513877241858">2021/2/3 本人X</a></td></tr>
-<tr><th scope="row">垂直通常JC</th><td>リーチが長く、攻撃判定が伸びている。本人はかなり強いと評価し、KOF'02で垂直通常JAを使うような場面に相当すると考察。</td><td><a href="https://x.com/mot_csb/status/1356951513877241858">同一投稿</a>。02との比較は戦術評価。</td></tr>
-<tr><th scope="row">斜めJC：99と02の判定画像</th><td>99の攻撃判定は02より下方に長く伸びていると本人が説明。白枠の位置判定より攻撃判定が低いことを比較の目安としている。</td><td><a href="https://x.com/mot_csb/status/658931614521495553">2015/10/27 本人X</a>。<strong>画像は今回新規保存しておらず、本文記述を採録。</strong></td></tr>
-<tr><th scope="row">高JCの早出し</th><td>低JCと判定が同じなら、早出しで上から乗る使い方が強そうという本人の考察。</td><td><a href="https://x.com/mot_csb/status/659128208156045312">2015/10/27 本人X</a>。<strong>高JCの判定が同一だと確認したわけではない。</strong></td></tr>
-</tbody></table></div>
-<p><a href="https://x.com/mot_csb/status/1653747901351493632">2023年5月3日の99／02ウィップJC比較投稿</a>、<a href="https://x.com/mot_csb/status/1653748152082784259">同日の低JC動画投稿</a>も存在するが、動画・画像そのものは今回再生・画素検証をしていない。投稿本文にない判定値やフレームを補わない。</p>
-
-<h2>屈DをガードさせてGCCDを空振りさせる研究</h2>
-<div class="scroll"><table><thead><tr><th>相手</th><th>本人が調べた条件と結果</th><th>状態・出典</th></tr></thead><tbody>
-<tr><th scope="row">京</th><td>近めの屈Dをガードさせると相手のGCCDが空振りし、そこから連続技が決まる。</td><td>2015年の本人確認。<a href="https://x.com/mot_csb/status/658186129099722756">2015/10/25</a></td></tr>
-<tr><th scope="row">キング</th><td>密着で屈DをガードさせてもGCCDを受ける。本人は持続部分がヒットすると説明。</td><td>同一の本人比較記録。<a href="https://x.com/mot_csb/status/658186129099722756">2015/10/25</a></td></tr>
-<tr><th scope="row">紅丸・ラルフ</th><td>屈Dは食らい判定が大きく前進し、密着GCCDを空振りさせられるキャラがいる。紅丸とラルフで確認したと明記。</td><td>2021年の本人確認。<a href="https://x.com/mot_csb/status/1356951736993214466">2021/2/3</a></td></tr>
-<tr><th scope="row">リョウのGC前かわし</th><td>別人の「相手の強攻撃にGC前かわしするとかわし移動攻撃が基本的に確定」という投稿を受け、ウィップの密着屈Dの場合を調査。リョウのかわし攻撃が空振りするか、ガードが間に合う「っぽい」と報告。</td><td><strong>暫定評価</strong>。<a href="https://x.com/mot_csb/status/1357353786566529025">2021/2/4 本人X</a></td></tr>
-</tbody></table></div>
-<p>同じ屈Dでも相手のGCCD・GC前かわしの種類と距離が結果を左右しうる。ウィップの屈DがすべてのキャラのGCCDに勝つ、と一般化しない。</p>
-<p><a href="https://x.com/mot_csb/status/1404449572747845633">2021年6月14日の本人投稿</a>では、低JDの連発がST呼び出しに勝てるか、ラルフにも通用するか、という<strong>調査予定・疑問</strong>が挙げられている。KOF2002での対紅丸評価をそのままKOF'99の成立証明には使っていない。</p>
-
-<h2>通常投げ・GCかわし移動からの追撃</h2>
+<h2>ガード不能JC</h2>
+<p>低JCはヒットストップがウィップ側5F・相手側13Fで、差し引き8Fです。ガード不能の打点にする猶予は、2015年には2F、2024年には「猶予3Fくらい」と書いています。</p>
+<p>ガード不能JCからの連続技は次のとおりです。ガード不能をミスすることもあるので、おそらく屈Dが安定です。</p>
 <ul>
-<li><strong>C投げ→屈A：</strong><a href="https://x.com/mot_csb/status/1396263428101066757">2021/5/23の本人投稿</a>では、相手キャラによってはその場で屈Aを出すと空振りし、少しだけ後退させると決まると記している。対象キャラ一覧・後退距離は未記載。</li>
-<li><strong>GCかわし移動始動：</strong><a href="https://x.com/mot_csb/status/1683391851989204992">2023/7/24の本人投稿</a>では、ウィップのGCかわし始動連続技には2ゲージが必要というマイナス評価をしている。個別のルートや対戦キャラ条件はその投稿にないため、別キャラの比較に使う以上の情報を作らない。</li>
+<li>屈C</li>
+<li>屈D</li>
+<li>屈B→強ブーメラン、またはソニックスローター <span class="vt">弱</span><span class="vt">強</span></li>
+<li>直接、強ブーメラン、またはソニックスローター <span class="vt">弱</span><span class="vt">強</span></li>
+</ul>
+<p>最低打点で立ちガードさせれば屈Bが確定しそうですが、その打点だとJCがガード不能になるので無理です（「なんだこれ」）。</p>
+
+<h2>小・中ジャンプJCのガード硬直</h2>
+<table><thead><tr><th>項目</th><th>フレーム</th></tr></thead><tbody>
+<tr><th scope="row">ウィップ側のヒットストップ</th><td class="num">5F</td></tr>
+<tr><th scope="row">相手側のヒットストップ</th><td class="num">13F</td></tr>
+<tr><th scope="row">相手側のガード硬直</th><td class="num">17F</td></tr>
+<tr><th scope="row">相手側の実質のガード硬直</th><td class="num">25F</td></tr>
+</tbody></table>
+<p class="legend">参考：KOF'98の小・中ジャンプ強攻撃のガード硬直は9F、KOF2002は17Fです。</p>
+
+<h2>ジャンプ攻撃の判定</h2>
+<ul>
+<li><b>垂直ノーマルJA</b>：攻撃判定が3枚あり、斜め上→横→斜め下に強い。</li>
+<li><b>垂直ノーマルJC</b>：相当強い。リーチが長いうえに攻撃判定が伸びています。KOF2002なら垂直ノーマルJAを使うような場面で、こちらでよさそうです。</li>
+<li><b>斜めJC</b>：KOF2002と比べて攻撃判定が低く、下方向にリーチが長くなっています。高JCも低JCと同じ判定なら、早出し気味の大JCで上から乗っかられても返せないキャラが多そうです。</li>
+</ul>
+<figure><img src="https://pbs.twimg.com/media/CST-zxTUwAE2RoZ.png" alt="KOF99のウィップの斜めJCの判定" loading="lazy" style="max-width:48%"> <img src="https://pbs.twimg.com/media/CST-zxYVAAEb9eV.png" alt="KOF2002のウィップの斜めJCの判定" loading="lazy" style="max-width:48%"><figcaption>左がKOF'99、右がKOF2002。白枠は位置判定で、これより攻撃判定が低いほど下方向にリーチが長い（<a href="https://x.com/mot_csb/status/658931614521495553">2015/10/27</a>）</figcaption></figure>
+
+<h2>屈DでGCCDを空振りさせる</h2>
+<p>ウィップの屈Dは、KOF2002と同じように食らい判定が大きく前進するので、密着でGCCDされても空振りさせられる相手がいます。</p>
+<table><thead><tr><th>相手</th><th>結果</th></tr></thead><tbody>
+<tr><th scope="row">京</th><td>近めで屈Dをガードさせると、GCCDが空振りして連続技が決まる</td></tr>
+<tr><th scope="row">紅丸・ラルフ</th><td>密着でGCCDされても空振りさせられる</td></tr>
+<tr><th scope="row">キング</th><td>密着で屈Dをガードさせても、GCCDの持続部分が当たる</td></tr>
+<tr><th scope="row">リョウ（GC前かわし）</th><td>密着屈Dなら、リョウのかわし移動攻撃は空振りするかガードが間に合うようです</td></tr>
+</tbody></table>
+<p class="legend">リョウについては、ごしょさんの「リョウは相手の強攻撃にGC前かわしすればかわし移動攻撃が基本的に確定」という投稿を受けて調べたものです。</p>
+
+<details class="more"><summary>詳しく：投げ・かわし移動攻撃・JCDからの追撃</summary>
+<ul>
+<li><b>C投げ→屈A</b>：相手キャラによってはその場で屈Aを出しても空振りし、少しだけ後退すると決まります。</li>
+<li><b>かわし移動攻撃→屈B</b>：かわし移動攻撃はヒット時+9Fですが、屈B（発生8F）でつなぐ猶予は1Fです（<a href="/research/kof99/evasion-attacks-hitbox-recovery-2021-2025.html">かわし移動攻撃</a>）。</li>
+<li><b>GCかわし移動攻撃から</b>：2ゲージ必要なのが△です。</li>
+<li><b>JCDのカウンターヒット→ソニックスローター</b>（弱強、通常版・MAX版を問わない）：画面中央でも狙えますが、近くでJCDを当てないとソニックスローターが届きません（2003年のメモ）。</li>
+<li>ジャンプ攻撃の後の着地屈ガード無敵は、前小JのJA・JB・JC・JD2段目・JCDでできます（<a href="/research/kof99/landing-crouch-guard-invincible-2015-2025.html">着地屈ガード無敵</a>）。GCCDのガード時硬直差は−17Fです（<a href="/research/kof99/gccd-recovery-advantage-2021.html">GCCD硬直差</a>）。</li>
+</ul>
+</details>
+
+<h2>気になること</h2>
+<ul>
+<li>ガード不能JCの猶予は2Fか3Fか（2015年は2F、2024年は「3Fくらい」）。</li>
+<li>高JCは低JCと同じ攻撃判定か。</li>
+<li>低JDの連発は強いか。KOF2002では対紅丸は低JDでほぼ詰むという意見もありましたが、KOF'99で再現できるか。低JDがST呼び出しに負けるかがカギで、STごと勝てる場合もありそう。「対ラルフにも有効なら最高」。</li>
+<li>ウィップ→チンの酒ストックバグはできるか。</li>
 </ul>
 
-<h2>2003年の旧サイトにある空中カウンターヒット追撃</h2>
-<p>MOT本人の<a href="/99memo.html">「KOF'99についてのメモ」（2003年10～11月更新）</a>には、<strong>ウイップ</strong>（当時の表記）について、<strong>JC＋Dの空中カウンターヒット→ソニックスローター</strong>（弱強・通常/MAXを問わない）が中央で狙えると掲載。ただし、<strong>画面中央では近くでJC＋Dを当てないとソニックスローターが届かない</strong>と注意している。これは斜めJCガード不能からの追撃とは異なる状況であり、同じ連係に統合しない。</p>
-<p>同旧メモにある、ケンスウの龍連牙・地龍3段目が立ちウイップに空振りするという記述は、<a href="/kof-kininaru.html#kof99">座高に関する旧来の確認事項</a>として既に保存されている。</p>
-
-<h2>2021年原シート：かわし移動攻撃→屈Bの追撃猶予1F</h2><p><a href="./evasion-attacks-hitbox-recovery-2021-2025.html">2021年の本人原Googleシート「かわし移動攻撃関係のデータ」（32キャラ一覧）</a>ではウィップのかわし移動攻撃は<strong>発生10F、発生前無敵6F、隙3F、ヒット時+9F、ガード時（事前弱−1F／事前強+7F／事前CD+11F）</strong>。本人のキャラ別備考では<strong>かわし移動攻撃→屈Bの連続技の猶予1F（屈Bの発生8F）</strong>と記録されている。+9Fという有利値と入力猶予1Fは原表の別項目であり、+9Fなら容易に届くという評価に置き換えない。過去の「GCかわし移動からの追撃」と通常のかわし移動攻撃を、無条件に同一状況として混同しない。</p>
-<h2>着地屈ガード無敵の検証結果は既存記事へ</h2>
-<p>2015年10月25～26日に本人は、ウィップの前小JのJA・JB・JC・JD2段目・JCDをヒットまたはガードさせた後、着地屈ガードで無敵状態にできることを確認。真吾のGCCDを空振りさせた記録などの一次資料と、2025年の原因仮説は<a href="./landing-crouch-guard-invincible-2015-2025.html">「GCCDに対する着地屈ガード無敵」</a>にすでに詳細を収録しているため、本記事では二重転記せずそちらを参照する。</p>
-<p>ウィップ自身のGCCDの硬直差<strong>−17F</strong>は、別テーマの<a href="./gccd-recovery-advantage-2021.html">GCCD硬直差32キャラ一覧</a>に収録済み。</p>
-
-<h2>2021年5月の本人疑問：ウィップとチンの酒ストック</h2><p><a href="https://x.com/mot_csb/status/1394256360657678338">2021年5月17日のMOT本人投稿</a>は、<strong>ウィップ→チンの酒ストックバグ</strong>が可能かを気になることとして挙げている。技やSTの指定、必要な位置・入力・成立例、検証結果はいずれもこの短文にはない。<strong>本人自身の未解決の問い</strong>として収録し、バグが成立すると断定しない。別作品の酒ストック現象をそのままKOF'99の仕様として移植しない。</p>
-<h2>照合できた範囲と残る事項</h2>
-<p>旧ブログから直接確認できるのは2024年の本人による約3Fとの評価、2015年・2021年の本人Xから確認できるのは前述の数値と条件付きの成立・不成立記録。<strong>ガード不能JCの正確な猶予差、高JCの判定の同一性、相手キャラ別の追撃、屈Dに対するGCCDの全キャラ対応表、画像・動画の実内容</strong>は今回は確定していない。今後の確認事項は<a href="/kof-kininaru.html#kof99">「気になること」</a>にまとめる。</p>
-<p><a href="/research/kof99/index.html">KOF'99研究アーカイブへ戻る</a> ／ <a href="./striker-clark-unblockable-2024.html">関連：レオナ等の飛び道具空振りとSTクラーク</a></p>
-</div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
+<h2>出典</h2>
+<ul class="src">
+<li>ガード不能JC：<a href="https://x.com/mot_csb/status/658161341148979200">低JC（2015/10/25）</a> ／ <a href="https://x.com/mot_csb/status/1356950464185556993">連続技（2021/2/3）</a> ／ <a href="https://x.com/mot_csb/status/1806866350708801601">猶予3Fくらい（2024/6/29）</a> ／ <a href="https://comesonobravo.hatenadiary.org/entry/503851339.html">KOFシリーズ：ガード不能ジャンプ攻撃関係（2024/7/3）</a> ／ <a href="https://x.com/mot_csb/status/1055734697546772480">対戦動画での例（2018/10/26）</a></li>
+<li>判定：<a href="https://x.com/mot_csb/status/1357354389996904453">ガード硬直（2021/2/4）</a> ／ <a href="https://x.com/mot_csb/status/1356951513877241858">垂直JA・JC（2021/2/3）</a> ／ <a href="https://x.com/mot_csb/status/658931614521495553">99と2002の比較（2015/10/27）</a> ／ <a href="https://x.com/mot_csb/status/659128208156045312">低JCの判定画像（10/27）</a></li>
+<li>屈D：<a href="https://x.com/mot_csb/status/658186129099722756">京・キング（2015/10/25）</a> ／ <a href="https://x.com/mot_csb/status/1356951736993214466">紅丸・ラルフ（2021/2/3）</a> ／ <a href="https://x.com/mot_csb/status/1357353786566529025">リョウのGC前かわし（2021/2/4）</a></li>
+<li>そのほか：<a href="https://x.com/mot_csb/status/1396263428101066757">C投げ→屈A（2021/5/23）</a> ／ <a href="https://x.com/mot_csb/status/1683391851989204992">GCかわし移動始動（2023/7/24）</a> ／ <a href="https://x.com/mot_csb/status/1404449572747845633">低JD（2021/6/14）</a> ／ <a href="https://x.com/mot_csb/status/1394256360657678338">酒ストック（2021/5/17）</a> ／ <a href="/99memo.html">KOF'99についてのメモ（2003年）</a></li>
+<li>関連：<a href="/kof-kininaru.html#kof99">気になること</a> ／ <a href="/research/kof99/index.html">KOF'99研究アーカイブ</a></li>
+</ul>
+</div></main>
+<footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer>
+</body></html>
