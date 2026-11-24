@@ -92,7 +92,8 @@ HIDDEN = {
     "02umtop-6.html",  # KOF2002UMトップのキャラ一覧の旧版
     "02umtop-7.html",  # KOF2002UMトップのキャラ一覧の旧版
     "02K'-maxima-koutyokusa.html",  # K’のページの複製。マキシマの正式版は 02maxima-kakuwaza-koutyokusa.html
-    "research/kof2002/questions-and-research-plans-2024.html",  # 2024年の疑問11項目は kof-kininaru.html に統合。旧URLは転送専用
+    "research/kof2002/questions-and-research-plans-2024.html",
+    "social/idolmaster-cinderella-girls/source-audit-2026-11-21.html",  # 資料回収の作業台帳（読者向けの記事ではない）  # 2024年の疑問11項目は kof-kininaru.html に統合。旧URLは転送専用
 }
 
 
