@@ -13,8 +13,8 @@
      "button": "技データ",
      "frame": [
       [
-       "00jhun-data.htm",
-       "ダメージ・気絶値・ガークラ値など（旧サイト・2004年）"
+       "research/kof2000/frame/jhun.html",
+       "ダメージ・気絶値・ガークラ値など（2004年）"
       ]
      ],
      "research": [
@@ -25,6 +25,10 @@
       [
        "research/kof2000/jhun-original-data-selected-values-2004.html",
        "ジョンの技データの読みどころ"
+      ],
+      [
+       "00jhun-data.htm",
+       "旧サイトのページ"
       ]
      ]
     },
