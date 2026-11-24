@@ -1,0 +1,104 @@
+{
+ "game": "KOF2003",
+ "base": "",
+ "top": "kof03-top.html",
+ "missing": "",
+ "teams": [
+  {
+   "name": "キャラ別",
+   "chars": [
+    {
+     "id": "terry",
+     "name": "テリー",
+     "button": "攻略",
+     "frame": [
+      [
+       "03terry.html",
+       "KOF2002からの変化・技の性能・連続技（旧サイト）"
+      ]
+     ],
+     "research": [
+      [
+       "03rokete-terry.html",
+       "ロケテに行った際のメモ：テリー報告"
+      ]
+     ]
+    },
+    {
+     "id": "joe",
+     "name": "ジョー",
+     "button": "攻略",
+     "frame": [
+      [
+       "03joe.html",
+       "KOF2002からの変化・技の性能・連続技（旧サイト）"
+      ]
+     ],
+     "research": [
+      [
+       "03rokete-joe.html",
+       "ロケテに行った際のメモ：ジョー報告"
+      ]
+     ]
+    },
+    {
+     "id": "jhun",
+     "name": "ジョン",
+     "button": "攻略",
+     "frame": [
+      [
+       "03jhun.html",
+       "KOF2002からの変化・技の性能・連続技（旧サイト）"
+      ]
+     ],
+     "research": [
+      [
+       "03rokete-angrijhon.html",
+       "ロケテに行った際のメモ：アンディ・グリフォン・ジョン報告"
+      ]
+     ]
+    },
+    {
+     "id": "andy",
+     "name": "アンディ",
+     "research": [
+      [
+       "03rokete-angrijhon.html",
+       "ロケテに行った際のメモ：アンディ・グリフォン・ジョン報告"
+      ]
+     ]
+    },
+    {
+     "id": "griffon",
+     "name": "グリフォン",
+     "research": [
+      [
+       "03rokete-angrijhon.html",
+       "ロケテに行った際のメモ：アンディ・グリフォン・ジョン報告"
+      ]
+     ]
+    },
+    {
+     "id": "ash",
+     "name": "アッシュ",
+     "research": [
+      [
+       "03rokete-ashmarin.html",
+       "ロケテに行った際のメモ：アッシュ・マリン報告"
+      ]
+     ]
+    },
+    {
+     "id": "malin",
+     "name": "マリン",
+     "research": [
+      [
+       "03rokete-ashmarin.html",
+       "ロケテに行った際のメモ：アッシュ・マリン報告"
+      ]
+     ]
+    }
+   ]
+  }
+ ]
+}

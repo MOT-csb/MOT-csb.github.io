@@ -1,0 +1,113 @@
+{
+ "game": "餓狼伝説3",
+ "base": "",
+ "top": "ff3-top.html",
+ "missing": "",
+ "teams": [
+  {
+   "name": "キャラ別",
+   "chars": [
+    {
+     "id": "terry",
+     "name": "テリー",
+     "frame": [
+      [
+       "research/ff3/frame-data-2012-2021.html#c-terry",
+       "ブログ・Xの数値（2012～2022年）"
+      ]
+     ],
+     "data": [
+      [
+       "ff3memo.htm",
+       "メモ（旧サイト）"
+      ]
+     ]
+    },
+    {
+     "id": "andy",
+     "name": "アンディ",
+     "frame": [
+      [
+       "research/ff3/frame-data-2012-2021.html#c-andy",
+       "ブログ・Xの数値（2012～2022年）"
+      ]
+     ],
+     "data": [
+      [
+       "ff3memo.htm",
+       "メモ（旧サイト）"
+      ]
+     ]
+    },
+    {
+     "id": "joe",
+     "name": "ジョー",
+     "frame": [
+      [
+       "research/ff3/frame-data-2012-2021.html#c-joe",
+       "ブログ・Xの数値（2012～2022年）"
+      ]
+     ],
+     "data": [
+      [
+       "ff3joe.html",
+       "ジョー攻略（旧サイト・2004年）"
+      ],
+      [
+       "ff3memo.htm",
+       "メモ（旧サイト）"
+      ]
+     ]
+    },
+    {
+     "id": "mary",
+     "name": "マリー",
+     "frame": [
+      [
+       "research/ff3/frame-data-2012-2021.html#c-mary",
+       "ブログ・Xの数値（2012～2022年）"
+      ]
+     ],
+     "data": [
+      [
+       "ff3memo.htm",
+       "メモ（旧サイト）"
+      ]
+     ]
+    },
+    {
+     "id": "bob",
+     "name": "ボブ",
+     "frame": [
+      [
+       "research/ff3/frame-data-2012-2021.html#c-bob",
+       "ブログ・Xの数値（2012～2022年）"
+      ]
+     ],
+     "data": [
+      [
+       "ff3memo.htm",
+       "メモ（旧サイト）"
+      ]
+     ]
+    },
+    {
+     "id": "sokaku",
+     "name": "双角",
+     "frame": [
+      [
+       "research/ff3/frame-data-2012-2021.html#c-sokaku",
+       "ブログ・Xの数値（2012～2022年）"
+      ]
+     ],
+     "data": [
+      [
+       "ff3memo.htm",
+       "メモ（旧サイト）"
+      ]
+     ]
+    }
+   ]
+  }
+ ]
+}

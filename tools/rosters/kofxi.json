@@ -1,0 +1,34 @@
+{
+ "game": "KOF XI",
+ "base": "",
+ "top": "kofxi-top.html",
+ "missing": "",
+ "teams": [
+  {
+   "name": "キャラ別",
+   "chars": [
+    {
+     "id": "terry",
+     "name": "テリー",
+     "button": "技性能解析",
+     "frame": [
+      [
+       "xiterry-wazakaiseki.htm",
+       "技性能解析（旧サイト・2005年。T.FREAKさん情報）"
+      ]
+     ],
+     "data": [
+      [
+       "xiterry-basuta-uruhu-hanngeki.htm",
+       "弱強バスターウルフでの反撃"
+      ],
+      [
+       "xiterry-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ]
+    }
+   ]
+  }
+ ]
+}
