@@ -1,50 +1,88 @@
 <!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'99 ロバート：屈み相手への連続技と技性能（2021年の本人研究）｜Come sono bravo?</title><meta name="description" content="MOT本人の2021年ロバート研究。屈B→屈A→強旋燕連舞脚の相手別成否、6Aの無敵、CM中のSC連続技、JCDカウンター追撃とSTクラークを原文から整理。"><link rel="stylesheet" href="/assets/research.css">
-<style>.article{max-width:1040px}.article h2{margin-top:2rem}.scroll{overflow-x:auto}.article table{width:100%;border-collapse:collapse}.article td,.article th{border:1px solid var(--line,#aab);padding:8px;vertical-align:top;text-align:left}.article th{background:var(--soft,#eef2ef)}.note{background:var(--soft,#eef2ef);border-left:4px solid var(--accent,#416958);padding:12px}.article a{overflow-wrap:anywhere}</style></head><body>
-<header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof99-top.html">KOF'99</a> / <a href="/research/kof99/index.html">研究アーカイブ</a> / <b>ロバート研究</b></div></div>
-<main class="main"><div class="wrap article"><!-- chara-nav:start --><nav class="chara-nav" aria-label="キャラクター別のページ"><p class="cn-head"><a href="/kof99-top.html#c-robert">KOF&#x27;99 キャラ選択</a><span>›</span><b>ロバート</b></p><p class="cn-links"></p><details open><summary>攻略・研究ページ 1件</summary><ul><li><b>ロバート：屈み相手への連続技と技性能（2021年の本人研究）</b></li></ul></details></nav><!-- chara-nav:end --><h1>KOF'99 ロバート：屈み相手への連続技と技性能（2021年の本人研究）</h1>
-<p class="note">MOT本人の2021年2月7日・5月30日・6月2日のXアーカイブ原文と、2003年の旧攻略メモを照合。本人の調査結果・本人の暫定的な評価・原稿間の技名の不一致を区別する。新規実測や外部資料からの補完は実施していない。</p>
-<h2>屈み状態への「屈B→屈A→強旋燕連舞脚」の対応表</h2>
-<p><a href="https://x.com/mot_csb/status/1398971382189285378">2021年5月30日の本人投稿</a>は、相手が屈み状態にあるとき、この連続技がヒットする対象を9キャラとして列挙した。立ち食らいの相手を含む一般的な連続技成否とは分ける。</p>
-<div class="scroll"><table><thead><tr><th>区分</th><th>キャラクター</th><th>本人投稿の内容</th></tr></thead><tbody>
-<tr><th scope="row">ヒットする</th><td>マキシマ／タクマ／ラルフ／クラーク／ウィップ／キング／マリー／キム／チャン</td><td>屈B→屈A→強旋燕連舞脚がヒットすると本人が列挙。</td></tr>
-<tr><th scope="row">ヒットしない</th><td>上記以外のキャラ</td><td>本人は、代わりに<strong>屈B→屈A→弱龍斬翔</strong>を決めるよう勧めている。ただし包は次の特記事項に該当。</td></tr>
-<tr><th scope="row">例外：包</th><td>包</td><td>屈B→屈Aの部分自体が届かない、と投稿内で注記。</td></tr>
-</tbody></table></div>
-<p>「上記以外」のキャラをAIが個別に展開しない。包は弱龍斬翔への差し替え以前に、屈B→屈Aが届かない点を省略しない。距離別の細分化は原文にない。</p>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>KOF'99 ロバート：しゃがんだ相手への連続技と技性能｜Come sono bravo?</title>
+<meta name="description" content="KOF&#x27;99ロバートの屈B→屈A→強旋燕連舞脚が当たるしゃがみ相手、強空牙・弱飛燕旋風脚2段目のしゃがみへのヒット可否（全キャラ）、カウンターモード中の連続技と技性能。">
+<link rel="stylesheet" href="/assets/research.css">
+<style>.article{max-width:960px}.article table{width:100%;border-collapse:collapse}.article th,.article td{border:1px solid var(--line,#ccd);padding:6px 8px;overflow-wrap:anywhere;vertical-align:top;text-align:left}.article thead th{background:var(--soft,#eaf0ed)}.article td.num{font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}.lead{font-size:1.05em}.vt{display:inline-block;font-size:.85em;line-height:1.45;padding:0 6px;margin-left:4px;border:1px solid var(--line,#ccd);border-radius:4px;font-weight:600;white-space:nowrap}.legend{font-size:.92em;color:var(--sub,#555)}.src li{font-size:.92em}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h2{font-size:1.15em;margin-top:1.2rem}details.more h3{font-size:1.05em}figure{margin:14px 0}figure img{max-width:100%;height:auto;border:1px solid var(--line,#ccd)}figcaption{font-size:.9em;color:var(--sub,#555)}@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}.article th,.article td{min-width:72px}}</style>
+</head><body>
+<header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof99-top.html">KOF'99</a> / <a href="/research/kof99/index.html">研究アーカイブ</a> / <b>ロバート</b></div></div>
+<main class="main"><div class="wrap article">
+<h1>KOF'99 ロバート：しゃがんだ相手への連続技と技性能</h1>
+<p class="lead">しゃがんだ相手に屈B→屈A→旋燕連舞脚 <span class="vt">強</span> が当たるのは、マキシマ・タクマ・ラルフ・クラーク・ウィップ・キング・マリー・キム・チャンの9キャラです。それ以外のキャラには屈B→屈A→龍斬翔 <span class="vt">弱</span> を決めます。包には屈B→屈Aすら届きません。</p>
 
-<h2>CM中のスーパーキャンセルと端でのカウンターヒット</h2>
-<p><a href="https://x.com/mot_csb/status/1399037786775166984">2021年5月30日の本人投稿</a>の整理。</p>
-<div class="scroll"><table><thead><tr><th>状況</th><th>本人の記録</th><th>条件・確実性</th></tr></thead><tbody>
-<tr><td>CM中の超必殺技</td><td>CM中でも超必殺技の発生が遅くならない。</td><td>本人が記載した性能説明。他作品・全キャラへ一般化しない。</td></tr>
-<tr><td>CM中・屈B始動</td><td>屈B→屈A→<strong>強旋燕連舞脚（2段目）</strong>→SCから、<strong>覇王翔吼拳以外の超必殺技</strong>が連続技になる。</td><td>本人の連続技整理。旋燕連舞脚の「2段目」と除外技を保持。</td></tr>
-<tr><td>相手が画面端</td><td>JCDのカウンターヒット→<strong>無影旋風十段脚</strong>が連続技。MAX版は引き付けて出す必要がある。</td><td>本人が2021年に掲載した条件付きルート。</td></tr>
-<tr><td>STクラーク後</td><td>STクラーク→位置入れ替え→<strong>強龍虎乱舞</strong>が安定して入る「っぽい」。</td><td>本人の暫定的な観察であり、安定を確定検証したと断定しない。</td></tr>
-</tbody></table></div>
-<p>位置入れ替えSTは<a href="./st-position-swap-counterattack-2021-2024.html">既存の比較研究</a>にも言及済み。こちらはロバート固有の他の連続技条件との関連付けが目的であり、同じレシピについて二重の別説を作らない。</p>
-<h3>2003年の旧メモとの技名照合</h3>
-<p><a href="/99memo.html">MOT本人の2003年「KOF'99についてのメモ」</a>にも、ロバートの画面端JCDカウンターヒットからの超必殺技追撃がある。ただし技名表記は<strong>「無影疾風十段脚」</strong>で、2021年のX投稿の<strong>「無影旋風十段脚」</strong>とは一文字異なる。2003年の旧メモは「引きつけて当てること」「安定しない」とし、2021年の投稿は「MAX版は要引き付け」と説明している。内容に共通点はあるが、<strong>両表記を原文のまま残し、同一技の誤記と確定して修正しない</strong>。</p>
+<h2>カウンターモード中とストライカーから</h2>
+<ul>
+<li>カウンターモード中でも、超必殺技の発生が遅くなりません。屈B→屈A→旋燕連舞脚 <span class="vt">強</span>（2段目）→スーパーキャンセルで、覇王翔吼拳以外の超必殺技が連続技になります。</li>
+<li>画面端でJCDがカウンターヒットしたら、無影旋風十段脚が連続技になります（MAX版は引き付けが必要）。2003年のメモでは「無影疾風十段脚（引きつけて当てること。安定しない）」と書いています。</li>
+<li>STクラークからは、位置を入れ替えてからの龍虎乱舞 <span class="vt">強</span> が安定して入るようです。</li>
+<li>GCCDはガード時−3Fで、画面端でカウンターヒットしたら屈Cで追撃できます。</li>
+<li>かわし移動攻撃（発生12F、ヒット時+6F）は、チャンにかわし移動攻撃→遠Aか遠Bが決まります。</li>
+</ul>
 
-<h2>2021年2月7日の通常技・必殺技の着眼点</h2>
-<p><a href="https://x.com/mot_csb/status/1358398081851486208">2021年2月7日の本人投稿</a>では、ロバートは状況ごとに技を調べて使う必要がありそうと評価し、次の5点を「光る部分」として挙げた。</p>
-<div class="scroll"><table><thead><tr><th>技・事項</th><th>本人の記録</th><th>分類</th></tr></thead><tbody>
-<tr><th scope="row">6A</th><td>発生前<strong>4F間が全身無敵</strong>。</td><td>本人の数値記載。</td></tr>
-<tr><th scope="row">強龍斬翔</th><td>発生<strong>4F</strong>。正面からの飛びへの対空になりそう。</td><td>発生値と対空への<strong>戦術予想</strong>を区別。</td></tr>
-<tr><th scope="row">龍撃拳</th><td>既に出した龍撃拳が画面に残っていても、次の龍撃拳を出せる。</td><td>本人の技性能に関する記載。</td></tr>
-<tr><th scope="row">立CD</th><td>判定がかなり強いとの本人評価。</td><td>定量的な判定数値は原文にない。</td></tr>
-<tr><th scope="row">密着強攻撃始動</th><td>密着強攻撃→<strong>21426D</strong>が連続技。</td><td>コマンドは原文表記を保存。技名は推定で補わない。</td></tr>
-</tbody></table></div>
+<h2>技の光る部分</h2>
+<p>なんともいえない調整の技が多く、状況に応じた技を調べて使う必要がありそう、という評価です。そのうえで光る部分は次のとおりです。</p>
+<ul>
+<li>6Aは発生前の4F間が全身無敵</li>
+<li>龍斬翔 <span class="vt">強</span> は発生4Fで、正面からの飛び込みへの対空になりそう</li>
+<li>龍撃拳は、前の龍撃拳が画面に残っていても次が出せる</li>
+<li>立CDの判定がかなり強い</li>
+<li>密着強攻撃→21426Dが連続技になる</li>
+<li>飛燕龍神脚は、相手を飛び越して出しても相手方向に出る（ただ、そこから凶悪な攻めがあるわけでもないので、接近の一手段という程度）</li>
+</ul>
 
-<h2>飛燕龍神脚：飛び越し後の挙動</h2>
-<p><a href="https://x.com/mot_csb/status/1400071775778533376">2021年6月2日の本人投稿</a>では、相手を飛び越してから飛燕龍神脚を出しても相手方向に出てくれると記している。ただし、そこから特に凶悪な攻めがあるわけではなく、接近の一手段程度との本人評価を添えている。単に強力な表裏攻撃と誇張しない。</p>
+<h2>しゃがんだ相手に当たる必殺技（全キャラ）</h2>
+<p>しゃがんだ相手に屈B→屈A→必殺技を当てるとき、強空牙の2段目と弱飛燕旋風脚の2段目が当たるかを全キャラで調べた表です。両方とも×のキャラが厳しく、意外なキャラに強空牙の2段目が当たります。弱飛燕旋風脚の2段目が当たるキャラの一部には、遠A先端→弱飛燕旋風脚が有効なようです。</p>
+<table><thead><tr><th>しゃがんだ相手</th><th>強空牙2段目</th><th>弱飛燕旋風脚2段目</th></tr></thead><tbody>
+<tr><th scope="row">K'</th><td>×</td><td>×</td></tr>
+<tr><th scope="row">マキシマ</th><td>端のみヒット</td><td>ヒット</td></tr>
+<tr><th scope="row">紅丸</th><td>×</td><td>×</td></tr>
+<tr><th scope="row">真吾</th><td>×</td><td>ヒット</td></tr>
+<tr><th scope="row">テリー</th><td>×</td><td>ヒット</td></tr>
+<tr><th scope="row">アンディ</th><td>×</td><td>ヒット</td></tr>
+<tr><th scope="row">ジョー</th><td>×</td><td>×</td></tr>
+<tr><th scope="row">舞</th><td>×</td><td>×</td></tr>
+<tr><th scope="row">リョウ</th><td>×</td><td>ヒット</td></tr>
+<tr><th scope="row">ロバート</th><td>×</td><td>ヒット</td></tr>
+<tr><th scope="row">ユリ</th><td>×</td><td>×</td></tr>
+<tr><th scope="row">タクマ</th><td>×</td><td>ヒット</td></tr>
+<tr><th scope="row">レオナ</th><td>端のみヒット</td><td>×</td></tr>
+<tr><th scope="row">ラルフ</th><td>×</td><td>ヒット</td></tr>
+<tr><th scope="row">クラーク</th><td>×</td><td>ヒット</td></tr>
+<tr><th scope="row">ウィップ</th><td>ヒットする場合あり</td><td>ヒット</td></tr>
+<tr><th scope="row">アテナ</th><td>×</td><td>×</td></tr>
+<tr><th scope="row">ケンスウ</th><td>ヒット</td><td>×</td></tr>
+<tr><th scope="row">チン</th><td>×</td><td>×</td></tr>
+<tr><th scope="row">包</th><td>×</td><td>×</td></tr>
+<tr><th scope="row">キング</th><td>端のみヒット</td><td>ヒット</td></tr>
+<tr><th scope="row">マリー</th><td>ヒット</td><td>ヒット</td></tr>
+<tr><th scope="row">香澄</th><td>×</td><td>ヒット</td></tr>
+<tr><th scope="row">シャンフェイ</th><td>ヒット</td><td>×</td></tr>
+<tr><th scope="row">キム</th><td>×</td><td>ヒット</td></tr>
+<tr><th scope="row">チャン</th><td>ヒット</td><td>ヒット</td></tr>
+<tr><th scope="row">チョイ</th><td>ヒットする場合あり</td><td>×</td></tr>
+<tr><th scope="row">ジョン</th><td>×</td><td>ヒット（不安定）</td></tr>
+<tr><th scope="row">京1</th><td>×</td><td>ヒット</td></tr>
+<tr><th scope="row">京2</th><td>×</td><td>ヒット</td></tr>
+<tr><th scope="row">京</th><td>×</td><td>×</td></tr>
+<tr><th scope="row">庵</th><td>×</td><td>×</td></tr>
+</tbody></table>
+<p class="legend"><a href="https://x.com/mot_csb/status/1399336139018817539">2021/5/31の投稿の画像</a>から書き起こしました。</p>
 
-<h2>2021年原シート：かわし移動攻撃→遠A・遠B（対チャン）</h2><p><a href="./evasion-attacks-hitbox-recovery-2021-2025.html">2021年の本人原Googleシート「かわし移動攻撃関係のデータ」（32キャラ一覧）</a>に、ロバートのかわし移動攻撃は<strong>発生12F、発生前無敵2F、隙9F、ヒット時+6F、ガード時（事前弱−4F／事前強+4F／事前CD+8F）</strong>とある。本人のキャラ別備考には、<strong>かわし移動攻撃→遠Aまたは遠Bがチャンに決まることを確認</strong>と記載されている。これは対チャンの確認例であり、全キャラ・全距離に同じ追撃が入るという意味ではない。タクマにも対チャンで同種の追撃確認が別行にあるが、ロバートとの技性能を同一扱いしない。</p>
-<p>防御側からのまとめは<a href="./chang-iron-ball-chip-throw-matchups-2021-2024.html">チャン研究</a>へ。同じ2021年原表にはタクマのかわし移動攻撃→遠Aまたは遠Bも対チャンで成立するとの本人確認があるが、<strong>ロバートとタクマの発生Fや入力条件まで共通とはしない</strong>。ロバートの確認条件としてチャンの立ち／屈みは原表に明示されていない。</p>
-<h2>対包の補足：屈Cの低い食らい判定への対処案</h2><p><a href="https://x.com/mot_csb/status/1402475426652430340">2021年6月9日のMOT本人投稿</a>では、<strong>包の屈Cで食らい判定がかなり低くなり、相手のジャンプ攻撃が当たらないキャラがいる</strong>と指摘した。その一方でリーチはそこまで長くないと評価し、<strong>ジャンプ攻撃を出さず手前に着地して屈Dなどを当てる</strong>、または<strong>飛び越して背後から連続技を狙う</strong>という対策を考察している。本人は前者を「可能っぽい」、後者を本人の提案として記しており、<strong>キャラ・距離別の成立を確認した一覧ではない</strong>。ロバートの<a href="https://x.com/mot_csb/status/1398971382189285378">対しゃがみ相手の連続技調査</a>では包に屈B→屈Aすら届かないとの別の記録があり、包の低い食らい判定という共通条件を持つが、<strong>屈C使用時と通常のしゃがみ状態は別</strong>。両者の条件を混同しない。</p>
-<h2>2021年5月：屈B→屈A→必殺技のキャラ別調査を横断する本人メモ</h2><p><a href="https://x.com/mot_csb/status/1399336139018817539">2021年5月31日のMOT本人投稿</a>は、屈状態の相手に<strong>屈B→屈A→必殺技</strong>が当たるかを横断的に調べた見解をまとめ、<strong>屈B・屈Aの両方が当たらないキャラは厳しい</strong>と評価している。具体例として、<strong>強空牙の2段目が意外なキャラに当たる</strong>こと、<strong>弱飛燕旋風脚2段目が当たる相手の一部には遠A先端→弱飛燕旋風脚が有効そう</strong>と記載。添付画像には詳しいキャラ別表があるが、<strong>この投稿の文章だけから該当キャラ名を推測で列挙しない</strong>。本記事のロバートの対しゃがみ相手表と、全キャラ横断の低打点連続技の話を区別する。</p>
-<h2>GCCDの別研究へのリンク</h2>
-<p><a href="https://x.com/mot_csb/status/1395333480154759172">2021年5月20日の本人X</a>にあるロバートのGCCD硬直差は<strong>−3F</strong>、画面端カウンターヒット時の屈C追撃を確認。すでに<a href="./gccd-recovery-advantage-2021.html">GCCD硬直差32キャラ一覧</a>に収録しているため、数値表は複製しない。</p>
-<h2>まだ確認が必要な点</h2>
-<p>屈み状態への連続技の詳細な距離、包の例外条件、CM中SCの技ごとの細部、STクラークから強龍虎乱舞の安定度、2003年と2021年の十段脚の技名差は元資料だけで解決しない。<a href="/kof-kininaru.html#kof99">「気になること」</a>に記録した。</p>
-<p><a href="/research/kof99/index.html">KOF'99研究アーカイブへ戻る</a> ／ <a href="/99memo.html">2003年の本人旧メモ</a></p>
-</div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
+<details class="more"><summary>詳しく：包の屈Cへの対処</summary>
+<p>包の屈Cは食らい判定が相当低くなり、ジャンプ攻撃が当たらないキャラがいます。ただしリーチはそれほどでもないので、ジャンプ攻撃を出さずに手前に着地して屈Dなどを当てられるようです。似た対応として、飛び越して背後から連続技を狙うのもありです。</p>
+</details>
+
+<h2>気になること</h2>
+<ul>
+<li>2003年のメモの「無影疾風十段脚」と2021年の「無影旋風十段脚」は同じ技の表記違いか。</li>
+</ul>
+
+<h2>出典</h2>
+<ul class="src">
+<li><a href="https://x.com/mot_csb/status/1398971382189285378">屈B→屈A→強旋燕連舞脚のヒット可否（2021/5/30）</a> ／ <a href="https://x.com/mot_csb/status/1399037786775166984">カウンターモード・JCD・STクラーク（5/30）</a> ／ <a href="https://x.com/mot_csb/status/1358398081851486208">光る部分（2/7）</a> ／ <a href="https://x.com/mot_csb/status/1400071775778533376">飛燕龍神脚（6/2）</a> ／ <a href="https://x.com/mot_csb/status/1399336139018817539">屈B→屈A→必殺技のヒット可否（5/31）</a> ／ <a href="https://x.com/mot_csb/status/1402475426652430340">包対策（6/9）</a> ／ <a href="https://x.com/mot_csb/status/1395333480154759172">GCCD（5/20）</a> ／ <a href="/99memo.html">KOF'99についてのメモ（2003年）</a></li>
+<li>関連：<a href="/research/kof99/evasion-attacks-hitbox-recovery-2021-2025.html">かわし移動攻撃</a> ／ <a href="/research/kof99/st-position-swap-counterattack-2021-2024.html">位置入れ替えST</a> ／ <a href="/kof-kininaru.html#kof99">気になること</a> ／ <a href="/research/kof99/index.html">KOF'99研究アーカイブ</a></li>
+</ul>
+</div></main>
+<footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer>
+</body></html>

@@ -1,67 +1,69 @@
 <!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>KOF'99 マキシマ：確定地震・時間停止・かわし移動攻撃（2012～2024年）｜Come sono bravo?</title>
-<meta name="description" content="MOT本人が2012～2024年に記録したKOF99マキシマのMAXバンカーバスター確定地震、時間停止の入力、GCかわし、フレーム数値を一次資料から整理。">
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>KOF'99 マキシマ：確定地震・時間停止・かわし移動攻撃｜Come sono bravo?</title>
+<meta name="description" content="KOF&#x27;99マキシマのMAX版バンカーバスターによる確定地震のレシピ（相手別）、時間停止の入力と現象、マキシマリベンジャーの硬直差、かわし移動攻撃の性能。">
 <link rel="stylesheet" href="/assets/research.css">
-<style>.article{max-width:1040px}.article h2{margin-top:2rem}.article a{overflow-wrap:anywhere}.article table{width:100%;border-collapse:collapse}.article th,.article td{border:1px solid var(--line,#aaa);padding:9px;text-align:left;vertical-align:top}.article thead th{background:var(--soft,#ecf1ee)}.scroll{overflow-x:auto}.note{border-left:4px solid var(--accent,#416958);background:var(--soft,#ecf1ee);padding:12px 14px}.label{font-weight:700}</style>
+<style>.article{max-width:960px}.article table{width:100%;border-collapse:collapse}.article th,.article td{border:1px solid var(--line,#ccd);padding:6px 8px;overflow-wrap:anywhere;vertical-align:top;text-align:left}.article thead th{background:var(--soft,#eaf0ed)}.article td.num{font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}.lead{font-size:1.05em}.vt{display:inline-block;font-size:.85em;line-height:1.45;padding:0 6px;margin-left:4px;border:1px solid var(--line,#ccd);border-radius:4px;font-weight:600;white-space:nowrap}.legend{font-size:.92em;color:var(--sub,#555)}.src li{font-size:.92em}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h2{font-size:1.15em;margin-top:1.2rem}details.more h3{font-size:1.05em}figure{margin:14px 0}figure img{max-width:100%;height:auto;border:1px solid var(--line,#ccd)}figcaption{font-size:.9em;color:var(--sub,#555)}@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}.article th,.article td{min-width:72px}}</style>
 </head><body>
-<header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
-<div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof99-top.html">KOF'99</a> / <a href="/research/kof99/index.html">研究アーカイブ</a> / <b>マキシマ研究</b></div></div>
-<main class="main"><div class="wrap article"><!-- chara-nav:start --><nav class="chara-nav" aria-label="キャラクター別のページ"><p class="cn-head"><a href="/kof99-top.html#c-maxima">KOF&#x27;99 キャラ選択</a><span>›</span><b>マキシマ</b></p><p class="cn-links"></p><details open><summary>攻略・研究ページ 1件</summary><ul><li><b>マキシマ：確定地震・時間停止・かわし移動攻撃（2012～2024年）</b></li></ul></details></nav><!-- chara-nav:end --><h1>KOF'99 マキシマ：確定地震・時間停止・かわし移動攻撃（2012～2024年）</h1>
-<p class="note">MOT本人のX（Twitter）アーカイブ内の2012～2024年の投稿を対象に、<strong>本人が確認した結果／本人による数値／可能性・原因仮説／後年の追加レシピ</strong>を区別した資料集。新規実測ではない。別の技名が記されている投稿は原文の表記を保持し、推測で訂正しない。</p>
-<h2>研究の経緯：ウィップへの確定地震から相手別レシピへ</h2>
-<ol>
-<li><strong>2012年2月24日：</strong>過去にマキシマの弱ベイパーキャノン→MAXバンカーバスターをウィップに対して「地雷バグでつながる」と本人が確認した旨を回想。<a href="https://x.com/mot_csb/status/172921340616118273">原文</a></li>
-<li><strong>2014年2月27日：</strong>同じ組合せについて「ガード不能地震判定（確定）になったと思う」という回想。2012年の確認記述とは別に、当時の表現を保存。<a href="https://x.com/mot_csb/status/438938211218239489">原文</a></li>
-<li><strong>2023年5月14～31日：</strong>「確定地震（地震バグ）」として、ウィップ以外の対象やフレーム消費を伴う手順を本人が連続投稿。以下の表に整理。<a href="https://x.com/mot_csb/status/1657625437814812672">ウィップ</a> ／ <a href="https://x.com/mot_csb/status/1663877343730077696">追加の対マキシマ</a></li>
-</ol>
-<h2>2024年2月：地震判定の成立と回避についての本人横断整理</h2><p><a href="https://comesonobravo.hatenadiary.org/entry/502398657.html">2024年2月18日のMOT本人記事</a>は、<strong>起き上がる直前に一時的に立ち状態になるタイミングへ地震判定を重ね、ガードできず被弾する現象</strong>を説明し、KOF'99の<strong>MAX版バンカーバスターの1段目</strong>も対象技の例として明記している。その記事では、2023年に他者が報告した<strong>発動できない超投げの入力などによる地震判定回避</strong>について、MOT本人が<strong>KOF'97とKOF'98で再現</strong>したと記している。ただし<strong>KOF'99のマキシマに対して同じ回避方法を検証した結果とは書いていない</strong>ため、99の回避手段として確定扱いしない。地震判定と投げ入力の優先関係は、本人が確認した作品・条件を分けて記録する。</p>
-<h2>2023年の確定地震：相手別に記録された手順</h2>
-<div class="scroll"><table><thead><tr><th>対象</th><th>開始技・時間調整→追撃</th><th>本人投稿の注記・資料状態</th><th>出典</th></tr></thead><tbody>
-<tr><th scope="row">ウィップ</th><td>弱ベイパーキャノン→MAX版バンカーバスター</td><td>本人が「決まります」と明記。2012年の本人回想にも対応。</td><td><a href="https://x.com/mot_csb/status/1657625437814812672">2023/5/14</a></td></tr>
-<tr><th scope="row">同投稿内（対象要照合）</th><td>236C～236C→MAX版バンカーバスター</td><td>セントーンプレスまで出さないのがポイント。ウィップの続きの文章だが、別の対象名の明記はないため相手キャラを断定しない。</td><td><a href="https://x.com/mot_csb/status/1657625437814812672">2023/5/14</a></td></tr>
-<tr><th scope="row">テリー</th><td>強ベイパーキャノン→MAX版マキシマリベンジャー</td><td>本人が「確認」と記述。ただし投稿見出しはMAX版バンカーバスターの確定地震。<strong>見出しと本文で技名が食い違うため、ここでは本文の技名を保持</strong>して要確認とする。強ベイパーキャノンは近めで当てる必要があり、強攻撃キャンセルでも連続技にならず実用度は低いと評価。</td><td><a href="https://x.com/mot_csb/status/1661216011696369664">2023/5/24</a></td></tr>
-<tr><th scope="row">チン</th><td>236A×3→立CD空キャン→MAX版バンカーバスター</td><td>地震バグの続報として本人が掲載。</td><td><a href="https://x.com/mot_csb/status/1663876788911771649">2023/5/31</a></td></tr>
-<tr><th scope="row">真吾・舞</th><td>D投げ→最短ダッシュ→MAX版バンカーバスター</td><td>本人が2キャラの対象名を列挙。入力・ダッシュ距離の数値は未記載。</td><td><a href="https://x.com/mot_csb/status/1663876788911771649">2023/5/31</a></td></tr>
-<tr><th scope="row">K'</th><td>D投げ→後ろかわし→MAX版バンカーバスター</td><td>本人が掲載した相手別のフレーム調整。</td><td><a href="https://x.com/mot_csb/status/1663876788911771649">2023/5/31</a></td></tr>
-<tr><th scope="row">マキシマ</th><td>C投げ→バクステ→MAX版バンカーバスター</td><td>本人が「ダウン回避可能技から」として列挙。</td><td><a href="https://x.com/mot_csb/status/1663877343730077696">2023/5/31</a></td></tr>
-<tr><th scope="row">マキシマ</th><td>屈D→小J攻撃（下降中）→MAX版バンカーバスター</td><td>同じ投稿に列挙。</td><td><a href="https://x.com/mot_csb/status/1663877343730077696">2023/5/31</a></td></tr>
-<tr><th scope="row">マキシマ</th><td>立CD→後ろかわし→MAX版バンカーバスター</td><td>同じ投稿に列挙。</td><td><a href="https://x.com/mot_csb/status/1663877343730077696">2023/5/31</a></td></tr>
-</tbody></table></div>
-<p>ここに書いた「確認」はMOT本人が投稿で用いた記述に基づく。各レシピの成功率、相手の回避操作、空振り時の性質などを資料にないまま補っていない。</p>
-<h3>立CD空中ヒットからのキャラ限定レシピ（2023年5月24日）</h3><p><a href="https://x.com/mot_csb/status/1661361906819694595">MOT本人の2023年5月24日の投稿</a>では、<strong>空中の相手に立CDを当て、236Aなどを空振りさせた後、MAX版バンカーバスターを決める手順</strong>を確認したと明記している。ただし<strong>相手キャラ限定、かつ相手にダウン回避されなかった場合</strong>という二つの制限がある。本人はKOF'98の大門の3C空中ヒット→236Bなど→弱地雷震と同系統のダウン追い打ちと捉えているが、<strong>KOF'99のほうが連続ヒットする状況が狭い</strong>とも述べている。元投稿に成立する相手キャラ名の列挙はないため補わない。</p>
-<h3>3Cを経由する別の条件付き手順</h3>
-<p><a href="https://x.com/mot_csb/status/1662113877235212288">2023年5月26日の本人投稿</a>によれば、3Cはキャンセル版のみキャンセル可能「みたい」で、<strong>近C（1段目空中カウンターヒット）→3C→236A（空振り）→MAX版バンカーバスター</strong>が<strong>ダウン回避しない相手に決まるみたい</strong>と記載。確定した全キャラ用の連続技に変更しない。</p>
-<h3>タイミングに関する本人の説明</h3>
-<p><a href="https://x.com/mot_csb/status/1661217458282446848">2023年5月24日の投稿</a>で、ヒット時の硬直差が<strong>+27F</strong>の場合、直にMAX版バンカーバスターを出すと決まると説明。99マキシマはフレーム消費を使ってタイミングを合わせるのが難しいという評価と、D投げ後の長い有利Fなら可能かもしれないという当時の見通しを記した。その後の5月31日の追加レシピは上表に分けて保存した。</p>
-<h2>時間停止の入力と現象（2023年）</h2>
-<div class="scroll"><table><thead><tr><th>6321463214入力後</th><th>2023/5/5の本人記録</th></tr></thead><tbody>
+<header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof99-top.html">KOF'99</a> / <a href="/research/kof99/index.html">研究アーカイブ</a> / <b>マキシマ</b></div></div>
+<main class="main"><div class="wrap article">
+<h1>KOF'99 マキシマ：確定地震・時間停止・かわし移動攻撃</h1>
+<p class="lead">マキシマのバンカーバスター <span class="vt">MAX</span> の1段目は地震判定です。相手が起き上がる直前の立ち状態になるタイミングに重ねるとガードできず、確定地震（地震バグ）になります。例えばウィップには、ベイパーキャノン <span class="vt">弱</span>→バンカーバスター <span class="vt">MAX</span> が決まります。</p>
+<p>確定地震の仕組みと回避方法は<a href="/kof-kakuteizirai.html">KOFシリーズ 確定地雷震まとめ</a>にあります。</p>
+
+<h2>確定地震のレシピ</h2>
+<table><thead><tr><th>相手</th><th>レシピ</th></tr></thead><tbody>
+<tr><th scope="row">ウィップ</th><td>ベイパーキャノン <span class="vt">弱</span>→バンカーバスター <span class="vt">MAX</span><br>236C～236C→バンカーバスター <span class="vt">MAX</span>（セントーンプレスまで出さないのがポイント）</td></tr>
+<tr><th scope="row">チン</th><td>236A×3→立CD空キャンセル→バンカーバスター <span class="vt">MAX</span></td></tr>
+<tr><th scope="row">真吾・舞</th><td>D投げ→最短ダッシュ→バンカーバスター <span class="vt">MAX</span></td></tr>
+<tr><th scope="row">K’</th><td>D投げ→後ろかわし→バンカーバスター <span class="vt">MAX</span></td></tr>
+<tr><th scope="row">マキシマ</th><td>C投げ→バックステップ→バンカーバスター <span class="vt">MAX</span><br>屈D→小ジャンプ攻撃（下降中）→バンカーバスター <span class="vt">MAX</span><br>立CD→後ろかわし→バンカーバスター <span class="vt">MAX</span><br>（ダウン回避できる技から）</td></tr>
+<tr><th scope="row">テリー</th><td>ベイパーキャノン <span class="vt">強</span>→マキシマリベンジャー <span class="vt">MAX</span>（投稿の本文の表記。見出しはMAX版バンカーバスター）。強ベイパーキャノンは近めで当てる必要があり、強攻撃キャンセルでも連続技にならないので実用度は低そうです</td></tr>
+</tbody></table>
+<p>ヒット時の硬直差が+27Fの技なら、直接バンカーバスター <span class="vt">MAX</span> を出すと決まります。ただしKOF'99のマキシマはフレーム消費でタイミングを合わせるのが難しく、D投げのように有利フレームが長い技ならいけるかも、という見通しから上のレシピを探しています。</p>
+<figure><img src="https://pbs.twimg.com/media/Fw3T-rKacAAkvkt.png" alt="確定地震のタイミングの調べ方" loading="lazy"><figcaption>調べ方（<a href="https://x.com/mot_csb/status/1661217458282446848">2023/5/24</a>）</figcaption></figure>
+
+<h3>ダウン追い打ちとして決める</h3>
+<ul>
+<li>空中の相手に立CD→236Aなどを空振り→バンカーバスター <span class="vt">MAX</span> が、相手キャラ限定で、ダウン回避されなかった場合に連続ヒットします。KOF'98大門の「3C空中ヒット→236Bなど→弱地雷震」と同じ系統のダウン追い打ちですが、連続ヒットする状況はこちらの方が限られます。</li>
+<li>3Cはキャンセル版だけキャンセルできるようで、近C（1段目空中カウンターヒット）→3C→236A（空振り）→バンカーバスター <span class="vt">MAX</span> がダウン回避しない相手に決まるようです。</li>
+</ul>
+
+<h2>時間停止</h2>
+<p>6321463214と入力した後のボタンで、次のように変わります。</p>
+<table><thead><tr><th>ボタン</th><th>結果</th></tr></thead><tbody>
 <tr><th scope="row">AB同時押し</th><td>かわし移動が出る</td></tr>
 <tr><th scope="row">BC同時押し</th><td>ST呼び出しになる</td></tr>
-<tr><th scope="row">AD同時押し</th><td>時間停止可能、立Aが出る</td></tr>
-</tbody></table></div>
-<p>出典：<a href="https://x.com/mot_csb/status/1654515347712790533">2023/5/5の本人投稿</a>。別の<a href="https://x.com/mot_csb/status/1654517233459298305">同日投稿</a>によると、ジャンプ攻撃ヒット後の着地で時間停止を起こせる。一方、AD同時押しで立Aを出しても間に合っているように見えるのに空振りする場合があると記した。ヒットストップの無敵中にすり抜ける可能性という<strong>原因仮説</strong>は、確認済みの現象と区別する。</p>
-<p><a href="https://x.com/mot_csb/status/1824406655842517261">2024年8月16日の本人投稿</a>では、マキシマリベンジャーを出せない状態でも相手の時間を止められると述べ、投げ相殺に似た処理が原因なのではないかと推測している。<strong>原因は推測</strong>であり、エンジン内の処理は断定していない。</p>
-<h3>逆に確認できなかった事項</h3>
-<p><a href="https://x.com/mot_csb/status/1823319720315248860">2024年8月13日の本人投稿</a>には、マキシマのMAX版バンカーバスターの出始めにガードポイントがあるため特定の確認ができなかった旨がある。同じ投稿にKOF2001・KOF2002での再現不可という記録があるが、<strong>省略された前提の実験対象を推測で埋めず</strong>、1999版での地震バグ一般の否定とは扱わない。</p>
-<h2>2021年のかわし移動攻撃の数値</h2>
-<p><a href="https://x.com/mot_csb/status/1357639297994682368">2021年2月5日の本人投稿</a>の表記を保持する。</p>
-<div class="scroll"><table><thead><tr><th>項目</th><th>本人の記録</th></tr></thead><tbody>
-<tr><th scope="row">予備動作</th><td>5F［全身無敵］＋3F</td></tr>
-<tr><th scope="row">発生</th><td>9F</td></tr>
-<tr><th scope="row">持続</th><td>5F</td></tr>
-<tr><th scope="row">硬直</th><td>12F</td></tr>
-<tr><th scope="row">全体</th><td>25F</td></tr>
-<tr><th scope="row">ガード時</th><td>−7F／+1／+5（原文に3種類の値が並ぶが、条件の明示なし）</td></tr>
-<tr><th scope="row">ヒット時</th><td>+3（原文表記）</td></tr>
-</tbody></table></div>
-<p>ガード時の3つの数値は原文に条件の説明がない。攻撃距離や先端当ての差などと解釈して断定しない。本人は屈Bを連打できるキャラなら対処できるかもしれないと述べているが、これは<strong>対応案</strong>であり、確定した対策ではない。</p>
-<p><a href="https://x.com/mot_csb/status/1683389742082310144">2023年7月24日の本人投稿</a>で、ラルフのGCかわし攻撃→強ガトリングアタックを検証したところ、マキシマのかわし攻撃に対しては確定しなかったと明記。限定された検証手順なので、すべてのGCかわし攻撃が不成立と一般化しない。</p>
-<h2>他の確認事項</h2>
+<tr><th scope="row">AD同時押し</th><td>時間停止できて、立Aが出る</td></tr>
+</tbody></table>
 <ul>
-<li><strong>MAX版マキシマリベンシャー：</strong><a href="https://x.com/mot_csb/status/1661363435899355137">2023年5月24日の本人投稿</a>で、ラルフにヒットさせてもマキシマ側が8F不利になると確認。端近くでは連続技で反撃されるという評価。<strong>マキシマリベンジャーとは別の技名</strong>として原文を保持する。</li>
-<li><strong>かわし攻撃へのジャンプ対策：</strong><a href="https://x.com/mot_csb/status/1361684168288006144">2021年2月16日の本人投稿</a>は、前方ノーマルJを合わせて背後に着地し連続技で反撃した対戦配信を回想。本人自身による再検証済みとはしない。</li>
-<li><strong>旧来の未解決疑問：</strong><a href="https://x.com/mot_csb/status/1393110773946195972">2021年5月14日の本人投稿</a>に「GCCD（CH）→時間停止→追撃は可能か」がある。後の時間停止入力の調査だけをもって、この特定ルートが解決したと判断しない。</li>
+<li>ジャンプ攻撃をヒットさせた後の着地に時間停止を起こせます。</li>
+<li>ただし、AD同時押しで立Aを出すと、明らかに間に合っているのに空振りすることがあります。相手のヒットストップの無敵中にすり抜けている可能性があります。</li>
+<li>出せない状態のマキシマリベンジャーでも相手の時間を止められます。おそらく投げ相殺のようなことが起きている、という推測です（「この頃の新キャラの挙動は何かがおかしい」）。</li>
 </ul>
-<p><a href="/research/kof99/index.html">KOF'99研究アーカイブへ戻る</a> ／ <a href="/kof-kininaru.html#kof99">気になること・照合課題</a></p>
-</div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
+
+<details class="more"><summary>詳しく：マキシマリベンジャーの硬直差、かわし移動攻撃</summary>
+<ul>
+<li>マキシマリベンジャー <span class="vt">MAX</span> をラルフに決めても、マキシマ側が8F不利です。端近くでヒットさせると連続技で反撃されます（「確定レシピどころの話じゃなくなりましたね」）。</li>
+<li>かわし移動攻撃は、予備動作5F（全身無敵）＋3F、発生9F、持続5F、硬直12F、全体25F、ガード時−7F／+1F／+5F、ヒット時+3Fです。「かなり厄介な性能」で、屈Bの連打がきくキャラなら屈B連打で追い払えるかもしれません。対戦配信では、前方ノーマルジャンプをかみ合わせて背後に着地し、連続技を決めていました。ラルフのGCかわし移動攻撃は確定しませんでした（<a href="/research/kof99/evasion-attacks-hitbox-recovery-2021-2025.html">かわし移動攻撃</a>）。</li>
+<li>2024年8月には、バンカーバスター <span class="vt">MAX</span> の出始めにガードポイントがあるので確認できなかったこと、KOF2001・2002では再現できなかったこと（バグ取りが行われている感じ）を書いています。</li>
+</ul>
+</details>
+
+<h2>気になること</h2>
+<ul>
+<li>GCCD（カウンターヒット）→時間停止→追撃はできるか（2021年の疑問）。</li>
+<li>テリーへのレシピの最後は、バンカーバスターかマキシマリベンジャーか（投稿の見出しと本文で違う）。</li>
+</ul>
+
+<h2>出典</h2>
+<ul class="src">
+<li>確定地震：<a href="https://x.com/mot_csb/status/172921340616118273">ウィップに地雷バグ（2012/2/24）</a> ／ <a href="https://x.com/mot_csb/status/438938211218239489">2014/2/27</a> ／ <a href="https://x.com/mot_csb/status/1657625437814812672">ウィップ（2023/5/14）</a> ／ <a href="https://x.com/mot_csb/status/1661216011696369664">テリー（5/24）</a> ／ <a href="https://x.com/mot_csb/status/1661217458282446848">調べ方（5/24）</a> ／ <a href="https://x.com/mot_csb/status/1663876788911771649">チン・真吾・舞・K’（5/31）</a> ／ <a href="https://x.com/mot_csb/status/1663877343730077696">マキシマ（5/31）</a> ／ <a href="https://x.com/mot_csb/status/1661361906819694595">ダウン追い打ち（5/24）</a> ／ <a href="https://x.com/mot_csb/status/1662113877235212288">3C（5/26）</a> ／ <a href="https://comesonobravo.hatenadiary.org/entry/502398657.html">確定地雷震を回避する新たな方法（2024/2/18）</a> ／ <a href="https://x.com/mot_csb/status/1823319720315248860">2024/8/13</a></li>
+<li>時間停止：<a href="https://x.com/mot_csb/status/1654515347712790533">入力とボタン（2023/5/5）</a> ／ <a href="https://x.com/mot_csb/status/1654517233459298305">着地・すり抜け（5/5）</a> ／ <a href="https://x.com/mot_csb/status/1824406655842517261">出せない状態でも止められる（2024/8/16）</a> ／ <a href="https://x.com/mot_csb/status/1393110773946195972">GCCDからの疑問（2021/5/14）</a></li>
+<li>そのほか：<a href="https://x.com/mot_csb/status/1661363435899355137">8F不利（2023/5/24）</a> ／ <a href="https://x.com/mot_csb/status/1357639297994682368">かわし移動攻撃（2021/2/5）</a> ／ <a href="https://x.com/mot_csb/status/1361684168288006144">対策（2/16）</a> ／ <a href="https://x.com/mot_csb/status/1683389742082310144">GCかわし攻撃（2023/7/24）</a></li>
+<li>関連：<a href="/kof-kininaru.html#kof99">気になること</a> ／ <a href="/research/kof99/index.html">KOF'99研究アーカイブ</a></li>
+</ul>
+</div></main>
+<footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer>
+</body></html>
