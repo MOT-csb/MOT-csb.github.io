@@ -1,20 +1,25 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'98UM：2008年のCPU戦試遊と対戦用パターンの評価｜Come sono bravo?</title><meta name="description" content="MOTの2008年3月21日CPU戦メモ。対戦相手別の観察と戦術候補を区別。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:1030px}.article h2{margin-top:2rem}.article h3{margin-top:1.3rem}.article a{overflow-wrap:anywhere}.note{padding:12px 16px;border-left:4px solid var(--accent,#567);background:var(--soft,#edf1ed)}.scroll{max-width:100%;overflow-x:auto}.article table{min-width:620px;width:100%;border-collapse:collapse}.article th,.article td{border:1px solid var(--line,#aaa);padding:10px;vertical-align:top;text-align:left}.article th{background:var(--soft,#edf1ed)}.tag0{font-size:.9rem;color:var(--muted,#555)}.article li{margin:.35em 0}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/kof-top.html">KOF</a><span aria-hidden="true"> / </span><a href="/kof98um-top.html">KOF'98UM</a><span aria-hidden="true"> / </span><a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'98UM：2008年のCPU戦試遊と対戦用パターンの評価</h1>
-<p class="note"><strong>資料区分：</strong>2008年3月21日のMOT本人による、KOF'98UMの<strong>CPU戦の試遊記録</strong>。本人は冒頭で、<strong>その店の難易度設定が低かった</strong>ことを明記している。この場面で観察した行動を全難易度・全バージョンのCPU仕様として一般化しない。</p>
-<h2>検証の進め方についての本人の提案</h2>
-<p>MOTは、CPU相手に対人戦のように動こうとすると超反応で反撃されやすいと感じ、<strong>CPU側の行動パターンを覚える</strong>方が安定しやすいと評価した。技性能の調査をしたい場合は前半に試し、残り体力でパターンを利用して倒すという進め方を提案している。これは当時の本人の攻略上の意見。</p>
-<h2>CPUへの技の重ね方</h2>
-<p>ダウンしない技を空中ヒットさせた後の着地に技を重ねると、追撃が確定しそうだと考察。<strong>表テリー弱パワーチャージ→昇り大JD→近D</strong>を例示したが、原文は<strong>「っぽい」</strong>という留保付き。</p>
-<p>ジャンプ攻撃をガードしたCPUが立ちガードのままで下段技を食らうことがあるとし、<strong>裏テリーJCD→近D→弱ファイヤーキック</strong>を例示。CPUの防御挙動の観察であり、対人戦でガード不能とする内容ではない。</p>
-<h2>対CPUキャラ別の本人メモ</h2>
-<div class="scroll"><table><thead><tr><th>CPUキャラ</th><th>本人の観察</th><th>当時の対策・留保</th></tr></thead><tbody>
-<tr><td>紅丸</td><td>コレダー、特にダッシュコレダーを積極的に使う印象。</td><td>無防備な様子見を避けたほうがよいと評価。</td></tr>
-<tr><td>キム</td><td>強半月斬を高い頻度で出すと感じた。</td><td>反撃を覚えるか、無敵技で対応する案。</td></tr>
-<tr><td>ビッグ</td><td>飛び込みへの反応が非常に速いと観察。</td><td>飛び込まず飛び道具等で削る戦術案。</td></tr>
-<tr><td>真吾</td><td>緊急回避と真吾キックを多用すると評価。</td><td>守りから反撃する方法を推奨。</td></tr>
-<tr><td>ゲーニッツ</td><td>前進する場合がある、近距離で「ここですか」を出す場合があると記録。</td><td>コマンド投げを狙う、近めの「ここですか」にはモーション確認からジョー遠D等で反撃する案。</td></tr>
-<tr><td>オメガルガール</td><td>飛び道具を誘うとジョーのスラッシュキックが機能すると記録。</td><td>ダウンさせて大Jで飛び越えるとジェノサイドを誘発でき、連続技へつなげられると説明。</td></tr>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'98UM：CPU戦の相手別の動きと倒し方｜Come sono bravo?</title><meta name="description" content="98UMのCPU戦はパターンを覚えてハメるのが基本。紅丸・キム・ビッグ・真吾・ゲーニッツ・オメガルガールの動きと対策（2008年）。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:1030px}.article h2{margin-top:2rem}.article h3{margin-top:1.3rem}.article a{overflow-wrap:anywhere}.note{padding:12px 16px;border-left:4px solid var(--accent,#567);background:var(--soft,#edf1ed)}.scroll{max-width:100%;overflow-x:auto}.article table{min-width:620px;width:100%;border-collapse:collapse}.article th,.article td{border:1px solid var(--line,#aaa);padding:10px;vertical-align:top;text-align:left}.article th{background:var(--soft,#edf1ed)}.tag0{font-size:.9rem;color:var(--muted,#555)}.article li{margin:.35em 0}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/kof-top.html">KOF</a><span aria-hidden="true"> / </span><a href="/kof98um-top.html">KOF'98UM</a><span aria-hidden="true"> / </span><a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'98UM：CPU戦の相手別の動きと倒し方（2008年）</h1>
+<p>98UMのCPUは、対戦のつもりで動くと超反応でやられることがあるので、<strong>基本はパターンを覚えてハメるのがよい</strong>、という感想です。調べ物をしたいときは、体力の半分くらいまで試してから、残りはパターンで倒せば安定しそうだとしています。2008年3月21日の試遊で、その店の難易度設定は低かったので参考程度に、と断っています。</p>
+
+<h2>CPU全般</h2>
+<ul>
+<li>ダウンしない技を空中でヒットさせ、着地に技を重ねると確定しそう。表テリーで弱パワーチャージ→昇り大JD→近Dが決まるらしい。</li>
+<li>J攻撃→立ち状態に下段技、が相変わらず決まる。裏テリーでJC＋D→近D→弱ファイヤーキックとつなげると、CPUは立ちガードのまま食らう。</li>
+</ul>
+
+<h2>相手別</h2>
+<div class="scroll"><table><thead><tr><th>CPU</th><th>動き</th><th>対策</th></tr></thead><tbody>
+<tr><td>紅丸</td><td>コレダーの比率が高い気がする。ダッシュからも積極的に狙ってくる</td><td>様子見はしない</td></tr>
+<tr><td>キム</td><td>強半月斬を高い確率で出してくる</td><td>反撃技を覚えて反撃するか、反応して無敵技で返す</td></tr>
+<tr><td>ビッグ</td><td>超反応で飛び込みを落としてくる</td><td>飛び込まずに飛び道具などで削る</td></tr>
+<tr><td>真吾</td><td>相変わらず緊急回避と真吾キックが大好き</td><td>守ってから反撃すれば楽</td></tr>
+<tr><td>ゲーニッツ</td><td>前進してくることがある。近めの距離で「ここですか」を出してくる</td><td>コマンド投げのあるキャラは投げで吸えそう。近めの「ここですか」は、モーションを見てからジョーの遠Dなどが決まる</td></tr>
+<tr><td>オメガルガール</td><td>飛び道具を誘うと出してくる</td><td>ジョーのスラッシュキックが相変わらず決まる。ダウンさせたら起き上がりに大ジャンプで飛び越えるとジェノサイドカッターを誘え、連続技を決められる</td></tr>
 </tbody></table></div>
-<p>これらの相手行動は<strong>試遊した店舗の設定に依存する可能性</strong>がある。出現率・反応F・他CPU設定の検証は原記事にはない。</p>
-<h2>原資料・関連</h2>
-<p><a href="https://comesonobravo.hatenadiary.org/entry/2008/03/21/212824">2008/03/21：98UMやってきました その３（対CPU戦雑感）</a>（MOT本人ブログ） ／ <a href="./system-playtest-2008.html">同日のシステム試遊メモ</a>。</p>
-<p><a href="./index.html">KOF'98UM研究アーカイブへ戻る</a> ／ <a href="/kof98um-top.html">KOF'98UM作品トップ</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?</div></footer></body></html>
+
+<h2>コメント欄の報告</h2>
+<p>カズユキさんから、CPU庵はダッシュから屑風をかなり多くやってくること、アテナにガード不能連係をやられたことが報告されています。これに対して、ダッシュを見たら暴れるか垂直小ジャンプする、アテナにはリバーサル大ジャンプかあらぶる大地を出さないとまずい、と返信しています。</p>
+
+<p>出典：<a href="https://comesonobravo.hatenadiary.org/entry/2008/03/21/212824">2008/03/21：98UMやってきました その３（対CPU戦雑感）</a></p>
+<p><a href="./system-playtest-2008.html">同じ日のシステム試遊</a> ／ <a href="./umfe-adjustment-first-play-2010-2011.html">98UMFEのCPU戦（2011年）</a> ／ <a href="./index.html">KOF'98UM研究アーカイブへ戻る</a></p>
+</div></main><footer class="footer"><div class="wrap">Come sono bravo?</div></footer></body></html>

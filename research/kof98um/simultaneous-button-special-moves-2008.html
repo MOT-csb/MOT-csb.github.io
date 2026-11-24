@@ -1,30 +1,40 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'98UM：特殊版雷神剛・アンリミを同時押しから考える仮説（2008年）｜Come sono bravo?</title><meta name="description" content="MOT本人の2008年9月のABCD探索案と、AC雷神剛・BCアンリミの処理仮説。確認済み仕様と未検証の入力候補を区別。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:1010px}.article h2{margin-top:2rem}.article h3{margin-top:1.3rem}.article a{overflow-wrap:anywhere}.note{border-left:4px solid var(--accent,#567);background:var(--soft,#edf1ed);padding:12px 16px}.article table{border-collapse:collapse;width:100%}.article td,.article th{border:1px solid var(--line,#b8b8b8);padding:9px;text-align:left;vertical-align:top}.article th{background:var(--soft,#edf1ed)}.scroll{overflow-x:auto}.article ul li,.article ol li{margin:.4rem 0}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof98um-top.html">KOF'98UM</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'98UM：特殊版雷神剛・アンリミを同時押しから考える仮説（2008年）</h1><p class="note"><strong>2008年9月19日・23日の本人ブログが一次資料。</strong> 特殊性能が生じる原因について、MOTがKOF'94・'95の弱強属性切替を参考に組み立てた<strong>仮説</strong>。原文自身が仮説と明記し、本人は98UMのソフトを持っておらず追加検証できないと記録。<strong>内部処理の解明済み仕様とはしない。</strong></p>
-<h2>特殊性能を持つ技を探す方法（9月19日）</h2>
-<p>MOTは表リョウの特殊雷神剛、クラウザーの特殊アンリミテッドデザイアーがボタン同時押しで生じるという情報を基に、ほかの必殺技にも同じ現象がないか調べる手順を提案した。</p>
-<ol><li>調べたい技のレバーコマンドと<strong>ABCD全同時押し</strong>を組み合わせる。</li><li>通常の弱性能と異なる技が出るかを観察する。</li><li>通常と異なる技が見つかったら、<strong>ABCDからボタンを減らし、成立する最低限の同時押し組み合わせ</strong>を絞り込む。</li></ol>
-<p>本人は全同時押しなら通常は弱性能が出るはずと考えたが、それも探索の前提であり<strong>全キャラ・全技で検証された保証条件ではない</strong>。</p>
-<h2>9月23日：MOTが考えた内部処理の仮説</h2>
-<p>本人は2種類の技のコマンドが同時に成立した場合、優先順位の高い技がまず始動し、<strong>その後の動作の一部が、まだ残っている低優先順位のコマンドの弱強属性に影響される</strong>のではないかと推測した。技の動作が内部的に複数タスクに分かれる、というのも本人の仮説。</p>
-<div class="scroll"><table><thead><tr><th>例</th><th>本人の想定した入力と分岐</th><th>原因解釈の状態</th></tr></thead><tbody>
-<tr><td>リョウ・AC雷神剛</td><td><strong>214＋AC同時押し</strong>により、まず214＋Aが成立し、途中から214＋Cの<strong>強性能</strong>へ切り替わるのではないか。</td><td>動作途中で切り替わるという内部説明は仮説。</td></tr>
-<tr><td>クラウザー・BCアンリミ</td><td><strong>2363214＋BC同時押し</strong>で強アンリミと弱下段ブリッツボールが成立し、最後のレッグトマホーク部分が<strong>弱性能</strong>へ切り替わり硬直が短くなるのではないか。</td><td>コマンド重複と弱強属性の影響は仮説。</td></tr>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'98UM：特殊版の雷神剛・BCアンリミと同時押し｜Come sono bravo?</title><meta name="description" content="98UMの表リョウのAC雷神剛やクラウザーのBCアンリミが特殊性能になる仕組みの仮説と、愚民さん・あずささんの試した結果、特殊版を探す方法（2008年）。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:1010px}.article h2{margin-top:2rem}.article h3{margin-top:1.3rem}.article a{overflow-wrap:anywhere}.note{border-left:4px solid var(--accent,#567);background:var(--soft,#edf1ed);padding:12px 16px}.article table{border-collapse:collapse;width:100%}.article td,.article th{border:1px solid var(--line,#b8b8b8);padding:9px;text-align:left;vertical-align:top}.article th{background:var(--soft,#edf1ed)}.scroll{overflow-x:auto}.article ul li,.article ol li{margin:.4rem 0}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof98um-top.html">KOF'98UM</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'98UM：特殊版の雷神剛・BCアンリミと同時押し（2008年）</h1>
+<p>98UMでは、表リョウの雷神剛を<strong>214＋AC同時押し</strong>、クラウザーのアンリミテッドデザイアを<strong>BC同時押し</strong>で出すと、通常と違う性能の技（特殊版）になります。2008年9月、なぜそうなるのかの仮説と、ほかの技から特殊版を探す方法を書いたところ、コメント欄で愚民さん・あずささんが試した結果を報告してくれました。特殊雷神剛を見つけたのはalucardさんです（<a href="./ura-ryo-kohou-damage-after-ryukoranbu-2008.html">2008年7月の記事</a>）。</p>
+
+<h2>仕組みの仮説</h2>
+<p>KOF'94・'95の必殺技の弱強属性の切り替えの仕組みを当てはめた仮説です。</p>
+<ol>
+<li>2つの技のコマンドを同時に成立させる。</li>
+<li>優先順位の高い技が成立し、動き始める。</li>
+<li>成立した直後も、優先順位の低い技のコマンドが残っているので、内部的にはそちらも成立したことになる。</li>
+<li>必殺技の動作がいくつかの処理に分かれて実行されているなら、途中の動作で弱・強の性能差がある部分が、優先順位の低い技の性能に変わる。</li>
+</ol>
+<div class="scroll"><table><thead><tr><th>技</th><th>入力</th><th>仮説での流れ</th></tr></thead><tbody>
+<tr><td>表リョウ：AC雷神剛</td><td>214＋AC同時押し</td><td>優先順位の高い214＋Aが成立し、動作の途中で214＋C（強性能）に切り替わる</td></tr>
+<tr><td>クラウザー：BCアンリミ</td><td>2363214＋BC同時押し</td><td>弱の下段ブリッツボール（214＋B）と強アンリミのコマンドが同時に成立。優先順位の高い強アンリミが出るが、途中で弱下段ブリッツボールの「弱」性能の影響を受け、最後のレッグトマホークが弱性能になって硬直が減る</td></tr>
 </tbody></table></div>
-<h2>本人が提案した追加検証</h2>
-<ul><li><strong>庵：</strong>強葵花を出したあと、2段目に63214＋BCまたは214＋ACの入力を加えると弱性能へ変わるか。</li>
-<li><strong>クラウザー：</strong>BCアンリミを23624＋BCで入力すると、214＋Bが成立せず特殊性能にならないか。</li>
-<li><strong>クラウザー：</strong>BC以外にAB同時押し、AD同時押しでも特殊性能が出せるか。</li></ul>
-<p>これらは<strong>本人が試してみたいと挙げた未検証案</strong>で、成立の報告ではない。なお、2008年7月10日の別記事に出てくる裏リョウの強虎咆ダメージ変化は<strong>alucardさんからの情報</strong>であり、MOT自身が初発見・実測した結果とは異なる。特殊雷神剛の発見者についても本人はalucardさんと明記している。</p>
-<h2>2008年9月23日のコメント欄で行われた追加検証</h2>
-<p><strong>重要な資料区分：</strong>以下はMOTの理論を見た<strong>愚民さん・あずささんによる試行報告</strong>と、それを受けたMOTの解釈である。MOT自身が98UMソフトで試した結果ではない。ブログ本文が仮説だったことと、コメント欄に後から実際の入力報告が付いたことを両方残す。</p>
-<div class="scroll"><table><thead><tr><th>提供者・日時</th><th>報告された入力と観測</th><th>判断上の留保</th></tr></thead><tbody>
-<tr><td>愚民さん・9/23 17:45</td><td><code>23624BC</code>では当初特殊アンリミにならず、<code>236214BC</code>では特殊アンリミになった。その後は<code>23624BC</code>でも特殊になり、通常アンリミを出すと再び<code>23624BC</code>では特殊にならなくなった。</td><td>入力・直前の技の履歴により変化したとの第三者報告。コマンド履歴や内部フラグの存在・寿命の確定解明ではない。</td></tr>
-<tr><td>愚民さん・同日</td><td>クラウザーの同時押しでは<code>AB</code>で特殊アンリミになり、<code>AD</code>と<code>CD</code>ではならなかったと報告。</td><td>一人の試行報告。全入力環境での再現性は未確認。</td></tr>
-<tr><td>あずささん・9/23 22:29</td><td>リョウの<code>63214+AD</code>では特殊雷神剛ではなく<strong>強飛燕疾風脚</strong>が出た。本人入力とコマンドメニューの双方で試したと説明。</td><td>雷神剛が発動するという提案の不成立報告。すべてのボタン組み合わせや条件を否定するものではない。</td></tr>
+
+<h2>試した結果（コメント欄）</h2>
+<p>98UMのソフトを持っていないので試せない、と書いたところ、次の報告がありました。</p>
+<div class="scroll"><table><thead><tr><th>報告</th><th>結果</th></tr></thead><tbody>
+<tr><td>クラウザー：23624＋BC（愚民さん）</td><td>最初は特殊版にならなかった。236214＋BCにすると特殊版になり、その後は23624＋BCでも特殊版になった。通常のアンリミを出すと、再び23624＋BCでは特殊版にならなくなった</td></tr>
+<tr><td>クラウザー：ほかの同時押し（愚民さん）</td><td>ABは特殊版になった。ADとCDはならなかった</td></tr>
+<tr><td>表リョウ：63214＋AD（あずささん）</td><td>雷神剛ではなく強飛燕疾風脚が出た。自分で入力しても、コマンドメニューでも同じ</td></tr>
 </tbody></table></div>
-<p>MOTは9/23 22:05の返答で、<code>214B</code>とアンリミの入力が同時に成立すると特殊なフラグが成立する<strong>ように感じられる</strong>と考察した。しかしこれはコメント結果からの<strong>内部処理仮説</strong>。同日22:51の返答では飛燕疾風脚のほうが雷神剛より優先順位が高いようだと推測した。いずれも内部コード解析による確定事項ではない。</p>
-<p>これらのテストは原ブログの<strong>COMMENTセクション</strong>に存在する。元記事の本文だけで検証状況を判断すると、第三者の結果を見落とす。</p>
-<h2>原資料・関連</h2>
-<ul><li><a href="https://comesonobravo.hatenadiary.org/entry/2008/09/19/233721">2008/09/19：特殊性能（超）必殺技を探す方法</a></li>
-<li><a href="https://comesonobravo.hatenadiary.org/entry/2008/09/23/152628">2008/09/23：特殊性能の仕組みについての考察</a></li>
-<li><a href="https://comesonobravo.hatenadiary.org/entry/2008/07/10/211321">2008/07/10：裏リョウ強虎咆バグ（情報提供者alucardさん）</a></li></ul>
-<p><a href="/research/kof94/index.html">KOF'94研究アーカイブ</a> ／ <a href="/kof-kininaru.html#kof98um">気になること</a></p><p><a href="./index.html">KOF'98UM研究アーカイブへ戻る</a> ／ <a href="/kof98um-top.html">作品トップ</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?</div></footer></body></html>
+<p>愚民さんの結果から、214Bとアンリミのコマンドが同時に成立すると特殊なフラグが立つような感じがする、23624BCだけでは出ないと分かったのは大きい、と返信しています。あずささんの結果からは、飛燕疾風脚のほうが雷神剛より優先順位が高いようだ、と考えています。</p>
+
+<h2>特殊版を探す方法</h2>
+<ol>
+<li>調べたい技のレバー部分＋ABCD全部の同時押しで出す。同時押しができていれば、ふつうは弱性能の技が出るはず。</li>
+<li>弱性能と違う技が出たら、特殊版の可能性がある。</li>
+<li>性能を確かめながらボタンを減らし、出すのに必要な最低限の同時押しの組み合わせを探す。</li>
+</ol>
+
+<h2>残っている疑問</h2>
+<ul>
+<li>庵で214C＋Cの強葵花を出した後、63214＋BCか214＋ACの同時押しをすると、葵花の2段目が弱性能になるか（2008年に試してみたいと書いた案）。</li>
+<li>特殊版のアンリミが、直前に出した技によって出たり出なかったりするのはなぜか。</li>
+</ul>
+<p>出典：<a href="https://comesonobravo.hatenadiary.org/entry/2008/09/19/233721">2008/09/19：特殊性能（超）必殺技探しの方法について</a> ／ <a href="https://comesonobravo.hatenadiary.org/entry/2008/09/23/152628">2008/09/23：特殊性能（超）必殺技の仕組みについての考察</a>（コメント欄に愚民さん・あずささんの報告）</p>
+<p><a href="./krauser-unlimited-sobat-counterplay-2008.html">クラウザー：アンリミテッドデザイアの対策</a> ／ <a href="/research/kof94/index.html">KOF'94研究アーカイブ</a> ／ <a href="/kof-kininaru.html#kof98um">気になること（98UM）</a> ／ <a href="./index.html">KOF'98UM研究アーカイブへ戻る</a></p>
+</div></main><footer class="footer"><div class="wrap">Come sono bravo?</div></footer></body></html>
