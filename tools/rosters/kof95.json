@@ -418,7 +418,12 @@
      "frame": [
       "research/kof95/eiji-frame-data-2011.html"
      ],
-     "research": []
+     "research": [
+      [
+       "research/kof95/system-details-2010-2025.html",
+       "システムの細部（影二と柴舟の屈A連打）"
+      ]
+     ]
     }
    ]
   },
@@ -428,7 +433,12 @@
     {
      "id": "saisyu",
      "name": "柴舟",
-     "research": []
+     "research": [
+      [
+       "research/kof95/system-details-2010-2025.html",
+       "システムの細部（影二と柴舟の屈A連打）"
+      ]
+     ]
     },
     {
      "id": "rugal",
