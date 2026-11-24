@@ -1,95 +1,101 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'99 入力優先順位・コマンド・連打キャンセル・SC・投げ外し（2003～2023年）｜Come sono bravo?</title><meta name="description" content="MOTの2003年の行動優先順位と入力コマンド、2021～2023年の連打キャンセル、CM/AM、SC、GCかわし移動、投げ外しを旧原稿と本人Xから統合。"><link rel="stylesheet" href="/assets/research.css">
-<style>.article{max-width:1090px}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.article table{width:100%;border-collapse:collapse}.article td,.article th{border:1px solid var(--line,#aab);padding:9px;vertical-align:top;text-align:left}.article thead th{background:var(--soft,#eff2ef)}.scroll{overflow-x:auto}.note{border-left:4px solid var(--accent,#416958);padding:12px 14px;background:var(--soft,#eff2ef)}.article a{overflow-wrap:anywhere}</style></head><body>
-<header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
-<div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof99-top.html">KOF'99</a> / <a href="/research/kof99/index.html">研究アーカイブ</a> / <b>入力・キャンセル</b></div></div>
-<main class="main"><div class="wrap article"><h1>KOF'99 入力優先順位・コマンド・連打キャンセル・SC・投げ外し（2003～2023年）</h1>
-<p class="note">MOT本人が2003年10～12月に執筆・更新した旧原稿「各行動の優先順位の分析について」と、2021年5月・6月、2023年5月・7月のXアーカイブを照合し、KOF'99の入力に関する研究を年代別に整理。<strong>本人による観察・評価、動作原因の本人仮説、キャラクターと条件を限定した確認</strong>を明確に区別する。KOF'98や2002シリーズとの比較は本人の比較研究として扱い、他作品の仕様を99へ転用しない。投げ外しの原Googleシートの実数値は表記・対戦条件ごと回収したが、他の入力系の原投稿にない確定F数、内部的な入力バッファ処理、全キャラ共通の投げ外し猶予は補わない。</p>
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>KOF'99 入力と操作性：優先順位・コマンド・連打キャンセル・投げ外し｜Come sono bravo?</title>
+<meta name="description" content="KOF&#x27;99の操作性が悪く感じる理由（ヒットストップ・連打キャンセル・暗転・SC）、通常投げの投げ外し猶予、ボタンと行動の優先順位、コマンドが残る方向と簡略入力。">
+<link rel="stylesheet" href="/assets/research.css">
+<style>.article{max-width:960px}.article table{width:100%;border-collapse:collapse}.article th,.article td{border:1px solid var(--line,#ccd);padding:6px 8px;overflow-wrap:anywhere;vertical-align:top;text-align:left}.article thead th{background:var(--soft,#eaf0ed)}.article td.num{font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}.lead{font-size:1.05em}.vt{display:inline-block;font-size:.85em;line-height:1.45;padding:0 6px;margin-left:4px;border:1px solid var(--line,#ccd);border-radius:4px;font-weight:600;white-space:nowrap}.legend{font-size:.92em;color:var(--sub,#555)}.src li{font-size:.92em}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h2{font-size:1.15em;margin-top:1.2rem}details.more h3{font-size:1.05em}figure{margin:14px 0}figure img{max-width:100%;height:auto;border:1px solid var(--line,#ccd)}figcaption{font-size:.9em;color:var(--sub,#555)}@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}.article th,.article td{min-width:72px}}</style>
+</head><body>
+<header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof99-top.html">KOF'99</a> / <a href="/research/kof99/index.html">研究アーカイブ</a> / <b>入力と操作性</b></div></div>
+<main class="main"><div class="wrap article">
+<h1>KOF'99 入力と操作性：優先順位・コマンド・連打キャンセル・投げ外し</h1>
+<p class="lead">KOF'99の操作性が悪く感じられるのは、弱攻撃のヒットストップが長く、技の硬直も全体的に長いうえ、弱攻撃の連打キャンセルの幅が短くなっていて、ST呼び出しなどの暗転中に入力を受け付けないためです。カウンターモード中のスーパーキャンセル（SC）がいつでもできることにも癖があります。</p>
+<p class="legend">方向はテンキー表記（2＝下、6＝前、4＝後ろ、N＝ニュートラル）です。</p>
 
-<h2>2003年の本人原稿：ボタン・行動の優先順位</h2>
-<p><a href="/99yu-zyunni.html">MOT本人の2003年「KOF'99の各行動の優先順位の分析について」</a>は2003年10月1日作成、同年12月7日最終更新。今回、提供された旧サイトZIPのShift_JIS原HTMLとGitHub上の同じ旧URLを照合し、<strong>原稿の方向入力GIFを数字表記（テンキー方向）に置き換えて読み直した</strong>。本人は行動全体の順序について<strong>「になっていると思われる」</strong>と記しており、ゲーム内の確定した優先順位と書き換えない。</p>
-<p><strong>ボタン単独の優先順位：</strong>スタートボタン ＞ A ＞ B ＞ C ＞ D。<strong>セレクトボタンは不明</strong>と原稿に明記されている。</p>
-<div class="scroll"><table><thead><tr><th>本人の推定順（高→低）</th><th>行動</th><th>原文の注意</th></tr></thead><tbody>
-<tr><th scope="row">1</th><td>挑発</td><td>スタートボタン。地上の立ち状態でレバー4・N・6のときに限られるが、他行動より優先するという本人評価。</td></tr>
-<tr><th scope="row">2</th><td>BCD：アーマーモード発動</td><td>原文の同時押し。</td></tr>
-<tr><th scope="row">3</th><td>ABC：カウンターモード発動</td><td>原文の同時押し。</td></tr>
-<tr><th scope="row">4（同順位と推測）</th><td>AB：かわし移動／BC：ST呼び出し／CD：ふっ飛ばし攻撃</td><td>本人は同じ順位と考えたが、<strong>同時には試せない</strong>という留保がある。</td></tr>
-<tr><th scope="row">5</th><td>必殺技</td><td rowspan="4">ここまでの順番も本人の2003年時点の推定。</td></tr>
-<tr><th scope="row">6</th><td>特殊技</td></tr>
-<tr><th scope="row">7</th><td>通常投げ</td></tr>
-<tr><th scope="row">8</th><td>通常技</td></tr>
-</tbody></table></div>
-<p><strong>同時押しに関する別の記録：</strong>本人は、いずれかのボタンを押しっぱなしにすると、中・大ジャンプ、前方ダッシュ、飛び退き、（超）必殺技を出せなくなると記述。GCかわし移動（AB）とGCCD（CD）は屈み状態でも入力できるものの、<strong>余分なボタンを押したABC・BCDでは出せない</strong>と記した。この入力制限を、CM/AM中のすべての入力禁止と同一視しない。</p>
+<h2>操作性が悪く感じる理由</h2>
+<table><thead><tr><th>理由</th><th>内容</th></tr></thead><tbody>
+<tr><th scope="row">KOF2002系に慣れている</th><td>KOF2002系の操作に慣れていると違和感がある（この点はKOF'98とほぼ同じ）</td></tr>
+<tr><th scope="row">弱攻撃のヒットストップが長い</th><td>KOF'98とほぼ同じ</td></tr>
+<tr><th scope="row">技の硬直</th><td>全体的に長い</td></tr>
+<tr><th scope="row">弱攻撃の連打キャンセル</th><td>幅が短くなっていて、タイミングがシビア（遅くなっている）キャラが多い</td></tr>
+<tr><th scope="row">暗転</th><td>ST呼び出しなどの暗転中に入力を受け付けない</td></tr>
+<tr><th scope="row">カウンターモード中のSC</th><td>いつでもSCできる（下記）</td></tr>
+</tbody></table>
+<p>カウンターモードとアーマーモード中はノックバックが大きく、弱攻撃→弱攻撃が届きにくくなったり、届かなくなったりします。</p>
+<h3>カウンターモード中のSC</h3>
+<p>KOF'99のSCは、KOF2002などと比べて入力面でも癖があります。おそらくヒットストップ中以外でも受け付けるので、かなり繊細なタイミングで入力を完成させる必要があります。入力が早すぎると、必殺技の攻撃判定が出る前にSCしてしまいそうです。</p>
 
-<h2>2003年の本人原稿：入力方向を保持する・消す条件</h2>
-<p>以下は<a href="/99yu-zyunni.html">上記2003年原稿</a>の入力研究。<strong>数字はテンキー式方向表記（2＝下、3＝右下、4＝左、6＝右、N＝ニュートラル）</strong>。旧原稿に埋め込まれた <code>1.gif</code>～<code>9.gif</code> と <code>n.gif</code> に対応している。</p>
-<ul>
-<li><strong>236＋ボタン</strong>の必殺技は、最後を236Nとしても出る一方、本人の原稿では<strong>2364＋ボタンで暴発を抑えられる</strong>と説明。最後に6を入れた後、N・6・9・8ではコマンドが残り、7・4・1・2・3では成立しなくなるという3×3表も掲載。これは本人の2003年の入力記録であり、他コマンドすべてに自動で当てはめない。</li>
-<li><strong>623系</strong>は、最後を3またはNとする入力を本人が挙げている。<strong>236系を26と省略しても出ない</strong>とも記載。</li>
-<li><strong>2363214</strong>（原稿の方向画像の順）について、最初の236を正確に入力する必要があり、後半の63214は多少簡略化できるのではないかと推測。本人が示した「おそらく」の原因・簡略化条件を内部プログラムの仕様として確定しない。</li>
-<li><strong>アンディ：</strong>ジャンプ攻撃ヒット後に41236＋AまたはCを入力し、近立Aまたは近立C1段目→撃壁背水掌を出す例。本人は、相手の被ヒット中に投げが成立せず通常技が出た後もコマンドが残る<strong>ためだと思われる</strong>と説明。コマンド保持の仕組みは本人の仮説。</li>
-<li><strong>京：</strong>近立C→182式を出す際、2364＋C、続けて236＋A/Cと入力して236系の暴発を抑える案がある。方向4を挟む役割についての本人の記録を保持する。</li>
-</ul>
-<h3>2003年のテリーとキム：簡略入力例</h3>
-<p>本人はテリー・キムの<strong>21416</strong>（原稿の方向画像どおり）のコマンドを<strong>246</strong>に簡略化でき、最初の2を3にしても成立すると記した。<strong>この方向列は本人の原文の表記</strong>であり、通常の必殺技コマンドをAIが補正したものではない。</p>
-<p><strong>テリー：</strong>屈B→3C→パワーゲイザーについて、3を入れたままB→C、その後46＋A/Cという入力例がある。<a href="./terry-power-charge-crack-2021-2023.html">2021年のテリー研究</a>には屈B→3Aまたは3C→<strong>パワーチャージ</strong>という別の投稿間表記差があり、<strong>後続技が違う2003年の入力例だけで3A／3C問題が解決したとはいえない</strong>。</p>
-<p><strong>キム：</strong>屈B→屈A→6A1段目→鳳凰脚を、最後の6Aから3→4→6＋B/Dで出す簡略入力例。<a href="./kim-6a-hangetsuzan-hishokyaku-2021.html">2021年のキム6A研究</a>の屈み相手による当否とは目的と条件が違うため、入力例の存在だけで全相手に6A→鳳凰脚が成立するとしない。</p>
-<p>2003年の原稿に記載された<strong>成立例と入力上の工夫</strong>は、2021年の本人が示した「操作性が悪い」と感じる原因の仮説とは年代が異なる。旧研究を後年の仕様説明に書き換えず、そのまま対比できる形で残す。</p>
+<h2>通常投げの投げ外し</h2>
+<p>通常投げの投げ外しの猶予は総じて短く、見てから外せる猶予はありません。KOF'98と同様にレバーを4か6に入れる必要があるので、通常投げと歩き小足の2択で崩せます。</p>
+<p>次の表は、真吾が投げられたときに、投げ外しできる隙間のフレーム数を調べた結果です（主人公チームのみ）。例えばK’のC投げは、1P K’がCを押してから6F以内に2P真吾が4か6＋任意のボタンを押せば外せます（隙間は5F）。</p>
+<table><thead><tr><th>投げるキャラ</th><th>C投げ</th><th>D投げ</th></tr></thead><tbody>
+<tr><th scope="row">K’</th><td class="num">6</td><td class="num">3</td></tr>
+<tr><th scope="row">マキシマ</th><td class="num">11</td><td class="num">12</td></tr>
+<tr><th scope="row">紅丸</th><td class="num">13</td><td class="num">12</td></tr>
+<tr><th scope="row">真吾</th><td class="num">13</td><td class="num">13</td></tr>
+</tbody></table>
 
-<h2>2021年5月28日の本人整理：操作性が悪く感じられる理由</h2>
-<p><a href="https://x.com/mot_csb/status/1398424355839778817">2021年5月28日（UTC）の本人X</a>は、KOF'99の操作性が悪いのではないかという疑問について、次の要素を列挙している。</p>
-<div class="scroll"><table><thead><tr><th>要素</th><th>本人が挙げた説明</th><th>区分</th></tr></thead><tbody>
-<tr><td>02系の操作に慣れている</td><td>KOF'02系の操作に慣れた自分の感覚による比較であり、本人は98にも近い感覚と説明。</td><td>操作経験・体感の可能性</td></tr>
-<tr><td>弱攻撃のヒットストップ</td><td>99では弱攻撃のヒットストップが長い。本人は98とほぼ同じと比較。</td><td>本人の仕様に関する記述。個別技のF数はこの投稿にない。</td></tr>
-<tr><td>技の硬直</td><td>技の硬直が全体的に長い。</td><td>本人の比較的な感覚・評価。全技の実測表ではない。</td></tr>
-<tr><td>連打キャンセルの許容幅</td><td>弱攻撃の連打キャンセルの幅が短くなっている。</td><td>本人の操作性に関する指摘。厳密な許容F数は未掲載。</td></tr>
-<tr><td>ST呼び出し等の暗転</td><td>暗転中に入力を受け付けない。</td><td>本人の挙動に関する説明。暗転の種類や受付条件の網羅的検証ではない。</td></tr>
-<tr><td>CM中のSC</td><td>カウンターモード（CM）中のスーパーキャンセル（SC）がいつでも可能なことが、操作に癖を生む。</td><td>具体的な入力上の疑問は下段の本人投稿で詳述。</td></tr>
-</tbody></table></div>
-<p>これは複数要因を挙げた本人の<strong>操作性に関する分析</strong>であり、個々のゲーム処理の原因まで機械語やフレーム測定で確定したという記録ではない。</p>
-
-<h2>CM中のスーパーキャンセルが早すぎる可能性</h2>
-<p><a href="https://x.com/mot_csb/status/1398426227396923392">同日続きの本人投稿</a>では、SCはKOF'02等と比べて入力面に癖があり、<strong>ヒットストップ中以外でもSCを認めているのではないか</strong>と推測。その場合、入力を早く完成させすぎると<strong>元の必殺技の攻撃判定が出る前にSCしてしまう</strong>可能性があると考察している。</p>
-<p>これは<strong>本人が「おそらく」「しそう」と述べた内部原因の仮説</strong>であり、通常時／CM中の全技においてヒット前SCが成立すると確認したことにはしない。技・キャラ別の入力可能F数やSCの最適タイミングは別途検証が必要。</p>
-
-<h2>2021年6月4日：連打キャンセルとCM/AMのノックバック</h2>
-<p><a href="https://x.com/mot_csb/status/1400720832679190530">2021年6月4日の本人X</a>は次の3項目をまとめた。</p>
-<ol>
-<li><strong>弱攻撃の連打キャンセルのタイミングがシビアになり、遅くなっているキャラが多い。</strong></li>
-<li><strong>CMとAM中はノックバックが大きい。</strong></li>
-<li><strong>CM／AM中の弱攻撃→弱攻撃が届きにくくなったり、届かなくなる。</strong></li>
+<h2>ボタン・行動の優先順位</h2>
+<p>2003年の分析では、ボタン自体の優先順位は スタート＞A＞B＞C＞D（セレクトは不明）、行動の優先順位は次のようになっていると思われる、としています。</p>
+<ol class="flow">
+<li>挑発（スタート。地上の立ち状態＝レバー4・N・6のときだけ出せるが、他の行動より優先）</li>
+<li>BCD：アーマーモード発動</li>
+<li>ABC：カウンターモード発動</li>
+<li>AB：かわし移動／BC：ストライカー呼び出し／CD：ふっ飛ばし攻撃（同じ優先順位と思われるが、同時には試せない）</li>
+<li>必殺技</li>
+<li>特殊技</li>
+<li>通常投げ</li>
+<li>通常技</li>
 </ol>
-<p>本人は「多い」「なってたり」という相対評価をしているため、<strong>全キャラの全弱攻撃が不成立</strong>とは書かない。モード中のダメージ増加・連続技が変化する理由を、この投稿から単一原因に断定しない。</p>
-
-<h2>GC前転・かわし移動攻撃：入力上の注意と実戦性</h2>
-<p><a href="https://x.com/mot_csb/status/1391230255025713154">2021年5月9日の本人投稿</a>では、GC前転→GCかわし移動攻撃は有力だが、<strong>距離が近すぎるとすり抜けてかわし移動攻撃が空振りする</strong>可能性があると指摘。<a href="https://x.com/mot_csb/status/1391230533884026881">同日のGC後転投稿</a>では、前転を狙う際に後転が漏れることを避けるため、<strong>3+AB</strong>という入力を提案している。</p>
-<p><strong>2023年7月24日の本人比較</strong>は、同じGCかわし移動始動連続技でもキャラによって得失があることを示した（<a href="https://x.com/mot_csb/status/1683391851989204992">本人原文</a>）。</p>
-<div class="scroll"><table><thead><tr><th>キャラ</th><th>本人が挙げた評価</th><th>注意</th></tr></thead><tbody>
-<tr><th scope="row">ラルフ</th><td>ゲージ回収ができる点は長所。反面、成立がキャラ限定で、かわし攻撃の発生が遅い。</td><td>本人が利点・欠点を併記。</td></tr>
-<tr><th scope="row">リョウ</th><td>難易度がそこそこ高く、失敗して弱飛燕疾風脚をガードされると反撃される。</td><td>リスクを含む戦術評価。</td></tr>
-<tr><th scope="row">ウィップ</th><td>2ゲージが必要という点が欠点。</td><td>ゲージ条件を省略しない。</td></tr>
-</tbody></table></div>
-<p>2023年7月22～24日に本人が実際に試した<a href="./king-gc-evasion-tornado95-2021-2023.html">対キング「トルネードキック95」のGCかわし攻撃の確定・非確定</a>は別記事にある。ラルフの特定の連続技による確認結果を、すべてのキャラの確定反撃へ広げない。</p>
-
-<h2>通常投げの投げ外し猶予と歩き小足</h2>
-<p><a href="https://x.com/mot_csb/status/1392824274230988804">2021年5月13日のMOT本人投稿</a>では、通常投げ外しの猶予について<strong>主人公チーム4キャラのみ</strong>を調べたと明記。総じて猶予が短く、<strong>見てから外す猶予はない</strong>という本人の確認結果を述べた。本人は、KOF'98と同様にレバーを<strong>4か6</strong>に入力する必要があるため、<strong>歩き小足との二択</strong>が可能と解釈している。</p>
-<p>当時の本人<a href="https://kofplayers.hatenablog.jp/entry/2021/05/14/000611">「KOF99：攻略メニュー」</a>にリンクされた<a href="https://docs.google.com/spreadsheets/d/1rMiSy-e8fYzntDPMqdr-_Y4LmxuDfNRrAgZSkFClpm8/edit">本人の原Googleスプレッドシート「KOF99通常投げの投げ外し猶予」</a>を2026年11月20日に直接読み出し、<strong>「シート1」A3:C7の元セル値</strong>を回収した。元表は<strong>2P側が真吾で、1P側の通常投げを受けている場合</strong>の結果であり、全キャラ同士で共通の数値ではない。</p>
-<div class="scroll"><table><thead><tr><th>1Pのキャラ</th><th>C投げ（原表数値）</th><th>D投げ（原表数値）</th></tr></thead><tbody>
-<tr><th scope="row">K'</th><td>6</td><td>3</td></tr>
-<tr><th scope="row">マキシマ</th><td>11</td><td>12</td></tr>
-<tr><th scope="row">紅丸</th><td>13</td><td>12</td></tr>
-<tr><th scope="row">真吾</th><td>13</td><td>13</td></tr>
-</tbody></table></div>
-<p>原表の注記は「真吾に対しての結果」「投げ外しできる隙間Fを調査」。K'のC投げについて、<strong>1PがCボタンを押してから6F以内に2P真吾が4または6＋任意のボタンを押せば投げ外し可能で、隙間は5F</strong>と明記している。<strong>表の「6」をそのまま「6Fの隙間」と置き換えない</strong>。この計数方法のままデータを保持し、他の行でも計測上の隙間と入力締切を混同しない。</p>
-<p><a href="https://x.com/mot_csb/status/1653754823672750088">2023年5月3日の本人投稿</a>でも、98同様に通常投げと歩き小足で崩せる「っぽい」とした。同研究は<strong>2021年の4キャラ・対真吾という限定条件</strong>であり、99の全キャラへの厳密なフレーム検証が終わったという資料ではない。</p>
-
-<h2>既存の本人研究とのつながり</h2>
 <ul>
-<li><a href="./gauge-priority-mode-management-2021-2024.html">2021年のゲージ運用①～⑧</a>にはGC前転・GCCD・CM/AMの使用方針を保存。ここでは<strong>操作条件と入力タイミング</strong>だけを中心に整理する。</li>
-<li><a href="./gccd-recovery-advantage-2021.html">GCCD硬直差32キャラ表</a>には各キャラの硬直差・CH追撃の本人データがある。GCかわし移動攻撃とGCCDを同じ行動として扱わない。</li>
-<li><a href="./landing-crouch-guard-invincible-2015-2025.html">着地屈ガード無敵</a>はジャンプ攻撃後の屈ガードポーズに関する別現象。連打キャンセルの入力猶予そのものとは別の問題として保存済み。</li>
-<li><a href="/99yu-zyunni.html">2003年の旧「ボタン・行動の優先順位」</a>は原文を維持し、上記に2003年の優先順位・入力簡略化の要点を原文条件つきで整理。原稿の方向入力図は旧ページに残す。</li>
+<li>A〜Dのいずれかのボタンを押しっぱなしにしていると、大・中ジャンプ、前ダッシュ、飛び退き、（超）必殺技が出せません。</li>
+<li>GC中のABとCDはしゃがみでも出せますが、余分なボタンが押されていると出せません。ABCやBCDの同時押しでは出ません（KOF2002でも不可能）。</li>
 </ul>
-<h2>未解決・要照合</h2>
-<p>弱攻撃連打キャンセルのキャラ別猶予F、CM/AM中の押し戻し量、SC入力がヒットストップ外でも受け付けられるか、ST暗転中に受付停止する入力の種類、投げ外し表の対真吾以外の適用と未記入キャラの数値、GC前転→かわし移動攻撃のキャラ別・距離別成立は、MOT本人テキストだけでは確定できない。<a href="/kof-kininaru.html#kof99">気になること</a>へ登録する。</p>
-<p><a href="/research/kof99/index.html">KOF'99研究目次へ戻る</a> ／ <a href="/kof-kininaru.html#kof99">気になること</a></p>
-</div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
+
+<details class="more"><summary>詳しく：コマンドが残る方向・消える方向と簡略入力</summary>
+<ul>
+<li>236＋ボタンの技は236N＋ボタンでも出ますが、2364＋ボタンにすると暴発を抑えられます。京で近立C＞182式を出したいときは、2364＋C→236＋AかCで出せます。</li>
+<li>最後が6で終わるコマンド（236、41236など）は、6を入れた後に7・4・1・2・3へ入れてボタンを押すと出ず、N・6・9・8なら出ます。逆向きのコマンドは左右逆の結果です。</li>
+</ul>
+<table><thead><tr><th>6を入れた後のレバー</th><th>左</th><th>中</th><th>右</th></tr></thead><tbody>
+<tr><th scope="row">上段（7・8・9）</th><td>×</td><td>○</td><td>○</td></tr>
+<tr><th scope="row">中段（4・N・6）</th><td>×</td><td>○</td><td>○</td></tr>
+<tr><th scope="row">下段（1・2・3）</th><td>×</td><td>×</td><td>×</td></tr>
+</tbody></table>
+<ul>
+<li>623系のコマンドは、最後が3かNでないと出ません。</li>
+<li>236＋ボタンの技は26＋ボタンでは出ません。</li>
+<li>2363214は最初の236をきちんと入力しないと出ません。後半の63214の受付はそれほど厳しくなく、おそらく624の部分だけで認められます。</li>
+<li>テリー・キムの21416は246まで簡略化でき、最初の2は3でも出せます。これを使うと、テリーの屈B＞3C＞パワーゲイザーは、3を入れっぱなしでB→C→46＋AかCで出せます。キムの屈B≫屈A≫6A（1段目）≫鳳凰脚も、最後を6A→346＋BかDで出せます。</li>
+<li>アンディは、ジャンプ攻撃ヒットから41236＋AかCと入れると、近立Aか近立C（1段目）≫撃壁背水掌になります。ジャンプ攻撃のヒット中に撃壁背水掌のコマンドが成立しても、相手がのけぞり中なのでコマンド投げが成立せず通常技が出て、その通常技のキャンセル受付中にコマンドが残っているためだと思われます。この入力だと近立C（1段目）≫斬影拳が暴発しないので結構便利です。</li>
+</ul>
+<p>元の原稿：<a href="/99yu-zyunni.html">KOF'99の各行動の優先順位の分析について（2003年）</a></p>
+</details>
+
+<details class="more"><summary>詳しく：GC前転とGCかわし移動攻撃</summary>
+<p>GC前転→GCかわし移動攻撃は有効ですが、近めで狙うとすり抜けて空振りするリスクがあります。GC前転は、GC後転が漏れないように3+ABで出すのがおすすめです。</p>
+<p>GCかわし移動攻撃から始まる連続技は、キャラによって得失があります。</p>
+<table><thead><tr><th>キャラ</th><th>評価</th></tr></thead><tbody>
+<tr><th scope="row">ラルフ</th><td>ゲージを回収できるのが〇。キャラ限定なのと、かわし移動攻撃の発生が遅いのが△</td></tr>
+<tr><th scope="row">リョウ</th><td>難易度がそこそこ高い。失敗して飛燕疾風脚 <span class="vt">弱</span> をガードされると反撃されるので△</td></tr>
+<tr><th scope="row">ウィップ</th><td>2ゲージ必要なのが△</td></tr>
+</tbody></table>
+<p>「というかラルフが恵まれすぎ」とも書いています。キングのトルネードキック95に対する確定・非確定は<a href="/research/kof99/king-gc-evasion-tornado95-2021-2023.html">キングのページ</a>にあります。</p>
+</details>
+
+<h2>気になること</h2>
+<ul>
+<li>主人公チーム以外のキャラの投げ外し猶予。</li>
+<li>弱攻撃の連打キャンセルの猶予は、キャラごとに何Fか。</li>
+</ul>
+
+<h2>出典</h2>
+<ul class="src">
+<li>操作性：<a href="https://x.com/mot_csb/status/1398424355839778817">操作性が悪いんじゃないの疑惑（2021/5/28）</a> ／ <a href="https://x.com/mot_csb/status/1398426227396923392">カウンターモード中のSC</a> ／ <a href="https://x.com/mot_csb/status/1400720832679190530">連打キャンセルとノックバック（2021/6/4）</a></li>
+<li>投げ外し：<a href="https://x.com/mot_csb/status/1392824274230988804">2021/5/13</a> ／ <a href="https://x.com/mot_csb/status/1653754823672750088">2023/5/3</a> ／ <a href="https://docs.google.com/spreadsheets/d/1rMiSy-e8fYzntDPMqdr-_Y4LmxuDfNRrAgZSkFClpm8/edit">KOF99：通常投げの投げ外し猶予（Googleスプレッドシート）</a> ／ <a href="https://kofplayers.hatenablog.jp/entry/2021/05/14/000611">KOF99：攻略メニュー</a></li>
+<li>GC：<a href="https://x.com/mot_csb/status/1391230255025713154">GC前転（2021/5/9）</a> ／ <a href="https://x.com/mot_csb/status/1391230533884026881">GC後転</a> ／ <a href="https://x.com/mot_csb/status/1683391851989204992">GCかわし移動始動連続技の比較（2023/7/24）</a></li>
+<li>関連：<a href="/research/kof99/throw-range-table-source-2021.html">投げ間合い</a> ／ <a href="/research/kof99/gauge-priority-mode-management-2021-2024.html">ゲージとストライカー</a> ／ <a href="/kof-kininaru.html#kof99">気になること</a> ／ <a href="/research/kof99/index.html">KOF'99研究アーカイブ</a></li>
+</ul>
+</div></main>
+<footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer>
+</body></html>
