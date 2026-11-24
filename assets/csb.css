@@ -51,3 +51,4 @@ a.cn:hover{color:var(--red)}a.cn::after{content:" ›";color:var(--red)}
 .entry{overflow-wrap:anywhere}
 .team .fbtn{display:inline-block;vertical-align:middle;background:var(--red);color:#fff;font-weight:700;font-size:13px;line-height:1;padding:7px 12px;border-radius:999px;text-decoration:none}
 .team .fbtn:hover{filter:brightness(1.12)}
+.chara-nav{background:var(--card);border:1.5px solid var(--line);border-left:5px solid var(--red);border-radius:0 10px 10px 0;padding:10px 16px;margin:0 0 26px;font-size:14px}.chara-nav p{margin:2px 0}.cn-head span{margin:0 8px;color:var(--sub)}.cn-head b{font-size:16px}.chara-nav summary{cursor:pointer;color:var(--sub)}.chara-nav details ul{margin:4px 0 0;padding-left:20px}

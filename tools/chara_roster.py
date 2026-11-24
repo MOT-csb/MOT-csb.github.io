@@ -21,7 +21,7 @@ X_ALIASES = {"表クリス": "chris", "表ロバート": "robert", "シャンフ
 
 
 def read(p):
-    with open(os.path.join(ROOT, p), encoding="utf-8") as f:
+    with open(os.path.join(ROOT, p), encoding="utf-8", newline="") as f:
         return f.read()
 
 
@@ -37,6 +37,10 @@ def title_of(path):
 
 
 def frame_label(fn, title):
+    if fn.endswith("kakuwaza-koutyokusa.html"):
+        return "各技の硬直差（旧サイト・2008年）"
+    if fn == "02iori-data.html":
+        return "全技データ（旧サイト）"
     if fn.endswith("-frame-data-2011.html"):
         return "ブログの表（2011年）"
     if fn.startswith("frame/"):
@@ -74,7 +78,10 @@ def load(game):
             for fn in c.get("data", []):
                 c["pages"].append(("data", fn, "ダメージ・ガークラ値"))
             for fn in c.get("research", []):
-                c["pages"].append(("research", fn, research_label(c["name"], title_of(base + fn), d["game"])))
+                if isinstance(fn, list):  # [ファイル名, 表示名]
+                    c["pages"].append(("research", fn[0], fn[1]))
+                else:
+                    c["pages"].append(("research", fn, research_label(c["name"], title_of(base + fn), d["game"])))
             if c.get("x"):
                 c["pages"].append(("x", c["x"] + "#c-" + c["id"], "X投稿メモ"))
     return d
@@ -113,7 +120,7 @@ def roster_html(d):
                 line += '<span class="sub">' + "".join(sub) + "</span>"
             if research:
                 items = "".join(f'<li><a href="{base}{fn}">{esc(label)}</a></li>' for _, fn, label in research)
-                line += f'<details><summary>研究・対策 {len(research)}件</summary><ul>{items}</ul></details>'
+                line += f'<details><summary>攻略・研究ページ {len(research)}件</summary><ul>{items}</ul></details>'
             line += "</li>"
             out.append(line)
         out.append("</ul></section>")
@@ -140,14 +147,14 @@ def nav_html(d, c, here):
     if research:
         opened = " open" if any(fn.split("#")[0] == here for fn, _ in research) else ""
         items = "".join(f"<li>{link(fn, label)}</li>" for fn, label in research)
-        out += f'<details{opened}><summary>研究・対策 {len(research)}件</summary><ul>{items}</ul></details>'
+        out += f'<details{opened}><summary>攻略・研究ページ {len(research)}件</summary><ul>{items}</ul></details>'
     return out + "</nav><!-- chara-nav:end -->"
 
 
 def put_nav(path, nav):
     t = read(path)
     t = re.sub(r"<!-- chara-nav:start -->.*?<!-- chara-nav:end -->", "", t, flags=re.S)
-    m = re.search(r'<main class="main"><div class="wrap[^"]*">', t)
+    m = re.search(r'<main( class="main")?>\s*<div class="wrap[^"]*">', t)
     if not m:
         print("  main が見つからない:", path)
         return
