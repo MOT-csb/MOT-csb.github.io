@@ -1,39 +1,52 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'97：気絶・ガード弾きの持続値とリセット条件（2007～2020年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof97-top.html">KOF'97</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'97：気絶・ガード弾きの持続値とリセット条件（2007～2020年）</h1>
-<p>MOTが2007年に公開した<strong>気絶持続値・弾かれ持続値</strong>の原資料を、全キャラクターを省略せずに表へ再構成した。旧サイトに載る<strong>気絶耐久値・弾き耐久値</strong>とは別の数値である。</p>
-<h2>2007年の原資料に記載された共通仕様</h2>
-<p>気絶・ガード弾きは10進数で<strong>103を超えた時点</strong>で成立すると記録している。持続値は「設定数値／60（秒）」として説明されている。攻撃を受けると値を一定時間保持し、その間に次の攻撃を受けるとタイムが再設定され、蓄積値が加算される。時間が切れると値をクリア（0）する、という本人の説明である。</p>
-<p>攻撃値については、原文は<strong>80％を確実に与え、残り20％はランダム</strong>と記載している。ここで独自の乱数計算式を追加しない。</p>
-<h2>気絶持続値（2007年原文のキャラ一覧）</h2>
-<table><thead><tr><th>設定値</th><th>原文の換算式による時間</th><th>キャラ</th></tr></thead><tbody>
-<tr><td>120</td><td>120/60＝2秒</td><td>庵、真吾、社、オロチ社、シェルミー、オロチシェルミー、クリス、オロチクリス、山崎、京、’94京、五郎、アンディ、ジョー、ユリ、レオナ、ラルフ、クラーク、アテナ、ケンスウ、チン、ちづる、キング、キム、チョイ、オロチ</td></tr>
-<tr><td>180</td><td>180/60＝3秒</td><td>マリー、ビリー、紅丸、テリー、リョウ、ロバート、舞、チャン</td></tr>
-<tr><td>240</td><td>240/60＝4秒</td><td>暴走庵、覚醒レオナ</td></tr>
-</tbody></table>
-<h2>ガード弾き（弾かれ）持続値</h2>
-<table><thead><tr><th>設定値</th><th>原文の換算式による時間</th><th>キャラ</th></tr></thead><tbody>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'97の気絶値とガード弾き値：一定時間攻撃しないとリセット｜Come sono bravo?</title><meta name="description" content="KOF'97の気絶値・ガード弾き値は時間で減らず、キャラごとの持続時間内に攻撃しないとリセット。全キャラの持続値と、画面端で触り続ける狙い方。"><link rel="stylesheet" href="/assets/research.css"><style>.article table{width:100%;border-collapse:collapse}.article th,.article td{border:1px solid var(--line,#bbc);padding:8px 9px;vertical-align:top;text-align:left}.article th{background:var(--soft,#f0f2ef)}.article .scroll{max-width:100%;overflow-x:auto}.article .scroll table{min-width:420px}</style></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof97-top.html">KOF'97</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'97の気絶値とガード弾き値：時間で減らず、一定時間攻撃しないとリセット</h1>
+<p>KOF'97の気絶値とガードクラッシュ（ガード弾き）値は、時間とともに少しずつ減るのではなく、一定時間攻撃をヒットかガードさせないとリセットされます（KOF'98も同じ。2020年の投稿では「はず」付き）。リセットまでの時間はキャラごとに決まっていて、2007年のブログに全キャラの値があります。</p>
+
+<h2>仕組み</h2>
+<ol>
+<li>攻撃を受けると、気絶値・弾かれ値が加算され、一定の時間保存される</li>
+<li>その時間内に次の攻撃を受けると、タイムが最初に戻り、値だけがさらに加算される</li>
+<li>時間が切れると値はクリア（0）になる</li>
+<li>値が10進数で103を超えた時点で、気絶・ガード弾きが成立する</li>
+</ol>
+<p>保存される時間は「設定数値／60（秒）」です。攻撃の値は、数字の80％は確実に与え、残りの20％はランダムです。</p>
+
+<h2>応用：リセット前に触り続ける</h2>
+<p>リセットの時間が経過する前に、ガードでいいので相手キャラに触ることができれば、気絶値とガークラ値の蓄積を維持できます。画面端に追い詰めた状態が狙い目です。通常投げを決めると大体リセットされてしまうので注意が必要です。</p>
+
+<h2>気絶持続値</h2>
+<div class="scroll"><table><thead><tr><th>設定値</th><th>時間</th><th>キャラ</th></tr></thead><tbody>
+<tr><td>120</td><td>2秒</td><td>庵、真吾、社、オロチ社、シェルミー、オロチシェルミー、クリス、オロチクリス、山崎、京、'94京、五郎、アンディ、ジョー、ユリ、レオナ、ラルフ、クラーク、アテナ、ケンスウ、チン、ちづる、キング、キム、チョイ、オロチ</td></tr>
+<tr><td>180</td><td>3秒</td><td>マリー、ビリー、紅丸、テリー、リョウ、ロバート、舞、チャン</td></tr>
+<tr><td>240</td><td>4秒</td><td>暴走庵、覚醒レオナ</td></tr>
+</tbody></table></div>
+
+<h2>弾かれ持続値</h2>
+<div class="scroll"><table><thead><tr><th>設定値</th><th>時間</th><th>キャラ</th></tr></thead><tbody>
 <tr><td>120</td><td>2秒</td><td>オロチ</td></tr>
 <tr><td>240</td><td>4秒</td><td>五郎、ラルフ、舞、チャン</td></tr>
 <tr><td>270</td><td>4.5秒</td><td>ちづる</td></tr>
 <tr><td>300</td><td>5秒</td><td>庵、シェルミー、オロチシェルミー、クリス、オロチクリス、マリー、リョウ、レオナ、ケンスウ、キム、チョイ</td></tr>
-<tr><td>360</td><td>6秒</td><td>山崎、ビリー、京、’94京、テリー、ジョー、アテナ、キング</td></tr>
+<tr><td>360</td><td>6秒</td><td>山崎、ビリー、京、'94京、テリー、ジョー、アテナ、キング</td></tr>
 <tr><td>390</td><td>6.5秒</td><td>真吾、ユリ</td></tr>
 <tr><td>420</td><td>7秒</td><td>社、オロチ社、紅丸、アンディ、ロバート、クラーク、チン</td></tr>
 <tr><td>540</td><td>9秒</td><td>暴走庵、覚醒レオナ</td></tr>
-</tbody></table>
-<h2>2013/12/24：掲載者と調査担当者の記憶に関する本人の追記</h2>
-<p>MOTは2013年12月24日に、2007年のKOF'97気絶・ガード弾き持続値表へのリンクを紹介した際、<strong>当時の調査者について記憶が曖昧</strong>であり、KOF'97のデータを自分が調べ、KOF'98のデータはづね氏が調査したのかもしれない、と投稿した。</p>
-<p>したがって、<strong>2007年にMOT本人がこの一覧を公開・記載したことは一次資料で確認できる</strong>一方、<strong>掲載された36キャラの値をMOTがすべて独自に実測したと断定する根拠は不十分</strong>である。2013年の本人の「もしかしたら」という記憶を後年の確定した調査分担表へ書き換えない。</p>
-<p>出典：<a href="https://x.com/mot_csb/status/415350390222118912">2013/12/24：KOF'97と'98の気絶持続値の調査担当者についての本人投稿</a>。</p>
-<h2>2020年のMOTによる仕組みの説明</h2>
-<p>2020/8/26のX投稿では、KOF'97・'98は気絶値とガードクラッシュ値が<strong>時間経過で徐々に回復するのではなく、一定時間攻撃をヒットまたはガードさせなければリセット</strong>される方式だと、MOTが説明している。投稿の語尾は「はず」であり、2020年時点の本人見解として扱う。次の投稿では、リセット期限までにガードでも相手に触れれば蓄積を維持できるため画面端が狙い目、通常投げでは概ねリセットされると述べている。</p>
-<p>2007年の持続値リストと2020年の見解は整合するように読めるが、今回の整理だけで内部実装の正確な処理条件まで確定したものではない。</p>
-<h2>注意：別種の防御・耐久データとの混同を避ける</h2>
-<p><a href="/97.htm">旧ページ「KOF'97のデータ関係」</a>には防御力・気絶耐久値・弾き耐久値・体力に応じた防御値変化が収録されている。そちらの気絶耐久値（例：オロチ176、チャン234）と、このページの気絶持続値（オロチ120、チャン180）は<strong>測っている種類が異なる</strong>ため、矛盾として扱わない。</p>
-<h2>出典</h2>
-<ul><li><a href="https://comesonobravo.hatenadiary.org/entry/2007/09/10/162232">2007/9/10：97：気絶持続値、ガード弾き持続値表</a>（全数値をMOTが掲載した一次資料。全件の測定担当者は2013年本人発言で留保あり）</li>
-<li><a href="https://x.com/mot_csb/status/415350390222118912">2013/12/24：掲載データの測定者に関する本人の曖昧な記憶</a></li>
-<li><a href="https://x.com/mot_csb/status/1298658245452509184">2020/8/26：時間経過とリセット方式の作品比較</a></li>
-<li><a href="https://x.com/mot_csb/status/1298659679803850755">2020/8/26：リセット前に再接触する戦術評価</a></li>
-<li><a href="/97.htm">旧攻略：KOF'97のデータ関係（2002年作成・2003年更新）</a></li></ul>
-<p>2026/11/20：2007年原文の一覧・条件を保存。2013年のMOT本人投稿で、掲載と実測担当者の区別が必要と確認し出典の留保を追加。値そのものは変更していない。</p>
-<p><a href="./index.html">KOF'97 研究アーカイブ</a> ／ <a href="/kof-kininaru.html#kof97">KOF'97の気になること</a> ／ <a href="/kof97-top.html">KOF'97旧攻略トップ</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
+</tbody></table></div>
+<p>補足：2013年12月24日の投稿では、記憶が曖昧だが、もしかしたら97のデータを自分が調べ、98はづねさんが調査されたのかも、と書かれています。</p>
+
+<h2>他の作品との違い（2020年）</h2>
+<div class="scroll"><table><thead><tr><th>作品</th><th>気絶値・ガークラ値の回復</th></tr></thead><tbody>
+<tr><td>KOF'96・'99</td><td>どちらも時間経過とともに回復</td></tr>
+<tr><td>KOF'97・'98</td><td>時間経過ではなく、一定時間攻撃をヒットかガードさせないとリセット（はず）</td></tr>
+<tr><td>KOF2002</td><td>気絶値はリョウの天地以外なし。ガークラ値は時間経過とともに回復（キャラ差大）</td></tr>
+</tbody></table></div>
+
+<h2>似ているが別の話</h2>
+<p>旧サイトの<a href="/97.htm">KOF'97のデータ関係</a>にある気絶耐久値・弾き耐久値（例：オロチ176、チャン234）は、このページの持続値（値がどれだけの時間保存されるか）とは別の種類の数値です。</p>
+
+<h2>出典</h2><ul>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2007/09/10/162232">2007/09/10：97：気絶持続値、ガード弾き持続値表</a>（MOT旧ブログ）</li>
+<li><a href="https://x.com/mot_csb/status/415350390222118912">2013/12/24：97と98の気絶持続値の調査</a>（X）</li>
+<li><a href="https://x.com/mot_csb/status/1298658245452509184">2020/08/26：気絶値とガクラ値の回復の作品比較</a>（X）</li>
+<li><a href="https://x.com/mot_csb/status/1298659679803850755">2020/08/26：リセットの仕様と狙い方</a>（X）</li>
+</ul>
+<hr><p><a href="./index.html">KOF'97 研究アーカイブ</a> ／ <a href="/kof-kininaru.html#kof97">KOF'97の気になること</a> ／ <a href="/kof97-top.html">KOF'97旧攻略トップ</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
