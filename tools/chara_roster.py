@@ -37,6 +37,8 @@ def title_of(path):
 
 
 def frame_label(fn, title):
+    if fn.startswith("frame/"):
+        return "ブログの表（2011年）"
     if "frame-data-2025" in fn:
         return "ブログのまとめ（2025年）"
     if "frame-consolidation" in fn:

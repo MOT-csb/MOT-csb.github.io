@@ -1,0 +1,308 @@
+{
+ "game": "KOF'96",
+ "top": "kof96-top.html",
+ "base": "research/kof96/",
+ "teams": [
+  {
+   "name": "主人公チーム",
+   "chars": [
+    {
+     "id": "kyo",
+     "name": "京",
+     "frame": [
+      "frame/kyo.html"
+     ],
+     "research": [
+      "kyo-2011-tech-notes.html"
+     ]
+    },
+    {
+     "id": "benimaru",
+     "name": "紅丸",
+     "frame": [
+      "frame/benimaru.html"
+     ],
+     "research": [
+      "benimaru-frame-risk-2011.html"
+     ]
+    },
+    {
+     "id": "goro",
+     "name": "大門五郎",
+     "frame": [
+      "frame/goro.html"
+     ],
+     "research": [
+      "goro-original-frame-data-2011.html",
+      "goro-kakuteijirai.html",
+      "frame-recipe.html"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "餓狼伝説チーム",
+   "chars": [
+    {
+     "id": "terry",
+     "name": "テリー",
+     "frame": [
+      "frame/terry.html"
+     ],
+     "research": [
+      "terry-frame-2011.html"
+     ]
+    },
+    {
+     "id": "andy",
+     "name": "アンディ",
+     "frame": [
+      "frame/andy.html"
+     ],
+     "research": [
+      "andy-2011-tech-notes.html"
+     ]
+    },
+    {
+     "id": "joe",
+     "name": "ジョー",
+     "frame": [
+      "frame/joe.html"
+     ],
+     "research": [
+      "joe-frame-tech-2011.html",
+      "joe-combo-meter.html"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "龍虎の拳チーム",
+   "chars": [
+    {
+     "id": "ryo",
+     "name": "リョウ",
+     "frame": [
+      "frame/ryo.html"
+     ],
+     "research": [
+      "ryo-original-frame-data-2011.html",
+      "ryo-raijingou-counterplay.html"
+     ]
+    },
+    {
+     "id": "robert",
+     "name": "ロバート",
+     "frame": [
+      "frame/robert.html"
+     ],
+     "research": [
+      "robert-frame-tech-2011.html"
+     ]
+    },
+    {
+     "id": "yuri",
+     "name": "ユリ",
+     "frame": [
+      "frame/yuri.html"
+     ],
+     "research": [
+      "yuri-frame-notes.html",
+      "yuri-original-movement-data-2011.html"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "怒チーム",
+   "chars": [
+    {
+     "id": "leona",
+     "name": "レオナ",
+     "frame": [
+      "frame/leona.html"
+     ],
+     "research": [
+      "leona-2011-tech-notes.html",
+      "leona-grand-sabre-interrupts.html",
+      "leona-voltic-guardbreak.html"
+     ]
+    },
+    {
+     "id": "ralf",
+     "name": "ラルフ",
+     "frame": [
+      "frame/ralf.html"
+     ],
+     "research": [
+      "ralf-original-frame-data-2011.html"
+     ]
+    },
+    {
+     "id": "clark",
+     "name": "クラーク",
+     "frame": [
+      "frame/clark.html"
+     ],
+     "research": [
+      "clark-frame-2011.html",
+      "clark-sab-fallback.html"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "サイコソルジャーチーム",
+   "chars": [
+    {
+     "id": "athena",
+     "name": "アテナ",
+     "frame": [],
+     "research": [
+      "athena-2011-frame-teleport.html"
+     ]
+    },
+    {
+     "id": "chin",
+     "name": "チン",
+     "frame": [
+      "frame/chin.html"
+     ],
+     "research": [
+      "chin-original-frame-data-2011.html",
+      "chin-counter.html",
+      "chin-mochizukiyoi-8d-defense.html"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "女性格闘家チーム",
+   "chars": [
+    {
+     "id": "mai",
+     "name": "舞",
+     "frame": [
+      "frame/mai.html"
+     ],
+     "research": [
+      "mai-original-frame-2011.html"
+     ]
+    },
+    {
+     "id": "king",
+     "name": "キング",
+     "frame": [
+      "frame/king.html"
+     ],
+     "research": [
+      "king-2011-tech-notes.html"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "キムチーム",
+   "chars": [
+    {
+     "id": "kim",
+     "name": "キム",
+     "frame": [
+      "frame/kim.html"
+     ],
+     "research": [
+      "kim-frame-tech-2011.html"
+     ]
+    },
+    {
+     "id": "chang",
+     "name": "チャン",
+     "frame": [],
+     "research": [
+      "chang-edge.html",
+      "chang-ironball-direction-stop-2011.html",
+      "chang-spin-2025-research-note.html"
+     ]
+    },
+    {
+     "id": "choi",
+     "name": "チョイ",
+     "frame": [
+      "frame/choi.html"
+     ],
+     "research": [
+      "choi-2011-tech-defence.html",
+      "choi-flying-kick-late-hit-2011.html",
+      "reverse-guard-choi.html"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "八神チーム",
+   "chars": [
+    {
+     "id": "iori",
+     "name": "庵",
+     "frame": [
+      "frame/iori.html"
+     ],
+     "research": [
+      "iori-2011-frame-analysis.html",
+      "iori-kuzukaze-fallback.html",
+      "iori-matchup-2011.html"
+     ]
+    },
+    {
+     "id": "mature",
+     "name": "マチュア",
+     "frame": [
+      "frame/mature.html"
+     ],
+     "research": [
+      "mature-frame-2011.html",
+      "mature-counter-2011.html",
+      "mature-cr-a-link-timing-2011.html"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "ボスチーム",
+   "chars": [
+    {
+     "id": "geese",
+     "name": "ギース",
+     "frame": [],
+     "research": [
+      "geese-jc-max-loop.html",
+      "geese-kasumi-parry.html",
+      "geese-neutral-counterplay.html"
+     ]
+    },
+    {
+     "id": "krauser",
+     "name": "クラウザー",
+     "frame": [],
+     "research": [
+      "krauser-artillery.html",
+      "krauser-blitz-guardbreak.html",
+      "krauser-max-throw-combos.html"
+     ]
+    },
+    {
+     "id": "big",
+     "name": "Mr.BIG",
+     "frame": [
+      "frame/big.html"
+     ],
+     "research": [
+      "mr-big-original-frame-2011.html",
+      "mr-big-grand-blaster-2023.html",
+      "mr-big-iori-punishes.html"
+     ]
+    }
+   ]
+  }
+ ]
+}
