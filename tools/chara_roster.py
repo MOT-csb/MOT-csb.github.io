@@ -31,14 +31,18 @@ def write(p, t):
 
 
 def title_of(path):
-    m = re.search(r"<title>(.*?)</title>", read(path), re.S)
+    m = re.search(r"<title>(.*?)</title>", read(path.split("#")[0]), re.S)
     t = html.unescape(m.group(1)) if m else os.path.basename(path)
     return t.split("｜")[0].strip()
 
 
 def frame_label(fn, title):
+    if fn.endswith("-frame-data-2011.html"):
+        return "ブログの表（2011年）"
     if fn.startswith("frame/"):
         return "ブログの表（2011年）"
+    if "frame-data-" in fn and "-team-" in fn or "rugal-forms" in fn:
+        return "ブログの表（チーム別ページ内）"
     if "frame-data-2025" in fn:
         return "ブログのまとめ（2025年）"
     if "frame-consolidation" in fn:
@@ -122,7 +126,7 @@ def nav_html(d, c, here):
     top = "/" + d["top"]
 
     def link(fn, label):
-        return f"<b>{esc(label)}</b>" if fn == here else f'<a href="{base}{fn}">{esc(label)}</a>'
+        return f"<b>{esc(label)}</b>" if fn.split("#")[0] == here else f'<a href="{base}{fn}">{esc(label)}</a>'
 
     main = [link(fn, label) for kind, fn, label in c["pages"] if kind in ("frame", "data")]
     if c.get("x"):
@@ -134,7 +138,7 @@ def nav_html(d, c, here):
         f'<p class="cn-links">{" ／ ".join(main)}</p>'
     )
     if research:
-        opened = " open" if any(fn == here for fn, _ in research) else ""
+        opened = " open" if any(fn.split("#")[0] == here for fn, _ in research) else ""
         items = "".join(f"<li>{link(fn, label)}</li>" for fn, label in research)
         out += f'<details{opened}><summary>研究・対策 {len(research)}件</summary><ul>{items}</ul></details>'
     return out + "</nav><!-- chara-nav:end -->"
@@ -171,10 +175,20 @@ def main(game):
         for c in team["chars"]:
             for kind, fn, label in c["pages"]:
                 if kind != "x":
-                    owner.setdefault(fn, []).append(c)
+                    lst = owner.setdefault(fn.split("#")[0], [])
+                    if c not in lst:
+                        lst.append(c)
     for fn, cs in owner.items():
         if len(cs) == 1:
             put_nav(base + fn, nav_html(d, cs[0], fn))
+        elif all(len([p for p in c["pages"] if p[0] != "x"]) == 1 for c in cs):
+            # チーム別ページなど、1ページに数キャラの表だけが載る場合は1本にまとめる
+            names = " ／ ".join(
+                f'<a href="{base}{c["pages"][0][1]}">{esc(c["name"])}</a>' if "#" in c["pages"][0][1] else f"<b>{esc(c['name'])}</b>"
+                for c in cs
+            )
+            put_nav(base + fn, '<!-- chara-nav:start --><nav class="chara-nav" aria-label="キャラクター別のページ">'
+                    f'<p class="cn-head"><a href="/{d["top"]}#chara">{esc(d["game"])} キャラ選択</a><span>›</span>{names}</p></nav><!-- chara-nav:end -->')
         else:
             navs = "".join(nav_html(d, c, fn) for c in cs)
             navs = navs.replace("<!-- chara-nav:end --><!-- chara-nav:start -->", "")

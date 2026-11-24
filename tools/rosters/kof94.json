@@ -1,0 +1,234 @@
+{
+ "game": "KOF'94",
+ "top": "kof94-top.html",
+ "base": "research/kof94/",
+ "teams": [
+  {
+   "name": "日本チーム",
+   "chars": [
+    {
+     "id": "kyo",
+     "name": "京",
+     "frame": [
+      "frame-data-japan-team-2010-2011.html#178854892"
+     ]
+    },
+    {
+     "id": "benimaru",
+     "name": "紅丸",
+     "frame": [
+      "frame-data-japan-team-2010-2011.html#179624595"
+     ]
+    },
+    {
+     "id": "goro",
+     "name": "大門五郎",
+     "frame": [
+      "frame-data-japan-team-2010-2011.html#180106298"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "餓狼伝説チーム",
+   "chars": [
+    {
+     "id": "terry",
+     "name": "テリー",
+     "frame": [
+      "frame-data-fatal-fury-team-2010-2011.html#175976703"
+     ]
+    },
+    {
+     "id": "andy",
+     "name": "アンディ",
+     "frame": [
+      "frame-data-fatal-fury-team-2010-2011.html#176397234"
+     ]
+    },
+    {
+     "id": "joe",
+     "name": "ジョー",
+     "frame": [
+      "frame-data-fatal-fury-team-2010-2011.html#176637395"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "龍虎の拳チーム",
+   "chars": [
+    {
+     "id": "ryo",
+     "name": "リョウ",
+     "frame": [
+      "frame-data-art-of-fighting-team-2010-2011.html#177280261"
+     ]
+    },
+    {
+     "id": "robert",
+     "name": "ロバート",
+     "frame": [
+      "frame-data-art-of-fighting-team-2010-2011.html#180809589"
+     ]
+    },
+    {
+     "id": "takuma",
+     "name": "タクマ",
+     "frame": [
+      "frame-data-art-of-fighting-team-2010-2011.html#180693779"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "怒チーム",
+   "chars": [
+    {
+     "id": "heidern",
+     "name": "ハイデルン",
+     "frame": [
+      "frame-data-ikari-team-2010-2011.html#177731985"
+     ]
+    },
+    {
+     "id": "ralf",
+     "name": "ラルフ",
+     "frame": [
+      "frame-data-ikari-team-2010-2011.html#180979768"
+     ]
+    },
+    {
+     "id": "clark",
+     "name": "クラーク",
+     "frame": [
+      "frame-data-ikari-team-2010-2011.html#180972922"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "サイコソルジャーチーム",
+   "chars": [
+    {
+     "id": "athena",
+     "name": "アテナ",
+     "frame": [
+      "frame-data-psycho-team-2010-2023.html#177744460"
+     ]
+    },
+    {
+     "id": "kensou",
+     "name": "ケンスウ",
+     "frame": [
+      "frame-data-psycho-team-2010-2023.html#177969594"
+     ]
+    },
+    {
+     "id": "chin",
+     "name": "チン",
+     "frame": [
+      "frame-data-psycho-team-2010-2023.html#178468693"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "韓国チーム",
+   "chars": [
+    {
+     "id": "kim",
+     "name": "キム",
+     "frame": [
+      "frame-data-korea-team-2011.html#180559817"
+     ]
+    },
+    {
+     "id": "chang",
+     "name": "チャン",
+     "frame": [
+      "frame-data-korea-team-2011.html#181596765"
+     ]
+    },
+    {
+     "id": "choi",
+     "name": "チョイ",
+     "frame": [
+      "frame-data-korea-team-2011.html#181793749"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "女性格闘家チーム",
+   "chars": [
+    {
+     "id": "yuri",
+     "name": "ユリ",
+     "frame": [
+      "frame-data-women-team-2011.html#181537535"
+     ]
+    },
+    {
+     "id": "mai",
+     "name": "舞",
+     "frame": [
+      "frame-data-women-team-2011.html#181276665"
+     ]
+    },
+    {
+     "id": "king",
+     "name": "キング",
+     "frame": [
+      "frame-data-women-team-2011.html#178092267"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "アメリカスポーツチーム",
+   "chars": [
+    {
+     "id": "heavyd",
+     "name": "ヘビィD!",
+     "frame": [
+      "frame-data-sports-team-2011.html#181521115"
+     ]
+    },
+    {
+     "id": "lucky",
+     "name": "ラッキー",
+     "frame": [
+      "frame-data-sports-team-2011.html#181678526"
+     ]
+    },
+    {
+     "id": "brian",
+     "name": "ブライアン",
+     "frame": [
+      "frame-data-sports-team-2011.html#181786933"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "ボス",
+   "chars": [
+    {
+     "id": "rugal",
+     "name": "ルガール（変身前）",
+     "frame": [
+      "frame-data-rugal-forms-2011.html#226545377"
+     ]
+    },
+    {
+     "id": "rugal2",
+     "name": "ルガール（変身後）",
+     "frame": [
+      "frame-data-rugal-forms-2011.html#226578563"
+     ]
+    }
+   ]
+  }
+ ]
+}

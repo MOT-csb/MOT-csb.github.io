@@ -1,0 +1,131 @@
+{
+ "game": "KOF'95",
+ "top": "kof95-top.html",
+ "base": "research/kof95/",
+ "teams": [
+  {
+   "name": "主人公チーム",
+   "chars": [
+    {
+     "id": "kyo",
+     "name": "京",
+     "frame": [
+      "kyo-frame-data-2011.html"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "餓狼伝説チーム",
+   "chars": [
+    {
+     "id": "andy",
+     "name": "アンディ",
+     "frame": [
+      "andy-frame-data-2011.html"
+     ]
+    },
+    {
+     "id": "joe",
+     "name": "ジョー",
+     "frame": [
+      "joe-frame-data-2011.html"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "龍虎の拳チーム",
+   "chars": [
+    {
+     "id": "robert",
+     "name": "ロバート",
+     "frame": [
+      "robert-frame-data-2011.html"
+     ]
+    },
+    {
+     "id": "takuma",
+     "name": "タクマ",
+     "frame": [
+      "takuma-frame-data-2011.html"
+     ]
+    },
+    {
+     "id": "yuri",
+     "name": "ユリ",
+     "frame": [
+      "yuri-frame-data-2011.html"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "サイコソルジャーチーム",
+   "chars": [
+    {
+     "id": "chin",
+     "name": "チン",
+     "frame": [
+      "chin-frame-data-2011.html"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "女性格闘家チーム",
+   "chars": [
+    {
+     "id": "mai",
+     "name": "舞",
+     "frame": [
+      "mai-frame-data-2011.html"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "キムチーム",
+   "chars": [
+    {
+     "id": "chang",
+     "name": "チャン",
+     "frame": [
+      "chang-frame-data-2011.html"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "ライバルチーム",
+   "chars": [
+    {
+     "id": "iori",
+     "name": "庵",
+     "frame": [
+      "iori-frame-data-2011.html"
+     ]
+    },
+    {
+     "id": "eiji",
+     "name": "影二",
+     "frame": [
+      "eiji-frame-data-2011.html"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "ボス",
+   "chars": [
+    {
+     "id": "rugal",
+     "name": "ルガール",
+     "frame": [
+      "rugal-frame-data-2011.html"
+     ]
+    }
+   ]
+  }
+ ]
+}
