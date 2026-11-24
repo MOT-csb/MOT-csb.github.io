@@ -1,42 +1,64 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ストライカー：呼び出し・登場位置・ヒットストップの時間処理（2020年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:1040px}.note{padding:12px 16px;border-left:4px solid var(--accent,#416958);background:var(--soft,#eff3f0)}.article table{width:100%;border-collapse:collapse}.article th,.article td{padding:9px;border:1px solid var(--line,#b4b4b4);vertical-align:top}.article th{background:var(--soft,#eff3f0)}.scroll{overflow-x:auto}.src{font-size:.9em}.article li{margin:.5em 0}.article a{overflow-wrap:anywhere}</style></head><body>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>STの呼び出しとヒットストップ｜Come sono bravo?</title><meta name="description" content="KOF2000のストライカー（ST）は本体のヒットストップを無視して動く。通常技のヒットストップ中は呼べず、ジャンプ攻撃・特殊技・必殺技なら呼べる。登場のフレームは自キャラの位置で変わり、アナザー庵は端で14F目、離れると1F目から。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:960px}.article table{min-width:0;width:100%}.article th,.article td{overflow-wrap:anywhere;vertical-align:top}.article a{overflow-wrap:anywhere}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}.lead{font-size:1.05em}.vt{display:inline-block;font-size:.85em;line-height:1.45;padding:0 6px;margin-left:4px;border:1px solid var(--line,#ccd);border-radius:4px;font-weight:600;white-space:nowrap}.legend{font-size:.92em;color:var(--muted,#555)}.src{font-size:.92em}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h3{font-size:1.05em}blockquote{margin:10px 0;padding:8px 14px;border-left:4px solid var(--line,#ccd);background:var(--soft,#f3f5f2);white-space:pre-line}@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}.article th,.article td{min-width:96px}}</style></head><body>
 <header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
-<div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof00-top.html">KOF2000</a> / <a href="/research/kof2000/index.html">研究アーカイブ</a> / <b>ストライカー：呼び出し・登場位置・ヒットストップの時間処理（2020年）</b></div></div>
-<main class="main"><div class="wrap article"><h1>ストライカー：呼び出し・登場位置・ヒットストップの時間処理（2020年）</h1>
-<p class="note">MOT本人の2020年9～10月のX連続投稿を時系列で集約。「確認した」と記録した内容、観察、仕組みの仮説を区別する。ゲーム内部の処理を独自に解析した記事ではない。</p>
-<h2>ヒットストップ中にST呼び出しを受け付ける技</h2>
-<div class="scroll"><table><tr><th>攻撃の種類</th><th>ヒットストップ中の呼び出し</th><th>元投稿の確度</th></tr>
-<tr><td>通常技</td><td>呼べない</td><td>2020/9/6に調査中の本人が整理</td></tr>
-<tr><td>ジャンプ攻撃</td><td>呼べる</td><td>同上。細かな違いがあるという記録</td></tr>
-<tr><td>特殊技</td><td>呼べる</td><td>同上。後続投稿でも可能として説明</td></tr>
-<tr><td>必殺技</td><td>呼べる</td><td>同上。後続投稿でも可能として説明</td></tr></table></div>
-<p class="src">本人投稿（2020/9/6）：<a href="https://x.com/mot_csb/status/1302517580586864640">1302517580586864640</a> ／ <a href="https://x.com/mot_csb/status/1302636749315768320">1302636749315768320</a></p>
-<h2>2020年9月8日：当時の攻略ムックにあった既存の説明</h2>
-<p>MOTは2020年9月8日、通常技のヒットストップ中はSTが呼べないことなどが<strong>『アルカディア』のムックにも書かれていた</strong>と述べた。2020年9月6日の本人の再調査結果と、過去の冊子を読んだ本人の記憶は別の出典として保存する。ムック現物・刊行年・頁は未回収であり、未確認の技別例外を付け足さない。</p>
-<p class="src">本人投稿：<a href="https://x.com/mot_csb/status/1303261734757519360">2020/9/8のムック言及</a> ／ <a href="./striker-research-source-recovery-2010-2025.html">過去ST攻略資料の所在・回収目録</a>。</p>
-<h2>2015年のSTアナザー庵・攻撃判定画像</h2>
-<p>2015年6月16日、MOTはKOF2000の<strong>STアナザー庵の1段目</strong>の判定画像を投稿し、食らい判定がないようだと推測しました。本人のXアーカイブに画像メディアURLが残っていますが、実画像バイナリをサイトへ保存できておらず、図からのフレーム実測はしていません。</p>
-<p class="src"><a href="https://x.com/mot_csb/status/610780485740949504">本人の画像付き投稿（2015/6/16）</a> ／ <a href="https://pbs.twimg.com/media/CHntnWmVEAAV-Ro.png">原メディアURL</a>。<a href="./striker-seth-hitboxes-2009-2021.html">STセスの判定画像</a>との比較に関する別投稿は2015年6月16日です。</p>
-<h2>呼び出し位置によるSTアナザー庵の動作開始</h2>
-<p>2020/9/6の本人の具体的記録では、自キャラが端に追い込まれた状態だと<strong>14F目からST動作開始</strong>、自キャラが端からある程度離れた状態だと<strong>1F目からST動作開始</strong>。これはSTアナザー庵の例であり、全ストライカー・全位置で一律の値とは扱わない。</p>
-<p class="src">本人投稿：<a href="https://x.com/mot_csb/status/1302636392128720896">1302636392128720896</a></p>
-<h2>本体とSTのヒットストップ</h2>
+<div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof00-top.html">KOF2000</a> / <a href="/research/kof2000/index.html">研究アーカイブ</a> / <b>STの呼び出しとヒットストップ</b></div></div>
+<main class="main"><div class="wrap article"><h1>STの呼び出しとヒットストップ</h1>
+<p class="lead">KOF2000のST（ストライカー）は、本体のヒットストップに止められずに動きます。本体の攻撃が当たって画面が止まっている間もSTは登場して攻撃し、そのまま相手にヒットします。これがSTを絡めた連続技の土台です。</p>
+
+<h2>ヒットストップ中に呼べるか</h2>
+<table><thead><tr><th>当てた技</th><th>ヒットストップ中のST呼び出し</th></tr></thead><tbody>
+<tr><td>通常技</td><td>呼べない</td></tr>
+<tr><td>ジャンプ攻撃</td><td>呼べる</td></tr>
+<tr><td>特殊技</td><td>呼べる</td></tr>
+<tr><td>必殺技</td><td>呼べる</td></tr>
+</tbody></table>
+<p>通常技のヒットストップ中は呼べないことは、当時のアルカディアのムックにも書かれていました。</p>
+
+<h2>呼ぶタイミングで変わること</h2>
+<p>特殊技や必殺技のヒットストップ中に呼ぶと、STもヒットストップを無視して登場して攻撃します。</p>
 <ul>
-<li>本人は、自キャラの攻撃で生じたヒットストップにSTが拘束されず、STがその停止時間中に相手へヒットすることを記録。2020年10月にも同趣旨を整理している。<a href="https://x.com/mot_csb/status/1302594936030638080">1302594936030638080</a> ／ <a href="https://x.com/mot_csb/status/1314759611098955778">1314759611098955778</a></li>
-<li>STへ攻撃を当てた場合、そのヒットストップ中にも相手本体の時間が経過していることを2020/9/22に本人が<strong>確認</strong>。相手本体への連続技のつながり方に影響する。<a href="https://x.com/mot_csb/status/1308545013744168960">1308545013744168960</a></li>
-<li>STが相手キャラに与えたヒットストップ中に自キャラの攻撃がヒットしないのではないか、という別の論点は2020/9/6時点では本人の未確認仮説。<a href="https://x.com/mot_csb/status/1302595360292892672">1302595360292892672</a></li>
+<li>早めに登場させると、連続技になりやすい。</li>
+<li>遅めに登場させると、自キャラの硬直が（相対的に）短くなるので、その後の連続技がつなぎやすくなる。</li>
 </ul>
-<h2>2020年10月10日・18日：飛び道具と本体ヒットストップの違い</h2>
-<p>10月10日のMOTの説明では、本体の打撃技がヒットストップしていても<strong>相手の飛び道具はその影響を受けない</strong>。具体例として、<strong>クーラの弱ブレスを通常技で潰したときに弱ブレスを受けない</strong>理由を、この時間処理によるものと説明した。この投稿では同時に、KOF2000のSTは本体のヒットストップ中にも行動し、相手へヒットすることを明記している。</p>
-<p>10月18日には、本人は格闘ゲームのヒットストップの一般則と例外を箇条書きにし、飛び道具・STが本体のヒットストップを無視すること、<strong>ヒットストップ中はGC不可</strong>という記録を残した。ただし、この10月18日投稿はKOF2002記事の紹介への返信であり、<strong>列挙されたすべての現象をKOF2000の全技で改めて確認したという意味ではない</strong>。10月10日付のKOF2000明記部分と、シリーズ横断の整理を区別する。</p>
-<p class="src">一次資料：<a href="https://x.com/mot_csb/status/1314759611098955778">2020/10/10のクーラ弱ブレスとST</a> ／ <a href="https://x.com/mot_csb/status/1317737309811351552">2020/10/18の一般則とGCについてのメモ</a>。</p>
-<p>STジョーが叩きつけダウンを地上ヒットとして拾いやすいという本人の別記録は<a href="./striker-joe-knockdown-ground-hit-2020.html">STジョー：叩きつけダウンとダウン回避</a>に集約しています。</p>
-<h2>呼び出しタイミングと連続技</h2>
-<p>本人は、早めにSTを登場させると連続技になりやすく、遅めの登場では本体側の残り硬直が相対的に短くなり、後続の連続技につなげやすくなると説明。タイミングごとに攻撃の当否が違うため、単に最速を推奨する記録ではない。<a href="https://x.com/mot_csb/status/1302636749315768320">1302636749315768320</a></p>
-<p>STアナザー庵の突進部分のヒットストップは<strong>ガード時32F／ヒット時45F</strong>という数値を本人が記録。STジョーとの比較では、突進部分の攻撃判定の大きさの差よりもダウン追撃可能な判定の種類が違うのではないかと推測した。<a href="https://x.com/mot_csb/status/1302637397868331009">1302637397868331009</a> ／ <a href="https://x.com/mot_csb/status/1302638966340947968">1302638966340947968</a></p>
-<h2>2016・2025年：投げ外し後のストライカーについての本人言及</h2>
-<p>MOTは2016年11月2日のXで、KOF2000の投げ外し後にストライカーを利用する攻防を想起していました。また2025年5月20日には、投げ抜けにリターンを設ける話題に対してKOF2000の投げ外し→ストライカーの例を挙げています。どちらも<strong>過去の仕組みへの本人の言及</strong>であり、具体的なコマンド・発生F・追撃ダメージを示した再検証ではありません。</p>
-<p class="src">一次資料：<a href="https://x.com/mot_csb/status/793821859271675904">2016/11/2の本人投稿</a> ／ <a href="https://x.com/mot_csb/status/1924840661033087150">2025/5/20の本人投稿</a>。</p>
-<p>同じKOF2000のSTでも、<a href="./corner-striker-pseudo-mid-2008.html">昇り中Jからの呼び出しによる疑似中段</a>と、投げ外し後のST使用は異なる状況です。未記載の成立条件を混ぜない。</p>
-<h2>未整理の条件</h2>
-<p>通常技以外での呼び出し受け付け時間の全技例外、端からの距離によるSTアナザー庵の開始Fの切り替わり、STのヒットストップと本体の硬直差が成立技に及ぼす全条件は、本人投稿にない値を補わず「気になること」に残す。</p>
-<p>関連：<a href="./clark-st-joe-timing-2020.html">クラーク＋STジョーの呼び出しタイミング表</a> ／ <a href="./striker-seth-counterplay-2020.html">対STセスの検証</a>。</p><p><a href="/research/kof2000/index.html">KOF2000研究目次</a> ／ <a href="/kof-kininaru.html#kof2000">気になること</a> ／ <a href="/kof00-top.html">作品トップ</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
+<p>呼んでからSTが動き出すまでの時間は、自キャラの画面上の位置で変わります。</p>
+<table><thead><tr><th>STアナザー庵を呼んだとき</th><th>STが動き出すフレーム</th></tr></thead><tbody>
+<tr><td>自キャラが端に追い込まれている</td><td>14F目</td></tr>
+<tr><td>自キャラが端からある程度離れている</td><td>1F目</td></tr>
+</tbody></table>
+<p>どれくらい離れると切り替わるか、ほかのSTも同じかは調べられていません。STジョーをどのタイミングで呼ぶと地上ヒットになるかの詳しい表は<a href="./clark-st-joe-timing-2020.html">クラークのフラッシングエルボー→STジョー</a>にあります。</p>
+
+<h2>本体とSTのヒットストップ</h2>
+<ol class="flow">
+<li>本体の攻撃が相手に当たると、本体と相手はヒットストップで止まります。STはこのヒットストップの影響を受けず、自由に動けます。しかもヒットストップ中にSTの攻撃もヒットします。</li>
+<li>STに攻撃を当てた場合、そのヒットストップの間も相手本体の時間は進みます（2020/9/23に確認）。相手のSTごと攻撃して止めても、相手本体は先に動けるようになります。</li>
+<li>飛び道具も同じで、打撃技を当てたヒットストップ中、相手の飛び道具は影響を受けません。クーラの弱ブレスを通常技で潰したときに弱ブレスを食らわないのはこのためです。</li>
+</ol>
+<p>この仕組みの応用が<a href="./striker-seth-counterplay-2020.html">STセスへの対処</a>（ハイアングルゲイザーのヒットストップ中にSTセスをやり過ごす）です。</p>
+
+<h2>STアナザー庵の突進</h2>
+<table><thead><tr><th>突進部分</th><th>ヒットストップ</th></tr></thead><tbody>
+<tr><td>ガード時</td><td>32F</td></tr>
+<tr><td>ヒット時</td><td>45F</td></tr>
+</tbody></table>
+<p>STアナザー庵の1段目と登場攻撃には食らい判定がありません（<a href="https://x.com/mot_csb/status/610780485740949504">2015年の判定画像</a>、<a href="https://x.com/mot_csb/status/1309864007910584320">2020/9/26</a>）。突進部分の攻撃判定はSTジョーとそれほど違わず、STアナザー庵のほうがやや低いくらいです。STジョーがダウン追撃に使えるのは、判定の大きさではなく種類の違いのためだと考えられています（<a href="./striker-joe-knockdown-ground-hit-2020.html">STジョーの叩きつけダウン</a>）。</p>
+
+<details class="more"><summary>補足：投げ外し→ST</summary>
+<p>KOF2000には「投げ外し→ストライカー」という攻防があります。2016年には投げ返しのリターンの話題でKOF2000を思い出し（「投げ外し+ストライカー」）、2025年にも投げ抜けにリターンを持たせる例として挙げています（<a href="https://x.com/mot_csb/status/793821859271675904">2016/11/2</a>、<a href="https://x.com/mot_csb/status/1924840661033087150">2025/5/20</a>）。具体的なレシピは書かれていません。</p>
+</details>
+
+<details class="more"><summary>出典</summary>
+<ul class="src">
+<li>2020/9/6～7の連投：<a href="https://x.com/mot_csb/status/1302517580586864640">呼べる技</a>・<a href="https://x.com/mot_csb/status/1302594936030638080">ヒットストップを無視</a>・<a href="https://x.com/mot_csb/status/1302595360292892672">ヒットストップ中も自由に動ける</a>・<a href="https://x.com/mot_csb/status/1302636392128720896">位置で変わる登場</a>・<a href="https://x.com/mot_csb/status/1302636749315768320">早め・遅め</a>・<a href="https://x.com/mot_csb/status/1302637397868331009">突進のヒットストップ</a>・<a href="https://x.com/mot_csb/status/1302638966340947968">STジョーとの比較</a></li>
+<li><a href="https://x.com/mot_csb/status/1303261734757519360">2020/9/8</a>：アルカディアのムック</li>
+<li><a href="https://x.com/mot_csb/status/1308545013744168960">2020/9/23</a>：STに当てたヒットストップ中に相手の時間が進む</li>
+<li><a href="https://x.com/mot_csb/status/1314759611098955778">2020/10/10</a>：クーラの弱ブレスとST。<a href="https://x.com/mot_csb/status/1317737309811351552">2020/10/18</a>にはヒットストップの原則（双方同じだけ止まる）と例外、飛び道具とSTは本体のヒットストップを無視、ヒットストップ中はGC不可、という一般的な整理もあります。</li>
+</ul>
+</details>
+
+<h2>気になること</h2>
+<ul>
+<li>STが相手に与えたヒットストップ中は、自キャラの攻撃はヒットしないかもしれない。STダックなどで調べればいいかも（2020/9/6）。</li>
+<li>相手のSTを打撃で追い払ったとき、STの攻撃判定は残るか（2020/9/6）。</li>
+<li>STアナザー庵が1F目と14F目のどちらで動き出すかの境目の距離。</li>
+</ul>
+<p><a href="/research/kof2000/index.html">KOF2000研究アーカイブ</a> ／ <a href="/kof-kininaru.html#kof2000">KOF2000の気になること</a></p>
+</div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>

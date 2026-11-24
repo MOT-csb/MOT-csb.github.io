@@ -1,41 +1,46 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>KOF2000 アーマーモード：ガードクラッシュ・タイマーの本人研究（2015～2024年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css">
-<style>.article{max-width:1040px}.article h2{margin-top:2rem}.article table{border-collapse:collapse;width:100%}.article th,.article td{border:1px solid var(--line,#aaa);padding:.6em;vertical-align:top}.article th{background:var(--soft,#eff3f0)}.note{background:var(--soft,#eff3f0);padding:12px 16px;border-left:4px solid var(--accent,#416958)}.scroll{overflow-x:auto}.src{font-size:.9em}.article a{overflow-wrap:anywhere}</style></head>
+<title>アーマーモード：ガードクラッシュ値とタイマー｜Come sono bravo?</title><meta name="description" content="KOF2000のアーマーモード中はガードクラッシュ値が2倍に増えるらしく、ラルフの立ちCDは通常6回、アーマーモード中は3回でガードクラッシュします。タイマーは1ドット減るのに13Fと19Fを交互に繰り返すようです。"><link rel="stylesheet" href="/assets/research.css">
+<style>.article{max-width:960px}.article table{min-width:0;width:100%}.article th,.article td{overflow-wrap:anywhere;vertical-align:top}.article a{overflow-wrap:anywhere}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}.lead{font-size:1.05em}.vt{display:inline-block;font-size:.85em;line-height:1.45;padding:0 6px;margin-left:4px;border:1px solid var(--line,#ccd);border-radius:4px;font-weight:600;white-space:nowrap}.legend{font-size:.92em;color:var(--muted,#555)}.src{font-size:.92em}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h3{font-size:1.05em}blockquote{margin:10px 0;padding:8px 14px;border-left:4px solid var(--line,#ccd);background:var(--soft,#f3f5f2);white-space:pre-line}@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}.article th,.article td{min-width:96px}}</style></head>
 <body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
-<div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof00-top.html">KOF2000</a> / <a href="/research/kof2000/index.html">研究アーカイブ</a> / <b>アーマーモード：ガードクラッシュとタイマー（2015～2024年）</b></div></div>
-<main class="main"><div class="wrap article"><h1>アーマーモード：ガードクラッシュとタイマー（2015～2024年）</h1>
+<div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof00-top.html">KOF2000</a> / <a href="/research/kof2000/index.html">研究アーカイブ</a> / <b>アーマーモード：ガードクラッシュ値とタイマー</b></div></div>
+<main class="main"><div class="wrap article"><h1>アーマーモード：ガードクラッシュ値とタイマー</h1>
+<p class="lead">アーマーモード中は、相手のガードを崩す力が上がります。ラルフの立ちCDは、通常時なら6回ガードさせてガードクラッシュですが、アーマーモード中は3回で崩れます。</p>
 
-<p class="note">MOT本人の2015年X投稿、2024年X投稿および本人ブログを整理したものです。実例の回数は本人の記録ですが、「ガードクラッシュ値2倍」は本人が推定形で示した解釈であり、全技の確定仕様ではありません。</p>
-<h2>2024年7月2～3日：ラルフの立ちCDでのガードクラッシュ回数</h2>
-<div class="scroll"><table><thead><tr><th>条件</th><th>ガードクラッシュまでの回数</th><th>情報区分</th></tr></thead><tbody>
-<tr><td>通常時のラルフ立ちCD</td><td>6回</td><td>本人の実例記録</td></tr>
-<tr><td>アーマーモード中のラルフ立ちCD</td><td>3回</td><td>本人の実例記録</td></tr>
-</tbody></table></div>
-<p>この比較をもとに、MOTはKOF'99と同様にアーマーモード中のガードクラッシュ値が2倍になる可能性を提示しました。例示された立ちCDの必要回数が半分になったことと、全攻撃の内部ガードクラッシュ値が厳密に2倍であることは、同一の確認事項ではありません。</p>
-<p>MOTは、KOF2000なら隙のある技をガードさせてもストライカーでフォローできるので、ガードクラッシュまで持ち込みやすそうだと評価しました。アーマーモード中のチャンについて、ガードクラッシュを狙う運用の強化も戦術上の可能性として挙げています（当時の戦術評価・提案）。</p>
-<p class="src">出典：<a href="https://x.com/mot_csb/status/1808064920014975245">MOTのX投稿（2024/7/2）</a> ／ <a href="https://x.com/mot_csb/status/1808255031277506745">ブログへの案内投稿（2024/7/3 JST）</a> ／ <a href="https://comesonobravo.hatenadiary.org/entry/503851323.html">本人ブログ「KOF2000：アーマーモード中のガクラ値は2倍かも」（2024/7/3）</a>。提供ブログエクスポートには同文の投稿が2エントリ（503851323・503851315）残っています。</p>
-<p>対空立ちCD、画面端での発動、STを使ったAM途中発動、2020年の他者対戦動画の観察は<a href="./armor-mode-activation-antiair-st-2020-2024.html">アーマーモードの実戦研究（2020～2024年）</a>に分けて整理しています。本記事のラルフ立ちCDのガードクラッシュ数値とは目的・成立条件が異なります。</p>
-<h2>2015年8月23日：アーマーモードのタイマー</h2>
-<div class="scroll"><table><thead><tr><th>対象</th><th>本人の記録</th><th>情報区分</th></tr></thead><tbody>
-<tr><td>タイマー表示が1ドット減るまで</td><td>13Fと19Fを交互に繰り返すみたい</td><td>本人の暫定観察（推定形）</td></tr>
-</tbody></table></div>
-<p>1ドットごとの交互変化という本人の見立てを保存します。適用される全時間や、発動中のフレーム進行・停止条件などは、この投稿に記録されていません。</p>
-<p class="src">出典：<a href="https://x.com/mot_csb/status/635396554879143936">MOTのX投稿（2015/8/23）</a></p>
-<p>アーマーチャンへの個別の対処については、2005年のGC前転から屈Bの対戦観察、2015年の続きの投稿（ライン保持の具体化）、2016年の後方J＋ST案、2020年の後転で自分が端へ追いやられる問題を<a href="./chang-armor-positioning-counterplay-2005-2024.html">対アーマーチャン時系列研究</a>に集約しました。ラルフ立ちCDの数値・タイマーの研究は本ページに保持しています。</p>
-<h2>2015年10月4日：対チャンの画面位置と大回転</h2>
-<p>MOTは、アーマーモード中のチャンに画面端で鉄球大回転を使われると厳しく、ゲージがあればGC前転で脱出できると説明。アーマーモードの発動自体を防ぐのは難しいため、<strong>発動前からなるべく自分のラインを下げない</strong>方針を提案しました。対チャン一般の確定解ではなく当時の戦術評価です。</p>
-<p class="src">一次資料：<a href="https://x.com/mot_csb/status/650528931666223105">MOT本人X投稿（2015/10/4）</a>。</p>
-<h2>2020年9月27日：後転での逃げと画面端の問題</h2>
-<p>本人はアーマーモードへの対処について、<strong>後転で距離を取ることはできるが、繰り返すと自分が一気に端へ追い込まれる</strong>という問題を挙げました。これは2015年のラインを下げないという方針と関連しますが、アーマーモードへの完全な対処を本人が確定したわけではありません。</p>
-<p class="src">一次資料：<a href="https://x.com/mot_csb/status/1310038729973620736">MOT本人X投稿（2020/9/27）</a> ／ <a href="./match-video-combos-studies-2011-2020.html">2020年対戦映像の観察メモ</a>。</p>
-<h2>2016年4月21日：アーマーモード中のチャンへの対策案</h2>
-<p>MOTは、アーマーモード発動中のチャンには殴り合うよりも距離を取る方がよいと考え、<strong>後方ジャンプで本体は退避しながらSTを呼び、チャンの動きを妨害する</strong>戦術を提案しました。うまくいけばSTがヒットするかもしれないと述べています。これは本人の<strong>未確認の戦術案</strong>であり、再現を確認した実例として掲載しません。</p>
-<p class="src">一次資料：<a href="https://x.com/mot_csb/status/723083203569840129">MOTの2016/4/21 X投稿</a>。</p>
-<p>対アーマーチャンの具体的な2005年の対戦観察は<a href="./duelling-observations-2005.html">Duelling the KOF感想の集約記事</a>、2024年のガードクラッシュ回数の実例は本記事の冒頭に独立して収録しています。</p>
-<h2>攻撃されても動きを止めない</h2><p>KOF2000のアーマーモードは、攻撃されても動きを止めません。2024年2月には、KOF'94の弱攻撃連打のように密度の濃い攻撃を合わせたら相当ヒットしそう、という架空の組み合わせの話題でこの性質に触れています（<a href="https://x.com/mot_csb/status/1760992278800478575">2024/2/23</a>）。</p>
-<h2>この資料だけでは確定できないこと</h2>
-<ul><li>ガードクラッシュ値の倍率が全ての攻撃・相手に共通するか。</li><li>6回・3回という実例から内部値の計算式を確定できるか。</li><li>タイマーの13F／19F交互変化に例外や停止条件があるか。</li></ul>
-<p>確認事項は<a href="/kof-kininaru.html#kof2000">KOF2000の気になること</a>にも記録しています。</p>
-<p><a href="/research/kof2000/index.html">KOF2000研究アーカイブへ戻る</a> ／ <a href="/kof-kininaru.html#kof2000">KOF2000の気になること</a> ／ <a href="/kof00-top.html">KOF2000作品トップ</a></p>
+<h2>ガードクラッシュまでの回数</h2>
+<table><thead><tr><th>状態</th><th>ラルフの立ちCDでガードクラッシュするまで</th></tr></thead><tbody>
+<tr><td>通常時</td><td>6回</td></tr>
+<tr><td>アーマーモード中</td><td>3回</td></tr>
+</tbody></table>
+<p>回数がちょうど半分になるので、KOF'99と同じようにアーマーモード中はガードクラッシュ値が2倍になるのではないか、と考えられています。原文は「99同様に2倍？に増加するっぽい」で、確かめたのはラルフの立ちCDの例です。ほかの技でも厳密に2倍かどうかは分かっていません。</p>
+
+<h2>実戦での意味</h2>
+<p>KOF'99では隙のある技をガードさせると反撃を受けますが、KOF2000ではストライカーでフォローできます。元の記事ではこの点から、KOF2000のほうがガードクラッシュまで持っていきやすそうだとしています。おなじみのアーマーモードのチャンも、ガードクラッシュを意識するとさらに凶悪になるかもしれない、という見立てです。</p>
+
+<h2>攻撃を受けても止まらない</h2>
+<p>KOF2000のアーマーモードは、攻撃を受けても動きが止まりません（<a href="https://x.com/mot_csb/status/1760992278800478575">2024/2/23</a>）。発動前後の使い方やST（ストライカー）との組み合わせは<a href="./armor-mode-activation-antiair-st-2020-2024.html">アーマーモードの発動と実戦での使い方</a>にあります。</p>
+
+<h2>タイマー</h2>
+<p>アーマーモードの残り時間の表示は、1ドット減るのに<strong>13Fと19Fを交互に繰り返す</strong>ようです（<a href="https://x.com/mot_csb/status/635396554879143936">2015/8/23のメモ</a>）。平均すると1ドット16Fです。最初の1ドットがどちらから始まるか、暗転中などに止まるかは記録されていません。</p>
+
+<details class="more"><summary>出典</summary>
+<ul class="src">
+<li><a href="https://x.com/mot_csb/status/1808064920014975245">X投稿（2024/7/2）</a>：ラルフ立ちCDの6回・3回</li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/503851323.html">ブログ「KOF2000：アーマーモード中のガクラ値は2倍かも」（2024/7/3）</a>：STでフォローできる点、アーマーチャンへの言及。同じ記事が2件（503851323・503851315）残っています。</li>
+<li><a href="https://x.com/mot_csb/status/635396554879143936">X投稿（2015/8/23）</a>：タイマー</li>
+</ul>
+</details>
+
+<h2>似ているが別の話</h2>
+<ul>
+<li><a href="./chang-armor-positioning-counterplay-2005-2024.html">アーマーモードのチャンへの対策</a>：画面端の鉄球大回転、ラインを下げない立ち回り、後転で逃げ続けると端に追い込まれる問題など。</li>
+<li><a href="./counter-mode-hit-block-recovery-2016.html">カウンターモード中の相手の硬直</a>：もう一方のモードの話です。</li>
+</ul>
+
+<h2>気になること</h2>
+<ul>
+<li>ガードクラッシュ値2倍は、ラルフの立ちCD以外の技でも成り立つか。</li>
+<li>タイマーの13F・19Fの交互は、発動からゼロになるまでずっと同じか。</li>
+</ul>
+<p><a href="/research/kof2000/index.html">KOF2000研究アーカイブ</a> ／ <a href="/kof-kininaru.html#kof2000">KOF2000の気になること</a></p>
 </div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
