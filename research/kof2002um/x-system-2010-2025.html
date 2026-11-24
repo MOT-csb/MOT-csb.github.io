@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>KOF2002UM システムのX投稿メモ：GCCD・GC緊急回避・投げ・入力・ゲージ・バグ（2009～2026年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:960px}.article h2{margin-top:2rem}.article a{overflow-wrap:anywhere}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}ul.xlog{padding-left:1.1em}ul.xlog li{margin:6px 0;font-size:.95em;overflow-wrap:anywhere}ul.xlog .d{font-size:.85em;margin-right:.5em;white-space:nowrap}.legend{font-size:.92em}</style></head><body>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>KOF2002UM システムのX投稿メモ：GCCD・GC緊急回避・投げ・入力・ゲージ・バグ（2009～2026年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:960px}.article h2{margin-top:2rem}.article a{overflow-wrap:anywhere}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}ul.xlog{padding-left:1.1em}ul.xlog li{margin:6px 0;font-size:.95em;overflow-wrap:anywhere}ul.xlog li.cont{margin-left:1.4em;list-style:circle}ul.xlog .d{font-size:.85em;margin-right:.5em;white-space:nowrap}.legend{font-size:.92em}</style></head><body>
 <header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
 <section class="hero"><div class="wrap"><p class="breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof02um-top.html">KOF2002UM</a> / <a href="/research/kof2002um/index.html">研究アーカイブ</a></p><p class="kicker">KOF2002UM｜X投稿メモ</p><h1>システムのX投稿メモ：GCCD・GC緊急回避・投げ・入力・ゲージ・バグ（2009～2026年）</h1><p>2009～2026年にXへ投稿したKOF2002UMのシステム全般のメモです。統一されたGCCDの性能とGC前転・GC後転の活用、投げ外しの猶予とずらし押しの仕込み、入力の受付時間、ガークラ後のMAX発動、判定表示の見方、2025年に調べた竜巻槍打バグと山月記バグなどをまとめました。</p></div></section><main class="main"><div class="wrap article">
 <p class="legend">目次：<a href="#s-0">GCCD・GC緊急回避</a>／<a href="#s-1">通常投げ・投げ外し</a>／<a href="#s-2">入力・クイック発動・キャンセル</a>／<a href="#s-3">フレームの目安と調べ方</a>／<a href="#s-4">ガードクラッシュ</a>／<a href="#s-5">ゲージ増加量・ダメージ補正</a>／<a href="#s-6">判定（ヒットボックス）の見方</a>／<a href="#s-7">バグ</a>／<a href="#s-8">その他の対戦メモ</a></p>
@@ -12,7 +12,7 @@
 <li>GC前転の使い道：端で低J攻撃を低打点で出されたらGCCDではなくGC前転で端から出る、相手のGCCDを先端ガードしたらGC前転→連続技、遠距離の飛び道具に完全無敵で接近する、など。02UMは発動連続技の破壊力が高くGCCD自体があまり使われないので、GC前転→連続技が確定する場面ではゲージを払う価値があります（2021年）。逃げの後転がGC後転に化けてゲージを失う現象は、まだ防ぐ方法が見つかっていません（2024年）。</li>
 <li>B→C+Dずらし押しでGCCDを仕込むと、GCCDできる場合はGCCD、できない場合は屈Bになりました（コマンド登録 1(4F) 1+B(1F) 1(4F) 1+CD(1F)）。弱→CDのずらし押しは、投げ外し狙いでは難しく、GCCD狙いでは比較的簡単です（2024年）。</li>
 </ul>
-<details class="more"><summary>元の投稿を読む（43件・古い順）</summary>
+<details class="more"><summary>元の投稿を読む（50件・古い順）</summary>
 <ul class="xlog">
 <li><a class="d" href="https://x.com/mot_csb/status/10856946698">2010/3/22</a>02UM：端でガード時に９Ｆ以上不利になる強攻撃ｏｒ特殊技をガードした際にＧＣ後転すれば１Ｆコマ投げが間に合うはず。特殊技や必殺技でキャンセルしてくれていれば連続技も決まるはず</li>
 <li><a class="d" href="https://x.com/mot_csb/status/17170806378">2010/6/28</a>相手のGCC+Dをガードできたら、遠距離立ちDで反撃できます。弱強BHTKでも反撃できるので、家庭用のKOF2002UMをお持ちでしたら、プラクティスモードでCPUのガードをGCAに設定して練習してみましょう。</li>
@@ -38,6 +38,7 @@
 <li><a class="d" href="https://x.com/mot_csb/status/466962666368421888">2014/5/16</a>02UMの強サイコボールを遠目でガードした場合、GC前転から反撃できるキャラがいるかも(妄想)</li>
 <li><a class="d" href="https://x.com/mot_csb/status/508119681652125697">2014/9/6</a>ＫＯＦ２００２の普通にガードさせてＧＣＣ＋Ｄされてもガードが間に合う弱攻撃について<br><a href="http://t.co/LJMcglgPMe">http://t.co/LJMcglgPMe</a><br><br>2002UMだとGCCDの発生が統一化されたのでこういう細かな調査は不要になった</li>
 <li><a class="d" href="https://x.com/mot_csb/status/523358945281179649">2014/10/18</a>KOF2002UM<br>1ゲージあたりのダメージを意識するといいかも<br>GC前転すれば反撃が確定する場面でも1ゲージを惜しんでGC前転しないことってありますよね？<br>でも、よくよく考えると1ゲージ払う価値がある場面が結構あるんじゃないかと思います。</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/523359274735386624">2014/10/18</a>GC前転からノーゲージコンボを決めてゲージ回収→起き攻めでJCD重ねから無難な固めでさらにゲージ回収とか考えるとかなりのリターンになるともいえる</li>
 <li><a class="d" href="https://x.com/mot_csb/status/543693238356303872">2014/12/13</a>02は違いましたけど、02UMはGC前転されると連続技で反撃されますね。餓狼３とまではいかなくていいんで、ダメージ上げてほしいですよね。その方が緊張感がある。</li>
 <li><a class="d" href="https://x.com/mot_csb/status/587769556417916929">2015/4/14</a>KOF2002系で説明していく<br>KOF2002UM家庭用のプラクティスモードで練習できること<br>連続技<br>GCCDガード後の反撃<br>通常技にGCCDさせてクイック前転からの連続技<br>ガークラからの連続技</li>
 <li><a class="d" href="https://x.com/mot_csb/status/593066296381575168">2015/4/28</a>・ヒットフラグの説明<br>・弱攻撃→屑風、強攻撃or特殊技→弱おどるだいちの説明<br>・02での弱攻撃のヒットストップの長さの説明(7Fのキャラと11Fのキャラがいる)<br>・02UMでGCCDにGC前転した場合の硬直差の説明<br>・対空技の発生比較</li>
@@ -48,13 +49,19 @@
 <li><a class="d" href="https://x.com/mot_csb/status/1385074952957612034">2021/4/22</a>KOF2002UM<br>発動コンボの破壊力が高いので、GCCDがあまり使われないんですね<br>GCCDしたいところをガードでしのいだり、緊急回避したり、無敵技出したり、大Jで逃げたり<br>02と比べると頼れる対空技が多いのもあるかも<br><br>GC前転→連続技が確定する場面ではGC前転するのはアリなのかも</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1385076086690639877">2021/4/22</a>02UM：ＧＣ前転活用案 <br><a href="https://t.co/bGTjQsv5NP">https://t.co/bGTjQsv5NP</a> <br><br>小中ジャンプ攻撃を先端ガードさせる→相手のGCCDを先端ガードの場面では、GC前転→連続技が結構狙い目だと思います<br>発生7F以内の技なら確定したような（記憶があいまい）</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1387319467777007620">2021/4/28</a>②ガード時　-11F<br>距離が離れるがそれなりの不利フレームがある<br>キャラによっては反撃の恐れあり<br>02UMならGC前転から連続技が決まるかも</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1387319511385133058">2021/4/28</a>③（対策時）キャンセル無敵技でフォロー<br>鵺摘みの当て身投げでキャッチされても、キャンセル無敵技でフォロー可能<br>当て身投げされたのを見てから出せれば無効化できそう</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1433058683668230145">2021/9/1</a>KOF2002UM<br>ネム同キャラで昇り中JAの1段目にGCCDしたら空振りしてフルコン食らうの厳しい(´・ω・`)</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1636210046853070850">2023/3/16</a>KOF2002UM<br>相手のGCCDにGC前転して連続技<br>というのがあんまり使われてない感じがする<br><br>端の相手にJ攻撃を低めにガードさせれば狙いやすい<br><br>GCCD自体があんまりされないからなのかな</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1817914839806902363">2024/7/29</a>#KOF2002UM 逃げの後転がGC後転に化ける現象を防止できないか<br><br>逃げようとしてゲージ消費になってジリ貧になるやつです。ゲージ依存度が高いキャラでなると泣ける。<br>なんかないですかねー。<br>今は思い浮かばないですが、なんかあるかも。</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1817918050039128435">2024/7/29</a>普通に後転しようとするとレバー4入れになる<br>そこに相手が中Ｊ攻撃早出ししてくると立ガードになりますよね<br><br>改善案<br>屈ガードに入れておき、4と同時にAB同時押し<br>こうすれば、立ガードを経由せずに後転できます<br>相手が中Ｊ攻撃を早出ししてきても後転できそう<br><br>理論上はGC後転を防止できそう</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1817925866426703974">2024/7/29</a>KOF2002系：逃げの後転がGC後転に化ける現象を防止する方法 <a href="https://t.co/pJ4mJRf4yv">https://t.co/pJ4mJRf4yv</a> <br><br>ChatGPTくんっぽさ全快の文章になりました。</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1845463747051294749">2024/10/13</a>#KOF2002UM A→CDずらし押しの投げ外し<br><br>以前から気になってたこと<br>よく考えたらキーディス表示させれば確認できるんですね<br><br>⇒可能っぽい<br><br>あと、A押しっぱなしCDでも投げ外しできるんですね<br><br>確認すること<br>A→CDずらし押しで暴発する技はAかどうか<br>GCCD狙いの時にも可能かどうか <a href="https://t.co/Z2P6fkGK25">https://t.co/Z2P6fkGK25</a></li>
 <li><a class="d" href="https://x.com/mot_csb/status/1845466660771332570">2024/10/13</a>#KOF2002UM B→CDずらし押しのGCCD仕込み<br><br>可能っぽいです。<br>GCCDできる場合はGCCD<br>できない場合は屈B<br>になりました<br><br>コマンド登録<br>1(4F)　1+B(1F)　1(4F)　1+CD(1F) <a href="https://t.co/bLTQq2ak6c">https://t.co/bLTQq2ak6c</a></li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1845467227098841443">2024/10/13</a>コマンド登録＆プラクティス最強</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1845468285070082481">2024/10/13</a>やってる人がいなさそうなのは……<br><br>・入力が面倒<br>・失敗しやすい<br>・実は無理<br>・あまり知られてない<br>・やってもやらなくてもそこまで変わらない<br><br>のどれかですかね</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1845679704390668566">2024/10/14</a>#KOF2002UM 「弱攻撃→CDの投げ外しについて」<br>難しい理由がわかってきました<br><br>「普通の投げ外しやGCCDはCDを連打するものなのに、この入力法だとCDを1回しか押さないから」<br>というのが結構大きいみたいです。<br><br>なので、<br>「気持ち早めのタイミングでAorB→そこからCD連打」<br>である程度安定しそう</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1846750845377143273">2024/10/17</a>#KOF2002UM 「弱⇒CDのずらし押しの投げ外しorGCCDについて」<br><br>投げ外し狙い時：難しい<br>GCCD狙い時：結構簡単<br><br>なので、GCCD狙い時に仕込むのは徹底してもいいかも</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1846847100954280040">2024/10/17</a>C→CD<br>D→CD<br><br>でもGCCD仕込みのCorDになるのを確認しました。<br>弱攻撃の方が無難ですが、使える場合もあるかも？<br><br>例<br>クリスで暴発技を近Dにする</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1853612257558851810">2024/11/5</a>#DuellingTheKOF<br><br>#KOF2002 と #KOF2002UM の比較<br><br>明らかに02の方がGCCDが多かった<br>同じプレイヤーでも<br><br>02の方が対空が弱いことと、発動コンボを決める機会が少ないのが原因と思われる<br><br>02UMはガークラがゲージで見えるので、ガークラを意識させることでGCCDを誘いやすくなるかも</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1855145160566620294">2024/11/9</a>いいですね！<br><br>02UMの話でいいなら、端の相手のGCCDにGC前転すれば連続技で反撃できるので、ゲージ効率もよさそうです。<br><br>投げのダメージが高めなのも嬉しいですね。</li>
 </ul>
@@ -68,7 +75,7 @@
 <li>投げ相殺のときは、お互い何もしない状態のまま1F経過します。同キャラ戦で空中投げを連打すると、J攻撃も出ずに滞空時間が伸びるので分かりやすいです。判定表示の白枠は投げられ判定のようで、投げられ判定がないときは表示されません（しおんさん情報、2016年）。</li>
 <li>MAX超必殺技のコマンド投げが6321463214のキャラは、63214+B+C同時押し＞63214+ボタンと素早く入力すると、MAX発動（21F）＞MAX超必殺技投げがスムーズに出ます。ガークラモーション中は投げが決まらないので、3A（1段目）をはさむのがポイントです（2026年）。</li>
 </ul>
-<details class="more"><summary>元の投稿を読む（31件・古い順）</summary>
+<details class="more"><summary>元の投稿を読む（41件・古い順）</summary>
 <ul class="xlog">
 <li><a class="d" href="https://x.com/mot_csb/status/28978892145">2010/10/28</a>02UM。MAX超必殺技のコマンド投げを持つキャラで、6321463214のコマンドのキャラは、63214+BC同時押し&gt;63214+ボタンと素早く入力すると、MAX発動&gt;MAX超必殺技投げがスムーズに出ます。MAX発動のモーションが21Fと短いのがポイント。</li>
 <li><a class="d" href="https://x.com/mot_csb/status/12866926246109184">2010/12/9</a>空低Jからの着地コマ投げ。投げ間合いギリギリに近い距離に着地しながら仕かけることにより、すかしと読めても打撃で落とすのが難しくなる？ #KOF KOF02UM 西日暮里VERSUS・第１７回紅白戦・その６（ラスト）  #sm12978604 <a href="http://t.co/s5DfS6Y">http://t.co/s5DfS6Y</a></li>
@@ -85,10 +92,17 @@
 <li><a class="d" href="https://x.com/mot_csb/status/492511971669843968">2014/7/25</a>あ、すいません。よく見てませんでした。02UMの通常投げの投げ外し猶予は8Fくらいで統一されてた気がします。7Fだったかも？まあどっちにしろ見てから反応は無理なので、普通に崩しに使えますね。</li>
 <li><a class="d" href="https://x.com/mot_csb/status/560401926794129408">2015/1/28</a>2002UMの移動投げがあるキャラで、通常投げを外されたのを確認して最速で移動投げを出すのが結構いいネタになりそうな気がした</li>
 <li><a class="d" href="https://x.com/mot_csb/status/577034116861861889">2015/3/15</a>steamu版02UMで練習できること<br>対空投げへを二度飛びでかわす練習<br>対空で投げを出す側がガードと投げをランダムで出すことにより、飛び込みを仕掛ける側の二度飛び仕込みができてるかどうかの確認になる<br>反復練習で身につけると防御力が上がるはず</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/577034292980662273">2015/3/15</a>ガチの対戦や検証ではなくて、１人では難しい練習が可能になるのが通信対戦の利点だと思ってます</li>
 <li><a class="d" href="https://x.com/mot_csb/status/652734027166670848">2015/10/10</a>02UM：打撃無敵技の投げ無敵の有無についての調査 <a href="http://t.co/Z5Ytzngpqf">http://t.co/Z5Ytzngpqf</a><br>ここで多分いけます！</li>
 <li><a class="d" href="https://x.com/mot_csb/status/684676594292543488">2016/1/6</a>リードしてたら徹底的に冷たく近寄せない<br><br>屈みガードが高いから昇りJ攻撃の中段が機能しやすい<br><br>屈伸ガードは使えることを見せてもいいけど、多用すると逃げ出しにくくなるので微妙<br><br>02UMの無敵技は投げ無敵があるのが多いので、起き上がりに使うのも手ではある</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/684676907405684736">2016/1/6</a>そんな感じでアドバイスするといいと思います</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/684677245483397120">2016/1/6</a>クラークに対しては<br><br>100点満点の行動を目指してリスクを上げるよりも<br><br>60点くらいの行動を取り続けて徹底的にリスクを下げた方がいいと思う</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/684677736065961984">2016/1/6</a>100点満点の行動例<br>JCD空振りの着地に屈B始動から連続技を決める<br>中JCDを見てから無敵対空を合わせる<br>対空フランケンに確実に仕込みJから連続技を決める<br>起き攻めで貪欲にJ攻撃を重ねる</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/684678193085714433">2016/1/6</a>60点の行動例<br>JCD空振りを見たら着地前に立ちAなどで殴る<br>中JCDの間合いに入らない<br>対空フランケンはとりあえず後方ノーマルJでかわせればいいや<br>起き攻めはリードしてたらやらなくてもいい</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/684679013659312128">2016/1/6</a>100点満点の行動を狙って失敗すると<br>JCD空振りの着地<br>→着地に重ならずに着地SABを食らう<br>中JCD<br>→無敵対空を出せずに中JCDを食らう<br>対空フランケン<br>→仕込みに失敗して対空フランケンを食らう<br>起き攻め<br>→重ねに失敗して昇りJDを食らう</li>
 <li><a class="d" href="https://x.com/mot_csb/status/686092017160462336">2016/1/10</a>KOF2002UM　判定<br>しおんさん (@zion_enna )に教えて頂きました<br><br>白枠はどうやら投げられ判定みたいです<br>投げられ判定が消えてる時に表示されないためです <a href="https://t.co/zb9l44BY0J">https://t.co/zb9l44BY0J</a></li>
 <li><a class="d" href="https://x.com/mot_csb/status/689045212031680512">2016/1/18</a>KOF2002UM<br>空中投げの投げ間合い？<br><br>02で調べた時はキャラによって明確に違ったのでちょっと違和感がある <a href="https://t.co/BIKpynFQe0">https://t.co/BIKpynFQe0</a></li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/689045762735386624">2016/1/18</a>02：空中投げ考察メモ<br><a href="https://t.co/0iA7uKvwJS">https://t.co/0iA7uKvwJS</a><br><br>知ってる人があんまりいないかもしれない考察記事<br>結構気合い入れて調べてるのがわかる</li>
 <li><a class="d" href="https://x.com/mot_csb/status/710632021375062018">2016/3/18</a>おお、いけるんですね！よかったです<br>02UMだと通常投げを見てから外せないので、ダッシュから通常投げを混ぜるのもよさそうですね<br>中JCと混ぜると対応されにくそう</li>
 <li><a class="d" href="https://x.com/mot_csb/status/727268043366141952">2016/5/3</a>2chの02UMスレで通常投げに反応して投げ外しできると主張してる人がいる<br><br>無理だと思うんだけどな……8フレームでしょたしか(´・ω・`)</li>
 <li><a class="d" href="https://x.com/mot_csb/status/736347143376535553">2016/5/28</a>投げ相殺の際はお互い何もしない状態のまま1フレーム経過するので、それに似てるのかも<br>↑02UMでミラーにして同キャラで空中投げ入力を連打するとわかりやすい。J攻撃も出ずに滞空時間が伸びるはず</li>
@@ -99,6 +113,9 @@
 <li><a class="d" href="https://x.com/mot_csb/status/1846854356995657800">2024/10/17</a>KOF2002UMだと<br>ガードポーズから投げが出せない<br>ので、打撃に対して暴れ投げは猶予なししかできなかった(と思います)<br><br>あと、地上の相手だとしゃがみガードしながらになるので、暴発技はしゃがみCになるのが原則ですね</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1855135264126939594">2024/11/9</a>確かに<br><br>端だとめり込み注意ですね<br><br>端だとシンプルに<br>前小JCD<br>前小JD<br>前小J投げ<br>前小J屈B<br>とかでいい気がしてきますね<br>（さっき試してた）<br><br>弱クラックも02UMではガークラ削れるしいい感じにいけそうです</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1879365960798462349">2025/1/15</a>KOF2002UM　投げ外し直後の1Fコマンド投げ<br><br>KOF2002では投げ外しされた側が1F不利でした。<br><br>KOF2002UMでも1例だけ確認しましたが、同様でした。<br><br>ただ、投げ外し後はそれなりに距離があきます<br><br>例外的に距離があかない場合は、1Fコマンド投げが狙えます（確定はしません） <a href="https://t.co/iQhwaCizXt">https://t.co/iQhwaCizXt</a></li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1879366260661911798">2025/1/15</a>ネームレス側がレバー上入れっぱなしなら回避可能 <a href="https://t.co/Dxo6MTwUmB">https://t.co/Dxo6MTwUmB</a></li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1879366705551679982">2025/1/15</a>この組み合わせの投げ外しはおそらく外した側（ネームレス）が1F有利<br><br>投げを外された側の1Fの硬直は投げは入らなかったはず（打撃は1F発生のものがないので不明） <a href="https://t.co/zMULflRtQf">https://t.co/zMULflRtQf</a></li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1879367070129049645">2025/1/15</a>参照<br>投げ外し - The　King　Of　Fighters　2002 @ wiki - atwiki（アットウィキ）<br><a href="https://t.co/djuo9TExnX">https://t.co/djuo9TExnX</a></li>
 <li><a class="d" href="https://x.com/mot_csb/status/1889847607574536501">2025/2/13</a>長老投げｗ<br>02UMは投げ外し猶予が短いので、近距離でもつれにくくなってるようです。<br>投げをしかけた場合がネタを使えるのがいい感じですね</li>
 <li><a class="d" href="https://x.com/mot_csb/status/2058036015311495277">2026/5/23</a>KOF2002UM：ガークラ関係 <a href="https://t.co/j6uJqbWT6K">https://t.co/j6uJqbWT6K</a> <br><br>ガークラモーションは投げが決まらないので、3A(1段目）をかませるのがポイント</li>
 </ul>
@@ -111,7 +128,7 @@
 <li>屈伸ガード（立ガード入力2F・屈ガード入力10Fの連続）や、フレーム単位のコマンド登録の方法もまとめています。検証はコマンド登録で、練習は実際の操作で、という使い分けです（2024年）。</li>
 <li>ダメージ補正の調査（2011年）では、生発動のダメージから調べ、QMは通常技→QM→通常技→超必殺技空振りで発動を終わらせて確認しています。</li>
 </ul>
-<details class="more"><summary>元の投稿を読む（20件・古い順）</summary>
+<details class="more"><summary>元の投稿を読む（35件・古い順）</summary>
 <ul class="xlog">
 <li><a class="d" href="https://x.com/mot_csb/status/6965048706">2009/12/23</a>02UMメモ：昇りＪ攻撃はコマンド登録機能を使えば毎回任意ののタイミングで出せるので、それぞれのタイミングで屈みガードにヒットするキャラを調べるのに使えそう</li>
 <li><a class="d" href="https://x.com/mot_csb/status/27710887571">2010/10/18</a>02UM。舞の屈D。ディレイキャンセルのみ可能。特殊技と必殺技でキャンセル可能。</li>
@@ -123,12 +140,27 @@
 <li><a class="d" href="https://x.com/mot_csb/status/395721770574942208">2013/10/31</a>02UM　623対空を持ってるキャラメモ<br>相手のJ攻撃をガードした後、6231と入力しつつ一瞬様子見する<br>相手の再度小Jが見えたらボタンを押せば無敵技が出せるし、ボタンを押さなければ屈ガード継続が可能<br>623の受付時間が14Fと短いため万能な策ではないけど使えるはず</li>
 <li><a class="d" href="https://x.com/mot_csb/status/395722766525005824">2013/10/31</a>02UMの話の続き<br>236や41236系の技はガード入力の保険を出しながら出せないので、前述のようなテクが使えない。</li>
 <li><a class="d" href="https://x.com/mot_csb/status/533574059645091840">2014/11/15</a>02UM<br>キャラ問わずダッシュなどで潜り屈Bを決める機会は結構ある<br>↓<br>クイック発動を絡めるとダメージが上がるキャラがいそう<br>↓<br>生発動もいいかも</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/533574446284406785">2014/11/15</a>例えばリョウなら生発動してたら潜り屈Bから計2ゲージ消費で天地覇王拳が決まる</li>
+<li><a class="d" href="https://x.com/mot_csb/status/594290553522491392">2015/5/2</a>タイムチャート図表化の練習中<br>今回はKOF2002UMの必殺技の受付時間の説明をしてみました<br>言葉だけよりもわかりやすくなってる（はず） <a href="http://t.co/B6jfYrgdkD">http://t.co/B6jfYrgdkD</a></li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/594487759697354752">2015/5/2</a>タイムチャート図表化の練習中<br>今回はKOF98と02の起き上がり時の投げ無敵の時間についてまとめてみました <a href="http://t.co/RxGtnHm5sb">http://t.co/RxGtnHm5sb</a></li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/595425472718229504">2015/5/5</a>タイムチャート図表化の練習中<br>今回はKOF2002のクイック発動について<br>今回は強攻撃にクイック発動したものだけです<br>ヒットストップと少しずれてるんですよね <a href="http://t.co/CuRP0sttom">http://t.co/CuRP0sttom</a></li>
 <li><a class="d" href="https://x.com/mot_csb/status/615545808084008960">2015/6/30</a>遠Aのディレイ幅を知りません<br>ダウンしない空中カウンターヒットの食らい判定は14フレームのはず<br>カウンターヒット表示はヒットストップの始めから<br>ヒットストップは11フレームのはず<br><br>だけど今確認できない環境なのでなんとも言えないです<br>02UMだったかも</li>
 <li><a class="d" href="https://x.com/mot_csb/status/660831990300606464">2015/11/1</a>02UMでコマンド登録して練習したりできるのでそれで慣れるといいいかもしれませんね。98とは弱攻撃のヒットストップが違いますが、割り込み行動自体の意識付けにはなるはず。</li>
 <li><a class="d" href="https://x.com/mot_csb/status/720533693073268736">2016/4/14</a>KOF2002UM<br>623の受付時間が15フレームくらい<br>ダッシュの受付時間が7フレームくらい<br>この差を利用すればダッシュの暴発を防ぎつつ仕込めるかも</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/720533824447332352">2016/4/14</a>何らかの硬直に仕込むのではなくて、立ってる状況での仕込みですね</li>
+<li><a class="d" href="https://x.com/mot_csb/status/1332650885927690240">2020/11/28</a>またそれは分けて確認してみます。<br>家庭用の02UMはコマンド登録を1つしかできないので、別行動を一緒に調査できないのがキツイですね(´・ω・`)</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1332651209614737408">2020/11/28</a>ただ、弱レイスピンの発生が14Fで、弱攻撃ガード→弱レイスピンの隙間が5Fしかないので小中ジャンプは負けるんじゃないかなとは予測がつきますね</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1345686715474665472">2021/1/3</a>KOF2002UMの2P側のコマンド登録について<br><br>自分は2P側をキーボードに設定しています<br>方向キーはそのまま使い、その近くに各種ボタンを設定しています<br><br>具体的には<br>Ａ：,<br>Ｂ：.<br>Ｃ：/<br>Ｄ：\<br>コマンド：;<br>セレクト：:<br>スタート：]<br>こんな感じです</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1345690275742552064">2021/1/3</a>2Pのコマンド登録<br>中ジャンプ攻撃への対空練習にも必要になってくるので重要度高いかもです</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1345712254239404033">2021/1/3</a>KOF2002UMのフレーム単位のコマンド登録についてです<br>コツは必要ですが、自分ではレコード機能では登録が難しい内容でも入力できるようになるのでオススメです。<br>まだまだ内容はスカスカなので充実させていきます。<br>#KOF2002UM #02UM<br>KOF2002UM：コマンド登録について - KOF…<br><a href="https://t.co/1GSHDH5JUM">https://t.co/1GSHDH5JUM</a></li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1345719223104901120">2021/1/3</a>文章で書くと異様に長くなりそうな気配<br>⇓<br>具体例を挙げて、実際の登録したコマンドの画像も付けるとよさそう<br>⇓<br>リクエストをいただけると作りやすそう</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1345721081944965121">2021/1/3</a>レコード機能を使うと最速行動が難しくなる<br><br>コマンド登録だと最速行動が設定しやすい<br><br>慣れればレコード機能で大まかな行動を記録した後に、フレーム単位で微調整することも可能</li>
+<li><a class="d" href="https://x.com/mot_csb/status/1364586702145155073">2021/2/24</a>別ゲープレイヤー向けKOF2002UM 解説動画⑥：押しっぱなし <a href="https://t.co/gFcY4Qtj8W">https://t.co/gFcY4Qtj8W</a><br><br>※全部見てないので書かれていたらすみません<br><br>押しっぱなしの恩恵を受ける例<br>クイック発動＋必殺技<br>この場合はBC同時押しを押しっぱなしにしないと（超）必殺技が出ません。クイック発動で止まります</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1364587208406048774">2021/2/24</a>押しっぱなしが微妙な場合<br><br>動画ではラモンのステキャンが挙げられていましたが<br>紅丸の居合い蹴り→反動三段→幻影ハリケーン<br>キムの覇気脚→覇気キャン<br>も挙げられます<br>押しっぱなしにしてしまうと、押しっぱなしによる必殺技封印の状況になってしまい幻影ハリケーンや覇気キャンが出なかったります</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1851981086093644122">2024/10/31</a>#KOF2002UM 屈伸ガード<br>立ガード入力　2F<br>屈ガード入力　10F<br>の連続入力をコマンド登録してみました <a href="https://t.co/nvaONq0ZVn">https://t.co/nvaONq0ZVn</a></li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1851982442082812381">2024/10/31</a>上記の屈伸ガードを確認<br>ガードポーズ継続しますね<br><br>もっと屈ガードポーズが主張するかと思ったけどそうでもないですね。 <a href="https://t.co/KybC5P0cYx">https://t.co/KybC5P0cYx</a></li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1851982544390226200">2024/10/31</a>立ガード入力　2F<br>屈ガード入力　2F<br>のコマンド登録 <a href="https://t.co/SUGnqcuVww">https://t.co/SUGnqcuVww</a></li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1851983845878567148">2024/10/31</a>立ガード入力　2F <br>屈ガード入力　2F<br><br>こっちの方が人間の動きじゃなくて面白いかも <a href="https://t.co/mUvjGBMvGF">https://t.co/mUvjGBMvGF</a></li>
 <li><a class="d" href="https://x.com/mot_csb/status/1855456321656799283">2024/11/10</a>今更ですがクイック発動関係の受付フレームを再確認しました。主にクイック発動から通常技などの暴発のしやすさに影響してくるでしょう。<br>KOF2002UMでも同じ内容のはずです<br><br>KOF2002：クイック発動の猶予フレーム調査メモ（ＭＯＴ） - KOF勢共有ブログ <a href="https://t.co/oC1QFJmiTP">https://t.co/oC1QFJmiTP</a></li>
 <li><a class="d" href="https://x.com/mot_csb/status/1897152966626578918">2025/3/5</a>KOF2002UM　バクステからの仕込み飛翔拳<br><br>飛翔拳の判定がガチ<br>しかし、発生があまり早くない<br><br>　↓<br><br>バクステ中に214を仕込む<br>相手が手前に落ちるジャンプをしてきたらAを押して早出し対空で落とす<br><br>ができないか妄想</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1926568461238464964">2025/5/25</a>KOF2002UM　特殊版轟炎招来<br>コマンド登録だとこんな感じです。<br>屈B→特殊版轟炎招来は連続技にならないので、ノーガード設定でお試し下さい。 <a href="https://t.co/B6wax5hGlJ">https://t.co/B6wax5hGlJ</a> <a href="https://t.co/HiKsBJQB2i">https://t.co/HiKsBJQB2i</a></li>
@@ -143,7 +175,7 @@
 <li>発生の調べ方として、J攻撃をヒットかガードさせて、着地後最速で調べたい技を出す方法を考えました。J攻撃ヒット時は発生1～10F、J強攻撃ガード時は発生1～16Fまで調べられます。真ノ豪さんが調べたJ攻撃のフレームデータは、02のデータ（KOFのことさん）とほぼ一致しています。</li>
 <li>02から02UMで変わった点の例：キャンセル版3B（ジョー）の発生が早くなり、02で安定していた連打入力が間に合わなくなりました。リバサ大J最速CDは02では1Fだけ地上判定で2F目から空中判定ですが、02UMでは未確認です。</li>
 </ul>
-<details class="more"><summary>元の投稿を読む（30件・古い順）</summary>
+<details class="more"><summary>元の投稿を読む（34件・古い順）</summary>
 <ul class="xlog">
 <li><a class="d" href="https://x.com/mot_csb/status/19039083875">2010/7/21</a>弱カカトでの空中ヒット狙いは早出し中Ｊ攻撃には効果低いみたいで攻撃が発生する前によく潰されます。02UMは屈Ｂ始動コンボが楽になってるので、しゃがんで痛い目見せないといけないですね</li>
 <li><a class="d" href="https://x.com/mot_csb/status/22672065441">2010/9/1</a>爆裂拳からみの02と02UMでの違いは、「キャンセル版3Bの発生が早くなり難易度が上がった」「屈B→屈Aのつなぎが簡単になったため、屈B→爆裂拳を出す必要性が下がった」が主なところです。</li>
@@ -165,13 +197,17 @@
 <li><a class="d" href="https://x.com/mot_csb/status/659710330042343424">2015/10/29</a>フレームの知識の有用性についての具体例を思い出した<br><br>自分はKOF2002でフレーム単位でかなりの調査をしたので、KOF2002UMの発売直後から具体的に技性能を調査するノウハウを蓄積できていた<br><br>もし2002で調査していなければ2002UMの調査もスムーズにはいかなかったと思う</li>
 <li><a class="d" href="https://x.com/mot_csb/status/699087479949799424">2016/2/15</a>もしかしたら02UMでは起き上がる寸前に必殺技と特殊技だけでキャンセルできる1Fがなくなり、リバサ大Jが必殺技よりも優先してできるようになってるのかな<br><br>でも、もしそうなら詐欺飛びの時に話題になってるはずか</li>
 <li><a class="d" href="https://x.com/mot_csb/status/736356543457693697">2016/5/28</a>ネオジオ博士の2002UM講座　第02回　システムの変化について<br><a href="https://t.co/ofDgmYrTq5">https://t.co/ofDgmYrTq5</a><br><br>＞全キャラクターのガードキャンセルふっとばしの攻撃持続時間や硬直を平均化。<br>＞全キャラクターのガードキャンセルふっとばしの攻撃判定を強化。<br>発生について書かれてない</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/736356779991277568">2016/5/28</a>まあ何にせよ、6Fで統一されたとは公式には書かれてないっぽい</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1198184533792681984">2019/11/23</a>02UMなら生発動しておいてお手玉連続技も狙える<br><br>自キャラで適した連続技＆行動＆タイミング＆行動を吟味しておくとリターンがより大きくなりそう<br><br>空中で強攻撃を当てるよりも屈Dを当てた方がダウンを奪えていい。特殊技でもダウンを奪える。<br><br>発生が遅い技はとっさに当てにくいので微妙</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1198614345363537920">2019/11/24</a>京の屈B→近Cもつながりやすくなる</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1282579783897894912">2020/7/13</a>02UMだとガードされて19フレーム不利なのでそこまで変わらないみたいです。<br>調べてみると安定反撃できる技が多いかも。</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1339592754955866112">2020/12/18</a>シンプルに難しいですよね😅<br>屈B⇒屈A⇒弱爆裂拳の場合は、最初のBをBC同時押しで出すとかでカバーできるんですが、連打だと屈B⇒屈Aの繋ぎが安定しないという<br><br>02UMはキャンセル版の3Bの発生が早くなってて、02で安定してた方法だと間に合わなかったりします</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1343019080932937728">2020/12/27</a>そうですね、キャンセル版の3Bの発生が早くなっています。<br>そのせいで、キャンセルは明らかに難しくなってます。<br><br>02の頃は屈C⇒3B⇒弱爆裂拳は、3入れっぱなしでC×2⇒B×1⇒A×2で安定して出せたんですが、02UMだと連打がなかなか間に合わないです。</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1370411419418562561">2021/3/13</a>はい、自分の記憶とも合ってます<br><br>要は<br>・Aが1Fでも早い：その時点で623Aが成立するので優先度も何も関係ない<br>・Dが1Fでも早い：理由は同上<br>・AD完全同時押し：技自体の優先度が236236Dの方が上なので236236Dが出る<br>・236236系の必殺技はレバー完成後698Nに入っていれば出る<br>を組み合わせてます</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1448526630226255873">2021/10/14</a>KOF2002系<br>リバサ大J最速CD<br>・1Fのみ地上判定（足元無敵あり）<br>・2F目から空中判定<br><br>なので見えない表裏択への有効な対策になるはず<br>（ジャンプ攻撃が完全に重なってなければ空中食らいにはなる）<br>※02UMでは未確認<br><br>[KOF2002]背面起き上がり後の各種行動詳細 <a href="https://t.co/gXt7543din">https://t.co/gXt7543din</a></li>
 <li><a class="d" href="https://x.com/mot_csb/status/1448527402150219782">2021/10/14</a>02UMでも可能なのでれば、この動画の1:52からの二度の起き攻めのどちらも連続技は回避できたはず<br>（コマ送りで見ると起き上がりに重なってはいないため）<br><br>2016/5/16 KOF０２UM 西日暮里VERSUS・第２９３回紅白戦・その３（台湾勢遠征SP） <a href="https://t.co/Yf1FiPw6sg">https://t.co/Yf1FiPw6sg</a></li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1448528482112208900">2021/10/14</a>入力難易度に関して<br>リバサ前転よりも難易度は低いです。<br>正確にいうと、CDの同時押し猶予時間＋1Fあります。<br>「魔の1F」でCDが押されていた場合、リバサ大J最速Cになります。</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1448529949413941252">2021/10/14</a>リバサ大J<br>正面起き上がり：1F目から空中判定＆足元無敵<br>背面起き上がり：ジャンプ予備動作（4F前後）→空中判定<br><br>リバサ大JCD（最速）<br>正面起き上がり：1F目足元無敵→2F目から空中判定<br>背面起き上がり：1F目足元無敵→2F目から空中判定</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1453929412936695808">2021/10/29</a>02UMの飛び道具のモーションの長さを確認したことがあります<br><br>02UM：各キャラの飛び道具の全体モーションの長さリスト<br><a href="https://t.co/yUWQxgMhuu">https://t.co/yUWQxgMhuu</a><br><br>全体フレーム45～50Fはぼちぼちの性能っぽいですね</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1748970329668809104">2024/1/21</a>???と思ったのですが、数値が間違っている部分があるみたいですね、申し訳ないです。<br><br>02のデータと比較して再調査した方がよさそうですね(´・ω・`)<br><br>02の受け身後の硬直差関係<br><a href="https://t.co/6b6e1azda7">https://t.co/6b6e1azda7</a><br><br>02UMの硬直差<br><a href="https://t.co/LLTqGhkzbj">https://t.co/LLTqGhkzbj</a></li>
 <li><a class="d" href="https://x.com/mot_csb/status/1862309787813519758">2024/11/29</a>#KOF2002UM も同様<br><br>#KOF98 でも可能。ただ、KOF98は低いジャンプ強攻撃のガード硬直が短いため、「中ジャンプ強攻撃→ノーマルジャンプ攻撃」という連係はあまりないかも。<br>「中ジャンプCD→ノーマルジャンプ攻撃」はありそう。</li>
@@ -184,16 +220,23 @@
 <li>02UMはガークラ値がゲージで見えるので、ガークラ値の高い技をガードさせるだけで相手を煽る効果があります。1回の連係で確実にガークラになる状況では、守る側はJ攻撃をガードするだけで危険になるので、様子見と低打点JCDを混ぜた読み合いが大事になります。02ではガークラ値がなかったテリーの弱クラックシュートにもガークラ値が付き、弱クラック→弱クラックの連係が強くなりました。</li>
 <li>ガークラの回復速度は02ではキャラごとに違いましたが、02UMでは均一化されました。96～02UMのうち、02と02UM（とNW）以外はガークラさせても距離が大きく離れるので活用しにくいです。</li>
 </ul>
-<details class="more"><summary>元の投稿を読む（11件・古い順）</summary>
+<details class="more"><summary>元の投稿を読む（18件・古い順）</summary>
 <ul class="xlog">
 <li><a class="d" href="https://x.com/mot_csb/status/22480608429">2010/8/30</a>02UMはガークラゲージがあるため、ガークラ値の高い技をガードさせるだけでも煽る効果があるのがいいですね。ガークラさせた後にまとまったダメージを取る手段を確立してないと、張り子の虎になってしまいますがｗ</li>
 <li><a class="d" href="https://x.com/mot_csb/status/27711001887">2010/10/18</a>02UM。舞の6B。発生は遅いので崩しとしては期待できないが、ガークラ値がそれなりにあるので、ガークラゲージ削りを意識した固めに使えそう。使われた場合の対策としては、発生が遅いため、多用してくるなら見てから無敵技で返すというものがある。</li>
 <li><a class="d" href="https://x.com/mot_csb/status/54427676156502016">2011/4/3</a>KOF2002UM　１回の連係で確実にガークラになる状況では、守り側は相手のＪ攻撃をガードするだけで危険になる。ゲージが１つもない場合ならなおさら。この状況で様子見を混ぜながら、低打点ＪＣＤを混ぜた読み合いが大事になる。</li>
 <li><a class="d" href="https://x.com/mot_csb/status/221778646120148992">2012/7/8</a>妄想続き。ガクラ回復速度は02UMでは直されてましたね。「Jを少し高くして飛び道具に負けない（飛び越しやすい）ように」。飛び道具に関しても02UMでは飛び道具全般の攻撃判定が小さくなったみたいで飛び越しやすくなってるか。</li>
 <li><a class="d" href="https://x.com/mot_csb/status/498050140091871233">2014/8/9</a>KOF2002UMメモ<br>ガークラ硬直は26フレーム<br>Jの着地の隙は1フレーム<br>MAX発動は21フレーム<br>↓<br>J攻撃の打点を最低まで下げてガークラさせ、着地で最速でMAX発動すれば発生4F以内の技が確定するはず</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/498050613968502784">2014/8/9</a>難易度高すぎますが、京や庵は近C始動連続技が決まりそう<br>クーラは強バイツ→どこキャンエッジが1ゲージで可能<br>あんまり実用性なさそうなネタですね、すいません</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/498050844688777219">2014/8/9</a>あー！真吾は近Cの発生が2Fだから猶予が少しありますね。そして火力もある。</li>
 <li><a class="d" href="https://x.com/mot_csb/status/618002380383059968">2015/7/6</a>そういえば02UMの弱レイスピンは無敵がなくなったので遠Dを強気に出していけそうですね。問題は遠Dのガクラ値が下がったせいで露骨にガードさせる旨みが減ってることですが……</li>
 <li><a class="d" href="https://x.com/mot_csb/status/729326131581607937">2016/5/9</a>02の頃はガクラ値がなかったので、そこまでの圧力はかけられなかったんですが、02UMだとガクラ値がついたので弱クラック→弱クラックの連係の強みが増えたと思ってます</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1081039052021784576">2019/1/4</a>02UMは遠Cの発生が早いので、遠Cでガークラ値を稼いだり、遠Cと見せかけてダッシュ屈Cで図々しくガークラ値を稼ぐのもアリだと思います<br>そしてさらに図々しくダッシュ撃壁も狙うと相手のストレスゲージもためられるはず</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1081039834133684224">2019/1/4</a>・撃壁決まる<br>ダメージ大＆ゲージ増加量大<br><br>・屈Cガード<br>ガークラどんどん蓄積<br><br>・3A<br>ガークラもダメージもないけどゲージ増加量大<br><br>個人的には6Bは多用しない方がいいと思う</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1081040704845971456">2019/1/4</a>さらに言うと、画面中央での飛翔拳は微妙手だと思う<br><br>ヒットしても追撃が（ほぼ）ムリだし<br>リーチが短いのでヒットすること自体が少ないし<br>近C→飛翔拳が確定する場面なら撃壁につないだ方がいいし、確定しない場合は出し切りがもったいないし<br>相手の高Jと噛み合うと連続技を食らう危険もあるし</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1081040890754297856">2019/1/4</a>中央での飛翔拳は、あまり多用せずに相手の飛び道具に対して時々相殺狙いで合わせるのが無難な気がする</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1081094853520351232">2019/1/4</a>ガークラ狙い目的やゲージため目的の連係などの振り分けはセオリーは存在するけど、相手プレイヤーによって対応策が変わってくるのでそれに合わせる必要がある<br><br>相手プレイヤーがやってこない行動への対策を取ってるとチャンスを逃してしまう</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1081095600446201856">2019/1/4</a>相手が暴れ多めの場合＆相手端の場合は<br><br>屈B→飛翔拳<br>屈C→ディレイ飛翔拳<br><br>が有効になる<br><br>ふと思ったけど、屈C→ディレイ飛翔拳って屈CにGC前転された場合は出さずにすむ？</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1298659185903587328">2020/8/27</a>連続技で気絶を狙いやすいのは94<br>立ち回りで気絶を狙いやすいのは96<br><br>立ち回りでガークラからの連続技を狙いやすいのは02<br><br>02と02UMはほぼ同じ仕様（ガークラ値がゲージとして見えるので狙いやすいしかわされやすい）</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1298661181264031745">2020/8/27</a>（96～02UMで）02と02UM以外のガークラは成功しても距離が大きく離れてしまうため活用しにくい。端に追い詰めて連続技を兼ねた連係から期待するくらいがいいと思う。<br><br>NWでも02のように狙えるの忘れてました。</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1809346591352054195">2024/7/6</a>02UMのガークラ値メニュー<br><a href="https://t.co/B0Wakdjacm">https://t.co/B0Wakdjacm</a><br><br>02UMのメニュー<br><a href="https://t.co/SW2e0wjKoc">https://t.co/SW2e0wjKoc</a><br><br>02のダメージ値から02UMで実際に与えるダメージの比較表<br><a href="https://t.co/A5byfgZbWu">https://t.co/A5byfgZbWu</a><br><br>なので、02で設定されてる数値から02UMで計測したデータを照らし合わせてますね。</li>
@@ -206,7 +249,7 @@
 <li>ダメージ補正表は2011年に作成し、補正は切り捨てではなく四捨五入があるようです。多くの技のダメージは02と同じですが、一部の超必殺技が違います。MAX中はどこキャン扱いで連続技に組み込みやすくなったためでは、と推測しています。ゲージがないときにソニックスローターのコマンドを成立させると、ブーメランも出ません。</li>
 <li>98に比べて02UMは単発技のダメージが少なく、何回も読み勝つ必要があるので連続技の比重が上がります。02無印は02UMより無敵技が弱くダメージが高いので、攻めを継続しやすく、1回のチャンスで大ダメージを取れます。</li>
 </ul>
-<details class="more"><summary>元の投稿を読む（14件・古い順）</summary>
+<details class="more"><summary>元の投稿を読む（16件・古い順）</summary>
 <ul class="xlog">
 <li><a class="d" href="https://x.com/mot_csb/status/23127368494">2010/9/6</a>02UMのゲージためについて。『ゲージをためるには、具体的に、どういう動かし方がいいか』という文章をあまり見ない気がします。連係ってガードされることも多いんだから、連係の組み方を意識するだけでも結構違ってくると思います。</li>
 <li><a class="d" href="https://x.com/mot_csb/status/23127464496">2010/9/6</a>02UMで、1ゲージだけある時に、「1ゲージ消費する連続技を決めると、残りゲージはほぼ空」、そして、「ゲージ半分増えるノーゲージ連続技を決めると、残りゲージは1本半」。この差は結構大きいと思います。</li>
@@ -217,7 +260,9 @@
 <li><a class="d" href="https://x.com/mot_csb/status/123377166015676418">2011/10/10</a>02UMのダメージについて。多くの技は02と同じですが、一部の超必殺技が違うようです。これはおそらく、MAX中はどこキャン扱いで連続技に組み込みやすくなったためではないかと思います。</li>
 <li><a class="d" href="https://x.com/mot_csb/status/181688175343828993">2012/3/19</a>【KOF2002&amp;2002UM】発動状態で遠C→ヒット確認してどこキャン弱スラッシュキックが連続技になる。でもダメージ低いんで微妙だな(ノ∀｀)</li>
 <li><a class="d" href="https://x.com/mot_csb/status/458834307952287744">2014/4/23</a>一般プレイヤーですが、02無印は02UMに比べて無敵技が弱いので切り返しが難しいので攻めを継続しやすい強みがあります。そして、ダメージが基本的に高いので１回のチャンスで大ダメージが取れるのが大きそう。</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/458835795562881024">2014/4/23</a>無敵時間がある技でも無効化する手段が多いです。あと、強キャラにも変な弱点があるんですよね。アテナの後転の動作開始４フレームに食らい判定があるとか。</li>
 <li><a class="d" href="https://x.com/mot_csb/status/485039967568007168">2014/7/4</a>02UMで対地ぶっぱなし強虎咆1段目→SC弱覇王翔吼拳ってどうでしょう。地上ヒット時は連続技になりまとまったダメージを与えられるし、ガードされても痛い反撃はなさそう。</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/485040256471670784">2014/7/4</a>入力は64123C→6Aです</li>
 <li><a class="d" href="https://x.com/mot_csb/status/668445060879376384">2015/11/23</a>KOF98は連続技が短くて単発技が減るので単発技でダメージを積み重ねていけるのが面白い<br><br>KOF2002UMは98に比べると単発技のダメージが少なくて何回も読み勝ちしないといけないので連続技の比重が上がる</li>
 <li><a class="d" href="https://x.com/mot_csb/status/706273813130969088">2016/3/6</a>わかりました！楽しみにしてますねー<br><br>02UMだと爆ハリのダメージが下がってるのでゲージ吐き出させるのも手かもしれないですね</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1128869983189028864">2019/5/16</a>通したい側の所持ゲージ数でできることが大体決まってて、何回か大きな読み合いを通す感じになるんですよね<br>守る側は少々ダメージは負ってもいいので「これだけは」食らわないように捌くというか</li>
@@ -230,12 +275,21 @@
 <li>02UMは攻撃判定が食らい判定に覆われているのが基本なので、攻撃判定が食らい判定から出ているだけで強い部類です。判定の強さは他の技と比べないと分かりません（2016年）。JD以外の判定は02からほとんど変わっていないようです。</li>
 <li>相手をロックする技がヒットすると接触判定が巨大になります。杓死の判定は02とあまり変わっておらず、端で後転を連発していると攻撃判定に引っかかりにくそうです（要検証）。判定画像とフレームデータは「KOF02UMいろいろ」も参考にしています。</li>
 </ul>
-<details class="more"><summary>元の投稿を読む（4件・古い順）</summary>
+<details class="more"><summary>元の投稿を読む（13件・古い順）</summary>
 <ul class="xlog">
 <li><a class="d" href="https://x.com/mot_csb/status/686475611729035265">2016/1/11</a>KOF2002UMの判定について<br><br>判定の強さは他の技と比べないとわからない<br>他の技と比べると十分強い技を弱いと言ってる人がいたので気になった<br><br>02UMは攻撃判定が食らい判定に覆われてるのが基本なので、攻撃判定が食らい判定から出てるだけで強い方です</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/686475990705385472">2016/1/11</a>K’の通常技の判定をアップすると判定の弱さが伝わりやすいかも</li>
 <li><a class="d" href="https://x.com/mot_csb/status/688274941544824836">2016/1/16</a>#判定の見方<br>KOF2002UMはこんな感じで「攻撃判定が食らい判定に覆われてるのが普通」です <a href="https://t.co/TGkikpJp5x">https://t.co/TGkikpJp5x</a></li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/688276506779324417">2016/1/16</a>#判定の見方<br>なので、「こんな感じで攻撃判定が食らい判定から少しでも出ていると判定が強い」と言えます <a href="https://t.co/gkqnrZiDHM">https://t.co/gkqnrZiDHM</a></li>
+<li><a class="d" href="https://x.com/mot_csb/status/703461132845977600">2016/2/27</a><a href="https://t.co/eyD3qpOdEj">https://t.co/eyD3qpOdEj</a><br>テスト放送<br>KOF2002UMのヒットボックスを表示してみてます</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/703467420480987136">2016/2/27</a>テスト放送終了します、ありがとうございました</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1560826512131358720">2022/8/20</a>02UMの杓死の判定画像。<br>性能自体は02よりも劣化していますが、判定自体は02とあまり変わってないので参考になるはず。<br>この画像を見てもわかるんですが、端で後転を連発していると杓死の攻撃判定に引っかかりにくい感じがします（要検証）<br><br><a href="https://t.co/hjqfplwsoc">https://t.co/hjqfplwsoc</a></li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1560828097481822208">2022/8/20</a>02：アンディ（対チョイのＭＡＸ２）(ＭＯＴ) - KOF勢共有ブログ <a href="https://t.co/nOV1m1RlUX">https://t.co/nOV1m1RlUX</a> <br><br>アンディのMAX2で安定して回避できるっぽい</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1560944376263880704">2022/8/20</a>少し確認しました<br>・立ガードよりもしゃがみガードの方が判定が低くなるのでヒットしにくい（する時はする）<br>・端でしゃがみガードしてるとややヒットしにくい（する時はするし多段ヒットもする）<br>・緊急回避を繰り返すのは、緊急回避の終わり際の食らい判定がそこそこ高いのでリスクも残る</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1560944889428602880">2022/8/20</a>・庵の強鬼焼きのように「出し切った後の無防備時間が長い技」よりもレオナの屈Aのように「そこまで判定は強くないけど連打がきく技」の方がカバーできる時間的範囲が広いので有効っぽい<br>・杓死の攻撃のタイミング自体は一定っぽいので、そのタイミングに合わせて緊急回避を連発できれば安定回避可かも</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1560945229737656320">2022/8/20</a>山崎の強サドマゾ：普通に食らう。しかもカウンターヒット</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1870626852257296497">2024/12/22</a>「KOF02UMいろいろ」様<br><a href="https://t.co/3UEmwWjUrX">https://t.co/3UEmwWjUrX</a><br><br>・判定（ヒットボックス）画像に加え、フレームデータも掲載されています。しかもフレームメーター形式。<br>・ジャンプ攻撃のデータもあるのが素晴らしい。<br>・超必殺技以上がないのに注意。<br><br>こちらのフレームデータも転載元を明記して転載予定です。</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1870628121860579587">2024/12/22</a>現在調査済みのフレームデータをまとめる<br>　⇩<br>誤っているフレームデータを修正する<br>不明なフレームデータを調べてまとめる<br><br>という順番がよさそう<br>なので、指摘や要望をいただけると助かります</li>
 </ul>
 </details>
 </section>
@@ -248,18 +302,21 @@
 <li>山月記バグの虎は「なんでも判定」で、端の相手に近Aを空中ヒットさせても拾えます。打撃判定なので当て身投げでき、投げられ判定もあるので投げも入ります（キャラ限定で通常投げも入るという、ほかの人の調査もあります）。端の相手にガードさせても飛び道具判定ではないので離れてしまいます。食らった側のゲージは大きく増え、体力満タン・ゲージ0から食らったバイスは約1.6ゲージたまり、KOした京は次のラウンドで4ゲージたまっていました。</li>
 <li>リバサ連舞は猶予なしで、不成立時に立AかCにできるはずです（2012年）。</li>
 </ul>
-<details class="more"><summary>元の投稿を読む（26件・古い順）</summary>
+<details class="more"><summary>元の投稿を読む（31件・古い順）</summary>
 <ul class="xlog">
 <li><a class="d" href="https://x.com/mot_csb/status/211654419241123841">2012/6/10</a>その１。リバサ連舞はおそらく猶予なしで不成立時に立AorCにできる。難易度は98や02の地雷バグを特殊技でかわすのと同じ。 #kof  #02um</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1906912863387840801">2025/4/1</a>KOF2002UM　竜巻槍打バグ<br>数日前にりくさんの配信で話題になったので、試聴しながら少し確認しました。<br><br>配信はこちら<br><a href="https://t.co/nG7lZswVmZ">https://t.co/nG7lZswVmZ</a><br><br>昇龍系で確認してたら、弱版はできるけど強版はできなくてなんで？と思っていたんですが、よく考えると投げ無敵の有無っぽいですね。</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1906913705880924568">2025/4/1</a>ラルフの場合<br><br>ラルフタックルで竜巻槍打バグを起こすことで<br><br>ラルフタックル（5ヒット）⇒QM⇒強攻撃⇒～発動コンボ～SC超必殺技<br>で2ゲージで結構減らせそうな気もします<br><br>また時間ある時に確認してみます</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1907031911526175086">2025/4/1</a>KOF2002UM　ラルフ<br>竜巻槍打バグでラルフタックル始動コンボ<br>2ゲージで結構減らせるし、端～端に運べるので一点読みなら普通にありかも。<br>（既出失礼） <a href="https://t.co/b0GpYopDwv">https://t.co/b0GpYopDwv</a> <a href="https://t.co/LE9yQK8CdH">https://t.co/LE9yQK8CdH</a></li>
 <li><a class="d" href="https://x.com/mot_csb/status/1907036992048865725">2025/4/1</a>・竜巻槍打バグ？の仕様自体は99から存在している<br>・99はクイック発動がないため極端なことにはならない<br>という感じかも<br><br>02UMのコンボ動画でリョウの弱暫烈拳ヒット後に押し合い判定消滅してたっぽいので、99ではその方向からバグの存在を確認するといいかも <a href="https://t.co/bI31CmULDG">https://t.co/bI31CmULDG</a></li>
 <li><a class="d" href="https://x.com/mot_csb/status/1907435125035696141">2025/4/2</a>KOF2002UM　テリー<br>竜巻槍打バグでクイックバーン始動コンボも可能なのを確認<br>（02UMテリーのコンボは詳しくないのでもっと伸ばせるはず） <a href="https://t.co/JgJ0VOqdJH">https://t.co/JgJ0VOqdJH</a> <a href="https://t.co/rGQQA3kT3s">https://t.co/rGQQA3kT3s</a></li>
 <li><a class="d" href="https://x.com/mot_csb/status/1926461585528156302">2025/5/25</a>KOF2002UM　裏ロバ　虎になるやつ<br>食らった側のゲージ増加量を確認<br><br>バイスのゲージに注目<br>体力満タン＆ゲージ0から食らって、約1.6ゲージたまってる<br>KO後も少したまってるっぽい <a href="https://t.co/w7ftQW7Tky">https://t.co/w7ftQW7Tky</a></li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1926463874590486767">2025/5/25</a>端の相手の起き上がりに重ねて削ろうとしてるんですが、リーチがなさ過ぎて難しい<br>そして絵面がヤバイ <a href="https://t.co/xjBQviGA0o">https://t.co/xjBQviGA0o</a></li>
 <li><a class="d" href="https://x.com/mot_csb/status/1926584835654537564">2025/5/25</a>KOF2002UM　裏ロバ　虎になるやつ <br>食らった側のゲージ増加量を確認<br>2P京のパワーゲージにご注目下さい。<br><br>今度は実際に対戦でKOしました。<br>（本当は時間切れを狙ったんですが失敗）<br><br>→次ラウンドで4ゲージたまってました。<br><br>チーム戦でも、基本的にMAXまでたまるのかも。要確認。 <a href="https://t.co/u0psQ5KH38">https://t.co/u0psQ5KH38</a> <a href="https://t.co/atZOAlGPBp">https://t.co/atZOAlGPBp</a></li>
 <li><a class="d" href="https://x.com/mot_csb/status/1926767946845573603">2025/5/26</a>KOF2002UM　裏ロバートのMAX版覇王翔吼拳（バグ）<br><br>山月記かよ！<br><br>のツッコミが面白すぎるので呼び方は「山月記バグ」でいい気がしてきました。 <a href="https://t.co/u0psQ5KH38">https://t.co/u0psQ5KH38</a></li>
 <li><a class="d" href="https://x.com/mot_csb/status/1926852773976392020">2025/5/26</a>KOF2002UM裏ロバのMAX版覇王翔吼拳（山月記バグ）<br><br>端の相手にガードさせてみたんですが……普通に離れてしまいました。そういえば飛び道具判定じゃないのを忘れてましたｗ<br>100%削りできるかと思ったんですが残念 <a href="https://t.co/s9c7f3TYVc">https://t.co/s9c7f3TYVc</a> <a href="https://t.co/4yaBZpzlqz">https://t.co/4yaBZpzlqz</a></li>
 <li><a class="d" href="https://x.com/mot_csb/status/1926853439784358246">2025/5/26</a>KOF2002UM裏ロバのMAX版覇王翔吼拳（山月記バグ）<br><br>しゃがみC空振りから出せるコマンド登録を確認しました。<br>[]内の数値は入力するフレーム数です。<br><br>確認希望します。<br><br>2+C[5]<br>1+C[3]<br>2[2]<br>3[2]<br>6[3]<br>3[2]<br>2[1]<br>1[3]<br>4[1]<br>4+AC[1]<br>7+AC[3]<br>7+C[1]<br>4[2]<br>1[1]<br>2[1]<br>3[1]<br>3+A[2]<br>6+A[3]<br>N[101] <a href="https://t.co/YBgaT1VtTj">https://t.co/YBgaT1VtTj</a></li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1926853909361877470">2025/5/26</a>コマンド登録して気付いたんですが、空振りする技で入力タイミングが変化するようです。<br><br>最初に遠C空振りで成立するコマンド登録をレコーディングできたんですが、その後に近Cにした場合に全然成立しませんでした。<br>キャンセル可能かどうかで違うのかも？</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1926898029610611091">2025/5/26</a>KOF2002UM裏ロバのMAX版覇王翔吼拳（山月記バグ）<br>コマンド登録を少し簡略化しました。<br><br>2つある同時入力の部分に☆を付けています。<br><br>コマンド登録（短縮版）<br>C[1]<br>2[6]<br>3[2]<br>6[3]<br>3[2]<br>2[1]<br>1[3]<br>4[1]<br>AC[5]　☆<br>4[2]<br>1[1]<br>2[1]<br>3[1]<br>6[1]<br>6+A[5]　☆<br><br>多分、もっと短くできると思います。 <a href="https://t.co/2sNZS5GDpP">https://t.co/2sNZS5GDpP</a> <a href="https://t.co/aNplU6mr53">https://t.co/aNplU6mr53</a></li>
 <li><a class="d" href="https://x.com/mot_csb/status/1926898770895114636">2025/5/26</a>KOF2002UM裏ロバのMAX版覇王翔吼拳（山月記バグ）<br><br>仕込みについて少し確認しました。<br><br>・空中でも仕込める<br>空中で仕込むことでノーマル版超必殺技の暴発を防ぎやすいです。<br><br>・空中で仕込む場合、MAX版超必殺技が出せる状況だと仕込めない<br>2ゲージから発動していたり、3ゲージ以上だと仕込めない <a href="https://t.co/M3CS0jy1MI">https://t.co/M3CS0jy1MI</a></li>
 <li><a class="d" href="https://x.com/mot_csb/status/1927007353578144192">2025/5/26</a>KOF2002UM　山月記バグ<br>コマンド登録時に重要なポイント<br><br>①通常技等<br>②MAX版超必殺技コマンド<br>③出したい超必殺技のコマンド残り<br><br>の③の時点で、「②MAX版超必殺技コマンド」が成立しないようにする必要があるみたいです。<br>裏ロバの場合は236+Aの最後のレバーを入れっぱなしにする必要あり。 <a href="https://t.co/xo9WXX5MTP">https://t.co/xo9WXX5MTP</a></li>
@@ -268,7 +325,9 @@
 <li><a class="d" href="https://x.com/mot_csb/status/1927376340522582339">2025/5/27</a>KOF2002UM　山月記バグ<br>裏ロバが面白すぎるだけで、他はなかなかないですね。</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1927526400191324341">2025/5/28</a>KOF2002UM　没技調査関係（山月記バグ）<br>今のところ、召喚するためのボタンは弱ボタンで調べてます。なので、チンのように強版で性能が変わることもあると思います。</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1928015935685681544">2025/5/29</a>KOF2002UM裏ロバのMAX版覇王翔吼拳（山月記バグ）<br><br>なんでも判定という話を聞いて試してみました<br><br>さすがにこれは驚きました <a href="https://t.co/2ofUH2jkDU">https://t.co/2ofUH2jkDU</a></li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1928642341620822517">2025/5/31</a>別のことを試すので、備忘録としてコマンド登録を置いておきます。 <a href="https://t.co/881O9IaKIt">https://t.co/881O9IaKIt</a></li>
 <li><a class="d" href="https://x.com/mot_csb/status/1928645711203041295">2025/5/31</a>KOF2002UM裏ロバのMAX版覇王翔吼拳（山月記バグ）<br><br>端の相手に近Aを空中ヒットさせても拾えます。<br><br>なんでも判定すごい。 <a href="https://t.co/jmQyWcInxs">https://t.co/jmQyWcInxs</a></li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1928648935893250549">2025/5/31</a>ということは、「端の相手に強版連舞脚→近A→虎」も可能ですね。</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1928653620297281818">2025/5/31</a>KOF2002UM裏ロバのMAX版覇王翔吼拳（山月記バグ）<br><br>少し確認しました。<br><br>■仕込みが解除される<br>・相手の攻撃がヒットorガード<br>・特殊技、必殺技を出す<br>・通常投げを決める<br><br>■仕込みが解除されない<br>・通常技<br>・立CD<br><br>なので、仕込む際に4or6Aが暴発するのはよくないみたいですね。</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1929823681783713823">2025/6/3</a>KOF2002UM裏ロバ　MAX版覇王翔吼拳（山月記バグ）<br><br>クーラのラ☆カチョーラは対地投げなのでいけそうな気もするんですが……惜しい <a href="https://t.co/Ol2cLUmoNH">https://t.co/Ol2cLUmoNH</a></li>
 <li><a class="d" href="https://x.com/mot_csb/status/1929825423539786028">2025/6/3</a>KOF2002UM裏ロバ　MAX版覇王翔吼拳（山月記バグ）<br><br>打撃判定なので当て身投げ可能です。 <a href="https://t.co/bF2zGFj97X">https://t.co/bF2zGFj97X</a></li>
@@ -287,11 +346,13 @@
 <li>端からの位置入れ替え：相手が前方ジャンプしてきたら、レバーを一瞬前に入れるだけで位置を入れ替えられます（2024年）。食らった側のノックバックだけでなく、相手が画面端のときに攻撃側にかかるノックバックも攻撃側の向きで決まります。</li>
 <li>家庭用のプラクティスモードでは、CPUのACTIONをF JUMP-1にすると前方小Jを繰り返すので無敵対空の練習になり、COUNTERをONにすると実際の対空に近い結果になります。CPUのガードをGCAに設定すればGCCDガード後の反撃も練習できます。</li>
 </ul>
-<details class="more"><summary>元の投稿を読む（33件・古い順）</summary>
+<details class="more"><summary>元の投稿を読む（140件・古い順）</summary>
 <ul class="xlog">
 <li><a class="d" href="https://x.com/mot_csb/status/13665891807">2010/5/9</a>すいません、思いっきり脱線してしまいました。02UMは02で調べた仕様がほぼそのまま使えるため、効率よく調べることができます。そのことはとてもいいことなんですが、新しいことを見つけたい自分みたいな人にとっては、ちょっと物足りないみたいです</li>
 <li><a class="d" href="https://x.com/mot_csb/status/15457061186">2010/6/5</a>02UM：参照ページ→ＫＯＦ２００２各キャラの屈み時の食らい判定について　<a href="http://www5.atpages.jp/comesonobravo/02kagami-kuraihanntei.html">http://www5.atpages.jp/comesonobravo/02kagami-kuraihanntei.html</a></li>
 <li><a class="d" href="https://x.com/mot_csb/status/20502778542">2010/8/7</a>02UMなど：「連続技にはなるが連続ガードにはならない連係」への割り込みですが、「強攻撃（or特殊技）→必殺技」には見てから可能ですが、「弱攻撃→必殺技」には見てからは無理で、読みで割り込むしかないと思う。</li>
+<li><a class="d" href="https://x.com/mot_csb/status/20854604426">2010/8/11</a>02UMの話ですか？02UMのデータは基本的には02と一緒だと思うので、「KOFのこと」さんが参考になるんじゃないでしょうか</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/20854815091">2010/8/11</a>明確に02と違うのは、MAX発動モーション、緊急回避モーション、ガークラ回復速度、防御力の統一化があります。緊急回避はシャンフェイが違ったんでしたっけ。ガークラモーションはウィップが短いままで02と一緒ですね。</li>
 <li><a class="d" href="https://x.com/mot_csb/status/21542270270">2010/8/19</a>立ち状態にはめくれないけど、屈み状態にはめくれる、という技は02UMではどうも（ほとんど）なさそうですね。ありえない前提の話をしてしまい申し訳ありませんでした。スト２とかではそういう対屈み限定のめくり連続技があったような気がして</li>
 <li><a class="d" href="https://x.com/mot_csb/status/22232086627">2010/8/27</a>02UMの家庭用のプラクティスモードで、「CPU」の「ACTION」を「F　JUMP-1」に設定すると、ひたすら前方小Jを繰り返してくれるので、小Jの飛び込みに対して無敵対空を出す練習になります。「COUNTER」を「ON」にすると、実際に対空した結果に近いものになるのでおすすめ</li>
 <li><a class="d" href="https://x.com/mot_csb/status/23036169448">2010/9/5</a>KOF2002UMでは判定が強化されて当たるようになっています。こういう部分に気をつけて修正していきたいと思います。</li>
@@ -301,28 +362,133 @@
 <li><a class="d" href="https://x.com/mot_csb/status/393655454393307136">2013/10/25</a>あと、02UMは02に比べて画面が大きくなってるので蛇使い中段での制圧力が下がってる気がします。<br>蛇使い中段が届かない距離が(02に比べて)広い</li>
 <li><a class="d" href="https://x.com/mot_csb/status/396850014812512257">2013/11/3</a>02UMの対戦を見て空中戦が起きるきっかけを考えてた<br>→棒立ちの状態から飛ぶことは少ない<br>→なんらかの行動からジャンプする<br>→→距離が離れる技をガードして<br>→→一瞬ダッシュして<br>→→立ちAで空中の相手を落として<br>→→空対空を制して</li>
 <li><a class="d" href="https://x.com/mot_csb/status/480628719904489472">2014/6/22</a>02UMの対戦動画を見てて思ったこと<br>「屈Dは相手に考える時間がある起き上がりに重ねるには微妙」<br>「重ねるならダウン回避の復帰直後やダウンしない技の着地など、相手に考える余裕がない時がよさそう」<br>展開が早い時に屈D先端を重ねられると、Jを警戒して立ちガードしてる相手に刺さりやすい</li>
+<li><a class="d" href="https://x.com/mot_csb/status/526264172661600257">2014/10/26</a>KOF2002UM全般<br>端に追い詰められた場合に相手の前方Ｊが本当に厄介<br>↓<br>中央と違って飛び越されることがない<br>↓<br>対空技を出そうにも、真上～後方をカバーしていないのものも多く、そういうものはこの飛びに無力</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/526264566288629760">2014/10/26</a>高いＪに対しては早めの前転やダッシュ潜り無敵技という対策があるが、低いＪや地上固めも警戒せざるを得ないので完全に読めていないと難しい<br>↓<br>高いＪ攻撃にＧＣＣＤしてもガードが間に合いやすいのも面倒な要素<br>↓<br>安全を取るならＧＣ前転もアリだと思う</li>
+<li><a class="d" href="https://x.com/mot_csb/status/684318692100800512">2016/1/5</a>Steam版KOF2002UM<br>F12でスクショ撮れるんですね</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/684321515114856448">2016/1/5</a>これだとヒットボックスが表示されませんでした<br>残念 <a href="https://t.co/GPTL8NpShB">https://t.co/GPTL8NpShB</a></li>
 <li><a class="d" href="https://x.com/mot_csb/status/687298088533278721">2016/1/14</a>02UMのJCDは判定はあんまり強くないですよね。判定の強さでなくて相手が技を出してない状況や部分を蹴ってるのが強みなんだと思います<br>調査楽しみにしてます</li>
+<li><a class="d" href="https://x.com/mot_csb/status/690148651008684032">2016/1/21</a>02はそれと同じなので多分02UMでもそうだと思います</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/690149135002046464">2016/1/21</a>前転の長さが33F<br>ボタンを押して通常技が出るまえ5F<br>なので、間に合わせるためには<br>33-5=28<br>28Fの間に「反応時間+発生F」がおさまる必要があります</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/690149478117015552">2016/1/21</a>発生4Fの技で反撃するには、前転開始から24F以内にボタンを押す必要がある、という感じですね<br>（計算が微妙にずれてるかもしれません、すいません）</li>
 <li><a class="d" href="https://x.com/mot_csb/status/693255656963354624">2016/1/30</a>KOF2002UM<br>相手をロックする系の技がヒットすると接触判定が巨大になるのが面白い <a href="https://t.co/wLVvh4QzTD">https://t.co/wLVvh4QzTD</a></li>
 <li><a class="d" href="https://x.com/mot_csb/status/693820270323195904">2016/2/1</a>今日色々とはったKOF2002UMの判定はKOF2002の知識を基にしてます<br>JD以外の判定は全然変わってないですねこれ</li>
+<li><a class="d" href="https://x.com/mot_csb/status/714422280600702976">2016/3/28</a>KOF2002UM<br>ハリーラットさん ( @harry_rat )に教えて頂いた情報<br>F1でA～Dの近距離認識間合いが表示されるみたいです</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/714422502668255232">2016/3/28</a>テリーの立Aで確認してみます<br>この水色のラインが近距離認識間合いみたいです <a href="https://t.co/IiptcN19tm">https://t.co/IiptcN19tm</a></li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/714422693118935040">2016/3/28</a>この水色のラインが相手の中心線よりも手前なら遠距離版が出て <a href="https://t.co/2vKclQGYTq">https://t.co/2vKclQGYTq</a></li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/714422868868595712">2016/3/28</a>相手の中心線を超えると近距離版が出るみたいです <a href="https://t.co/KpoABnL69a">https://t.co/KpoABnL69a</a></li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/714423508630003712">2016/3/28</a>キムの立Cとバイスの立Dの近距離認識間合いを比べてみましょう！ <a href="https://t.co/yOCxSH11Zk">https://t.co/yOCxSH11Zk</a></li>
 <li><a class="d" href="https://x.com/mot_csb/status/715034067692077057">2016/3/30</a>KOF2002UM<br>相手のジャンプ攻撃をガードして6231+ボタン押しっぱなし<br><br>これで<br>連続ガードでなければ623系の必殺技が出て、<br>連続ガードの場合はしゃがみガードになります<br><br>02UMは623CorDの無敵技でダウンさせやすくなってるので使いやすいかも</li>
 <li><a class="d" href="https://x.com/mot_csb/status/871933375761838080">2017/6/6</a>02UMのは食らい判定も大きいので攻撃判定が高い位置にある技で相打ち以上を狙えるかもしれないですね</li>
 <li><a class="d" href="https://x.com/mot_csb/status/951760678737473536">2018/1/12</a>調査おつかれさまです<br>ふと思ったんですが、02UMの方は食らい判定と重なってる部分が大きいので不利フラグの時に受け止められなかったりするんでしょうか</li>
+<li><a class="d" href="https://x.com/mot_csb/status/1035814666822250497">2018/9/1</a>KOF 2002 UM - Nikolai-保力達 (IORI Best Rounds) <a href="https://t.co/C2IhA9XZRz">https://t.co/C2IhA9XZRz</a> @YouTubeさんから</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1035816465927004160">2018/9/1</a>・複数の崩しを使い分ける<br>対応ミスを誘いやすい<br><br>・低JB空中ヒット→中J攻撃<br>詐欺飛び狙い。これを軸に崩しも狙える<br><br>・キャラ対策<br>裏ロバ相手の起き攻めで離れて屈C重ね<br>フォクシー相手に高JCで攻める<br>キング相手は地上技で起き攻めしない<br>Ｋ’相手の葵花多用（痛い反撃なし？）</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1035820317740953600">2018/9/1</a>・葵花が届く距離での複数の接近手段<br><br>中J攻撃<br>↑基本<br><br>大JC<br>↑中J攻撃の裏の選択肢。ヒット時のリターン大<br><br>葵花<br>↑見てから返されない。ヒット時は起き攻め可<br><br>ダッシュ<br>↑近C→6Aまででヒット確認して八稚女<br>↑屑風も狙える</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1035821168186413058">2018/9/1</a>発動コンボが安定しなくて<br>接近手段がワンパターンで<br>崩しのパターンも少ないと<br>弱い<br><br>発動コンボが安定していて<br>接近手段が多彩で<br>崩しのパターンも多いと<br>強い</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1035821655791034368">2018/9/1</a>庵はジャンプの滞空時間が短いこと自体がかなりの特長になってる<br>さらに、ジャンプが短いため、中JBと大JCが同じ距離から狙える<br>それに加えて葵花もあるので、対応ミスを狙って起こせる性能といえる</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1035822171094835206">2018/9/1</a>対応ミスを誘発させる荒らしプレイも強いけど、丁寧に立ち回ることも可能なので、体力リード時は対応プレイに変更できるといいのかも<br><br>対応モードと荒らしモードを意識して瞬時に使い分けるとヤバそう</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1035823136619384833">2018/9/1</a>リスクはあるのに相手が反応（反撃）を見逃してくれやすい行動例<br><br>葵花<br>↑冷たい反撃が可能な場合アリ<br><br>高JC<br>↑警戒してれば対空可能<br><br>屑風<br><br>弱鬼焼き</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1035914689920659457">2018/9/2</a>相手側が攻めてる時でも<br>→暴れなどから庵のターンになる場合がある<br>→弱鬼焼きや弱葵花で主導権を握り返されることがある<br><br>スタート間合いまで接近すれば攻めを狙える<br>→遠距離からスタート間合いに入るのはダッシュを使えばいいから余裕</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1035915161477951491">2018/9/2</a>どちらに主導権があるか怪しい瞬間の以下の行動が強い<br><br>大JCD<br>→相手も飛んでたら巻き込みやすい。相手が地上でも、待ち構えてなければ痛い連続技は食らわない<br><br>葵花<br>→相手がガードを解いたりジャンプしようとしてると刺さりやすい<br><br>弱鬼焼き<br>→相手が発生勝負や牽制をしようとしてると巻き込みやすい</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1036044807926235136">2018/9/2</a>屑風ループ対策<br>相手側は無敵技を入れ込んだり、屈Aガード後に反撃を狙うことができるはずだけど動画の相手プレイヤーはやってないっぽい（対応を忘れてしまってる感じがする）<br><br>早だし大JCD対策<br>屈B始動連続技で返すのが理想だけど、それが怖いなら地上技を空中ヒットさせて落とすのもアリだと思う</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1036048178309521409">2018/9/2</a>MAX版八稚児を決めた後は背面強制ダウンになるので端付近で決めれば起き攻めでめくりが狙える？<br><br>中央でのダウン回避への起き攻め<br>屑風（投げ無敵がないのでスムーズに狙いやすい）<br>葵花（リバサ大Jに空中ヒットするので攻め込みやすい）<br>もアリかも</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1036049269340352515">2018/9/2</a>起き攻めのダッシュからの中JCと中J百合折りに対しては<br>両対応の6236+ボタン押しっぱなしを多用してもいいと思う<br>たぶんだけど、この場合の中JCは詐欺飛びにはなってないだろうから</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1036050543712432128">2018/9/2</a>フォクシーは庵の高JCへの対空を考えるべきだし、いい対空がないなら高JCをされる距離に長居しないようにしたり、少なくとも地上で高JCをガードさせられる状況を避けるべきだと思う</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1036823379062321152">2018/9/4</a>22:25<br>深めに中JAをガードさせる→中J百合折りめくり<br><br>02UMは02と違って屈ガードが低いキャラ以外も使用率が高いので機能しやすそう</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1036824046346723328">2018/9/4</a>23:49<br>屈Dをガードさせて反撃を意識させる<br>↓<br>屈D→QM→ダッシュすることで暴れ潰し的にダッシュからの攻撃をヒットさせる</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1036862435779432448">2018/9/4</a>庵の高JC対策<br><br>上方向に判定が強い技を早出しする<br>裏ロバートの屈C、フォクシーの屈C、テリーの3Cなど<br><br>垂直ジャンプから発生の早い技を出す<br>香澄の垂直NJAなど<br>高いジャンプだと確認してからでもいけそう<br><br>無敵時間のある技で返す<br>発生が遅すぎると着地ガードされるので注意<br><br>自キャラで調べるといい</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1036862888579715072">2018/9/4</a>裏ロバは2ため8BorDでも落とせるけど、しゃがみガード待ちしてるとダッシュ近Cで攻め込まれてしまうので屈C対空も混ぜるといい気がする<br><br>ためずに立Aや立CDで牽制しつつ、高Jされたら早め屈Cみたいな<br><br>もちろん、要所要所でためておけるとなおいい</li>
+<li><a class="d" href="https://x.com/mot_csb/status/1065578045241618432">2018/11/22</a>KOF 2002 UM - 赛貂蝉 (Diaochan) VS Nikolai-保力達 <a href="https://t.co/WKG2EI9XTu">https://t.co/WKG2EI9XTu</a> <br><br>どんどんアップされてる</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1065581187236683776">2018/11/22</a>ユリの通常技→びんたの連係は強攻撃でなく弱攻撃の方がいいと思う</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1086120138124943360">2019/1/18</a>おお！まさにその話でした<br><br>ヒット確認の流れで出してるはずですが、実際はヒットしないだろうけど出しておくか……みたいな意識になってて、ヒットしてるのに出せなかったりするんですよね。暴れ始動なんかも完全に同意見です<br>相手もミスして崩しでなくても食らってくれることもあるのに</li>
+<li><a class="d" href="https://x.com/mot_csb/status/1087287252869308416">2019/1/21</a>Nikolai-保力達 (Kyo Best Rounds ➋) KOF 2002 UM <a href="https://t.co/08wZ9hPedJ">https://t.co/08wZ9hPedJ</a> <br><br>相手に対応する余裕を与えない圧倒的な暴力</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1088023645308383232">2019/1/23</a>相手の前転を近C→3D→クイック発動始動連続技で咎めている<br><br>この方の反応がいいのも勿論ありますが、京の近Cは発生が早く認識間合いが広いから狙いやすいというのもありそう</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1088061855950487552">2019/1/23</a>リョウの弱虎咆空振りに対して弱鬼焼きを空中カウンター2ヒットさせる部分とかヤバさしかない</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1123248577260638208">2019/5/1</a>阿澤.Aze (Ralf Best Rounds) KOF 2002 UM <a href="https://t.co/Z7WEQejWmD">https://t.co/Z7WEQejWmD</a> <br><br>立CD(空振り)→屈Dをほぼ確実に決め打ちでやってるので立CD(空振り)に前方小中Jを合わせると屈Dの空振りにジャンプ攻撃から連続技が決まりそう</li>
+<li><a class="d" href="https://x.com/mot_csb/status/1127244641957343233">2019/5/12</a>KOF02UM コンボ解説動画 01：はじめに <a href="https://t.co/UcHp7w4k57">https://t.co/UcHp7w4k57</a> <br><br>かなりのペースで投稿されてる<br>解説がずっと音声なので集中して聞き続けないといけないのが自分はキツイ<br>でも情報量は多いと言える</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1127246297554022401">2019/5/12</a>わかりやすさという面ではkytkさんが投稿されてたシリーズはコマンド登録画面を見せながら文字で説明されてたので格段にわかりやすかったかも</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1127246698550415366">2019/5/12</a>わかりやすくしようとすればするほど動画編集の時間が伸びるのがキツイ<br>自分は文章までで力尽きるタイプ</li>
+<li><a class="d" href="https://x.com/mot_csb/status/1229752025656676353">2020/2/18</a>KOF 2002 UM - Nikolai-保力達 VS Xiaohai (小孩)【15•10•2018 FT08】 <a href="https://t.co/NJzUlnTK7q">https://t.co/NJzUlnTK7q</a></li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1229752085584859136">2020/2/18</a>YouTubeで対戦動画を見る時、キャラ選択画面を飛ばしたい時がありますよね<br>その時に、→キーを押して5秒早送りをするといい感じで調整できます<br>また、何回か見返したい場面は、←キーを押せば5秒巻き戻せるのでいい感じです</li>
+<li><a class="d" href="https://x.com/mot_csb/status/1247880149195882497">2020/4/8</a>KOF 2002 UM -  Chenglong(程龙)   VS   Nikolai-保力達  [05/04/2020]  [FT10] <a href="https://t.co/c5PQv0LpSk">https://t.co/c5PQv0LpSk</a><br><br>8:13あたり<br>バクステ×2→虎煌拳に対してガンダッシュから大ジャンプ攻撃<br><br>距離を離して打ちたい飛び道具に対して<br>ガンダッシュで距離を詰めて大ジャンプを決める</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1247880683160141831">2020/4/8</a>離れて出したい技があるキャラはこの動きをしがち<br>そこを狩る感じ<br><br>飛び道具を出すためにバクステしてしまっているので、ついつい出してしまいがち</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1247881168353026050">2020/4/8</a>開幕でダッシュ側がこの読みを通すと一気に画面端に追い詰めることに成功することになる<br><br>開幕でなんとなく毎回バクステしてしまうのは危険な気もする<br><br>相手がほぼ毎回下がるなら自分は時々ダッシュでラインを上げるのもいいかも<br>開幕一瞬様子見→相手のバクステを見てからダッシュにすればリスク少</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1262042510899113987">2020/5/18</a>・屈C⇒6B⇒弱あんこくらいこうけんを決めてすぐにDらいうんを出すとギリギリ空振り<br>・ジャンプ攻撃から着地強攻撃に繋げにくい<br>・立B2段目がしゃがみに空振りするキャラが多い<br><br>02UMだと結構快適になってるっぽいのでそっちで楽しめばいいだけのような気がしてきた</li>
+<li><a class="d" href="https://x.com/mot_csb/status/1314404667439214592">2020/10/9</a>ここがヘンだよKOF2002UM</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1314404725920391169">2020/10/9</a>そういうノリでシリーズについて話すのもいいかも</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1314404969055834112">2020/10/9</a>(´・ω・)つ『NEOGEO墓標』<br><br><a href="https://t.co/DvDHuX95HI">https://t.co/DvDHuX95HI</a></li>
 <li><a class="d" href="https://x.com/mot_csb/status/1332920308345409538">2020/11/29</a>強レイスピンは02UMは抜けられて02は抜けられなかったと思います(昨日調べました)<br>今日また調べてみます、ありがとうございます😃</li>
+<li><a class="d" href="https://x.com/mot_csb/status/1337783290867040263">2020/12/13</a>KOF2002UM<br>Steam版のオンラインに潜ってみたけど異様に重かったです<br>（弱地雷震が見てからしゃがめないレベル）<br>有線で繋いでるので回線の問題ではないんですかね🤔</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1337785319102410752">2020/12/13</a>ちょっと知り合いの方にテストプレイに協力していただきたいですm(_ _)m</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1337790215541276674">2020/12/13</a>キャラセレの時点で遅くて戸惑いました</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1337792852747644929">2020/12/13</a>ネットワークセッティングで最大遅延入力が9になってたのを1にしたら大分マシになった感じもする</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1337802563995934720">2020/12/13</a>ネット対戦の難しさを実感<br>その点Bぷよは違和感が仕事してなかった（褒めてる）</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1337805081589116929">2020/12/13</a>KOF2002UMの対戦もほぼ経験がないので、知り合いに教えてもらいながら浅瀬でちゃぷちゃぷしたいくらいのモチベです(´・ω・`)<br><br>格ゲーに折れる初級者の気持ちが少しわかる気もします</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1337805360388657153">2020/12/13</a>でもまあ、Steam版のネット対戦に挑戦すること自体はできたので大きな前進とも言えますね<br><br>この調子で、やろうとしていたけど後回しにしてしまっていることに挑戦していきます</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1340343480938160130">2020/12/20</a>自分が02の時以上に何もできないのは、「キャラ対策がしっかりできてない」というのが結構大きそう<br><br>02の時はかなりガッチリとキャラ対策を練っていたのである程度は戦えた<br><br>02UMはそれがほぼない<br><br>なので、何をしたらいいかわからずひよった動きになってしまう</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1340343892948910080">2020/12/20</a>「このキャラよくわからんけど捕まえたらなんとかなる」という戦い方ができてない<br><br>意識したことはあるんだけど、ずっとできない<br><br>なので庵とかクラークとかうまく使えない</li>
+<li><a class="d" href="https://x.com/mot_csb/status/1340342757068472320">2020/12/20</a>02UMの対戦を観戦してるの楽しいし勉強になる<br>夜更かししすぎた</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1340343101039075328">2020/12/20</a>ネット対戦だと対応プレイが相当難しそう<br>雰囲気読んでの行動多めの方がよさそう</li>
+<li><a class="d" href="https://x.com/mot_csb/status/1343609180905607168">2020/12/29</a>KOF2002UM<br>ネット対戦メモ<br>なかなか相手の動きに反応できない<br>おそらく、自分の中に残ってる対戦のイメージがかなり限られていて、それから外れると全然反応できないし対応できないっぽい<br>対戦していくと段々思い出してきました</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1343609470102847489">2020/12/29</a>他の方の対戦を見て勉強になっているつもりでしたが、違いました<br><br>自分で対戦した上で見ると、学びが全然違いました<br><br>多分、どちらかだけでもダメなんでしょうね</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1343609848546488320">2020/12/29</a>02でメインキャラだったキャラ達が軒並み性能が変わってしまってチーム決めに困っています。<br><br>テリーとアンディはほぼアッパー調整のみなので、この二人を固定するといいかも。<br><br>大将に置くキャラが決まっていないのでなんというかフワフワしていますね。</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1343610117783056385">2020/12/29</a>勝つとか負けるというレベルまでまだ到達できていない感じ。<br><br>「対戦」の形になってないという感じ。<br><br>フワフワしてる。<br><br>相手が隙を見せてくれても連続技を決められない感じ。</li>
+<li><a class="d" href="https://x.com/mot_csb/status/1344189376197115904">2020/12/30</a>KOF2002UM<br>Youtubeで対戦動画を視聴している時に「端に追い詰められている側が、相手の前ジャンプに対して、レバーを前に倒しているわけでもないのに位置が入れ替わる」という現象を見かけるんですが、これって狙って起こせるんでしょうか。<br><br>2Pが画面左端に追い詰められた場合に見かけました</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1344189584863756289">2020/12/30</a>もしこれが狙って起こせるなら、端の相手を攻める際に注意した方がいいので気になりました。</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1344288921107066882">2020/12/30</a>少し確認したんですが、再現できませんでした<br>謎のままです</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1382325200742600705">2021/4/14</a>これ知らなかったです。勉強になりました。<br><br>「食らった側のノックバックは攻撃側の向きで決まる」のはわかっていたんですが<br>「相手画面端の場合に攻撃側にかかるノックバックも攻撃側の向きで決まる」<br>ということなんですね</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1387359797071138819">2021/4/28</a>③（対策時）キャンセル無敵技でフォロー<br>02UMでも可能なことを確認<br>屈Bに必殺技キャンセルがかからないキャラは固めを屈Aに変えるなどするといいかも</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1387360133097820165">2021/4/28</a>②ガード時　-11F<br>細かなフレームさは確認していないが、ユリの623Cで反撃できることを確認</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1387361298183188481">2021/4/28</a>鵺摘みを多用する相手なら意識してもいいかも</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1387366763822600195">2021/4/28</a>④空振りさせて差し返し<br>後退→空振りさせて→屈Dなどを決めるのが安定っぽい</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1389102685589180420">2021/5/3</a>⑤打点の高い技を使用する<br>攻撃判定が低い位置にない技を使うと、鵺摘みを直接潰せる<br><br>オリ京でいえば<br>近A：鵺摘みを潰せる<br>近C：鵺摘みを食らう<br><br>「屈状態のKUSANAGIに空振りせず、鵺摘みは潰せる技」<br>を使用キャラで確認しておきたいところ</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1389103894278537219">2021/5/3</a>K&#x27;も近Aで潰せるっぽい<br>使用キャラでキチンと調べるのが面倒な場合は、とりあえず近Aを使ってみてダメなら他の技を試してみるといいかも？<br>↑近Bは多くのキャラの場合攻撃判定が低い位置に出るため</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1389105487002488832">2021/5/3</a>⑥密着付近で技を重ねる<br>庵やクーラの立CDは近めだと鵺摘みを潰せるっぽい（カウンターヒット付き）<br>やや離れると鵺摘みでキャッチされてしまう</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1389105780566097920">2021/5/3</a>⑦投げる<br>鵺摘みの当て身投げ不成立時の攻撃判定の発生は遅めなので、打撃を重ねずに少し遅らせて投げを仕掛けることで、発生前に投げてしまうことが可能</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1389106681057988616">2021/5/3</a>⑧（端推奨）前方ジャンプ攻撃を仕掛ける<br>鵺摘みの打撃当て身投げ不成立時の打撃に対して、前方ジャンプで抜けつつジャンプ攻撃を当てることができる<br>低いジャンプだと引っかかりやすいので、高いジャンプが望ましい</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1389107653138284547">2021/5/3</a>⑨食らい判定が低い技で空振りさせる<br>テリーの立CDで確認<br>当て身投げ成立時の打撃技を空振りさせられる<br><br>（クリスやラモンの立CDでは違った結果になる）</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1389107880998031360">2021/5/3</a>⑨<br>キングの立CDでも可能っぽい</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1389168861468008448">2021/5/3</a>リョウの立CDでも潰せる上にカウンターヒットになるっぽい<br><br>＞⑤打点の高い技を使用する<br>に該当するっぽい？<br><br>キャラごとの潰せる技探しが結構面白いかも</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1389169727721721859">2021/5/3</a>雛子<br>3Cで潰せるっぽい<br><br>鵺摘みは対策すると結構無力化できるかも</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1389170019351728133">2021/5/3</a>雛子の3Cは近めでないと当て身投げされるみたい</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1389171919065292800">2021/5/3</a>⑤打点の高い技を使用する<br>ネームレスも立Aがよさそう</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1389173362342068232">2021/5/3</a>KUSANAGIは近Aでもいいけど、6Bも面白い<br>鵺摘みを潰せるし、ガードしてたらガークラゲージを一気に削れる</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1389173661324644352">2021/5/3</a>6B当て身投げされました(´・ω・`)</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1389175358352621570">2021/5/3</a>⑦投げる<br>投げ自体は有効だけど、KUSANAGIの暴れ始動連続技のリターンが高いので怖い</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1389225954279526405">2021/5/3</a>鵺摘み（おそらく弱強共通）<br>全体　47F<br>発生　19F<br>ガード時　-11F</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1389226231741124608">2021/5/3</a>フレーム的に、「後退だと鵺摘みをガードさせられる間合いでバクステしておけば、バクステでかわして鵺摘みの空振りに何かを刺せる」キャラもいそう（アンディとかいけそう）</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1389231031400632323">2021/5/3</a>⑨食らい判定が低い技で当て身投げを空振りさせる<br>京シリーズの遠D<br><br>オリ京：〇<br>京1：〇<br>京2：直接潰せる　※ソバットじゃない<br>KUSANAGI：〇<br>（〇でも、重ね気味でなければ直接潰したり龍射りを食らったりする）</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1389231350125711362">2021/5/3</a>※KUSANAGI側は不利フレームを背負った状態で鵺摘みを出すイメージで書いています<br>なので、龍射り（上段当て身投げ）はあまり想定していないです</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1821891910946226352">2024/8/9</a>少し編集しました。<br>潰せる技結構ありそうですね。</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1387362757155049479">2021/4/28</a>02UMでも同様の結果になりました<br><br>端同士で前方大JD→3Dが連続技になるのも確認<br>（強鬼焼きにすると2段目が空振り）</li>
+<li><a class="d" href="https://x.com/mot_csb/status/1620348991312637952">2023/1/31</a>15:06の鬼焼きヤバイ<br><br>KOF 2002 UM - Nikolai-保力達 (Kusanagi Best Rounds) <a href="https://t.co/sBJDkjCu36">https://t.co/sBJDkjCu36</a></li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1620350825649561601">2023/1/31</a>KUSANAGIの投げ⇒端めくりに対しては先行入力大Jで大体逃げられる感じがしました<br><br>正面落ちの場合が問題ですが、その場合も先行入力大Jで逃げられることが多かったような……<br><br>後は先行入力大JCDですね（地上判定が1Fだけになるテク）</li>
+<li><a class="d" href="https://x.com/mot_csb/status/1758418794635223246">2024/2/16</a>#KOF2002UM <br>KOF2002UMについてはこちらに繋げていきます。</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1758419141592305693">2024/2/16</a><a href="https://t.co/bI31CmULDG">https://t.co/bI31CmULDG</a><br><br>竜巻槍打バグ<br>かなりエグイですね。<br>仕組みはよくわからないです。が、竜巻槍打の判定は飛び道具判定と聞いたことがあるので、その辺りも影響してるのかもしれませんね。</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1835657384850784740">2024/9/16</a>KOF2002UM　レイヴナス永久関係<br><br>・地上にいる時点ではアウトレイジが優先される<br>・できれば最速で大ジャンプしたい<br>・その場合は9入れっぱなしが必要になる<br>・レイヴナスのコマンド（214）が完成後はレバーがN、4、7、8に入っていないと出ない。つまり9では出ない。<br><br>　つづく</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1835658022242386313">2024/9/16</a>つまり、前方大Jレイヴナスを出す条件は<br><br>・2149で前方大J<br>・大が成立するまでは9入れっぱなし<br>・9のままではレイヴナスが出ないので、N、4、7、8のどれかに変更する必要あり<br>・Dを押すのが早すぎるとアウトレイジに化ける<br><br>最速大Jでなければ難易度は下がる</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1835658531137364297">2024/9/16</a>垂直ノーマルJからの強レイヴナスに関して<br><br>・リバサ前方大Jと違い、J予備動作が発生する<br>・J予備動作中はアウトレイジが優先される（はず）<br>・垂直Jの場合は21478の8入れっぱなしで変更不要のはず</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1835660800369004978">2024/9/16</a>受付時間系の話<br><br>・214系の必殺技の受付時間は16F<br><br>・大Jの受付時間は17F<br><br>・9に入れてDを押した場合、何F以内にNにすればレイヴナスが出るか<br>　3F以内。それ以上はJDになる<br><br>数値的な条件は以上のはず<br><br>多分純粋に永久連続技になる猶予が短い</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1835662616724983902">2024/9/16</a>あくまで仮定の話ですけど<br><br>・アウトレイジ　214BorD<br>・レイヴナス　空中で236BorD<br><br>というコマンドなら超安定したかも</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1845939435617288294">2024/10/15</a>ありがとうございます！<br><br>02の方の判定はわかってて、強バーンと大体相打ちになるのもわかります。<br><br>02UMで強バーンに全然勝てなかったのに違和感がありました。<br><br>気にしてなかったんですが、強バーンの判定が強化されてたらおもしろいかも</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1858713768395764173">2024/11/19</a>#KOF2002UM 端からの位置入れ替えテクニック<br>相手が前方ジャンプしてきたら、レバーを一瞬前に入れるだけで位置を入れ替え可能！<br>ジャンプ攻撃なら空振りやめくりガード、地上技ならリスクがあるので注意！<br>※YouTubeやブログで詳しく解説する予定です！<br><br>#既出ネタ <a href="https://t.co/X21pzCgA5b">https://t.co/X21pzCgA5b</a></li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1858716964669243818">2024/11/19</a>キャラが京と香澄なのは特に意味はないです。<br>連係も使わないものだったらすみません。</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1858722388298657899">2024/11/19</a>香澄のコマンド登録はこちら <a href="https://t.co/WSlJlICnbz">https://t.co/WSlJlICnbz</a></li>
 <li><a class="d" href="https://x.com/mot_csb/status/1871535963257888915">2024/12/24</a>KOF2002UM　対舞<br>izumiさんの配信を試聴中なんですが、舞のムササビの舞の後の派生技の対策をすっかり忘れてしまいました<br>02やってた時もなんとなく対処しただけだったのかも<br><br>舞に詳しい方に対策をお聞きしたいところ</li>
 <li><a class="d" href="https://x.com/mot_csb/status/1875683299139698784">2025/1/5</a>02UMではなくなってる感じがしました。<br><br>02での食らい判定部分を攻撃しようとしても空振りしたので <a href="https://t.co/dM92zN60GU">https://t.co/dM92zN60GU</a></li>
 <li><a class="d" href="https://x.com/mot_csb/status/1897155104190652745">2025/3/5</a>KOF2002UM　起き攻め飛翔拳<br><br>飛翔拳の判定がガチ<br><br>そこで、起き攻めで飛翔拳をガードさせにいく<br><br>相手がリバサ無敵技を出してきても一方的に潰せる<br><br>という妄想</li>
-</ul>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1897155296046538940">2025/3/5</a>飛翔拳は完全に重ねてしまうと無敵時間ですり抜けられてしまう危険があるので、あえて重ねないのがポイント<br><br>他にも無敵技を潰すのに使えるかも？</li>
+
+<li><a class="d" href="https://x.com/mot_csb/status/1897159167250677943">2025/3/5</a>＞学さん<br>エボニー暴発防止のやつは自分が発案者です（起源を主張）<br><br>PS4 KOF2002UM <a href="https://t.co/7UmcSv6pfR">https://t.co/7UmcSv6pfR</a></li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1897159481160851783">2025/3/5</a>KOF2002wiki　必殺技等の入力受付<br><a href="https://t.co/g6ad30N0Zf">https://t.co/g6ad30N0Zf</a><br><br>KOF98wiki　小ネタ・テクニック<br><a href="https://t.co/1ZsIEgHB5J">https://t.co/1ZsIEgHB5J</a></li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1897159802771685574">2025/3/5</a>・2363214コマンドは、23624まで省略可能<br>・なので、マチュアは2362364とすると、214のコマンド成立をなくせる</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1897160218678845739">2025/3/5</a>学さんに圧をかけていく<br><br>@manabu1117</li>
+<li><a class="d" href="https://x.com/mot_csb/status/1907825926374830455">2025/4/4</a>KOF2002UM<br>vaniraさんとネット対戦させていただきました！ありがとうございます。<br><br>2年くらい前にやまぞーさんに対戦していただいたのを除けば、16年ぶりくらいだったけどそこまでは老化してなかったようで安心しました。<br>（反応できたわけではない）<br><br>面白いし難しいゲームですね。</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1907826364860031237">2025/4/4</a>どうやって近づいたらいいかわからないし<br>どうやって崩したらいいかわからないし<br>どうやって守ったらいいかわからない</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1907826890850934998">2025/4/4</a>No17さんと対戦したのも思い出しました。あれは2010年くらいかな？</li>
+<li><a class="d" href="https://x.com/mot_csb/status/1926258726824034474">2025/5/24</a>謎すぎる<br><br>kof 2002 UM - Robert Tutorial Bug de tigre  🐯 <a href="https://t.co/Ptgj71z0ZY">https://t.co/Ptgj71z0ZY</a></li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1926415632817381751">2025/5/25</a>普通に入力するとMAX版龍虎乱舞が出てしまいます。<br><br>こちらの動画のキーディスを見ると、<br>236C　63214AC　236A<br>という流れですね。<br><br>これが大事なのかな？<br><br>そしてやっぱり発生も相当早そう。1Fか2Fか。<br><br><a href="https://t.co/auclIs5nwe">https://t.co/auclIs5nwe</a></li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1926433512334270836">2025/5/25</a>出せないから調べられない╭( ･ㅂ･)و</li>
+<li class="cont"><a class="d" href="https://x.com/mot_csb/status/1926460240116990353">2025/5/25</a>ようやくできました。<br>入力の問題でなく、「仕込み」を理解できてなかったっぽい <a href="https://t.co/rtUajpLE3P">https://t.co/rtUajpLE3P</a></li></ul>
 </details>
 </section>
 <section class="section"><h2>気になること</h2><ul>
