@@ -44,10 +44,7 @@
       ]
      ],
      "research": [
-      [
-       "research/kof99/jhun-corner-unblockable-mixups-2021-2024.html",
-       "ジョン：端の擬似中段・排気撃ガード不能・対策研究（2021～2024年）"
-      ]
+      "research/kof99/jhun-corner-unblockable-mixups-2021-2024.html"
      ]
     }
    ]
@@ -56,77 +53,112 @@
    "name": "攻略・研究ページのあるキャラ",
    "chars": [
     {
-     "id": "kyo",
-     "name": "京",
+     "id": "kdash",
+     "name": "K'",
      "research": [
-      [
-       "research/kof99/kyo-kyo2-hitboxes-invincibility-st-2021-2023.html",
-       "京・京2：鬼焼きの無敵・MAX大蛇薙・ST連続技（2021～2023年）"
-      ]
+      "research/kof99/kdash-ain-trigger-crow-bites-2021-2023.html"
+     ]
+    },
+    {
+     "id": "maxima",
+     "name": "マキシマ",
+     "research": [
+      "research/kof99/maxima-quake-time-stop-2012-2024.html"
+     ]
+    },
+    {
+     "id": "benimaru",
+     "name": "紅丸",
+     "research": [
+      "research/kof99/other-characters-notes-2021-2024.html#benimaru"
+     ]
+    },
+    {
+     "id": "shingo",
+     "name": "真吾",
+     "research": [
+      "research/kof99/shingo-crouch-throws-stun-2021.html"
      ]
     },
     {
      "id": "terry",
      "name": "テリー",
      "research": [
-      [
-       "research/kof99/terry-power-charge-crack-2021-2023.html",
-       "テリー：パワーチャージ連続技・クラック対策・CH追撃（2003～2023年）"
-      ]
+      "research/kof99/terry-power-charge-crack-2021-2023.html"
+     ]
+    },
+    {
+     "id": "andy",
+     "name": "アンディ",
+     "research": [
+      "research/kof99/other-characters-notes-2021-2024.html#andy"
      ]
     },
     {
      "id": "joe",
      "name": "ジョー",
      "research": [
-      [
-       "research/kof99/joe-combos-guard-crush-2021.html",
-       "ジョーの連続技：2021年本人資料とガードクラッシュ研究"
-      ]
+      "research/kof99/joe-combos-guard-crush-2021.html"
+     ]
+    },
+    {
+     "id": "mai",
+     "name": "舞",
+     "research": [
+      "research/kof99/other-characters-notes-2021-2024.html#mai"
+     ]
+    },
+    {
+     "id": "ryo",
+     "name": "リョウ",
+     "research": [
+      "research/kof99/other-characters-notes-2021-2024.html#ryo",
+      "research/kof99/armor-mode-evasion-loop-2024.html"
      ]
     },
     {
      "id": "robert",
      "name": "ロバート",
      "research": [
-      [
-       "research/kof99/robert-crouching-matchups-combos-2021.html",
-       "ロバート：屈み相手への連続技と技性能（2021年の本人研究）"
-      ]
+      "research/kof99/robert-crouching-matchups-combos-2021.html"
      ]
     },
     {
      "id": "yuri",
      "name": "ユリ",
      "research": [
-      [
-       "research/kof99/yuri-combos-matchups-corrections-2021.html",
-       "ユリ：超必殺技・対ジョン・カウンターと訂正履歴（2021年）"
-      ]
+      "research/kof99/yuri-combos-matchups-corrections-2021.html"
+     ]
+    },
+    {
+     "id": "takuma",
+     "name": "タクマ",
+     "research": [
+      "research/kof99/other-characters-notes-2021-2024.html#takuma",
+      "research/kof99/armor-mode-evasion-loop-2024.html"
      ]
     },
     {
      "id": "clark",
      "name": "クラーク",
      "research": [
-      [
-       "research/kof99/striker-clark-gauge-management-2024.html",
-       "STクラークの運用とゲージ・STボム管理（2024年）"
-      ],
-      [
-       "research/kof99/striker-clark-unblockable-2024.html",
-       "飛び道具空振りとSTクラークのガード不能連係（2024年）"
-      ]
+      "research/kof99/other-characters-notes-2021-2024.html#clark",
+      "research/kof99/striker-clark-gauge-management-2024.html",
+      "research/kof99/striker-clark-unblockable-2024.html"
+     ]
+    },
+    {
+     "id": "whip",
+     "name": "ウィップ",
+     "research": [
+      "research/kof99/whip-unblockable-jump-gccd-2003-2024.html"
      ]
     },
     {
      "id": "athena",
      "name": "アテナ",
      "research": [
-      [
-       "research/kof99/athena-special-phoenix-st-2015-2024.html",
-       "アテナ：特殊フェニックスアロー・ST連続技・SCBと竜巻槍打（2015～2024年）"
-      ]
+      "research/kof99/athena-special-phoenix-st-2015-2024.html"
      ]
     },
     {
@@ -137,100 +169,84 @@
        "99kensou-ryurenda.html",
        "J強攻撃・JCDからの龍連打（2024年）"
       ],
-      [
-       "research/kof99/kensou-anti-air-st-damage-2021-2025.html",
-       "ケンスウ：対空・ダメージ・端永久とST追撃（2021～2025年）"
-      ]
+      "research/kof99/kensou-anti-air-st-damage-2021-2025.html"
      ]
     },
     {
-     "id": "king",
-     "name": "キング",
+     "id": "bao",
+     "name": "包",
      "research": [
-      [
-       "research/kof99/king-gc-evasion-tornado95-2021-2023.html",
-       "キング：トルネードキック95へのGCかわし対策・GCCD・ST研究（2021～2023年）"
-      ]
+      "research/kof99/other-characters-notes-2021-2024.html#bao"
+     ]
+    },
+    {
+     "id": "chin",
+     "name": "チン",
+     "research": [
+      "research/kof99/other-characters-notes-2021-2024.html#chin"
      ]
     },
     {
      "id": "kim",
      "name": "キム",
      "research": [
-      [
-       "research/kof99/kim-6a-hangetsuzan-hishokyaku-2021.html",
-       "キム：6Aの屈み対応・強半月斬・飛翔脚の追撃（2021年）"
-      ]
+      "research/kof99/kim-6a-hangetsuzan-hishokyaku-2021.html"
      ]
     },
     {
      "id": "chang",
      "name": "チャン",
      "research": [
-      [
-       "research/kof99/chang-iron-ball-chip-throw-matchups-2021-2024.html",
-       "チャン：鉄球大回転の削り・投げ間合い・対策（2021～2024年）"
-      ]
+      "research/kof99/chang-iron-ball-chip-throw-matchups-2021-2024.html"
      ]
     },
     {
      "id": "choi",
      "name": "チョイ",
      "research": [
-      [
-       "research/kof99/choi-guard-crush-unblockable-2021-2024.html",
-       "チョイ：ガードクラッシュ・鳳凰脚・ガード不能JC（2021～2024年）"
-      ]
+      "research/kof99/choi-guard-crush-unblockable-2021-2024.html"
      ]
     },
     {
-     "id": "shingo",
-     "name": "真吾",
+     "id": "king",
+     "name": "キング",
      "research": [
-      [
-       "research/kof99/shingo-crouch-throws-stun-2021.html",
-       "真吾：打撃投げの屈みキャラ別判定と気絶狙い（2021年）"
-      ]
+      "research/kof99/king-gc-evasion-tornado95-2021-2023.html"
      ]
     },
     {
      "id": "kasumi",
      "name": "香澄",
      "research": [
-      [
-       "research/kof99/kasumi-move-and-guard-crush-2021.html",
-       "藤堂香澄：竜巻槍打・ガードクラッシュ・打撃投げの研究（2021年）"
-      ]
+      "research/kof99/kasumi-move-and-guard-crush-2021.html"
      ]
     },
     {
-     "id": "maxima",
-     "name": "マキシマ",
+     "id": "xiangfei",
+     "name": "シャンフェイ",
      "research": [
-      [
-       "research/kof99/maxima-quake-time-stop-2012-2024.html",
-       "マキシマ：確定地震・時間停止・かわし移動攻撃（2012～2024年）"
-      ]
+      "research/kof99/other-characters-notes-2021-2024.html#xiangfei"
      ]
     },
     {
-     "id": "whip",
-     "name": "ウィップ",
+     "id": "mary",
+     "name": "マリー",
      "research": [
-      [
-       "research/kof99/whip-unblockable-jump-gccd-2003-2024.html",
-       "ウィップ：ガード不能JC・ジャンプ攻撃判定・屈DとGCCD（2003～2024年）"
-      ]
+      "research/kof99/other-characters-notes-2021-2024.html#mary"
      ]
     },
     {
-     "id": "kdash",
-     "name": "K'",
+     "id": "kyo",
+     "name": "京",
      "research": [
-      [
-       "research/kof99/kdash-ain-trigger-crow-bites-2021-2023.html",
-       "K'：アイントリガー弱強差・クロウバイツ・対空とGCCD（2021～2023年）"
-      ]
+      "research/kof99/kyo-kyo2-hitboxes-invincibility-st-2021-2023.html"
+     ]
+    },
+    {
+     "id": "iori",
+     "name": "庵",
+     "research": [
+      "research/kof99/other-characters-notes-2021-2024.html#iori"
      ]
     }
    ]
