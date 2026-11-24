@@ -1,54 +1,64 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'99 チャン：鉄球大回転の削り・投げ間合い・対策（2021～2024年）｜Come sono bravo?</title><meta name="description" content="MOT本人の2021～2024年KOF99チャン研究を整理。AM/CMの鉄球大回転削り、ラルフ馬乗りへの大破壊投げ、投げ間合い、屈み食らい判定、ST動作と各種対策を区別。"><link rel="stylesheet" href="/assets/research.css">
-<style>.article{max-width:1060px}.article h2{margin-top:2rem}.scroll{overflow-x:auto}.article table{width:100%;border-collapse:collapse}.article th,.article td{border:1px solid var(--line,#aab);padding:9px;text-align:left;vertical-align:top}.article thead th{background:var(--soft,#edf2ee)}.note{border-left:4px solid var(--accent,#416958);padding:12px 14px;background:var(--soft,#edf2ee)}.article a{overflow-wrap:anywhere}</style></head><body>
-<header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof99-top.html">KOF'99</a> / <a href="/research/kof99/index.html">研究アーカイブ</a> / <b>チャン研究</b></div></div>
-<main class="main"><div class="wrap article"><!-- chara-nav:start --><nav class="chara-nav" aria-label="キャラクター別のページ"><p class="cn-head"><a href="/kof99-top.html#c-chang">KOF&#x27;99 キャラ選択</a><span>›</span><b>チャン</b></p><p class="cn-links"></p><details open><summary>攻略・研究ページ 1件</summary><ul><li><b>チャン：鉄球大回転の削り・投げ間合い・対策（2021～2024年）</b></li></ul></details></nav><!-- chara-nav:end --><h1>KOF'99 チャン：鉄球大回転の削り・投げ間合い・対策（2021～2024年）</h1>
-<p class="note">MOT本人の2021年2～5月、2023年5月、2024年6月のXアーカイブを直接照合した研究整理。<strong>本人が結果を確認した部分／本人の暫定評価・推測／他の人のデータを本人が参照した部分</strong>を分ける。KOF2002やKOF'96のチャンの情報を99の確定仕様に流用しない。新たな実機検証、投稿に添付された画像・動画の判定分析は行っていない。</p>
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>KOF'99 チャン：鉄球大回転の削り・投げ間合い・チャン対策｜Come sono bravo?</title>
+<meta name="description" content="KOF&#x27;99チャンのモード中の鉄球大回転の削り、ラルフの馬乗りバルカンパンチに大破壊投げを合わせる100％近いダメージ、投げ間合い、しゃがみの食らい判定とチャン対策。">
+<link rel="stylesheet" href="/assets/research.css">
+<style>.article{max-width:960px}.article table{width:100%;border-collapse:collapse}.article th,.article td{border:1px solid var(--line,#ccd);padding:6px 8px;overflow-wrap:anywhere;vertical-align:top;text-align:left}.article thead th{background:var(--soft,#eaf0ed)}.article td.num{font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}.lead{font-size:1.05em}.vt{display:inline-block;font-size:.85em;line-height:1.45;padding:0 6px;margin-left:4px;border:1px solid var(--line,#ccd);border-radius:4px;font-weight:600;white-space:nowrap}.legend{font-size:.92em;color:var(--sub,#555)}.src li{font-size:.92em}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h2{font-size:1.15em;margin-top:1.2rem}details.more h3{font-size:1.05em}figure{margin:14px 0}figure img{max-width:100%;height:auto;border:1px solid var(--line,#ccd)}figcaption{font-size:.9em;color:var(--sub,#555)}@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}.article th,.article td{min-width:72px}}</style>
+</head><body>
+<header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof99-top.html">KOF'99</a> / <a href="/research/kof99/index.html">研究アーカイブ</a> / <b>チャン</b></div></div>
+<main class="main"><div class="wrap article"><!-- chara-nav:start --><nav class="chara-nav" aria-label="キャラクター別のページ"><p class="cn-head"><a href="/kof99-top.html#c-chang">KOF&#x27;99 キャラ選択</a><span>›</span><b>チャン</b></p><p class="cn-links"></p><details open><summary>攻略・研究ページ 1件</summary><ul><li><b>チャン：鉄球大回転の削り・投げ間合い・対策（2021～2024年）</b></li></ul></details></nav><!-- chara-nav:end -->
+<h1>KOF'99 チャン：鉄球大回転の削り・投げ間合い・チャン対策</h1>
+<p class="lead">チャンはアーマーモードやカウンターモード中に鉄球大回転の削りダメージが倍増し、画面端で鉄球大回転 <span class="vt">強</span> を2セットガードさせると約4割削れます。通常投げ・コマンド投げとも間合いが異様に広く、守りも堅いキャラです。一方で、しゃがみの食らい判定が高く、キャラ限定の連続技の多くが当たってしまう弱点があります。</p>
 
-<h2>鉄球大回転の削り：2021年AMと2023年CMを区別</h2>
-<div class="scroll"><table><thead><tr><th>日付・モード</th><th>MOT本人の原文にある条件・結果</th><th>確実性と注意点</th></tr></thead><tbody>
-<tr><th scope="row">2021年5月14日：<strong>アーマーモード（AM）</strong></th><td>AMの必殺技の削り量が2倍になるのではと考え、相手を画面端に追い詰めて<strong>強鉄球大回転を2セットガードさせ、体力を約4割削れることを確認</strong>。</td><td><a href="https://x.com/mot_csb/status/1393151845166501889">本人投稿</a>。<strong>2セット・約4割は確認結果</strong>だが、AM全必殺技が厳密に2倍になるかは原文の「（？）」付きの疑問。</td></tr>
-<tr><th scope="row">2023年5月4日：<strong>カウンターモード（CM）</strong></th><td>CM中でも鉄球大回転の削りダメージが倍増する「っぽい」。<strong>チャン同キャラ戦では1回で体力約4分の1を削れる</strong>。大破壊投げのダメージも同程度との比較。</td><td><a href="https://x.com/mot_csb/status/1654028086437117952">本人投稿</a>。倍率は本人の暫定評価。同キャラ、1回という条件を外して全相手へ拡張しない。</td></tr>
-<tr><th scope="row">2023年5月14日：CM中の削り技として紹介</th><td>チャンのCM中の鉄球大回転を、ラルフMAXバリバリバルカンパンチ・アテナMAXフェニックスファングアロー・ジョンMAX鳳凰裂爪脚と並べた。</td><td><a href="https://x.com/mot_csb/status/1657620428448501765">本人の比較紹介</a>。映像のダメージ計測までは今回行っていない。</td></tr>
-</tbody></table></div>
-<p>2021年の<strong>AM</strong>と2023年の<strong>CM</strong>は別モードであり、同一条件の数値測定ではない。2021年の2セットで約4割、2023年の同キャラ1回で約4分の1という結果も、両者のモード・回数・相手条件をそろえていないため数値差だけから矛盾とは断定できない。本人の2023年の着想である<strong>端に追い詰めてCM発動を狙う戦術</strong>は、実戦採用の提案であって全相手に成立したとの確認ではない。</p>
+<h2>鉄球大回転の削り</h2>
+<ul>
+<li><b>アーマーモード</b>：必殺技の削り量が2倍（？）になるのに気付き、端に追い詰めた相手に鉄球大回転 <span class="vt">強</span> を2セットガードさせると約4割減らせることを確認しています。</li>
+<li><b>カウンターモード</b>：削りダメージが倍増するようで、チャン同キャラだと1回で体力の約1/4を削れます（大破壊投げも同じくらいのダメージ）。端に追い詰めたらカウンターモード発動もありかもしれません。</li>
+</ul>
+<p>モード中に削りが増える理由は、ダメージが1.25倍になる影響と見ています（<a href="/research/kof99/gauge-priority-mode-management-2021-2024.html">ゲージとストライカー</a>）。KOF'99は削りに適した技が結構あり、ラルフのMAX版バリバリバルカンパンチ、アテナのMAX版フェニックスファングアロー、チャンのカウンターモード中の鉄球大回転、ジョンのMAX版鳳凰裂爪脚が例に挙がっています。</p>
 
-<h2>大破壊投げ：対ラルフ馬乗りバルカンパンチで極大ダメージ</h2>
-<p><a href="https://x.com/mot_csb/status/1393382981939523585">2021年5月15日の本人投稿</a>には、次の具体的な対ラルフの現象がある。</p>
-<ol><li>ラルフの<strong>馬乗りバルカンパンチ</strong>は動作開始と同時に暗転する。</li>
-<li>チャンがラルフの馬乗りと同時に<strong>大破壊投げ</strong>を決めると、<strong>事前に出していた技のダメージに変わる</strong>という本人の記述がある。</li>
-<li>本人は<strong>立CDをガードさせてから、馬乗りバルカンパンチに大破壊投げを合わせる</strong>組合せで、<strong>100％近いダメージ</strong>になると説明。乱数次第ではKOできるかもしれないとした。</li>
+<h2>大破壊投げで100％近いダメージ</h2>
+<p>ラルフの馬乗りバルカンパンチは動作開始と同時に暗転します。チャンがラルフの馬乗りバルカンパンチと同時に大破壊投げを決めると、事前に出していた技のダメージに変わります。</p>
+<ol class="flow">
+<li>チャンが立CDをラルフにガードさせる。</li>
+<li>ラルフの馬乗りバルカンパンチに大破壊投げを合わせる。</li>
+<li>100％近いダメージになる（乱数次第でKOできるかも）。</li>
 </ol>
-<p>技の暗転や前に出していた技との相互作用はMOTの記録を保存したものであり、<strong>内部プログラムのダメージ上書き処理を解析・確定したという意味ではない</strong>。相手はラルフ、対象は馬乗りバルカンパンチという条件がある。一般的な大破壊投げの通常ダメージと混同しない。同じ内容の本人リポストは二重の独立確認件数として数えない。</p>
 
-<h2>投げ間合いと対チャンの後方かわし</h2>
-<p>MOTは<a href="https://x.com/mot_csb/status/1391010946579984388">2021年5月8日</a>、<strong>ネオジオフリークのムックにある投げ間合いデータ</strong>を表にしたと報告。これはムックの数値の再整理であり、本人が全キャラの投げ間合いを新規実測したという意味ではない。2021年の本人<a href="https://kofplayers.hatenablog.jp/entry/2021/05/14/000611">攻略メニュー</a>で公開された<a href="https://docs.google.com/spreadsheets/d/1qe4ccsI3DBlq2III7GzkddlfsKLmCPVHVqCZcNybwi8/edit">Googleシート</a>の数値を直接回収した。シート末尾には「ザ・キング・オブ・ファイターズ’９９完全攻略マニュアル」からと出典が明記されており、MOT独自の実測データではない。<a href="./throw-range-table-source-2021.html">復元した全表</a>を参照。</p>
-<p>原シートはC・Dの基本投げ間合いが<strong>24</strong>、ラルフ・クラークが<strong>28</strong>、チャンが<strong>40</strong>、チャンの<strong>大破壊投げは30</strong>と記載する。数値の単位は原表に明記されず、原ムックの個別箇所も今回再照合していない。投げ間合い40と30という大小関係を資料に忠実に示すが、距離・投げ判定の細部を新たに実測したことにはしない。</p>
-<p><a href="https://x.com/mot_csb/status/1392694578499637252">2021年5月13日の対チャン本人研究</a>では、通常投げ・コマンド投げとも間合いが極めて広く、とりわけ<strong>通常投げの間合いが厄介</strong>と評価。通常投げとコマンド投げの間合いが違うので、<strong>チャンだけが投げられる距離があるはず</strong>と推測している。</p>
-<p>対策として、本人は他のプレイヤーが実際に使っていた動きから、<strong>近距離でもつれたら後方かわし移動</strong>を試す方法を提案。戻ってから投げるか必殺技を出す案を述べたが、<strong>すべての通常投げ・コマンド投げに対する確定回避手順として検証済みではない</strong>。</p>
+<h2>投げ間合い</h2>
+<p>完全攻略マニュアル（ネオジオフリークのムック）のデータを表にすると、基本の投げ間合いが24、ラルフ・クラークが28なのに対し、チャンの通常投げは40、大破壊投げは30です（<a href="/research/kof99/throw-range-table-source-2021.html">投げ間合い表</a>）。特に通常投げの間合いが広いのが厄介で、チャンだけが投げられる間合いがあるはずです。</p>
+<p>対策は、地獄から来た安藤さんがしていた「近くでもつれたら後ろかわし」がかなり有効そうです。そのまま帰ってきて投げるか、必殺技を出します。</p>
 
-<h2>チャンの守りの強さと、しゃがみ食らい判定の弱点</h2>
-<p><a href="https://x.com/mot_csb/status/1399300130222661642">2021年5月31日</a>、MOTはチャンをかなり強いキャラと評価しつつ、<strong>しゃがみ状態の食らい判定が高いためキャラクター限定の連続技を受けやすい</strong>ことを重要な減点要素とした。</p>
-<p>同じ2021年5月30日の本人<a href="./robert-crouching-matchups-combos-2021.html">ロバート研究</a>では、屈みチャンに「屈B→屈A→強旋燕連舞脚」が当たると列挙されている。<strong>食らい判定が高いという本人の総合評価</strong>と、特定ルートに関する成立確認を区別する。</p>
-<p><a href="https://x.com/mot_csb/status/1801989553349345706">2024年6月15日の本人会話</a>では、KOF'99の連続技が低火力で寝技の攻防に近いという感想の中で、チャンの守りが異様に堅かったと回想。STクラークやST香澄の存在にも言及している。<strong>2024年の回想・当時のキャラ評価</strong>であり、新たに測定した防御力値ではない。</p>
+<h2>チャン対策</h2>
+<table><thead><tr><th>使うキャラ</th><th>対策</th></tr></thead><tbody>
+<tr><th scope="row">ロバート・タクマ</th><td>かわし移動攻撃→遠Aか遠B</td></tr>
+<tr><th scope="row">アテナ</th><td>かわし移動攻撃→屈B</td></tr>
+<tr><th scope="row">香澄</th><td>かわし移動攻撃→屈D</td></tr>
+<tr><th scope="row">ロバート</th><td>しゃがんだチャンに屈B→屈A→旋燕連舞脚 <span class="vt">強</span>（<a href="/research/kof99/robert-crouching-matchups-combos-2021.html">ロバート</a>）</td></tr>
+<tr><th scope="row">ラルフ</th><td>中段は昇り低JA・昇り低JD（JDは中段としてはやや微妙）。MAX版バリバリバルカンパンチはしゃがみガードでも3割弱削れる。対空に急降下爆弾パンチ（地上版）も有効かもしれない（相打ち上等で弱版が基本、強版も判定が強い）</td></tr>
+<tr><th scope="row">チョイ</th><td>低JDがしゃがんだチャンに中段になる。ストライカーと絡めるとありかも</td></tr>
+</tbody></table>
+<p>チャンは「かなり強い」ものの、しゃがみの食らい判定が高いことは「連続技が決まりにくい世界で決まりまくってしまうという減点要素」です。2024年には、KOF'99は連続技のダメージが低いキャラが多く寝技の攻防のようで、チャンは異様に守りが堅かった（STクラークや香澄もある）と振り返っています。</p>
 
-<h2>防御側チャンに対する、他キャラのかわし移動攻撃からの追撃</h2>
-<p><a href="https://docs.google.com/spreadsheets/d/1fD18mzjFuQ1nX2BmdeOQXpn2VcaG2xbK1lCpT19kNwA/edit">MOT本人の2021年「かわし移動攻撃の硬直差」原シート</a>のキャラ別備考には、<strong>対チャンでロバート・タクマのかわし移動攻撃→遠Aまたは遠B、アテナのかわし移動攻撃→屈B、香澄のかわし移動攻撃→屈D</strong>が決まることを本人が確認したと記録されている。</p>
-<p>これは<strong>チャンが攻撃を受ける側</strong>の4件であり、チャン自身のかわし移動攻撃が<strong>しゃがみラルフに空振りする</strong>という別の原表記録とは立場も条件も異なる。原シートはチャンの立ち／屈みや距離・モードを明記していない。4キャラの発生Fとヒット時有利Fを含む比較は<a href="./evasion-attacks-hitbox-recovery-2021-2025.html">かわし移動攻撃の総合研究</a>にまとめた。<a href="./robert-crouching-matchups-combos-2021.html">ロバート</a>と<a href="./athena-special-phoenix-st-2015-2024.html">アテナ</a>の既存のキャラ別研究にも同じ確認内容を原表の条件どおり保存している。</p>
-<h2>対チャンの限定的な戦術記録</h2>
-<div class="scroll"><table><thead><tr><th>自キャラ／技</th><th>本人資料</th><th>扱い</th></tr></thead><tbody>
-<tr><td>ラルフの昇り低JA・昇り低JD</td><td>チャンに対する中段。JDは中段としてやや微妙との本人評価。</td><td><a href="https://x.com/mot_csb/status/1364588690270486534">2021/2/24</a>。JA・JDを同じ強さとしない。</td></tr>
-<tr><td>ラルフMAXバリバリバルカンパンチ</td><td><strong>しゃがみガードのチャンに約3割弱の削り</strong>と記載。</td><td><a href="https://x.com/mot_csb/status/1364423706030710790">2021/2/24</a>。ラルフ使用側の削りであり、チャンの鉄球大回転と混同しない。</td></tr>
-<tr><td>ラルフの急降下爆弾パンチ（地上版）</td><td>相打ち前提で弱版を使い、強版の判定も強いので機能しそうという提案。</td><td><a href="https://x.com/mot_csb/status/1365550639665664000">2021/2/27</a>。実戦での全条件確認ではない。</td></tr>
-<tr><td>チョイの低JD</td><td>屈みチャンに中段になる。STと絡める戦術は可能性案。</td><td><a href="https://x.com/mot_csb/status/1369922025024671746">2021/3/11</a>。相手を屈みチャンに限定。</td></tr>
-</tbody></table></div>
-<p>ラルフとチョイの各研究は、<a href="./ralf-frame-and-strategy-2024.html">ラルフ</a>／<a href="./choi-guard-crush-unblockable-2021-2024.html">チョイ</a>の既存記事とも相互参照できる。これらはチャン自身の技ではなく、<strong>対チャン攻略</strong>として分類する。</p>
+<details class="more"><summary>詳しく：チャンの技の判定・ST呼び出し・GCCD・かわし移動攻撃</summary>
+<ul>
+<li>ST呼び出し動作では、頭部だけに食らい判定があります。対空に使うとジャンプ攻撃を食らいますが、対地なら無敵で抜けつつSTを当てやすくなります。</li>
+<li>GCCDのガード時硬直差は−4Fです（<a href="/research/kof99/gccd-recovery-advantage-2021.html">GCCD硬直差</a>）。</li>
+<li>かわし移動攻撃は攻撃判定の位置が高いので、しゃがみに当たらないキャラが多そうです。表では、しゃがんだラルフに空振りしています（<a href="/research/kof99/evasion-attacks-hitbox-recovery-2021-2025.html">かわし移動攻撃</a>）。</li>
+</ul>
+<figure><img src="https://pbs.twimg.com/media/Ev8sFXAVEAIJlZS.png" alt="チャンの遠Aの判定" loading="lazy" style="max-width:48%"> <img src="https://pbs.twimg.com/media/Ev8rFrdUcAIY0JD.png" alt="チャンの屈Aの判定" loading="lazy" style="max-width:48%"><figcaption>左：遠A（<a href="https://x.com/mot_csb/status/1368861289926172673">2021/3/8</a>）　右：屈A（<a href="https://x.com/mot_csb/status/1368860214011772928">2021/3/8</a>）</figcaption></figure>
+</details>
 
-<h2>ST呼び出し動作・GCCD</h2>
-<p><a href="https://x.com/mot_csb/status/1361462004192403456">2021年2月16日の本人確認</a>によると、<strong>STを呼び出すチャンとジョーの動作には、頭部のみ食らい判定が存在する</strong>。本人は、対空としてSTを呼ぶとジャンプ攻撃を食らい得る一方、対地なら打撃を抜けながらSTを当てやすいのではと考察した。<strong>食らい判定の部位の記載</strong>と、実戦での無敵利用の予想を分けておく。</p>
-<p>2021年5月20日の<a href="https://x.com/mot_csb/status/1395392862775222272">GCCD本人記録</a>では、チャンのガード時硬直差は<strong>−4F</strong>。32キャラの表は既存<a href="./gccd-recovery-advantage-2021.html">GCCD硬直差一覧</a>に保存しているため二重の数値表は作らない。</p>
-<h2>チャンのかわし移動攻撃：しゃがみラルフには空振り</h2>
-<p><a href="https://docs.google.com/spreadsheets/d/1fD18mzjFuQ1nX2BmdeOQXpn2VcaG2xbK1lCpT19kNwA/edit">2021年のMOT本人「かわし移動攻撃」原シート</a>では、<strong>チャンのかわし移動攻撃がしゃがみラルフに空振りする</strong>と記録されている。同シートのチャン個別備考には、<strong>かわし移動攻撃の判定が高く、しゃがみに当たらないキャラが多そう</strong>との本人評価もある。ただし個別に空振りが列挙されたのは、この表では<strong>対ラルフ</strong>であり、他の屈み相手への当否は未掲載。チャンが守備側でラルフの攻撃を受けるという前節の対チャン研究と、<strong>チャンが攻撃側でラルフに空振りする事例</strong>を混同しない。<a href="./evasion-attacks-hitbox-recovery-2021-2025.html">横断データ</a>へ。</p>
-<h2>回収できなかった一次資料・検証課題</h2>
-<p>元攻略ムックのページ原本との照合、遠Aと屈Aの判定画像（<a href="https://x.com/mot_csb/status/1368861289926172673">遠A</a>／<a href="https://x.com/mot_csb/status/1368860214011772928">屈A</a>）、モード別の鉄球大回転削り倍率の統一測定、対ラルフ馬乗りバルカンパンチでの100％近いダメージの詳しい発動条件は未確認。<a href="/kof-kininaru.html#kof99">気になること</a>へ整理する。</p>
-<p><a href="/research/kof99/index.html">KOF'99研究アーカイブへ</a> ／ <a href="./king-gc-evasion-tornado95-2021-2023.html">関連：キングのGCかわし対策</a></p>
-</div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
+<h2>出典</h2>
+<ul class="src">
+<li>削り：<a href="https://x.com/mot_csb/status/1393151845166501889">アーマーモード（2021/5/14）</a> ／ <a href="https://x.com/mot_csb/status/1654028086437117952">カウンターモード（2023/5/4）</a> ／ <a href="https://x.com/mot_csb/status/1657620428448501765">削りに適した技（2023/5/14）</a></li>
+<li>大破壊投げ：<a href="https://x.com/mot_csb/status/1393382981939523585">2021/5/15</a> ／ 投げ間合い：<a href="https://x.com/mot_csb/status/1391010946579984388">投げ間合い表（2021/5/8）</a> ／ <a href="https://docs.google.com/spreadsheets/d/1qe4ccsI3DBlq2III7GzkddlfsKLmCPVHVqCZcNybwi8/edit">投げ間合い（Googleスプレッドシート）</a> ／ <a href="https://x.com/mot_csb/status/1392694578499637252">チャン対策（2021/5/13）</a></li>
+<li>評価：<a href="https://x.com/mot_csb/status/1399300130222661642">しゃがみの食らい判定（2021/5/31）</a> ／ <a href="https://x.com/mot_csb/status/1801989553349345706">守りが堅い（2024/6/15）</a></li>
+<li>対策：<a href="https://x.com/mot_csb/status/1364588690270486534">ラルフの中段（2021/2/24）</a> ／ <a href="https://x.com/mot_csb/status/1364423706030710790">MAXバリバリバルカンパンチ（2/24）</a> ／ <a href="https://x.com/mot_csb/status/1365550639665664000">急降下爆弾パンチ（2/27）</a> ／ <a href="https://x.com/mot_csb/status/1369922025024671746">チョイの低JD（3/11）</a> ／ <a href="https://docs.google.com/spreadsheets/d/1fD18mzjFuQ1nX2BmdeOQXpn2VcaG2xbK1lCpT19kNwA/edit">かわし移動攻撃（Googleスプレッドシート）</a></li>
+<li>そのほか：<a href="https://x.com/mot_csb/status/1361462004192403456">ST呼び出し動作（2021/2/15）</a> ／ <a href="https://x.com/mot_csb/status/1395392862775222272">GCCD（5/20）</a> ／ <a href="https://kofplayers.hatenablog.jp/entry/2021/05/14/000611">KOF99：攻略メニュー</a></li>
+<li>関連：<a href="/research/kof99/king-gc-evasion-tornado95-2021-2023.html">キング</a> ／ <a href="/kof-kininaru.html#kof99">気になること</a> ／ <a href="/research/kof99/index.html">KOF'99研究アーカイブ</a></li>
+</ul>
+</div></main>
+<footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer>
+</body></html>
