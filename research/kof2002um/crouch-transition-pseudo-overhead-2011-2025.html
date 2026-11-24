@@ -1,42 +1,55 @@
 <!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF2002UM しゃがみ移行の1F目と画面端の疑似中段｜Come sono bravo?</title><meta name="description" content="MOTのKOF2002UM研究資料を一次資料から整理・保存"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:990px}.article h2{margin-top:2rem}.article a{overflow-wrap:anywhere}.article table{border-collapse:collapse;width:100%;min-width:610px}.article th,.article td{border:1px solid #b7c2be;padding:9px;text-align:left;vertical-align:top}.article th{background:#e6efea}.scroll{overflow:auto}.note{border-left:3px solid #517b65;padding:10px 14px;background:#edf3ef}.src{font-size:.92em}.tag{font-weight:700}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/kof-top.html">KOF</a><span aria-hidden="true"> / </span><a href="/kof02um-top.html">KOF2002UM</a><span aria-hidden="true"> / </span><a href="/research/kof2002um/index.html">研究アーカイブ</a><span aria-hidden="true"> / </span><b>しゃがみ移行・疑似中段</b></div></div><main class="main"><div class="wrap article">
-<h1>KOF2002UM：しゃがみ移行モーションの1F目と画面端の疑似中段</h1>
-<p class="note">MOTが2011～2025年に発表した資料を、条件・キャラ別結果・本人の推測に分けて再整理した研究記録。<strong>新規検証ではありません。</strong>「成立しない」は当該コマンド登録条件での結果であり、すべてのタイミングでの不成立を意味しません。</p>
-<h2>1. しゃがみ移行モーションの基本（過去の説明と2025年の整理）</h2>
-<div class="scroll"><table><thead><tr><th>論点</th><th>MOTの記述</th><th>資料上の位置づけ</th></tr></thead><tbody>
-<tr><td>モーションの長さ</td><td>約4F。厳密な全キャラ共通値として確定させた記述ではない。</td><td>2011年X・2025年ブログの本人説明</td></tr>
-<tr><td>状態の扱い</td><td>移行モーションは屈状態として扱われる。</td><td>2025年ブログの説明</td></tr>
-<tr><td>食らい判定</td><td>最初の1Fだけ食らい判定が高い。2011年には、多くのキャラで最初の1Fのみ高いと説明。</td><td>本人の過去の説明。例外の有無は未確認</td></tr>
-<tr><td>しゃがみガード</td><td>しゃがみガードで移行モーションを完全にキャンセル可能。2011年のXには屈攻撃でもキャンセル可能という説明がある。</td><td>本人の説明。作品間の適用範囲の一律断定は避ける</td></tr>
-<tr><td>影響する場面</td><td>庵のしゃがみ属性ダウンを使った起き攻め、京の画面端の疑似中段。</td><td>2025年ブログの整理</td></tr>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF2002UM しゃがみ移行の1F目と画面端の疑似中段｜Come sono bravo?</title><meta name="description" content="MOTのKOF2002UM研究資料を一次資料から整理・保存"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:990px}.article h2{margin-top:2rem}.article a{overflow-wrap:anywhere}.article table{border-collapse:collapse;width:100%;min-width:610px}.article th,.article td{border:1px solid #b7c2be;padding:9px;text-align:left;vertical-align:top}.article th{background:#e6efea}.scroll{overflow:auto}.note{border-left:3px solid #517b65;padding:10px 14px;background:#edf3ef}.src{font-size:.92em}.tag{font-weight:700}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/kof-top.html">KOF</a><span aria-hidden="true"> / </span><a href="/kof02um-top.html">KOF2002UM</a><span aria-hidden="true"> / </span><a href="/research/kof2002um/index.html">研究アーカイブ</a><span aria-hidden="true"> / </span><b>しゃがみ移行・疑似中段</b></div></div><main class="main"><div class="wrap article"><h1>KOF2002UM：しゃがみ移行モーションの1F目と画面端の疑似中段</h1>
+<p>立った状態からしゃがもうとすると、4Fくらいの「しゃがみ移行モーション」が出ます。このモーションは最初の1Fだけ食らい判定が高いので、起き上がりにこの1Fを狙ってジャンプ攻撃を重ねると、しゃがみガードを入れている相手にも当たります。これが画面端の疑似中段の仕組みです。</p>
+<h2>しゃがみ移行モーションの性質</h2>
+<ul>
+<li>長さは4Fくらいで、すべてしゃがみ状態として扱われます。</li>
+<li>食らい判定が高いのは最初の1Fだけ、というキャラがほとんどです。基本的にはどのキャラも高くなりますが、例外がないかは確認中です。</li>
+<li>しゃがみガードやしゃがみ攻撃でキャンセルできます。しゃがみガードなら完全にキャンセルされます。</li>
+<li>起き上がる前からレバーを下要素に入れていても、しゃがみ移行モーションは出ます。ただし、相手が攻撃を出していて、しゃがみガード方向にレバーを入れながら起き上がった場合は、起き上がりと同時にしゃがみガードになり、しゃがみ移行モーションはまったく出ません。</li>
+</ul>
+<p>この1F目の高さが影響するのは、庵のしゃがみ属性ダウンを使った起き攻めと、京などの画面端での疑似中段です。起き上がりにめくり中ジャンプ攻撃を狙う場合も、この1Fに攻撃が重なるようにする必要があります。</p>
+<p>包で確かめた例：京の近Aは、しゃがんでいる包には空振りしますが、ダウンからの起き上がりに合わせるとヒットしました。しゃがみ移行モーションの1F目に高い食らい判定が存在するようです。</p>
+<h2>疑似中段が成立する条件</h2>
+<ol>
+<li>相手がしゃがみガードを入力している。</li>
+<li>相手が起き上がったフレームに、ジャンプ攻撃などが重なっている。</li>
+<li>相手が起き上がったフレームまでに、攻撃側が画面端の相手に密着している。</li>
+</ol>
+<p>このため前方中ジャンプが使いやすく、相手キャラによってタイミングが変わります。必要な攻撃判定は、下方向への長さよりも、下から斜め下にかけての判定です。</p>
+<h2>京：C投げ→ダウン回避→中J奈落落とし</h2>
+<p>画面端で京のC投げ→相手がダウン回避→中ジャンプ奈落落としが、疑似中段になるコマンド登録があります（オリジナル京の同キャラ戦で作成）。このレシピのままだと、成立するキャラとしないキャラに分かれました。</p>
+<figure><img src="./img/kyo-pseudo-overhead-command-2024.png" alt="KOF2002UMのコマンド登録画面。SP、→、N、→、N、→、↗、N、SP、↓、N、SPの順に並び、それぞれのフレーム数が下に表示されている" width="790" height="165" loading="lazy"><figcaption>京のC投げ→ダウン回避→中J奈落落としのコマンド登録（2024年10月1日の投稿の画像）</figcaption></figure>
+<div class="tbl"><table><thead><tr><th>結果</th><th>キャラ</th></tr></thead><tbody>
+<tr><td>疑似中段になる（8キャラ）</td><td>京、真吾、KUSANAGI、京-1、京-2、ラルフ、マチュア、バイス</td></tr>
+<tr><td>疑似中段にならない（15キャラ）</td><td>レオナ、シェルミー、アテナ、K′、ユリ、ネームレス、クラーク、庵、チン、ラモン、ジョー、ビリー、クーラ、フォクシー、キング</td></tr>
 </tbody></table></div>
-<p>2025年4月5日の調査メモでは、<strong>包に対し、京の近Aは通常の屈状態には空振りするが、起き上がりに合わせるとヒットした</strong>と報告。MOTはしゃがみ移行1F目の高い食らい判定が存在すると判断している。一方、全キャラクターで例外がないかは確認中としている。</p>
-<p class="src">一次資料：<a href="https://x.com/mot_csb/status/63097644192505856">2011/04/27 X（移行モーション）</a> ／ <a href="https://x.com/mot_csb/status/63098965775761408">同日X（最初の1F）</a> ／ <a href="https://x.com/mot_csb/status/63099659685593088">同日X（しゃがみガード）</a> ／ <a href="https://x.com/mot_csb/status/1908530583225172407">2025/04/05 X（包と京の近A）</a> ／ <a href="https://comesonobravo.hatenadiary.org/entry/2025/04/05/234751">2025/04/05 はてなブログ</a></p>
-<h2>2. 京のC投げ→ダウン回避→中J奈落落とし（2024年）</h2>
-<p>MOTが2024年10月1日にXでコマンド登録を使って調査し、同年11月16日にブログで一覧化したもの。<strong>画面端、京のC投げ後、相手のダウン回避、中J奈落落とし</strong>という一連の条件で確認している。</p>
-<div class="scroll"><table><thead><tr><th>結果（当時のコマンド登録条件）</th><th>キャラクター</th><th>人数</th></tr></thead><tbody>
-<tr><td><strong>疑似中段になる</strong></td><td>京、真吾、KUSANAGI、京1、京2、ラルフ、マチュア、バイス</td><td>8</td></tr>
-<tr><td><strong>疑似中段にならない</strong></td><td>レオナ、シェルミー、アテナ、K'、ユリ、ネームレス、クラーク、庵、チン、ラモン、ジョー、ビリー、クーラ、フォクシー、キング</td><td>15</td></tr>
+<p>フレームの調整も必要で、キャラ限定の要素もありそうです。成立しない理由としては、ダウン回避後の復帰フレームの違いか、しゃがみ移行モーションの食らい判定の違いが考えられています。</p>
+<details><summary>ネームレスで成立しない理由</summary>
+<p>最初はダウン回避の時間差によるものと考えていました。しかし、ダウン回避の復帰フレームの一覧では京とネームレスが同じ63F（0F）に並んでいます。そこで、ネームレスのしゃがみ移行モーションには食らい判定の高い部分がないのではないか、という気もしてきたと書いています。ブログのまとめでは、ダウン回避フレームの違いと食らい判定の違いの両方を可能性として挙げています。</p>
+<figure><img src="./img/down-evade-recovery-frames-2024.png" alt="キャラ別のダウン回避の復帰フレーム一覧。56Fの香緋から72Fのメイまで並び、63F（0F）に京、アテナ、K′、ユリ、真吾、クローン京、京-1、京-2、ネームレスがある" width="523" height="350" loading="lazy"><figcaption>ダウン回避の復帰フレームのキャラ別一覧（2024年10月1日の投稿の画像）</figcaption></figure>
+</details>
+<h2>ほかの組み合わせで確認した疑似中段</h2>
+<div class="tbl"><table><thead><tr><th>攻撃側</th><th>相手</th><th>状況と結果</th></tr></thead><tbody>
+<tr><td>香澄</td><td>チャン</td><td>画面端でダウンさせ、昇り中JDを重ねると疑似中段になり、キャンセル重ね当て<span class="tag">弱</span><span class="tag">強</span>が連続ヒット。五郎にもJD自体は当たりますが、重ね当てが空振りするのでいまひとつです（2012年）</td></tr>
+<tr><td>マチュア</td><td>チャン</td><td>デスペアー<span class="tag">強</span>が、画面端でしゃがみガードしているチャンに当たる。起き上がりに重ねる必要はなく、端付近で近B1段目キャンセルでもガード不能になる（2024年）</td></tr>
+<tr><td>ケンスウ</td><td>紅丸</td><td>画面端の紅丸の起き上がりに中JCD。中JCDはしゃがみガードできる技ですが、この場合はしゃがみガードの姿勢が取れず、しゃがみ移行モーションに当たる。紅丸のしゃがみ移行モーションは高いようで、狙いやすいようです（2024年）</td></tr>
 </tbody></table></div>
-<p>ネームレスで成立しない原因について、2024年10月1日のMOTの投稿は、ダウン回避の時間差あるいはしゃがみ移行中の高い食らい判定の違いを<strong>推測</strong>している。ブログでも、キャラクターによる復帰Fや食らい判定の相違を<strong>可能性</strong>として挙げている。両者は未検証の原因候補であり、確定仕様ではない。</p>
-<p>2024年10月1日の追加投稿では、キャラ別のタイミング調整が必要であり、キャラ限定要素もありそうだとしている。したがって上記の不成立一覧を「そのキャラには疑似中段が一切効かない」と一般化しない。</p>
-<p class="src">一次資料：<a href="https://x.com/mot_csb/status/1841064415640371440">2024/10/01 X（コマンド登録）</a> ／ <a href="https://x.com/mot_csb/status/1841064956831334792">同日X（ネームレスへの疑問）</a> ／ <a href="https://x.com/mot_csb/status/1841067234820833457">同日X（23キャラ一覧）</a> ／ <a href="https://comesonobravo.hatenadiary.org/entry/2024/11/16/104927">2024/11/16 はてなブログ（まとめ）</a></p>
-<h2>3. 別条件での本人確認・報告</h2>
-<div class="scroll"><table><thead><tr><th>日付</th><th>状況と研究結果</th><th>資料の扱い</th></tr></thead><tbody>
-<tr><td>2012/02/23</td><td>02UMの香澄対チャン。端でダウンを奪い、昇り中JDを重ねると疑似中段になり、キャンセル弱強重ね当てが連続ヒットすると本人が確認。五郎にもJD自体はヒットするが、キャンセル弱強重ね当ては空振り。</td><td>本人確認の報告</td></tr>
-<tr><td>2024/10/01</td><td>02UMのマチュアの強デスペアーが、端で屈ガード中のチャンにヒット。MOTによれば起き上がりに重ねる必要がなく、端付近で近B1段目キャンセルでもガード不能になる。</td><td>本人確認の報告。京の奈落とは別条件</td></tr>
-<tr><td>2024/11/18</td><td>02UMのケンスウ対紅丸で、画面端の紅丸の起き上がりへ中JCDを重ねて疑似中段を確認。紅丸のしゃがみ移行判定が高いので狙いやすいのではないか、という評価を添えている。</td><td>成立は本人確認。理由・汎用性は本人推測</td></tr>
-<tr><td>2025/04/05</td><td>02UMの包に対し、京の近Aが通常の屈状態に空振りし、ダウンからの起き上がりにはヒットした。</td><td>本人の観測。しゃがみ移行1F目との関係についての判断</td></tr>
-</tbody></table></div>
-<p class="src">一次資料：<a href="https://x.com/mot_csb/status/172619990443360256">2012/02/23 X（香澄）</a> ／ <a href="https://x.com/mot_csb/status/1841044179834507470">2024/10/01 X（マチュア）</a> ／ <a href="https://x.com/mot_csb/status/1858509948923314217">2024/11/18 X（ケンスウ・紅丸）</a> ／ <a href="https://x.com/mot_csb/status/1908530583225172407">2025/04/05 X（包）</a></p>
-<h2>4. MOT本人が整理した成立条件（2024年9月30日の説明）</h2>
-<p>2024年9月30日のXでMOTは、相手が屈ガード入力であること、起き上がったフレームにJ攻撃等が重なること、起き上がりのフレームまでに攻撃側が端へ密着することを、大まかな成立条件として挙げている。前中Jがやりやすいとも説明している。これは上の個別の成立例を説明する本人見解であり、全技・全キャラ共通の必要十分条件として確定させたものではない。</p>
-<p class="src">一次資料：<a href="https://x.com/mot_csb/status/1840751456569422177">2024/09/30 X（本人の条件整理）</a></p>
-<h2>5. 未解決・照合上の論点</h2>
-<ul><li><strong>MOT本人の疑問：</strong>ネームレスで京のレシピが成立しないのは、ダウン回避フレームの違いか、しゃがみ移行1F目の食らい判定の違いか。京とネームレスのダウン回避F比較が必要（2024/10/01～11/16）。</li>
-<li><strong>MOT本人の疑問：</strong>最初の1Fが高くならない例外キャラが存在するか（2025/04/05時点で確認中）。</li>
-<li><strong>AIが抽出した確認事項：</strong>2024年10月の特定コマンド登録で不成立の15キャラと、2025年の「基本的にどのキャラも高くなる」という説明は、条件が異なる可能性があり、現段階で矛盾と断定できない。復帰F、技の重ね方、食らい判定を分けて比較する必要がある。</li></ul>
-<p>疑問点は<a href="/kof-kininaru.html#kof02um">KOFシリーズ 気になること（02UM）</a>にも集約。</p>
-<p>別系統の過去資料：<a href="./crouch-guard-hurtbox-height-2010.html">2010年の「屈みガード」時の判定の高さ5段階</a>。2010年表はKOF2002の結果を含み、2024年の「起き上がり後のしゃがみ移行1F目」の判定とは条件が違うため、数値をそのまま引き継がない。</p>
-<p class="src">関連：<a href="/kof02um-top.html">KOF2002UM作品トップ</a> ／ <a href="/research/kof2002um/index.html">02UM研究アーカイブ</a> ／ <a href="/research/kof98/corner-crouch-guard-pose-jump-2007.html">KOF'98・2002：端の屈伸ガードポーズ</a></p>
-</div></main><footer class="footer"><div class="wrap">Come sono bravo? ｜ 作成：MOT</div></footer></body></html>
+<details><summary>気になること</summary>
+<ul>
+<li>京とネームレスのダウン回避フレームの比較と、ほかのキャラのしゃがみ移行モーションの検証は、今後の課題とされています。</li>
+<li>最初の1Fが高くならない例外キャラがいるかは確認中です。</li>
+<li>京のレシピで成立しなかった15キャラが、タイミングを調整しても成立しないのかは分かっていません。</li>
+</ul></details>
+<h2>似ているが別の話</h2>
+<ul>
+<li>しゃがみガード中の食らい判定の高さは<a href="./crouch-guard-hurtbox-height-2010.html">しゃがみガード時の判定の高さ5段階（2010年）</a>にあります。起き上がり直後のしゃがみ移行モーションとは条件が違います。</li>
+<li>画面端で屈伸してガードの姿勢を延ばす話は<a href="/research/kof98/corner-crouch-guard-pose-jump-2007.html">KOF'98・2002：端の屈伸ガードポーズ</a>にあります。</li>
+</ul>
+<h2>関連ページ</h2>
+<ul>
+<li>キャラ別のメモ：<a href="./x-kyo-iori-team-2010-2025.html#c-kyo">京</a>・<a href="./x-ryuko-women-2010-2025.html#c-kasumi">香澄</a>・<a href="./x-kim-yamazaki-team-2010-2025.html#c-mature">マチュア</a>・<a href="./x-ikari-psycho-2010-2025.html#c-kensou">ケンスウ</a>のX投稿メモ</li>
+<li>出典（X）：<a href="https://x.com/mot_csb/status/63097644192505856">移行モーション</a>・<a href="https://x.com/mot_csb/status/63098965775761408">最初の1F</a>・<a href="https://x.com/mot_csb/status/63099659685593088">しゃがみガード入力との関係</a>（2011/4/27）、<a href="https://x.com/mot_csb/status/172619990443360256">香澄対チャン</a>（2012/2/23）、<a href="https://x.com/mot_csb/status/1840751456569422177">成立条件</a>（2024/9/30）、<a href="https://x.com/mot_csb/status/1841044179834507470">マチュア</a>・<a href="https://x.com/mot_csb/status/1841064415640371440">京のコマンド登録</a>・<a href="https://x.com/mot_csb/status/1841064956831334792">ネームレスへの疑問</a>・<a href="https://x.com/mot_csb/status/1841067234820833457">キャラ別の結果</a>（2024/10/1）、<a href="https://x.com/mot_csb/status/1858509948923314217">ケンスウ対紅丸</a>（2024/11/18）、<a href="https://x.com/mot_csb/status/1908530583225172407">包</a>（2025/4/5）</li>
+<li>出典（ブログ）：<a href="https://comesonobravo.hatenadiary.org/entry/2024/11/16/104927">KOF2002UM：京の画面端での疑似中段を確認しました</a>（2024/11/16）、<a href="https://comesonobravo.hatenadiary.org/entry/2025/04/05/234751">KOF2002UM：しゃがみ移行モーション＆1F目の食らい判定の高さ関係</a>（2025/4/5）</li>
+<li><a href="/kof-kininaru.html#kof02um">気になること</a>／<a href="./index.html">KOF2002UM 研究アーカイブ</a></li>
+</ul></div></main><footer class="footer"><div class="wrap">Come sono bravo? ｜ 作成：MOT</div></footer></body></html>
