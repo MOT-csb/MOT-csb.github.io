@@ -1,32 +1,35 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'95：623入力保持と4ため6の位置入替時受付（2011～2024年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof95-top.html">KOF'95</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap"><h1>KOF'95：623入力保持と4ため6の位置入替時受付（2011～2024年）</h1>
-<p>2011年と2024年のMOT本人のX投稿を基に、コマンド入力後のレバー方向・コマンド途中で左右が入れ替わった場合について、<strong>当時の本人による説明</strong>と<strong>本人が未確認と明記した比較課題</strong>を区別して収録する。</p>
-<h2>2003～2004年の旧サイト原稿：入力の方向・先行受付・ための保持</h2>
-<p>MOTの旧<a href="/kof-komanndouketuke.html">「KOFシリーズの必殺技のコマンド入力受付について」</a>（2003年12月9日作成・発表、2004年1月21日最終更新）には、KOF'95について2011年・2024年の短い投稿と重ならない追加の記述がある。以下は<strong>当時の本人によるシステム整理</strong>であり、今回ゲーム内部を解析して新たに確定したものではない。</p>
-<table><thead><tr><th>旧原稿の項目</th><th>KOF'95についての原文の整理</th><th>留意点</th></tr></thead><tbody>
-<tr><td>コマンド末尾のレバー方向</td><td>原則として自由。ただし<strong>連打系必殺技では、レバーが上方向要素にあると技が出ない</strong>と記載。KOF'94も同じ例外とする</td><td>2011年の623系の本人説明から、連打系の例外まで消してはならない</td></tr>
-<tr><td>リバーサル先行入力</td><td>KOF'94・'95はボタンを押した直後に技が成立する方式で、<strong>3Fの先行入力受付中にボタンを押す必要がある</strong>と説明</td><td>KOF'96以降のボタン保持による成立延長とは区別する</td></tr>
-<tr><td>ラウンド開始前</td><td>ラウンド開始前からコマンド入力・ため入力を受け付けるため、開幕直後の必殺技やため技が可能と記載</td><td>後年作品ではこの受付が変化したという作品比較であり、技別の詳細F数を全件測定した表ではない</td></tr>
-<tr><td>ため方向の移動</td><td>同じため要素内の方向へレバーを動かしても、ためを継続できると説明。<strong>立ちガード・しゃがみガードを使い分けながらためを維持</strong>する戦術例あり</td><td>2024年の「コマンド入力途中で向きが入れ替わった場合」とは別の話</td></tr>
-</tbody></table>
-<p>この原稿には、KOF'94・'95の<strong>連打系必殺技は地上通常技のキャンセル対象が広いが特殊技は不可</strong>、<strong>通常技キャンセル特殊技は不可</strong>、<strong>空振りした地上通常技の必殺技キャンセルは不可で、キャンセル可能な空中通常技は可</strong>という整理もある。これらは旧原稿のシステム比較であり、全技での再測定結果ではない。<a href="./jump-landing-cancel-2010.html">ジャンプ・着地の2010年整理</a>、<a href="./strength-switch-move-table-2001-2008.html">弱強切替の原資料</a>と併読できるようにした。</p>
-<h2>2003年のシステム比較：ボタン優先順位と入力抑制</h2><p>別の旧原稿<a href="/kof-sisutemukannkei.html">「KOFシリーズの各作品のシステム関係の比較」（2003/12/9）</a>は、<strong>KOF'94・'95の通常ボタン優先順位をD＞C＞B＞A</strong>と整理し、KOF'96以降のA＞B＞C＞Dと比較する。旧<a href="/kofanalysis.htm">「KOFシリーズのシステムについてのメモ」（2003～2004年）</a>にも同じ優先順位が記録されている。パワーためキャンセル・自動キャンセルの入力を説明するための当時の本人見解で、全同時押し組合せの再実測ではない。</p><p>旧「システムについてのメモ」は、<strong>'94・'95では通常技が出せる状態で、コマンドに無関係なボタンを押していると必殺技が出ないが、何らかの硬直中なら出せる</strong>と説明する。これは「コマンド末尾のレバーは原則自由」という別条件と矛盾せず、レバー・ボタン・動作状態を別々に見る必要がある。</p><p>同メモの<strong>リバーサル通常投げは'95で不可能</strong>という2003年当時の記述は、<a href="./reversal-normal-throw-landing-invul-2010-2024.html">2011年3月23日の本人確認（京同士・両側で成立、入力猶予0F）</a>によって更新された過去の見解として扱い、現時点の確定仕様に流用しない。</p><h2>2011年3月28日：立ちCDの同時押しとリバーサル通常投げのずらし押し案</h2>
-<p>MOTは2011年3月28日、<strong>KOF'94・'95の立ちCDはCとDを完全同時押ししないと出せない</strong>と説明。そこから、<strong>リバーサル通常投げを狙うならC→Dとずらして押すのも有効かもしれない</strong>と提案した。<a href="https://comesonobravo.hatenadiary.org/entry/193002956.html">2011年3月28日の本人投稿</a>。</p><p>立ちCDの入力条件は本人の当時の説明である一方、リバーサル通常投げへの応用は<strong>本人の提案</strong>であり、ずらし幅・成立率を検証済みとはしていない。<a href="./reversal-normal-throw-landing-invul-2010-2024.html">2011年3月23日のリバーサル通常投げ成立確認</a>と、翌3月29日の京の技選択優先順位とは日時・検証範囲を区別する。</p>
-<h2>2011年3月29日：京の通常投げ・特殊技・CD同時押しの優先順位</h2><p>MOTは京での入力試験を<strong>通常投げ ＞ 6D ＞ 立ちCD ＞ 通常技</strong>と記録し、別に<strong>必殺技 ＞ 6D</strong>とも報告した。一方、<strong>CD同時押しでは必殺技は出ない</strong>という条件を明記した。<a href="https://x.com/mot_csb/status/52745271620276224">2011年3月29日の本人X原投稿</a>。旧ブログの<a href="https://comesonobravo.hatenadiary.org/entry/193161846.html">同日まとめ</a>にも同じ文章が転載されている。</p><p>これは<strong>京で確認した個別の技選択優先順位</strong>であり、上記2003年原稿の<strong>通常攻撃ボタンD＞C＞B＞A</strong>とは比較する入力が異なる。上の優先順位を全キャラクターの全ボタン組合せに一律適用する根拠にはしない。原投稿の「必殺技＞6D」と「CD同時押しでは必殺技は出ない」は、その両方を条件付きの記録として保存する。</p><h2>2011年3月16日：623系必殺技の入力後のレバー方向</h2>
-<p>MOTはKOF'95について、<strong>623入力が完成した後はレバーがどこに入っていても技が出るはず</strong>と説明した。これを利用し、リバーサル時に屈ガードを残す保険や、対空時に<code>623</code>の<code>3</code>で止めて屈姿勢から引き付ける使用法を紹介している。</p>
-<p>一方、KOF'94では技によってそれができないと本人が記録。原文は「はず」という表現であり、95の全623技・全条件を本人が総当たり検証済みだとはしない。<a href="https://x.com/mot_csb/status/47830584126472192">2011/03/16の本人投稿</a>。</p>
-<h2>2011年2月6日の比較資料：KOF'94と作品未指定の623入力を'95と混同しない</h2>
-<p>MOTは2011年2月6日の投稿で、<strong>KOF'94の京の鬼焼き・朧車</strong>について、レバー入力完了後に下要素を含む方向（1・2・3）へ入れると技が成立しないらしいと説明し、<strong>623→N+Aなどの入力</strong>を推奨した。また、本人は<strong>同じコマンドを持つ他の技まで同じ挙動とは限らず技ごとの確認が必要</strong>と明記している。<a href="https://comesonobravo.hatenadiary.org/entry/184623821.html">2011年2月6日の本人日次記録</a>。</p>
-<p>同じ日の別投稿には、作品名を単にKOFとした<strong>リョウ623+A/C</strong>の方向条件もあるが、<strong>KOF'95と明示されていないため'95の実測結果として採用しない</strong>。この資料は、3月16日の「KOF'95では623完成後のレバー方向が自由なはず」という本人説明との比較資料として残し、KOF'94の個別例でKOF'95の仮説を否定・確定しない。</p>
-<h2>2008年3月9日：位置が入れ替わる前の入力</h2>
-<p>KOF'96～2002では、レバー入力を始めてからボタンを押すまでに相手と位置が入れ替わった場合、ボタンを押した瞬間に相手がいる位置を基準に、それまでの入力が判断されます（いわゆる逆入力）。一方、KOF'94～'95では、位置が入れ替わる前の入力は正方向でないと技が出ません（<a href="https://comesonobravo.hatenadiary.org/entry/2008/03/09/153755">ブログ記事</a>）。</p>
-<h2>2024年4月21日：4ため6系の途中で向きが変わる場合</h2>
-<table><thead><tr><th>作品</th><th>本人の見解・確度</th></tr></thead><tbody>
-<tr><td>KOF'02など</td><td>向きに関係なく入力コマンドが認識され、入力中に位置が入れ替わっても技が出るという本人の記憶・説明。</td></tr>
-<tr><td>KOF'95以前</td><td><strong>KOF'96以降とは処理が違うかもしれないため確認したい</strong>と明記。成立・不成立の結果は未確認。</td></tr>
-</tbody></table>
-<p>出典：<a href="https://x.com/mot_csb/status/1782187684573880785">2024/04/21の本人投稿</a>。コマンド途中の「左・右の変化」とキャラクターの「1P・2P側」の違いを混同しない。</p>
-<h2>2011年4月10日：連打系必殺技の押下回数と作品間差</h2><p>MOTは連打系必殺技について、<strong>KOF'94・'95では20F以内に4回ボタンを押す必要がある</strong>一方、<strong>KOF'98・2002では30F以内に4回</strong>と説明している。<a href="https://comesonobravo.hatenadiary.org/entry/195236961.html">2011年4月10日の本人投稿</a>。この20F・30Fは<strong>本人による当時の作品比較</strong>として保存する。</p><p>同じ投稿では、<strong>KOF'98は1回のボタン入力を最低2F保持する必要があり、'94・2002では1F押せばよい</strong>とも説明した。ただし<strong>KOF'95の1押下あたりの最低保持Fは明示していない</strong>ため、'94と同じ1Fと補完しない。ボタンの連打受付時間と、通常の必殺技のコマンド先行入力受付3Fは異なる指標であり、混同しない。</p><h2>44・66の受付フレームとの関連</h2>
-<p><a href="./dash-command-minimum-2011.html">2011年の44・66入力の最低受付</a>では、2回目の4は最低6F、2回目の6は最低1Fでよいようだという本人記録がある。しかし、こちらはダッシュ・バックステップ系の方向入力条件であり、<strong>4ため6系の位置入替判定や623入力後の方向保持と同じ処理であると推測してはならない</strong>。</p>
-<h2>残る確認事項</h2><ul><li>位置が入れ替わる前の入力は正方向でないと出ない、という2008年の記事の説明が、4ため6系にもそのまま当てはまるか。</li><li>95の623系必殺技のうち、入力後のレバー位置で発動可否が変化する技があるか。</li><li>94の「技によってできない」例について、対象技と受付条件が特定されているか。</li></ul>
-<p>これらはMOTの歴史的な疑問・記録の整理であり、今回新たに結論が確認されたものではない。</p>
-<p><a href="./index.html">KOF'95研究アーカイブへ戻る</a> ／ <a href="/kof-kininaru.html#kof95">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'95：コマンド入力の細かい仕様｜Come sono bravo?</title><meta name="description" content="KOF&#x27;95のコマンド入力：623を入れた後のレバー方向、位置が入れ替わったときの入力、ボタンの優先順位、立CDの同時押し、連打系必殺技の受付など。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:960px}.article table{min-width:0;width:100%}.article th,.article td{overflow-wrap:anywhere;vertical-align:top}.article a{overflow-wrap:anywhere}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}.lead{font-size:1.05em}.vt{display:inline-block;font-size:.85em;line-height:1.45;padding:0 6px;margin-left:4px;border:1px solid var(--line,#ccd);border-radius:4px;font-weight:600;white-space:nowrap}.legend{font-size:.92em;color:var(--sub,#555)}.src li{font-size:.92em}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h2{font-size:1.15em;margin-top:1.2rem}details.more h3{font-size:1.05em}@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}.article th,.article td{min-width:80px}}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof95-top.html">KOF'95</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'95：コマンド入力の細かい仕様</h1>
+<p class="lead">'95では、コマンドを入れ終わった後のレバーはほぼ自由です。623を入れた後にレバーを屈ガードに戻しても技が出るので、リバーサルで屈ガードの保険をかけたり、対空で623の3で止めて引き付けてから出したりできます。</p>
+<h2>コマンドを入れた後のレバー方向</h2>
+<ul>
+<li><b>623の技</b>：'95では入力後のレバーがどこに入っていても出るはずです。'94では技によってはこれができません。たとえば'94の京の鬼焼き・朧車は、入力後に下要素（1・2・3）にレバーが入っていると出ないようなので、623→N+Aなどで出すのが安定です（ほかの同じコマンドの技も同じとは限りません）。</li>
+<li><b>236の技</b>：'95では入力後にどの方向に入れても出ます。作品ごとの比較は<a href="./236-command-input-2024.html">236コマンドを26で出す</a>へ。</li>
+<li><b>連打系の必殺技</b>：コマンドの最後のレバーは原則自由ですが、連打系の必殺技はレバーが上方向にあると出ません（'94も同じ）。</li>
+</ul>
+<h2>位置が入れ替わったとき</h2>
+<p>'96〜2002では、レバーを入れ始めてからボタンを押すまでに相手と位置が入れ替わると、ボタンを押した瞬間の相手の位置を基準に、それまでの入力が判断されます（逆入力）。'94・'95では、位置が入れ替わる前の入力は正しい向きでないと出ません。</p>
+<p>4ため6の技を入れている途中で位置が入れ替わった場合は、2002などでは向きに関係なく認識されて技が出ますが、'95以前は違うかもしれない、として確認待ちです。</p>
+<h2>ボタンの優先順位と同時押し</h2>
+<ul>
+<li>同時押ししたときに優先される通常技のボタンは、'94・'95ではD＞C＞B＞Aです（'96以降はA＞B＞C＞D）。</li>
+<li>京で確認した優先順位：通常投げ＞6D＞立CD＞通常技。必殺技＞6D。CD同時押しでは必殺技は出ません。</li>
+<li>通常技を出せる状態で、コマンドに関係ないボタンが押されていると必殺技は出ません。何かの硬直中なら出せます。</li>
+<li>'94・'95の立CDは、CとDを完全に同時押ししないと出ません。そのため、リバーサル通常投げを狙うときはC→Dとずらして押すのも有効かもしれません。</li>
+</ul>
+<h2>連打系の必殺技</h2>
+<p>'94・'95では20F以内にボタンを4回押す必要があります（'98・2002は30F以内に4回）。ボタン1回の長さは'94なら1Fで足ります（'98は最低2F）。</p>
+<h2>リバーサル・ラウンド開始前・ため</h2>
+<ul>
+<li>'94・'95の必殺技はボタンを押した瞬間に成立する仕組みなので、リバーサルで出すには3Fの先行入力の受付中にボタンを押す必要があります。</li>
+<li>ラウンド開始前からコマンドとためを受け付けるので、開幕直後に必殺技やため技を出せます。</li>
+<li>ためは、同じため方向の中でレバーを動かしても続きます（立ちガードと屈ガードを使い分けながらためを保てます）。</li>
+</ul>
+<p>ダッシュ・バックステップの入力は<a href="./dash-command-minimum-2011.html">44・66入力の最低受付</a>へ。</p>
+<h2>出典</h2>
+<ul class="src">
+<li><a href="https://x.com/mot_csb/status/47830584126472192">623の入力後のレバー</a>（X、2011/3/16）、<a href="https://comesonobravo.hatenadiary.org/entry/184623821.html">'94の鬼焼き・朧車</a>（ブログのつぶやきまとめ、2011/2/6）</li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2008/03/09/153755">96～02：逆入力について</a>（ブログ、2008/3/9）、<a href="https://x.com/mot_csb/status/1782187684573880785">4ため6の途中で位置が入れ替わる場合</a>（X、2024/4/21）</li>
+<li><a href="/kof-komanndouketuke.html">KOFシリーズの必殺技のコマンド入力受付について</a>（旧サイト、2003/12/9〜2004/1/21）、<a href="/kof-sisutemukannkei.html">KOFシリーズの各作品のシステム関係の比較</a>（旧サイト、2003/12/9）、<a href="/kofanalysis.htm">KOFシリーズのシステムについてのメモ</a>（旧サイト）</li>
+<li><a href="https://x.com/mot_csb/status/52745271620276224">京の優先順位</a>（X、2011/3/29）、<a href="https://comesonobravo.hatenadiary.org/entry/193002956.html">立CDの同時押し</a>（ブログのつぶやきまとめ、2011/3/28）、<a href="https://comesonobravo.hatenadiary.org/entry/195236961.html">連打系の必殺技</a>（同、2011/4/10）</li>
+</ul>
+<p class="legend"><a href="./index.html">KOF'95 研究アーカイブ</a> ／ <a href="/kof95-top.html">KOF'95トップ</a> ／ <a href="/kof-kininaru.html#kof95">KOF'95の気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>

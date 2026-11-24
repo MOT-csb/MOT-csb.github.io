@@ -1,28 +1,31 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'95：投げ不成立時の攻撃避け仕込みとキャラ別フォロー（2024年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof95-top.html">KOF'95</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap"><h1>KOF'95：投げ不成立時の攻撃避け仕込みとキャラ別フォロー（2024年）</h1>
-<p>2024年3月14～15日のMOT本人のX投稿をもとに、<strong>通常投げ・コマンド投げの入力直後にAB同時押しを仕込み、投げが不成立だった場合に攻撃避けを出す</strong>技術を整理する。<strong>発見者としてMOTが明記したのはJ・M氏（@kanakotukai）</strong>であり、MOT自身の発見ではない。MOTが考察した活用先、本人が動作として説明した内容、成功未確認の応用を区別する。</p>
-<h2>2011年6月21日：ダッシュSAB不成立時の昇りJD仕込み案</h2>
-<p>MOTは2011年6月21日、ラルフ・クラークで<strong>ダッシュからスーパーアルゼンチンバックブリーカー（SAB）を狙い、投げが不成立だった際に何も技が出なかったことがあったように記憶している</strong>と記録。その記憶が正しければ、<strong>入力を調整して不成立時に昇りJDを出し、ジャンプで逃げた相手を落とせるかもしれない</strong>と検討した。<a href="https://x.com/mot_csb/status/830347624897081344">2011年のMOT本人原投稿</a>。</p>
-<p>これは<strong>不成立時に動作が出なかったという本人の記憶と、昇りJDへの自動分岐の仮説</strong>であり、実際に自動分岐を完成させた報告ではない。2024年にJ・M氏が発見した<strong>投げ直後ABで攻撃避けを仕込む方法</strong>とは、時期・入力・失敗時の動作が異なる。両者を同一の確認済み入力にまとめない。</p><h2>基礎技術と発見者</h2>
-<p>2024年3月15日、MOTはJ・M氏が発見した技術として、<strong>投げを入力した直後にAB同時押しを仕込むと、投げ不成立時に攻撃避けが出せる</strong>と紹介。<a href="https://x.com/mot_csb/status/1768454227448442986">本人による発見者の明示と技術説明</a>。</p>
-<p>ここでの入力は<strong>「投げ直後にABを追加する」</strong>方法であり、<a href="./throw-cd-auto-select-2024.html">別の2024年の6+CD同時押しによる通常投げ／立CDの自動分岐</a>と同一の入力ではない。6+CDの場合は特殊技の暴発例外があるが、投げ直後ABはその暴発を攻撃避けで覆うという別の利点がある。</p>
-<h2>目的別のMOTの整理</h2>
-<table><thead><tr><th>目的・状況</th><th>MOT本人の説明・留保</th><th>原投稿</th></tr></thead><tbody>
-<tr><td>通常投げ不成立時の特殊技暴発防止</td><td>6C・6Dの特殊技があるキャラでも、投げ失敗時の暴発を攻撃避けにすることができるという説明。</td><td><a href="https://x.com/mot_csb/status/1768454938559226284">3/15の続き①</a></td></tr>
-<tr><td>コマンド投げが成立しなかった場合</td><td>ラルフなどのコマンド投げを狙う際にも、失敗時に攻撃避けを仕込めるという説明。</td><td><a href="https://x.com/mot_csb/status/1768454938559226284">3/15の続き①</a></td></tr>
-<tr><td>失敗時に攻撃避けでかわした後</td><td>カウンター攻撃によるフォローの強さは、<strong>上方向に攻撃できるか</strong>で変わると評価。各キャラで垂直ジャンプへの確定反撃を測定したものではない。</td><td><a href="https://x.com/mot_csb/status/1768454938559226284">3/15の続き①</a></td></tr>
-<tr><td>ほかの同時押し行動の仕込み</td><td>攻撃避け以外の同時押し動作は仕込めないようだとMOTが説明。95では同時押し後の次フレームから動作開始するのが攻撃避けのみ、という本人の理解に基づく。</td><td><a href="https://x.com/mot_csb/status/1768456514958987552">3/15の続き③</a></td></tr>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'95：投げが外れたら攻撃避けを出す仕込み｜Come sono bravo?</title><meta name="description" content="KOF&#x27;95で投げを入力した直後にAB同時押しを仕込むと、投げが成立しなかったときに攻撃避けが出ます（J・Mさん発見）。特殊技の暴発防止やコマンド投げのフォローに。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:960px}.article table{min-width:0;width:100%}.article th,.article td{overflow-wrap:anywhere;vertical-align:top}.article a{overflow-wrap:anywhere}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}.lead{font-size:1.05em}.vt{display:inline-block;font-size:.85em;line-height:1.45;padding:0 6px;margin-left:4px;border:1px solid var(--line,#ccd);border-radius:4px;font-weight:600;white-space:nowrap}.legend{font-size:.92em;color:var(--sub,#555)}.src li{font-size:.92em}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h2{font-size:1.15em;margin-top:1.2rem}details.more h3{font-size:1.05em}@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}.article th,.article td{min-width:80px}}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof95-top.html">KOF'95</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'95：投げが外れたら攻撃避けを出す仕込み</h1>
+<p class="lead">投げを入力した直後にAB同時押しを仕込むと、投げが成立しなかったときに攻撃避けが出ます。J・Mさん（@kanakotukai）が見つけたテクニックです。</p>
+<h2>使い道</h2>
+<ul>
+<li><b>通常投げを狙ったときの特殊技の暴発を防ぐ</b>：6Cや6Dの特殊技があるキャラでも、投げが外れたときの暴発を攻撃避けにできます。</li>
+<li><b>コマンド投げが外れたときの保険</b>：ラルフなどでコマンド投げを狙うときにも仕込めます。</li>
+</ul>
+<p>攻撃避けの後はカウンター攻撃でフォローするので、カウンター攻撃が上方向に攻撃できるかが重要になります。</p>
+<h2>キャラ別の向き不向き</h2>
+<table><thead><tr><th>キャラ</th><th>評価</th></tr></thead><tbody>
+<tr><td>テリー</td><td>6Cの暴発を防げる。カウンター攻撃が上方向に出ているので、垂直ジャンプに対応できる</td></tr>
+<tr><td>京</td><td>近Cは上方向に出るが、カウンター攻撃が上方向に出ないので、やや微妙か</td></tr>
+<tr><td>ラルフ、クラーク、大門</td><td>カウンター攻撃が上方向に出るので、コマンド投げが外れたときのフォローに使えそう</td></tr>
 </tbody></table>
-<h2>キャラクター別の本人評価</h2>
-<table><thead><tr><th>キャラクター</th><th>本人が挙げた利点・制約</th><th>確度</th></tr></thead><tbody>
-<tr><td>テリー</td><td>通常投げをCで狙う時の<strong>6C特殊技暴発を防止</strong>できる。カウンター攻撃が上へ伸びるため、相手の垂直ジャンプに対応できそうだとMOTは評価。</td><td>投げ失敗時の動作の説明と、その後の対空フォロー案を分離。</td></tr>
-<tr><td>京</td><td>近Cが上に強いが、カウンター攻撃は上方向に伸びず、この技術の利点は少し薄いかもしれないと評価。</td><td>MOTによるキャラ性能比較。対応結果の網羅検証ではない。</td></tr>
-<tr><td>ラルフ・クラーク・大門</td><td>カウンター攻撃が上へ出るので、コマンド投げ不成立時のフォローに使えそうと提案。</td><td><strong>使えそう</strong>という本人の応用案。</td></tr>
-</tbody></table>
-<p>出典：<a href="https://x.com/mot_csb/status/1768455459512652103">2024/03/15のキャラ別評価</a>。他のキャラで通用しないとする否定的な全キャラ比較ではない。</p>
-<h2>前日のテリーへの具体的な応用案</h2>
-<p>2024年3月14日、MOTは、テリーが<strong>レバー6を入れたままC→AB</strong>と入力した場合、通常投げが成立しないときには6Cではなく攻撃避けになると記録。相手が垂直ジャンプをしているなら、攻撃避けからカウンター攻撃で落とせるかもしれないと提案した。<a href="https://x.com/mot_csb/status/1768151208995491925">3/14の本人返信</a>。</p>
-<p>前日3月14日と翌15日の考察は関連するが、<strong>相手の垂直ジャンプをカウンター攻撃で確定反撃したと報告してはいない</strong>。<a href="./throw-cd-auto-select-2024.html">6+CDとテリーC→ABを整理した既存資料</a>にも接続する。</p>
-<h2>別作品・別入力との区別</h2>
-<p>MOTは2024年3月15～16日、KOF'94の<strong>離陸コマンド投げによる自動分岐</strong>についても研究したが、KOF'95で同じ挙動を確認した投稿ではない。95の投げ→AB仕込みにKOF'94だけで確認した成功条件を上乗せしない。<a href="https://x.com/mot_csb/status/1768609849288609848">KOF'94の別検証</a>。</p>
-<h2>残る確認範囲</h2>
-<p>同時押し系のほかの動作を仕込めるかという本人の留保、テリー以外のキャラごとの失敗時の入力優先・攻撃避け後のフォロー、投げ間合い・相手が垂直ジャンプしたタイミング・無敵技に対する成否は、今回の本人投稿群では網羅されていない。未確認のものを確定対策と書かない。</p><p><a href="./index.html">KOF'95研究アーカイブ</a> ／ <a href="/kof-kininaru.html#kof95">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
+<p>テリーの場合、6を入れたままC→ABと入力すると、投げが成立しないときに6Cではなく攻撃避けになります。</p>
+<h2>攻撃避けのほかは仕込めない</h2>
+<p>攻撃避け以外の同時押しの動作は仕込めないようです。'95の同時押しの仕組みは'96以降と違い、ボタンを同時に押した次のフレームから動き出すのは攻撃避けだけだからです。</p>
+<h2>似ているが別の話</h2>
+<ul>
+<li><b>6+CDの自動2択</b>：近距離で6+CDを押すと、投げが成立すれば通常投げ、しなければ立CD（特殊技）になります。<a href="./throw-cd-auto-select-2024.html">6+CDで通常投げと立CDが自動で分かれる</a>へ。</li>
+<li><b>離陸入力のコマンド投げ</b>：'94で、コマンド投げを離陸入力で入れると、投げられる場合はコマンド投げ、投げられない場合は昇りジャンプ攻撃になります（クラークで確認、ほかのキャラもおそらく可能）。'95でもできるようです。離陸入力は<a href="./takeoff-cancel-grapples-2011-2024.html">離陸キャンセルと打撃投げ</a>へ。</li>
+<li><b>ダッシュSABが外れたとき</b>：ラルフ・クラークでダッシュからSAB（スーパーアルゼンチンバックブリーカー）を狙って成立しなかったとき、何も技が出ない場合があった気がする、という記憶があります。それが正しければ、入力を工夫して外れたときに昇りJDなどが出るようにして、ジャンプで逃げた相手を落とせるかもしれません。ダッシュSABは、狙いやすい間合いでほかにプレッシャーをかけられる行動が少ないのが難点で、クラークなら遠Dが届く間合いまで近づいてから仕掛けた方がいいかもしれない、としています（2017年）。</li>
+</ul>
+<h2>出典</h2>
+<ul class="src">
+<li><a href="https://x.com/mot_csb/status/1768454227448442986">投げ不成立時の攻撃避け仕込み</a>と続く投稿（X、2024/3/15）：<a href="https://x.com/mot_csb/status/1768454938559226284">使い道</a>・<a href="https://x.com/mot_csb/status/1768455459512652103">キャラ別</a>・<a href="https://x.com/mot_csb/status/1768456514958987552">ほかの動作は仕込めない</a></li>
+<li><a href="https://x.com/mot_csb/status/1768151208995491925">テリーの6+C→AB</a>（X、2024/3/14）</li>
+<li><a href="https://x.com/mot_csb/status/1768609849288609848">離陸コマンド投げでの自動2択（'94）</a>（X、2024/3/15。「95でもできるっぽい」は続く投稿）</li>
+<li><a href="https://x.com/mot_csb/status/830347624897081344">ダッシュSABが外れたとき</a>（X、2017/2/11）</li>
+</ul>
+<p class="legend"><a href="./index.html">KOF'95 研究アーカイブ</a> ／ <a href="/kof95-top.html">KOF'95トップ</a> ／ <a href="/kof-kininaru.html#kof95">KOF'95の気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
