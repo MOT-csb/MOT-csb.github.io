@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>デスタワーの置き方メモ（2010〜2011年・追補）｜Come sono bravo?</title>
+<meta name="description" content="初代ぷよぷよのデスタワーの2010〜2011年の置き方メモ追補。AB→AC→AB→AD、AB→CC→CCの起爆色変更、参式の6列目、4〜5列目の2段差、掘り合いのチャット。">
+<link rel="stylesheet" href="/assets/research.css">
+<style>
+.article{max-width:900px}.article h2{margin-top:2rem}.article h3{margin-top:1.3rem}.lead{font-size:1.05em}
+.boards{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;margin:12px 0 18px}.boards figure{margin:0}.boards figcaption{font-size:13px;line-height:1.5;margin-top:6px}
+.boards img{max-width:150px;width:100%;height:auto;display:block}
+.pb{display:grid;grid-template-columns:repeat(6,14px);grid-auto-rows:14px;gap:1px;padding:3px;width:max-content;background:#1d2433;border-radius:4px;text-decoration:none}.pb span{display:block;border-radius:50%}
+.p.red{background:#e5484d}.p.blue{background:#3e7bfa}.p.yellow{background:#f5c400}.p.green{background:#30a46c}.p.purple{background:#8e4ec6}.p.garbage{background:#bbb}.p.block{background:#8a8f98;border-radius:2px}
+.quote{border-left:4px solid var(--accent,#245e47);padding:6px 14px;margin:10px 0;background:var(--paper)}.src{font-size:12px;color:var(--muted)}
+details.more{margin:12px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:2px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}
+.article table{width:100%;min-width:0}.article th,.article td{vertical-align:top}
+.steps{padding-left:1.4em}.steps li{margin:6px 0}
+@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}}
+.orig{margin:4px 0}.flow{border-left:3px solid var(--line);padding-left:14px}.boards.linear{margin:8px 0 12px}
+.toc{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px}.note{font-size:14px}
+.txtboard{font-family:monospace;line-height:1.15;font-size:14px;background:var(--paper);display:inline-block;padding:6px 10px;margin:6px 0}
+</style>
+</head>
+<body>
+<header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/puyo/death-tower/">デスタワー</a><span aria-hidden="true"> / </span><b>置き方メモ（2010〜2011年・追補）</b></div><p class="kicker">DEATH TOWER / MEMO 2010+</p><h1>デスタワーの置き方メモ（2010〜2011年・追補）</h1><p>2010〜2011年の置き方メモのうち、ほかのページに入っていなかった記事です。</p></div></div>
+<main class="main"><div class="wrap article">
+<section class="section"><p class="lead">2010〜2011年に旧ブログに書いた置き方メモのうち、ほかのページに入っていなかった10本です。</p><p>同じ時期のメモは<a href="/puyo/death-tower/memos-2010-2011/">棚上げ・段差・選択肢の残し方（2010〜2011年）</a>にもあります。</p><p class="note">盤面図は旧ブログに残っていたぷよシミュレーターの盤面データから描き直したもので、元の図と同じ配置です（空中にあるぷよは操作中の組ぷよ）。図をタップすると<a href="/puyo/simulator/">研究用シミュレーター</a>でその盤面を開けます。一部は旧ブログの画像をそのまま表示しています。各項目の本文は元の記事の文章です。</p><nav class="toc" aria-label="項目一覧"><a href="#ab-ac-ab-ad">AB→AC→AB→ADの場合</a><a href="#100410">4手目に青が来なかった例</a><a href="#ab-cc-cc">AB→CC→CCで起爆色を変える</a><a href="#ab-cc-ac">AB→CC→ACの場合</a><a href="#sanshiki-6">参式：下から2番目の色は6列目でよい</a><a href="#dansa45">4〜5列目の2段差を優先する</a><a href="#ab-cc-ab">AB→CC→ABの置き方（初手決め打ち）</a><a href="#ultimate-aa-bb-bc">究極連鎖法：AA→BB→BCの場合</a><a href="#horiai">掘り合いなど</a><a href="#horiai-chat">掘り合いメモ（2011年4月15日のチャット）</a></nav></section>
+<section class="section" id="ab-ac-ab-ad"><h2>AB→AC→AB→ADの場合</h2>
+<p>4手目の置き場所3案の比較です。1列目に置くと全てのぷよを活かせる可能性を残せる一方、起爆ぷよが最低5つ必要になり、11手起爆の可能性がなくなります。</p>
+<div class="flow">
+<div class="boards linear"><figure><img loading="lazy" src="https://comesonobravo.img.jugem.jp/20100120_630022.gif" alt="AB→AC→AB→ADの場合 図1（旧ブログの盤面図）" width="128" height="224"></figure></div>
+<p class="orig">この場合について考えてみます。</p>
+<div class="boards linear"><figure><img loading="lazy" src="https://comesonobravo.img.jugem.jp/20100120_630023.gif" alt="AB→AC→AB→ADの場合 図2（旧ブログの盤面図）" width="128" height="224"></figure></div>
+<p class="orig">緑がすぐに来ると困るのでちょっと微妙。でもネクスト次第ではあり。</p>
+<div class="boards linear"><figure><img loading="lazy" src="https://comesonobravo.img.jugem.jp/20100120_630024.gif" alt="AB→AC→AB→ADの場合 図3（旧ブログの盤面図）" width="128" height="224"></figure></div>
+<p class="orig">赤と紫を両方とも活かせる可能性が少なくなるので、基本的にはやらない方がいい。</p>
+<div class="boards linear"><figure><img loading="lazy" src="https://comesonobravo.img.jugem.jp/20100120_630025.gif" alt="AB→AC→AB→ADの場合 図4（旧ブログの盤面図）" width="128" height="224"></figure></div>
+<p class="orig">あえて１列目に置くことで、全てのぷよを活かせる可能性を残せる。強いていえば、起爆ぷよが最低５つ必要になるため、１１手起爆の可能性はなくなるのが唯一の欠点か。</p>
+</div>
+<p class="src">元記事：<a href="https://comesonobravo.hatenadiary.org/entry/2010/01/20/113500">ぷよぷよ：100120のデスタワーメモ（ＡＢ→AC→AB→ADの場合考察）</a>（2010年1月20日）</p></section>
+<section class="section" id="100410"><h2>4手目に青が来なかった例</h2>
+<p>4手目に青が来ず、やや苦しくなった盤面です。</p>
+<div class="flow">
+<div class="boards linear"><figure><a class="pb" href="/puyo/simulator/?a15ea5ca12ea5da9fa5ea11f2a4cfa2" title="シミュレーターで開く" aria-label="4手目に青が来なかった例 図1。下から順に、3列目：青・紫・緑・紫、4列目：紫・紫・青・緑、5列目：黄・緑（シミュレーターで開く）"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="p green"></span><span></span><span></span><span></span><span></span><span></span><span class="p blue"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="p green"></span><span></span><span></span><span></span><span></span><span></span><span class="p yellow"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="p purple"></span><span></span><span></span><span></span><span></span><span></span><span class="p green"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="p purple"></span><span class="p purple"></span><span></span><span></span><span></span><span></span><span class="p blue"></span><span class="p purple"></span><span></span><span></span></a></figure></div>
+<p class="orig">４手めに青が来なかったので、やや苦しい思いをしました。</p>
+</div>
+<p class="src">元記事：<a href="https://comesonobravo.hatenadiary.org/entry/2010/04/10/112111">ぷよぷよ：100410のデスタワーメモ</a>（2010年4月10日）</p></section>
+<section class="section" id="ab-cc-cc"><h2>AB→CC→CCで起爆色を変える</h2>
+<p>CCを究極連鎖法のように端に置き、黄を起爆色に変えてデスタワーに持っていく案（ピロ彦さん案）です。起爆色が本来より右に1列ずれるので組みにくくなります。</p>
+<div class="flow">
+<div class="boards linear"><figure><a class="pb" href="/puyo/simulator/?a48ca2ca2ca2ca12da5ea" title="シミュレーターで開く" aria-label="AB→CC→CCで起爆色を変える 図1。下から順に、1列目：青・青、4列目：青・青、5列目：緑・黄（シミュレーターで開く）"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="p blue"></span><span></span><span></span><span class="p blue"></span><span></span><span></span><span class="p blue"></span><span></span><span></span><span class="p blue"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="p yellow"></span><span></span><span></span><span></span><span></span><span></span><span class="p green"></span><span></span></a></figure></div>
+<p class="orig">ＡＢ→ＣＣ→ＣＣの場合は、このように置くのが基本ですが、</p>
+<div class="boards linear"><figure><a class="pb" href="/puyo/simulator/?a34ca5ca12ca5ca10da5ea" title="シミュレーターで開く" aria-label="AB→CC→CCで起爆色を変える 図2。下から順に、5列目：緑・黄・青・青、6列目：青・青（シミュレーターで開く）"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="p blue"></span><span></span><span></span><span></span><span></span><span></span><span class="p blue"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="p blue"></span><span></span><span></span><span></span><span></span><span></span><span class="p blue"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="p yellow"></span><span></span><span></span><span></span><span></span><span></span><span class="p green"></span><span></span></a></figure></div>
+<p class="orig">このように、究極連鎖法と同じようにＣＣを端に置くのもありかもしれません（ピロ彦さん案）。</p>
+<div class="boards linear"><figure><a class="pb" href="/puyo/simulator/?a58ca5ca5dca4ec" title="シミュレーターで開く" aria-label="AB→CC→CCで起爆色を変える 図3。下から順に、5列目：緑・黄・青・青、6列目：青・青（シミュレーターで開く）"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="p blue"></span><span></span><span></span><span></span><span></span><span></span><span class="p blue"></span><span></span><span></span><span></span><span></span><span></span><span class="p yellow"></span><span class="p blue"></span><span></span><span></span><span></span><span></span><span class="p green"></span><span class="p blue"></span></a></figure></div>
+<p class="orig">そうすれば、このように↓</p>
+<div class="boards linear"><figure><a class="pb" href="/puyo/simulator/?a8ea5da18da5fda4fda4cfda3ecfaeadcfadad2cede3c" title="シミュレーターで開く" aria-label="AB→CC→CCで起爆色を変える 図4。下から順に、1列目：緑、2列目：黄・黄・緑、3列目：緑・黄・緑、4列目：緑・黄・黄・緑・青・紫・紫・黄、5列目：緑・黄・青・青・紫・黄・黄、6列目：青・青・紫・紫・黄（シミュレーターで開く）"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="p green"></span><span></span><span></span><span></span><span></span><span></span><span class="p yellow"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="p yellow"></span><span></span><span></span><span></span><span></span><span></span><span class="p purple"></span><span class="p yellow"></span><span></span><span></span><span></span><span></span><span class="p purple"></span><span class="p yellow"></span><span></span><span></span><span></span><span></span><span class="p blue"></span><span class="p purple"></span><span class="p yellow"></span><span></span><span></span><span></span><span class="p green"></span><span class="p blue"></span><span class="p purple"></span><span></span><span class="p green"></span><span></span><span class="p yellow"></span><span class="p blue"></span><span class="p purple"></span><span></span><span class="p yellow"></span><span></span><span class="p yellow"></span><span class="p yellow"></span><span class="p blue"></span><span class="p green"></span><span class="p yellow"></span><span class="p green"></span><span class="p green"></span><span class="p green"></span><span class="p blue"></span></a></figure></div>
+<p class="orig">黄を起爆色に変えることで、デスタワーにもっていけます。</p>
+<p class="orig">ただ、起爆色を本来より右に１列ずらすことになるので、組みにくくなるのが難点ですね。</p>
+</div>
+<p class="src">元記事：<a href="https://comesonobravo.hatenadiary.org/entry/2010/04/11/145530">ぷよぷよ：デスタワーメモ（ＡＢ→ＣＣ→ＣＣの場合の起爆色変更案）</a>（2010年4月11日）</p></section>
+<section class="section" id="ab-cc-ac"><h2>AB→CC→ACの場合</h2>
+<p>ツインタワー風にする案と、デスタワーを諦めて連鎖を狙う案です。</p>
+<div class="flow">
+<div class="boards linear"><figure><a class="pb" href="/puyo/simulator/?a38fa5ea12e2a8fa5ba4" title="シミュレーターで開く" aria-label="AB→CC→ACの場合 図1。下から順に、2列目：赤・紫、3列目：緑・紫、4列目：緑、5列目：緑（シミュレーターで開く）"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="p purple"></span><span></span><span></span><span></span><span></span><span></span><span class="p green"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="p green"></span><span class="p green"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="p purple"></span><span></span><span></span><span></span><span></span><span></span><span class="p red"></span><span></span><span></span><span></span><span></span></a></figure></div>
+<p class="orig">このようにツインタワー風味にするのもありかも？</p>
+<div class="boards linear"><figure><a class="pb" href="/puyo/simulator/?a67fea4bfe2a" title="シミュレーターで開く" aria-label="AB→CC→ACの場合 図2。下から順に、2列目：赤・紫、3列目：紫・緑、4列目：緑、5列目：緑（シミュレーターで開く）"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="p purple"></span><span class="p green"></span><span></span><span></span><span></span><span></span><span class="p red"></span><span class="p purple"></span><span class="p green"></span><span class="p green"></span><span></span></a></figure></div>
+<p class="orig">デスタワーを諦めて、連鎖を狙うのもアリといえばアリ</p>
+</div>
+<p class="src">元記事：<a href="https://comesonobravo.hatenadiary.org/entry/2010/06/01/125700">ぷよぷよ：デスタワーメモ（AB→CC→ACの場合の置き方案）</a>（2010年6月1日）</p></section>
+<section class="section" id="sanshiki-6"><h2>参式：下から2番目の色は6列目でよい</h2>
+<p>赤ゾロが来たら1〜2列目に寝かせ、続く紫ゾロの置き方を比べる例です。</p>
+<div class="flow">
+<div class="boards linear"><figure><img loading="lazy" src="https://cdn-ak.f.st-hatena.com/images/fotolife/c/comesonobravo/20240821/20240821160853.gif" alt="参式：下から2番目の色は6列目でよい 図1（旧ブログの盤面図）" width="128" height="224"></figure></div>
+<p class="orig">この状況で</p>
+<div class="boards linear"><figure><img loading="lazy" src="https://cdn-ak.f.st-hatena.com/images/fotolife/c/comesonobravo/20240821/20240821160908.gif" alt="参式：下から2番目の色は6列目でよい 図2（旧ブログの盤面図）" width="128" height="224"></figure></div>
+<p class="orig">赤ゾロが来たら、1～2列目に寝かせるといい</p>
+<div class="boards linear"><figure><img loading="lazy" src="https://cdn-ak.f.st-hatena.com/images/fotolife/c/comesonobravo/20240821/20240821160856.gif" alt="参式：下から2番目の色は6列目でよい 図3（旧ブログの盤面図）" width="128" height="224"></figure></div>
+<p class="orig">これで紫ゾロがきた場合は、こう置くより</p>
+<div class="boards linear"><figure><img loading="lazy" src="https://cdn-ak.f.st-hatena.com/images/fotolife/c/comesonobravo/20240821/20240821160859.gif" alt="参式：下から2番目の色は6列目でよい 図4（旧ブログの盤面図）" width="128" height="224"></figure></div>
+<p class="orig">こちらの方がよさそう</p>
+<div class="boards linear"><figure><img loading="lazy" src="https://cdn-ak.f.st-hatena.com/images/fotolife/c/comesonobravo/20240821/20240821160903.gif" alt="参式：下から2番目の色は6列目でよい 図5（旧ブログの盤面図）" width="128" height="224"></figure><figure><img loading="lazy" src="https://cdn-ak.f.st-hatena.com/images/fotolife/c/comesonobravo/20240821/20240821160905.gif" alt="参式：下から2番目の色は6列目でよい 図6（旧ブログの盤面図）" width="128" height="224"></figure></div>
+<p class="orig">こう置いてしまうと、黄をいかしにくくなるので微妙。</p>
+</div>
+<p class="src">元記事：<a href="https://comesonobravo.hatenadiary.org/entry/168514371.html">参式デスタワー　下から2番目の色は6列目でOK</a>（2010年11月6日）</p></section>
+<section class="section" id="dansa45"><h2>4〜5列目の2段差を優先する</h2>
+<p>4〜5列目の段差が大きくなると後がつなぎにくいので、2段差になる置き方を選びます。</p>
+<div class="flow">
+<div class="boards linear"><figure><img loading="lazy" src="https://cdn-ak.f.st-hatena.com/images/fotolife/c/comesonobravo/20240821/20240821160842.gif" alt="4〜5列目の2段差を優先する 図1（旧ブログの盤面図）" width="128" height="224"></figure></div>
+<p class="orig">この状況で</p>
+<div class="boards linear"><figure><img loading="lazy" src="https://cdn-ak.f.st-hatena.com/images/fotolife/c/comesonobravo/20240821/20240821160845.gif" alt="4〜5列目の2段差を優先する 図2（旧ブログの盤面図）" width="128" height="224"></figure></div>
+<p class="orig">こうすると、4～5列目の段差が大きくなってその後がつなぎにくい</p>
+<p class="orig">4列目の紫が3つつながってるのも、その後紫が置きにくくなってる</p>
+<p class="orig">そこで、</p>
+<div class="boards linear"><figure><img loading="lazy" src="https://cdn-ak.f.st-hatena.com/images/fotolife/c/comesonobravo/20240821/20240821160848.gif" alt="4〜5列目の2段差を優先する 図3（旧ブログの盤面図）" width="128" height="224"></figure><figure><img loading="lazy" src="https://cdn-ak.f.st-hatena.com/images/fotolife/c/comesonobravo/20240821/20240821160851.gif" alt="4〜5列目の2段差を優先する 図4（旧ブログの盤面図）" width="128" height="224"></figure></div>
+<p class="orig">この２つがいいかも。</p>
+<p class="orig">4～5列目が2段差になっているので、その後が組みやすい</p>
+</div>
+<p class="src">元記事：<a href="https://comesonobravo.hatenadiary.org/entry/168513783.html">デスタワー　4～5列目の２段差を優先</a>（2010年11月6日）</p></section>
+<section class="section" id="ab-cc-ab"><h2>AB→CC→ABの置き方（初手決め打ち）</h2>
+<p>左に1列ずらした参式を狙える形です。</p>
+<div class="flow">
+<p class="orig">左に１列ずらした参式を狙える形。</p>
+<div class="boards linear"><figure><img loading="lazy" src="https://cdn-ak.f.st-hatena.com/images/fotolife/c/comesonobravo/20240821/20240821161006.png" alt="AB→CC→ABの置き方（初手決め打ち） 図1（旧ブログの盤面図）" width="128" height="224"></figure></div>
+<p class="orig">2011年01月06日：作成</p>
+<p class="orig">2019年9月14日：更新（ぷよ図復活）</p>
+</div>
+<p class="src">元記事：<a href="https://comesonobravo.hatenadiary.org/entry/178896866.html">AB→CC→ABの置き方（初手決め打ち）</a>（2011年1月6日）</p></section>
+<section class="section" id="ultimate-aa-bb-bc"><h2>究極連鎖法：AA→BB→BCの場合</h2>
+<p>デスタワーではなく究極連鎖法のメモです。3手目の赤を2列目1段目に置くのがポイントです。</p>
+<div class="flow">
+<div class="boards linear"><figure><a class="pb" href="/puyo/simulator/?a60ba5ea5eba4" title="シミュレーターで開く" aria-label="究極連鎖法：AA→BB→BCの場合 図1。下から順に、1列目：緑・緑・赤、2列目：赤（シミュレーターで開く）"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="p red"></span><span></span><span></span><span></span><span></span><span></span><span class="p green"></span><span></span><span></span><span></span><span></span><span></span><span class="p green"></span><span class="p red"></span><span></span><span></span><span></span><span></span></a></figure></div>
+<p class="orig">普通はこう置きますが、</p>
+<div class="boards linear"><figure><a class="pb" href="/puyo/simulator/?a31fa5ba16ba5ba5ea5ea5" title="シミュレーターで開く" aria-label="究極連鎖法：AA→BB→BCの場合 図2。下から順に、1列目：緑・緑・赤・赤、2列目：赤・紫（シミュレーターで開く）"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="p purple"></span><span></span><span></span><span></span><span></span><span></span><span class="p red"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="p red"></span><span></span><span></span><span></span><span></span><span></span><span class="p red"></span><span></span><span></span><span></span><span></span><span></span><span class="p green"></span><span></span><span></span><span></span><span></span><span></span><span class="p green"></span><span></span><span></span><span></span><span></span><span></span></a></figure></div>
+<p class="orig">３手めに赤紫or赤黄（赤＋緑と赤以外）が来た場合は、２手めを置く場所を変更し、こう置いてもいいかもしれません。</p>
+<p class="orig">３手めの赤を二列目の１段目に置くのがポイントです。これにより、紫or黄が２段目にできるため、その後に組みやすくなるはず。</p>
+</div>
+<p class="src">元記事：<a href="https://comesonobravo.hatenadiary.org/entry/2010/05/04/094800">ぷよぷよ：究極連鎖法メモ（ＡＡ→ＢＢ→ＢＣの場合）</a>（2010年5月4日）</p></section>
+<section class="section" id="horiai"><h2>掘り合いなど</h2>
+<p>2連続ペチの怖さ、掘り合いでの選択肢（2連鎖保険3連鎖）、掘るときは下にも目を向けること、の短いメモです。</p>
+<div class="flow">
+<p class="orig">２連続ペチの恐怖</p>
+<p class="orig">掘り合いでの選択肢　２連鎖保険３連鎖（仮）</p>
+<p class="orig">掘る場合、下にも目を向ける</p>
+</div>
+<p class="src">元記事：<a href="https://comesonobravo.hatenadiary.org/entry/194304127.html">掘り合いなど</a>（2011年4月5日）</p></section>
+<section class="section" id="horiai-chat"><h2>掘り合いメモ（2011年4月15日のチャット）</h2>
+<p>タラPさん・ピロ彦さんとのチャットのログです。掘りは効率を意識すると難しくなり、致死連鎖と同様にパターン化が大事、という話から始まります。</p>
+<div class="flow">
+<p class="orig">20:32 (MOT_) あと、掘りは効率を意識しだすと、とたんに難しくなった</p>
+<p class="orig">20:32 (MOT_) 最適化できると思うけど</p>
+<p class="orig">20:32 (MOT_) そのいろはの段階にしか到達してないのがよくわかった</p>
+<p class="orig">20:32 (MOT_) アドリブ能力も大事だけど</p>
+<p class="orig">20:33 (MOT_) 致死連鎖と同様、パターン化が大事な気がしてきた</p>
+<p class="orig">20:34 (taraP) ピロさんの持ち出してくる譜を見ると、発想も大事だと思ったりすることも……ようは全部大事なのか(ノ∀｀)</p>
+<p class="orig">20:35 (MOT_) えっとですね</p>
+<p class="orig">20:35 (MOT_) パターン化することによって</p>
+<p class="orig">20:35 (MOT_) 悪い手を事前に防いで</p>
+<p class="orig">20:35 (MOT_) 最低でもベターな選択を短時間で選べるようになるはず</p>
+<p class="orig">20:36 (MOT_) そして、最適な手も一瞬考えるとわかる</p>
+<p class="orig">20:36 (pirohiko) なぞぷよやるといいよっ</p>
+<p class="orig">20:36 (taraP) 積込みを速くするにはパターン化しかないよねー</p>
+<p class="orig">20:36 (MOT_) 結局なぞぷよやってないという(ノ∀｀)</p>
+<p class="orig">20:37 (pirohiko) 連鎖への道ってモードもあるけどね</p>
+<p class="orig">20:37 (taraP) それは知らなかった</p>
+<p class="orig">20:38 (MOT_) なぞぷよもやってみる、ありがと</p>
+<p class="orig">20:38 (MOT_) 今日、少しやってみたのは</p>
+<p class="orig">20:38 (pirohiko) 後半の超連鎖じゃなくて、最初の方の短い連鎖のだったらある程度いいかも</p>
+<p class="orig">20:38 (MOT_) とこぷよシミュレータで、２０個おじゃまを落として</p>
+<p class="orig">20:38 (pirohiko) 段差に強くなるかも？</p>
+<p class="orig">20:38 (MOT_) 同じ配ぷよで何回かやり直して判断を考えてみた</p>
+<p class="orig">20:38 (MOT_) で、その時の感想としては</p>
+<p class="orig">20:39 (MOT_) ゴミをマルチに乗せやすい</p>
+<p class="orig">20:39 (MOT_) ゴミ、というか、発火＋２連鎖めの確保に使えない色、かな</p>
+<p class="orig">20:39 (MOT_) 本命の２連鎖分に使う色が２色なので、残りの２色をマルチように乗せる感じ</p>
+<p class="orig">21:50 *nick MOT_ → MOT_afk</p>
+<p class="orig">21:58 (MOT_afk) 掘りメモ：中央で連鎖作った方がいい</p>
+<p class="orig">21:59 (pirohiko) 出来るなら発掘したい</p>
+<p class="orig">21:59 (taraP) 上に連鎖尾伸ばしてくとすっごい掘れるということを昨日知った</p>
+<p class="orig">22:02 (MountainP) 連鎖尾で掘る？</p>
+<p class="orig">22:02 (pirohiko) ２段掘りとかか</p>
+<p class="orig">22:02 (taraP) なんていうんだろ</p>
+<p class="orig">22:03 (pirohiko) 伸ばした後におじゃまをくらっても掘れるって感じ？</p>
+<p class="orig">22:03 (taraP) たんに掘りたいときというか</p>
+<p class="orig">22:04 (pirohiko) http://ips.karou.jp/simu/ps.html?400400500B00xE19ESSSSSSSSSSSSSSS</p>
+<p class="orig">22:04 (pirohiko) こんな感じ？</p>
+<p class="orig">22:04 (MOT_afk) 惚れるね！＜上に伸ばすと</p>
+<p class="orig">22:05 (pirohiko) 惚れるまである</p>
+<p class="orig">22:05 (MOT_afk) ３ダブとか惚れるイメージ</p>
+<p class="orig">22:05 (taraP) http://bit.ly/f51Psk　こんな</p>
+<p class="orig">22:05 (taraP) 漢字直さないんだｗ</p>
+<p class="orig">22:06 (MOT_afk) 連鎖尾ね</p>
+<p class="orig">22:07 (MountainP) あー</p>
+<p class="orig">22:07 (MOT_afk) あと、ヘルが使いやすい</p>
+<p class="orig">22:07 (MountainP) そーゆー意味で云ったのか</p>
+<p class="orig">22:07 (MOT_afk) http://tinyurl.com/3u8h3mv</p>
+<p class="orig">22:07 (MOT_afk) こんな感じ</p>
+<p class="orig">22:07 (taraP) どこまでも掘れるな　http://bit.ly/eMnNAg</p>
+<p class="orig">22:08 (MountainP) 確かに掘るときは連鎖を後乗せする方が掘りやすい</p>
+<p class="orig">22:08 (MOT_afk) 掘った後だった</p>
+<p class="orig">22:08 (taraP) 掘り合いのときのヘル、なんだか強いよね</p>
+<p class="orig">22:09 (pirohiko) 鱈PのURLが掘った後のものに</p>
+<p class="orig">22:09 (taraP) おっと</p>
+<p class="orig">22:09 (taraP) http://bit.ly/hrfIIG</p>
+<p class="orig">22:09 (taraP) そういう仕様だったのかｗ</p>
+<p class="orig">22:09 (MountainP) コレの最後はがっつり掘れる</p>
+<p class="orig">22:10 (taraP) 最後の問題？</p>
+<p class="orig">22:10 (pirohiko) 最後のあれか</p>
+<p class="orig">22:10 (MountainP) そう</p>
+<p class="orig">22:10 (taraP) いまだに正解知らないよｗ</p>
+<p class="orig">22:10 (MountainP) えｗ</p>
+<p class="orig">22:10 (MOT_afk) http://tinyurl.com/3wpth8x</p>
+<p class="orig">22:10 (MOT_afk) 今やったらこうなった</p>
+<p class="orig">22:11 (MOT_afk) 右側のは赤待ちのゴミ</p>
+<p class="orig">22:11 (taraP) ヘルですなーｗ</p>
+<p class="orig">22:13 (MountainP) http://ips.karou.jp/simu/pn.html?SSSSSSSSSSSSSur_61o161o1e1C1E1E1C1u161G1__u06</p>
+<p class="orig">22:14 (MountainP) 自分でも正解忘れた</p>
+<p class="orig">22:14 (taraP) ちょｗ</p>
+<p class="orig">22:21 (MOT_afk) うーん</p>
+<p class="orig">22:21 (MOT_afk) 中央じゃない方がペチに強い気もする</p>
+<p class="orig">22:21 (MOT_afk) 難しい</p>
+<p class="orig">22:22 (taraP) 掘り合いはほんと正解が見えない</p>
+<p class="orig">22:23 (pirohiko) ただ、NGは見えるかも</p>
+<p class="orig">22:23 (taraP) ふむふむ</p>
+<p class="orig">22:23 (pirohiko) 人の対戦を見てると</p>
+<p class="orig">22:23 (pirohiko) そっち置いたらダメーーってときがある。</p>
+<p class="orig">22:24 (taraP) 思われてるだろうなあ(ノ∀｀)</p>
+<p class="orig">22:24 (pirohiko) 空間的に狭い時に</p>
+<p class="orig">22:24 (MountainP) そこはらめぇぇぇぇぇぇっ</p>
+<p class="orig">22:24 (MountainP) って？</p>
+<p class="orig">22:24 (pirohiko) そこに置いたら詰むってのがあるね</p>
+<p class="orig">22:24 (MountainP) だね</p>
+<p class="orig">22:24 (pirohiko) ちぎり方とか。</p>
+<p class="orig">22:25 (MOT_afk) １段のペチは無視できるとか</p>
+<p class="orig">22:25 (MOT_afk) 細かいポイントありますよね</p>
+<p class="orig">22:25 (MOT_afk) あと、そこで消してしまうと相手に対応できないとか</p>
+<p class="orig">22:25 (MOT_afk) 消さずに本命を待ってたらよかった時とかある</p>
+<p class="orig">22:25 (MOT_afk) 消してる時間のロスすら惜しい瞬間</p>
+<p class="orig">22:27 (taraP) 細かいポイント多いよねー(ノ∀｀)</p>
+<p class="orig">22:27 (MOT_afk) http://tinyurl.com/3rym5f9</p>
+<p class="orig">22:27 (MOT_afk) なかなか味わい深いのができた</p>
+<p class="orig">22:27 (taraP) でかい</p>
+<p class="orig">22:28 (MOT_afk) http://tinyurl.com/5uc9cwe</p>
+<p class="orig">22:28 (MOT_afk) なんとなく、４～５列目を起点にするといい気がしてきた</p>
+<p class="orig">22:29 (MOT_afk) http://tinyurl.com/6kqrlc2</p>
+<p class="orig">22:29 (MOT_afk) この場合の序盤</p>
+<p class="orig">22:30 (taraP) 赤から消したい(ノ∀｀)</p>
+<p class="orig">22:30 (MOT_afk) http://tinyurl.com/3md53fl</p>
+<p class="orig">22:30 (MOT_afk) そしてでかくなった</p>
+<p class="orig">22:30 (pirohiko) でかすぎｗ</p>
+<p class="orig">22:30 (taraP) 致死連鎖ｗ</p>
+<p class="orig">22:30 (MOT_afk) http://tinyurl.com/6x3omk7</p>
+<p class="orig">22:31 (MOT_afk) この場合の序盤。このように、緑をタテ２にすることで対ペチ耐性を作り</p>
+<p class="orig">22:31 (MOT_afk) 赤をサンドイッチにすることでも、ペチ耐性を作る</p>
+<p class="orig">22:31 (MOT_afk) 致死にするつもりはなかったけど、緑がこなかったｗ</p>
+<p class="orig">22:47 (MOT_afk) 掘り合いメモ：劣勢時はとにかく速度重視。五分以上の時は効率重視</p>
+<p class="orig">22:47 (MOT_afk) なんか微妙に違うけどそんな感じ</p>
+<p class="orig">22:47 (MOT_afk) あと、発火色がきた時に点数を増やすために発火を待つという選択があるけど</p>
+<p class="orig">22:48 (MOT_afk) 劣勢時に待つと、発火すらできない可能性がある</p>
+<p class="orig">22:48 (taraP) あるある(ノ∀｀)</p>
+<p class="orig">22:48 (pirohiko) 堀合対戦してみる？</p>
+<p class="orig">22:49 (MOT_afk) ２連鎖で４個消しは、通常だと避けたいけど</p>
+<p class="orig">22:49 (taraP) 掘り合い対戦？</p>
+<p class="orig">22:49 (MOT_afk) 劣勢時はそれでも問題なし！の意識</p>
+<p class="orig">22:49 (pirohiko) いや、単純に致死未満の打ち合い</p>
+<p class="orig">23:06 *nick MOT_afk → MOT_</p>
+<p class="orig">23:06 (MOT_) ピロさん堀合お願いしてもいいかな</p>
+<p class="orig">23:06 (pirohiko) よろよろ</p>
+<p class="orig">23:06 (MOT_) ありあり</p>
+<p class="orig">23:08 (MOT_) よろよろ</p>
+<p class="orig">23:08 (pirohiko) よろー</p>
+<p class="orig">23:20 (pirohiko) 今のほりは良かった。</p>
+<p class="orig">23:21 (taraP) おおｗ</p>
+<p class="orig">23:30 (MOT_) 集中力切れてきた</p>
+<p class="orig">23:30 (MOT_) この辺で(ノ∀｀)</p>
+<p class="orig">23:30 (taraP) そのわりに調子よさそうｗ</p>
+<p class="orig">23:30 (pirohiko) ありありー</p>
+<p class="orig">23:30 (MOT_) ありあり</p>
+<p class="orig">23:33 (pirohiko) 対戦？</p>
+<p class="orig">23:33 (pirohiko) やるならやるよっ(｀・ω・´)</p>
+<p class="orig">23:33 (taraP) 気分転換にぼくもちょっとやりたい</p>
+<p class="orig">23:33 (pirohiko) お</p>
+<p class="orig">23:33 (MOT_) ありあり＆集中(｀・ω・´)</p>
+<p class="orig">23:34 (pirohiko) どっちとやるかな</p>
+<p class="orig">23:34 (pirohiko) じゃあ観戦</p>
+<p class="orig">23:34 (MOT_) じゃあ自分と５戦くらい</p>
+<p class="orig">23:34 (MOT_) ５先</p>
+<p class="orig">23:34 (taraP) じゃあ遠慮無く</p>
+<p class="orig">23:34 (taraP) おｋ</p>
+<p class="orig">23:34 (taraP) あ</p>
+<p class="orig">23:34 (taraP) 掘り合いでいいのかな</p>
+<p class="orig">23:34 (MOT_) はい</p>
+<p class="orig">23:34 (taraP) ちょっとだけまってねｗ</p>
+<p class="orig">23:34 (MOT_) おｋ</p>
+<p class="orig">23:35 (taraP) おｋ</p>
+<p class="orig">23:39 (MOT_) 失礼</p>
+<p class="orig">23:39 (taraP) すごいスピードだったｗ</p>
+<p class="orig">23:39 (pirohiko) デスタワーは致死まであるねｗ</p>
+<p class="orig">23:39 (pirohiko) 発火色が来ないと。</p>
+<p class="orig">23:42 (taraP) ありあり</p>
+<p class="orig">23:42 (MOT_) (ノ∀｀)</p>
+<p class="orig">23:42 (taraP) なかなか掘った気がする</p>
+<p class="orig">23:42 (MOT_) たぶん、さっきのは１１手か１２手だったと思う</p>
+<p class="orig">23:42 (taraP) おそろしいｗ</p>
+<p class="orig">23:42 (MOT_) 離れがあったから１２かな</p>
+<p class="orig">23:42 (MOT_) １１かも</p>
+<p class="orig">23:43 (taraP) 普通に潰しに行ったら致死が返って来てびびったわｗ</p>
+<p class="orig">23:43 (MOT_) １２だった</p>
+<p class="orig">23:43 (taraP) せっかくだからピロさんとも５戦しておこっかな(´∀｀)</p>
+<p class="orig">23:51 (pirohiko) ありありっ</p>
+<p class="orig">23:51 (taraP) 生きた(ノ∀｀)</p>
+<p class="orig">23:51 (taraP) ありありｗ</p>
+<p class="orig">23:51 (pirohiko) 堀合というよりセメントしてたかもしれない(´・ω・｀)</p>
+<p class="orig">23:51 (MOT_) ６列目だけ低い時って６列目を消してしまいたくなるけど、あんまり意味ないかも</p>
+<p class="orig">23:51 (taraP) 掘った上での致死連鎖ならいんじゃないかなｗ</p>
+<p class="orig">23:51 (MOT_) 自分もよくやるけどね(´・ω・｀)</p>
+<p class="orig">23:52 (MOT_) ６列目を消しても３列目が高いだけで、組んでる時間＋消してる時間が致命傷になりがち</p>
+<p class="orig">23:52 (MOT_) ピロさん５先いいですかっ</p>
+<p class="orig">23:52 (pirohiko) あい</p>
+<p class="orig">23:52 (pirohiko) ホリ？</p>
+<p class="orig">23:52 (MOT_) 掘り</p>
+<p class="orig">23:53 (pirohiko) あい</p>
+<p class="orig">23:57 (taraP) 対ペチの練習にもなりつつあるなｗ</p>
+<p class="orig">00:00 (taraP) か、かっけええええ</p>
+<p class="orig">00:00 (pirohiko) 会心のほり</p>
+<p class="orig">00:01 (taraP) すごい掘りを見せてもらった</p>
+<p class="orig">00:01 (pirohiko) 掘った掘ったっ</p>
+<p class="orig">00:01 (MOT_) 無念(ノ∀｀)</p>
+<p class="orig">00:01 (MOT_) 狙いは悪くなかったと思う</p>
+<p class="orig">00:01 (taraP) キレてるなあピロさん</p>
+<p class="orig">00:03 (MOT_) 掘り合い意識しだすと面白いですね</p>
+<p class="orig">00:03 (MOT_) うまさんの気持ちが少しだけわかったかも</p>
+<p class="orig">00:04 (pirohiko) http://bit.ly/g4mXJ9</p>
+<p class="orig">00:04 (pirohiko) こんなんだった</p>
+<p class="orig">00:04 (MOT_) 今、明確にわかった</p>
+<p class="orig">00:04 (taraP) 緑が変態だｗ</p>
+<p class="orig">00:04 (MOT_) デスタワーでゴミを利用して３連鎖にするじゃないですか</p>
+<p class="orig">00:05 (pirohiko) ツモが神がかってた</p>
+<p class="orig">00:05 (MOT_) あれを掘り合いの際に意識してやればいいのか</p>
+<p class="orig">00:05 (MOT_) かっこいい</p>
+<p class="orig">00:05 (taraP) なんで右に積み上げてるんだろうと思いながら見てたよｗ</p>
+<p class="orig">00:06 (pirohiko) これは折り返しの発送だよね</p>
+<p class="orig">00:07 (taraP) ついったでつぶやいていい？ｗ</p>
+<p class="orig">00:07 (pirohiko) いいよっ</p>
+<p class="orig">00:07 (pirohiko) どうせなら手順も書くかな</p>
+<p class="orig">00:10 (pirohiko) http://ips.karou.jp/simu/pv.html?M00M06g0KgOOeSOKSRK_GaAycKMae6Ci</p>
+<p class="orig">00:10 (pirohiko) こうっ</p>
+<p class="orig">00:12 (pirohiko) http://ips.karou.jp/simu/pv.html?M00M06g0KgOOeSOKSRK_GaAycKMae6C8e4</p>
+<p class="orig">00:12 (pirohiko) 実はこういう手もあった</p>
+<p class="orig">00:12 (pirohiko) 最初狙ったのはこっちなんだけど、速い手があったからそうなった。</p>
+<p class="orig">00:13 (taraP) よう見えるわ(ノ∀｀)</p>
+<p class="orig">00:14 (MOT_) うつくしい</p>
+<p class="orig">00:36 (K_M) (MOT_afk) 掘りメモ：中央で連鎖作った方がいい</p>
+<p class="orig">00:36 (K_M) ↑これ堀りの基本</p>
+<p class="orig">00:37 (K_M) 多段掘りとかやると、お邪魔が消える数にかなり差が出てくる</p>
+<p class="orig">00:36 (MOT) どうなんだろう</p>
+<p class="orig">00:37 (MOT) 真ん中はやっぱりおじゃまに弱いし</p>
+<p class="orig">00:37 (MOT) ３列目に発火色を置くと、その上に盛大に置きにくいみたいです</p>
+<p class="orig">00:38 (MOT) 掘り、という言葉が混乱を招いてますね</p>
+<p class="orig">00:38 (MOT) 掘ることよりも、ペチを警戒しつつ連鎖を組む感じです</p>
+</div>
+<p class="src">元記事：<a href="https://comesonobravo.hatenadiary.org/entry/196036016.html">2011/4/15の掘り合いメモ</a>（2011年4月16日）</p></section><section class="section"><h2>関連ページ</h2><ul><li><a href="/puyo/death-tower/memos-2010-2011/">棚上げ・段差・選択肢の残し方（2010〜2011年）</a></li><li><a href="/puyo/death-tower/opening-decisions/">初手・配ぷよ別の置き方</a></li><li><a href="/puyo/death-tower/early-techniques/">スプリット・ずらしタワー・棚上げの初期研究</a></li></ul></section>
+<p><a href="/puyo/death-tower/">デスタワー攻略へ戻る</a></p>
+</div></main>
+<footer class="footer"><div class="wrap">Come sono bravo?　｜　作成：MOT<br>ゲームの権利は各権利者に帰属します。</div></footer>
+</body>
+</html>
