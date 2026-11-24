@@ -12,3 +12,6 @@
 details.more{margin:14px 0;border:1px solid var(--line);border-radius:10px;padding:4px 14px;background:var(--paper)}
 details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}
 details.more[open]>summary{border-bottom:1px solid var(--line);margin-bottom:8px}
+
+/* スマホで枠なしの表がはみ出さないように（2026/11/24） */
+@media (max-width:640px){:not(.table-scroll)>table{display:block!important;overflow-x:auto;max-width:100%!important;min-width:0!important;width:auto!important}}
