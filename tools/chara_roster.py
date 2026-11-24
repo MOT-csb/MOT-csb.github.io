@@ -97,6 +97,11 @@ def esc(s):
     return html.escape(s, quote=True)
 
 
+def href(base, fn):
+    # "/" で始まるものはサイト直下の旧ページなど（研究フォルダの外）。そのまま使う
+    return fn if fn.startswith("/") else base + fn
+
+
 def roster_html(d):
     base = "/" + d["base"]
     out = ['<div class="roster">']
@@ -111,11 +116,11 @@ def roster_html(d):
                 main = f'<span class="cn">{esc(c["name"])}</span>'
             sub = []
             for kind, fn, label in frames[1:]:
-                sub.append(f'<a href="{base}{fn}">{esc(label)}</a>')
+                sub.append(f'<a href="{href(base, fn)}">{esc(label)}</a>')
             for kind, fn, label in others:
                 if kind == "research":
                     continue
-                sub.append(f'<a href="{base}{fn}">{esc(label)}</a>')
+                sub.append(f'<a href="{href(base, fn)}">{esc(label)}</a>')
             research = [p for p in others if p[0] == "research"]
             line = f'<li id="c-{c["id"]}">{main}'
             if frames:
@@ -126,7 +131,7 @@ def roster_html(d):
             if sub:
                 line += '<span class="sub">' + "".join(sub) + "</span>"
             if research:
-                items = "".join(f'<li><a href="{base}{fn}">{esc(label)}</a></li>' for _, fn, label in research)
+                items = "".join(f'<li><a href="{href(base, fn)}">{esc(label)}</a></li>' for _, fn, label in research)
                 line += f'<details><summary>攻略・研究ページ {len(research)}件</summary><ul>{items}</ul></details>'
             line += "</li>"
             out.append(line)
@@ -140,7 +145,7 @@ def nav_html(d, c, here):
     top = "/" + d["top"]
 
     def link(fn, label):
-        return f"<b>{esc(label)}</b>" if fn.split("#")[0] == here else f'<a href="{base}{fn}">{esc(label)}</a>'
+        return f"<b>{esc(label)}</b>" if fn.split("#")[0] == here else f'<a href="{href(base, fn)}">{esc(label)}</a>'
 
     main = [link(fn, label) for kind, fn, label in c["pages"] if kind in ("frame", "data")]
     if c.get("x"):
@@ -193,6 +198,8 @@ def main(game):
                     if c not in lst:
                         lst.append(c)
     for fn, cs in owner.items():
+        if fn.startswith("/"):
+            continue  # 旧ページには手を入れない
         if len(cs) == 1:
             put_nav(base + fn, nav_html(d, cs[0], fn))
         elif len(cs) > 3 or all(len([p for p in c["pages"] if p[0] != "x"]) == 1 for c in cs):

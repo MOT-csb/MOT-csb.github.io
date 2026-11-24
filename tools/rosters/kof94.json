@@ -11,6 +11,54 @@
      "name": "京",
      "frame": [
       "frame-data-japan-team-2010-2011.html#178854892"
+     ],
+     "data": [
+      [
+       "/94kyo.html",
+       "旧サイトの攻略"
+      ]
+     ],
+     "research": [
+      [
+       "kyo-6d-yamibarai-jd-2023.html",
+       "京の6D・闇払い・前方JD"
+      ],
+      [
+       "character-notes-2010-2012.html",
+       "キャラ別の使い方と対策メモ（2010～2012年）"
+      ],
+      [
+       "state-carryover-2001-2025.html",
+       "中断されても残る状態"
+      ],
+      [
+       "new-crouch-guardbreak-2024.html",
+       "特殊技を投げられた後の屈ガード不能"
+      ],
+      [
+       "air-special-unblockable-three-2023.html",
+       "京・舞・ラッキーの空中特殊技ガード不能"
+      ],
+      [
+       "stun-pressure-2024.html",
+       "気絶連係"
+      ],
+      [
+       "command-lever-direction-2011.html",
+       "必殺技のコマンド受付とボタンを押すときのレバー方向"
+      ],
+      [
+       "auto-cancel-techniques-2003-2005.html",
+       "自動キャンセル"
+      ],
+      [
+       "frame-data-findings-2010-2011.html",
+       "フレームデータを並べて分かったこと"
+      ],
+      [
+       "hitbox-gallery-2011.html",
+       "技の判定画像37点"
+      ]
      ]
     },
     {
@@ -18,6 +66,22 @@
      "name": "紅丸",
      "frame": [
       "frame-data-japan-team-2010-2011.html#179624595"
+     ],
+     "data": [
+      [
+       "/94benimaru.html",
+       "旧サイトの攻略"
+      ]
+     ],
+     "research": [
+      [
+       "character-notes-2010-2012.html",
+       "キャラ別の使い方と対策メモ（2010～2012年）"
+      ],
+      [
+       "landing-cancel-study-2001-2024.html",
+       "着地キャンセルと起き攻め・投げ対策"
+      ]
      ]
     },
     {
@@ -25,6 +89,26 @@
      "name": "大門五郎",
      "frame": [
       "frame-data-japan-team-2010-2011.html#180106298"
+     ],
+     "data": [
+      [
+       "/94gorou.html",
+       "旧サイトの攻略"
+      ]
+     ],
+     "research": [
+      [
+       "ralf-clark-2003-comparison.html",
+       "ラルフとクラークの違い"
+      ],
+      [
+       "down-throw-timing-2001-2003.html",
+       "ダウン投げ"
+      ],
+      [
+       "hitbox-gallery-2011.html",
+       "技の判定画像37点"
+      ]
      ]
     }
    ]
@@ -37,6 +121,54 @@
      "name": "テリー",
      "frame": [
       "frame-data-fatal-fury-team-2010-2011.html#175976703"
+     ],
+     "data": [
+      [
+       "/94terry.html",
+       "技解析（旧サイト）"
+      ],
+      [
+       "/94terry-kouryaku.html",
+       "対戦攻略（旧サイト）"
+      ],
+      [
+       "/94terrykankei.html",
+       "テリー関係（旧サイト）"
+      ]
+     ],
+     "research": [
+      [
+       "terry-ryo-joe-strategy-2023-2024.html",
+       "テリー・リョウ・ジョーの戦い方"
+      ],
+      [
+       "terry-crouching-stun-routes-2024.html",
+       "テリーの屈み相手への気絶連続技"
+      ],
+      [
+       "ryo-robert-hien-interruption-2011.html",
+       "リョウ・ロバートの屈C→弱飛燕疾風脚への割り込み"
+      ],
+      [
+       "character-notes-2010-2012.html",
+       "キャラ別の使い方と対策メモ（2010～2012年）"
+      ],
+      [
+       "matchup-counterplay-2011.html",
+       "テリー・ロバート・キムへの対策"
+      ],
+      [
+       "crouching-hitbox-2001-2003.html",
+       "座高としゃがみ状態での当たり方"
+      ],
+      [
+       "old-ko-cpu-sequence-bugs-2001-2003.html",
+       "KO演出とCPUの特殊な動き"
+      ],
+      [
+       "power-max-stun-combos-2023-2024.html",
+       "パワーMAX中の連続技と気絶の狙い方"
+      ]
      ]
     },
     {
@@ -44,6 +176,46 @@
      "name": "アンディ",
      "frame": [
       "frame-data-fatal-fury-team-2010-2011.html#176397234"
+     ],
+     "data": [
+      [
+       "/94andy.html",
+       "旧サイトの攻略"
+      ]
+     ],
+     "research": [
+      [
+       "andy-kim-yuri-strategy-2023-2024.html",
+       "アンディ・キム・ユリの戦い方"
+      ],
+      [
+       "character-notes-2010-2012.html",
+       "キャラ別の使い方と対策メモ（2010～2012年）"
+      ],
+      [
+       "pushbox-and-evasion-corrections-2023.html",
+       "攻撃避けですり抜ける技と押し合い判定"
+      ],
+      [
+       "stun-pressure-2024.html",
+       "気絶連係"
+      ],
+      [
+       "throw-properties-damage-stun-2003.html",
+       "投げの性質変更（ダメージ・気絶値の置き換え）"
+      ],
+      [
+       "player-side-frame-differences-2011-2023.html",
+       "1Pと2Pで変わること"
+      ],
+      [
+       "escape-jcd-2024.html",
+       "逃げJCD"
+      ],
+      [
+       "hitbox-gallery-2011.html",
+       "技の判定画像37点"
+      ]
      ]
     },
     {
@@ -51,6 +223,38 @@
      "name": "ジョー",
      "frame": [
       "frame-data-fatal-fury-team-2010-2011.html#176637395"
+     ],
+     "data": [
+      [
+       "/94joe.html",
+       "旧サイトの攻略"
+      ]
+     ],
+     "research": [
+      [
+       "terry-ryo-joe-strategy-2023-2024.html",
+       "テリー・リョウ・ジョーの戦い方"
+      ],
+      [
+       "character-notes-2010-2012.html",
+       "キャラ別の使い方と対策メモ（2010～2012年）"
+      ],
+      [
+       "joe-hurricane-horizontal-hitboxes-2003.html",
+       "ジョーの密着ハリケーンアッパーの当たり方"
+      ],
+      [
+       "stun-decay-2011-2023.html",
+       "気絶値50と回復量"
+      ],
+      [
+       "player-side-frame-differences-2011-2023.html",
+       "1Pと2Pで変わること"
+      ],
+      [
+       "attack-avoid-frames-2011.html",
+       "攻撃避けの全体フレーム"
+      ]
      ]
     }
    ]
@@ -63,6 +267,50 @@
      "name": "リョウ",
      "frame": [
       "frame-data-art-of-fighting-team-2010-2011.html#177280261"
+     ],
+     "data": [
+      [
+       "/94ryo.html",
+       "性能解析（旧サイト）"
+      ],
+      [
+       "/94ryo-kouryaku.html",
+       "攻略（旧サイト）"
+      ]
+     ],
+     "research": [
+      [
+       "terry-ryo-joe-strategy-2023-2024.html",
+       "テリー・リョウ・ジョーの戦い方"
+      ],
+      [
+       "ryo-robert-hien-interruption-2011.html",
+       "リョウ・ロバートの屈C→弱飛燕疾風脚への割り込み"
+      ],
+      [
+       "character-notes-2010-2012.html",
+       "キャラ別の使い方と対策メモ（2010～2012年）"
+      ],
+      [
+       "choi-jc-unblockable-2011-2024.html",
+       "チョイの斜めJC3段目ガード不能"
+      ],
+      [
+       "stun-followup-max-2011.html",
+       "気絶後の追撃とMAX時の地上始動連続技"
+      ],
+      [
+       "throw-centric-notes-2013-2016.html",
+       "通常投げを軸にした攻防"
+      ],
+      [
+       "command-lever-direction-2011.html",
+       "必殺技のコマンド受付とボタンを押すときのレバー方向"
+      ],
+      [
+       "frame-data-findings-2010-2011.html",
+       "フレームデータを並べて分かったこと"
+      ]
      ]
     },
     {
@@ -70,6 +318,26 @@
      "name": "ロバート",
      "frame": [
       "frame-data-art-of-fighting-team-2010-2011.html#180809589"
+     ],
+     "data": [
+      [
+       "/94robert.html",
+       "旧サイトの攻略"
+      ]
+     ],
+     "research": [
+      [
+       "ryo-robert-hien-interruption-2011.html",
+       "リョウ・ロバートの屈C→弱飛燕疾風脚への割り込み"
+      ],
+      [
+       "matchup-counterplay-2011.html",
+       "テリー・ロバート・キムへの対策"
+      ],
+      [
+       "old-ko-cpu-sequence-bugs-2001-2003.html",
+       "KO演出とCPUの特殊な動き"
+      ]
      ]
     },
     {
@@ -77,6 +345,12 @@
      "name": "タクマ",
      "frame": [
       "frame-data-art-of-fighting-team-2010-2011.html#180693779"
+     ],
+     "data": [
+      [
+       "/94takuma.html",
+       "旧サイトの攻略"
+      ]
      ]
     }
    ]
@@ -89,6 +363,32 @@
      "name": "ハイデルン",
      "frame": [
       "frame-data-ikari-team-2010-2011.html#177731985"
+     ],
+     "research": [
+      [
+       "heidern-strategy-2023-2024.html",
+       "ハイデルンの戦い方と対策"
+      ],
+      [
+       "heidern-storm-damage-2024.html",
+       "ストームブリンガーのダメージ置き換え"
+      ],
+      [
+       "character-notes-2010-2012.html",
+       "キャラ別の使い方と対策メモ（2010～2012年）"
+      ],
+      [
+       "down-throw-timing-2001-2003.html",
+       "ダウン投げ"
+      ],
+      [
+       "hyperjump-2024.html",
+       "大ジャンプの入力と使いどころ"
+      ],
+      [
+       "takeoff-input-exceptions-2020-2025.html",
+       "離陸入力と空中食らいの例外"
+      ]
      ]
     },
     {
@@ -96,6 +396,38 @@
      "name": "ラルフ",
      "frame": [
       "frame-data-ikari-team-2010-2011.html#180979768"
+     ],
+     "data": [
+      [
+       "/94ralf.htm",
+       "旧サイトの攻略"
+      ],
+      [
+       "/94racl-hikaku.html",
+       "ラルフとクラークの比較（旧サイト）"
+      ]
+     ],
+     "research": [
+      [
+       "ralf-clark-strategy-2023-2024.html",
+       "ラルフとクラークの戦い方と対策"
+      ],
+      [
+       "ralf-clark-2003-comparison.html",
+       "ラルフとクラークの違い"
+      ],
+      [
+       "down-throw-timing-2001-2003.html",
+       "ダウン投げ"
+      ],
+      [
+       "takeoff-input-exceptions-2020-2025.html",
+       "離陸入力と空中食らいの例外"
+      ],
+      [
+       "player-side-frame-differences-2011-2023.html",
+       "1Pと2Pで変わること"
+      ]
      ]
     },
     {
@@ -103,6 +435,46 @@
      "name": "クラーク",
      "frame": [
       "frame-data-ikari-team-2010-2011.html#180972922"
+     ],
+     "data": [
+      [
+       "/94clark.htm",
+       "旧サイトの攻略"
+      ],
+      [
+       "/94racl-hikaku.html",
+       "ラルフとクラークの比較（旧サイト）"
+      ]
+     ],
+     "research": [
+      [
+       "ralf-clark-strategy-2023-2024.html",
+       "ラルフとクラークの戦い方と対策"
+      ],
+      [
+       "ralf-clark-2003-comparison.html",
+       "ラルフとクラークの違い"
+      ],
+      [
+       "old-crouch-unblockables-2001-2003.html",
+       "キム遠D・ケンスウ・クラークのしゃがみガード不能"
+      ],
+      [
+       "throw-centric-notes-2013-2016.html",
+       "通常投げを軸にした攻防"
+      ],
+      [
+       "down-throw-timing-2001-2003.html",
+       "ダウン投げ"
+      ],
+      [
+       "rapid-cancel-2003-2004-discrepancy.html",
+       "連打キャンセルの最速タイミング表"
+      ],
+      [
+       "attack-avoid-frames-2011.html",
+       "攻撃避けの全体フレーム"
+      ]
      ]
     }
    ]
@@ -115,6 +487,38 @@
      "name": "アテナ",
      "frame": [
       "frame-data-psycho-team-2010-2023.html#177744460"
+     ],
+     "data": [
+      [
+       "/94athena.htm",
+       "旧サイトの攻略"
+      ]
+     ],
+     "research": [
+      [
+       "lucky-athena-king-strategy-2023-2024.html",
+       "ラッキー・アテナ・キングの戦い方"
+      ],
+      [
+       "character-notes-2010-2012.html",
+       "キャラ別の使い方と対策メモ（2010～2012年）"
+      ],
+      [
+       "stun-pressure-2024.html",
+       "気絶連係"
+      ],
+      [
+       "throw-properties-damage-stun-2003.html",
+       "投げの性質変更（ダメージ・気絶値の置き換え）"
+      ],
+      [
+       "player-side-frame-differences-2011-2023.html",
+       "1Pと2Pで変わること"
+      ],
+      [
+       "attack-avoid-frames-2011.html",
+       "攻撃避けの全体フレーム"
+      ]
      ]
     },
     {
@@ -122,6 +526,26 @@
      "name": "ケンスウ",
      "frame": [
       "frame-data-psycho-team-2010-2023.html#177969594"
+     ],
+     "data": [
+      [
+       "/94kensou.html",
+       "旧サイトの攻略"
+      ]
+     ],
+     "research": [
+      [
+       "kensou-max-shinryutenbu-2023-2026.html",
+       "ケンスウの神龍天舞脚とパワーMAX"
+      ],
+      [
+       "old-crouch-unblockables-2001-2003.html",
+       "キム遠D・ケンスウ・クラークのしゃがみガード不能"
+      ],
+      [
+       "player-side-frame-differences-2011-2023.html",
+       "1Pと2Pで変わること"
+      ]
      ]
     },
     {
@@ -129,6 +553,26 @@
      "name": "チン",
      "frame": [
       "frame-data-psycho-team-2010-2023.html#178468693"
+     ],
+     "data": [
+      [
+       "/94chin.htm",
+       "旧サイトの攻略"
+      ]
+     ],
+     "research": [
+      [
+       "terry-crouching-stun-routes-2024.html",
+       "テリーの屈み相手への気絶連続技"
+      ],
+      [
+       "crouching-hitbox-2001-2003.html",
+       "座高としゃがみ状態での当たり方"
+      ],
+      [
+       "throw-properties-damage-stun-2003.html",
+       "投げの性質変更（ダメージ・気絶値の置き換え）"
+      ]
      ]
     }
    ]
@@ -141,6 +585,38 @@
      "name": "キム",
      "frame": [
       "frame-data-korea-team-2011.html#180559817"
+     ],
+     "data": [
+      [
+       "/94kim.htm",
+       "旧サイトの攻略"
+      ]
+     ],
+     "research": [
+      [
+       "andy-kim-yuri-strategy-2023-2024.html",
+       "アンディ・キム・ユリの戦い方"
+      ],
+      [
+       "character-notes-2010-2012.html",
+       "キャラ別の使い方と対策メモ（2010～2012年）"
+      ],
+      [
+       "matchup-counterplay-2011.html",
+       "テリー・ロバート・キムへの対策"
+      ],
+      [
+       "old-crouch-unblockables-2001-2003.html",
+       "キム遠D・ケンスウ・クラークのしゃがみガード不能"
+      ],
+      [
+       "throw-properties-damage-stun-2003.html",
+       "投げの性質変更（ダメージ・気絶値の置き換え）"
+      ],
+      [
+       "hitbox-gallery-2011.html",
+       "技の判定画像37点"
+      ]
      ]
     },
     {
@@ -148,6 +624,22 @@
      "name": "チャン",
      "frame": [
       "frame-data-korea-team-2011.html#181596765"
+     ],
+     "data": [
+      [
+       "/94chang.html",
+       "旧サイトの攻略"
+      ]
+     ],
+     "research": [
+      [
+       "ralf-clark-2003-comparison.html",
+       "ラルフとクラークの違い"
+      ],
+      [
+       "pushbox-and-evasion-corrections-2023.html",
+       "攻撃避けですり抜ける技と押し合い判定"
+      ]
      ]
     },
     {
@@ -155,6 +647,38 @@
      "name": "チョイ",
      "frame": [
       "frame-data-korea-team-2011.html#181793749"
+     ],
+     "data": [
+      [
+       "/94choi.html",
+       "旧サイトの攻略"
+      ]
+     ],
+     "research": [
+      [
+       "choi-jc-unblockable-2011-2024.html",
+       "チョイの斜めJC3段目ガード不能"
+      ],
+      [
+       "crouching-hitbox-2001-2003.html",
+       "座高としゃがみ状態での当たり方"
+      ],
+      [
+       "old-ko-cpu-sequence-bugs-2001-2003.html",
+       "KO演出とCPUの特殊な動き"
+      ],
+      [
+       "attack-avoid-frames-2011.html",
+       "攻撃避けの全体フレーム"
+      ],
+      [
+       "rank-reassessment-2011.html",
+       "キャラ評価の見直し（2011年）"
+      ],
+      [
+       "hitbox-gallery-2011.html",
+       "技の判定画像37点"
+      ]
      ]
     }
    ]
@@ -167,6 +691,34 @@
      "name": "ユリ",
      "frame": [
       "frame-data-women-team-2011.html#181537535"
+     ],
+     "data": [
+      [
+       "/94yuri.html",
+       "旧サイトの攻略"
+      ]
+     ],
+     "research": [
+      [
+       "andy-kim-yuri-strategy-2023-2024.html",
+       "アンディ・キム・ユリの戦い方"
+      ],
+      [
+       "ryo-robert-hien-interruption-2011.html",
+       "リョウ・ロバートの屈C→弱飛燕疾風脚への割り込み"
+      ],
+      [
+       "character-notes-2010-2012.html",
+       "キャラ別の使い方と対策メモ（2010～2012年）"
+      ],
+      [
+       "rank-reassessment-2011.html",
+       "キャラ評価の見直し（2011年）"
+      ],
+      [
+       "hitbox-gallery-2011.html",
+       "技の判定画像37点"
+      ]
      ]
     },
     {
@@ -174,6 +726,42 @@
      "name": "舞",
      "frame": [
       "frame-data-women-team-2011.html#181276665"
+     ],
+     "data": [
+      [
+       "/94mai.html",
+       "旧サイトの攻略"
+      ],
+      [
+       "/94maityouhitsu.html",
+       "超必殺忍蜂のヒット数（旧サイト）"
+      ]
+     ],
+     "research": [
+      [
+       "mai-crouch-c-antiair-2011.html",
+       "舞の屈C対空と各キャラのジャンプ攻撃"
+      ],
+      [
+       "character-notes-2010-2012.html",
+       "キャラ別の使い方と対策メモ（2010～2012年）"
+      ],
+      [
+       "air-special-unblockable-three-2023.html",
+       "京・舞・ラッキーの空中特殊技ガード不能"
+      ],
+      [
+       "health-zero-damage-images-2011.html",
+       "体力0・ゲージMAXでのダメージ比較画像"
+      ],
+      [
+       "rank-reassessment-2011.html",
+       "キャラ評価の見直し（2011年）"
+      ],
+      [
+       "hitbox-gallery-2011.html",
+       "技の判定画像37点"
+      ]
      ]
     },
     {
@@ -181,6 +769,38 @@
      "name": "キング",
      "frame": [
       "frame-data-women-team-2011.html#178092267"
+     ],
+     "data": [
+      [
+       "/94king.html",
+       "旧サイトの攻略"
+      ]
+     ],
+     "research": [
+      [
+       "lucky-athena-king-strategy-2023-2024.html",
+       "ラッキー・アテナ・キングの戦い方"
+      ],
+      [
+       "king-far-d-button-cancel-2023.html",
+       "キングの遠Dの連打キャンセル"
+      ],
+      [
+       "character-notes-2010-2012.html",
+       "キャラ別の使い方と対策メモ（2010～2012年）"
+      ],
+      [
+       "stun-pressure-2024.html",
+       "気絶連係"
+      ],
+      [
+       "throw-centric-notes-2013-2016.html",
+       "通常投げを軸にした攻防"
+      ],
+      [
+       "hitbox-gallery-2011.html",
+       "技の判定画像37点"
+      ]
      ]
     }
    ]
@@ -193,6 +813,26 @@
      "name": "ヘビィD!",
      "frame": [
       "frame-data-sports-team-2011.html#181521115"
+     ],
+     "data": [
+      [
+       "/94d.html",
+       "旧サイトの攻略"
+      ]
+     ],
+     "research": [
+      [
+       "heavy-d-2024-additions.html",
+       "ヘビィ・D！の追加攻略"
+      ],
+      [
+       "ralf-clark-2003-comparison.html",
+       "ラルフとクラークの違い"
+      ],
+      [
+       "new-crouch-guardbreak-2024.html",
+       "特殊技を投げられた後の屈ガード不能"
+      ]
      ]
     },
     {
@@ -200,6 +840,26 @@
      "name": "ラッキー",
      "frame": [
       "frame-data-sports-team-2011.html#181678526"
+     ],
+     "data": [
+      [
+       "/94lucky.html",
+       "旧サイトの攻略"
+      ]
+     ],
+     "research": [
+      [
+       "lucky-athena-king-strategy-2023-2024.html",
+       "ラッキー・アテナ・キングの戦い方"
+      ],
+      [
+       "pushbox-and-evasion-corrections-2023.html",
+       "攻撃避けですり抜ける技と押し合い判定"
+      ],
+      [
+       "air-special-unblockable-three-2023.html",
+       "京・舞・ラッキーの空中特殊技ガード不能"
+      ]
      ]
     },
     {
@@ -207,6 +867,34 @@
      "name": "ブライアン",
      "frame": [
       "frame-data-sports-team-2011.html#181786933"
+     ],
+     "data": [
+      [
+       "/94brian.html",
+       "旧サイトの攻略"
+      ]
+     ],
+     "research": [
+      [
+       "brian-big-bang-tackle-2023.html",
+       "ブライアンのビッグバンタックル"
+      ],
+      [
+       "ralf-clark-2003-comparison.html",
+       "ラルフとクラークの違い"
+      ],
+      [
+       "air-special-unblockable-three-2023.html",
+       "京・舞・ラッキーの空中特殊技ガード不能"
+      ],
+      [
+       "brian-j2c-guardbreak-2025.html",
+       "ブライアンのJ2C重ねガード不能"
+      ],
+      [
+       "throw-properties-damage-stun-2003.html",
+       "投げの性質変更（ダメージ・気絶値の置き換え）"
+      ]
      ]
     }
    ]
@@ -219,6 +907,12 @@
      "name": "ルガール（変身前）",
      "frame": [
       "frame-data-rugal-forms-2011.html#226545377"
+     ],
+     "research": [
+      [
+       "old-ko-cpu-sequence-bugs-2001-2003.html",
+       "KO演出とCPUの特殊な動き"
+      ]
      ]
     },
     {
@@ -226,6 +920,12 @@
      "name": "ルガール（変身後）",
      "frame": [
       "frame-data-rugal-forms-2011.html#226578563"
+     ],
+     "research": [
+      [
+       "old-ko-cpu-sequence-bugs-2001-2003.html",
+       "KO演出とCPUの特殊な動き"
+      ]
      ]
     }
    ]
