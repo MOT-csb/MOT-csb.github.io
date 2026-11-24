@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>竜巻槍打バグと山月記バグ（MAX版超必殺技の没技）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:960px}.article h2{margin-top:2rem}.article a{overflow-wrap:anywhere}.tbl{overflow-x:auto}.tbl table{border-collapse:collapse;width:100%;font-size:.95em}.tbl th,.tbl td{border:1px solid var(--line,#ccd);padding:6px 8px;vertical-align:top}.tag{display:inline-block;font-size:.78em;border:1px solid currentColor;border-radius:4px;padding:0 4px;margin-left:4px;opacity:.85}figure{margin:16px 0}figure img{max-width:100%;height:auto;border-radius:6px}figcaption{font-size:.9em}.cmd{font-family:monospace;overflow-wrap:anywhere}</style></head><body>
+<header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<section class="hero"><div class="wrap"><p class="breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof02um-top.html">KOF2002UM</a> / <a href="/research/kof2002um/index.html">研究アーカイブ</a></p><p class="kicker">KOF2002UM｜バグ</p><h1>竜巻槍打バグと山月記バグ（MAX版超必殺技の没技）</h1><p>KOF2002UMでは、香澄の竜巻槍打を受けた相手の技が暗転なしの超必殺技になったり、普段つながらない連続技が入ったりします（竜巻槍打バグ）。また、入力を工夫すると、本来は出せないMAX版超必殺技（没技）が出せます。裏ロバートのMAX版覇王翔吼拳は、暗転も何もなくいきなり虎の姿で突進するので「山月記バグ」と呼んでいます。</p></div></section><main class="main"><div class="wrap article">
+
+<section class="section"><h2>竜巻槍打バグ</h2>
+<p>香澄の竜巻槍打（打撃投げ）と相手の技がかち合ったときに起きる現象で、投げ無敵のない技で起きるようです。2024年2月に、表タクマの龍虎乱舞が暗転なしで出たという報告（himanandeさん）があり、表タクマの龍虎乱舞とチョイの強鳳凰脚で、暗転せずに超必殺技が出せることを確かめました。このときは、香澄に垂直ノーマルジャンプさせ、着地で弱竜巻槍打を出させています。</p>
+<p>2025年4月（りくさんの配信がきっかけ）には、昇龍系の技で試すと弱版では起きて強版では起きないことから、投げ無敵の有無が関係していると考えました。起きる流れは次のように推測しています。</p>
+<ol>
+<li>相手が投げ無敵のない技を出す。</li>
+<li>香澄が竜巻槍打を出すことで、相手のフラグが強制的に変わる。</li>
+<li>投げ無敵のない技がヒットする。</li>
+</ol>
+<p>打撃投げには相手の押し合い判定を復活させる仕様があるので、こうした流れはあり得る、という見立てです。02UMのコンボ動画では、リョウの弱暫烈拳ヒット後に押し合い判定が消えていたようです。超必殺技の暗転が消えるかどうかには、ヒットフラグ（正体のよく分からないフラグ）が関係していそうです。</p>
+<h3>連続技への応用</h3>
+<ul>
+<li>ラルフ：ラルフタックルで竜巻槍打バグを起こし、ラルフタックル（5ヒット）→QM→強攻撃→発動連続技→SC超必殺技。2ゲージでかなり減らせて端から端まで運べるので、一点読みなら普通にありかも、としています。</li>
+<li>テリー：クイックバーン始動の連続技も可能でした（もっと伸ばせるはずです）。</li>
+</ul>
+<p>竜巻槍打の仕組み自体はKOF'99から存在していて、KOF'99にはクイック発動がないので極端なことにはならない、と考えています。</p>
+</section>
+
+<section class="section"><h2>山月記バグ：MAX版超必殺技（没技）を出す</h2>
+<p>2025年5月、裏ロバートのMAX版覇王翔吼拳（没技）を出すと、超必殺技の暗転も何もなく、ノーモーションでいきなり虎になることを確かめました。「山月記かよ」という感想が多かったので、山月記バグと名付けています。</p>
+<h3>入力の手順</h3>
+<ol>
+<li>通常技などを出す。</li>
+<li>MAX版超必殺技のコマンドを入れる。</li>
+<li>出したい超必殺技のコマンドの残りを入れる。</li>
+</ol>
+<p>③の時点で、②のMAX版超必殺技のコマンドが成立しないようにする必要があります。裏ロバートの場合は、236+Aの最後のレバーを入れっぱなしにします。</p>
+<p>裏ロバートのほぼ最短のコマンド登録は次のとおりです（[ ]内は入力するフレーム数、AC と 6+A は同時入力）。</p>
+<p class="cmd">C[1] 2[4] 3[1] 6[1] 3[1] 2[1] 1[1] 4[1] AC[1] 2[1] 3[1] 6[1] 6+A[1]</p>
+<figure><img src="./img/sangetsuki-command-shortest-2025.jpg" alt="KOF2002UMのコマンド登録画面。SP、2、3、6、3、2、1、4、AC同時押し、2、3、6、6+A同時押しの順に並んでいる" width="680" height="326" loading="lazy"><figcaption>山月記バグのコマンド登録（2025年5月27日の投稿の画像）</figcaption></figure>
+<p>しゃがみC空振りから出す版（2+C[5] 1+C[3] 2[2] 3[2] 6[3] 3[2] 2[1] 1[3] 4[1] 4+AC[1] 7+AC[3] 7+C[1] 4[2] 1[1] 2[1] 3[1] 3+A[2] 6+A[3] N[101]）も確認しています。</p>
+<h3>仕込みが解除される条件</h3>
+<div class="tbl"><table><thead><tr><th>解除される</th><th>解除されない</th></tr></thead><tbody>
+<tr><td>相手の攻撃がヒット・ガード<br>特殊技・必殺技を出す<br>通常投げを決める<br>クイック発動（かもしれない）</td><td>通常技<br>立CD</td></tr>
+</tbody></table></div>
+<p>そのため、仕込むときに4Aや6Aが暴発するのはよくありません。空中でも仕込めて、空中で仕込むとノーマル版超必殺技の暴発を防ぎやすくなります。ただし、MAX版超必殺技が出せる状況（2ゲージから発動している、3ゲージ以上ある）では仕込めません。チンで3ゲージ寸前に仕込んで10割連続技を狙う案は、クイック発動で解除されるようで成立しませんでした。</p>
+<h3>虎（裏ロバートのMAX版覇王翔吼拳）の性質</h3>
+<ul>
+<li>「なんでも判定」と言われる当たり方で、端の相手に近Aを空中ヒットさせたあとでも拾えます。</li>
+<li>打撃判定なので当て身投げされます。投げられ判定もあるので投げも入り、キャラ限定で通常投げも入ります（通常投げはほかの人の調査）。クーラのラ☆カチョーラは対地投げなので入りそうでしたが、入りませんでした。</li>
+<li>飛び道具判定ではないので、端の相手にガードさせても離れてしまい、削りきることはできません。</li>
+<li>食らった側のゲージが大きく増えます。体力満タン・ゲージ0のバイスが食らうと約1.6ゲージたまり、KO後も少したまるようです。対戦でKOした京は、次のラウンドで4ゲージたまっていました。</li>
+</ul>
+</section>
+
+<section class="section"><h2>ほかのキャラのMAX版超必殺技（没技）</h2>
+<p>召喚するためのボタンは弱ボタンで調べています。チンのように強版で性能が変わる技もあるので、強ボタンで違う結果になる可能性があります。多くはノーマル版とほとんど変わらず、裏ロバートほど変わるものはなかなかありません。</p>
+<div class="tbl"><table><thead><tr><th>キャラ</th><th>技</th><th>ノーマル版との違い</th></tr></thead><tbody>
+<tr><td>テリー</td><td>ハイアングルゲイザー<span class="tag">MAX</span></td><td>音だけMAX版で、ダメージはノーマル版と同じようです。遠D→2141236AC→236Bで出しやすく、ゲイザーを大蛇薙コマンドで出してハイアングルゲイザーと重ねています。</td></tr>
+<tr><td>アンディ</td><td>斬影流星拳<span class="tag">MAX</span></td><td>音だけMAX版で、ダメージはノーマル版と同じようです。</td></tr>
+<tr><td>ジョー</td><td>爆裂ハリケーンタイガーカカト<span class="tag">MAX</span></td><td>02からある没技。連続ヒットしません。</td></tr>
+<tr><td>ビリー</td><td>超火炎旋風棍<span class="tag">MAX</span></td><td>炎を飛ばす部分がなく、ヒットしてもダウンしません。</td></tr>
+<tr><td>チン</td><td>轟炎招来<span class="tag">MAX</span><span class="tag">強</span></td><td>02にもあった強版の性能で、弱版よりダメージが明らかに高いです。02ではオーバーキルでしたが、02UMでは10割に届きません。</td></tr>
+<tr><td>庵</td><td>裏参百拾壱式・析爪櫛<span class="tag">MAX</span></td><td>暗転なし。最初にしゃがむポーズが入り、ゲーニッツの移動技のような動きをします。</td></tr>
+<tr><td>紅丸</td><td>幻影ハリケーン<span class="tag">MAX</span></td><td>02でも出せた没技。99と同じ構成かもしれません。ダメージは驚くほど低いです。</td></tr>
+<tr><td>京</td><td>百八拾弐式<span class="tag">MAX</span></td><td>音以外はノーマル版と同じようです。</td></tr>
+<tr><td>キング</td><td>サプライズローズ<span class="tag">MAX</span></td><td>音以外はノーマル版と同じようです。</td></tr>
+<tr><td>香澄</td><td>超重ね当て<span class="tag">MAX</span></td><td>ノーマル版と見分けがつきません。</td></tr>
+<tr><td>表タクマ</td><td>真・鬼神撃<span class="tag">MAX</span></td><td>見た目はノーマル版と同じです。</td></tr>
+<tr><td>KUSANAGI</td><td>千九百九拾九式・霧焔<span class="tag">MAX</span></td><td>見た目はノーマル版と同じです。</td></tr>
+<tr><td>チャン</td><td>鉄球大暴走<span class="tag">MAX</span>／鉄球大撲殺<span class="tag">MAX</span></td><td>内容はノーマル版と同じようです。</td></tr>
+<tr><td>レオナ</td><td>リボルスパーク<span class="tag">MAX</span></td><td>成功していないかもしれません。覚醒中でも変わりませんでした。</td></tr>
+</tbody></table></div>
+<p>ヒット数が変わっている技もそこそこあるようです。</p>
+</section>
+
+<section class="section"><h2>似ているが別の話</h2>
+<ul>
+<li>竜巻槍打は、重なった飛び道具を消すことがあります。KOF2002UMではアイントリガーを重ねてもリバサ竜巻槍打で消されるそうです（バーキルさん情報）。KOF'99で重ねた飛び道具との勝ち負けは<a href="/research/kof99/system-changes-from-98-2010-2025.html">KOF'99のシステムの細部</a>にあります。</li>
+<li>背向けで出る竜巻槍打（打撃投げ）は<a href="./kasumi-backturned-tatsumaki-2024.html">香澄の背向け竜巻槍打</a>にあります。</li>
+<li>山月記バグや02のチンの特殊版轟炎招来に弱版・強版があることは、包の<a href="/research/kof2000/bao-ikuyo-whiff-cancel-2015-2025.html">いくよキャン</a>とも関係していそうだ、と2025年6月に書いています。</li>
+</ul>
+</section>
+
+<section class="section"><h2>気になること</h2>
+<ul>
+<li>竜巻槍打で相手のどのフラグが変わるのか、暗転が消える場合と消えない場合を分けるものは何かは、まだ分かっていません。</li>
+<li>山月記バグを強ボタンで出した場合に、ほかのキャラの没技の性能が変わるかは未確認です。</li>
+<li>KOした相手のゲージがチーム戦で基本的にMAXまでたまるのかは要確認です。</li>
+</ul>
+</section>
+
+<section class="section"><h2>出典</h2>
+<ul>
+<li>竜巻槍打バグ：<a href="https://x.com/mot_csb/status/1758346975077093877">2024/2/16</a>、<a href="https://x.com/mot_csb/status/1906912863387840801">2025/4/1（投げ無敵）</a>、<a href="https://x.com/mot_csb/status/1906913336987656251">2025/4/1（流れの推測）</a>、<a href="https://x.com/mot_csb/status/1907036992048865725">2025/4/1（KOF'99）</a>、<a href="https://x.com/mot_csb/status/1907040163064352979">2025/4/1（暗転）</a>、<a href="https://x.com/mot_csb/status/1907031911526175086">ラルフ</a>、<a href="https://x.com/mot_csb/status/1907435125035696141">テリー</a>、<a href="https://x.com/mot_csb/status/1758423322847777172">飛び道具を消す</a></li>
+<li>山月記バグ：<a href="https://x.com/mot_csb/status/1926767946845573603">名前</a>、<a href="https://x.com/mot_csb/status/1927007353578144192">入力のポイント</a>、<a href="https://x.com/mot_csb/status/1927274195437703207">最短のコマンド登録</a>、<a href="https://x.com/mot_csb/status/1926853439784358246">しゃがみC版</a>、<a href="https://x.com/mot_csb/status/1926898770895114636">空中の仕込み</a>、<a href="https://x.com/mot_csb/status/1928653620297281818">解除条件</a>、<a href="https://x.com/mot_csb/status/1934179064706941177">クイック発動</a>、<a href="https://x.com/mot_csb/status/1927276530524164159">暗転なし</a>、<a href="https://x.com/mot_csb/status/1928645711203041295">なんでも判定</a>、<a href="https://x.com/mot_csb/status/1929825423539786028">当て身投げ</a>、<a href="https://x.com/mot_csb/status/1929826429635907975">投げ</a>、<a href="https://x.com/mot_csb/status/1929827424696783028">通常投げ</a>、<a href="https://x.com/mot_csb/status/1929823681783713823">ラ☆カチョーラ</a>、<a href="https://x.com/mot_csb/status/1926852773976392020">端でガード</a>、<a href="https://x.com/mot_csb/status/1926461585528156302">ゲージ（バイス）</a>、<a href="https://x.com/mot_csb/status/1926584835654537564">ゲージ（京）</a></li>
+<li>没技：<a href="https://x.com/mot_csb/status/1926996313716994474">テリー</a>、<a href="https://x.com/mot_csb/status/1926996919399686259">テリーの出し方</a>、<a href="https://x.com/mot_csb/status/1926998602762576374">アンディ</a>、<a href="https://x.com/mot_csb/status/1927000778713022812">ジョー</a>、<a href="https://x.com/mot_csb/status/1927344227135946823">ビリー</a>、<a href="https://x.com/mot_csb/status/1927372726609576378">チン</a>、<a href="https://x.com/mot_csb/status/1927526400191324341">弱ボタンで調査</a>、<a href="https://x.com/mot_csb/status/1927281259694133668">庵</a>、<a href="https://x.com/mot_csb/status/1927350534295458130">紅丸</a>、<a href="https://x.com/mot_csb/status/1927349289904226545">京</a>、<a href="https://x.com/mot_csb/status/1927345949166191097">キング</a>、<a href="https://x.com/mot_csb/status/1927285281801080987">香澄</a>、<a href="https://x.com/mot_csb/status/1927374264140739001">表タクマ</a>、<a href="https://x.com/mot_csb/status/1927376166567997756">KUSANAGI</a>、<a href="https://x.com/mot_csb/status/1928010301489959297">チャン（大暴走）</a>、<a href="https://x.com/mot_csb/status/1928010551453442435">チャン（大撲殺）</a>、<a href="https://x.com/mot_csb/status/1927347906417164466">レオナ</a></li>
+<li>関連ページ：<a href="./x-system-2010-2025.html#s-7">システムのX投稿メモ「バグ」</a>／<a href="./index.html">KOF2002UM 研究アーカイブ</a></li>
+</ul>
+</section>
+
+</div></main></body></html>
