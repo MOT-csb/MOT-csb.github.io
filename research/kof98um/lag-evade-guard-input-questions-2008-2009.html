@@ -1,31 +1,34 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'98UM：入力遅延・クイック避け・割り込み攻撃避けの研究メモ（2008～2009年）｜Come sono bravo?</title><meta name="description" content="2008～2009年のMOT本人による98UM入力遅延、クイック避け、GCABへの誤入力、いくよキャンの可能性。BBS質問と未検証案を区別。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:1020px}.article h2{margin-top:2rem}.article a{overflow-wrap:anywhere}.note{padding:12px 16px;border-left:4px solid var(--accent,#587);background:var(--soft,#edf2ed)}.scroll{overflow-x:auto}.article table{border-collapse:collapse;width:100%;min-width:590px}.article th,.article td{border:1px solid var(--line,#bbb);padding:10px;text-align:left;vertical-align:top}.article th{background:var(--soft,#edf2ed)}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof98um-top.html">KOF'98UM</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'98UM：入力遅延・クイック避け・割り込み攻撃避けの研究メモ（2008～2009年）</h1><p class="note"><strong>資料区分：</strong>2008年1月～3月と2009年4月のMOT本人ブログ。ロケテストの評判や掲示板の質問、<strong>MOT本人の未確認の原因候補・入力案</strong>を区別する。2009年4月の記事はエクスポートの<strong>EXTENDED BODY（続きを読む部分）</strong>まで回収した。技の確定した対処法の一覧ではない。</p>
-<h2>2008年1月19日：入力遅延についての本人の考察</h2>
-<p>ロケテストでラグが気になるという他者の報告を受け、MOTは<strong>自分から技を入力する場合</strong>と<strong>相手の行動に反応する場合</strong>の影響を分けた。</p>
-<div class="scroll"><table><thead><tr><th>局面</th><th>2008年当時の本人の評価</th><th>確定していないこと</th></tr></thead><tbody>
-<tr><td>自分からの操作・連続技</td><td>遅延を意識して入力タイミングをずらせば慣れで対応できる場合があるが、爽快感が下がり、無印'98に戻ると再調整が必要になると考えた</td><td>遅延時間の実測値と、どの技で同じ影響があるか</td></tr>
-<tr><td>相手への反応・対空</td><td>ジャンプを見てから対空技を出すのが難しくなり、引き付け対空にも影響すると予想</td><td>対空反応の成功率、遅延時間の原因</td></tr>
-<tr><td>中段・移動投げへの反応</td><td>見てから立ちガードへ切り替えにくくなると予想。ディレクへの対応にも懸念を示した</td><td>反応限界のフレーム数、実際の成立・不成立</td></tr></tbody></table></div>
-<p>本人は、<strong>KOFの同時押し猶予に伴う動作開始の遅れと、ロケテで問題視されたラグを混同する意見がある</strong>とも指摘した。しかし、どの処理が何F遅延を生むかを実測した報告ではない。</p>
-<h2>2008年3月8日：ジャンプ攻撃→コマンド投げが連続技になる相手</h2>
-<p>MOTは<strong>無印KOF'98ではルガールに対するジャンプ攻撃→コマンド投げが連続技になる</strong>と記録。そのうえで、<strong>98UMでもルガール相手に成立するか</strong>、ルガールでは不成立でも他の復帰キャラでは成立する場合があるかを気にしていた。98UMの対応キャラ確認結果はこの短文にない。</p>
-<h2>2008年3月9日：クイック緊急回避・攻撃避けとGCCDへの仕込み</h2>
-<p>MOTは、KOF2002のクイック緊急回避と同じく、98UMのクイック緊急回避または攻撃避けも<strong>ヒットストップ後に動作を開始するのか</strong>と疑問を提示。もし異なるなら、<strong>相手がGCCDした場合にだけ回避または避けが発動するような入力仕込み</strong>が可能かもしれないと考察した。</p>
-<p>また、ガード時の硬直差がほぼ五分の弱攻撃へクイックMAX発動を組み合わせれば、<strong>相手のGCCDをガードできるのではないか</strong>とも推測。入力条件、実験キャラ、ガード確認例は提示されていない。</p>
-<h2>2008年3月13日：いくよキャンについての題名と本文の違い</h2>
-<p>当時のブログ記事名には<strong>「いくよキャン確認」</strong>とあるが、本文の内容は、<strong>KOF2000にはあり2001では削除された「いくよキャン」が、もし98UMが98をベースに作られていれば可能かもしれない</strong>という想像にとどまる。</p>
-<p><strong>記事名に「確認」があっても、98UMで成立を確認したという記述は本文にない</strong>。このアーカイブでは未検証の仮説として扱い、確認済みの裏技とはしない。</p>
-<h2>2009年4月1日：強七拾五式改への割り込み攻撃避けをめぐるBBS質問</h2>
-<p>98UMBBSの質問者は、京の<strong>強七拾五式改（236＋KK）</strong>をディレイで出される場面で、無敵技は割り込めるのに<strong>攻撃避けを出そうとするとGCABになる</strong>と相談した。この現象は<strong>掲示板の相談者による報告</strong>で、MOT本人の再現確認ではない。</p>
-<p>MOTは「試してはない」と前置きして、次の可能性を挙げた。</p>
-<ul><li>ABボタンを押すタイミングが早すぎ、七拾五式改の1段目にGCABを出している可能性（本人は考えにくいと評価）。</li>
-<li><strong>立ちガードから避けを狙っている</strong>ため、1段目と2段目が連続ガードになり、割り込めない可能性。</li>
-<li><strong>屈みガードから立ちガード方向を入れながら</strong>避けようとしたため、立ちガード硬直へ移行している可能性。</li></ul>
-<p><strong>本人が示した対処案：</strong>屈みガード中に<strong>レバーを離し、ガード硬直が解けるタイミングでAB同時押し</strong>を行う。屈みガード中にレバーを離しても立ちガードにならないはずだと考えているが、原文では<strong>「はず」</strong>という留保がある。入力を誤るとガードになる、あるいは立ちAが暴発する可能性も指摘した。</p>
-<p>この入力案はエクスポートの<strong>EXTENDED BODY側に記載</strong>されている。本文の前半だけでは結論・対処案を回収できないため、両方を参照した。</p>
-<p><strong>独立した詳細ページ：</strong><a href="./guard-evade-75shiki-2009.html">強七拾五式改への攻撃避け入力案（2009年）</a>。本記事の同じ原資料に基づく詳細版であり、別の検証結果ではない。</p><p><strong>後年の検証記録：</strong><a href="./quick-evade-gccd-tests-2011.html">2011年1月5日にMOTが記したクイック避けのレバー条件と、GCCD回避後のユリ・庵の反撃結果</a>。本ページの2008～09年の未確認案と区別する。</p><h2>原資料</h2>
-<ul><li><a href="https://comesonobravo.hatenadiary.org/entry/2008/01/19/150409">2008/01/19：98UM ラグについて思うこと</a></li>
-<li><a href="https://comesonobravo.hatenadiary.org/entry/2008/03/08/115323">2008/03/08：98UM J攻撃→コマンド投げで気になること</a></li>
-<li><a href="https://comesonobravo.hatenadiary.org/entry/2008/03/09/105642">2008/03/09：クイック緊急回避or避けについて気になること</a></li>
-<li><a href="https://comesonobravo.hatenadiary.org/entry/2008/03/13/141529">2008/03/13：いくよキャン確認</a>（本文は仮説）</li>
-<li><a href="https://comesonobravo.hatenadiary.org/entry/2009/04/01/215200">2009/04/01：98UMBBS初心者スレを読んで思ったこと</a>（続きを読む部分を含む）</li></ul>
-<p><a href="./quick-activation-study-2008.html">クイックMAX発動の研究</a> ／ <a href="./frame-startup-gccd-research-plans-2008.html">発生・GCCDの調査計画</a> ／ <a href="/research/kof98/guard-input-superflash-98-vs-02.html">無印98のガード・入力研究</a> ／ <a href="/kof-kininaru.html#kof98um">気になること</a></p><p><a href="./index.html">KOF'98UM研究アーカイブへ戻る</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?</div></footer></body></html>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'98UM：入力の遅れ、クイック避けの仕込み、J攻撃→コマンド投げなど稼働前後の疑問｜Come sono bravo?</title><meta name="description" content="98UMのロケテストで話題になったラグの影響、クイック緊急回避をGCCDにだけ出す仕込み、J攻撃→コマンド投げ、いくよキャンなど2008～09年の疑問。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:1020px}.article h2{margin-top:2rem}.article a{overflow-wrap:anywhere}.note{padding:12px 16px;border-left:4px solid var(--accent,#587);background:var(--soft,#edf2ed)}.scroll{overflow-x:auto}.article table{border-collapse:collapse;width:100%;min-width:590px}.article th,.article td{border:1px solid var(--line,#bbb);padding:10px;text-align:left;vertical-align:top}.article th{background:var(--soft,#edf2ed)}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof98um-top.html">KOF'98UM</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'98UM：入力の遅れ、クイック避けの仕込み、J攻撃→コマンド投げなど稼働前後の疑問（2008～2009年）</h1>
+<p>98UMのロケテストでは、入力してから動くまでの遅れ（ラグ）が話題になりました。2008年1月の記事では、<strong>自分から動くときより、相手の行動に反応するときのほうが対戦への影響が大きい</strong>と考えています。このページでは、稼働前後に挙げた入力やシステムについての疑問をまとめます。</p>
+
+<h2>ラグの影響（2008年1月）</h2>
+<div class="scroll"><table><thead><tr><th>場面</th><th>考えたこと</th></tr></thead><tbody>
+<tr><td>自分から動く</td><td>ラグは感じるが、意識して入力を遅らせれば連続技などは可能で、慣れればある程度対応できる。ただ爽快感に欠け、98UMに慣れた後で無印'98をやると、またタイミングを調整し直すことになる</td></tr>
+<tr><td>相手の行動に対処する</td><td>飛び込みが見えているのに対空技が出せず、見てから落とせない飛び込みが増える。引き付けも難しくなる。中段技が見えているのに立ちガードに切り替えられず、見えない中段が増える。移動投げも同じで、ディレクションチェンジも見えないのでは</td></tr>
+</tbody></table></div>
+<p>KOFシリーズには、同時押しの猶予があるため、ボタンを押してから動き出すまでに元々遅れがあります。掲示板ではそれと混同した書き込みもあるようだ、と書いています。</p>
+<p>コメント欄では、ロケテストを遊んだalucardさんが、行動一つ一つが重く感じ、柴舟の屈B＞近Cの目押しが一回も成功しなかったと報告しています。後日、ラグは緩和されたらしいと返信しています。</p>
+
+<h2>クイック緊急回避・攻撃避けをGCCDにだけ出す仕込み（2008年3月）</h2>
+<p>KOF2002のクイック緊急回避は、ヒットストップが終わってから動き出します。98UMのクイック緊急回避や攻撃避けも同じなのか、という疑問です。もし違うなら、相手がGCCD（ガードキャンセルふっとばし攻撃）してきた場合にだけクイック緊急回避や攻撃避けが出るように仕込めるかもしれない、と考えています。</p>
+<p>同じ記事では、ガードされても五分前後の弱攻撃にクイック発動すれば、相手のGCCDを安定してガードできるかも、とも書いています。</p>
+<p>その後、2011年にクイック避けでGCCDをかわして反撃した記録があります（<a href="./quick-evade-gccd-tests-2011.html">クイック避けの入力条件とGCCDをかわした後の反撃</a>）。</p>
+
+<h2>J攻撃→コマンド投げが連続技になる相手（2008年3月）</h2>
+<p>無印'98ではルガールに対してJ攻撃→コマンド投げが連続技になったので、98UMでそれが調整されているか気にしています。ルガールにはつながらなくなっても、ほかの復帰キャラにつながるようになっているかもしれない、とも書いています。</p>
+
+<h2>いくよキャン（2008年3月）</h2>
+<p>98UMがもし98をベースに作られているなら、KOF2000にあった「いくよキャン」（2001で削除）ができるかもしれない、という想像です。記事の題名は「いくよキャン確認」ですが、本文に確かめた結果はありません。</p>
+
+<h2>攻撃避けで割り込もうとするとGCABになる（2009年4月）</h2>
+<p>京の強七拾五式改をディレイで出されたときの質問への回答は、<a href="./guard-evade-75shiki-2009.html">京の強七拾五式改に攻撃避けで割り込む</a>にまとめています。</p>
+
+<h2>残っている疑問</h2>
+<ul>
+<li>98UMのクイック緊急回避・攻撃避けは、ヒットストップが終わってから動き出すのか。</li>
+<li>98UMで、J攻撃→コマンド投げが連続技になる相手はいるのか。</li>
+<li>98UMでいくよキャンはできるのか。</li>
+</ul>
+<p>出典：<a href="https://comesonobravo.hatenadiary.org/entry/2008/01/19/150409">2008/01/19：ラグについて思うこと</a> ／ <a href="https://comesonobravo.hatenadiary.org/entry/2008/03/08/115323">2008/03/08：J攻撃→コマンド投げで気になること</a> ／ <a href="https://comesonobravo.hatenadiary.org/entry/2008/03/09/105642">2008/03/09：クイック緊急回避or避けについて気になること</a> ／ <a href="https://comesonobravo.hatenadiary.org/entry/2008/03/13/141529">2008/03/13：いくよキャン確認</a></p>
+<p><a href="./quick-activation-study-2008.html">クイック発動の基本</a> ／ <a href="./frame-startup-gccd-research-plans-2008.html">発生・GCCDの調査計画</a> ／ <a href="/research/kof98/guard-input-superflash-98-vs-02.html">無印'98のガード・入力の研究</a> ／ <a href="/kof-kininaru.html#kof98um">気になること（98UM）</a> ／ <a href="./index.html">KOF'98UM研究アーカイブへ戻る</a></p>
+</div></main><footer class="footer"><div class="wrap">Come sono bravo?</div></footer></body></html>
