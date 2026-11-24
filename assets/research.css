@@ -5,3 +5,6 @@
 .site-search{margin:22px 0 0;max-width:640px}.site-search label{display:block;margin:0 0 6px}.site-search input{width:100%;font:inherit;font-size:17px;padding:12px 14px;border-radius:9px;border:1px solid #345344;background:#fff;color:#1b1b1b}#search-results:empty{display:none}#search-results{margin:0 0 40px}.search-hit{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:10px 0}.search-hit>a{font-weight:800;margin-right:8px}.search-hit p{margin:6px 0 0;font-size:14px;color:var(--muted)}.search-hit mark{background:#f3e3a1;color:inherit;padding:0 1px}
 .chara-nav{background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:0 10px 10px 0;padding:10px 16px;margin:0 0 30px;font-size:14px}.chara-nav p{margin:2px 0}.cn-head span{margin:0 8px;color:var(--muted)}.cn-head b{font-size:16px}.cn-links b{color:var(--ink)}
 .chara-nav details{margin-top:4px}.chara-nav summary{cursor:pointer;color:var(--muted)}.chara-nav details ul{margin:4px 0 0;padding-left:20px}.chara-nav details li{margin:2px 0}
+
+/* 技の版（弱・強）のタグ。ページ内に定義がなくても表示されるように共通化 */
+.ver{display:inline-block;font-size:.78em;line-height:1.4;border:1px solid #7f9a86;border-radius:4px;padding:0 .4em;margin-left:.35em;background:#f6faf7;color:#2f4a37}
