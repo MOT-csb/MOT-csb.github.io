@@ -5,42 +5,268 @@
  "missing": "",
  "teams": [
   {
-   "name": "フレーム・技データのあるキャラ",
+   "name": "K′チーム",
    "chars": [
+    {
+     "id": "kdash",
+     "name": "K′"
+    },
+    {
+     "id": "maxima",
+     "name": "マキシマ"
+    },
+    {
+     "id": "whip",
+     "name": "ウィップ",
+     "research": [
+      [
+       "research/kof2001/hitbox-transition-2015-2016.html",
+       "低ジャンプC：2001では屈ガードでかわせない"
+      ]
+     ]
+    },
     {
      "id": "lin",
      "name": "麟",
      "frame": [
       [
        "research/kof2001/lin-crouch-b-1f-2f-2015.html",
-       "屈Bの発生2F（KOF2000との比較・2015年）"
+       "屈Bの発生（2000の1F→2001の2F）"
       ]
      ]
     }
    ]
   },
   {
-   "name": "攻略・研究ページのあるキャラ",
+   "name": "京チーム",
    "chars": [
+    {
+     "id": "kyo",
+     "name": "京"
+    },
+    {
+     "id": "benimaru",
+     "name": "紅丸",
+     "research": [
+      [
+       "/kof-gizigamennhasi.htm",
+       "幻影ハリケーンの擬似画面端（2004年）"
+      ]
+     ]
+    },
+    {
+     "id": "daimon",
+     "name": "大門",
+     "research": [
+      [
+       "research/kof2001/daimon-kakuteizirai-2001.html",
+       "確定地雷震のレシピ（2002からの逆算・仮説）"
+      ]
+     ]
+    },
+    {
+     "id": "shingo",
+     "name": "真吾"
+    }
+   ]
+  },
+  {
+   "name": "八神チーム",
+   "chars": [
+    {
+     "id": "iori",
+     "name": "庵"
+    },
+    {
+     "id": "vanessa",
+     "name": "ヴァネッサ"
+    },
+    {
+     "id": "seth",
+     "name": "セス"
+    },
+    {
+     "id": "ramon",
+     "name": "ラモン"
+    }
+   ]
+  },
+  {
+   "name": "怒チーム",
+   "chars": [
+    {
+     "id": "leona",
+     "name": "レオナ"
+    },
+    {
+     "id": "ralf",
+     "name": "ラルフ"
+    },
+    {
+     "id": "clark",
+     "name": "クラーク"
+    },
+    {
+     "id": "heidern",
+     "name": "ハイデルン"
+    }
+   ]
+  },
+  {
+   "name": "餓狼伝説チーム",
+   "chars": [
+    {
+     "id": "terry",
+     "name": "テリー"
+    },
+    {
+     "id": "andy",
+     "name": "アンディ",
+     "research": [
+      [
+       "research/kof2001/input-priority-2000-2002-2004.html",
+       "撃壁背水掌の省略入力（2001は未調査）"
+      ]
+     ]
+    },
     {
      "id": "joe",
      "name": "ジョー",
      "research": [
       [
        "research/kof2001/joe-2003-forum-retrospective.html",
-       "ジョーの連続技・爆裂拳の2003年回想記録"
+       "近立ちD重ね＞爆裂ハリケーンタイガーカカト・爆裂拳の発生差"
       ]
      ]
+    },
+    {
+     "id": "mary",
+     "name": "マリー"
+    }
+   ]
+  },
+  {
+   "name": "龍虎の拳チーム",
+   "chars": [
+    {
+     "id": "ryo",
+     "name": "リョウ"
+    },
+    {
+     "id": "robert",
+     "name": "ロバート",
+     "research": [
+      [
+       "research/kof2001/hitbox-transition-2015-2016.html",
+       "攻撃判定と食らい判定（2000・2001・2002）"
+      ]
+     ]
+    },
+    {
+     "id": "yuri",
+     "name": "ユリ"
+    },
+    {
+     "id": "takuma",
+     "name": "タクマ"
+    }
+   ]
+  },
+  {
+   "name": "女性格闘家チーム",
+   "chars": [
+    {
+     "id": "king",
+     "name": "キング",
+     "research": [
+      [
+       "research/kof2001/hitbox-transition-2015-2016.html",
+       "2002UMの2001ベースの判定"
+      ]
+     ]
+    },
+    {
+     "id": "mai",
+     "name": "舞"
+    },
+    {
+     "id": "hinako",
+     "name": "雛子"
+    },
+    {
+     "id": "xiangfei",
+     "name": "香緋"
+    }
+   ]
+  },
+  {
+   "name": "ネスツチーム",
+   "chars": [
+    {
+     "id": "kula",
+     "name": "クーラ"
+    },
+    {
+     "id": "foxy",
+     "name": "フォクシー"
     },
     {
      "id": "k9999",
      "name": "K9999",
      "research": [
       [
-       "research/kof2001/k9999-and-system-2021-2024.html",
-       "K9999とシステム差異の原資料整理"
+       "research/kof2001/k9999-and-system-2021-2024.html#k9999",
+       "近C1段目のダメージ置き換え"
       ]
      ]
+    },
+    {
+     "id": "angel",
+     "name": "アンヘル"
+    }
+   ]
+  },
+  {
+   "name": "サイコソルジャーチーム",
+   "chars": [
+    {
+     "id": "athena",
+     "name": "アテナ",
+     "research": [
+      [
+       "/kof-gizigamennhasi.htm",
+       "弱テレポートの擬似画面端（2004年）"
+      ]
+     ]
+    },
+    {
+     "id": "kensou",
+     "name": "拳崇"
+    },
+    {
+     "id": "chin",
+     "name": "鎮"
+    },
+    {
+     "id": "bao",
+     "name": "包"
+    }
+   ]
+  },
+  {
+   "name": "キムチーム",
+   "chars": [
+    {
+     "id": "kim",
+     "name": "キム"
+    },
+    {
+     "id": "chang",
+     "name": "チャン"
+    },
+    {
+     "id": "choi",
+     "name": "チョイ"
     },
     {
      "id": "maylee",
@@ -48,9 +274,22 @@
      "research": [
       [
        "research/kof2001/maylee-pyonkichi-source-audit-2025.html",
-       "メイ・リー「ぴょん吉モード」の作品別資料と失われた座標解説の探索"
+       "ぴょん吉モード"
       ]
      ]
+    }
+   ]
+  },
+  {
+   "name": "ボス",
+   "chars": [
+    {
+     "id": "zero",
+     "name": "ゼロ"
+    },
+    {
+     "id": "igniz",
+     "name": "イグニス"
     }
    ]
   }
