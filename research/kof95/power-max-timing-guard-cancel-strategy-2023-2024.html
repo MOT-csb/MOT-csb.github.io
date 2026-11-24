@@ -1,32 +1,35 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'95：パワーMAXの発動時刻・GCタイミング・ゲージ調整の攻防（2023～2024年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof95-top.html">KOF'95</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap"><h1>KOF'95：パワーMAXの発動時刻・GCタイミング・ゲージ調整の攻防（2023～2024年）</h1>
-<p>2023年7～9月および2024年7月にMOT本人がXへ記録した、<strong>MAXに入る直前とMAXが切れる直前の戦術</strong>を時系列・攻め手／守り手別に整理する。ここに挙げるのはMOTの状況観察と実戦方針であり、<strong>各選択肢が確定で成立する全状況の測定ではない</strong>。</p>
-<h2>2023年7月31日：固めの途中でMAXになった瞬間にGCする</h2>
-<p>MOTは、相手に固められている最中、最後の数発をガードしている間にパワーMAXとなることがあると指摘。そこで<strong>パワーMAXになった瞬間にガードキャンセル（GC）を出す</strong>と守備力が上がりそうだと述べ、見逃されがちな点として評価した。<a href="https://x.com/mot_csb/status/1685843720309248000">2023/07/31の原投稿</a>。この段階では特定の固めをフレームごとに再現した検証結果ではない。</p>
-<h2>2023年8月：相手がMAX中なら攻めるふりをして時間を使わせる</h2>
-<p>MOTは<strong>相手がパワーMAXの間は攻めるように見せても実際には攻め込まない</strong>方がよいかもしれないと考察。特にルガールを相手にする状況を挙げ、対空待ちを中心にしつつ、相手がダッシュ投げを仕掛けてきそうなら距離を取ると説明した。相手のMAXが切れそうになってから自分のパワーをため、<strong>自分だけがMAXとなる状態</strong>を目指す方針である。<a href="https://x.com/mot_csb/status/1688937145267007488">2023/08/09 JSTの投稿</a>。</p>
-<p>これに対して攻める側は、相手が<strong>MAX直前までガードしてGCを狙っている</strong>可能性を読んで、<strong>相手がMAXになる寸前に打撃での固めから通常投げへ切り替える</strong>案を本人が挙げている。<a href="https://x.com/mot_csb/status/1689511877699858432">2023/08/10の投稿</a>。守る側のMAX瞬間GCと攻める側のMAX直前投げを対置しているのであり、どちらが必ず勝つと結論づけたわけではない。</p>
-<h2>チャンの対飛び道具：ガードから最速パワーためへ</h2>
-<p>同日のチャン研究でMOTは、普通にパワーためをすると接近されやすいが、飛び道具を撃つ相手に対しては<strong>攻めるように見せて飛び道具をガードし、ABCを押しっぱなしにして最速でパワーをためる</strong>案を提示。積極的に近づかない相手なら比較的低リスクでMAXに近づけるのではないかと評価している。<a href="https://x.com/mot_csb/status/1689512668343017472">2023/08/10の本人の戦術案</a>。飛び道具の硬直・多段数・距離でどの程度安全かは本投稿では全件測定していない。</p>
-<h2>2023年9月10日：本人が定義した「常時ガードキャンセル可能状態」</h2>
-<p>MOTは<strong>あと1回の攻撃をガードするとパワーMAXになるゲージ状態</strong>を「常時ガードキャンセル可能状態」と呼び、次のように比較している。これは本人独自の戦術上の呼称であり、<strong>MAX前から条件なしでGCできるという意味ではない</strong>。<a href="https://x.com/mot_csb/status/1700876193216815521">2023/09/10の本人原投稿</a>。</p>
-<table><thead><tr><th>比較する点</th><th>MAX直前の状態（本人の呼称）</th><th>MAX状態</th></tr></thead><tbody>
-<tr><td>時間制限</td><td><strong>なし</strong>というメリット</td><td>MAX状態には継続時間の制限がある</td></tr>
-<tr><td>攻撃力増加</td><td><strong>なし</strong>というデメリット</td><td>MAX状態の攻撃力増加を利用できる</td></tr>
-<tr><td>超必殺技</td><td>体力が多いと出せないというデメリット</td><td>MAX状態では超必殺技の選択肢がある</td></tr>
-<tr><td>GCの使い方</td><td>次の攻撃をガードしてMAXになる瞬間を狙う</td><td>既にMAXなのでGCを選ぶ準備がある</td></tr>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'95：パワーMAXに入る時刻の読み合い｜Come sono bravo?</title><meta name="description" content="KOF&#x27;95のパワーMAXは時間で切れます。相手のMAX中は攻めるふりをして時間を使わせ、自分は後からMAXに入る。MAXになった瞬間のガードキャンセル、あと1回ガードでMAXの状態、チャンの最速パワーためなど。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:960px}.article table{min-width:0;width:100%}.article th,.article td{overflow-wrap:anywhere;vertical-align:top}.article a{overflow-wrap:anywhere}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}.lead{font-size:1.05em}.vt{display:inline-block;font-size:.85em;line-height:1.45;padding:0 6px;margin-left:4px;border:1px solid var(--line,#ccd);border-radius:4px;font-weight:600;white-space:nowrap}.legend{font-size:.92em;color:var(--sub,#555)}.src li{font-size:.92em}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h2{font-size:1.15em;margin-top:1.2rem}details.more h3{font-size:1.05em}@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}.article th,.article td{min-width:80px}}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof95-top.html">KOF'95</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'95：パワーMAXに入る時刻の読み合い</h1>
+<p class="lead">パワーMAXは一定時間で切れるので、相手を先にMAXにさせてから自分もMAXにすると、相手の方が先に切れて、自分だけが優位に立てる時間帯を作れます（2024年）。</p>
+<h2>相手がパワーMAXのとき</h2>
+<p>攻めるふりをして攻めない方がいいかもしれません。特にルガールが相手のときです。基本的には対空待ちしておき、ダッシュ投げをしてきそうなら距離を取ります。相手のMAXが切れそうになってきたらパワーためをして、こちらだけMAXの状態にしていければベストかもしれない、としています（2023年）。</p>
+<h2>守る側：MAXになった瞬間にガードキャンセル</h2>
+<p>相手に固められていると、固めの最後の方でパワーMAXになることがあります。MAXになった瞬間にガードキャンセルできると守備力が上がりそうで、結構見逃されているポイントのようです（2023年）。</p>
+<p>攻める側から見ると、相手がMAXまでガードしてガードキャンセルしようとしているかもしれないので、ゲージMAX寸前に投げへ切り替えるのもいいかもしれません（2023年）。</p>
+<h2>あと1回ガードでMAXの状態</h2>
+<p>あと1回攻撃をガードしたらパワーMAXになる状態を「常時ガードキャンセル可能状態」と呼んでいます（2023年）。</p>
+<table><thead><tr><th>パワーMAX状態と比べて</th><th>内容</th></tr></thead><tbody>
+<tr><td>長所</td><td>時間制限がない。ためキャンが使える（ためキャンすれば超必殺技も出せる）。気絶させた後に超必殺技を安定して狙える</td></tr>
+<tr><td>短所</td><td>攻撃力が上がらない。体力が多いと超必殺技を出せない</td></tr>
 </tbody></table>
-<p>「いつ活用するか」は本人も<strong>今後考察したい事項</strong>としているため、常にMAX直前を維持すべきだという結論に変えない。</p>
-<h2>2024年7月11日：両者のMAX発動時刻をずらす</h2>
-<p>MOTは<strong>①相手を先にパワーMAXへ入らせ、②その後で自分もMAXにする</strong>ことで、相手のMAXが先に終了し、<strong>自分だけ有利になる時間帯を作れる</strong>と提案した。<a href="https://x.com/mot_csb/status/1811398691657224386">2024/07/11の本人投稿</a>。この提案は相手のMAX継続時間や自分のゲージ準備がそろうという前提があり、必ず毎ラウンド同じ時間差を作れるという実機検証ではない。</p>
-<h2>時間差戦術とGC・通常投げ・超必殺技の関係</h2>
-<table><thead><tr><th>局面</th><th>本人が提案した優先行動</th><th>主要な注意点</th></tr></thead><tbody>
-<tr><td>守備中、次のガードでMAX</td><td>MAXになった瞬間にGC</td><td>相手がそれを読んでMAX直前に投げへ変更する可能性</td></tr>
-<tr><td>相手のみMAX</td><td>無理に固めず、対空待ちとダッシュ投げへの警戒</td><td>相手に近づかせない距離管理が必要</td></tr>
-<tr><td>相手MAX終了直前</td><td>自分のパワーをため、後からMAXへ</td><td>安全にパワーためできる状況が前提</td></tr>
-<tr><td>相手が飛び道具主体</td><td>チャンは飛び道具ガードからABC保持の最速パワーためを検討</td><td>具体的な飛び道具・間合いごとの安全度は未調査</td></tr>
-<tr><td>自分がMAXでテリーを使用</td><td>通常投げでMAXを保持するか、残り時間が少なければゲイザー削り</td><td><a href="./terry-power-geyser-94-95-gauge-2023.html">94/95のゲイザー比較</a>の本人見解であり、全キャラ共通の超必殺技選択則ではない</td></tr>
-</tbody></table>
-<h2>既存のガードキャンセル研究・未解決事項</h2>
-<p><a href="./gc-anti-and-option-select-2011-2024.html">既存のGC対策・仕込み記事</a>では、MAX時のガードと攻撃の分岐入力や、MAX直前の本人の呼称に言及している。本稿では<strong>試合中のMAX発動時刻と相手の投げ択の読み合い</strong>を中心に保全し、同じ原投稿を独立した裏技として二重計上しない。</p>
-<p><strong>未確認：</strong>MAX瞬間GCに対応できる全キャラの入力猶予、MAX直前投げが成立する起き攻め・固めの場面、相手のMAX終了直前にパワーためを始める最適なタイミング、時間差戦術への相手の対応策。</p>
-<p><a href="./index.html">KOF'95研究アーカイブ</a> ／ <a href="/kof-kininaru.html#kof95">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
+<p>大きく体力リードしているときに使うのが有効な気がする、としています。いつ使うかは、いろいろ考察のしがいがありそうだ、とも書いています。</p>
+<h2>キャラ別</h2>
+<ul>
+<li><b>チャン</b>：普通にパワーためをすると攻め込まれやすいキャラです。飛び道具を持つ相手には、攻めると見せかけて、飛び道具をガード→ABC押しっぱなしで最速パワーため、を多用するといいかもしれません。飛び道具を撃ってくる相手は積極的に攻める気がないので、低リスクでMAXにしやすいからです（2023年）。</li>
+<li><b>対空技の有無</b>：パワーため中は移動できないので攻め込まれやすいですが、対空技があれば、パワーためしつつ飛び込ませて迎撃できます。特に、キム・テリー・ハイデルンなどは下ためで対空技の準備ができるので、お得感があるかもしれません（2023年）。</li>
+<li><b>テリー</b>：MAX中のパワーゲイザーで削るとMAXが切れますが、通常投げならMAXを維持できます。MAXを維持するのを基本にして、切れそうなときにパワーゲイザーで削る、という順番です。<a href="./terry-power-geyser-94-95-gauge-2023.html">テリーのパワーゲイザー</a>へ。</li>
+</ul>
+<h2>関連ページ</h2>
+<ul>
+<li><a href="./gc-anti-and-option-select-2011-2024.html">パワーMAXの相手のガードキャンセル対策と仕込み</a></li>
+<li><a href="./gc-hitstop-invincible-cancel-2023.html">ガードキャンセルとヒットストップ</a></li>
+<li><a href="./storm-bringer-guard-2024.html">ストームブリンガーのダメージ置き換え</a>（ラウンドをまたぐ話）</li>
+</ul>
+<h2>出典</h2>
+<ul class="src">
+<li><a href="https://x.com/mot_csb/status/1811398691657224386">ゲージ管理</a>（X、2024/7/11）</li>
+<li><a href="https://x.com/mot_csb/status/1688937145267007488">相手がMAXのときは攻めない</a>（X、2023/8/9）</li>
+<li><a href="https://x.com/mot_csb/status/1685843720309248000">MAXになった瞬間にGC</a>（X、2023/7/31）、<a href="https://x.com/mot_csb/status/1689511877699858432">MAX寸前に投げ</a>（X、2023/8/10）</li>
+<li><a href="https://x.com/mot_csb/status/1700876193216815521">常時ガードキャンセル可能状態</a>・<a href="https://x.com/mot_csb/status/1700876912816717836">長所の追加</a>（X、2023/9/10）</li>
+<li><a href="https://x.com/mot_csb/status/1689512668343017472">チャンの最速パワーため</a>・<a href="https://x.com/mot_csb/status/1689513415725977600">対空技の有無</a>（X、2023/8/10）</li>
+</ul>
+<p class="legend"><a href="./index.html">KOF'95 研究アーカイブ</a> ／ <a href="/kof95-top.html">KOF'95トップ</a> ／ <a href="/kof-kininaru.html#kof95">KOF'95の気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>

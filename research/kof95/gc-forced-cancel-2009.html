@@ -1,20 +1,31 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'95：ガードキャンセル時の投げ不成立・入力ずらし（2009年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof95-top.html">KOF'95</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap"><h1>KOF'95：ガードキャンセル時の投げ不成立・入力ずらし（2009年）</h1>
-<p>2009年4月20日のMOT本人の検討記録。<strong>ガードキャンセル（GC）で成立しないコマンド投げやジョーの爆裂拳フィニッシュを入力したとき</strong>に何が暴発するか、同時押し・ずらし押しでどう変化するかを整理したもの。技が出ると断定していない部分は当時の疑問として残す。</p>
-<h2>基本挙動と例外</h2>
-<table><thead><tr><th>条件・キャラ</th><th>原資料の結果・見解</th></tr></thead><tbody>
-<tr><td>原則</td><td>GCで成立しない技を入力すると通常技が暴発する</td></tr>
-<tr><td>ロバート：連舞脚</td><td>GCで立ちDが暴発せず、ニュートラル状態になる</td></tr>
-<tr><td>リョウ：連舞拳</td><td>同じ打撃投げでも強虎煌拳が出る</td></tr>
-<tr><td>コマンド完成直後のAB同時押し</td><td>通常技でなく攻撃避けを暴発させられる。実用度は未知数</td></tr>
-<tr><td>CD同時押し</td><td>ぶっとばし攻撃にならない。95は同時押し猶予がない「っぽい」という本人の推測</td></tr>
-<tr><td>関係ないボタン→コマンド投げのボタン（1Fずらし）</td><td>先に押したボタンで別の技が出ない限り、ニュートラル状態になる</td></tr>
-</tbody></table>
-<h2>ハイデルンの具体例</h2><p>ガード時のヒットストップ中に<strong>63214+A → C</strong>とずらし押しすると、立ちCを暴発させずニュートラルポーズになるという例が掲載されている。<strong>1Fずらし</strong>という条件を落とさないこと。</p>
-<h2>2003年の旧メモ：ロバート・クラークとアテナの別論点</h2><p>旧<a href="/95memo.html">「KOF'95メモ」</a>（MOT作成2003年9月10日、最終更新11月7日）を2009年の記事と照合した。<strong>以下は2003年の本人の記録</strong>であり、2009年に新たに検証した内容とは区別する。</p><ul><li><strong>クラーク：</strong>遠い間合いでSABをガードキャンセル入力すると<strong>遠距離立ちDが出る</strong>と記載。</li><li><strong>ロバート：</strong>同じくガードキャンセルで極限流連舞脚を入力すると<strong>何も出ない</strong>と記録。2009年の本稿でも連舞脚と連舞拳の不成立時の違いを扱っている。</li><li><strong>極限流連舞拳・連舞脚：</strong>相手との横座標が近ければ空中の相手にも技が発動するという2003年の本人説明。これがロバートの対空GC連舞脚を成立させる理由<strong>だと思われる</strong>としており、内部処理を確定した説明ではない。<a href="./robert-antiair-gc-oki-2003-2004.html">対空GCの原手順</a>を参照。</li></ul><h3>アテナ：SCB強制停止後の有利フレーム（未測定）</h3><p>2003年の同じメモには、アテナの<strong>近距離立ちCからABCD同時押し</strong>によって、近距離立ちC→一瞬SCB→即座に強制停止できるという記録がある。ただし本人が知りたかった<strong>その後の有利フレーム数</strong>は原稿にない。今回の照合でも値を推定して補わない。これはGC不能時の暴発とは別の<strong>通常技キャンセル中の現象</strong>である。</p><p>出典：<a href="/95memo.html">MOT旧メモ原文（2003年）</a>。</p>
-<h2>原稿末尾の検討事項（未確認）</h2>
-<ul><li>必殺技は無関係なボタンとの同時押しでは出ない、という例（タクマの236+AD）</li>
-<li>ジョーの爆裂拳フィニッシュ暴発の立ち／屈Cから永久連続技に行けるか</li>
-<li>KOF'95でも屈伸ガードによる投げ無効化が可能「みたい」だという記録</li>
-<li>画面端の相手を前方ノーマルジャンプで飛び越したあとの着地投げが有効かという提案</li></ul>
-<p>原資料：<a href="https://comesonobravo.hatenadiary.org/entry/2009/04/20/154655">MOT「95：ガードキャンセル強制キャンセルについて」（2009/04/20）</a>。</p>
-<p>関連：<a href="/95kyoui-gennsyou.html">KOF'95脅威現象</a> ／ <a href="/kof-kininaru.html#kof95">気になること</a></p><p><a href="./index.html">KOF'95研究アーカイブへ戻る</a> ／ <a href="/kof95-top.html">旧KOF'95トップへ</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'95：ガードキャンセルで出せない技を入れたときの暴発｜Come sono bravo?</title><meta name="description" content="KOF&#x27;95でガードキャンセルにコマンド投げ（成立しない状況）やジョーの爆裂拳フィニッシュを入力すると、原則は通常技が暴発します。ロバートの連舞脚、攻撃避けの暴発、1Fずらし押しでニュートラルにする例外その1〜3。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:960px}.article table{min-width:0;width:100%}.article th,.article td{overflow-wrap:anywhere;vertical-align:top}.article a{overflow-wrap:anywhere}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}.lead{font-size:1.05em}.vt{display:inline-block;font-size:.85em;line-height:1.45;padding:0 6px;margin-left:4px;border:1px solid var(--line,#ccd);border-radius:4px;font-weight:600;white-space:nowrap}.legend{font-size:.92em;color:var(--sub,#555)}.src li{font-size:.92em}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h2{font-size:1.15em;margin-top:1.2rem}details.more h3{font-size:1.05em}@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}.article th,.article td{min-width:80px}}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof95-top.html">KOF'95</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'95：ガードキャンセルで出せない技を入れたときの暴発</h1>
+<p class="lead">ガードキャンセルで、成立しない状況のコマンド投げやジョーの爆裂拳フィニッシュを入力すると、原則として通常技が暴発します。ただし、入れ方やキャラによっては、何も出さずにニュートラル状態にしたり、攻撃避けにしたりできます。</p>
+<h2>原則：通常技が暴発する</h2>
+<p>ガードキャンセルで出せない技を入力すると、そのボタンの通常技が出ます。</p>
+<h2>例外その1：ロバートの連舞脚</h2>
+<p>ロバートの連舞脚は、ガードキャンセルで立Dが暴発せず、ニュートラル状態になります。同じ打撃投げでも、リョウの連舞拳は強虎煌拳が出てしまいます。</p>
+<p>補足：遠い間合いでクラークのSABをガードキャンセルで入れると遠距離立Dが出ますが、ロバートの連舞脚なら何も出ません（2003年のメモ）。</p>
+<h2>例外その2：攻撃避けを暴発させる</h2>
+<p>コマンド投げのコマンドを完成させた直後にAB同時押しに成功すれば、通常技ではなく攻撃避けを暴発させられます。実用度は未知数です。</p>
+<p>CD同時押しに成功しても、ふっとばし攻撃にはなりません。'95のふっとばし攻撃は同時押しの猶予がないようです。</p>
+<h2>例外その3：1Fずらし押しでニュートラルにする</h2>
+<p>レバー部分を入れた後、コマンド投げのボタンを押すときに、関係ないボタン→1Fずれるだけのずらし押しでコマンド投げのボタンを押すと、ニュートラル状態になります。ただし、先に押したボタンでコマンド投げ以外の技が出る場合は別です。</p>
+<p>例：ハイデルンで、ガード時のヒットストップ中に63214+A→Cとずらし押しに成功すれば、立Cが暴発せずにニュートラルポーズになります。</p>
+<h2>似ているが別の話</h2>
+<ul>
+<li><b>連舞拳・連舞脚が空中の相手に出る</b>：横の位置が近ければ、相手が空中にいても発動します。ロバートが対空ガードキャンセル連舞脚を決めやすいのは、これが原因だと思われる、としています（2003年のメモ）。<a href="./robert-antiair-gc-oki-2003-2004.html">ロバートの対空ガードキャンセル</a>、<a href="./takeoff-cancel-grapples-2011-2024.html">離陸入力と打撃投げ</a>へ。</li>
+<li><b>必殺技と関係ないボタンの同時押し</b>：必殺技は、関係ないボタンと同時押しすると出ません（例：タクマで236+AD同時押し）。<a href="./command-buffer-facing-2011-2024.html">コマンド入力の細かい仕様</a>へ。</li>
+<li><b>アテナのSCBの強制停止</b>：近距離立C≫←→↘↓↙←↖＋ABCD同時押しで、近距離立C≫一瞬SCB（シャイニングクリスタルビット）＞すぐに強制停止ができます。この後の有利フレームを知りたい、と2003年のメモに書いています。</li>
+</ul>
+<h2>気になること</h2>
+<ul>
+<li>「ジョーの爆裂拳フィニッシュ暴発の立ちｏｒ屈みＣから永久にいけないかな…。」</li>
+<li>'95でも屈伸ガードによる投げ無効化はできるようです。</li>
+<li>画面端の相手を前方ノーマルジャンプで飛び越せるようなので、着地投げ（コマンド投げを含む）が有効なのではないか。</li>
+</ul>
+<h2>出典</h2>
+<ul class="src">
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2009/04/20/154655">95：ガードキャンセル強制キャンセルについて</a>（はてな、2009/4/20）</li>
+<li><a href="/95memo.html">KOF'95についてのメモ</a>（旧サイト、2003/9/10作成、2003/11/7最終更新）：クラークとロバートの違い、連舞拳・連舞脚、アテナのSCB</li>
+</ul>
+<p class="legend"><a href="./index.html">KOF'95 研究アーカイブ</a> ／ <a href="/kof95-top.html">KOF'95トップ</a> ／ <a href="/kof-kininaru.html#kof95">KOF'95の気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
