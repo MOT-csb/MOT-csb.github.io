@@ -10,7 +10,10 @@
      "id": "kdash",
      "name": "K′",
      "frame": [
-      "02K'-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/kdash.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -21,14 +24,21 @@
        "02k'-memo.htm",
        "メモ"
       ],
-      "research/kof2002/kdash-2005-2008.html"
+      "research/kof2002/kdash-2005-2008.html",
+      [
+       "02K'-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     },
     {
      "id": "maxima",
      "name": "マキシマ",
      "frame": [
-      "02maxima-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/maxima.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -39,21 +49,32 @@
        "02maxima-crush.htm",
        "クラッシュ攻略"
       ],
-      "research/kof2002/maxima-2005-2007.html"
+      "research/kof2002/maxima-2005-2007.html",
+      [
+       "02maxima-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     },
     {
      "id": "whip",
      "name": "ウィップ",
      "frame": [
-      "02whip-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/whip.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
        "02whip-rennzokuwaza.htm",
        "連続技"
       ],
-      "research/kof2002/whip-2005-2009.html"
+      "research/kof2002/whip-2005-2009.html",
+      [
+       "02whip-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     }
    ]
@@ -65,7 +86,10 @@
      "id": "terry",
      "name": "テリー",
      "frame": [
-      "02terry-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/terry.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -119,14 +143,21 @@
       "research/kof2002/terry-guardcrush-combos-2005-2006.html",
       "research/kof2002/terry-matchups-2005-2008.html",
       "research/kof2002/terry-neutral-antiair-2005-2009.html",
-      "research/kof2002/terry-vs-kula-2005-2006.html"
+      "research/kof2002/terry-vs-kula-2005-2006.html",
+      [
+       "02terry-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     },
     {
      "id": "andy",
      "name": "アンディ",
      "frame": [
-      "02andy-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/andy.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -189,14 +220,21 @@
       "research/kof2002/andy-gekiheki-offense-2004-2008.html",
       "research/kof2002/andy-matchups-2005-2008.html",
       "research/kof2002/andy-move-priority-input-2024.html",
-      "research/kof2002/andy-neutral-antiair-2005-2008.html"
+      "research/kof2002/andy-neutral-antiair-2005-2008.html",
+      [
+       "02andy-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     },
     {
      "id": "joe",
      "name": "ジョー",
      "frame": [
-      "02joe-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/joe.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -266,7 +304,11 @@
       "research/kof2002/joe-vs-athena-2005-2008.html",
       "research/kof2002/joe-vs-billy-2005-2008.html",
       "research/kof2002/joe-vs-billy-2025.html",
-      "research/kof2002/joe-vs-kim-2006.html"
+      "research/kof2002/joe-vs-kim-2006.html",
+      [
+       "02joe-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     }
    ]
@@ -278,7 +320,10 @@
      "id": "kyo",
      "name": "京",
      "frame": [
-      "02kyo-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/kyo.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -293,14 +338,21 @@
        "02kyo-crush.htm",
        "クラッシュ攻略"
       ],
-      "research/kof2002/kyo-2005-2009.html"
+      "research/kof2002/kyo-2005-2009.html",
+      [
+       "02kyo-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     },
     {
      "id": "benimaru",
      "name": "紅丸",
      "frame": [
-      "02benimaru-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/benimaru.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -319,14 +371,21 @@
        "02benimaru-crush.htm",
        "クラッシュ攻略"
       ],
-      "research/kof2002/benimaru-2005-2009.html"
+      "research/kof2002/benimaru-2005-2009.html",
+      [
+       "02benimaru-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     },
     {
      "id": "goro",
      "name": "大門五郎",
      "frame": [
-      "02goro-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/goro.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -356,7 +415,11 @@
       "research/kof2002/daimon-maxima-52f-legacy-2007.html",
       "research/kof2002/daimon-play-2005-2009.html",
       "research/kof2002/daimon-vertical-jcd-40f-2024.html",
-      "research/kof2002/jiraishin-avoidance-2024.html"
+      "research/kof2002/jiraishin-avoidance-2024.html",
+      [
+       "02goro-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     }
    ]
@@ -368,6 +431,10 @@
      "id": "iori",
      "name": "庵",
      "frame": [
+      [
+       "research/kof2002/frame/iori.html",
+       "各技の硬直差"
+      ],
       "02iori-data.html"
      ],
      "research": [
@@ -395,7 +462,10 @@
      "id": "mature",
      "name": "マチュア",
      "frame": [
-      "02mature-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/mature.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -408,14 +478,21 @@
       ],
       "research/kof2002/mature-far-b-small-jump-2007.html",
       "research/kof2002/mature-move-guide-2009.html",
-      "research/kof2002/mature-play-counterplay-2005-2008.html"
+      "research/kof2002/mature-play-counterplay-2005-2008.html",
+      [
+       "02mature-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     },
     {
      "id": "vice",
      "name": "バイス",
      "frame": [
-      "02vice-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/vice.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -431,7 +508,11 @@
        "バイス判定表示（地上通常技）"
       ],
       "research/kof2002/vice-move-guide-2005-2009.html",
-      "research/kof2002/vice-play-counterplay-2005-2009.html"
+      "research/kof2002/vice-play-counterplay-2005-2009.html",
+      [
+       "02vice-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     }
    ]
@@ -443,7 +524,10 @@
      "id": "leona",
      "name": "レオナ",
      "frame": [
-      "02leona-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/leona.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -460,14 +544,21 @@
       ],
       "research/kof2002/leona-awakening-matchups-2005-2009.html",
       "research/kof2002/leona-awakening-simultaneous-throw-2024.html",
-      "research/kof2002/leona-play-2005-2009.html"
+      "research/kof2002/leona-play-2005-2009.html",
+      [
+       "02leona-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     },
     {
      "id": "ralf",
      "name": "ラルフ",
      "frame": [
-      "02ralf-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/ralf.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -482,21 +573,32 @@
        "02ralf-zissenn-hanngeki.htm",
        "実戦での反撃"
       ],
-      "research/kof2002/ralf-2004-2008.html"
+      "research/kof2002/ralf-2004-2008.html",
+      [
+       "02ralf-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     },
     {
      "id": "clark",
      "name": "クラーク",
      "frame": [
-      "02clark-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/clark.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
        "02clark-rennzokuwaza.htm",
        "連続技"
       ],
-      "research/kof2002/clark-2005-2007.html"
+      "research/kof2002/clark-2005-2007.html",
+      [
+       "02clark-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     }
    ]
@@ -508,7 +610,10 @@
      "id": "vanessa",
      "name": "ヴァネッサ",
      "frame": [
-      "02vanessa-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/vanessa.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -520,28 +625,42 @@
        "クラッシュ攻略"
       ],
       "research/kof2002/vanessa-counterplay-2005-2009.html",
-      "research/kof2002/vanessa-play-2005-2009.html"
+      "research/kof2002/vanessa-play-2005-2009.html",
+      [
+       "02vanessa-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     },
     {
      "id": "seth",
      "name": "セス",
      "frame": [
-      "02seth-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/seth.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
        "02seth-rennzokuwaza.htm",
        "連続技"
       ],
-      "research/kof2002/seth-2004-2007.html"
+      "research/kof2002/seth-2004-2007.html",
+      [
+       "02seth-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     },
     {
      "id": "ramon",
      "name": "ラモン",
      "frame": [
-      "02ramon-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/ramon.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -552,7 +671,11 @@
        "02ramon-crush.html",
        "クラッシュ攻略"
       ],
-      "research/kof2002/ramon-2005-2006.html"
+      "research/kof2002/ramon-2005-2006.html",
+      [
+       "02ramon-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     }
    ]
@@ -564,7 +687,10 @@
      "id": "ryo",
      "name": "リョウ",
      "frame": [
-      "02ryo-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/ryo.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -576,14 +702,21 @@
        "リョウ連続技（ゲージ消費量＆状況別のダメージ効率）"
       ],
       "research/kof2002/ryo-max-ranbu-raijinsetsu-2004-2008.html",
-      "research/kof2002/ryo-play-2005-2008.html"
+      "research/kof2002/ryo-play-2005-2008.html",
+      [
+       "02ryo-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     },
     {
      "id": "robert",
      "name": "ロバート",
      "frame": [
-      "02robert-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/robert.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -596,14 +729,21 @@
       ],
       "research/kof2002/robert-dash-renbukyaku-2024.html",
       "research/kof2002/robert-gccd-cancel-6a-2006-2008.html",
-      "research/kof2002/robert-play-counterplay-2005-2009.html"
+      "research/kof2002/robert-play-counterplay-2005-2009.html",
+      [
+       "02robert-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     },
     {
      "id": "takuma",
      "name": "タクマ",
      "frame": [
-      "02takuma-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/takuma.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -618,7 +758,11 @@
        "02takuma-crush-kyouhienn-hanngeki.html",
        "クラッシュ攻略：対タクマ－強飛燕疾風脚ガード後の確定反撃について"
       ],
-      "research/kof2002/takuma-2005.html"
+      "research/kof2002/takuma-2005.html",
+      [
+       "02takuma-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     }
    ]
@@ -630,7 +774,10 @@
      "id": "athena",
      "name": "アテナ",
      "frame": [
-      "02athena-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/athena.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -642,14 +789,21 @@
        "クラッシュ攻略"
       ],
       "research/kof2002/athena-counterplay-2005-2008.html",
-      "research/kof2002/athena-play-2005-2009.html"
+      "research/kof2002/athena-play-2005-2009.html",
+      [
+       "02athena-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     },
     {
      "id": "kensou",
      "name": "ケンスウ",
      "frame": [
-      "02kensou-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/kensou.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -660,14 +814,21 @@
        "02kensou-rennzokuwaza.htm",
        "連続技"
       ],
-      "research/kof2002/kensou-2005-2009.html"
+      "research/kof2002/kensou-2005-2009.html",
+      [
+       "02kensou-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     },
     {
      "id": "chin",
      "name": "チン",
      "frame": [
-      "02chin-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/chin.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -678,7 +839,11 @@
        "02chin-crush.htm",
        "クラッシュ攻略"
       ],
-      "research/kof2002/chin-2005-2009.html"
+      "research/kof2002/chin-2005-2009.html",
+      [
+       "02chin-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     }
    ]
@@ -690,7 +855,10 @@
      "id": "mai",
      "name": "舞",
      "frame": [
-      "02mai-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/mai.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -701,14 +869,21 @@
        "02mai-memo.htm",
        "メモ"
       ],
-      "research/kof2002/mai-2005-2009.html"
+      "research/kof2002/mai-2005-2009.html",
+      [
+       "02mai-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     },
     {
      "id": "yuri",
      "name": "ユリ",
      "frame": [
-      "02yuri-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/yuri.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -723,16 +898,21 @@
        "02yuri-memo.htm",
        "メモ"
       ],
-      "research/kof2002/yuri-2005-2009.html"
+      "research/kof2002/yuri-2005-2009.html",
+      [
+       "02yuri-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     },
     {
      "id": "maylee",
      "name": "メイリー",
      "frame": [
-      "02maylee-standard-kakuwaza-koutyokusa.html",
-      "02maylee-hero-kakuwaza-koutyokusa.html",
-      "02maylee-bug-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/maylee.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -740,7 +920,19 @@
        "連続技"
       ],
       "research/kof2002/maylee-2005-2008.html",
-      "research/kof2002/maylee-pyonkichi-2006-2024.html"
+      "research/kof2002/maylee-pyonkichi-2006-2024.html",
+      [
+       "02maylee-standard-kakuwaza-koutyokusa.html",
+       "旧サイトの表・スタンダードモード（2008年）"
+      ],
+      [
+       "02maylee-hero-kakuwaza-koutyokusa.html",
+       "旧サイトの表・ヒーローモード（2008年）"
+      ],
+      [
+       "02maylee-bug-kakuwaza-koutyokusa.html",
+       "旧サイトの表・バグ（2008年）"
+      ]
      ]
     }
    ]
@@ -752,7 +944,10 @@
      "id": "yashiro",
      "name": "社",
      "frame": [
-      "02omoteyashiro-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/yashiro.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -767,14 +962,21 @@
        "02omoteyashiro-zyaku-fi-kakutei-hanngeki-hyou.html",
        "各キャラのヒットorガード時の硬直差について"
       ],
-      "research/kof2002/yashiro-2005-2009.html"
+      "research/kof2002/yashiro-2005-2009.html",
+      [
+       "02omoteyashiro-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     },
     {
      "id": "shermie",
      "name": "シェルミー",
      "frame": [
-      "02omoteshermie-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/shermie.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -782,14 +984,21 @@
        "連続技"
       ],
       "research/kof2002/shermie-omote-2005-2007.html",
-      "research/kof2002/shermie-ura-2006-2009.html"
+      "research/kof2002/shermie-ura-2006-2009.html",
+      [
+       "02omoteshermie-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     },
     {
      "id": "chris",
      "name": "クリス",
      "frame": [
-      "02omotechris-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/chris.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -806,7 +1015,11 @@
       ],
       "research/kof2002/chris-counterplay-2005-2007.html",
       "research/kof2002/chris-max2-special-command-2024.html",
-      "research/kof2002/chris-play-2005-2009.html"
+      "research/kof2002/chris-play-2005-2009.html",
+      [
+       "02omotechris-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     }
    ]
@@ -818,12 +1031,19 @@
      "id": "ura-yashiro",
      "name": "裏社",
      "frame": [
-      "02urayashiro-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/ura-yashiro.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
        "02urayashiro-rennzokuwaza.htm",
        "連続技"
+      ],
+      [
+       "02urayashiro-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
       ]
      ]
     },
@@ -831,12 +1051,19 @@
      "id": "ura-shermie",
      "name": "裏シェルミー",
      "frame": [
-      "02urashermie-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/ura-shermie.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
        "02urashermie-rennzokuwaza.htm",
        "連続技"
+      ],
+      [
+       "02urashermie-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
       ]
      ]
     },
@@ -844,7 +1071,10 @@
      "id": "ura-chris",
      "name": "裏クリス",
      "frame": [
-      "02urachris-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/ura-chris.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -854,6 +1084,10 @@
       [
        "02ura-chris-memo.htm",
        "の裏クリス関係のメモ"
+      ],
+      [
+       "02urachris-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
       ]
      ]
     }
@@ -866,7 +1100,10 @@
      "id": "yamazaki",
      "name": "山崎",
      "frame": [
-      "02yamazaki-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/yamazaki.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -878,14 +1115,21 @@
        "メモ"
       ],
       "research/kof2002/yamazaki-move-guide-2009.html",
-      "research/kof2002/yamazaki-play-counterplay-2005-2009.html"
+      "research/kof2002/yamazaki-play-counterplay-2005-2009.html",
+      [
+       "02yamazaki-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     },
     {
      "id": "mary",
      "name": "マリー",
      "frame": [
-      "02mary-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/mary.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -897,14 +1141,21 @@
        "メモ"
       ],
       "research/kof2002/mary-move-guide-2005-2011.html",
-      "research/kof2002/mary-play-counterplay-2005-2009.html"
+      "research/kof2002/mary-play-counterplay-2005-2009.html",
+      [
+       "02mary-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     },
     {
      "id": "billy",
      "name": "ビリー",
      "frame": [
-      "02billy-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/billy.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -934,7 +1185,11 @@
       "research/kof2002/billy-counterplay-2004-2009.html",
       "research/kof2002/billy-play-2005-2009.html",
       "research/kof2002/billy-sansetsukon-counterplay-2008-2025.html",
-      "research/kof2002/billy-shusho-hishokon-jc-jd-2024.html"
+      "research/kof2002/billy-shusho-hishokon-jc-jd-2024.html",
+      [
+       "02billy-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     }
    ]
@@ -946,7 +1201,10 @@
      "id": "kim",
      "name": "キム",
      "frame": [
-      "02kim-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/kim.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -988,28 +1246,42 @@
       "research/kof2002/kim-counterplay-2005-2024.html",
       "research/kof2002/kim-delay-2k-counterplay-revisions-2006-2024.html",
       "research/kof2002/kim-play-2004-2009.html",
-      "research/kof2002/kim-sankuugeki-counterplay-2005-2009.html"
+      "research/kof2002/kim-sankuugeki-counterplay-2005-2009.html",
+      [
+       "02kim-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     },
     {
      "id": "chang",
      "name": "チャン",
      "frame": [
-      "02chang-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/chang.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
        "02chang-rennzokuwaza.htm",
        "連続技"
       ],
-      "research/kof2002/chang-2005-2008.html"
+      "research/kof2002/chang-2005-2008.html",
+      [
+       "02chang-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     },
     {
      "id": "choi",
      "name": "チョイ",
      "frame": [
-      "02choi-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/choi.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -1029,7 +1301,11 @@
        "クラッシュ攻略：対チョイ戦－杓死対策"
       ],
       "research/kof2002/choi-2005-2009.html",
-      "research/kof2002/choi-max2-shakushi-random-guard-2005-2026.html"
+      "research/kof2002/choi-max2-shakushi-random-guard-2005-2026.html",
+      [
+       "02choi-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     }
    ]
@@ -1041,18 +1317,28 @@
      "id": "kusanagi",
      "name": "KUSANAGI",
      "frame": [
-      "02kusanagi-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/kusanagi.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       "research/kof2002/clone-kyo-2005-2008.html",
-      "research/kof2002/kusanagi-6b-guardcrush-2024.html"
+      "research/kof2002/kusanagi-6b-guardcrush-2024.html",
+      [
+       "02kusanagi-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     },
     {
      "id": "kula",
      "name": "クーラ",
      "frame": [
-      "02kula-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/kula.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -1069,14 +1355,21 @@
       ],
       "research/kof2002/kula-counterplay-2005-2008.html",
       "research/kof2002/kula-play-2005-2009.html",
-      "research/kof2002/kula-strong-ray-spin-hurtbox-inheritance-2024.html"
+      "research/kof2002/kula-strong-ray-spin-hurtbox-inheritance-2024.html",
+      [
+       "02kula-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     },
     {
      "id": "k9999",
      "name": "K9999",
      "frame": [
-      "02k9999-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/k9999.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
@@ -1084,30 +1377,49 @@
        "連続技"
       ],
       "research/kof2002/k9999-antiair-2007.html",
-      "research/kof2002/k9999-crouch-d-jiraishin-2024.html"
+      "research/kof2002/k9999-crouch-d-jiraishin-2024.html",
+      [
+       "02k9999-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     },
     {
      "id": "angel",
      "name": "アンヘル",
      "frame": [
-      "02angel-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/angel.html",
+       "各技の硬直差"
+      ]
      ],
      "research": [
       [
        "research/kof2002/x-frame-notes-2016-2024.html#c-angel",
        "レッドスカイ オブ ヤポネシア（じゃーん）のフラグ別硬直差と割り込み（2023～2024年）"
       ],
-      "research/kof2002/angel-2005-2024.html"
+      "research/kof2002/angel-2005-2024.html",
+      [
+       "02angel-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
      ]
     },
     {
      "id": "rugal",
      "name": "ルガール",
      "frame": [
-      "02rugal-kakuwaza-koutyokusa.html"
+      [
+       "research/kof2002/frame/rugal.html",
+       "各技の硬直差"
+      ]
      ],
-     "research": []
+     "research": [
+      [
+       "02rugal-kakuwaza-koutyokusa.html",
+       "旧サイトの表（2008年）"
+      ]
+     ]
     }
    ]
   }
