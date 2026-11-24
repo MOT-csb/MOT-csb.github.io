@@ -1,64 +1,105 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'99 ゲージ運用の考察：GC・超必殺技・CM・AMとSTボム（2021～2024年）｜Come sono bravo?</title><meta name="description" content="MOTの2021年5月9日のゲージ使用研究①～⑧を本人原文に沿って整理し、2021～2024年のCM・AM・STボム・削りの後続記録と分けて収録。"><link rel="stylesheet" href="/assets/research.css">
-<style>.article{max-width:1080px}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.article table{width:100%;border-collapse:collapse}.article td,.article th{border:1px solid var(--line,#abb);padding:9px;vertical-align:top;text-align:left}.article thead th{background:var(--soft,#eff2ef)}.scroll{overflow-x:auto}.note{border-left:4px solid var(--accent,#416958);background:var(--soft,#eff2ef);padding:12px 14px}.article a{overflow-wrap:anywhere}</style></head><body>
-<header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
-<div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof99-top.html">KOF'99</a> / <a href="/research/kof99/index.html">研究アーカイブ</a> / <b>ゲージ運用</b></div></div>
-<main class="main"><div class="wrap article"><h1>KOF'99 ゲージ運用の考察：GC・超必殺技・CM・AMとSTボム（2021～2024年）</h1>
-<p class="note">2021年5月9日にMOT本人が連続投稿した「ゲージ使用関係」①～⑧を軸に、後年の本人Xと既存研究記事へのリンクを補った資料。①～⑧という本人の連番を維持し、<strong>原文では③がGC前転・GC後転の2投稿に重複している</strong>点もそのまま扱う。<strong>仕様の記載／本人の戦術評価／未検証の案／後年の確認結果</strong>を分離。新規の実機検証・モード別ダメージ再測定は実施していない。</p>
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>KOF'99 ゲージの使い道とストライカーの呼び方｜Come sono bravo?</title>
+<meta name="description" content="KOF&#x27;99のゲージの使い道（GC前転・GCCD・超必殺技・カウンターモード・アーマーモード）、状況別の考え方、ストライカーを呼ぶ場面、気絶値の作品差。">
+<link rel="stylesheet" href="/assets/research.css">
+<style>.article{max-width:960px}.article table{width:100%;border-collapse:collapse}.article th,.article td{border:1px solid var(--line,#ccd);padding:6px 8px;overflow-wrap:anywhere;vertical-align:top;text-align:left}.article thead th{background:var(--soft,#eaf0ed)}.article td.num{font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}.lead{font-size:1.05em}.vt{display:inline-block;font-size:.85em;line-height:1.45;padding:0 6px;margin-left:4px;border:1px solid var(--line,#ccd);border-radius:4px;font-weight:600;white-space:nowrap}.legend{font-size:.92em;color:var(--sub,#555)}.src li{font-size:.92em}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h2{font-size:1.15em;margin-top:1.2rem}details.more h3{font-size:1.05em}figure{margin:14px 0}figure img{max-width:100%;height:auto;border:1px solid var(--line,#ccd)}figcaption{font-size:.9em;color:var(--sub,#555)}@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}.article th,.article td{min-width:72px}}</style>
+</head><body>
+<header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof99-top.html">KOF'99</a> / <a href="/research/kof99/index.html">研究アーカイブ</a> / <b>ゲージとストライカー</b></div></div>
+<main class="main"><div class="wrap article">
+<h1>KOF'99 ゲージの使い道とストライカーの呼び方</h1>
+<p class="lead">KOF'99では、交代で出てきたキャラのゲージは0から始まり、ストライカーボム（STボム）は補充できません。ゲージは時間切れで余らせずキャラに合った使い道で使い切り、ストライカー（ST）は呼ぶ場面を決めておくのが基本になります。</p>
+<p>ただし体力ゲージの方がパワーゲージより優先度が高いので、体力でリードしているのにゲージが余っているからといって超必殺技をぶっぱなすのはもったいない、としています。</p>
 
-<h2>2021年2月：KOF'98からの調整についての本人の初期評価</h2><p><a href="https://x.com/mot_csb/status/1357671435745980418">2021年2月5日のMOT本人投稿</a>では、KOF'99を少し触った段階の印象として、KOF'98から<strong>技の発生が遅くなったり硬直が長くなったものが多く、全体的にマイルドになって爽快感が減った</strong>と述べた。一方、<strong>新キャラの一部の技は尖った性能</strong>だとも評価し、バランス調整の難しさを考察している。本人自身が<strong>「少し触った感想」</strong>と位置づけた2021年当時の主観的な作品評価であり、全技の発生・硬直を比較測定した結論ではない。後年の実測表は個々の研究記事で別に扱う。</p>
-<h2>2021年5月9日の本人連続投稿：①～⑧</h2>
-<div class="scroll"><table><thead><tr><th>本人の番号</th><th>当時の本人メモ</th><th>原文・確実性</th></tr></thead><tbody>
-<tr><th scope="row">①　ゲージを残さず活用</th><td>ゲージを使い切れずに時間切れで負けるのはもったいない。STボムは負けても持ち越せる。残り時間が短くなってから突然攻めても成功しにくい。</td><td><a href="https://x.com/mot_csb/status/1391228746103885834">2021/5/9 ①</a>。本人の資源管理に関する方針。</td></tr>
-<tr><th scope="row">②　ゲージ使用の選択肢</th><td><strong>GC前転、GC後転、GCCD、超必殺技、カウンターモード（CM）、アーマーモード（AM）</strong>を列挙。</td><td><a href="https://x.com/mot_csb/status/1391229083757912066">2021/5/9 ②</a>。本人が検討対象を列挙した原文。</td></tr>
-<tr><th scope="row">③　GC前転</th><td>GC前転→GCかわし移動攻撃が有効。ただし近すぎると相手をすり抜け、かわし移動攻撃が空振りする危険がある。追撃連続技を持つキャラは強力。CM中に使えないことを惜しんでいる。</td><td><a href="https://x.com/mot_csb/status/1391230255025713154">2021/5/9 ③（GC前転）</a>。成立条件は距離・キャラ次第。</td></tr>
-<tr><th scope="row">③　GC後転</th><td>本人の印象ではあまり使われておらず、積極的な用途を思いつきにくい。GC前転入力の失敗で出るイメージ。<strong>GC前転の入力は3+AB</strong>と勧める。</td><td><a href="https://x.com/mot_csb/status/1391230533884026881">2021/5/9 ③（GC後転）</a>。「3+AB」は原文どおり。使用価値は本人の印象。</td></tr>
-<tr><th scope="row">④　GCCD</th><td>切り返しに使える。単体でダメージを与える目的ではなく、<strong>カウンターヒット後に追撃可能なキャラ</strong>では特に有効という本人評価。</td><td><a href="https://x.com/mot_csb/status/1391230761852751873">2021/5/9 ④</a>。キャラ別の硬直差32件は<a href="./gccd-recovery-advantage-2021.html">別記事</a>。</td></tr>
-<tr><th scope="row">⑤　超必殺技</th><td>通常版・MAX版・CM中で性能が異なる技が多い。MAX版が使いにくいキャラは体力が減る前に通常版を積極的に狙う案、MAX版の強いキャラは逆転性能を評価。</td><td><a href="https://x.com/mot_csb/status/1391231316637614082">2021/5/9 ⑤</a>。キャラによる使い分けの戦術案。</td></tr>
-<tr><th scope="row">⑥　CM</th><td>かわし移動攻撃・打撃投げからSC超必殺技へつなげられるキャラの恩恵が大きい。攻撃力アップ、AMより長い持続時間を評価。<strong>GCができなくなる分をSTで補う</strong>という案。</td><td><a href="https://x.com/mot_csb/status/1391232014410424321">2021/5/9 ⑥</a>。技の存在と、本人の運用提案を区別。</td></tr>
-<tr><th scope="row">⑦　AM</th><td>KOF2000と比べて持続が短い点を最大の欠点とし、ゲージが余っているときのとどめ向きと評価。一方、CMでよいのではという疑問も残す。</td><td><a href="https://x.com/mot_csb/status/1391232375208648704">2021/5/9 ⑦</a>。持続時間の具体的F数は原文にない。</td></tr>
-<tr><th scope="row">⑧　総括</th><td>使用キャラに合わせて使い分ける。本人の考えでは<strong>体力ゲージの価値をパワーゲージより重視</strong>し、体力リード時にゲージが余っているだけを理由に超必殺技をぶっぱなすのは惜しい。</td><td><a href="https://x.com/mot_csb/status/1391232930706456578">2021/5/9 ⑧</a>。戦術判断であり、ゲーム内部の数値優先順位ではない。</td></tr>
-</tbody></table></div>
-<p>本人の原文でいう③の重複は、欠番をAIが補ったり番号を書き換えたりしない。体力リード、残り時間、追撃技の有無、残りボムなどに応じて使い分けるという<strong>2021年当時の本人の考え方</strong>を保存する。</p>
+<h2>ゲージの使い道</h2>
+<p>ゲージの使い道は次の6つです。どれを使うかは使用キャラに応じて使い分けます。</p>
+<table><thead><tr><th>使い道</th><th>特徴・使いどころ</th></tr></thead><tbody>
+<tr><th scope="row">GC前転</th><td>GC前転→GCかわし移動攻撃が有効です。ただし近めで狙うとすり抜けて空振りするリスクがあります。GCかわし移動攻撃→連続技ができるキャラは強力です。カウンターモード中は使えません。</td></tr>
+<tr><th scope="row">GC後転</th><td>あまり使われておらず、積極的に使う場面が想像しにくい使い道です。GC前転の失敗で出てしまうことがあるので、GC前転は3+ABで出すのが勧められています。</td></tr>
+<tr><th scope="row">GCCD</th><td>切り返しに使えます。単体ではダメージがありませんが、カウンターヒット後に追撃できるキャラはかなり使えます（<a href="/research/kof99/gccd-recovery-advantage-2021.html">キャラ別の硬直差と追撃</a>）。</td></tr>
+<tr><th scope="row">超必殺技</th><td>通常版・MAX版・カウンターモード中で性能が違う技が多くあります。MAX版が使いにくいキャラは、体力が減るまでに通常版を積極的に仕掛ける（またはカウンターモードに賭ける）のが大事そうです。MAX版が優秀なキャラは逆転性能が大きくなります。</td></tr>
+<tr><th scope="row">カウンターモード（CM）</th><td>かわし移動攻撃や打撃投げから超必殺技につながる連続技があるキャラは恩恵が大きくなります。攻撃力が上がり、アーマーモードより持続時間が長いので、ゲージが有り余っているなら狙ってもよさそうです。GCができなくなる分はSTでカバーします。</td></tr>
+<tr><th scope="row">アーマーモード（AM）</th><td>KOF2000と比べて持続時間が短いのが最大のネックです。逆転の一手というより、ゲージが余っているときのとどめがメインになりそうですが、「その場合もカウンターモードでいいのでは？」とも書いています。</td></tr>
+</tbody></table>
 
-<h2>2021年2月：JCDカウンターヒットと超必殺技の役割</h2><p><a href="https://x.com/mot_csb/status/1359753155379036160">2021年2月11日のMOT本人投稿</a>は、KOF'99では<strong>通常技キャンセルから超必殺技がつながりにくくなった</strong>という本人の当時の評価を踏まえ、<strong>JCDカウンターヒットから超必殺技を決めることが他作品以上に重要かもしれない</strong>と考察している。これは個別ルートを検証した投稿ではなく、複数キャラの立ち回りに関する<strong>可能性の提案</strong>。実際のラルフのJCD（地上カウンターヒット）→馬乗りバルカンパンチ等の本人記録は<a href="./ralf-frame-and-strategy-2024.html">ラルフ研究</a>で条件付きで確認できるが、本人が示していないキャラや全てのJCDヒットに一般化しない。</p>
-<h2>2021年3月：庵の強鬼焼きの対空性能に関する本人観察</h2><p><a href="https://x.com/mot_csb/status/1367487910384193543">2021年3月4日のMOT本人投稿</a>は、<strong>庵の強鬼焼きは攻撃発生前に食らい判定が出る</strong>と説明し、<strong>無敵対空として期待できる水準ではない</strong>と本人が評価した。添付の判定画像は今回直接照合していないため、具体的な判定位置や無敵Fを追加測定したことにはしない。後述するMAX八稚女の運用とは<strong>異なる技</strong>の記録である。</p>
-<h2>2021年5月：庵のMAX八稚女の活用案</h2><p><a href="https://x.com/mot_csb/status/1396098408134307845">2021年5月22日のMOT本人投稿</a>では、KOF'99の庵の<strong>MAX版八稚女は発生が非常に早い</strong>と評価したうえで、通常技キャンセル以外の使用候補を列挙している。<strong>屑風後の追撃、ジャンプ攻撃先端ヒットから直接、JCDカウンターヒットから直接（一瞬待つ必要あり）、一部の技への反撃、一部の飛び込みへの対空、一部のST後の追撃</strong>である。本人は最後を「使えるはず」と表現しており、各対象・距離について全件確認した資料ではない。<strong>発生の具体的なF値は原文にない</strong>ため補わない。<a href="https://x.com/mot_csb/status/1359753155379036160">JCDカウンターヒット始動の汎用的な戦術論</a>とは、庵という具体例・一瞬待つ条件を区別する。</p>
-<h2>2021年5月：対紅丸のST呼び出しを読んだ反撃案</h2><p><a href="https://x.com/mot_csb/status/1390919601190363140">2021年5月8日のMOT本人投稿</a>は、<strong>紅丸がSTを呼び出すモーション中は無敵</strong>という本人の仕様認識を述べたうえで、ST呼び出しを読めた場合に<strong>前かわし移動でSTを避けながら連続技を狙う</strong>案を示している。ST呼び出しモーションの無敵についての本人記述と、前かわしからの反撃という戦術案を分離する。対象のSTや相手の位置、成立キャラの検証結果はこの投稿にない。<a href="./evasion-attacks-hitbox-recovery-2021-2025.html">かわし移動研究</a>と関連する。</p>
-<h2>2012年のゲージ運用に関する本人の観戦時メモ</h2><p><a href="https://x.com/mot_csb/status/266454919106658304">2012年11月8日の本人投稿</a>は、KOF'99の新キャラクターは初期状態ではガードキャンセルを使えないという当時の認識を述べ、<strong>パワーゲージがたまるまでは攻めを強めに運べそう</strong>と評価している。観戦動画に接した際の短い本人メモであり、キャラ別・出場順別のゲージ保有条件を確認した完全な仕様表ではない。2021年のチーム出場順とゲージ運用の考察とは時点を分けて保存する。</p>
-<h2>2021年5月8・19日：戦況別の発動案</h2>
+<h2>状況ごとの考え方</h2>
 <ul>
-<li><strong>相手の中堅・大将が出た直後：</strong><a href="https://x.com/mot_csb/status/1390918222166200320">2021/5/8の本人投稿</a>では、交代直後の相手はゲージ0、火力の低いキャラも多いとして、無敵技・コマンド投げ・超必殺技で攻める案、自分のゲージが満タンならCMを早期発動する案を提示。特定対戦カードでの勝率確認ではない。</li>
-<li><strong>ゲージMAX時の構想：</strong><a href="https://x.com/mot_csb/status/1394921972606193664">2021/5/19の本人投稿</a>では、STクラークヒット→CM発動→超必殺技で追撃→CMを活かした攻め、という<strong>「妄想」と明記した案</strong>。演出の短い超必殺技ならできるかもしれないとの予測であり、全ルート確認済みではない。</li>
+<li><b>相手の中堅・大将を引きずり出した直後</b>：相手キャラのゲージは0で、痛い連続技がないキャラも多い状況です。無敵技・コマンド投げ・超必殺技で荒らしにいくのもありで、こちらのゲージが満タンならいきなりカウンターモードを発動するのもよさそうです。2012年の観戦時にも、新しく出てきたキャラはGCを使えないので、ゲージがたまるまでは強気に攻められそうと書いています。</li>
+<li><b>出場順</b>：2番手・3番手は相手がゲージを持った状態で始まる場合があるので、ゲージがなくても戦えるキャラが向きます。1番手は相手にゲージがない状態が比較的多いので、その状態での攻めが強いキャラが向きます。3番手が出てきたときの場合分けは<a href="/research/kof99/system-changes-from-98-2010-2025.html">KOF'98からの変化</a>にあります。</li>
+<li><b>ゲージMAXのとき</b>：「ゲージMAX時の妄想」として、STクラークヒット→カウンターモード発動→超必殺技で追い打ち→カウンターモードを活かした攻め、という流れを挙げ、超必殺技の演出が短いキャラなら普通にいけるかも、としています。</li>
+<li><b>超必殺技の当て方</b>：通常技キャンセルでつながりにくくなっているので、JCDカウンターヒットから決めるのが他のKOF以上に重要かもしれません（JCDカウンターヒットからの例は<a href="/research/kof99/ralf-frame-and-strategy-2024.html">ラルフ</a>）。</li>
 </ul>
 
-<h2>2023年5月：気絶値の時間回復と攻め継続の評価</h2><p><a href="https://x.com/mot_csb/status/1653752614830641157">2023年5月3日のMOT本人投稿</a>では、KOF'99の気絶値を<strong>時間経過とともに少しずつ回復するタイプ</strong>と説明した。そのうえで、<strong>気絶値の高い技・連続技が当たった後は様子見を減らして攻めを継続すると気絶を狙いやすいのでは</strong>という戦術評価を提示している。前者は本人の当時の仕様記述、後者は<strong>「かも」という提案</strong>として区別する。具体的な毎Fの回復量や、連続技別の気絶値はこの投稿に示されていないため補わない。</p>
-<h2>2021年6月：チームの出場順と気絶値回復の作品差</h2><p><a href="https://x.com/mot_csb/status/1401190283258126337">2021年6月5日の本人投稿</a>では、KOF'99のチーム出場順について、<strong>2番手・3番手は相手がゲージを持った状態で始まる場合がある</strong>ため、自身のゲージに頼らず戦えるキャラが向くかもしれないと考察。<strong>1番手は相手のゲージがない状態が比較的多い</strong>とし、その状況の攻めに強みがあるキャラを候補に挙げた。出場順の最適解や全対戦組合せの検証結果ではなく、本人の戦術案である。同日の続き（3番手登場時の場合分け、1～2番手のゲージの使い切り）は<a href="./system-changes-from-98-2010-2025.html#gauge0">KOF'98からの変化とシステムの細部</a>にまとめた。</p><p><a href="https://x.com/mot_csb/status/1401051940230877189">同日の気絶値に関する本人投稿</a>は、KOF'98では一定時間で気絶値がリセットされる一方、<strong>KOF'99では時間経過につれて少しずつ回復する</strong>という作品差を説明。このためKOF'99では気絶を狙いやすいと本人が評価した。2023年5月の<a href="https://x.com/mot_csb/status/1653752614830641157">気絶値の時間回復と攻め継続の考察</a>につながる記録だが、<strong>98のリセットまでの時間、99の単位時間当たりの回復量は両投稿にない</strong>。システム認識と、その攻め方への応用を分けて扱う。</p>
-<h2>2024年7月：KOF2000との比較で記したKOF'99のAMガードクラッシュ値</h2><p><a href="https://comesonobravo.hatenadiary.org/entry/503851323.html">2024年7月3日の本人ブログ</a>には、KOF2000のアーマーモード中のガードクラッシュ値について、<strong>KOF'99と同じように2倍になるらしい</strong>と記されている。例に挙げた<strong>ラルフ立CDの通常6回→AM中3回</strong>はKOF2000の説明として書かれており、<strong>KOF'99で同じ回数を本人が測定した例に読み替えない</strong>。99のガークラ値2倍という本人の当時の認識と、2000での成立を「っぽい」とした比較評価を分けて記録する。<a href="https://comesonobravo.hatenadiary.org/entry/503851315.html">同日の類似記事</a>も重複元資料として保持する。</p>
-<h2>2005年10月：小・中ジャンプのガード硬直に関する本人の比較評価</h2><p><a href="https://comesonobravo.hatenadiary.org/entry/50154003">2005年10月29日のMOT本人記事</a>は、KOF'99～2002・NEOWAVEの小／中ジャンプ攻撃について、<strong>KOF'96・'97と同様にガード硬直が長く、安易な接近手段になりやすい</strong>と評価している。一方、99・2000については<strong>ST待ちの強さによってリスクも高くなる</strong>と留保した。KOF'98については小・中ジャンプ強攻撃を早くガードさせてもガード側が先に動ける場合があり、カウンターをもらう危険もあると対比している。<strong>作品の全キャラでガード硬直を実測した表ではなく、2005年当時の本人によるシステム比較と評価</strong>である。後年のケンスウJCD→龍連打研究とは、背景となるガード硬直評価と個別連係の成立条件を区別する。</p>
-<h2>2023年：CM・AMと削りへの後年の考察</h2>
-<p><a href="https://x.com/mot_csb/status/1654323712852905984">2023年5月5日の本人投稿</a>では、KOF'98のMAX発動とKOF'99のCM/AMで攻撃ダメージが1.25倍になることに触れ、その影響で一部の削りダメージも上がる「っぽい」と考察。<strong>削り増加の理由・ランダム補正の影響は仮説</strong>として扱う。とくにチャンの<a href="./chang-iron-ball-chip-throw-matchups-2021-2024.html">AM中の強鉄球大回転2セットで約4割（2021年本人確認）</a>と、CM中の同キャラ戦1回で約4分の1（2023年本人記録）は、モード・回数・相手条件が異なるので同一測定値として合算しない。</p>
-<p><a href="https://x.com/mot_csb/status/1653754441181564928">2023年5月3日の本人投稿</a>は、AMでガードクラッシュ値も倍増するとする<strong>他者の投稿</strong>を見たので要確認と記載。本人が裏付けを完了したとの意味に変更しない。</p>
-
-<h2>STボムとパワーゲージは区別</h2>
-<p><a href="https://x.com/mot_csb/status/1659815792618381313">2023年5月20日の本人投稿</a>は、体力瀕死時にSTを呼んで直後にKOされると、追撃できないままSTボムを無駄にするため、呼び出しは体力に余裕のあるときがよいと説明。ST呼び出し時に全身無敵があるキャラやガードへ移行できるキャラは例外とした。</p>
-<p>本人の<a href="./striker-clark-gauge-management-2024.html">2024年のSTクラーク運用研究</a>では、<strong>超必殺技を使うパワーゲージは負けた際に持ち越せず、STボムは補充手段がない</strong>ため、少なくとも1ゲージためてからSTクラークを呼ぶ案を提示している。これらは2021年①のSTボム持ち越しと混同しない。<strong>STボム持ち越し／パワーゲージ持ち越し／STボム補充の有無</strong>は別の論点である。</p>
-
-<h2>2021年5月：チンのSTクラーク連係と屈C対空の本人見解</h2><p><a href="https://x.com/mot_csb/status/1394297340773617669">2021年5月17日のMOT本人投稿</a>では、KOF'99は98でできたことができず面白く感じられないという当時の評価の一方、<strong>STクラークからチンの轟欄炎炮を決めやすい</strong>ため、十分戦えそうだと記した。<strong>「決めやすい」という本人評価</strong>であり、必要な距離・タイミング・相手キャラ別の成立確認は記載されていない。</p><p><a href="https://x.com/mot_csb/status/1390610466112634884">同年5月7日のチン屈Cの判定紹介</a>では、<strong>しゃがみ中／屈C発生前／屈C攻撃発生時</strong>の3状態を画像で提示。本人は<strong>低い食らい判定から斜め上へ攻撃判定が出る</strong>と説明し、<strong>相打ち以上が狙いやすいのでは</strong>と考察した。画像そのものの形状・大きさを今回確認したものではない。<strong>判定説明の本人記録</strong>と、対空での実戦的な強さの予想は区別する。</p>
-<h2>2021年2月：STの割り込み・対空・本体の食らい判定</h2>
-<p>MOTの2021年2月の本人研究では、ST呼び出しを単純な対空手段としてではなく、<strong>相手にやや攻め込まれたときの地上割り込み</strong>として評価している。以下はそれぞれ独立した本人投稿の要点で、他者の動画で見た事例と本人の推測を混同しない。</p>
+<h2>ストライカーの呼び方</h2>
+<p>KOF2000のSTアナザー庵のように適当に呼んでも仕事をしてくれるSTは少なく、活用できる場面を見つけておいてその場面で呼ぶのがセオリーになります。KOF'99のSTの多くは、やや攻め込まれている状況で呼ぶのが向いています。</p>
+<table><thead><tr><th>場面</th><th>呼び方</th></tr></thead><tbody>
+<tr><th scope="row">やや攻め込まれている</th><td>地上での割り込みに使います。この距離の方がSTが届きやすく、対空より対地の割り込みの方が本体が潰されにくいためです。特定の連係への安定割り込みになるかもしれません。</td></tr>
+<tr><th scope="row">端付近に追い詰められた</th><td>対空に使うより、ジャンプ攻撃をガードした後、しゃがみガードの保険をかけながら割り込みで狙うとよさそうです。ジャンプ攻撃より相手の攻撃の打点が低くなるので、STクラークやST香澄が負けにくくなります。</td></tr>
+<tr><th scope="row">対空（STクラーク）</th><td>しゃがんで引き付けてから呼びます。相手のジャンプ攻撃の打点が低くなり、STクラークを相手の上から当てやすくなります。相手がジャンプ攻撃から何も出さないと着地ガードされます。</td></tr>
+<tr><th scope="row">相手を飛び越した着地（STクラーク）</th><td>ある動画で見た「画面端以外で相手を飛び越して着地にSTクラーク」が結構強いかもしれません。微妙にラインが下がった状態になってフルヒットしやすく、ST呼び出し動作は下半身に無敵があるものが多いので、相手の対応が甘ければ呼べます。</td></tr>
+<tr><th scope="row">体力が瀕死</th><td>呼び出し直後にKOされると追撃できず、補充できないSTボムがもったいないので、体力に余裕があるときに使う方がよいです。ST呼び出しに全身無敵があるキャラやガードに移行できるキャラは例外です。</td></tr>
+</tbody></table>
 <ul>
-<li><a href="https://x.com/mot_csb/status/1361499204284076032">2月16日・基本的な活用位置</a>：KOF2000のSTアナザー庵と異なり、99のSTは適当に呼ぶだけで働くものが少ないと本人は評価。活用場面を事前に定めること、やや攻め込まれたときの呼び出しを推奨。</li>
-<li><a href="https://x.com/mot_csb/status/1365336011379601408">2月26日・地上割り込み</a>：やや攻め込まれた状況ならSTが届きやすく、対空より本体が潰されにくいという理由を提示。特定の連係への安定割り込みは<strong>可能性案</strong>であり、全連係の割り込み成立を確認したものではない。</li>
-<li><a href="https://x.com/mot_csb/status/1361597442223865865">2月16日・端に追い詰められた場合</a>：ジャンプ攻撃をガードした後、しゃがみガードの保険をかけつつSTクラーク／香澄で割り込む案。ジャンプ攻撃より次の攻撃の打点が低くなり、呼び出し側が負けにくいのでは、という<strong>本人の推測</strong>。</li>
-<li><a href="https://x.com/mot_csb/status/1361462004192403456">2月16日・ジョーとチャンの食らい判定</a>：ST呼び出し中は頭部のみに食らい判定があるという本人の記録。対空だとジャンプ攻撃を食らうが、対地なら攻撃を避けつつSTをヒットさせやすいとの運用評価。<strong>ジョー・チャンという本体キャラの条件</strong>を維持する。</li>
-<li><a href="https://x.com/mot_csb/status/1361461444231921664">2月16日・対空STクラーク</a>：しゃがんで相手を引き付け、ジャンプ攻撃の打点を低くしてから呼ぶ案。STクラークが相手の上から当たりやすくなるという見立て。一方、相手がジャンプ攻撃から何も出さなければ着地ガードされるという対策上の欠点も明示。</li>
-<li><a href="https://x.com/mot_csb/status/1364194534742134798">2月23日・飛び越し着地からの呼び出し</a>：画面端以外で相手を飛び越え、着地にSTクラークを呼ぶ動画を見て着想。ラインが少し下がるためSTクラークがフルヒットしやすい、ST呼び出し側の下半身無敵を利用できるかも、という<strong>動画由来の本人の戦術評価</strong>。本人がこの操作を全キャラで確認したとは書かない。</li>
-<li><a href="https://x.com/mot_csb/status/1365294055014289409">2月26日・STチョイ</a>：当たり方次第では<strong>30％以上のダメージになる「っぽい」</strong>という暫定評価。特定のヒット条件や全キャラでの成立は未記載。</li>
-<li><a href="https://x.com/mot_csb/status/1361268373955383305">2月15日・登場攻撃へのSTクラーク</a>：本人の対戦配信観戦メモでは、STクラークはKOF2000のSTセスと違い、登場攻撃を潰せる「っぽい」と記述。観戦時の推測であり、両作品の全ST登場動作の無敵仕様を確定した比較ではない。</li>
-</ul><p>これらは<strong>パワーゲージ1本をためてからSTクラークを使う</strong>という2024年の方針とは時点・論点が異なる。<a href="./striker-clark-gauge-management-2024.html">STクラークの資源管理研究</a>と相互参照し、資源管理と呼び出し位置の選択を区別する。</p>
-<h2>具体的な連続技・硬直差は既存記事へ</h2>
-<p>CM/AM中のかわし移動攻撃お手玉については<a href="./armor-mode-evasion-loop-2024.html">AM版かわし移動攻撃の本人確認ルート</a>（タクマとリョウ）へ。GCCDのキャラ別硬直差・CH追撃は<a href="./gccd-recovery-advantage-2021.html">GCCD32キャラ一覧</a>へ。GC前転後の入力やCM中のSCの操作性は<a href="./input-buffer-cancels-throw-tech-2021-2023.html">入力・キャンセルの研究</a>に分け、数値やルートを重複転載しない。</p>
-<h2>未解決事項</h2>
-<p>CM/AMの一部削り増加とダメージ補正の関係、AM中のガークラ値増加の本人未確認事項、STボム持ち越し・補充の仕様を他資料と再照合する必要性、STクラーク→CM→超必殺技の成立キャラ、GC後転の積極的用途は、原資料が揃わない範囲で新しい確定仕様を作らない。<a href="/kof-kininaru.html#kof99">気になること</a>へ記録。</p>
-<p><a href="/research/kof99/index.html">KOF'99研究目次へ戻る</a> ／ <a href="/kof-kininaru.html#kof99">気になること</a></p>
-</div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
+<li>ST呼び出し動作では、ジョーやチャンは頭部だけに食らい判定があります。対空に使うとジャンプ攻撃を食らいますが、対地なら無敵で抜けつつSTを当てやすくなります。</li>
+<li>STチョイは、当たり方次第で30%以上のダメージを与えるようです。</li>
+<li>STクラークは、KOF2000のSTセス（登場攻撃は無敵）と違って登場攻撃を潰せるようです（配信の観戦メモ）。</li>
+</ul>
+<p>STクラークをいつ呼ぶか（パワーゲージを1本ためてから呼ぶ案）は<a href="/research/kof99/striker-clark-gauge-management-2024.html">STクラークのゲージ管理</a>にあります。</p>
+
+<h2>気絶の狙いやすさ</h2>
+<p>KOF'99の気絶値は、時間経過とともに少しずつ回復するタイプです。KOF'98は一定時間で気絶値がリセットされるので、少し間が空くだけで全快してしまいます。KOF'98でも飛び込みからの連続技を2セット決めると気絶させられるものは結構ありますが、KOF'99の方が気絶を狙いやすくなります。</p>
+<table><thead><tr><th>作品</th><th>気絶値の戻り方</th></tr></thead><tbody>
+<tr><th scope="row">KOF'94・'95</th><td>時間経過で回復。KOF'99よりさらに速いので、連続技かその後の2択までで一気に稼ぐ必要がある</td></tr>
+<tr><th scope="row">KOF'96</th><td>時間経過で回復。回復がかなり遅い</td></tr>
+<tr><th scope="row">KOF'98</th><td>一定時間でリセット</td></tr>
+<tr><th scope="row">KOF'99</th><td>時間経過で少しずつ回復（KOF'96より速い）</td></tr>
+</tbody></table>
+<p>気絶の狙いやすさは「96＞99＞98」みたいな感じ、としています。KOF'99では、気絶値の高い技（連続技を含む）が当たった後は様子見を減らして攻めを継続すると気絶させやすいかもしれません。</p>
+
+<details class="more"><summary>詳しく：モード中のダメージ・削り・ガークラ値</summary>
+<ul>
+<li>KOF'98のMAX発動も、KOF'99のカウンターモードとアーマーモードも、ダメージが1.25倍になります。その影響で一部の削りダメージも増えるようです。ダメージ自体にランダム補正もあり、それが削りダメージにも影響していそうです。削りダメージのこの変化自体はKOF'98とあまり変わらないようです（具体例は<a href="/research/kof99/chang-iron-ball-chip-throw-matchups-2021-2024.html">チャンの鉄球大回転</a>）。</li>
+<li>アーマーモード中にガークラ値も倍増するという投稿を見かけて、2023年5月には「要確認」としていました。2024年7月のKOF2000の記事では「KOF2000のアーマーモードのガクラ値はKOF99同様に2倍に増加するっぽい」と書いています。例に挙げたラルフの立CD（通常時は6回、AM中は3回でガードクラッシュ）はKOF2000での数字です。</li>
+</ul>
+</details>
+
+<details class="more"><summary>詳しく：キャラ別の例（庵・紅丸・チン）</summary>
+<h3>庵</h3>
+<ul>
+<li>八稚女 <span class="vt">MAX</span> は発生が異様に早く、通常技キャンセルで狙うのは当然として、次の使い道があるはずとしています：屑風後の安定追撃／ジャンプ攻撃の先端ヒットから直接／JCDカウンターヒットから直接（一瞬待つ必要あり）／一部の技への反撃／一部の飛び込みへの対空／一部のST後の追撃。</li>
+<li>鬼焼き <span class="vt">強</span> は攻撃の発生前に食らい判定が出るので、無敵対空として期待していいレベルではありません。</li>
+</ul>
+<figure><img src="https://pbs.twimg.com/media/EvpK2nNXYAUrUWg.png" alt="KOF99 庵の強鬼焼きの判定" loading="lazy" width="110" height="122"><figcaption>庵の鬼焼き <span class="vt">強</span> の判定（<a href="https://x.com/mot_csb/status/1367487910384193543">2021/3/4</a>）</figcaption></figure>
+<h3>紅丸</h3>
+<p>紅丸のST呼び出しモーションは無敵です。対紅丸では、STが読めたら前かわし移動でSTを避けつつ連続技を狙います。</p>
+<h3>チン</h3>
+<p>屈Cは低い食らい判定からそこそこ斜め上に強い攻撃判定が出るので、相打ち以上を狙いやすいと見ています。STクラークから轟欄炎炮が決めやすいので、KOF'98でできたことができなくなっていても結構いけそう、としています。</p>
+<figure><img src="https://pbs.twimg.com/media/E0xwzRWVgAAx9cv.png" alt="KOF99 チンの屈Cの判定。左からしゃがみ時、屈C発生前、屈C攻撃発生時" loading="lazy" width="275" height="125"><figcaption>チンの屈C。左からしゃがみ時、発生前、攻撃発生時（<a href="https://x.com/mot_csb/status/1390610466112634884">2021/5/7</a>）</figcaption></figure>
+</details>
+
+<details class="more"><summary>詳しく：KOF'98からの印象と小・中ジャンプ</summary>
+<p>2021年2月にKOF'99を少し触った感想として、「全体的に98からマイルド調整しすぎて爽快感が減ってる」と書き、発生が遅くなったり硬直が長くなったりしている技が多い一方で、新キャラの一部の技が尖りすぎている、としています。</p>
+<p>2005年の記事では、KOF'99〜2002・NEOWAVEの小・中ジャンプ攻撃は、KOF'96・'97と同様にガード硬直が長いので安易な接近手段になってしまう、と書いています。ただしST待ちが強いKOF'99・2000ではリスクが高くなります。KOF'98は小・中ジャンプの強攻撃のガード硬直が短く、早めにガードさせてもガード側が先に動けるので、安易な接近手段にはなりにくい作品です。</p>
+</details>
+
+<h2>気になること</h2>
+<ul>
+<li>GC後転を積極的に使う場面はあるか。</li>
+<li>STクラークヒット→カウンターモード発動→超必殺技は、どのキャラなら間に合うか。</li>
+</ul>
+
+<h2>出典</h2>
+<ul class="src">
+<li>ゲージ使用関係：<a href="https://x.com/mot_csb/status/1391228746103885834">①</a> <a href="https://x.com/mot_csb/status/1391229083757912066">②</a> <a href="https://x.com/mot_csb/status/1391230255025713154">③GC前転</a> <a href="https://x.com/mot_csb/status/1391230533884026881">③GC後転</a> <a href="https://x.com/mot_csb/status/1391230761852751873">④</a> <a href="https://x.com/mot_csb/status/1391231316637614082">⑤</a> <a href="https://x.com/mot_csb/status/1391232014410424321">⑥</a> <a href="https://x.com/mot_csb/status/1391232375208648704">⑦</a> <a href="https://x.com/mot_csb/status/1391232930706456578">⑧</a>（2021/5/9）</li>
+<li>状況：<a href="https://x.com/mot_csb/status/1390918222166200320">中堅・大将を引きずり出した時（2021/5/8）</a> ／ <a href="https://x.com/mot_csb/status/266454919106658304">新しく出てきたキャラはGCを使えない（2012/11/8）</a> ／ <a href="https://x.com/mot_csb/status/1401190283258126337">順番考察（2021/6/5）</a> ／ <a href="https://x.com/mot_csb/status/1394921972606193664">ゲージMAX時の妄想（2021/5/19）</a> ／ <a href="https://x.com/mot_csb/status/1359753155379036160">JCDカウンターヒット（2021/2/11）</a></li>
+<li>ST：<a href="https://x.com/mot_csb/status/1361499204284076032">ST呼び出しについて（2021/2/16）</a> ／ <a href="https://x.com/mot_csb/status/1365336011379601408">地上での割り込み（2/26）</a> ／ <a href="https://x.com/mot_csb/status/1361597442223865865">端付近（2/16）</a> ／ <a href="https://x.com/mot_csb/status/1361461444231921664">対空STクラーク（2/15）</a> ／ <a href="https://x.com/mot_csb/status/1364194534742134798">飛び越して着地（2/23）</a> ／ <a href="https://x.com/mot_csb/status/1659815792618381313">瀕死でのST呼び出し（2023/5/20）</a> ／ <a href="https://x.com/mot_csb/status/1361462004192403456">ジョー・チャン（2021/2/15）</a> ／ <a href="https://x.com/mot_csb/status/1365294055014289409">STチョイ（2/26）</a> ／ <a href="https://x.com/mot_csb/status/1361268373955383305">STクラークと登場攻撃（2/15）</a></li>
+<li>気絶：<a href="https://x.com/mot_csb/status/1401051940230877189">気絶狙いについて（2021/6/5）</a> ／ <a href="https://x.com/mot_csb/status/1401052416540172293">作品ごとの回復速度</a> ／ <a href="https://x.com/mot_csb/status/1653752614830641157">攻めの継続（2023/5/3）</a></li>
+<li>モード：<a href="https://x.com/mot_csb/status/1654323712852905984">削りダメージ（2023/5/5）</a> ／ <a href="https://x.com/mot_csb/status/1653754441181564928">ガークラ値（2023/5/3）</a> ／ <a href="https://comesonobravo.hatenadiary.org/entry/503851315.html">KOF2000：アーマーモード中のガクラ値は2倍かも（2024/7/3）</a></li>
+<li>キャラ：<a href="https://x.com/mot_csb/status/1396098408134307845">庵 MAX版八稚女（2021/5/22）</a> ／ <a href="https://x.com/mot_csb/status/1390919601190363140">対紅丸（2021/5/8）</a> ／ <a href="https://x.com/mot_csb/status/1394297340773617669">チン STクラーク（2021/5/17）</a></li>
+<li>そのほか：<a href="https://x.com/mot_csb/status/1357671435745980418">少し触った感想（2021/2/5）</a> ／ <a href="https://comesonobravo.hatenadiary.org/entry/50154003">小ジャンプについて（2005/10/29）</a></li>
+<li>関連：<a href="/research/kof99/armor-mode-evasion-loop-2024.html">アーマーモードのかわし移動攻撃お手玉</a> ／ <a href="/kof-kininaru.html#kof99">気になること</a> ／ <a href="/research/kof99/index.html">KOF'99研究アーカイブ</a></li>
+</ul>
+</div></main>
+<footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer>
+</body></html>

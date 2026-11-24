@@ -1,134 +1,119 @@
 <!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'99 かわし移動攻撃：フレーム・屈み当否・追撃・対策（2021～2025年）｜Come sono bravo?</title><meta name="description" content="MOT本人のKOF'99かわし移動攻撃研究。マキシマの予備動作5F全身無敵+3F・発生9F、紅丸の旧ムックとの訂正、屈み当否、ラルフの連続技と対策、2025年本人システム整理を収録。"><link rel="stylesheet" href="/assets/research.css">
-<style>.article{max-width:1080px}.article h2{margin-top:2rem}.article h3{margin-top:1.25rem}.article table{width:100%;border-collapse:collapse}.article th,.article td{padding:9px;border:1px solid var(--line,#abb);text-align:left;vertical-align:top}.article thead th{background:var(--soft,#eef2ef)}.scroll{overflow-x:auto}.note{border-left:4px solid var(--accent,#416958);background:var(--soft,#eef2ef);padding:12px 14px}.article a{overflow-wrap:anywhere}</style></head><body>
-<header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>KOF'99 かわし移動攻撃のフレームと当たらない相手｜Come sono bravo?</title>
+<meta name="description" content="KOF&#x27;99のかわし移動攻撃32キャラのフレーム（発生・発生前の無敵と隙・ヒット時とガード時の硬直差）、しゃがんだ相手に空振りする組み合わせ、ヒット後の追撃。">
+<link rel="stylesheet" href="/assets/research.css">
+<style>.article{max-width:960px}.article table{width:100%;border-collapse:collapse}.article th,.article td{border:1px solid var(--line,#ccd);padding:6px 8px;overflow-wrap:anywhere;vertical-align:top;text-align:left}.article thead th{background:var(--soft,#eaf0ed)}.article td.num{font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}.lead{font-size:1.05em}.vt{display:inline-block;font-size:.85em;line-height:1.45;padding:0 6px;margin-left:4px;border:1px solid var(--line,#ccd);border-radius:4px;font-weight:600;white-space:nowrap}.legend{font-size:.92em;color:var(--sub,#555)}.src li{font-size:.92em}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h2{font-size:1.15em;margin-top:1.2rem}details.more h3{font-size:1.05em}figure{margin:14px 0}figure img{max-width:100%;height:auto;border:1px solid var(--line,#ccd)}figcaption{font-size:.9em;color:var(--sub,#555)}@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}.article th,.article td{min-width:72px}}</style>
+</head><body>
+<header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
 <div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof99-top.html">KOF'99</a> / <a href="/research/kof99/index.html">研究アーカイブ</a> / <b>かわし移動攻撃</b></div></div>
-<main class="main"><div class="wrap article"><h1>KOF'99 かわし移動攻撃：フレーム・屈み当否・追撃・対策（2021～2025年）</h1>
-<p class="note">MOTが2021年2～7月にX（旧Twitter）へ記録した「かわし移動攻撃」関係の調査を、<strong>本人が示した実数値、本人による検証、戦術評価・仮説、画像にしか残っていない内容</strong>に分けて再構成。2003～2004年にMOT本人が執筆した旧サイト原稿<a href="/kofanalysis.htm">「KOFシリーズのシステムについてのメモ」</a>も一次資料として照合（提供済み「ＵＰしたもの.zip」内の原HTMLと現行旧URLの本文を確認）。2025年のブログ再掲版はAI変換済みで詳細未確認との注記があるため、原文の代替とはしない。2021年5月23日の本人X投稿にあるGoogleシートURLから、32キャラ分のかわし移動攻撃のフレーム値・屈み相手別の空振り表と備考を2026年11月20日に直接回収済み。ネオジオフリークの攻略本は本人が照合先として用いた二次資料であり、本人の独自確認と区別する。</p>
+<main class="main"><div class="wrap article">
+<h1>KOF'99 かわし移動攻撃のフレームと当たらない相手</h1>
+<p class="lead">かわし移動攻撃はヒットすれば有利なキャラが多く、ラルフとウィップは+9F、香澄は+7Fです。ただしヒットすると結構離れるので、何も届かない場合が多くなります。発生前に無敵があるキャラが多い一方、テリーは無敵がなく、しゃがんだ相手に当たらない組み合わせもあります。</p>
+<p>かわし移動（AB）は、動作開始直後が打撃だけでなく投げにも無敵です。かわし移動攻撃は、かわし移動中にボタンを押して出す攻撃です。</p>
 
-<h2>かわし移動は近距離の打撃・投げ対策になる</h2>
-<p><a href="/kofanalysis.htm">2003～2004年のMOT本人の旧原稿「KOFシリーズのシステムについてのメモ」</a>では、'99の<strong>AB「かわし移動」の動作開始直後は打撃・投げの両方に無敵</strong>と説明し、近距離戦での回避手段として評価している。なお<a href="https://comesonobravo.hatenadiary.org/entry/2025/03/02/201947">2025年のブログ再掲版</a>には「AIによる変換を行った状態なので詳細は未確認です」という注記がある。今回の記載は元HTMLを直接照合したものであり、変換後の記事の記述のみには依存しない。これは<strong>かわし移動そのもの</strong>の説明であり、その後に出す<strong>かわし移動攻撃</strong>が無条件に無敵・反撃確定になるという意味ではない。</p>
-<p><a href="https://x.com/mot_csb/status/1367392256441774080">2021年3月4日の本人案</a>では、投げられ判定のないかわし移動を投げ対策に使い、<strong>前かわし→かわし移動攻撃</strong>と<strong>後ろかわし→戻って投げ／キャンセル必殺技</strong>を使い分ける構想を述べている。被弾率を下げられるか、という戦術提案であり、全投げへの必勝対応ではない。</p>
+<h2>32キャラのフレーム</h2>
+<p class="legend">単位はフレーム。発生前の無敵と隙は攻撃判定が出るまでの内訳です（例：マキシマは予備動作5F全身無敵＋3F、発生9F）。ガード時の3列は表の見出し「事前弱」「事前強」「事前CD」のままで、これが何を指すかは表に説明がありません。</p>
+<table><thead><tr><th>キャラ</th><th>発生</th><th>発生前の無敵</th><th>発生前の隙</th><th>ヒット時</th><th>ガード時（事前弱）</th><th>ガード時（事前強）</th><th>ガード時（事前CD）</th></tr></thead><tbody>
+<tr><th scope="row">K'</th><td class="num">9</td><td class="num">5</td><td class="num">3</td><td class="num">+4</td><td class="num">−6</td><td class="num">+2</td><td class="num">+6</td></tr>
+<tr><th scope="row">マキシマ</th><td class="num">9</td><td class="num">5</td><td class="num">3</td><td class="num">+3</td><td class="num">−7</td><td class="num">+1</td><td class="num">+5</td></tr>
+<tr><th scope="row">紅丸</th><td class="num">8</td><td class="num">3</td><td class="num">4</td><td class="num">±0</td><td class="num">−10</td><td class="num">−2</td><td class="num">+2</td></tr>
+<tr><th scope="row">真吾</th><td class="num">12</td><td class="num">5</td><td class="num">6</td><td class="num">+3</td><td class="num">−7</td><td class="num">+1</td><td class="num">+5</td></tr>
+<tr><th scope="row">テリー</th><td class="num">9</td><td class="num">0</td><td class="num">8</td><td class="num">+5</td><td class="num">−5</td><td class="num">+3</td><td class="num">+7</td></tr>
+<tr><th scope="row">アンディ</th><td class="num">11</td><td class="num">4</td><td class="num">6</td><td class="num">−1</td><td class="num">−11</td><td class="num">−3</td><td class="num">+1</td></tr>
+<tr><th scope="row">ジョー</th><td class="num">8</td><td class="num">3</td><td class="num">4</td><td class="num">−3</td><td class="num">−13</td><td class="num">−5</td><td class="num">−1</td></tr>
+<tr><th scope="row">舞</th><td class="num">14</td><td class="num">5</td><td class="num">8</td><td class="num">−1</td><td class="num">−11</td><td class="num">−3</td><td class="num">+1</td></tr>
+<tr><th scope="row">リョウ</th><td class="num">9</td><td class="num">5</td><td class="num">3</td><td class="num">+5</td><td class="num">−5</td><td class="num">+3</td><td class="num">+7</td></tr>
+<tr><th scope="row">ロバート</th><td class="num">12</td><td class="num">2</td><td class="num">9</td><td class="num">+6</td><td class="num">−4</td><td class="num">+4</td><td class="num">+8</td></tr>
+<tr><th scope="row">ユリ</th><td class="num">9</td><td class="num">5</td><td class="num">3</td><td class="num">+3</td><td class="num">−7</td><td class="num">+1</td><td class="num">+5</td></tr>
+<tr><th scope="row">タクマ</th><td class="num">9</td><td class="num">5</td><td class="num">3</td><td class="num">+6</td><td class="num">−4</td><td class="num">+4</td><td class="num">+8</td></tr>
+<tr><th scope="row">レオナ</th><td class="num">11</td><td class="num">4</td><td class="num">6</td><td class="num">−7</td><td class="num">−17</td><td class="num">−9</td><td class="num">−5</td></tr>
+<tr><th scope="row">ラルフ</th><td class="num">17</td><td class="num">8</td><td class="num">8</td><td class="num">+9</td><td class="num">−1</td><td class="num">+7</td><td class="num">+11</td></tr>
+<tr><th scope="row">クラーク</th><td class="num">15</td><td class="num">6</td><td class="num">8</td><td class="num">+3</td><td class="num">−7</td><td class="num">+1</td><td class="num">+5</td></tr>
+<tr><th scope="row">ウィップ</th><td class="num">10</td><td class="num">6</td><td class="num">3</td><td class="num">+9</td><td class="num">−1</td><td class="num">+7</td><td class="num">+11</td></tr>
+<tr><th scope="row">アテナ</th><td class="num">9</td><td class="num">3</td><td class="num">5</td><td class="num">+4</td><td class="num">−6</td><td class="num">+2</td><td class="num">+6</td></tr>
+<tr><th scope="row">ケンスウ</th><td class="num">11</td><td class="num">4</td><td class="num">6</td><td class="num">±0</td><td class="num">−10</td><td class="num">−2</td><td class="num">+2</td></tr>
+<tr><th scope="row">チン</th><td class="num">14</td><td class="num">6</td><td class="num">7</td><td class="num">−7</td><td class="num">−17</td><td class="num">−9</td><td class="num">−5</td></tr>
+<tr><th scope="row">パオ</th><td class="num">7</td><td class="num">4</td><td class="num">2</td><td class="num">+3</td><td class="num">−7</td><td class="num">+1</td><td class="num">+5</td></tr>
+<tr><th scope="row">キング</th><td class="num">14</td><td class="num">6</td><td class="num">7</td><td class="num">±0</td><td class="num">−10</td><td class="num">−2</td><td class="num">+2</td></tr>
+<tr><th scope="row">マリー</th><td class="num">11</td><td class="num">6</td><td class="num">4</td><td class="num">−1</td><td class="num">−11</td><td class="num">−3</td><td class="num">+1</td></tr>
+<tr><th scope="row">香澄</th><td class="num">11</td><td class="num">4</td><td class="num">6</td><td class="num">+7</td><td class="num">−3</td><td class="num">+5</td><td class="num">+9</td></tr>
+<tr><th scope="row">香緋</th><td class="num">8</td><td class="num">3</td><td class="num">4</td><td class="num">−1</td><td class="num">−11</td><td class="num">−3</td><td class="num">+1</td></tr>
+<tr><th scope="row">キム</th><td class="num">10</td><td class="num">6</td><td class="num">3</td><td class="num">−3</td><td class="num">−13</td><td class="num">−5</td><td class="num">−1</td></tr>
+<tr><th scope="row">チャン</th><td class="num">11</td><td class="num">3</td><td class="num">7</td><td class="num">±0</td><td class="num">−10</td><td class="num">−2</td><td class="num">+2</td></tr>
+<tr><th scope="row">チョイ</th><td class="num">11</td><td class="num">5</td><td class="num">5</td><td class="num">+2</td><td class="num">−8</td><td class="num">±0</td><td class="num">+4</td></tr>
+<tr><th scope="row">ジョン</th><td class="num">12</td><td class="num">4</td><td class="num">7</td><td class="num">+2</td><td class="num">−8</td><td class="num">±0</td><td class="num">+4</td></tr>
+<tr><th scope="row">京－１</th><td class="num">7</td><td class="num">4</td><td class="num">2</td><td class="num">−5</td><td class="num">−15</td><td class="num">−7</td><td class="num">−3</td></tr>
+<tr><th scope="row">京－２</th><td class="num">8</td><td class="num">3</td><td class="num">4</td><td class="num">−1</td><td class="num">−11</td><td class="num">−3</td><td class="num">+1</td></tr>
+<tr><th scope="row">京</th><td class="num">11</td><td class="num">6</td><td class="num">4</td><td class="num">−3</td><td class="num">−13</td><td class="num">−5</td><td class="num">−1</td></tr>
+<tr><th scope="row">庵</th><td class="num">12</td><td class="num">4</td><td class="num">7</td><td class="num">±0</td><td class="num">−10</td><td class="num">−2</td><td class="num">+2</td></tr>
+</tbody></table>
+<p>発生が早いほど相手の技の硬直に確定させやすく、発生前の隙は短いほどよい、という見方です。ヒット時の微有利・微不利くらいは誤差、とも書いています。数値だけ見るとK’のかわし移動攻撃も優秀です。</p>
 
-<h2>2010年の本人見解：かわし移動の出始めと投げ無敵</h2><p><a href="https://x.com/mot_csb/status/3378782320726016">2010年11月13日のMOT本人投稿</a>では、KOF'99のかわし移動について、<strong>動作開始直後は打撃だけでなく投げに対しても無敵</strong>になることを高く評価している。後方かわしを廃止し、バックステップへ無敵を付与するなどの別案も当時の本人の好みとして述べている。<strong>これは2010年の仕様認識と設計評価の記録</strong>であり、全動作に投げ無敵があると述べたものではない。正確な投げ無敵の開始・終了Fはこの投稿に示されていない。2021年のかわし移動攻撃の原表は派生攻撃の性能を示すため、通常のかわし移動の投げ無敵時間と取り違えない。</p>
-<h2>マキシマ：2021年2月5日の具体的なフレームメモ</h2>
-<p><a href="https://x.com/mot_csb/status/1357639297994682368">2021年2月5日の本人投稿</a>で、マキシマのかわし移動攻撃についてMOTは次の数値を記している。</p>
-<div class="scroll"><table><thead><tr><th>項目</th><th>原文の数値</th><th>取り扱い</th></tr></thead><tbody>
-<tr><th scope="row">予備動作</th><td><strong>5F［全身無敵］＋3F</strong></td><td>原文の区切りを維持。9Fの攻撃発生前にある構成として記録。</td></tr>
-<tr><th scope="row">発生</th><td><strong>9F</strong></td><td>本人記載値。</td></tr>
-<tr><th scope="row">攻撃判定の持続</th><td><strong>5F</strong></td><td>本人記載値。</td></tr>
-<tr><th scope="row">硬直</th><td><strong>12F</strong></td><td>本人記載値。</td></tr>
-<tr><th scope="row">全体</th><td><strong>25F</strong></td><td>本人記載値。</td></tr>
-<tr><th scope="row">ガード時</th><td><strong>−7F／＋1F／＋5F</strong></td><td>本人の原シートの列見出しに従い、それぞれ<strong>事前弱／事前強／事前CD</strong>の区分に対応。ラベルの意味を「相手技の強弱」などと勝手に解釈しない。</td></tr>
-<tr><th scope="row">ヒット時</th><td><strong>＋3</strong></td><td>本人記載。表記どおりの値を保存。</td></tr>
-</tbody></table></div>
-<p>本人は性能をかなり厄介と評価し、<strong>屈Bの連打が利くキャラなら屈B連打で追い払えるかもしれない</strong>と提案。ただし屈B連打による全キャラの対策成立を確認したという記録ではない。</p>
-<p>さらに<a href="https://x.com/mot_csb/status/1361684168288006144">2021年2月16日の本人投稿</a>では、他者の配信で<strong>マキシマのかわし移動攻撃に前方ノーマルジャンプをかみ合わせて背後に着地し、連続技を決める</strong>動きを見たと回想している。これは<strong>本人が見た他者の実戦事例の記録</strong>であり、全状況で確定する再現検証ではない。</p>
+<h2>キャラ別の補足</h2>
+<table><thead><tr><th>キャラ</th><th>補足</th></tr></thead><tbody>
+<tr><th scope="row">テリー</th><td>発生前の無敵なし</td></tr>
+<tr><th scope="row">アンディ</th><td>発生前の隙の前半3Fは食らい判定が低め</td></tr>
+<tr><th scope="row">ジョン</th><td>発生前の隙は下半身無敵、そこから発生まで足元無敵あり</td></tr>
+<tr><th scope="row">レオナ</th><td>硬直の終わり際に無敵あり</td></tr>
+<tr><th scope="row">リョウ</th><td>かわし移動攻撃→遠Aの猶予は1F（遠Aの発生は4F）</td></tr>
+<tr><th scope="row">ラルフ</th><td>かわし移動攻撃→屈Dの猶予は3F（屈Dの発生は6F）</td></tr>
+<tr><th scope="row">ウィップ</th><td>かわし移動攻撃→屈Bの猶予は1F（屈Bの発生は8F）</td></tr>
+<tr><th scope="row">チャン</th><td>攻撃判定の位置が高いので、しゃがみに当たらないキャラが多そう</td></tr>
+<tr><th scope="row">紅丸</th><td>ネオジオフリークの攻略本ではヒット時有利ですが、実際はヒット時五分です</td></tr>
+</tbody></table>
 
-<h2>紅丸：ネオジオフリークとMOTの確認結果の差</h2>
-<p><a href="https://x.com/mot_csb/status/1358447124443066369">2021年2月7日の本人投稿</a>は、攻略本を基礎資料として補足・訂正する方針を示し、具体例として<strong>紅丸のかわし移動攻撃のヒット時硬直差</strong>を挙げている。</p>
-<div class="scroll"><table><thead><tr><th>資料</th><th>記載</th><th>区別</th></tr></thead><tbody>
-<tr><th scope="row">ネオジオフリークの攻略本</th><td>ヒット時有利</td><td>2021年にMOTが紹介した攻略本の記載。原本の表を今回直接再照合したわけではない。</td></tr>
-<tr><th scope="row">MOTの本人確認</th><td><strong>ヒット時五分</strong></td><td>本人が攻略本との差として示した結果。</td></tr>
-</tbody></table></div>
-<p>旧攻略本の記載をMOT自身の観察と同列にしない。別の技や全キャラのかわし移動攻撃がヒット時五分と一般化しない。</p>
-
-<h2>2021年の本人Googleシート原表を回収：32キャラの全フレーム一覧</h2>
-<p>2021年2月の本人<a href="https://x.com/mot_csb/status/1358308456394989570">調査開始の投稿</a>、<a href="https://x.com/mot_csb/status/1358811178240155649">硬直差順の紹介</a>、<a href="https://x.com/mot_csb/status/1396376047206113284">5月23日の原投稿</a>をつなぐと、最後の投稿に<strong>実際のGoogleスプレッドシートへのリンク</strong>が残っていた。<a href="https://docs.google.com/spreadsheets/d/1fD18mzjFuQ1nX2BmdeOQXpn2VcaG2xbK1lCpT19kNwA/edit">原シート「KOF99かわし移動攻撃の硬直差」</a>には「シート1」「屈状態へのヒット可否」「発生前の隙順」「ヒット時硬直差順」「発生順」の5タブがある。</p>
-<p>2026年11月20日に「シート1」のキャラ一覧32件を取得し、別の3つの並べ替えタブにある同32件・各数値と全件照合したところ<strong>不一致0件</strong>だった。以下は<strong>原シートの表示値</strong>であり、新たなゲーム動作実測ではない。原表の単位表記はフレーム。3列のガード時硬直差は原表の<strong>「事前弱」「事前強」「事前CD」</strong>を保持し、それぞれの具体的な実戦入力条件は説明がなく未確定のままとする。右側16キャラの元列見出しには「発生前の無敵/隙」とも書かれており、左側と表記が異なる。この復元表は同じ列位置の数値として並べているが、右側の原ラベル差を隠さない。</p>
-<div class="scroll"><table style="min-width:950px"><thead><tr><th>キャラ名</th><th>発生F</th><th>発生前の無敵</th><th>発生前の隙</th><th>ヒット時硬直差</th><th>ガード時：事前弱</th><th>ガード時：事前強</th><th>ガード時：事前CD</th></tr></thead><tbody>
-<tr><th scope="row">K'</th><td>9</td><td>5</td><td>3</td><td>+4</td><td>-6</td><td>+2</td><td>+6</td></tr>
-<tr><th scope="row">アテナ</th><td>9</td><td>3</td><td>5</td><td>+4</td><td>-6</td><td>+2</td><td>+6</td></tr>
-<tr><th scope="row">マキシマ</th><td>9</td><td>5</td><td>3</td><td>+3</td><td>-7</td><td>+1</td><td>+5</td></tr>
-<tr><th scope="row">ケンスウ</th><td>11</td><td>4</td><td>6</td><td>±0</td><td>-10</td><td>-2</td><td>+2</td></tr>
-<tr><th scope="row">紅丸</th><td>8</td><td>3</td><td>4</td><td>±0</td><td>-10</td><td>-2</td><td>+2</td></tr>
-<tr><th scope="row">チン</th><td>14</td><td>6</td><td>7</td><td>-7</td><td>-17</td><td>-9</td><td>-5</td></tr>
-<tr><th scope="row">真吾</th><td>12</td><td>5</td><td>6</td><td>+3</td><td>-7</td><td>+1</td><td>+5</td></tr>
-<tr><th scope="row">パオ</th><td>7</td><td>4</td><td>2</td><td>+3</td><td>-7</td><td>+1</td><td>+5</td></tr>
-<tr><th scope="row">テリー</th><td>9</td><td>0</td><td>8</td><td>+5</td><td>-5</td><td>+3</td><td>+7</td></tr>
-<tr><th scope="row">キング</th><td>14</td><td>6</td><td>7</td><td>±0</td><td>-10</td><td>-2</td><td>+2</td></tr>
-<tr><th scope="row">アンディ</th><td>11</td><td>4</td><td>6</td><td>-1</td><td>-11</td><td>-3</td><td>+1</td></tr>
-<tr><th scope="row">マリー</th><td>11</td><td>6</td><td>4</td><td>-1</td><td>-11</td><td>-3</td><td>+1</td></tr>
-<tr><th scope="row">ジョー</th><td>8</td><td>3</td><td>4</td><td>-3</td><td>-13</td><td>-5</td><td>-1</td></tr>
-<tr><th scope="row">香澄</th><td>11</td><td>4</td><td>6</td><td>+7</td><td>-3</td><td>+5</td><td>+9</td></tr>
-<tr><th scope="row">舞</th><td>14</td><td>5</td><td>8</td><td>-1</td><td>-11</td><td>-3</td><td>+1</td></tr>
-<tr><th scope="row">香緋</th><td>8</td><td>3</td><td>4</td><td>-1</td><td>-11</td><td>-3</td><td>+1</td></tr>
-<tr><th scope="row">リョウ</th><td>9</td><td>5</td><td>3</td><td>+5</td><td>-5</td><td>+3</td><td>+7</td></tr>
-<tr><th scope="row">キム</th><td>10</td><td>6</td><td>3</td><td>-3</td><td>-13</td><td>-5</td><td>-1</td></tr>
-<tr><th scope="row">ロバート</th><td>12</td><td>2</td><td>9</td><td>+6</td><td>-4</td><td>+4</td><td>+8</td></tr>
-<tr><th scope="row">チャン</th><td>11</td><td>3</td><td>7</td><td>±0</td><td>-10</td><td>-2</td><td>+2</td></tr>
-<tr><th scope="row">ユリ</th><td>9</td><td>5</td><td>3</td><td>+3</td><td>-7</td><td>+1</td><td>+5</td></tr>
-<tr><th scope="row">チョイ</th><td>11</td><td>5</td><td>5</td><td>+2</td><td>-8</td><td>±0</td><td>+4</td></tr>
-<tr><th scope="row">タクマ</th><td>9</td><td>5</td><td>3</td><td>+6</td><td>-4</td><td>+4</td><td>+8</td></tr>
-<tr><th scope="row">ジョン</th><td>12</td><td>4</td><td>7</td><td>+2</td><td>-8</td><td>±0</td><td>+4</td></tr>
-<tr><th scope="row">レオナ</th><td>11</td><td>4</td><td>6</td><td>-7</td><td>-17</td><td>-9</td><td>-5</td></tr>
-<tr><th scope="row">京－１</th><td>7</td><td>4</td><td>2</td><td>-5</td><td>-15</td><td>-7</td><td>-3</td></tr>
-<tr><th scope="row">ラルフ</th><td>17</td><td>8</td><td>8</td><td>+9</td><td>-1</td><td>+7</td><td>+11</td></tr>
-<tr><th scope="row">京－２</th><td>8</td><td>3</td><td>4</td><td>-1</td><td>-11</td><td>-3</td><td>+1</td></tr>
-<tr><th scope="row">クラーク</th><td>15</td><td>6</td><td>8</td><td>+3</td><td>-7</td><td>+1</td><td>+5</td></tr>
-<tr><th scope="row">京</th><td>11</td><td>6</td><td>4</td><td>-3</td><td>-13</td><td>-5</td><td>-1</td></tr>
-<tr><th scope="row">ウィップ</th><td>10</td><td>6</td><td>3</td><td>+9</td><td>-1</td><td>+7</td><td>+11</td></tr>
-<tr><th scope="row">庵</th><td>12</td><td>4</td><td>7</td><td>±0</td><td>-10</td><td>-2</td><td>+2</td></tr>
-</tbody></table></div>
-<p>読み取り例：<strong>テリーの発生前の無敵は0</strong>、<strong>パオと京－１は発生前の隙2F</strong>、ウィップとラルフはヒット時+9F。ガード時の3数値は上記の原列見出しの条件付きであり、無条件の単一G硬直差として扱わない。</p>
-
-<h2>屈状態へのヒット可否：本人シートに記録された空振り対象</h2>
-<p>元シートの「屈状態へのヒット可否」タブは、<strong>相手キャラ</strong>とその相手に<strong>かわし移動攻撃が空振りするキャラ</strong>を次のように列挙する。原表は5種類の代表的な相手のみで、<strong>空欄や未掲載キャラを確実にヒットする扱いにはしない</strong>。画像リンクだけの段階より具体的な組合せが復元できた。</p>
-<div class="scroll"><table><thead><tr><th>しゃがみ状態の相手キャラ</th><th>かわし移動攻撃が空振りする使用キャラ（原表表記）</th></tr></thead><tbody>
+<h2>しゃがんだ相手に空振りする組み合わせ</h2>
+<p>代表的な5キャラをしゃがませて調べた結果です。空欄は空振りするキャラが見つからなかった相手で、表にない相手は調べていません。</p>
+<table><thead><tr><th>しゃがんだ相手</th><th>かわし移動攻撃が空振りするキャラ</th></tr></thead><tbody>
 <tr><th scope="row">チョイ</th><td>紅丸、真吾、テリー、ジョー、ユリ、タクマ、マリー</td></tr>
 <tr><th scope="row">庵</th><td>キム</td></tr>
-<tr><th scope="row">テリー</th><td>原表は空欄</td></tr>
+<tr><th scope="row">テリー</th><td>—</td></tr>
 <tr><th scope="row">ラルフ</th><td>チャン</td></tr>
-<tr><th scope="row">マキシマ</th><td>原表は空欄</td></tr>
-</tbody></table></div>
+<tr><th scope="row">マキシマ</th><td>—</td></tr>
+</tbody></table>
 
-<h3>空振りが明記された組合せと、キャラクター別記事への導線</h3>
-<p>表で<strong>明示された空振りは計9組合せ</strong>。内訳は、<strong>屈みチョイを相手に7キャラ（紅丸・真吾・テリー・ジョー・ユリ・タクマ・マリー）</strong>、<strong>屈み庵を相手にキム</strong>、<strong>屈みラルフを相手にチャン</strong>である。テリーとマキシマの相手欄は空欄であり、<strong>空欄＝全員ヒットする</strong>とは解釈しない。原表は全32キャラ同士の総当たり調査の完了を意味しない。</p>
-<p><strong>攻撃側から探す：</strong><a href="./shingo-crouch-throws-stun-2021.html">真吾</a> ／ <a href="./terry-power-charge-crack-2021-2023.html">テリー</a> ／ <a href="./joe-combos-guard-crush-2021.html">ジョー</a> ／ <a href="./yuri-combos-matchups-corrections-2021.html">ユリ</a> ／ <a href="./kim-6a-hangetsuzan-hishokyaku-2021.html">キム</a> ／ <a href="./chang-iron-ball-chip-throw-matchups-2021-2024.html">チャン</a>。<strong>相手側から探す：</strong><a href="./choi-guard-crush-unblockable-2021-2024.html">屈みチョイの7件</a>。紅丸・タクマ・マリーについても元表の記載はここに保存し、資料が薄い段階で独立記事を増やさない。</p>
-<p><strong>技を区別：</strong>キムの特殊技6Aの対屈み庵、真吾の打撃投げの段別当否、ユリのMAX版236236AorCが屈みジョンに空振りする件は、それぞれ<strong>かわし移動攻撃とは別の技・条件</strong>。原表の9組合せを別技の成否に流用しない。</p>
-<h2>チャンを相手にした連続技：2021年の本人確認4件</h2>
-<p><a href="https://docs.google.com/spreadsheets/d/1fD18mzjFuQ1nX2BmdeOQXpn2VcaG2xbK1lCpT19kNwA/edit">2021年のMOT本人の原Googleシート「シート1」</a>のキャラ別メモに、<strong>チャンを相手にして、かわし移動攻撃から通常技で追撃できた</strong>との確認が4キャラ分残っている。同じ原表の32キャラ一覧から発生・ヒット時硬直差を照合し、始動技と追撃技を分けて記録する。</p>
-<div class="scroll"><table><thead><tr><th>使用キャラ</th><th>かわし移動攻撃の発生</th><th>ヒット時硬直差</th><th>対チャンの本人確認</th><th>関連ページ</th></tr></thead><tbody>
-<tr><th scope="row">ロバート</th><td>12F</td><td>+6F</td><td>かわし移動攻撃→遠Aまたは遠B</td><td><a href="./robert-crouching-matchups-combos-2021.html">ロバート研究</a></td></tr>
-<tr><th scope="row">タクマ</th><td>9F</td><td>+6F</td><td>かわし移動攻撃→遠Aまたは遠B</td><td><a href="./armor-mode-evasion-loop-2024.html">AM中の別の研究</a></td></tr>
-<tr><th scope="row">アテナ</th><td>9F</td><td>+4F</td><td>かわし移動攻撃→屈B</td><td><a href="./athena-special-phoenix-st-2015-2024.html">アテナ研究</a></td></tr>
-<tr><th scope="row">香澄</th><td>11F</td><td>+7F</td><td>かわし移動攻撃→屈D</td><td><a href="./striker-clark-unblockable-2024.html">STクラークを使う別研究</a></td></tr>
-</tbody></table></div>
-<p><strong>表の4件はモードの詳細指定がないかわし移動攻撃からの追撃記録</strong>であり、タクマの<strong>アーマーモード中のお手玉</strong>や、香澄の<strong>飛び道具空振りからSTクラークを呼ぶガード不能連係</strong>と同一条件で確認されたとみなさない。元シートの確認メモにはチャンの<strong>立ち／屈み、距離、画面位置、モード</strong>の詳細が記されていないので、新たに特定しない。ヒット時有利Fが同じであっても、追撃技・キャラごとの到達条件を一律とはしない。防御側としてのチャンの研究は<a href="./chang-iron-ball-chip-throw-matchups-2021-2024.html">チャン記事</a>を参照。</p>
-<h2>本人原シートのキャラ別メモ</h2>
-<p>「シート1」のキャラ別備考欄も回収した。数値・確認と、まだ本人が予想していた内容は区別して示す。</p>
+<h2>ヒット後の追撃</h2>
+<p>チャンを相手に、次の4キャラはかわし移動攻撃から通常技で追撃できました（チャンの立ち・しゃがみ、距離の条件は書かれていません）。</p>
+<table><thead><tr><th>キャラ</th><th>発生</th><th>ヒット時</th><th>追撃</th></tr></thead><tbody>
+<tr><th scope="row">ロバート</th><td class="num">12F</td><td class="num">+6F</td><td>遠Aまたは遠B</td></tr>
+<tr><th scope="row">タクマ</th><td class="num">9F</td><td class="num">+6F</td><td>遠Aまたは遠B</td></tr>
+<tr><th scope="row">アテナ</th><td class="num">9F</td><td class="num">+4F</td><td>屈B</td></tr>
+<tr><th scope="row">香澄</th><td class="num">11F</td><td class="num">+7F</td><td>屈D</td></tr>
+</tbody></table>
+<p>ラルフは、一般的には屈Dでつなぎますが、強ガトリングアタックの方がダメージが高くおすすめです。かわし移動をレバーNで出し、すぐにレバーを4か1に入れればタメは余裕で間に合います。どちらが届くかは相手キャラと立ち食らい・屈食らいで細かく変わり、真吾には立ち・屈どちらでも屈Dが届かない感じで、強ガトリングアタックなら届きます。どう頑張ってもつながらない場合は、遠Dなどをガードさせにいく方がよさそうです。</p>
+
+<details class="more"><summary>詳しく：マキシマのかわし移動攻撃と対策</summary>
+<p>マキシマのかわし移動攻撃は、予備動作5F（全身無敵）＋3F、発生9F、攻撃判定の持続5F、硬直12F、全体25F、ガード時−7F／+1F／+5F、ヒット時+3Fです。「かなり厄介な性能」で、屈Bの連打がきくキャラなら屈B連打で追い払えるかもしれません。</p>
+<p>配信では、マキシマのかわし移動攻撃に前方ノーマルジャンプをかみ合わせて背後に着地し、連続技を決めていました。</p>
+</details>
+
+<details class="more"><summary>詳しく：かわし移動の使い方（投げ対策・突進技・対空）</summary>
 <ul>
-<li><strong>テリー</strong>：発生前の無敵なし</li>
-<li><strong>アンディ</strong>：発生前の隙の前半3Fは食らい判定低め</li>
-<li><strong>リョウ</strong>：かわし移動攻撃→遠Aの連続技の猶予は1F（遠Aの発生は4F）</li>
-<li><strong>レオナ</strong>：硬直の終わり際に無敵あり</li>
-<li><strong>ラルフ</strong>：かわし移動攻撃→屈Dの連続技の猶予は3F（屈Dの発生は6F）</li>
-<li><strong>ウィップ</strong>：かわし移動攻撃→屈Bの連続技の猶予は1F（屈Bの発生は8F）</li>
-<li><strong>チャン</strong>：かわし移動攻撃の判定位置が高いためしゃがみに当たらないキャラが多そう</li>
-<li><strong>ジョン</strong>：発生前の隙は下半身無敵→発生まで足元無敵あり</li>
+<li><b>投げ対策</b>：かわし移動中は投げられ判定がなくなるので、多用すれば被弾率を下げられないか、という案です。前かわし→かわし移動攻撃と、後ろかわし→戻って投げ・キャンセル必殺技を混ぜます。</li>
+<li><b>突進技の先端当て</b>：前かわしを合わせるとすり抜けてかわし移動攻撃も当たらないことがあります。先端当ての場合は後ろかわしを合わせれば、突進技を空振りさせて連続技やコマンド投げが決まるかもしれません。</li>
+<li><b>対空</b>：屈Bを空振りさせて相手のジャンプ攻撃を引き付け、最速で後ろかわしを出せば低リスクで下がれそう、という案です（「要確認」）。</li>
+<li><b>空ジャンプから</b>：低ジャンプ（何も出さない）→着地前かわし→かわし移動攻撃で、空ジャンプに反応して技を出した相手にかわし移動攻撃を当てる、という「妄想」です。ラルフならかわし移動攻撃→強ガトリングアタックが決まるかもしれません。</li>
+<li><b>ダッシュ中の前かわし</b>：おそらく移動距離は伸びません。緊急回避では通常の前転と微ダッシュ前転を混ぜて距離を惑わせましたが、それはできなくなっています（と思います）。代わりにかわし移動攻撃で幻惑するのがよさそうです。</li>
+<li><b>出始めを潰す</b>：かわし移動攻撃の出始めを潰すとカウンターヒットになる場合があります。ラルフでリョウのかわし移動攻撃に置き垂直小JCDを当てると、カウンターヒット→馬乗りバルカンパンチ <span class="vt">強</span> が決まる場合がありました。</li>
 </ul>
-<p>同シートには、<strong>発生は早いほど相手の技の硬直へ確定させやすく、発生前の隙は短いほどよい</strong>という本人の考えと、ヒット時の微有利・微不利程度は誤差という本人評価も記録されている。特定キャラの数値が有利でも、相手との距離や食らい姿勢によって追撃可能性が異なるという本人の<a href="https://x.com/mot_csb/status/1358811178240155649">2021年当時の指摘</a>は維持する。</p>
-<h2>ラルフ：かわし移動攻撃からの追撃の成立条件</h2>
-<p>MOT本人の2021年2～5月の記録を比較。詳細なラルフ単体の戦術評価は<a href="./ralf-frame-and-strategy-2024.html">既存のラルフ研究</a>にもあるため、ここではシステム上の制約を中心に整理する。</p>
-<div class="scroll"><table><thead><tr><th>ルート・状況</th><th>本人の記録</th><th>出典</th></tr></thead><tbody>
-<tr><td>かわし移動攻撃→屈D</td><td>一般的な締めだが、相手キャラと立ち食らい／屈食らいで届くか変わる。<strong>真吾には立・屈どちらでも屈Dが届かない感触</strong>。</td><td><a href="https://x.com/mot_csb/status/1393475074053709824">2021/5/15</a>・<a href="https://x.com/mot_csb/status/1396036140814061571">5/22</a></td></tr>
-<tr><td>かわし移動攻撃→強ガトリングアタック</td><td>屈Dより高ダメージとの本人評価。真吾には屈Dが届かない場合に強ガトリングアタックなら届くとした。かわし移動を<strong>レバーNで出し、直後に4または1</strong>へ入力すればタメが間に合う。</td><td><a href="https://x.com/mot_csb/status/1361458740570984449">2021/2/15</a>・<a href="https://x.com/mot_csb/status/1393477477322792961">5/15</a></td></tr>
-<tr><td>どちらの追撃も決まらない条件</td><td>本人は遠D等をガードさせに行く運用を提案した。</td><td><a href="https://x.com/mot_csb/status/1396036140814061571">2021/5/22</a>。本人の戦術案。</td></tr>
-<tr><td>リョウのかわし移動攻撃の出始めを潰す</td><td><strong>ラルフの置き垂直小JCD（CH）→強版馬乗りバルカンパンチ</strong>が決まる場合を本人が確認。</td><td><a href="https://x.com/mot_csb/status/1359734945980190722">2021/2/11</a>。相手＝リョウ、CHかつ場合による条件。</td></tr>
-</tbody></table></div>
-<p>最後の例では本人が、かわし移動攻撃の出始めを潰すとカウンターヒットがつく場合があると記載。<strong>通常かわし移動の無敵と、派生攻撃の出始め・被カウンター判定は別</strong>として保持する。</p>
+<p>2010年の投稿では、かわし移動の動作開始直後が投げにも無敵なのを「英断とさえいえると思います」と評価し、後ろかわしはなくしてバックステップに無敵をつけるなどでもよかった気がする、と書いています。</p>
+</details>
 
-<h2>ダッシュからの前かわし：移動距離は伸びるか</h2>
-<p><a href="https://x.com/mot_csb/status/1414448428872998915">2021年7月12日の本人投稿</a>で、<strong>ダッシュ中に前かわしを出しても移動距離が伸びないのでは</strong>と推測。従来の緊急回避では通常前転と微ダッシュ前転の距離を混ぜる方法があったと比較しているが、99の移動距離は本人自身「おそらく」「と思います」と留保した。<strong>ダッシュ前かわしの移動距離一定を確定結果としない</strong>。</p>
+<h2>気になること</h2>
+<ul>
+<li>ガード時の「事前弱」「事前強」「事前CD」が何の条件を指すか。</li>
+<li>表の5キャラ以外の相手をしゃがませたとき、空振りする組み合わせはあるか。</li>
+</ul>
 
-<h2>2021年6月：突進技を先端で使われたときの後方かわし</h2><p><a href="https://x.com/mot_csb/status/1403723557280968708">2021年6月12日の本人投稿</a>では、突進技の先端当てに<strong>前方かわし移動</strong>を合わせると、相手をすり抜けてしまい、派生のかわし移動攻撃も当たらなくなる場合があると説明。その代案として、<strong>後方かわし移動で突進技を空振りさせ、連続技またはコマンド投げで反撃</strong>する可能性を提示した。本人の文末は成立を示唆する<strong>「かも」</strong>段階の案であり、対象の突進技・間合い・使用キャラを特定した確定反撃の一覧ではない。<a href="./king-gc-evasion-tornado95-2021-2023.html">2023年のキングのトルネードキック95対策</a>と関連するが、通常かわしとGCかわしの成立条件を混同しない。</p>
-<h2>2021年5月：屈B空振りを利用した後方かわしの対空案</h2><p><a href="https://x.com/mot_csb/status/1392696583666290688">2021年5月13日のMOT本人投稿</a>は、<strong>対空場面で屈Bを空振りさせ、相手のジャンプ攻撃を引き付けてから最速で後方かわしを出す</strong>戦術が有効かという疑問。後方へ低リスクで退避できそうだとの本人の見立てだが、<strong>「要確認」と明記されている</strong>。相手ジャンプ攻撃、屈Bの使用キャラ、空振り硬直とかわし移動の受付タイミングはこの投稿にないため、確定対策・全キャラ共通仕様とはしない。</p>
-<h2>2021年5月：空ジャンプから着地前かわし移動攻撃へ</h2><p><a href="https://x.com/mot_csb/status/1385447113765449728">2021年4月26日の本人投稿</a>は、<strong>低ジャンプ（攻撃を出さない）→着地→前かわし→かわし移動攻撃</strong>という行動を提案。相手が空ジャンプへ反応して技を出したところに、かわし移動攻撃を当てるという読み合いの構想である。ラルフなら<strong>かわし移動攻撃→強ガトリングアタック</strong>が決まるかもしれないとも記している。本人自身が「妄想」「かも」として提示した<strong>未検証の戦術仮説</strong>であり、連続技の成立確認や成功率を示す原文ではない。</p>
-<h2>他の「かわし」との区別・関連記事</h2>
-<p>このページは<strong>通常のかわし移動と派生かわし移動攻撃</strong>について扱う。<a href="./input-buffer-cancels-throw-tech-2021-2023.html">GC前転→GCかわし攻撃</a>は防御側がガードキャンセルで行う別の連係であり、<a href="./armor-mode-evasion-loop-2024.html">AM中のかわし移動攻撃お手玉</a>はモード限定の連続技である。<a href="./maxima-quake-time-stop-2012-2024.html">マキシマ研究</a>には時間停止・確定地震・かわし移動攻撃への本人評価が、<a href="./king-gc-evasion-tornado95-2021-2023.html">キング対策研究</a>にはラルフを使用したGCかわし攻撃の確認例がある。記事間で発生値や確認範囲を無理に統一しない。</p>
-
-<h2>原シート回収後も残る確認事項</h2>
-<p><strong>全32キャラのフレーム表、屈み状態の代表5相手に対する空振り表、原シートのキャラ別備考を直接回収済み。</strong>ただし元表が記入していない屈み相手・位置関係、3種類のガード時硬直差の「事前弱／強／CD」の具体的な受付条件、マキシマを含む各キャラのフレーム値を元攻略本や実機で再検証する作業、ダッシュからの前かわし移動距離は未実施。<a href="/kof-kininaru.html#kof99">気になること</a>で管理する。</p>
-<p><a href="https://kofplayers.hatenablog.jp/entry/2021/05/14/000611">2021年の本人「KOF99：攻略メニュー」</a>には、通常投げ外し・着地屈ガード無敵・投げ間合い・かわし移動攻撃の四つの資料見出しがある。<strong>メニューでは4件目のリンクが3件目の投げ間合い表と重複している</strong>が、<a href="https://x.com/mot_csb/status/1396376047206113284">2021年5月23日の本人X</a>から正しい別GoogleシートURLを回収できた。これで四つの元資料へのアクセス経路を確保できた。<a href="./input-buffer-cancels-throw-tech-2021-2023.html">通常投げ外し</a>／<a href="./landing-crouch-guard-invincible-2015-2025.html">着地屈G無敵</a>／<a href="./throw-range-table-source-2021.html">投げ間合い</a>。</p>
-<p><a href="/research/kof99/index.html">KOF'99研究目次へ</a> ／ <a href="/kof-kininaru.html#kof99">KOF'99 気になること</a></p>
-</div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
+<h2>出典</h2>
+<ul class="src">
+<li>フレーム表：<a href="https://docs.google.com/spreadsheets/d/1fD18mzjFuQ1nX2BmdeOQXpn2VcaG2xbK1lCpT19kNwA/edit">KOF99かわし移動攻撃の硬直差（Googleスプレッドシート）</a> ／ <a href="https://x.com/mot_csb/status/1358308456394989570">データ画像（2021/2/7）</a> ／ <a href="https://x.com/mot_csb/status/1358811178240155649">ヒット時の硬直差順（2/8）</a> ／ <a href="https://x.com/mot_csb/status/1396376047206113284">屈状態に対するヒット可否（5/23）</a> ／ <a href="https://kofplayers.hatenablog.jp/entry/2021/05/14/000611">KOF99：攻略メニュー</a></li>
+<li>マキシマ：<a href="https://x.com/mot_csb/status/1357639297994682368">2021/2/5</a> ／ <a href="https://x.com/mot_csb/status/1361684168288006144">対策（2/16）</a> ／ 紅丸：<a href="https://x.com/mot_csb/status/1358447124443066369">2021/2/7</a></li>
+<li>ラルフ：<a href="https://x.com/mot_csb/status/1393475074053709824">屈Dが届かない（2021/5/15）</a> ／ <a href="https://x.com/mot_csb/status/1393477477322792961">強ガトリングアタック（5/15）</a> ／ <a href="https://x.com/mot_csb/status/1396036140814061571">相手と食らい姿勢で変わる（5/22）</a> ／ <a href="https://x.com/mot_csb/status/1361458740570984449">屈D締めと強ガトリング（2/15）</a> ／ <a href="https://x.com/mot_csb/status/1359734945980190722">出始めを潰す（2/11）</a></li>
+<li>使い方：<a href="https://x.com/mot_csb/status/1367392256441774080">投げ対策（2021/3/4）</a> ／ <a href="https://x.com/mot_csb/status/1403723557280968708">突進技先端当て（6/12）</a> ／ <a href="https://x.com/mot_csb/status/1392696583666290688">対空（5/13）</a> ／ <a href="https://x.com/mot_csb/status/1385447113765449728">空ジャンプから（4/23）</a> ／ <a href="https://x.com/mot_csb/status/1414448428872998915">ダッシュ中の前かわし（7/12）</a> ／ <a href="https://x.com/mot_csb/status/3378782320726016">かわし移動の投げ無敵（2010/11/13）</a> ／ <a href="/kofanalysis.htm">KOFシリーズのシステムについてのメモ（2003〜2004年）</a></li>
+<li>関連：<a href="/research/kof99/armor-mode-evasion-loop-2024.html">アーマーモードのかわし移動攻撃お手玉</a> ／ <a href="/research/kof99/king-gc-evasion-tornado95-2021-2023.html">キング（GCかわし移動攻撃）</a> ／ <a href="/research/kof99/ralf-frame-and-strategy-2024.html">ラルフ</a> ／ <a href="/kof-kininaru.html#kof99">気になること</a> ／ <a href="/research/kof99/index.html">KOF'99研究アーカイブ</a></li>
+</ul>
+</div></main>
+<footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer>
+</body></html>
