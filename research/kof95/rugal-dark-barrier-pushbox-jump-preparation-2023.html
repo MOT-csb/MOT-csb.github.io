@@ -1,36 +1,32 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'95：ルガールのダークバリヤーの押し合い判定変化・ジャンプ予備動作への影響（2023年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof95-top.html">KOF'95</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap"><!-- chara-nav:start --><nav class="chara-nav" aria-label="キャラクター別のページ"><p class="cn-head"><a href="/kof95-top.html#c-rugal">KOF&#x27;95 キャラ選択</a><span>›</span><b>ルガール</b></p><p class="cn-links"><a href="/research/kof95/rugal-frame-data-2011.html">ブログの表（2011年）</a></p><details open><summary>攻略・研究ページ 9件</summary><ul><li><a href="/research/kof95/rugal-dark-barrier-counters-2011.html">ダークバリヤー対策（キャラ別・2011年）</a></li><li><a href="/research/kof95/rugal-barrier-countermeasures-2023.html">ダークバリヤー対策・判定の追加調査（2023年）</a></li><li><b>ダークバリヤーの押し合い判定とジャンプ予備動作</b></li><li><a href="/research/kof95/rugal-kaiser-wave-startup-punishes-2023.html">カイザーウェイブを発生前に潰す技</a></li><li><a href="/research/kof95/rugal-stun-combos-2023-2024.html">気絶連続技と重なり起き攻め</a></li><li><a href="/research/kof95/rugal-close-b-triple-genocide-2023.html">近B×3→ジェノサイドカッターの入力</a></li><li><a href="/research/kof95/rugal-reppuken-strength-hits-2024.html">密着烈風拳の弱強の当たり方</a></li><li><a href="/research/kof95/rugal-throw-offense-counterplay-2024.html">通常投げを軸にした攻め方と対策</a></li><li><a href="/research/kof95/character-notes-2011-2024.html#n-rugal">キャラクター別メモ</a></li></ul></details></nav><!-- chara-nav:end --><h1>KOF'95：ルガールのダークバリヤーの押し合い判定変化・ジャンプ予備動作への影響（2023年）</h1>
-<p>2023年6月4～7日にMOTがXで示した、<strong>ダークバリヤーの押し合い判定・食らい判定・攻撃判定の位置関係</strong>と、<strong>屈Bキャンセル時の押し合い判定変化</strong>、<strong>相手のジャンプ予備動作でバリヤーを食らう現象</strong>をまとめる。本人が画像で観察して報告したことと、内部処理に関する推測を分ける。個別の反撃技一覧は既存の<a href="./rugal-barrier-countermeasures-2023.html">ダークバリヤー対策・反撃記事</a>に保持する。</p>
-<h2>6月5日：本人が画像に付した判定の色分け</h2>
-<p>MOTはダークバリヤーの<strong>弱版・強版の判定画像</strong>を公開し、次のように区別した。</p>
-<table><thead><tr><th>画像上の色</th><th>MOTの説明</th><th>留保</th></tr></thead><tbody>
-<tr><td>白</td><td><strong>押し合い判定</strong></td><td>相手キャラとの位置関係に関連</td></tr>
-<tr><td>青</td><td><strong>食らい判定</strong></td><td>技ごとの攻撃判定と接触する部位</td></tr>
-<tr><td>赤</td><td><strong>攻撃判定</strong></td><td>本人は<strong>飛び道具判定かもしれない</strong>と留保</td></tr>
-<tr><td>飛び道具の反射判定</td><td>空中虎煌拳を返せるため、表示された赤色部分より上下に広そうと推測</td><td><strong>実画像で座標を実測した結果ではない</strong></td></tr>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'95：ダークバリヤーの判定と入り込み方｜Come sono bravo?</title><meta name="description" content="ダークバリヤーは押し合い判定と攻撃判定の隙間が広いので、早めに飛び込めばバリヤーに引っかからずにルガールの前へ入り込めます。弱強の判定、屈Bキャンセルで押し合い判定が低くなる現象、垂直ジャンプの予備動作で食らうキャラ、先読みダッシュ。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:960px}.article table{min-width:0;width:100%}.article th,.article td{overflow-wrap:anywhere;vertical-align:top}.article a{overflow-wrap:anywhere}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}.lead{font-size:1.05em}.vt{display:inline-block;font-size:.85em;line-height:1.45;padding:0 6px;margin-left:4px;border:1px solid var(--line,#ccd);border-radius:4px;font-weight:600;white-space:nowrap}.legend{font-size:.92em;color:var(--sub,#555)}.src li{font-size:.92em}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h2{font-size:1.15em;margin-top:1.2rem}details.more h3{font-size:1.05em}@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}.article th,.article td{min-width:80px}}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof95-top.html">KOF'95</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><!-- chara-nav:start --><nav class="chara-nav" aria-label="キャラクター別のページ"><p class="cn-head"><a href="/kof95-top.html#c-rugal">KOF&#x27;95 キャラ選択</a><span>›</span><b>ルガール</b></p><p class="cn-links"><a href="/research/kof95/rugal-frame-data-2011.html">ブログの表（2011年）</a></p><details open><summary>攻略・研究ページ 9件</summary><ul><li><a href="/research/kof95/rugal-dark-barrier-counters-2011.html">ダークバリヤー対策（キャラ別・2011年）</a></li><li><a href="/research/kof95/rugal-barrier-countermeasures-2023.html">ダークバリヤー対策・判定の追加調査（2023年）</a></li><li><b>ダークバリヤーの押し合い判定とジャンプ予備動作</b></li><li><a href="/research/kof95/rugal-kaiser-wave-startup-punishes-2023.html">カイザーウェイブを発生前に潰す技</a></li><li><a href="/research/kof95/rugal-stun-combos-2023-2024.html">気絶連続技と重なり起き攻め</a></li><li><a href="/research/kof95/rugal-close-b-triple-genocide-2023.html">近B×3→ジェノサイドカッターの入力</a></li><li><a href="/research/kof95/rugal-reppuken-strength-hits-2024.html">密着烈風拳の弱強の当たり方</a></li><li><a href="/research/kof95/rugal-throw-offense-counterplay-2024.html">通常投げを軸にした攻め方と対策</a></li><li><a href="/research/kof95/character-notes-2011-2024.html#n-rugal">キャラクター別メモ</a></li></ul></details></nav><!-- chara-nav:end --><h1>KOF'95：ダークバリヤーの判定と入り込み方</h1>
+<p class="lead">ダークバリヤーは押し合い判定（白）と攻撃判定（赤）の隙間が広いので、その隙間に入り込めます。前方ジャンプは間合いよりタイミングが大事で、バリヤーより早めに飛び込めていれば、バリヤーに引っかからずに入り込め、ジャンプ攻撃から連続技も決まるようです（2023年）。</p>
+<h2>バリヤーの判定</h2>
+<p>弱強の判定画像では次のように色分けしています（<a href="https://x.com/mot_csb/status/1665629473646211073">元の画像</a>）。</p>
+<table><thead><tr><th>色</th><th>判定</th></tr></thead><tbody>
+<tr><td>白</td><td>押し合い判定</td></tr>
+<tr><td>青</td><td>食らい判定</td></tr>
+<tr><td>赤</td><td>攻撃判定（飛び道具判定かも）</td></tr>
 </tbody></table>
-<p>本人は<strong>白と赤の間に隙間があることが、ルガールとバリヤーの中へ入り込める理由</strong>だと説明した。画像そのものと解釈については<a href="https://x.com/mot_csb/status/1665629473646211073">2023/06/05の本人投稿</a>を参照。元投稿にはピクセル・座標の数値はないため補わない。</p>
-<h2>屈Bから強ダークバリヤーを出すと押し合い判定が低くなる場合</h2>
-<p>同日、MOTは<strong>ルガールの屈Bからバリヤーを出すと、押し合い判定が低くなる場合がある</strong>と本人の画像3枚付きで報告した。</p>
+<p>補足：飛び道具を跳ね返す判定は、空中虎煌拳を返せるので、おそらく赤よりもっと上下に広いと考えています。</p>
+<p>発生は弱強とも6Fで、ガードキャンセルで確定させやすい発生です。</p>
+<h2>入り込み方</h2>
+<table><thead><tr><th>方法</th><th>ポイント</th></tr></thead><tbody>
+<tr><td>先読み前方ジャンプ</td><td>バリヤーより早めに飛び込めば入り込めて、連続技も決まる。先読みになるが、リターンが大きいのでありかも。ただし対空される危険がある</td></tr>
+<tr><td>先読みダッシュ</td><td>見てから反応される危険は少ない。連続技を決められれば最高だが、ダッシュ投げにすればバリヤーを出されていなくても崩しになりそう</td></tr>
+</tbody></table>
+<h2>垂直ジャンプでかわそうとして食らうキャラ</h2>
+<p>垂直ジャンプでかわそうとすると食らってしまうキャラがいます。判定を確認すると、ジャンプの予備動作で顔の食らい判定が前に出ていました（京で確認）。全キャラ確認したいところ、としています。</p>
+<h2>屈Bから出すと押し合い判定が低くなる</h2>
+<p>なぜか屈Bから出すと、バリヤーの押し合い判定が低くなる場合があります。ほかの屈技から出しても、ほかの必殺技を出しても再現できませんでした。空振りキャンセルのようになっているのか、理由はまだ分かりません（<a href="https://x.com/mot_csb/status/1665630339430076419">比較画像</a>：そのまま強バリヤー／屈Bキャンセル／屈B）。</p>
+<h2>関連ページ</h2>
 <ul>
-<li>画像1：そのまま強ダークバリヤーを出した場合。</li>
-<li>画像2：屈Bをキャンセルして強ダークバリヤーを出した場合。</li>
-<li>画像3：屈Bそのもの。</li>
+<li><a href="./rugal-barrier-countermeasures-2023.html">ダークバリヤーへの差し返し</a>、<a href="./rugal-dark-barrier-counters-2011.html">ダークバリアー対策（キャラ別）</a></li>
+<li><a href="./pushbox-pass-through-2023.html">攻撃避けをした相手をすり抜けるか</a>（押し合い判定の位置）</li>
 </ul>
-<p>本人は<strong>他の屈技から出しても再現せず、他の必殺技を出しても再現しなかった</strong>と報告。<a href="https://x.com/mot_csb/status/1665630339430076419">2023/06/05の比較と非再現条件</a>。</p>
-<p>本人はその理由について、<strong>空振りキャンセルのようになっているのかもしれない</strong>と推測している。しかし、どのフラグや判定ルーチンが原因なのかをプログラムで確認した結果ではなく、<strong>原因未確定</strong>として残す。</p>
-<h2>6月7日：垂直ジャンプで避けようとして被弾する例</h2>
-<p>MOTは、ルガールのダークバリヤーに対して垂直ジャンプでかわす場合、<strong>ジャンプしようとすると被弾するキャラがいる</strong>と報告。判定を確認したところ、<strong>ジャンプ予備動作の際に顔付近の食らい判定が前に出る</strong>例があり、<strong>京で確認した</strong>と明記した。<a href="https://x.com/mot_csb/status/1666412471941480448">2023/06/07・京のジャンプ予備動作の本人確認</a>。</p>
-<p>本人はこの点について<strong>全キャラ確認したい</strong>と明記しており、ジャンプ予備動作中の被弾の有無を全キャラで調べたという記事ではない。</p>
-<h2>ジャンプで入り込む際のタイミング：6月4日の別の観察</h2>
-<p>MOTは、前方ジャンプでダークバリヤーをやり過ごして相手との間に入るには、間合いだけでなく<strong>バリヤーより早めに飛び込むタイミング</strong>が重要だろうと考察した。上手く入ればジャンプ攻撃から連続技を狙えるようだと説明しているが、これは<strong>先読みを要する戦術評価</strong>であり、どの位置からでも安定するという報告ではない。<a href="https://x.com/mot_csb/status/1665250636374441986">2023/06/04の本人投稿</a>。</p>
-<p>また、先読みジャンプは対空される危険があるため、<strong>先読みダッシュ</strong>なら相手が見てから反応するのは難しいかもしれないと比較。ダッシュ投げならバリヤーが出なかった場合にも崩しになり得ると補足した。<a href="https://x.com/mot_csb/status/1665269449128026113">2023/06/04の先読みダッシュ案</a> ／ <a href="https://x.com/mot_csb/status/1665269724190593024">同日のダッシュ投げ案</a>。</p>
-<h2>技の発生フレーム：6月7日の本人記録</h2>
-<p>本人はダークバリヤーの発生が<strong>弱6F・強6F</strong>と記録し、GCで成立させやすい発生と評価した。<a href="https://x.com/mot_csb/status/1666411168481824768">2023/06/07の本人投稿</a>。一方、<a href="./rugal-frame-data-2011.html">2011年のルガールフレーム原稿</a>ではダークバリヤーの発生表記が別形式で残っており、<strong>数え方や表記の違いを確認せずに2011年の数値を上書きしない</strong>。</p>
-<h2>確定事項・未確認事項の切り分け</h2>
-<ul>
-<li><strong>本人の画像付き観察：</strong>弱強バリヤーの白・青・赤判定の位置、屈Bキャンセル後に押し合い判定が低くなる例、京のジャンプ予備動作で顔の食らい判定が前へ出る例。</li>
-<li><strong>本人の非再現結果：</strong>他の屈技や他の必殺技では同じ屈B由来の現象を再現できなかったという範囲。</li>
-<li><strong>推測・課題：</strong>屈Bの空振りキャンセルのような内部現象、全キャラのジャンプ予備動作における食らい判定、空中虎煌拳を返す判定の上下範囲、先読みジャンプ・ダッシュの実戦安定度。</li>
+<h2>出典</h2>
+<ul class="src">
+<li><a href="https://x.com/mot_csb/status/1665250636374441986">前方ジャンプはタイミング</a>・<a href="https://x.com/mot_csb/status/1665269449128026113">先読みダッシュ</a>・<a href="https://x.com/mot_csb/status/1665269724190593024">ダッシュ投げ</a>（X、2023/6/4）</li>
+<li><a href="https://x.com/mot_csb/status/1665629473646211073">バリヤーの判定</a>・<a href="https://x.com/mot_csb/status/1665630339430076419">屈Bから出した場合</a>（X、2023/6/5）</li>
+<li><a href="https://x.com/mot_csb/status/1666411168481824768">発生6F</a>・<a href="https://x.com/mot_csb/status/1666412471941480448">ジャンプ予備動作</a>（X、2023/6/7）</li>
 </ul>
-<p>関連：<a href="./rugal-barrier-countermeasures-2023.html">2023年のキャラ別ダークバリヤー対策</a> ／ <a href="./rugal-dark-barrier-counters-2011.html">2011年の対策21キャラ分</a> ／ <a href="./pushbox-pass-through-2023.html">攻撃避けと押し合い判定の研究</a>。</p>
-<p><a href="./index.html">KOF'95研究アーカイブへ戻る</a> ／ <a href="/kof-kininaru.html#kof95">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
+<p class="legend"><a href="./index.html">KOF'95 研究アーカイブ</a> ／ <a href="/kof95-top.html">KOF'95トップ</a> ／ <a href="/kof-kininaru.html#kof95">KOF'95の気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>

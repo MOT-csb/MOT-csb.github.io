@@ -1,48 +1,81 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'95：ルガールのダークバリアー対策21キャラ別（2011年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof95-top.html">KOF'95</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap"><!-- chara-nav:start --><nav class="chara-nav" aria-label="キャラクター別のページ"><p class="cn-head"><a href="/kof95-top.html#c-rugal">KOF&#x27;95 キャラ選択</a><span>›</span><b>ルガール</b></p><p class="cn-links"><a href="/research/kof95/rugal-frame-data-2011.html">ブログの表（2011年）</a></p><details open><summary>攻略・研究ページ 9件</summary><ul><li><b>ダークバリヤー対策（キャラ別・2011年）</b></li><li><a href="/research/kof95/rugal-barrier-countermeasures-2023.html">ダークバリヤー対策・判定の追加調査（2023年）</a></li><li><a href="/research/kof95/rugal-dark-barrier-pushbox-jump-preparation-2023.html">ダークバリヤーの押し合い判定とジャンプ予備動作</a></li><li><a href="/research/kof95/rugal-kaiser-wave-startup-punishes-2023.html">カイザーウェイブを発生前に潰す技</a></li><li><a href="/research/kof95/rugal-stun-combos-2023-2024.html">気絶連続技と重なり起き攻め</a></li><li><a href="/research/kof95/rugal-close-b-triple-genocide-2023.html">近B×3→ジェノサイドカッターの入力</a></li><li><a href="/research/kof95/rugal-reppuken-strength-hits-2024.html">密着烈風拳の弱強の当たり方</a></li><li><a href="/research/kof95/rugal-throw-offense-counterplay-2024.html">通常投げを軸にした攻め方と対策</a></li><li><a href="/research/kof95/character-notes-2011-2024.html#n-rugal">キャラクター別メモ</a></li></ul></details></nav><!-- chara-nav:end --><h1>KOF'95：ルガールのダークバリアー対策21キャラ別（2011年）</h1><p>MOT本人の2011年3月15日公開の対策原稿を、記載キャラクター順に整理したもの。原文冒頭に<strong>調査途中・まとめ途中</strong>と明記されており、ここに示す対策は網羅的な確定表ではない。2011年3月21日のキムの飛翔脚についての修正履歴を保持する。</p>
-<h2>原資料の共通条件と反撃の考え方</h2><table><thead><tr><th>項目</th><th>当時の本人による記録・判断</th></tr></thead><tbody>
-<tr><td>バリアーのダメージ</td><td>弱強共通64。</td></tr>
-<tr><td>強バリアーの隙</td><td>14F。</td></tr>
-<tr><td>回避と近接反撃</td><td>バックステップ→大J攻撃、先読みバックステップ→大J攻撃、近め限定の先読み攻撃避け→無敵技。</td></tr>
-<tr><td>隙への反撃</td><td>弱の隙を発生14F以内の技で反撃する案（強かもしれないので読み合い）。強の隙を発生14F以内の技で反撃する案（弱の心配がないと評価）。</td></tr>
-<tr><td>別の候補</td><td>無敵技、判定の強い技、相打ち可能な技。</td></tr>
-<tr><td>相打ちのタイミング</td><td>弱の硬直に確定するタイミングを狙うと、弱なら一方的な反撃、強でも相打ちを狙えるという戦術評価。</td></tr>
-<tr><td>ダメージ勝ち／負け</td><td>ダメージ勝ちできる場合は相打ちも選択肢。負ける場合は反撃タイミングの使い分けを推奨。原稿の戦術評価であり全条件の実測とは区別する。</td></tr>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'95：ルガールのダークバリアー対策（キャラ別）｜Come sono bravo?</title><meta name="description" content="KOF&#x27;95のルガールのダークバリアーへのキャラ別対策。バリアーの隙は14F。相打ちにできる強攻撃や立CDを持つキャラは、弱の隙に確定するタイミングで出すのが基本です。21キャラの相打ち技・垂直ジャンプからの技・ダメージ。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:960px}.article table{min-width:0;width:100%}.article th,.article td{overflow-wrap:anywhere;vertical-align:top}.article a{overflow-wrap:anywhere}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}.lead{font-size:1.05em}.vt{display:inline-block;font-size:.85em;line-height:1.45;padding:0 6px;margin-left:4px;border:1px solid var(--line,#ccd);border-radius:4px;font-weight:600;white-space:nowrap}.legend{font-size:.92em;color:var(--sub,#555)}.src li{font-size:.92em}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h2{font-size:1.15em;margin-top:1.2rem}details.more h3{font-size:1.05em}@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}.article th,.article td{min-width:80px}}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof95-top.html">KOF'95</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><!-- chara-nav:start --><nav class="chara-nav" aria-label="キャラクター別のページ"><p class="cn-head"><a href="/kof95-top.html#c-rugal">KOF&#x27;95 キャラ選択</a><span>›</span><b>ルガール</b></p><p class="cn-links"><a href="/research/kof95/rugal-frame-data-2011.html">ブログの表（2011年）</a></p><details open><summary>攻略・研究ページ 9件</summary><ul><li><b>ダークバリヤー対策（キャラ別・2011年）</b></li><li><a href="/research/kof95/rugal-barrier-countermeasures-2023.html">ダークバリヤー対策・判定の追加調査（2023年）</a></li><li><a href="/research/kof95/rugal-dark-barrier-pushbox-jump-preparation-2023.html">ダークバリヤーの押し合い判定とジャンプ予備動作</a></li><li><a href="/research/kof95/rugal-kaiser-wave-startup-punishes-2023.html">カイザーウェイブを発生前に潰す技</a></li><li><a href="/research/kof95/rugal-stun-combos-2023-2024.html">気絶連続技と重なり起き攻め</a></li><li><a href="/research/kof95/rugal-close-b-triple-genocide-2023.html">近B×3→ジェノサイドカッターの入力</a></li><li><a href="/research/kof95/rugal-reppuken-strength-hits-2024.html">密着烈風拳の弱強の当たり方</a></li><li><a href="/research/kof95/rugal-throw-offense-counterplay-2024.html">通常投げを軸にした攻め方と対策</a></li><li><a href="/research/kof95/character-notes-2011-2024.html#n-rugal">キャラクター別メモ</a></li></ul></details></nav><!-- chara-nav:end --><h1>KOF'95：ルガールのダークバリアー対策（キャラ別）</h1>
+<p class="lead">ダークバリアーに一方的に勝てる技は少ないものの、あります。強攻撃や立CDで相打ちにできるキャラは、相打ちを基本にしつつ、バリアーの弱か強の隙に確定するタイミングで狙うのが有効です（2011年）。</p>
+<h2>バリアーの基本</h2>
+<ul>
+<li>ダメージは弱強共通で64。</li>
+<li>空振りしたときの隙は弱強共通で14Fです（フレーム表では持続が弱6〜50F・強6〜80F、全体が弱64F・強94F。<a href="./rugal-frame-data-2011.html">ルガールのフレームデータ</a>）。</li>
+<li>バリアーが消えてから反撃したい技を出しても間に合わないので、消えるタイミングに合わせて反撃技を出す必要があります。</li>
+</ul>
+<h2>対策の考え方</h2>
+<table><thead><tr><th>対策</th><th>ポイント</th></tr></thead><tbody>
+<tr><td>弱の隙に反撃（発生14F以内）</td><td>強だった場合は食らうので読み合い</td></tr>
+<tr><td>強の隙に反撃（発生14F以内）</td><td>弱の心配はないので、練習すれば精度が上がるはず。強の場合は理論上確定</td></tr>
+<tr><td>相打ちにできる技を、弱の硬直に確定するタイミングで出す</td><td>弱なら一方的にダメージを与えられ、強でも相打ちで反撃になる</td></tr>
+<tr><td>バックステップ（先読みも）→大ジャンプ攻撃</td><td></td></tr>
+<tr><td>近め限定：先読み攻撃避け→無敵技</td><td>下記</td></tr>
 </tbody></table>
-<h2>キャラクター別の対策記録（原資料21キャラ）</h2><p>「Dm」は原文で使用された表記をそのまま保持。空欄や対象未記載のキャラの技を推測して追加しない。</p>
-<table><thead><tr><th>キャラ</th><th>候補技・相打ち／有利不利／条件（MOT原稿による）</th></tr></thead><tbody><tr><td>京</td><td>遠Ｄ(Dm57)相打ち・ダメージ負け。京のみMAX中ならダメージ勝ち。弱強鬼焼きは一方的に負け、弱強朧車は相打ちで負け。弱朧車Dm50、強朧車Dm38+19+30。</td></tr>
-<tr><td>紅丸</td><td>遠Ｂ(Dm20)、遠Ｄ(Dm54)、立ちＣＤ(Dm60)、垂直Ｊ２Ｄ。</td></tr>
-<tr><td>五郎</td><td>遠Ｃ(Dm54)相打ち・ダメージ負け。五郎のみMAXならダメージ勝ち。超受け身は弱強がかみ合えば回避→連続技可能。</td></tr>
-<tr><td>リョウ</td><td>遠Ｃ、立ちＣＤが相打ち。</td></tr>
-<tr><td>ロバート</td><td>遠Ｄ(Dm56)相打ち。垂直Ｊ→弱強龍神脚。</td></tr>
-<tr><td>タクマ</td><td>すべての地上技が負けるという原稿の評価。</td></tr>
-<tr><td>ジョー</td><td>垂直ＪＣＤ。</td></tr>
-<tr><td>ハイデルン</td><td>屈Ｂ(Dm20)相打ち。遠Ｄ(Dm55)相打ち・ダメージ負け、MAX中ならダメージ勝ち。立ちＣＤ(Dm60)相打ち。</td></tr>
-<tr><td>ラルフ</td><td>屈Ｃ・屈Ｄ相打ち、垂直ＪＣＤ、超必殺技相打ち。</td></tr>
-<tr><td>クラーク</td><td>屈Ｄ・立ちＣＤ相打ち、垂直ＪＣＤ。</td></tr>
-<tr><td>ユリ</td><td>屈Ｄ(Dm47)相打ち。</td></tr>
-<tr><td>舞</td><td>垂直Ｊ→弱強ムササビの舞。避け→超必殺技。</td></tr>
-<tr><td>アテナ</td><td>遠Ｄ(Dm52)相打ち・ダメージ負け、アテナのみMAXならダメージ勝ち。垂直Ｊ→弱強フェニックスアロー。</td></tr>
-<tr><td>ケンスウ</td><td>垂直Ｊ→弱強龍爪撃（ダウンを奪いやすい強を推奨）。超必殺技(Dm1段目37)相打ち。</td></tr>
-<tr><td>キム</td><td>垂直Ｊ→頂点付近でＪＣＤ空キャンセル強飛翔脚。空キャンを省くと屈Ａ→ジェノサイド（キムMAX中は直接ジェノサイド）等で反撃される。垂直Ｊ→空中鳳凰脚は下降中に出す。弱強飛燕斬相打ち。</td></tr>
-<tr><td>チャン</td><td>垂直ＪＣ・ＪＣＤ、遠Ａ、屈Ｃ(Dm1段目58)相打ち。</td></tr>
-<tr><td>チョイ</td><td>遠Ｄ（距離次第）、立ちＣＤが相打ち。</td></tr>
-<tr><td>庵</td><td>屈Ｄ(Dm56)相打ち。</td></tr>
-<tr><td>ビリー</td><td>屈Ｂ・遠Ｃ相打ち。垂直ＪＡ・Ｃ・Ｄ・ＪＣＤ（Ｃはタイミングが難しい）。</td></tr>
-<tr><td>影二</td><td>すべての地上技が負けるという原稿の評価。</td></tr>
-<tr><td>ルガール</td><td>垂直ＪＢ。</td></tr></tbody></table>
-<h2>2011年3月16日：ルガールの遠Bとテリー遠Aに関する別の対策案</h2>
-<p>MOTは<strong>ルガールの遠Bは発生が早く、ガードされても有利かもしれず、判定も強い</strong>と評価し、<strong>ダークバリアーへ相打ち以上にできる技なら遠Bにも相打ち以上を取れるのではないか</strong>と考察した。これは遠Bに対する全技の実証一覧ではない。<a href="https://comesonobravo.hatenadiary.org/entry/191030280.html">2011年3月16日の本人の投稿を収録した日次原稿</a>。</p>
-<p>同日の続きでは<strong>テリーの遠Aはバリアーに勝てなくても両者空振りになる</strong>と記憶を示し、<strong>技を出す際に食らい判定が前へ出ないため</strong>という説明を付している。それがルガールの遠Bにも有効な可能性を挙げたが、<strong>遠B対策の成功を確認したものではない</strong>。2011年の対バリアー21キャラ表ではテリーの行が未記載であるため、この投稿の仮説を確定技として表へ追加しない。</p>
-<h2>2011年3月17日：遠Bそのものへの京・紅丸・タクマの対策（バリアーとは別）</h2>
-<p>MOTは、ルガールの<strong>遠距離Bそのもの</strong>に対する3人の対応を翌日の投稿で記録した。<a href="https://comesonobravo.hatenadiary.org/entry/191177626.html">本人の2011年3月17日の日次原文</a>。これは、前節の<strong>ダークバリアーへの対応</strong>と同一の攻撃・反撃条件ではない。</p>
-<table><thead><tr><th>相手</th><th>MOTが示した条件と見解</th><th>確度</th></tr></thead><tbody>
-<tr><td>京</td><td>ルガールの遠Bと同時に攻撃避け→最速カウンター攻撃を出すと確定するのではないかと考察。<strong>遠Bを見てからでは間に合わないため、読みが必要</strong>。カウンター攻撃から強七拾五式改につながる点を評価。</td><td>本人は「確定するっぽい？」と疑問形で記載。確定反撃とは扱わない</td></tr>
-<tr><td>紅丸</td><td><strong>遠Aが有効</strong>と記録。ルガールの遠Bが届く距離では発生勝ち、届かない距離では判定勝ちできるという本人の説明。</td><td>当時の本人の結果・理由の記録。すべての入力タイミングで成立するという意味ではない</td></tr>
-<tr><td>タクマ</td><td>遠Aが有効そうと記録。ルガール遠Bが届く距離では同時出しで相打ち、届かない距離では判定勝ちできるという本人の説明。</td><td>本人は「有効っぽい」と留保</td></tr>
+<p>相打ちでダメージ勝ちできる状況なら、深く考えずに相打ちにしてもよく、弱の硬直を狙うのもよい。ダメージ負けする状況なら、弱の硬直を狙うタイミングを基本にしつつ、あえて強の隙に確定するタイミングを狙うのもありです。こちらだけパワーMAX中なら、相打ちでもダメージ勝ちできる強攻撃がかなり多いので、積極的に弱バリアーの隙に反撃を狙うとよい、としています。</p>
+<h2>無敵技と攻撃避け</h2>
+<ul>
+<li>無敵技のほとんどは、バリアーが空振りする距離から判定勝負にいっても一方的に負けるため使えません。</li>
+<li>ただし発生まで無敵が続く技に限り、バリアーをある程度近めで出されたときに先読みで攻撃避けができていれば、避けが終わると同時に無敵技を出せば勝てます。多くのキャラで、バリアー先端気味でも先読み攻撃避け→無敵技が機能するようです（yomio_gekiloveさんとのやり取りで確認）。</li>
+<li>攻撃避け→カウンター攻撃は、バリアーの攻撃判定が残っていると一方的に負けるので、判定が消えるのに合わせて出すのが有効そうです。</li>
+<li>舞は読みで攻撃避けして623Bで返せますが、ルガールがダウンしないため、ゴッドプレスが確定します。</li>
+<li>目の前で強バリアーを出されたとき、一瞬ガードポーズをとれば、6に入れてもすぐには歩き出さないようです。そのため623系の無敵技を出すのはそこまで難しくなさそうです（バリアーに勝てるかは別問題）。</li>
+<li>立ち状態・立ちガード状態ではギリギリ強バリアーに当たらなくても、屈んだりジャンプしたりすると当たる距離があるようです。</li>
+</ul>
+<h2>キャラ別の対策</h2>
+<p>数字は原稿にあるダメージです。対策が書かれていないキャラ（テリー、アンディ、チン、キング、柴舟）は、対策がないという意味ではありません。</p>
+<table><thead><tr><th>キャラ</th><th>対策</th></tr></thead><tbody>
+<tr><td>京</td><td>遠D（57）相打ち。ダメージ負けだが、京だけMAX中ならダメージ勝ち。鬼焼き<span class="vt">弱</span><span class="vt">強</span>は一方的に負け、朧車<span class="vt">弱</span><span class="vt">強</span>は相打ちでダメージ負け（弱50、強38+19+30）</td></tr>
+<tr><td>紅丸</td><td>遠B（20）、遠D（54）、立CD（60）、垂直J2D</td></tr>
+<tr><td>大門</td><td>遠C（54）相打ち。ダメージ負けだが、大門だけMAX中ならダメージ勝ち。超受け身は弱強がかみ合えば回避→連続技が可能</td></tr>
+<tr><td>リョウ</td><td>遠C、立CDで相打ち</td></tr>
+<tr><td>ロバート</td><td>遠D（56）相打ち。垂直J→龍神脚<span class="vt">弱</span><span class="vt">強</span></td></tr>
+<tr><td>タクマ</td><td>すべての地上技が負ける</td></tr>
+<tr><td>ジョー</td><td>垂直JCD</td></tr>
+<tr><td>ハイデルン</td><td>屈B（20）相打ち。遠D（55）相打ちでダメージ負け、MAX中ならダメージ勝ち。立CD（60）相打ち</td></tr>
+<tr><td>ラルフ</td><td>屈C・屈D相打ち、垂直JCD、超必殺技で相打ち</td></tr>
+<tr><td>クラーク</td><td>屈D・立CD相打ち、垂直JCD</td></tr>
+<tr><td>ユリ</td><td>屈D（47）相打ち</td></tr>
+<tr><td>舞</td><td>垂直J→ムササビの舞<span class="vt">弱</span><span class="vt">強</span>。攻撃避け→超必殺技</td></tr>
+<tr><td>アテナ</td><td>遠D（52）相打ち。ダメージ負けだが、アテナだけMAX中ならダメージ勝ち。垂直J→フェニックスアロー<span class="vt">弱</span><span class="vt">強</span></td></tr>
+<tr><td>ケンスウ</td><td>垂直J→龍爪撃<span class="vt">弱</span><span class="vt">強</span>（ダウンを奪いやすい強推奨）。超必殺技（1段目37）で相打ち</td></tr>
+<tr><td>キム</td><td>垂直J→頂点付近でJCDを空キャンセルして飛翔脚<span class="vt">強</span>。空キャンセルしないと、屈A≫ジェノサイドカッター（キムMAX中は直接ジェノサイドカッター）などで反撃される。垂直J→空中鳳凰脚（下降中に出す）。飛燕斬<span class="vt">弱</span><span class="vt">強</span>で相打ち</td></tr>
+<tr><td>チャン</td><td>垂直JC・JCD、遠A、屈C（1段目58）相打ち</td></tr>
+<tr><td>チョイ</td><td>遠D（距離次第）、立CDで相打ち</td></tr>
+<tr><td>庵</td><td>屈D（56）相打ち</td></tr>
+<tr><td>ビリー</td><td>屈B・遠C相打ち。垂直JA・JC・JD・JCD（JCはタイミングが難しい）</td></tr>
+<tr><td>影二</td><td>すべての地上技が負ける</td></tr>
+<tr><td>ルガール</td><td>垂直JB</td></tr>
 </tbody></table>
-<p>2011年3月16日の「ダークバリアーに相打ち以上を取れる技は遠Bにも使えるかもしれない」という推測に対する<strong>翌日の個別キャラ別情報</strong>として読む。防御側の開始距離・技の選択・入力時刻が異なるため、バリアー対策21キャラ表の行を書き換えない。</p>
-<h2>2011年3月15日の追試：舞の攻撃避け→弱ムササビの舞と反撃リスク</h2><p>MOTは、ルガールのダークバリアーを<strong>読みで攻撃避けし、舞の<code>623B</code>で反撃できる</strong>と報告した。ただし<strong>ルガールがダウンしないため、ゴッドプレスで反撃される</strong>とも記している。本人が確認したとして保存する範囲は、この一連の攻防である。<a href="https://comesonobravo.hatenadiary.org/entry/190841788.html">2011年3月15日の本人記録</a>。</p><p>同日には、<strong>多くのキャラクターでバリアー先端気味に対して先読み攻撃避け→無敵技が機能するようだ</strong>とも報告し、その前には「避け→カウンター攻撃」はバリアーの攻撃判定が残ると負けるため、判定が消える時機に合わせる必要があると考察している。<strong>「避けて当てられる」ことと「その後に相手から反撃されない」ことは別</strong>であり、21キャラ対策表の「舞：避け→超必殺技」とも同一ルートとして扱わない。</p><h2>訂正・資料上の欠落</h2>
-<p><strong>2011/03/21</strong>：原稿末尾にキムの飛翔脚での反撃を修正した旨が明記されている。修正前の技や内容は本エクスポート原稿から復元できないため創作しない。</p>
-<p>同原稿で対策の項目がないキャラ：<strong>テリー、アンディ、チン、キング、柴舟</strong>。対策不能という意味ではなく、当該原稿に記述が見つからないという意味。</p>
-<p>ダークバリアーの技そのものの数値は<a href="./rugal-frame-data-2011.html">2011年ルガール技別フレームデータ</a>と照合できる。バリアーの発生6F、持続・全体フレームについては別の数値記録として掲示している。本ページの強バリアーの隙14Fと、フレーム表の強持続80F・全体94Fは区別する。</p>
-<p>一次資料：<a href="https://comesonobravo.hatenadiary.org/entry/190744099.html">MOT「ルガールのダークバリアー対策」（2011/03/15、3/21修正）</a>。<a href="/kof-kininaru.html#kof95">未記載・確認事項</a>も参照。</p><p><a href="./index.html">KOF'95研究アーカイブへ戻る</a> ／ <a href="/kof95-top.html">KOF'95旧トップ</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
+<p>補足：キムの飛翔脚での反撃は2011/3/21に修正されています。2023年に追加で分かった対策（チャンの遠A、大門の弱地雷震、ユリの雷煌拳、クラークの遠D、テリーの屈Dなど）は<a href="./rugal-barrier-countermeasures-2023.html">ダークバリヤーへの差し返し</a>にあります。</p>
+<h2>ルガールの遠Bへの対策</h2>
+<p>ルガールの遠Bは発生が早く、ガードされても有利（？）で、判定まで強い技です。バリアーに相打ち以上になる技なら、遠Bにも相打ち以上にできるかもしれない、と考えていました（2011年）。</p>
+<table><thead><tr><th>キャラ</th><th>遠Bへの対策</th></tr></thead><tbody>
+<tr><td>京</td><td>遠Bの入力と同時に攻撃避け→最速カウンター攻撃が確定するっぽい？見てからは間に合わないので読みになるが、カウンター攻撃から七拾五式改<span class="vt">強</span>につながるので悪くはなさそう</td></tr>
+<tr><td>紅丸</td><td>遠Aが有効。遠Bが届く距離でも発生で勝ち、届かない距離でも判定で勝てる</td></tr>
+<tr><td>タクマ</td><td>遠Aが有効っぽい。遠Bが届く距離では同時に出しても相打ち、届かない距離では判定で勝てる</td></tr>
+<tr><td>テリー</td><td>遠Aなどはバリアーに勝てないまでも両者空振りになる（食らい判定が前に出ないため）。こういう技も遠Bに相性がいいかも</td></tr>
+</tbody></table>
+<p>2023年には遠Bの発生は3Fで、攻撃判定の前に1Fだけ食らい判定が先に出ることを確かめています（<a href="./rugal-barrier-countermeasures-2023.html">ダークバリヤーへの差し返し</a>）。</p>
+<h2>気になること</h2>
+<ul>
+<li>目の前に置かれた強バリアーに、垂直ジャンプから対策できるキャラがいないか（2011年3月の案）。垂直ジャンプ攻撃で極端にリーチのある技や空中必殺技でバリアーを攻撃する、三角跳びのあるキャラは後方ジャンプ→三角跳びでもいいかも、としていました。この後の表で垂直ジャンプからの対策が多く挙がっています。</li>
+<li>'94の性能の空中ビッグバンタックルがあれば、ダークバリヤーを正面から返せたのに、と2020年に書いています。</li>
+</ul>
+<h2>関連ページ</h2>
+<ul>
+<li><a href="./rugal-barrier-countermeasures-2023.html">ダークバリヤーへの差し返し</a>、<a href="./rugal-dark-barrier-pushbox-jump-preparation-2023.html">ダークバリヤーの判定と入り込み方</a></li>
+<li><a href="./rugal-frame-data-2011.html">ルガールのフレームデータ</a></li>
+</ul>
+<h2>出典</h2>
+<ul class="src">
+<li><a href="https://x.com/mot_csb/status/45958911303487488">垂直ジャンプからの対策案</a>（X、2011/3/11）、<a href="https://x.com/mot_csb/status/46141879099736064">ガードポーズから623</a>・<a href="https://x.com/mot_csb/status/46144193059491840">屈むと当たる距離</a>（X、2011/3/11）</li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/190744099.html">ルガールのダークバリアー対策</a>（はてな、2011/3/15、3/21修正）</li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/190841788.html">2011/03/15のつぶやき</a>（対策の考え方・舞・攻撃避け）、<a href="https://x.com/mot_csb/status/47470104501432320">対策の要点</a>・<a href="https://x.com/mot_csb/status/47491783466291200">舞</a>（X、2011/3/15）</li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/191030280.html">2011/03/16のつぶやき</a>（遠B・テリーの遠A）、<a href="https://x.com/mot_csb/status/47853400121028608">遠B</a>・<a href="https://x.com/mot_csb/status/47854044466778112">テリーの遠A</a>（X、2011/3/16）</li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/191177626.html">2011/03/17のつぶやき</a>（京・紅丸）、<a href="https://x.com/mot_csb/status/48378065537073152">タクマの遠A</a>・<a href="https://x.com/mot_csb/status/48378790317002752">紅丸の遠A</a>・<a href="https://x.com/mot_csb/status/48386605806923776">京の攻撃避け</a>（X、2011/3/17）</li>
+<li><a href="https://x.com/mot_csb/status/1322739633222901760">'94の空中ビッグバンタックル</a>（X、2020/11/1）</li>
+</ul>
+<p class="legend"><a href="./index.html">KOF'95 研究アーカイブ</a> ／ <a href="/kof95-top.html">KOF'95トップ</a> ／ <a href="/kof-kininaru.html#kof95">KOF'95の気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
