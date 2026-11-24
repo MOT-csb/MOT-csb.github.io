@@ -13,14 +13,18 @@
      "button": "攻略",
      "frame": [
       [
-       "03terry.html",
-       "KOF2002からの変化・技の性能・連続技（旧サイト）"
+       "research/kof2003/frame/terry.html",
+       "KOF2002からの変化・技の性能・連続技"
       ]
      ],
      "research": [
       [
        "03rokete-terry.html",
        "ロケテに行った際のメモ：テリー報告"
+      ],
+      [
+       "03terry.html",
+       "旧サイトのページ"
       ]
      ]
     },
@@ -30,14 +34,18 @@
      "button": "攻略",
      "frame": [
       [
-       "03joe.html",
-       "KOF2002からの変化・技の性能・連続技（旧サイト）"
+       "research/kof2003/frame/joe.html",
+       "KOF2002からの変化・技の性能・連続技"
       ]
      ],
      "research": [
       [
        "03rokete-joe.html",
        "ロケテに行った際のメモ：ジョー報告"
+      ],
+      [
+       "03joe.html",
+       "旧サイトのページ"
       ]
      ]
     },
@@ -47,14 +55,18 @@
      "button": "攻略",
      "frame": [
       [
-       "03jhun.html",
-       "KOF2002からの変化・技の性能・連続技（旧サイト）"
+       "research/kof2003/frame/jhun.html",
+       "KOF2002からの変化・技の性能・連続技"
       ]
      ],
      "research": [
       [
        "03rokete-angrijhon.html",
        "ロケテに行った際のメモ：アンディ・グリフォン・ジョン報告"
+      ],
+      [
+       "03jhun.html",
+       "旧サイトのページ"
       ]
      ]
     },

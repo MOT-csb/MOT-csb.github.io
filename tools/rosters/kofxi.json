@@ -13,8 +13,8 @@
      "button": "技性能解析",
      "frame": [
       [
-       "xiterry-wazakaiseki.htm",
-       "技性能解析（旧サイト・2005年。T.FREAKさん情報）"
+       "research/kofxi/frame/terry.html",
+       "技性能解析（2005年。T.FREAKさん情報）"
       ]
      ],
      "data": [
@@ -25,6 +25,12 @@
       [
        "xiterry-rennzokuwaza.htm",
        "連続技"
+      ]
+     ],
+     "research": [
+      [
+       "xiterry-wazakaiseki.htm",
+       "旧サイトのページ"
       ]
      ]
     }

@@ -39,12 +39,16 @@
      "button": "技データ",
      "frame": [
       [
-       "99jhun-data.htm",
-       "ダメージ・気絶値・ガークラ値など（旧サイト）"
+       "research/kof99/frame/jhun.html",
+       "ダメージ・気絶値・ガークラ値など"
       ]
      ],
      "research": [
-      "research/kof99/jhun-corner-unblockable-mixups-2021-2024.html"
+      "research/kof99/jhun-corner-unblockable-mixups-2021-2024.html",
+      [
+       "99jhun-data.htm",
+       "旧サイトのページ"
+      ]
      ]
     }
    ]
