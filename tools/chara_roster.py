@@ -38,15 +38,15 @@ def title_of(path):
 
 def frame_label(fn, title):
     if "frame-data-2025" in fn:
-        return "まとめ（2025年）"
+        return "ブログのまとめ（2025年）"
     if "frame-consolidation" in fn:
         return "統合版（2025年）"
     if "frame-sources" in fn or "original-frame-notes" in fn:
-        return "2009年旧稿と再編纂"
+        return "ブログの表（2009年）と再編纂版"
     if fn.startswith("early-frame"):
         return "発売直後の硬直差（2009年）"
     m = re.search(r"（([0-9～]+年)）", title)
-    return "発生と硬直差（" + (m.group(1) if m else "2009年") + "）"
+    return "ブログの表（" + (m.group(1) if m else "2009年") + "）"
 
 
 def research_label(name, title, game):
@@ -100,7 +100,7 @@ def roster_html(d):
             research = [p for p in others if p[0] == "research"]
             line = f'<li id="c-{c["id"]}">{main}'
             if frames:
-                line += f'<span class="fl">{esc(frames[0][2])}</span>'
+                line += f'<a class="fbtn" href="{base}{frames[0][1]}">フレームデータ</a><span class="fl">{esc(frames[0][2])}</span>'
             else:
                 line += '<span class="fl">フレームデータ未掲載</span>'
             if sub:

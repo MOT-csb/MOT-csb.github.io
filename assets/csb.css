@@ -49,3 +49,5 @@ a.cn:hover{color:var(--red)}a.cn::after{content:" ›";color:var(--red)}
 .team details ul{margin:4px 0 0;padding-left:18px}.team details li{padding:2px 0;line-height:1.5}
 .team li:target{background:var(--redbg);margin:0 -16px;padding-left:16px;padding-right:16px}
 .entry{overflow-wrap:anywhere}
+.team .fbtn{display:inline-block;vertical-align:middle;background:var(--red);color:#fff;font-weight:700;font-size:13px;line-height:1;padding:7px 12px;border-radius:999px;text-decoration:none}
+.team .fbtn:hover{filter:brightness(1.12)}
