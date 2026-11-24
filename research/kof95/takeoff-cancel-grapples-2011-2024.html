@@ -1,33 +1,59 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'95：離陸キャンセル・打撃投げ・JCD空キャンセルの原資料（2011～2024年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof95-top.html">KOF'95</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap"><h1>KOF'95：離陸キャンセル・打撃投げ・JCD空キャンセルの原資料（2011～2024年）</h1>
-<p>MOTの2011年と2024年の原稿から、KOF'94と'95のジャンプ攻撃開始処理の違い、離陸キャンセル入力、特殊な打撃投げが空中の相手に反応する例外を整理する。「離陸キャンセル」は2011年の本人投稿で<strong>ビート北野氏が呼んでいた名称</strong>として紹介された用語であり、MOT本人による命名とはしない。</p>
-<h2>2011年1月31日：94と95の昇りジャンプ攻撃の差</h2>
-<table><thead><tr><th>作品</th><th>本人の説明</th></tr></thead><tbody><tr><td>KOF'94</td><td>最速タイミングでも、ジャンプの予備動作が終わってからジャンプ攻撃の動作に移行する。</td></tr><tr><td>KOF'95</td><td><strong>ジャンプ予備動作をキャンセルしてジャンプ攻撃が動作を開始する</strong>。</td></tr></tbody></table>
-<p>出典：<a href="https://x.com/mot_csb/status/31881238604161025">2011/01/31の本人投稿</a>。個別技の発生Fやジャンプ予備動作の長さをこの投稿から創作しない。</p>
-<h2>2024年3月17日：打撃投げを持つリョウ・ロバートの例外</h2>
-<p>MOTは、<strong>リョウの連舞拳とロバートの連舞脚は空中の相手に対しても発動してしまう</strong>と記録。したがって、相手が空中にいる時に<code>412369+C(D)</code>と入力しても、意図した別の行動ではなく連舞拳・連舞脚が出るという制約がある。</p>
-<p>本人はこの点を離陸キャンセルと打撃投げの関係として説明し、入力法の使いにくい例として評価している。出典：<a href="https://x.com/mot_csb/status/1769208100366786618">2024/03/17の本人投稿</a>。この投稿だけから、全キャラクターの打撃投げへ適用できるという結論は出さない。</p>
-<h2>2011年6月21日：キムのJCD空キャンセル飛翔脚</h2>
-<p>2011年の対戦動画の感想で、MOTは<strong>キムがJCDを空キャンセルして飛翔脚を出すと、飛翔脚の性能が変化し、ヒット時・ガード時の全段が当たりやすくなる</strong>と解説した。</p>
-<p>これは動画解説として書かれた技術説明であり、全キャラ・全高度での成立確認を意味しない。出典：<a href="https://x.com/mot_csb/status/83032827406454785">2011/06/21の投稿と対戦動画リンク</a>。</p>
-<h2>2023年10月31日：離陸入力のリバーサルと投げ無敵の未確認条件</h2>
-<p>MOTはKOF'95で<strong>離陸入力の（超）必殺技をリバーサルで出せる</strong>と記録。その上で、離陸入力により出した技は投げられなくなるかどうかを<strong>要確認</strong>とし、もし投げられないなら打撃無敵技へも投げ無敵を加えられるかもしれないと考察した。起き上がり直後には投げ無敵の時間があるため、一度何らかの技をガードした後の方が意味があるという本人の見方も残っている。<a href="https://x.com/mot_csb/status/1719253630237524221">2023/10/31の本人原投稿</a>。</p>
-<p>同日の続報で、MOTはKOF'94では離陸入力で出した技に投げ無敵があり、空中食らいにもなると記録し、95で異なるのは修正されたためだという見方を示した。また、<strong>非ダウン空中食らいの着地後に残る投げ無敵も95では修正された</strong>と述べている。<a href="https://x.com/mot_csb/status/1719257929436868969">同日の94・95比較投稿</a>。</p>
-<p><strong>2023年の質問と比較は両方残す。</strong>95で離陸入力したすべての必殺技について、投げ無敵が必ず付く／必ず付かないことを全件確認したという記録ではない。KOF'94側の本人記録をKOF'95の確定条件へ移植しない。</p>
-<h2>2023年10～11月：庵vsチン開幕即死の研究で行った離陸入力の測定と後日訂正</h2>
-<p>MOTは2023年10月29日に、<strong>離陸入力でも最速で必殺技を出せる</strong>ことを本人確認。10月30日には離陸入力必殺技が<strong>リバーサル可能</strong>であり、通常・離陸入力の双方ともリバーサル受付を<strong>4F間</strong>と記録。<a href="https://x.com/mot_csb/status/1718516084972925168">10/29の確認</a>／<a href="https://x.com/mot_csb/status/1718987124580704329">10/30の確認</a>。</p>
-<p>ただし、庵vsチンの特定の葵花お手玉に<strong>何セット目から離陸入力が必要か</strong>については本人の見解が更新され、<strong>11月2日に4セット目は不要だったと明示的に訂正</strong>している。古い10月29日・11月1日の必要セット数を確定手順として掲載しない。詳細は<a href="./iori-chin-opening-death-combo-2023.html">庵vsチン2023年の時系列検証</a>を参照。<a href="https://x.com/mot_csb/status/1720087472905076954">11/2の訂正</a>。</p>
-<h2>2023年5月：別の技術「限定空キャン」の本人確認</h2>
-<p>MOTは2023年5月16日、<strong>KOF'94と同様に95でも「限定空キャン」を確認した</strong>と記録。95で確認した対象技は<strong>テリーの近C、柴舟の近C、ルガールの近D</strong>の3例。柴舟の近C1段目は持続が非常に長いため、弱闇払いでフォローする形で利用しやすいのではないかと評価した。<a href="https://x.com/mot_csb/status/1658308798250106880">本人が確認した3技と柴舟の評価</a>。</p>
-<p>この直前にMOTは94のテリー近Cについて、1段目がヒットまたはガードした場合だけ2段目を空キャンセルできるようだと説明している。<a href="https://x.com/mot_csb/status/1657946622322671616">KOF'94での先行観察</a>。ただし、この94側の条件を<strong>95の全3技で同じ入力受付・同じ持続Fだと自動的に一般化しない</strong>。</p>
-<p>2023年5月16日のMOTの返信では、2段目に空キャンセルがかかるはずだとした一方、<strong>1段目を遅めにキャンセルできる技もありそう</strong>と述べ、具体的なキャンセル可能時間は今後調べたいと留保している。<a href="https://x.com/mot_csb/status/1658311454288924674">本人の後続コメント</a>。離陸キャンセル・JCD空キャンとは<strong>異なる技術</strong>としてここに追加した。</p>
-<h2>2023年10月：ジョーのタイガーキックと離陸入力時の空中／地上判定</h2>
-<p>MOTは2023年10月30日、<strong>ジョーのタイガーキックは動作開始時に位置判定が空中ではなく地上になる</strong>と本人が確認した。記録した時間順序は、<strong>①コマンド完成直後は空中、②動作開始と同時に地上、③浮き上がれば空中</strong>の3段階。<a href="https://x.com/mot_csb/status/1718988091124584449">2023/10/30の本人による確認</a>。離陸入力の直後ずっと空中判定が持続すると解釈しない。具体的なフレーム数や他の対空必殺技に共通するかは未測定として残す。</p>
-<h2>2023年9月：ケンスウの屈Dには長いディレイキャンセルが可能</h2>
-<p>MOTは2023年9月15日に、<strong>KOF'95ケンスウの屈Dには当作品では珍しくかなり長いディレイキャンセルが可能</strong>と記録し、<strong>屈Dをヒット確認してから強龍連牙で接近する</strong>使い方を紹介。一方、これが「限定キャンセルと同じ内部処理」なのではないかという説明は<strong>本人の推測</strong>。具体的な受付フレームは元投稿にない。<a href="https://x.com/mot_csb/status/1702660398808432803">2023/09/15の本人原投稿</a>。連打キャンセルや離陸キャンセルとは成立条件が異なるため、別の入力研究として記載する。</p>
-<h2>3系統の違い</h2><ul>
-<li><strong>予備動作のキャンセル：</strong>KOF'94と'95で昇りジャンプ攻撃の処理が異なるという2011年の本人説明。</li>
-<li><strong>空中の相手にも発動する打撃投げ：</strong>リョウ・ロバートの入力優先による2024年の例外。</li>
-<li><strong>JCDの空キャンセル：</strong>キムの飛翔脚に関する2011年の動画解説。</li>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'95：離陸入力と空キャンセルの細かい仕様｜Come sono bravo?</title><meta name="description" content="KOF&#x27;95ではジャンプの予備動作をキャンセルして必殺技やジャンプ攻撃が出ます（離陸キャンセル・離陸入力）。リバーサルでも出せる、&#x27;94と違い投げ無敵や空中食らいは付かない、打撃投げの例外、限定空キャン、キムのJCD空キャン飛翔脚など。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:960px}.article table{min-width:0;width:100%}.article th,.article td{overflow-wrap:anywhere;vertical-align:top}.article a{overflow-wrap:anywhere}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}.lead{font-size:1.05em}.vt{display:inline-block;font-size:.85em;line-height:1.45;padding:0 6px;margin-left:4px;border:1px solid var(--line,#ccd);border-radius:4px;font-weight:600;white-space:nowrap}.legend{font-size:.92em;color:var(--sub,#555)}.src li{font-size:.92em}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h2{font-size:1.15em;margin-top:1.2rem}details.more h3{font-size:1.05em}@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}.article th,.article td{min-width:80px}}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof95-top.html">KOF'95</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'95：離陸入力と空キャンセルの細かい仕様</h1>
+<p class="lead">'95では、ジャンプの予備動作をキャンセルしてジャンプ攻撃や必殺技が動作を始めます。'94では最速のタイミングでも、予備動作が終わってからジャンプ攻撃の動作に移ります。KOF'95攻略で知られるビート北野さんは、これを「離陸キャンセル」と呼んでいます。</p>
+<p>必殺技のコマンドを入れた後、レバーを上要素（7など）に入れてからボタンを押し、ジャンプの予備動作中に必殺技を出すことを「離陸入力」と呼んでいます。</p>
+<h2>離陸入力で出す必殺技</h2>
+<ul>
+<li><b>最速で出せる</b>：離陸入力でも、通常の入力と同じく最速で必殺技を出せます。</li>
+<li><b>リバーサルで出せる</b>：リバーサルの猶予は、通常の入力も離陸入力も4Fです。</li>
+<li><b>入力のコツ</b>：「離陸入力の7を入れるタイミングはそこまでシビアではなさそう」「少しだけ早めに7⇒ジャストタイミングでA」（庵の葵花の場合）。</li>
 </ul>
-<p>これらは名称に「キャンセル」が含まれていても同一の現象ではなく、元原稿の目的・適用範囲に従って分けて掲載する。関連：<a href="./athena-phoenix-arrow-reflector-2023.html">アテナのJCD空キャンフェニックスアロー</a> ／ <a href="./frame-data-sources-2011.html">2011年キャラ別原データ</a>。</p>
-<p><a href="./index.html">KOF'95研究アーカイブへ戻る</a> ／ <a href="/kof-kininaru.html#kof95">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
+<h3>'94との違い：投げ無敵や空中食らいは付かない</h3>
+<p>'94では、離陸入力で出した技に投げ無敵があり、潰されても空中食らいになります。'95ではこれが違っていて、修正されていたようだ、と書いています。ダウンしない空中食らいの着地に投げ無敵がある点も、'95では修正されています。'94の離陸入力は<a href="../kof94/takeoff-input-exceptions-2020-2025.html">KOF'94の離陸入力</a>へ。</p>
+<h3>空中判定になるのは一瞬だけ</h3>
+<p>テリーのクラックシュートとジョーのタイガーキックは、コマンドそのものが上要素を含むので、出すと次の順で位置の判定が変わります。</p>
+<ol class="flow">
+<li>コマンドが完成した直後は空中</li>
+<li>技の動作が始まると同時に地上</li>
+<li>浮き上がったら空中</li>
+</ol>
+<p>なぜこうなっているのかは分かっていません。コマンド自体が離陸入力になっているので対応されているのかもしれない、としています。</p>
+<h3>例外：空中の相手にも出る打撃投げ</h3>
+<p>リョウの連舞拳とロバートの連舞脚は、空中の相手にも発動してしまいます。そのため、相手が空中にいるときに412369+C（D）と入力すると、連舞拳（脚）が出てしまいます。</p>
+<h3>庵vsチンの開幕即死</h3>
+<p>葵花のお手玉で離陸入力を使う話は、<a href="./iori-chin-opening-death-combo-2023.html">庵vsチン開幕即死</a>にまとめています。どの葵花で離陸入力が必要かは途中で見解が変わり、2023/11/2に「離陸入力は4セット目は不要です」と訂正しています。</p>
+<h2>空キャンセルの細かい仕様</h2>
+<h3>キムのJCD空キャンセル飛翔脚</h3>
+<p>JCDを空キャンセルして飛翔脚を出すと、飛翔脚の性能が変わり、ヒット・ガード時に全段当たりやすくなります（2011年、対戦動画の解説）。</p>
+<h3>限定空キャン</h3>
+<p>'94と同じく、'95にも2段目だけ空キャンセルがかかる通常技があります。確かめた技はテリーの近C、柴舟の近C、ルガールの近Dです。</p>
+<ul>
+<li>'94のテリーの近Cは、1段目がヒットかガードしたときだけ2段目に空キャンセルがかかるようです。</li>
+<li>柴舟の近Cは1段目の持続がかなり長いので、この空キャンセルを活用しやすいかもしれません（弱闇払いでフォロー）。</li>
+<li>2段目の空キャンセルとは別に、1段目で遅めにキャンセルできる技もあるような感じがする、としています。キャンセルできる時間はまだ調べていません。</li>
+</ul>
+<h3>ケンスウの屈D</h3>
+<p>'95では珍しく、かなり遅らせてキャンセルできます。屈Dのヒットを確認してから強龍連牙で接近できます。限定キャンセルと同じ処理なのかもしれない、としています。<a href="./kensou-crouch-d-delay-cancel-2023.html">ケンスウの屈Dのディレイキャンセル</a>へ。</p>
+<h2>気になること</h2>
+<ul>
+<li>リバーサルで離陸入力の技を出せるなら、押し合い判定が上にずれるので、起き攻めのめくりを邪魔できるか（2023年）。</li>
+<li>離陸入力で葵花を出すと、最速よりも少しだけ遅いタイミングになるはずなので落としやすくなりそうなのに、実際はお手玉できる数が増える。このからくりを知りたい（2023年）。</li>
+</ul>
+<h2>似ているが別の話</h2>
+<ul>
+<li><b>離陸入力のコマンド投げ</b>：投げられる場合はコマンド投げ、投げられない場合は昇りジャンプ攻撃になる自動2択。<a href="./throw-whiff-ab-avoid-option-select-2024.html">投げが外れたら攻撃避けを出す仕込み</a>へ。</li>
+<li><b>アテナのJCD空キャンフェニックスアロー</b>：<a href="./athena-phoenix-arrow-reflector-2023.html">アテナのフェニックスアロー</a>へ。</li>
+</ul>
+<h2>出典</h2>
+<ul class="src">
+<li><a href="https://x.com/mot_csb/status/31881238604161025">昇りジャンプ攻撃の'94・'95の違いと「離陸キャンセル」</a>（X、2011/1/31）</li>
+<li><a href="https://x.com/mot_csb/status/1718516084972925168">離陸入力を最速で出せる</a>（X、2023/10/29）、<a href="https://x.com/mot_csb/status/1718531108839764187">7を入れるタイミング</a>（同日）、<a href="https://x.com/mot_csb/status/1718987124580704329">リバーサルで出せる・猶予4F</a>（X、2023/10/30）</li>
+<li><a href="https://x.com/mot_csb/status/1719253630237524221">離陸入力と投げ無敵</a>・<a href="https://x.com/mot_csb/status/1719257929436868969">'94との比較</a>（X、2023/10/31）</li>
+<li><a href="https://x.com/mot_csb/status/1718753193755377979">クラックシュートの位置判定</a>（X、2023/10/29）、<a href="https://x.com/mot_csb/status/1718988091124584449">タイガーキックの位置判定</a>（X、2023/10/30）</li>
+<li><a href="https://x.com/mot_csb/status/1769208100366786618">離陸キャンセルと打撃投げ</a>（X、2024/3/17）</li>
+<li><a href="https://x.com/mot_csb/status/1720087472905076954">4セット目は不要という訂正</a>（X、2023/11/2）</li>
+<li><a href="https://x.com/mot_csb/status/83032827406454785">キムのJCD空キャン飛翔脚</a>（X、2011/6/21）</li>
+<li><a href="https://x.com/mot_csb/status/1658308798250106880">限定空キャンの3技</a>（X、2023/5/16）、<a href="https://x.com/mot_csb/status/1657946622322671616">'94のテリー近C</a>（X、2023/5/15）、<a href="https://x.com/mot_csb/status/1658311454288924674">1段目の遅めのキャンセル</a>（X、2023/5/16）</li>
+<li><a href="https://x.com/mot_csb/status/1702660398808432803">ケンスウの屈D</a>（X、2023/9/15）</li>
+<li><a href="https://x.com/mot_csb/status/1718789351738618254">リバーサル離陸入力とめくり</a>（X、2023/10/30）、<a href="https://x.com/mot_csb/status/1718113229711577452">葵花のお手玉が増えるからくり</a>（X、2023/10/28）</li>
+</ul>
+<p class="legend"><a href="./index.html">KOF'95 研究アーカイブ</a> ／ <a href="/kof95-top.html">KOF'95トップ</a> ／ <a href="/kof-kininaru.html#kof95">KOF'95の気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>

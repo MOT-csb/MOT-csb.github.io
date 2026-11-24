@@ -1,22 +1,43 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'95：空中超必殺技の5キャラ別入力と発生原理の未解決点（2001～2005年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof95-top.html">KOF'95</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap"><h1>KOF'95：空中超必殺技の5キャラ別入力と発生原理の未解決点（2001～2005年）</h1>
-<p>一次資料はMOTの旧<a href="/9495kuutyuutyouhi.html">「KOF'94・'95空中（超）必殺技について」</a>。作成2001/8/27、2003/10/17にnagaさん提供情報を追加、2004/3/11に海草さんの指摘で訂正、最終更新2005/5/2。本人提供ZIP内の原HTMLと現行旧ページを直接照合した。<strong>本記事はKOF'95の記録に対象を限定</strong>し、KOF'94のブライアンなどの条件は別の<a href="/research/kof94/airborne-specials-old-research-2001-2005.html">KOF'94研究記事</a>へ分ける。ゲーム内部の優先順位処理を今回解析したものではない。</p>
-<h2>原稿で示された基本原理・入力の例外</h2>
-<p>MOTは、空中必殺技が成立するときに別の必殺技の入力も同時に成立し、<strong>本来は地上専用の技の優先順位が上なら空中でも発動する</strong>と説明した。技に必要なボタンが異なる組合せは、ボタン同時押しでは必殺技として認められないため、<strong>キャンセル可能な空中通常技を先に出し、キャンセル受付中にコマンドを完成させる</strong>という別手順を記載している。この説明は本人の当時の解釈であり、後述のとおり本人も整合しない例を指摘した。</p>
-<h2>KOF'95：原稿で対象とされた5キャラクター</h2>
-<table><thead><tr><th>キャラクター</th><th>空中で出す技と入力の条件</th><th>別技への変化</th></tr></thead><tbody>
-<tr><td>キム</td><td><strong>鳳凰脚</strong>。空中で方向入力後<strong>BD同時押し</strong>。原稿には方向入力の簡略化例もある。<strong>前ダッシュ・バックステップ中</strong>でも発動可能</td><td>半月斬</td></tr>
-<tr><td>リョウ</td><td><strong>龍虎乱舞</strong>。空中で方向入力を完成させ<strong>C</strong>。キム同様、<strong>前ダッシュ・バックステップ中</strong>でも発動可能</td><td>飛燕疾風脚</td></tr>
-<tr><td>ロバート</td><td><strong>龍虎乱舞</strong>。空中でキャンセル可能な通常技（原稿は<strong>CD同時押しを推奨</strong>）を出し、方向入力→<strong>C・Dずらし押し</strong>でキャンセル</td><td><strong>不明（？）</strong>。ネオジオフリークに飛燕龍神脚とあったが、MOTはその説明と本来の地上技という条件が合わないと疑問視</td></tr>
-<tr><td>ケンスウ</td><td><strong>神龍天舞脚</strong>。空中キャンセル可能通常技から、方向入力→<strong>D・Cずらし押し</strong></td><td>龍顎砕</td></tr>
-<tr><td>舞</td><td><strong>超必殺忍蜂</strong>。空中キャンセル可能通常技から、方向入力→<strong>B・Cずらし押し</strong></td><td><strong>不明（？）</strong></td></tr>
-<tr><td>舞（別の技）</td><td><strong>飛翔龍炎陣</strong>。空中キャンセル可能通常技から、方向入力→<strong>B・Aずらし押し</strong></td><td>原稿では<strong>化けない</strong>と明記</td></tr>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'95：空中超必殺技（5キャラの出し方）｜Come sono bravo?</title><meta name="description" content="KOF&#x27;95ではリョウ・キム・ロバート・ケンスウ・舞が、本来は地上技の超必殺技などを空中で出せます。出る仕組み、キャラ別の入力、パワーMAX切れ際に別の技に化ける例、残る謎。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:960px}.article table{min-width:0;width:100%}.article th,.article td{overflow-wrap:anywhere;vertical-align:top}.article a{overflow-wrap:anywhere}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}.lead{font-size:1.05em}.vt{display:inline-block;font-size:.85em;line-height:1.45;padding:0 6px;margin-left:4px;border:1px solid var(--line,#ccd);border-radius:4px;font-weight:600;white-space:nowrap}.legend{font-size:.92em;color:var(--sub,#555)}.src li{font-size:.92em}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h2{font-size:1.15em;margin-top:1.2rem}details.more h3{font-size:1.05em}@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}.article th,.article td{min-width:80px}}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof95-top.html">KOF'95</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'95：空中超必殺技（5キャラの出し方）</h1>
+<p class="lead">'95では、リョウ・キム・ロバート・ケンスウ・舞の5人が、本来は地上でしか出せない超必殺技などを空中で出せます。ロバート・ケンスウ・舞は、空中でキャンセルできる通常技を出して、それをキャンセルしたときだけ出せます。ほかのキャラは確かめていません。</p>
+<h2>なぜ出るのか</h2>
+<ol class="flow">
+<li>空中必殺技のコマンドが成立したとき、同時に別の必殺技のコマンドも成立している。</li>
+<li>別に成立した必殺技の方が優先順位が高いと、そちらが出る。このとき、本来は地上でしか出せない必殺技でも出る。</li>
+</ol>
+<p>技に必要なボタンが違う場合、違うボタンを同時押しすると必殺技として認められないので、そのままでは同時に成立させられません。そこで、通常技を出し、そのキャンセル受付中にコマンドを完成させます。強制キャンセルと似たところがある、としています。</p>
+<h2>キャラ別の出し方</h2>
+<table><thead><tr><th>キャラ</th><th>出せる技</th><th>入力（空中で）</th><th>化ける技</th></tr></thead><tbody>
+<tr><td>キム</td><td>鳳凰脚</td><td>↓↙←↙↓↘→＋BD同時押し（↓←↙↓↘→＋BD同時押しまで簡略化できる）</td><td>半月斬</td></tr>
+<tr><td>リョウ</td><td>龍虎乱舞</td><td>↓↘→↘↓↙←→＋C</td><td>飛燕疾風脚</td></tr>
+<tr><td>ロバート</td><td>龍虎乱舞</td><td>空中でキャンセルできる通常技（CD同時押しがおすすめ）から、↓↘→↘↓↙←＋C・D（ずらし押し）</td><td>？</td></tr>
+<tr><td>ケンスウ</td><td>神龍天舞脚</td><td>同上から、↓↘→↘↓↙→＋D・C（ずらし押し）</td><td>龍顎砕</td></tr>
+<tr><td>舞</td><td>超必殺忍蜂</td><td>同上から、→↘↓↙←→＋B・C（ずらし押し）</td><td>？</td></tr>
+<tr><td>舞</td><td>飛翔龍炎陣</td><td>同上から、→↘↓↙←↘＋B・A（ずらし押し）</td><td>化けない</td></tr>
 </tbody></table>
-<p><strong>正確な方向入力は旧ページの矢印付き表で参照する。</strong> ここでは、原稿が示すボタン順序・空中通常技キャンセルの必要性・前後ステップでの成立・変化する技の対応を保存した。<strong>対象は上記5キャラ</strong>とする一方、MOTは<strong>それ以外のキャラは未確認</strong>と明記しており、不可能と断定していない。</p>
-<h2>パワーゲージMAX切れ際に別技へ変化</h2>
-<p>原稿は、体力が多い状態で<strong>パワーゲージMAXの終了直前</strong>に超必殺技を出すと、別の技に化けると説明。キムの鳳凰脚→半月斬、リョウの龍虎乱舞→飛燕疾風脚、ケンスウの神龍天舞脚→龍顎砕を対応表に記載した。ロバートと舞の超必殺忍蜂については表が<strong>「？」</strong>であり、結果を推定して埋めない。舞の飛翔龍炎陣は超必殺技ではなく通常必殺技で、<strong>化けない</strong>という別の例である。</p>
-<h2>本人が最後まで残した「優先順位の矛盾」</h2>
-<p>MOTは原稿末尾で、<strong>単に入力が成立した技の優先順位だけでは空中発動を説明できない</strong>と自ら指摘。リョウでは虎煌拳より優先順位が高そうな虎砲や覇王翔吼拳が出ず、超必殺技のみの例外と考えると<strong>舞の通常必殺技である飛翔龍炎陣が空中で出る</strong>ことと合わない。MOTは舞の飛翔龍炎陣そのものが特殊である可能性を挙げたが、<strong>内部処理を確定した結論としては書いていない</strong>。これは2005年最終版に残る本人の疑問である。</p>
-<h2>旧KOF'94研究とその後</h2>
-<p><a href="/research/kof94/airborne-specials-old-research-2001-2005.html">KOF'94側の旧研究整理</a>はブライアン・キム・リョウを扱い、nagaさん・海草さんの原資料改訂履歴と、2025年の後日談を含む。本ページではKOF'95の舞・ケンスウ・ロバートの成立条件に焦点を絞る。空中超必殺技の<strong>可否</strong>と、ガードキャンセル時に技が<strong>不成立</strong>になる問題は区別する。</p>
-<p><a href="./index.html">KOF'95研究アーカイブ</a> ／ <a href="/kof-kininaru.html#kof95">気になること</a></p>
-</div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
+<ul>
+<li>キムとリョウは、前ダッシュやバックステップ中にも出せます（テリーや京の飛び道具を見てバックステップから出すなど）。</li>
+<li>ロバートの化ける技は、ネオジオフリークには飛燕龍神脚とありましたが、それでは地上で出せないので「？」のままです。</li>
+</ul>
+<h2>パワーMAXの切れ際に別の技に化ける</h2>
+<p>体力が多くてパワーゲージがMAXのとき、ゲージが切れる瞬間に超必殺技を出すと別の技に変わります。これを使うと、空中で出せる必殺技の種類が増えます。上の表の「化ける技」がそれです。舞の飛翔龍炎陣は超必殺技ではなく通常の必殺技なので、化けません。</p>
+<h2>実戦での使い方</h2>
+<ul>
+<li><b>キム</b>：垂直ジャンプや後方ジャンプで空中鳳凰脚のレバー部分だけ仕込んでおき、相手のジャンプが見えたらBD同時押し、という使い方ができるかもしれません。空中鳳凰脚は突進速度が突出しているので、後方ジャンプからでも差し返しに使えます。対戦相手から見ると、キムが鳳凰脚を使える状況（パワーMAX中と体力赤点滅中）では、昇りジャンプ攻撃は空中鳳凰脚に吸い込まれる危険が高いので微妙です。<a href="./kim-gc-hououkyaku-2023.html">キムの鳳凰脚</a>へ。</li>
+<li><b>ロバート</b>：空中龍虎乱舞は食らい判定が低い位置にないので、対空・飛び道具・突進技潰しに使えないか、と考えています（2023年）。</li>
+<li><b>舞</b>：「空中超必殺忍蜂は空キャンセルで出せれば空対空でも使えるんですよね」（2021年）。</li>
+</ul>
+<h2>残る謎</h2>
+<p>出る仕組みは、改めて考えると謎が残ります。成立した技のうち優先順位が高いものが出るだけなら、リョウは虎煌拳より虎砲や覇王翔吼拳の方が優先順位が高いはずなのに、空中では出ません。それなら超必殺技だけの話かと思うと、'95の舞は通常の必殺技である飛翔龍炎陣が空中で出てしまうので矛盾します。'95の舞の飛翔龍炎陣が特殊、というのが一番わかりやすい答えですが、確かめられてはいません。</p>
+<h2>似ているが別の話</h2>
+<ul>
+<li><b>'94の空中超必殺技</b>：ブライアン・キム・リョウが出せます。<a href="../kof94/airborne-specials-old-research-2001-2005.html">KOF'94の空中（超）必殺技</a>へ。</li>
+</ul>
+<h2>出典</h2>
+<ul class="src">
+<li><a href="/9495kuutyuutyouhi.html">KOF'94・'95空中（超）必殺技について</a>（旧サイト、2001/8/27作成、2003/10/17 nagaさん情報追加、2004/3/11 海草さんの指摘で訂正、2005/5/2最終更新）</li>
+<li><a href="https://x.com/mot_csb/status/1713352539192868867">キムの空中鳳凰脚の仕込み</a>（X、2023/10/15）、<a href="https://x.com/mot_csb/status/1713517648833876153">後方ジャンプからの差し返し</a>（同日）、<a href="https://x.com/mot_csb/status/1689476592161193984">昇りジャンプ攻撃が吸い込まれる</a>（X、2023/8/10）</li>
+<li><a href="https://x.com/mot_csb/status/1729822563486802300">ロバートの空中龍虎乱舞</a>（X、2023/11/29）</li>
+<li><a href="https://x.com/mot_csb/status/1349756546788442117">舞の空中超必殺忍蜂</a>（X、2021/1/14）</li>
+</ul>
+<p class="legend"><a href="./index.html">KOF'95 研究アーカイブ</a> ／ <a href="/kof95-top.html">KOF'95トップ</a> ／ <a href="/kof-kininaru.html#kof95">KOF'95の気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>

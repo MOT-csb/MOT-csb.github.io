@@ -1,22 +1,54 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'95：パワーためキャンセルの原理・ボタン別分岐と旧連続技（2001～2003年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof95-top.html">KOF'95</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap"><h1>KOF'95：パワーためキャンセルの原理・ボタン別分岐と旧連続技（2001～2003年）</h1>
-<p>MOTが2001/8/27に作成し2003/10/27まで更新した<a href="/9495tamekyann.html">「KOF'94・'95 パワー溜めキャンセルについて」</a>を、本人提供ZIPのHTMLから再整理。これは本人が後年のフレーム解析で新たに確認した記事ではなく、<strong>当時の研究記録を再利用できる形にしたもの</strong>。原文は発見者について「おそらく関西のプレイヤー」とし、ゲーメストのKOF'95記事を参考にしたと書く。<strong>MOTがこの仕組みの最初の発見者であるとはしない</strong>。</p>
-<h2>基本原理：連打キャンセルとパワーためを介した疑似キャンセル</h2>
-<ol><li>KOF'94・'95では、弱攻撃の一部に<strong>連打キャンセル可能</strong>という設定がある。すべての弱攻撃が対象ではない</li><li>連打キャンセル可能な弱攻撃のヒット後の動作は、<strong>ABCのパワーため</strong>でキャンセルできる</li><li>パワーためをすぐに中断すると、ボタンの優先関係からC攻撃が出る。したがって<strong>弱攻撃 → 一瞬ABCでパワーため → C攻撃</strong>という疑似キャンセルが成立する</li></ol>
-<p>MOTはアンディの屈A→屈Cのような、通常はつながらない攻撃の組み合わせが連続技になることと、元々つながる攻撃の難度を下げられる点を利点として挙げる。</p>
-<h2>ボタン・姿勢による分岐</h2><table><thead><tr><th>パワーための入力と姿勢</th><th>旧原稿の結果</th></tr></thead><tbody>
-<tr><td>立った状態でABCDを一瞬同時押し</td><td>弱攻撃 → <strong>立ちC+D</strong></td></tr>
-<tr><td>しゃがんだ状態でABCDを一瞬同時押し</td><td>弱攻撃 → <strong>屈D</strong></td></tr>
-<tr><td>立った状態でABCを一瞬同時押し → すぐD</td><td>弱攻撃 → <strong>立ちD</strong></td></tr>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'95：パワーためキャンセル（ためキャン）｜Come sono bravo?</title><meta name="description" content="KOF&#x27;94・&#x27;95では、連打キャンセルできる弱攻撃の後にABCを一瞬押すと、パワーためを一瞬挟んでC攻撃が出ます。普段つながらない弱攻撃→強攻撃が連続技になる仕組み、ボタンによる出し分け、&#x27;95の注意点。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:960px}.article table{min-width:0;width:100%}.article th,.article td{overflow-wrap:anywhere;vertical-align:top}.article a{overflow-wrap:anywhere}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}.lead{font-size:1.05em}.vt{display:inline-block;font-size:.85em;line-height:1.45;padding:0 6px;margin-left:4px;border:1px solid var(--line,#ccd);border-radius:4px;font-weight:600;white-space:nowrap}.legend{font-size:.92em;color:var(--sub,#555)}.src li{font-size:.92em}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h2{font-size:1.15em;margin-top:1.2rem}details.more h3{font-size:1.05em}@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}.article th,.article td{min-width:80px}}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof95-top.html">KOF'95</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'95：パワーためキャンセル（ためキャン）</h1>
+<p class="lead">連打キャンセルできる弱攻撃を当てた後にABCを一瞬だけ同時押しすると、パワーためを一瞬挟んでC攻撃が出ます。アンディの屈A→屈Cのような、普段は決してつながらない組み合わせが連続技になり、元々つながる組み合わせも難易度がかなり下がります。'94と'95で使えます。</p>
+<p>パワーためキャンセルは「ためキャン」と略して呼んでいます。</p>
+<h2>なぜできるのか</h2>
+<ol class="flow">
+<li>'94と'95には、弱攻撃を同じボタンの技でキャンセルできる「連打キャンセル」があります（例：テリーの屈B）。すべての弱攻撃でできるわけではなく、弱攻撃ごとに連打キャンセルできるかどうかが決まっています。</li>
+<li>連打キャンセルできる弱攻撃は、攻撃が当たった後の動作をキャンセルしてパワーためを出せます。</li>
+<li>パワーためをすぐに中断すると、ボタンの優先順位の関係でCボタンの攻撃が出ます。</li>
+</ol>
+<p>この3つが重なって、弱攻撃＞キャンセルパワーため＞すぐに離す＞C攻撃、という疑似的なキャンセルが成立します。</p>
+<h2>押し方で出る技が変わる</h2>
+<table><thead><tr><th>パワーための入れ方</th><th>出る技</th></tr></thead><tbody>
+<tr><td>ABCを一瞬同時押し</td><td>C攻撃</td></tr>
+<tr><td>立った状態でABCDを一瞬同時押し</td><td>立CD</td></tr>
+<tr><td>しゃがんだ状態でABCDを一瞬同時押し</td><td>屈D</td></tr>
+<tr><td>立った状態でABCを一瞬同時押し→すぐにD</td><td>立D</td></tr>
 </tbody></table>
-<p>入力のコツとして、ヒットまたはガード時の丸いエフェクトが消える瞬間にABCを一瞬押すと成功しやすい<strong>気がする</strong>と本人が記している。成功フレームを測定した確定値に変換しない。</p>
-<h2>原稿のKOF'95連続技</h2><table><thead><tr><th>キャラ</th><th>原資料の連続技</th></tr></thead><tbody>
-<tr><td>アンディ</td><td>めくりJC → 屈B → <strong>パワーためキャンセル屈C</strong> → 超裂破弾</td></tr>
-<tr><td>キム</td><td>めくりJC → 屈B×2 → <strong>パワーためキャンセル近C（×1）</strong> → 鳳凰脚</td></tr>
+<p>コツ：弱攻撃がヒットまたはガードされたときの丸いエフェクトが消える瞬間にABCを一瞬押すと、うまくいきやすい気がする、としています。</p>
+<h2>'95の連続技</h2>
+<table><thead><tr><th>キャラ</th><th>連続技</th></tr></thead><tbody>
+<tr><td>アンディ</td><td>めくりJC＞屈B＞ためキャン屈C≫超裂破弾</td></tr>
+<tr><td>キム</td><td>めくりJC＞屈B×2＞ためキャン近C（×1）≫鳳凰脚</td></tr>
 </tbody></table>
-<p>旧表のKOF'94欄はテリー・アンディ・アテナ・ケンスウ・チン・京・ユリ・リョウの8例を挙げるが、上記KOF'95欄にあるのは2例のみ。<strong>KOF'94で示された8連続技をKOF'95でも成立確認済みとして転記しない</strong>。全原稿は<a href="/9495tamekyann.html">旧ページ</a>で参照できる。</p>
-<h2>2011年3月26日の追加確認：ABC入力時の攻撃避け優先と食らい判定</h2>
-<p>MOTはKOF'95で<strong>パワーためのABCは完全同時押しでなくても成立する</strong>と記録した。ただし、<strong>ABCが成立する前にAB同時押しが完成すると、攻撃避けが優先される</strong>と説明している。これは旧2001～2003年原稿の入力方法を使う際にも注意すべき条件で、旧原稿の成立手順を変更するものではない。出典：<a href="https://comesonobravo.hatenadiary.org/entry/192681035.html">MOT「2011/03/26のつぶやき」</a>。</p>
-<p>同日の本人記録では、パワーための姿勢・食らい判定について<strong>京は食らい判定が後方かつ低めに移動するようだ</strong>、<strong>五郎は食らい判定が前に出るようだ</strong>と説明している。どちらも原文では「みたい」という留保があるため、今回の検証結果として断定しない。さらにルガールのバリアーを無視してパワーため可能かという<strong>本人の未確認の疑問</strong>も同じ日に残されている。</p>
-<p>ここで扱うのは<strong>2011年の追加記録</strong>であり、当初のパワーためキャンセル発見者・2001～2003年の連続技を後から書き換えるものではない。</p>
-<h2>別研究との接続</h2><p>2023年の<a href="./robert-walk-renbukyaku-power-cancel-2023.html">ロバート立A→歩き立Aのパワーためキャンセル研究</a>は、本人が歩ける区間を4～6Fと記録した後年の検討。2001～2003年の本稿にその数値を遡って付与しない。また、<a href="./joe-bakuretsuken-cancel-2004.html">ジョーの爆裂拳フィニッシュ空キャン</a>はフィニッシュ入力が技を出さず動作をキャンセルする別技術であり、パワーためを一瞬挟む本稿の手順とは異なる。</p>
-<p><a href="./index.html">KOF'95研究アーカイブへ戻る</a> ／ <a href="/kof-kininaru.html#kof95">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
+<p class="legend">＞はキャンセルなしでつながる、≫はキャンセルでつながる。</p>
+<p>'94の連続技（テリー・アンディ・アテナ・ケンスウ・チン・京・ユリ・リョウ）は'95で確かめたものではないので、<a href="../kof94/tamecan-stun-combos-max-2011.html">KOF'94のためキャン連続技</a>で扱います。</p>
+<h2>'95で気をつけること</h2>
+<ul>
+<li><b>ABCは完全な同時押しでなくてもいい</b>：ただし、ABC同時押しの前にAB同時押しが完成すると、攻撃避けが優先されます。</li>
+<li><b>パワーため中の食らい判定はキャラで違う</b>：京は見た目通り食らい判定が後方・低めに移動し、大門は前に出るようです。</li>
+</ul>
+<details class="more"><summary>後年の応用と研究メモ</summary>
+<ul>
+<li><b>ロバートの立A→歩き立A</b>：ためキャンで前進しているらしい、という検討（2023年）。<a href="./robert-walk-renbukyaku-power-cancel-2023.html">ロバートの歩き連舞脚とためキャン</a>へ。</li>
+<li><b>ビリーの弱攻撃始動</b>：屈B（AB同時押し）＞屈Aか近A×n＞ためキャン屈Dか立CD、が普通にできそうだった、と記しています（要検証、2023年）。<a href="./billy-super-flame-counter-gc-input-2023-2024.html">ビリーの研究</a>へ。</li>
+<li><b>リョウの崩し</b>：屈Bがガードされていたら、ためキャン6Cも混ぜれば崩せないか、という案（2014年）。</li>
+<li><b>あえて使わない</b>：確定する場面で弱攻撃×2＞ためキャン強攻撃を狙って途切れるより、倒しきれるなら強攻撃≫必殺技や弱攻撃×2≫必殺技で安定させるのもいい、としています（2023年、<a href="./strategy-notes-2011-2025.html">立ち回りと起き攻め</a>）。</li>
+</ul>
+</details>
+<h2>似ているが別の話</h2>
+<ul>
+<li><b>ジョーの爆裂拳フィニッシュの空キャン</b>：フィニッシュの入力で技を出さずに動作をキャンセルするもので、パワーためは挟みません。<a href="./joe-bakuretsuken-cancel-2004.html">ジョーの爆裂拳フィニッシュ</a>へ。</li>
+</ul>
+<h2>気になること</h2>
+<ul>
+<li>ルガールのバリアーに対して、無視してパワーためできるか（2011年のメモ）。</li>
+</ul>
+<h2>出典</h2>
+<ul class="src">
+<li><a href="/9495tamekyann.html">KOF'94・'95 パワー溜めキャンセルについて</a>（旧サイト、2001/8/27作成、2003/10/27最終更新）。発見者は原文で「おそらく関西のプレイヤー（ゲーメストの’95の記事参考）」</li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/192681035">2011/03/26のつぶやき</a>（ABCの押し方、京・大門の食らい判定、ルガールのバリアー）</li>
+<li><a href="https://x.com/mot_csb/status/381991992172544">ためキャンの説明</a>（X、2010/11/5）、<a href="https://x.com/mot_csb/status/45716570881798144">略称</a>（X、2011/3/10）</li>
+<li><a href="https://x.com/mot_csb/status/1694317502522912832">ビリーの弱攻撃始動</a>（X、2023/8/23）、<a href="https://x.com/mot_csb/status/484655380157321216">リョウの6C</a>（X、2014/7/3）、<a href="https://x.com/mot_csb/status/1683857130510753792">難易度を下げる</a>（X、2023/7/25）</li>
+</ul>
+<p class="legend"><a href="./index.html">KOF'95 研究アーカイブ</a> ／ <a href="/kof95-top.html">KOF'95トップ</a> ／ <a href="/kof-kininaru.html#kof95">KOF'95の気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
