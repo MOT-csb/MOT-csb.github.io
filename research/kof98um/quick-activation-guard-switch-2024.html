@@ -1,22 +1,43 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'98UMFE：紅丸・表京のクイック発動によるガード切り替え不可連係（2024年本人確認）｜Come sono bravo?</title><meta name="description" content="MOT本人のX原投稿に基づくKOF98UMFEガード切り替え不可連係の確認報告。2008年仮説との経緯を保存。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:990px}.article h2{margin-top:2rem}.article table{border-collapse:collapse;width:100%}.article th,.article td{border:1px solid var(--line,#aaa);padding:9px;text-align:left;vertical-align:top}.article th{background:var(--soft,#edf1ed)}.note{background:var(--soft,#edf1ed);border-left:4px solid #567;padding:12px 16px}code{overflow-wrap:anywhere}</style></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof98um-top.html">KOF'98UM</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'98UMFE：紅丸・表京のクイック発動によるガード切り替え不可連係（2024年本人確認）</h1><p class="note"><strong>資料区分：</strong>MOT本人の2024年11月10～15日のX投稿を、提供済みXアーカイブから原文確認。2008年に提案した攻撃側ヒットストップ消去を使う連係について、<strong>2024年には98UMFEの紅丸と表京で本人が「確認」と報告</strong>している。一方、防御側は人力で、本人は他者による追試も求めている。<strong>初期98UMでの成立と、全入力条件での防御不可能性は別途確認が必要</strong>。</p>
-<h2>2008年：成立条件を仮定した研究案</h2><p>2008年、MOTはジャンプ攻撃の攻撃側ヒットストップをクイック発動で消し、相手が立ちガードから下段ガードに切り替えられない間に着地屈Bを当てる可能性を考えていた。2008年3月21日の試遊ではCPUにガードされたという記録もあるため、<strong>当時は確定済みのガード不能とは扱えない</strong>。<a href="./quick-activation-study-2008.html">2008年の元研究</a>参照。</p>
-<h2>2015年1月11日：紅丸での具体的な成立予想</h2><p>MOTは2015年に、98UMのJ攻撃→QM→着地下段について、発生の早い下段ならぎりぎり可能だった気がするが記録した場所を忘れた、と過去の記憶に留保を付けていた。そのうえで、<strong>紅丸の屈Bが発生3Fで最速クラス</strong>と当時説明し、<strong>紅丸の小JD（最低打点）→最速QM→着地最速屈B</strong>なら立ちガードから屈ガードへの切り替えを妨げられるかもしれないと具体的に提案した。</p><p>これは<strong>2015年当時の本人の予想と性能認識</strong>であって、2024年の動画から2015年の実測を遡って創作しない。また屈B発生3Fという数値は当時の本人投稿にある値として保存する。原資料：<a href="https://x.com/i/web/status/554137773347979266">2015/01/11本人投稿</a>。</p>
-<h2>2024年11月10日：紅丸の本人確認</h2>
-<p>MOTが98UMFEの紅丸で確認した連係は、<strong>前小JD（最低打点）→クイック発動（最速）→屈B（最速）</strong>。本人は、立ちガードのヒットストップ中に屈Bが決まったと記している。防御側が人力だったため、本人は他者の再確認を希望した。</p>
-<p><strong>紅丸側のコマンド登録（原投稿の値をそのまま保存）</strong></p>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'98UMFE：クイック発動でガードを切り替えさせない連係（紅丸・表京）｜Come sono bravo?</title><meta name="description" content="98UMFEの紅丸・表京で、前小JD→最速クイック発動→屈Bが立ちガードのヒットストップ中に決まる連係の仕組みとコマンド登録。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:990px}.article h2{margin-top:2rem}.article table{border-collapse:collapse;width:100%}.article th,.article td{border:1px solid var(--line,#aaa);padding:9px;text-align:left;vertical-align:top}.article th{background:var(--soft,#edf1ed)}.note{background:var(--soft,#edf1ed);border-left:4px solid #567;padding:12px 16px}code{overflow-wrap:anywhere}.scroll{max-width:100%;overflow-x:auto}.article table{border-collapse:collapse;width:100%;min-width:560px}.article th,.article td{border:1px solid var(--line,#bbb);padding:10px;text-align:left;vertical-align:top}.article th{background:var(--soft,#edf1ed)}.note{background:var(--soft,#edf1ed);border-left:4px solid #567;padding:12px 16px}</style></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof98um-top.html">KOF'98UM</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'98UMFE：クイック発動でガードを切り替えさせない連係（紅丸・表京）</h1>
+<p>98UMFEの紅丸と表京では、<strong>前小JD（最低打点）→最速でクイック発動→着地して最速で屈B</strong>とすると、立ちガードした相手のヒットストップ中に屈Bが決まります。相手は立ちガードから屈ガードに切り替えられません（2024年11月に確認）。防御側は人の操作で試しているため、他の人による確認も求めています。</p>
+
+<h2>仕組み</h2>
+<p>攻撃が当たると、攻撃側と防御側の両方が少しのあいだ止まります。これをヒットストップといい、98ではヒットストップ中は立ちガードと屈ガードを切り替えられません（2008年の記事による）。ふだんは両者に同じだけかかるので、この性質はほとんど問題になりません。</p>
+<p>98UMのクイック発動（攻撃中にABC同時押しで行うMAX発動）は、<strong>攻撃側のヒットストップだけ</strong>をなくします。そのため次の順で連係が成立します。</p>
+<ol>
+<li>低い打点の小JDを立ちガードさせる。</li>
+<li>当たった瞬間に最速でクイック発動する。攻撃側だけ止まらずに動けるようになる。</li>
+<li>防御側はまだヒットストップ中で、ガードの段を変えられない。</li>
+<li>先に着地した攻撃側の屈Bが、立ちガードのままの相手に当たる。</li>
+</ol>
+<p>紅丸の屈Bは発生3Fで最速クラスです。2015年1月の投稿で、紅丸ならこの連係が成り立つかもしれないと予想していました（<a href="https://x.com/mot_csb/status/554137773347979266">2015/01/11</a>）。</p>
+
+<h2>紅丸（2024年11月10日）</h2>
+<p>投稿には、紅丸側のコマンド登録が次のように書かれています（<a href="https://x.com/mot_csb/status/1855556373498695885">原投稿・動画</a>、<a href="https://x.com/mot_csb/status/1855559383209668799">YouTube版の案内</a>）。</p>
 <pre><code>9(2F) N(21F) D(1F) N(9F) ABC(1F) N(3F) B(1F) 2(6F)</code></pre>
-<p>上記は<strong>原投稿にある登録内容</strong>であり、記号ごとの入力継続時間の解釈や別設定での再現性を勝手に補わない。</p>
-<p><a href="https://x.com/i/web/status/1855556373498695885">MOT本人の2024/11/10投稿（コマンド登録と動画添付）</a> ／ <a href="https://x.com/i/web/status/1855559383209668799">後続の動画公開案内</a></p>
-<h2>2024年11月11日：表京の本人確認</h2>
-<p>表京についても、MOTは<strong>前小JD（最低打点）→クイック発動（最速）→屈B（最速）</strong>で立ちガードのヒットストップ中に屈Bが決まるのを確認したと報告した。</p>
-<p>投稿には検証動画の内容として、①立ちガードからガード段切り替えを狙う、②屈ガードのままで受ける（連続技）、の二つの条件が示されている。<strong>動画内容の詳細はこの整理で直接検証していない</strong>。本人は紅丸の場合と同様、防御側が人力である点に注意し、他者の追試を求めている。</p>
-<p><a href="https://x.com/i/web/status/1855895104026034386">MOT本人の2024/11/11確認投稿</a> ／ <a href="https://x.com/i/web/status/1855900062838370468">YouTube投稿案内</a> ／ <a href="https://x.com/i/web/status/1855900433992101972">60FPS動画への言及（本人は推定と記録）</a></p>
-<h2>2024年11月15日：通常版の無式への発展</h2><p>MOTは98UM(FE)のクイック発動使用ガード不能について、中ジャンプと通常版の無式を使った状況にも言及し、遠めの距離で成立することに注目した。ただし、実戦では相手も後退するため、もう少し近い距離が必要ではないかと留保した。この投稿だけでは攻撃側・防御側のキャラ、版、手順と成立の網羅条件は特定できない。</p>
-<p><a href="https://x.com/i/web/status/1857367330453585954">MOT本人の2024/11/15投稿</a></p>
-<h2>確定情報・未解決情報を区別</h2>
-<table><thead><tr><th>分類</th><th>内容</th></tr></thead><tbody>
-<tr><td>本人確認済み（98UMFE）</td><td>紅丸・表京の前小JD（最低打点）→最速QM→最速屈Bが、本人の記録した人力防御テストで立ちガードからの切り替えに勝った。</td></tr>
-<tr><td>原投稿で確認できる条件</td><td>紅丸側コマンド登録のフレーム内訳。表京側の動画の2種類の防御条件。</td></tr>
-<tr><td>未確認</td><td>初期98UMでの同条件の成立、完全に最適な防御操作への成立、相手キャラごとの差、版や入力デバイスによる差。</td></tr>
-<tr><td>追加研究案</td><td>2021年のMOTはクイック発動のタイミングで消せるヒットストップの長さが変わるのではと疑問を提示。入力発動時刻の検証につながるが、本ページの2例だけでは一般則は確定しない。</td></tr></tbody></table>
-<p><a href="https://x.com/i/web/status/1357156733299269633">2021/02/04のヒットストップ長の本人疑問</a> ／ <a href="https://x.com/i/web/status/1855552571395695069">2024/11/10、初期98UMではコマンド登録をしていなかったとの本人説明</a></p><p><a href="./index.html">KOF'98UM研究目次</a> ／ <a href="/kof-kininaru.html#kof98um">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?</div></footer></body></html>
+
+<h2>表京（2024年11月11日）</h2>
+<p>紅丸と同じ前小JD（最低打点）→最速クイック発動→最速屈Bで、立ちガードのヒットストップ中に屈Bが決まります。動画には次の2つの場面が入っています（<a href="https://x.com/mot_csb/status/1855895104026034386">原投稿・動画</a>、<a href="https://x.com/mot_csb/status/1855900062838370468">YouTube版の案内</a>）。</p>
+<ol>
+<li>立ちガードからガードの段を切り替えようとする。</li>
+<li>屈ガードのまま受ける（この場合は連続技になる）。</li>
+</ol>
+<p>YouTube版は、nagaさんの助言を受けて画面サイズを上げて録画し直したもので、60FPSになっているはずだと書いています（<a href="https://x.com/mot_csb/status/1855900433992101972">原投稿</a>）。</p>
+
+<h2>応用：中ジャンプと無式</h2>
+<p>2024年11月15日には、中ジャンプと通常版の無式でも、遠めの距離から決まる場面を紹介しています（<a href="https://x.com/mot_csb/status/1857367330453585954">原投稿・動画</a>）。</p>
+<blockquote>「中ジャンプ＆通常版の無式ならこの距離でも決まるのがすごい<br>使いこなせれば結構強いはず<br>（実際は相手も後退するでしょうから、もう少し近い距離でないとダメでしょうけど）」</blockquote>
+<p>使ったキャラと手順は投稿の文面には書かれておらず、動画だけで示されています。</p>
+
+<h2>ここまでの経緯</h2>
+<p>この連係は、98UMの稼働前の2008年3月に、雑誌の説明から予想していたものです。稼働直後の試遊ではCPUにガードされ、その時点では、98UMではヒットストップ中にガード段を切り替えられるようになったのかもしれない、と考えていました。2010年と2024年11月10日の投稿でも、自分では確かめていないと書いています（2024年の投稿では「98UMのコマンド登録面倒っぽいのでやってない」）。その日のうちにコマンド登録で確かめたのが上の紅丸の結果です。2008年の予想と試遊の記録は<a href="./quick-activation-study-2008.html">クイック発動の基本と2008年の連続技案</a>にまとめています。</p>
+<p>出典：<a href="https://x.com/mot_csb/status/18587581969076224">2010/12/25</a> ／ <a href="https://x.com/mot_csb/status/1855552571395695069">2024/11/10（確認前）</a></p>
+
+<h2>残っている疑問</h2>
+<ul>
+<li>無印98UM（FEではない版）でも同じように成り立つのか。</li>
+<li>防御側が最適な操作をしても防げないのか。相手キャラによる違いはあるか。</li>
+<li>クイック発動のタイミングによって、なくなるヒットストップの長さが変わるのか（2021年の疑問。<a href="./quick-activation-hitstop-brian-2015-2025.html">クイック発動とヒットストップのタイミング差</a>）。</li>
+</ul>
+<p><a href="/kof-kininaru.html#kof98um">気になること（98UM）</a> ／ <a href="./index.html">KOF'98UM研究アーカイブへ戻る</a></p>
+</div></main><footer class="footer"><div class="wrap">Come sono bravo?</div></footer></body></html>

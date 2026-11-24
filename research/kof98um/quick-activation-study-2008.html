@@ -1,44 +1,96 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'98UM：クイック発動の入力・硬直変化と2008年の連続技研究案｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:1010px}.article h2{margin-top:2rem}.article h3{margin-top:1.5rem}.article a{overflow-wrap:anywhere}.note{padding:12px;background:var(--soft,#edf1ed);border-left:4px solid #587}.scroll{overflow-x:auto}.article table{width:100%;min-width:600px;border-collapse:collapse}.article th,.article td{border:1px solid #bbb;padding:10px;text-align:left;vertical-align:top}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof98um-top.html">KOF'98UM</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'98UM：クイック発動の入力・硬直変化と2008年の連続技研究案</h1><p class="note"><strong>一次資料：</strong>2008年3月7日・14日・22～24日・4月2日のMOT本人ブログ。<strong>稼働前の予測、未検証の連続技案、稼働後の本人メモ</strong>を区別して再整理。原文で本人が「未確認の妄想」とした案は成功例として掲載しない。</p>
-<h2>2008年3月7日：稼働前の主な予想</h2>
-<p>MOTは雑誌「アルカディア」4月号の説明を踏まえ、クイック発動が<strong>攻撃側のヒットストップだけを削除</strong>し、相手側のヒットストップとガード段変更禁止が残るなら、<strong>低い打点のJ攻撃→クイック発動→着地屈B</strong>がガード不能のように働くのではないかと推測した。</p>
-<p>ただし成立には、①攻撃側のみ停止が消える、②J攻撃も発動可能、③ヒットストップ中は相手がガード段を変更できない、という<strong>三つの条件</strong>が必要であり、稼働前の記事では条件そのものが未確認だった。</p>
-<p>3月7日の別記事では、<strong>一律11Fが消えるのか、1～11Fの幅があるのか</strong>も問いとして挙げている。この段階の理論を発生・硬直の確定計算にしない。</p>
-<h2>3月21日の本人試遊で追試できた点と、未解決の原因</h2>
-<p>3月21日の実際の試遊では、本人はクイック発動によりヒット時の停止が明らかになくなると記録。一方、<strong>J攻撃＋クイック発動→着地屈BをCPUにガードされた</strong>。したがって3月7日の予測を<strong>ガード不能成功例へ格上げしない</strong>。</p>
-<p>本人は高い打点、停止中のガード段変更、CPU固有の防御という複数の可能性を列挙しており、原因は未確定。<a href="./system-playtest-2008.html">3月21日の試遊原文を整理した記事</a>を参照。</p>
-<h2>2008年4月2日：本人が整理したクイック発動の操作メモ</h2>
-<div class="scroll"><table><thead><tr><th>論点</th><th>4月2日の本人メモ</th><th>留保</th></tr></thead><tbody>
-<tr><td>通常技キャンセルクイック発動→特殊技</td><td>出た特殊技は<strong>ディレイ版</strong>となる。</td><td>発動時の入力内容とキャラ別例外は未収録</td></tr>
-<tr><td>キャンセル可能な特殊技→クイック発動＋必殺技</td><td><strong>クイック発動だけ</strong>になると記録。</td><td>4月2日のメモの範囲</td></tr>
-<tr><td>弱攻撃にクイック発動</td><td>強攻撃に比べてノックバックが短く、連続技をつなぎやすいという説明。</td><td>相手・距離・技別の全成立表ではない</td></tr>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'98UM：クイック発動の基本と2008年の連続技案｜Come sono bravo?</title><meta name="description" content="98UMのクイック発動は攻撃側のヒットストップだけをなくす。入力のメモ、弱攻撃始動の連続技案とalucardさんの確認報告、ガード切り替え不可連係の予想。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:1010px}.article h2{margin-top:2rem}.article h3{margin-top:1.5rem}.article a{overflow-wrap:anywhere}.note{padding:12px;background:var(--soft,#edf1ed);border-left:4px solid #587}.scroll{overflow-x:auto}.article table{width:100%;min-width:600px;border-collapse:collapse}.article th,.article td{border:1px solid #bbb;padding:10px;text-align:left;vertical-align:top}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof98um-top.html">KOF'98UM</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'98UM：クイック発動の基本と2008年の連続技案</h1>
+<p>98UMのクイック発動は、<strong>攻撃を当てたときの攻撃側のヒットストップをなくす</strong>MAX発動です。攻撃側だけが先に動けるので、ふだんはつながらない技が連続技になります。弱攻撃から発動すると強攻撃より相手が離れにくいため、つなぎやすくなります。</p>
+<p class="note">記号：≫はキャンセル、＞はキャンセルなしでつなぐ、という意味で、原文の表記をそのまま使っています。</p>
+
+<h2>仕組み</h2>
+<ul>
+<li><strong>攻撃が当たったとき：</strong>ヒットストップがなくなります。J攻撃でも明らかになくなります（2008年3月21日の試遊）。2020年にも「98UMのクイック発動は攻撃側のヒットストップがなくなる仕様」と書いています（<a href="https://x.com/mot_csb/status/1314759057626918914">原投稿</a>、末尾に「間違いあるかも」）。</li>
+<li><strong>ガードされたとき：</strong>ヒットストップもガード硬直も変わらないように感じた、と記録しています。ガード硬直が解けたらMAX状態になるだけで、発動しても反撃のしやすさは変わらなさそうです（同日の試遊）。</li>
+<li><strong>無印'98との違い：</strong>'98ではヒットストップ中に立ちガードと屈ガードを切り替えられませんが、ヒットストップは両者に同じだけかかるので、ほとんど影響しませんでした。98UMで攻撃側だけヒットストップがなくなると、この性質が生きてきます。</li>
+<li><strong>2002のクイック発動との違い：</strong>98UMでは発動しても攻撃力が下がりません（2008年3月7日の記事）。</li>
+</ul>
+<p>なくなるヒットストップの長さが一律なのか、発動のタイミングで変わるのかは分かっていません。2008年3月にはalucardさんが、画面端で幻影不知火の下顎から発動＞弱昇龍弾がつながったことから、少なくとも2F以上は減っていると報告しています。その後のタイミング差についての疑問は<a href="./quick-activation-hitstop-brian-2015-2025.html">クイック発動とヒットストップのタイミング差</a>にあります。</p>
+
+<h2>入力についてのメモ（2008年4月2日）</h2>
+<div class="scroll"><table><thead><tr><th>入力</th><th>結果</th></tr></thead><tbody>
+<tr><td>通常技≫クイック発動＋特殊技</td><td>出た特殊技はディレイ版になる</td></tr>
+<tr><td>キャンセル可能な特殊技≫クイック発動＋必殺技</td><td>クイック発動だけになる</td></tr>
+<tr><td>弱攻撃にクイック発動</td><td>強攻撃よりノックバックが短く、連続技がつながりやすい</td></tr>
 </tbody></table></div>
-<h2>4月2日に列挙した連続技案</h2>
-<p>以下は本人記事で<strong>「連続技案」</strong>として掲げたもの。成功確認の一覧ではない。</p>
-<div class="scroll"><table><thead><tr><th>キャラ</th><th>2008年の入力案</th><th>原文の注意</th></tr></thead><tbody>
-<tr><td>京</td><td>屈B→屈A→クイック発動＋大蛇薙／弱RED kick</td><td>弱RED kickは<strong>相手立ち状態・キャラ限定</strong>と本人注記。236＋ABC同時入力で何が出るかも疑問</td></tr>
-<tr><td>ロバート</td><td>屈B×2→クイック発動＋龍虎乱舞／クイック発動＋6B→龍虎乱舞</td><td>屈B×2より屈B→屈Aの方がよいかもしれないという本人見解</td></tr>
-<tr><td>キム</td><td>屈B→屈A→クイック発動＋6A→鳳凰脚</td><td>未確認案</td></tr>
-<tr><td>ハイデルン</td><td>近C2段目→クイック発動＋ファイナルブリンガー</td><td>未確認案</td></tr>
-<tr><td>表リョウ</td><td>屈B→屈A→クイック発動＋龍虎乱舞／MAX天地覇王拳</td><td>MAX天地覇王拳は<strong>体力赤点滅限定</strong></td></tr>
-<tr><td>レオナ</td><td>屈B→屈A→クイック発動＋リボルスパーク</td><td>未確認案</td></tr>
-<tr><td>マチュア</td><td>屈B→屈A→クイック発動＋ヘブンズゲイト</td><td>未確認案</td></tr>
+<p>特殊技からクイック発動と同時に必殺技を出せない理由について、2008年3月23日のコメント欄で次のように考えています。必殺技コマンド＋ABC同時押し＋押しっぱなしで出すクイック発動＋キャンセル必殺技は、正確には1Fだけディレイで出ているのではないか。ディレイキャンセルは技のヒット後のモーションを空振りキャンセルするもので、特殊技は空振りキャンセルできないので、クイック発動と同時のキャンセルもできないのではないか、という推測です。直前にponZaさんが、特殊技にはかからないこと、飛び道具や多段技の最後以外の段にもかけられず、技ごとに設定されている印象があることを報告しています。</p>
+
+<h2>弱攻撃始動の連続技案と確認報告</h2>
+<p>2008年4月2日に挙げた案です。コメント欄でalucardさんが試した結果も並べます。</p>
+<div class="scroll"><table><thead><tr><th>キャラ</th><th>連続技案</th><th>結果・注記</th></tr></thead><tbody>
+<tr><td>京</td><td>屈B≫屈A≫クイック発動＋大蛇薙<br>屈B≫屈A≫クイック発動＋弱RED kick</td><td>弱RED kickは相手立ち＆キャラ限定。通常技キャンセルのクイック発動で236ABC同時と入れると何が出るかも疑問</td></tr>
+<tr><td>ロバート</td><td>屈B×2≫クイック発動＋龍虎乱舞<br>屈B×2≫クイック発動＋6B≫龍虎乱舞</td><td>屈B×2は屈B≫屈Aにしたほうがいいかも</td></tr>
+<tr><td>キム</td><td>屈B≫屈A≫クイック発動＋6A≫鳳凰脚</td><td></td></tr>
+<tr><td>ハイデルン</td><td>近C2段目≫クイック発動＋ファイナルブリンガー</td><td></td></tr>
+<tr><td>表リョウ</td><td>屈B≫屈A≫クイック発動＋（MAX）龍虎乱舞<br>屈B≫屈A≫クイック発動＋MAX天地覇王拳</td><td>天地覇王拳は体力点滅時限定。<strong>alucardさんが両方確認</strong>（4月3日）。4月7日の報告では、龍虎乱舞は屈B＞屈B＞近Aのつなぎならつながり、遠Aになるとつながらない</td></tr>
+<tr><td>レオナ</td><td>屈B≫屈A≫クイック発動＋リボルスパーク</td><td></td></tr>
+<tr><td>マチュア</td><td>屈B≫屈A≫クイック発動＋ヘブンズゲイト</td><td></td></tr>
+<tr><td>表アンディ</td><td>屈B≫屈A≫クイック発動＋超裂破弾</td><td>alucardさんの報告ではつながらなかった</td></tr>
 </tbody></table></div>
-<h2>3月22～24日の幅広い未検証候補</h2>
-<p>MOTは3月22日、ゲーセンに行けないため<strong>全案未確認</strong>と明記。前方JCDのカウンターからの中J攻撃＋クイック発動で裏周りを早める案は<strong>ULTIMATEモードのダッシュ＋EXT選択時限定</strong>とした。</p>
-<p>ほかに、対空屈Bで地上引き込み→クイック発動、ビリー屈C＋MAX超火炎旋風棍、チャン屈C＋弱鉄球大暴走、アンディの空破弾最終段＋発動、アテナ6B2段目＋SCB、ラルフ屈C＋馬乗りバルカンパンチ、マリー・山崎の昇り中J攻撃＋発動→地上連続技などを案として列挙している。</p>
-<p>3月23日は、<strong>全て未確認</strong>とした上でマチュア近D2段目、チン近D2段目・昇り中JC2段目、紅丸フライングドリル最終段、チャン近B、ラルフ屈C先端などの派生案を追加した。</p>
-<p>3月24日には、紅丸の屈B複数回→クイック発動→6B、アンディの撃壁→激飛翔拳→追撃、クラウザーのアンリミテッド対策、空中ガード時のガークラ値上昇などの新たな問いを列挙。<strong>最後の2題はクイック発動の成立条件と同一論点ではない</strong>ため、原文の別テーマとして保存した。</p>
-<h2>3月14日：ガード時の発動で反撃できるか</h2>
-<p>通常技のガード後に発動できるなら、ロバート6Aのようなガード後の硬直差が五分付近の技に発動をかけて<strong>確定反撃へ転用できないか</strong>と本人は推測。成功を確認したとの記録ではない。</p>
-<h2>2024年の本人追試：2008年の未確認仮説から進展</h2><p><strong>後年の本人確認結果。</strong>2008年3月にCPUがガードしたJ攻撃→最速クイック発動→着地屈Bの構想について、MOTは<strong>2024年11月、98UMFEの紅丸・表京で立ちガードから下段への切り替えに勝つのを確認した</strong>と報告した。ただし防御側は人力で、初期98UMへの適用・全条件の不可避性は未確定。<a href="./quick-activation-guard-switch-2024.html">紅丸のコマンド登録、表京の比較動画、確認範囲の詳細</a>を参照。2008年当時の未検証案を遡って確定扱いにはしない。</p>
-<h2>2010年2月11日：98UMの入力受付と連続技の容易さについての本人見解</h2><p>MOTはKCEの対戦・解説配信への感想として、<strong>屈B→屈A→超必殺技</strong>の連続技に関し、2002は入力を早めても技が出るという捉え方ができると説明した。そのうえで、<strong>98UMではヒットストップが長く、コマンドの各方向を1F入力すればよい</strong>ため、むしろ連続技が最も簡単ではないかという本人の評価を記した。</p><p>この記録は操作感・入力受付に関する<strong>2010年時点の本人見解</strong>であり、全技での最小入力時間やコマンド受付幅を一律に実測した一覧ではない。<a href="https://x.com/mot_csb/status/8926556629">2010/02/11 本人X投稿</a>。</p><h2>2010年12月25日・2020年10月10日：ヒットストップと発動に関する本人の再整理</h2>
-<p>2010年12月のMOTは、98UMで入力受付がKOF2002に近づいたこととEXゲージ関係を特徴として挙げた。一方、<strong>J攻撃→クイック発動→屈Bのガード不能は本人がまだ自分で確認していない</strong>と記録し、コマンド登録による検証を希望していた。これは2024年の本人確認より前の状態であり、当時の未確認という位置づけを保つ。</p>
-<p>2020年10月には、<strong>98UMのクイック発動は攻撃側のヒットストップがなくなる</strong>と本人が説明した。同じ投稿ではクラーク近C1段目のヒットストップ差やウィップの着地近Bについても言及したが、投稿末尾に<strong>間違いの可能性</strong>を留保している。クラーク・ウィップについては98UM固有の実測例とせず、複数作品を通じた本人の考察として扱う。</p>
-<p>原資料：<a href="https://x.com/mot_csb/status/18587581969076224">2010/12/25</a> ／ <a href="https://x.com/mot_csb/status/1314759057626918914">2020/10/10</a>。<a href="./quick-activation-guard-switch-2024.html">2024年の紅丸・表京の本人確認</a>は、これらの記録を後年に接続する具体例。</p>
-<h2>2015～2021年の本人の補足疑問</h2><p>2015年のMOTはクイック発動が早いほど攻撃側ヒットストップの軽減度合いが大きいはずだと考え、2021年には実際の他者動画を見てタイミングによる消去量の違いに疑問を示した。<a href="./quick-activation-hitstop-brian-2015-2025.html">投稿の原文と未確定の範囲</a>を参照。2008年当時の仮説と2024年の一部成立確認はこの一般則の実測式を証明しない。</p><h2>2015年の本人による別の連係記録</h2><p>MOTは2015年4月4日に、<strong>めくり大JD（打点高め）→QM近Cがつながる</strong>と記した。<a href="./crossup-jd-qm-close-c-ext-2015.html">原投稿と記述上の留保</a>を参照。この記録には使用キャラ・検証方法の記述がなく、2008年に挙げたすべてのクイック発動案の成立を裏付けるものではない。</p>
-<h2>2014年の画面端・起き上がり限定の応用仮説</h2><p>MOTの<a href="/research/kof98/corner-pseudo-overhead-mot-2014.html">「98&amp;02：画面端絡みの擬似中段」2014年再掲</a>には、無印98の画面端の疑似中段を利用し、98UMのEXTゲージで昇り気味の中J攻撃→クイック発動から連続技を狙えるかもしれないという別の案がある。<strong>98UMで成功を確認した記録ではない</strong>。本ページの2008年の入力案とも混同しない。</p><h2>出典</h2><ul>
-<li><a href="https://comesonobravo.hatenadiary.org/entry/2008/03/07/145752">2008/03/07：クイックMAXの疑問その1</a> ／ <a href="https://comesonobravo.hatenadiary.org/entry/2008/03/07/150924">その2</a></li>
-<li><a href="https://comesonobravo.hatenadiary.org/entry/2008/03/14/113429">2008/03/14：ガード時のクイック発動</a></li>
-<li><a href="https://comesonobravo.hatenadiary.org/entry/2008/03/22/234610">2008/03/22：追撃・地上引き込み案</a> ／ <a href="https://comesonobravo.hatenadiary.org/entry/2008/03/23/233335">2008/03/23：未確認案</a> ／ <a href="https://comesonobravo.hatenadiary.org/entry/2008/03/24/200347">2008/03/24：続き</a></li>
-<li><a href="https://comesonobravo.hatenadiary.org/entry/2008/04/02/124106">2008/04/02：クイック発動メモと連続技案</a></li></ul>
-<p><a href="/kof-kininaru.html#kof98um">未解決の疑問</a> ／ <a href="./system-playtest-2008.html">3月21日の本人試遊記録</a> ／ <a href="./index.html">研究目次</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?</div></footer></body></html>
+<details><summary>alucardさん・ponZaさんのそのほかの報告（2008年3～4月）</summary>
+<ul>
+<li>ギース：屈B＞屈A＞クイック発動＋MAXデッドリーレイブはできた。柴舟の近C＞6A＞クイック発動＋MAX大蛇薙は発動して6Aで止まった（3月22日）。</li>
+<li>裏京：画面端で強七拾五式改＞弱朧＞クイック発動＞（MAX）大蛇薙を確認（3月22日）。</li>
+<li>EXTゲージでは、MAX発動中にゲージを半分ほど使ってクイック緊急回避・避けができる。発動ゲージが半分以下ならゲージ全部を使って出せる（3月22日）。</li>
+<li>EXTゲージのMAX発動は、生発動・通常技からの発動と必殺技からの発動で持続時間が違う。必殺技からの発動は黄色ゲージの1/4程度の緑ゲージから始まる（3月23日）。</li>
+<li>表リョウ：屈B＞屈A＞ABC同時押しMAX発動雷神剛＞虎砲は、弱3発でもできるが虎砲がつながらない。屈Aを近Aにすると発動から出る技が弱飛燕になる。屈B＞屈B＞遠A＞ABC同時押しMAX発動MAX天地覇王拳は虎煌拳になってできなかった（4月7日）。</li>
+<li>柴舟：屈B＞屈A＞ABC同時押しMAX発動炎重＞追加＞JCD、近C2段目＞ABC同時押しMAX発動MAX大蛇薙、屈B＞屈A＞ABC同時押しMAX発動MAX都牟刈がつながる。屈B＞屈A＞ABC同時押しMAX発動（MAX）大蛇薙はつながらない（4月7日）。</li>
+</ul>
+<p>出典は各記事のコメント欄です（下の出典一覧）。</p>
+</details>
+
+<h2>J攻撃→クイック発動→着地屈B（ガード切り替え不可）</h2>
+<p>稼働前の2008年3月7日、雑誌『アルカディア』4月号の説明から、次の3つの条件がそろえば、低い打点のJ攻撃→クイック発動→着地屈Bが立ちガードした相手に確定するのではないかと予想しました。</p>
+<ol>
+<li>クイック発動で攻撃側のヒットストップがまったくなくなり、相手側のヒットストップはそのまま残る。</li>
+<li>J攻撃にもクイック発動ができる。</li>
+<li>ヒットストップ中はガードの段を切り替えられないまま。</li>
+</ol>
+<p>3月21日の試遊では、CPU相手にJ攻撃＋クイック発動＞着地屈Bをするとガードされました。考えられる理由として、J攻撃の打点が下がりきっていなかった、ヒットストップ中にガード段を切り替えられるようになった、CPUの特権、の3つを挙げ、2つ目の可能性が高いと考えていました。</p>
+<p>この連係は2024年11月に98UMFEの紅丸・表京で成立を確認しています（<a href="./quick-activation-guard-switch-2024.html">クイック発動でガードを切り替えさせない連係</a>）。</p>
+
+<h2>そのほかの使い道の案（2008年）</h2>
+<ul>
+<li><strong>隙消し：</strong>ガードされたら20F以内の隙になる技を想定。京の琴月やキムの弱飛燕斬のような2段技は1段目でガードを確認して2段目に発動。表クリスの弱ハンティングエアのような1段技は決め打ちで発動（3月7日）。</li>
+<li><strong>微不利～微有利の技からつなぐ：</strong>アンディの幻影不知火、ジョーの屈B→屈A→弱爆裂拳～強フィニッシュなど（3月7日）。</li>
+<li><strong>ガード時の発動で反撃：</strong>ガードした後の硬直差が五分前後の技（ロバートの6Aなど）をガードしたときに発動すれば反撃できるかも（3月14日）。ただし3月21日の試遊では、ガード時に発動してもガード硬直は変わらなさそうだと記録しています。</li>
+</ul>
+<details><summary>3月22～24日に挙げた未確認の案</summary>
+<p>どれも「全て未確認」と明記したうえでの案です。</p>
+<ul>
+<li>JC＋D（カウンターヒット）＞昇り中J攻撃＋クイック発動＞着地ダッシュで裏に回りやすくなるかも（ULTIMATEモードでダッシュ＋EXTゲージ選択時限定）。</li>
+<li>相手の早出しに対空屈Bで地上引き込み＋クイック発動＞強攻撃～。</li>
+<li>ビリー：屈C＋クイック発動＋MAX超火炎旋風棍。チャン：屈C＋クイック発動＋弱鉄球大暴走、近B＋クイック発動≫鉄球大暴走。</li>
+<li>アンディ：中間距離の弱強空破弾が地上ヒットしていたら最後の1段にクイック発動＞発生の早い技。</li>
+<li>アテナ：6Bの2段目でヒット確認してクイック発動＞SCB。ラルフ：屈C（先端）＋クイック発動＞馬乗りバルカンパンチ。</li>
+<li>マチュア：近D2段目にクイック発動≫弱ディーサイド＞追い打ち。チン：昇り中JCの2段目、密着近D2段目からのクイック発動。紅丸：フライングドリル地上ヒットの最後の1段にクイック発動＞屈Dなど。</li>
+<li>マリー・山崎：昇り気味の中JD＋クイック発動＞着地連続技。気絶値を重視した連続技でダウンを奪い、起き攻めで中J攻撃始動か屈B始動の連続技を選ばせれば、一発気絶を狙える2択になるかも。</li>
+<li>紅丸：屈B×n＋クイック発動≫6B≫各種必殺技。弱攻撃のヒット硬直が11Fで、ヒットストップ削除で有利が11F増えるはずで、6Bは発生20Fくらいだったからいけそう、という見込み。</li>
+</ul>
+</details>
+
+<h2>入力の受け付けと連続技の簡単さ（2010年）</h2>
+<p>2010年2月、屈B→屈A→超必殺技の連続技について次のように書いています（<a href="https://x.com/mot_csb/status/8926556629">原投稿</a>）。</p>
+<blockquote>「02だと早く入力しても出る、という捉え方もできる。そういう意味では、98UMが一番簡単なんでしょうね。ヒットストップが長くて各方向が１Fでよくなっているので。」</blockquote>
+
+<h2>似ているが別の話</h2>
+<ul>
+<li><a href="./crossup-jd-qm-close-c-ext-2015.html">めくり大JD→クイック発動→近C</a>（2015年）：めくりからの連係で、ガード切り替えとは別の話です。</li>
+<li><a href="/research/kof98/corner-pseudo-overhead-mot-2014.html">画面端の疑似中段</a>：無印'98の画面端の現象を、98UMのEXTで昇り中J攻撃→クイック発動に使えないかという案で、98UMでは確かめていません。</li>
+</ul>
+
+<h2>出典</h2>
+<ul>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2008/03/07/145752">2008/03/07：クイックMAX発動で気になること その１</a> ／ <a href="https://comesonobravo.hatenadiary.org/entry/2008/03/07/150924">その２</a>（コメント欄にalucardさんの報告）</li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2008/03/14/113429">2008/03/14：ガード時のクイック発動について</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2008/03/21/212709">2008/03/21：システム関係の確認</a>（コメント欄にalucardさん・ponZaさんの報告。試遊の全体は<a href="./system-playtest-2008.html">システム試遊</a>）</li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2008/03/22/234610">2008/03/22：追撃関係と地上引き込み関係</a> ／ <a href="https://comesonobravo.hatenadiary.org/entry/2008/03/23/233335">03/23：思いついたこと</a> ／ <a href="https://comesonobravo.hatenadiary.org/entry/2008/03/24/200347">03/24：その２</a></li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/2008/04/02/124106">2008/04/02：クイック発動メモ＆連続技案</a>（コメント欄にalucardさんの確認報告）</li>
+<li>X：<a href="https://x.com/mot_csb/status/8926556629">2010/02/11</a> ／ <a href="https://x.com/mot_csb/status/18587581969076224">2010/12/25</a> ／ <a href="https://x.com/mot_csb/status/1314759057626918914">2020/10/10</a></li>
+</ul>
+<p><a href="/kof-kininaru.html#kof98um">気になること（98UM）</a> ／ <a href="./index.html">KOF'98UM研究アーカイブへ戻る</a></p>
+</div></main><footer class="footer"><div class="wrap">Come sono bravo?</div></footer></body></html>
