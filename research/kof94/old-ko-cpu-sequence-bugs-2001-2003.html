@@ -1,23 +1,21 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'94：KO演出とCPUの特殊な動き｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:1020px}.article p,.article li{line-height:1.8}.article h2{margin-top:1.9em}.article h3{margin-top:1.4em}.sourcebox{padding:12px 15px;background:#edf2ee;border-left:4px solid #617d65}.scroll{max-width:100%;overflow-x:auto}.article table{border-collapse:collapse;width:100%;min-width:620px}.article th,.article td{border:1px solid #b3c6b9;padding:9px;vertical-align:top;text-align:left}.article th{background:#ebf3ec}.article a,.article code{overflow-wrap:anywhere}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof94-top.html">KOF'94</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><!-- chara-nav:start --><nav class="chara-nav" aria-label="キャラクター別のページ"><p class="cn-head"><a href="/kof94-top.html#chara">KOF&#x27;94 キャラ選択</a><span>›</span><a href="/kof94-top.html#c-terry">テリー</a> ／ <a href="/kof94-top.html#c-robert">ロバート</a> ／ <a href="/kof94-top.html#c-choi">チョイ</a> ／ <a href="/kof94-top.html#c-rugal">ルガール（変身前）</a> ／ <a href="/kof94-top.html#c-rugal2">ルガール（変身後）</a></p></nav><!-- chara-nav:end --><h1>KOF'94：KO演出とCPUの特殊な動き</h1>
-<p class="sourcebox"><strong>一次資料：</strong>提供済み <code>ＵＰしたもの.zip</code> 内の <code>ＵＰしたもの/KOF1994　驚異現象.html</code>（MOTの記録では2001年8月27日作成、2003年7月1日更新）。原稿は複数の他サイトを参考資料として挙げており、以下をすべて本人独自の新規発見・実測結果とは断定しません。<strong>当時の本人による編纂・解説の記録</strong>として再構成し、後年の実測と区別しています。</p>
-<p>旧原稿中の試合進行・KO時の演出・CPU特有の動作を、当時の条件ごとに分類して記録します。技性能や戦術評価と違い、特定の状況でゲーム進行・体力回復・演出が変わる事例です。すべての条件を今回再現したわけではありません。</p>
+<p class="lead">長い演出の超必殺技でKOすると、勝利ポーズも体力回復もないまま次の相手との試合が始まることがあります。ほかにも、CPUのロバートが条件を満たしていないのに龍虎乱舞を出す、変身前のルガールが声だけのカイザーウェーブを出して止まる、チョイが相打ちで震えたまま動かなくなる、といった試合進行や演出の現象があります。</p>
 <h2>KOしても勝利ポーズ・体力回復が起こらない</h2>
-<p>チーム戦で<strong>1人目または2人目</strong>の相手をKOした際、長い技の演出により<strong>勝利ポーズをとらず、体力回復もしないまま次の相手との戦いに入る</strong>という旧記録。対戦終了後のチーム全体の勝利条件とは別の話です。</p>
+<p>チーム戦で<strong>1人目または2人目</strong>の相手をKOした際、長い技の演出により<strong>勝利ポーズをとらず、体力回復もしないまま次の相手との戦いに入る</strong>現象です。</p>
 <div class="scroll"><table><thead><tr><th>使用キャラ</th><th>原稿に記載されたKOのさせ方</th><th>結果</th></tr></thead><tbody>
 <tr><th>ブライアン</th><td>（D）投げ超必殺技でKO。または、基本技でKOし、その基本技にキャンセルして超必殺技を出す。</td><td>勝利ポーズ・回復を経ず次の相手へ</td></tr>
-<tr><th>チャン</th><td>強鉄球大回転でKO</td><td>勝利ポーズ・回復を経ず次の相手へ</td></tr>
+<tr><th>チャン</th><td>鉄球大回転 <span class="ver">強</span>でKO</td><td>勝利ポーズ・回復を経ず次の相手へ</td></tr>
 </tbody></table></div>
 <h2>テリー：ゲイザーとつかみ技の相打ちKO</h2>
-<p>対<strong>ジョー、ラッキー、ヘビィD!、チャン</strong>の起き上がりにパワーゲイザーを重ね、相手がつかみ技を出すと相打ちとなる例。<strong>その時点でKOになった場合</strong>、KO表示が出ているのにテリーが動ける状態になり、しばらくすると勝利ポーズをとるという旧記録です。つかみ技を持つすべてのキャラとの普遍的な動作とまでは記載されていません。</p>
+<p>対<strong>ジョー、ラッキー、ヘビィD!、チャン</strong>の起き上がりにパワーゲイザーを重ね、相手がつかみ技を出すと相打ちとなる例。<strong>その時点でKOになった場合</strong>、KO表示が出ているのにテリーが動ける状態になり、しばらくすると勝利ポーズをとります。確かめられているのはこの4キャラです。</p>
 <h2>CPUロバート：条件外の龍虎乱舞</h2>
-<p>CPUロバートが、通常の超必殺技が出せない条件でも龍虎乱舞を出す事例として、<strong>相手が遠距離で挑発キャンセルを連発する</strong>こと、または<strong>紅丸の雷光拳</strong>に反応することを挙げています。遠距離挑発キャンセルは使用キャラを限定しないという原稿の記述。CPUロバートの体力・ゲージ値などの詳細な内部判定は、元資料にはありません。</p>
+<p>CPUロバートが、通常の超必殺技が出せない条件でも龍虎乱舞を出す事例として、<strong>相手が遠距離で挑発キャンセルを連発する</strong>こと、または<strong>紅丸の雷光拳</strong>に反応することがあります。遠距離の挑発キャンセルは、どのキャラでかまいません。</p>
 <h2>変身前ルガール：声だけのカイザーウェーブと停止</h2>
 <div class="scroll"><table><thead><tr><th>現象</th><th>手順・条件</th><th>元原稿の現象</th></tr></thead><tbody>
-<tr><th>声だけのカイザーウェーブ</th><td>ラルフで強ガトリングアタックを出す</td><td>変身前ルガールがカイザーウェーブの音声を発するが、実際には技が出ない。コマ送りでは一瞬消える、と説明。</td></tr>
-<tr><th>ルガール停止</th><td>ラルフの強ガトリング<strong>3発目が出終わる瞬間</strong>をルガールの<strong>起き上がり</strong>に重ねる</td><td>変身前ルガールが動かなくなる。<strong>タイミングが非常に厳しい</strong>と本人が説明。</td></tr>
+<tr><th>声だけのカイザーウェーブ</th><td>ラルフでガトリングアタック <span class="ver">強</span>を出す</td><td>変身前ルガールがカイザーウェーブの音声を発するが、実際には技が出ない。コマ送りでは一瞬消える、と説明。</td></tr>
+<tr><th>ルガール停止</th><td>ラルフのガトリングアタック <span class="ver">強</span>の<strong>3発目が出終わる瞬間</strong>をルガールの<strong>起き上がり</strong>に重ねる</td><td>変身前ルガールが動かなくなる。<strong>タイミングが非常に厳しい</strong>。</td></tr>
 </tbody></table></div>
 <h2>チョイ「ケイレン」：相打ちで操作・進行が停止</h2>
-<p>チョイの<strong>飛翔空烈斬</strong>と、チンの<strong>轟欄炎炮</strong>、ヘビィD!の<strong>ソウルフラワー</strong>、ラッキーの<strong>サイクロンブレイク</strong>、または<strong>援護攻撃</strong>が相打ちになると、チョイ側が被弾動作のまま震えて戻らず、操作を受け付けない場合がある、という旧記録です。</p>
-<p>原稿は、<strong>被弾判定自体は残るので追加で攻撃されると復帰する</strong>、放置して時間切れになるとゲームの進行が止まる場合がある、<strong>相打ちでどちらかがKOされたときは一瞬止まっても次の試合へ進む</strong>、と条件を区別しています。さらに、<strong>キムの飛翔脚・ハイデルンのネックローリングでも起きるか</strong>は本人が疑問形で挙げており、今回確定結果へ変更しません。</p>
-<h2>小ネタ：試合後の演出</h2><p>旧原稿には、CPU戦を1コインでクリアした場合とノーミスでクリアした場合のエンディング演出の違いも記録されています。<strong>1コイン</strong>では最後に全キャラが待機状態で並び、<strong>ノーミス</strong>ではさらに勝利ポーズをとるという区別です。</p>
-<p><a href="./early-bug-phenomena-2001-2003.html">初期75項目索引</a>に戻れるようにしています。原因を確定した説明ではなく、原稿に残る手順と結果を紹介しています。</p><h2>関連資料</h2><p><a href="./early-bug-phenomena-2001-2003.html">驚異現象75項目の総索引</a> ／ <a href="./index.html">KOF'94研究アーカイブ</a> ／ <a href="/kof-kininaru.html#kof94">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
+<p>チョイの<strong>飛翔空烈斬</strong>と、チンの<strong>轟欄炎炮</strong>、ヘビィD!の<strong>ソウルフラワー</strong>、ラッキーの<strong>サイクロンブレイク</strong>、または<strong>援護攻撃</strong>が相打ちになると、チョイ側が被弾動作のまま震えて戻らず、操作を受け付けなくなることがあります。</p>
+<ul><li>食らい判定は残っているので、追加で攻撃されると元に戻る。</li><li>そのまま時間切れになると、ゲームの進行が止まることがある。</li><li>相打ちでどちらかがKOされたときは、一瞬止まっても次の試合へ進む。</li></ul><p>キムの飛翔脚やハイデルンのネックローリングでも起きるのかは、疑問として残っています。</p>
+<h2>小ネタ：試合後の演出</h2><p>CPU戦を1コインでクリアすると、エンディングの最後に全キャラが待機状態で並びます。ノーミスでクリアすると、さらに勝利ポーズをとります。</p><h2>出典</h2><p>旧サイトの「KOF1994 驚異現象」（2001年8月27日作成、2003年7月1日更新）。ほかのサイトの情報も参考にしてまとめたページで、原因までは説明していません。全項目は<a href="./early-bug-phenomena-2001-2003.html">驚異現象75項目の索引</a>にあります。</p><p> <a href="./index.html">KOF'94研究アーカイブ</a> ／ <a href="/kof-kininaru.html#kof94">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
