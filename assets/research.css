@@ -7,4 +7,8 @@
 .chara-nav details{margin-top:4px}.chara-nav summary{cursor:pointer;color:var(--muted)}.chara-nav details ul{margin:4px 0 0;padding-left:20px}.chara-nav details li{margin:2px 0}
 
 /* 技の版（弱・強）のタグ。ページ内に定義がなくても表示されるように共通化 */
-.ver{display:inline-block;font-size:.78em;line-height:1.4;border:1px solid #7f9a86;border-radius:4px;padding:0 .4em;margin-left:.35em;background:#f6faf7;color:#2f4a37}
+.ver{display:inline-block;font-size:.78em;line-height:1.4;border:1px solid var(--line);border-radius:4px;padding:0 .4em;margin-left:.35em;background:var(--soft);color:var(--ink)}
+/* 短い本編＋折りたたみ詳細 */
+details.more{margin:14px 0;border:1px solid var(--line);border-radius:10px;padding:4px 14px;background:var(--paper)}
+details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}
+details.more[open]>summary{border-bottom:1px solid var(--line);margin-bottom:8px}
