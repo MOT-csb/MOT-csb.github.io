@@ -1,24 +1,39 @@
 <!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>KOF'99 アーマーモード中のかわし移動攻撃による連続技（2024年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css">
-<style>.article{max-width:1040px}.article h2{margin-top:2rem}.article a{overflow-wrap:anywhere}.article table{width:100%;border-collapse:collapse}.article td,.article th{border:1px solid var(--line,#aaa);padding:8px;vertical-align:top}.article th{background:var(--soft,#eff3f0)}.note{padding:10px 14px;border-left:4px solid var(--accent,#416958);background:var(--soft,#eff3f0)}.scroll{overflow-x:auto}</style>
-</head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
-<div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/kof-top.html">KOF</a><span aria-hidden="true"> / </span><a href="/kof99-top.html">KOF'99</a><span aria-hidden="true"> / </span><a href="/research/kof99/index.html">研究アーカイブ</a><span aria-hidden="true"> / </span><b>アーマーモード連続技</b></div></div>
-<main class="main"><div class="wrap article"><h1>KOF'99 アーマーモード中のかわし移動攻撃による連続技（2024年）</h1>
-<p class="note">MOTの2024年8月15日付ブログおよび2024年7月2日付X投稿をもとに、本人が確認したルートと戦術評価を分けて整理。原文のコマンド、ヒット数、条件、数値を優先した。新たな動作検証を実施した記事ではない。</p>
-<h2>基本事項</h2>
-<p>本人の記述では、アーマーモード（AM）中のかわし移動攻撃はヒット時にダウンを奪い、その後も相手に食らい判定が残る。条件によって同攻撃を複数回当てられる。一方、AMの持続時間が短い点が制約となる。</p>
-<h2>本人が掲載した連続技</h2>
-<div class="scroll"><table><thead><tr><th>使用キャラ</th><th>条件</th><th>連続技（原文表記）</th><th>結果・補足</th></tr></thead><tbody>
-<tr><td>タクマ</td><td>画面左端付近</td><td>JD→屈C→強飛燕疾風脚→ST香澄→AM発動→かわし移動攻撃✕8→暫烈拳</td><td>強飛燕疾風脚後に前進して端までいくことがポイント</td></tr>
-<tr><td>リョウ</td><td>リョウ側が画面端付近</td><td>STクラーク→AM発動→かわし移動で位置入れ替え→かわし移動攻撃✕9→強飛燕疾風脚(✕3)</td><td>約8割のダメージ。かわし移動攻撃が9回で終わるのはAMの時間制限による</td></tr>
-</tbody></table></div>
-<h2>リョウのルートに関する後年の本人補足</h2>
-<p>2024年7月2日のX投稿で、MOTはリョウのルートを確認したと記している。同時に、難易度が高く3ゲージ必要なため、対戦では龍虎乱舞のほうが安定するという戦術評価を示している。</p>
-<p>連続技の成立確認と、実戦での採用を勧めるかどうかは別の情報であり、どちらも保存する。</p>
-<h2>原資料</h2>
-<ul><li><a href="https://comesonobravo.hatenadiary.org/entry/504375697.html">MOT：KOF99 アーマーモードのかわし移動攻撃でお手玉する連続技（2024年8月15日）</a></li>
-<li><a href="https://x.com/mot_csb/status/1808060565769932844">MOTのX投稿：リョウの9回連係・約8割・3ゲージ・難易度（2024年7月2日）</a></li></ul>
-<h2>未整理の点</h2><p>この2キャラ以外の成立例は今回の出典では列挙されていない。MOTのブログでは追加発見があれば追記予定とされている。追加の連係を実証済みと扱わない。</p>
-<p><a href="/research/kof99/index.html">KOF'99 研究アーカイブへ戻る</a> ／ <a href="/kof-kininaru.html#kof99">KOF'99 気になること</a></p>
-</div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>KOF'99 アーマーモードのかわし移動攻撃でお手玉する連続技｜Come sono bravo?</title>
+<meta name="description" content="KOF&#x27;99のアーマーモード中のかわし移動攻撃が複数回ヒットする仕組みと、タクマ・リョウの連続技。">
+<link rel="stylesheet" href="/assets/research.css">
+<style>.article{max-width:960px}.article table{width:100%;border-collapse:collapse}.article th,.article td{border:1px solid var(--line,#ccd);padding:6px 8px;overflow-wrap:anywhere;vertical-align:top;text-align:left}.article thead th{background:var(--soft,#eaf0ed)}.article td.num{font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}.lead{font-size:1.05em}.vt{display:inline-block;font-size:.85em;line-height:1.45;padding:0 6px;margin-left:4px;border:1px solid var(--line,#ccd);border-radius:4px;font-weight:600;white-space:nowrap}.legend{font-size:.92em;color:var(--sub,#555)}.src li{font-size:.92em}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h2{font-size:1.15em;margin-top:1.2rem}details.more h3{font-size:1.05em}figure{margin:14px 0}figure img{max-width:100%;height:auto;border:1px solid var(--line,#ccd)}figcaption{font-size:.9em;color:var(--sub,#555)}@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}.article th,.article td{min-width:72px}}</style>
+</head><body>
+<header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof99-top.html">KOF'99</a> / <a href="/research/kof99/index.html">研究アーカイブ</a> / <b>アーマーモードの連続技</b></div></div>
+<main class="main"><div class="wrap article">
+<h1>KOF'99 アーマーモードのかわし移動攻撃でお手玉する連続技</h1>
+<p class="lead">アーマーモード中のかわし移動攻撃はヒットするとダウンを奪え、そのとき相手には食らい判定が残っています。そのため、キャラによってはかわし移動攻撃が複数回ヒットし、お手玉の連続技になります。</p>
+<p>難点はアーマーモードの発動時間が短いことです。以下、アーマーモードをAMと略します。</p>
+
+<h2>連続技</h2>
+<table><thead><tr><th>キャラ</th><th>条件</th><th>連続技</th><th>ポイント</th></tr></thead><tbody>
+<tr><th scope="row">タクマ</th><td>画面左端付近</td><td>JD→屈C→飛燕疾風脚 <span class="vt">強</span>→ST香澄→AM発動→かわし移動攻撃×8→暫烈拳</td><td>飛燕疾風脚の後に前進して端までいくのがポイント</td></tr>
+<tr><th scope="row">リョウ</th><td>リョウ側が画面端付近</td><td>STクラーク→AM発動→かわし移動で位置入れ替え→かわし移動攻撃×9→飛燕疾風脚 <span class="vt">強</span>（×3）</td><td>約8割のダメージ。かわし移動攻撃×9で終わるのはAMの時間制限のため</td></tr>
+</tbody></table>
+<figure><img src="https://pbs.twimg.com/media/GReFaSTb0AQ7MQZ.png" alt="リョウのアーマーモードかわし移動攻撃ループの画面" loading="lazy" width="480"><figcaption>リョウの連続技（<a href="https://x.com/mot_csb/status/1808060565769932844">2024/7/2</a>）</figcaption></figure>
+<p>リョウのルートは難易度が高く3ゲージ必要なので、実戦では龍虎乱舞安定、という評価です。</p>
+
+<details class="more"><summary>詳しく：関連ページ</summary>
+<ul>
+<li>STクラークの後に位置を入れ替える連続技は、ほかにジョー・ロバートにもあります（<a href="./st-position-swap-counterattack-2021-2024.html">位置入れ替えST</a>）。</li>
+<li>かわし移動攻撃の発生・硬直差は<a href="./evasion-attacks-hitbox-recovery-2021-2025.html">かわし移動攻撃の全キャラ比較</a>にあります。</li>
+<li>AMとカウンターモードの使い分けは<a href="./gauge-priority-mode-management-2021-2024.html">ゲージの使い道</a>にあります。</li>
+<li>ほかのキャラの例は、見つかり次第追加される予定でした。</li>
+</ul>
+</details>
+
+<h2>出典</h2>
+<ul class="src">
+<li><a href="https://comesonobravo.hatenadiary.org/entry/504375697.html">はてな「KOF99：アーマーモードのかわし移動攻撃でお手玉する連続技」（2024/8/15）</a> ／ <a href="https://x.com/mot_csb/status/1808060565769932844">リョウ（2024/7/2）</a></li>
+<li>関連：<a href="/kof-kininaru.html#kof99">気になること</a> ／ <a href="/research/kof99/index.html">KOF'99研究アーカイブ</a></li>
+</ul>
+</div></main>
+<footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer>
+</body></html>
