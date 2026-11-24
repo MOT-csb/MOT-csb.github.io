@@ -1,0 +1,1226 @@
+{
+ "game": "KOF'98",
+ "base": "",
+ "top": "kof98-top.html",
+ "teams": [
+  {
+   "name": "京・紅丸・五郎",
+   "chars": [
+    {
+     "id": "kyo",
+     "name": "京",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-kyo",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "research/kof98/frame-advantage-original-2005.html",
+       "ブログの硬直差メモ（2005年）"
+      ],
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ],
+     "research": [
+      [
+       "research/kof98/daimon-jd-kyo-crouch-guard-2007.html",
+       "大門対京：昇り小JDヒット後の屈伸ガード可否（2007年）"
+      ],
+      [
+       "research/kof98/kyo-2362a-hold-36-input-2009.html",
+       "京：2362+A保持→36で屈Aから弱無式を出す入力研究（2009年）"
+      ],
+      [
+       "research/kof98/kyo-dokugami-interrupt-chizuru-chang-yashiro-2014.html",
+       "京の近C→毒咬み：千鶴・チャン・表社の割り込み検証（2014年）"
+      ],
+      [
+       "research/kof98/kyo-gccd-jump-okizeme-2010.html",
+       "京：GCCD地上ヒット後の最速前方大J攻撃・キャラ別攻防"
+      ],
+      [
+       "research/kof98/kyo-naraku-step-2010-2025.html",
+       "京：奈落落とし・EXTステップ・GCCDの研究史"
+      ],
+      [
+       "research/kof98/kyo-reversal-oniyaki-crouch-b-2010.html",
+       "京：リバサ強鬼焼きと屈B対空のフレーム差"
+      ],
+      [
+       "research/kof98/kyo-short-dash-6n6n-input-2015-2016.html",
+       "京：最短ダッシュ近Cでの強鬼焼き暴発回避・レバー入力案（2015～2016年）"
+      ],
+      [
+       "research/kof98/kyo-throw-input-3f-4f-2015.html",
+       "京：C投げ・屈B・6Bの方向入力判定（3F後と4F後）"
+      ],
+      [
+       "research/kof98/ralf-kyo-75shiki-interrupt-2008.html",
+       "ラルフ対京：強75式改1段目～2段目への割り込み"
+      ],
+      [
+       "research/kof98/ura-kyo-unblockable-setplay-2007.html",
+       "裏京の飛び道具空振りガード不能：2007年動画観察と他キャラへの応用案"
+      ]
+     ]
+    },
+    {
+     "id": "benimaru",
+     "name": "紅丸",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-benimaru",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ]
+    },
+    {
+     "id": "goro",
+     "name": "五郎",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-goro",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ],
+     "research": [
+      [
+       "98-goro-kakuteizirai.html",
+       "確定地雷震（旧サイト）"
+      ],
+      [
+       "research/kof98/athena-daimon-gccd-phoenix-arrow-2015.html",
+       "アテナ対大門：GCCD対策とフェニックスアローの表裏"
+      ],
+      [
+       "research/kof98/daimon-623-prebuffer-jirai-iori-projectile-2013.html",
+       "大門：623623仕込み弱地雷震による庵・飛び道具対策案（2013年）"
+      ],
+      [
+       "research/kof98/daimon-arashi-no-yama-vs-rush-2015.html",
+       "大門：突進技に嵐の山を合わせる"
+      ],
+      [
+       "research/kof98/daimon-early-jump-gcab-vs-gccd-2007.html",
+       "大門：庵の早出し中JDにGCCDかGCABか（2007年の戦術案）"
+      ],
+      [
+       "research/kof98/daimon-gccd-startup-freeze-2015-2021.html",
+       "大門：GCCDの発生処理と最低打点・反撃条件"
+      ],
+      [
+       "research/kof98/daimon-iori-chris-counterplay-2013-2014.html",
+       "大門対庵・クリス：地雷震仕込みとGC前転の未検証案"
+      ],
+      [
+       "research/kof98/daimon-iori-defense-counterplay-2016.html",
+       "大門：庵の表裏・鬼焼きと屑風への防御案"
+      ],
+      [
+       "research/kof98/daimon-jd-kyo-crouch-guard-2007.html",
+       "大門対京：昇り小JDヒット後の屈伸ガード可否（2007年）"
+      ],
+      [
+       "research/kof98/daimon-jigoku-jirai-combo-2023.html",
+       "大門：地獄極楽入力を挟む屈D→弱地雷震の連続ヒット"
+      ],
+      [
+       "research/kof98/daimon-kirikabugaeshi-punish-2007.html",
+       "大門：切り株返しガード後−20Fのキャラ別確定反撃"
+      ],
+      [
+       "research/kof98/daimon-previous-input-ura-nage-distance-2024.html",
+       "大門：236A仕込みで裏投げの走行距離が短くなる現象"
+      ],
+      [
+       "research/kof98/daimon-unfavorable-flag-mikirete-2024.html",
+       "大門：不利フラグ・弱地雷震で起こる「見切れてバグ」"
+      ],
+      [
+       "research/kof98/joe-bhtk-setups-vs-daimon-2015.html",
+       "ジョー：爆裂ハリケーンタイガーカカトを狙う場面と対大門の牽制"
+      ],
+      [
+       "research/kof98/joe-chris-goro-matchups-2005.html",
+       "ジョー：2005年のクリス・五郎対策としゃがみ判定の例外"
+      ],
+      [
+       "research/kof98/mai-daimon-guardcrush-gccd-2015.html",
+       "舞対大門：低ジャンプの打点とGCCD・ガードクラッシュ"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "テリー・アンディ・ジョー",
+   "chars": [
+    {
+     "id": "terry",
+     "name": "テリー",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-terry",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "research/kof98/frame-advantage-original-2005.html",
+       "ブログの硬直差メモ（2005年）"
+      ],
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ],
+     "research": [
+      [
+       "research/kof98/counterhit-juggle-window-robert-terry-2016.html",
+       "カウンターヒットと追撃判定：表ロバート・テリーの実例"
+      ],
+      [
+       "research/kof98/terry-bassh-video-analysis-2006.html",
+       "表テリー：バッシュ氏の対戦動画から学んだ立ち回り（2006年）"
+      ],
+      [
+       "research/kof98/terry-chang-yashiro-notes-2010-2024.html",
+       "テリー・チャン・社：技の狙い方と入力のメモ"
+      ],
+      [
+       "research/kof98/terry-crack-shoot-hitboxes-2021.html",
+       "テリー：弱クラックシュートの判定段階と対空用途（2021年）"
+      ],
+      [
+       "research/kof98/terry-powerdunk-counterplay-2014-2025.html",
+       "表テリー：弱パワーダンクの反撃と弱パワーチャージの使い分け"
+      ]
+     ]
+    },
+    {
+     "id": "andy",
+     "name": "アンディ",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-andy",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "98andy-tuuzyou.html",
+       "通常技・特殊技・通常投げ解析（旧サイト）"
+      ],
+      [
+       "98andy-hissatu.html",
+       "必殺技・超必殺技解析（旧サイト）"
+      ],
+      [
+       "research/kof98/frame-advantage-original-2005.html",
+       "ブログの硬直差メモ（2005年）"
+      ],
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ],
+     "research": [
+      [
+       "98andy-rennzoku.html",
+       "連続技（旧サイト）"
+      ],
+      [
+       "research/kof98/andy-6b-hitbox-gccd-correction-2024.html",
+       "アンディ6B：食らい判定・攻撃判定とGCCDの訂正（2024年）"
+      ],
+      [
+       "research/kof98/andy-shoryudan-crouching-knockdown-2005.html",
+       "表アンディ：昇龍弾のしゃがみ食らい・ダウン可否38キャラ一覧（MOT旧攻略の再整理）"
+      ]
+     ]
+    },
+    {
+     "id": "joe",
+     "name": "ジョー",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-joe",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "98joe.html",
+       "技解析・基本連続技（旧サイト）"
+      ],
+      [
+       "research/kof98/frame-advantage-original-2005.html",
+       "ブログの硬直差メモ（2005年）"
+      ],
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ],
+     "research": [
+      [
+       "research/kof98/joe-2005-combo-frame-tech.html",
+       "ジョー：2005年の技性能・硬直差・MAX別追撃データ"
+      ],
+      [
+       "research/kof98/joe-98-vs-2002-2005-comparison.html",
+       "ジョーの技性能と崩しの比較（2005年）"
+      ],
+      [
+       "research/kof98/joe-bakuretsuken-input-roll-punish-2016.html",
+       "ジョー：弱爆裂拳の入力工夫・前転反撃・遠D後の危険"
+      ],
+      [
+       "research/kof98/joe-bhtk-setups-vs-daimon-2015.html",
+       "ジョー：爆裂ハリケーンタイガーカカトを狙う場面と対大門の牽制"
+      ],
+      [
+       "research/kof98/joe-chris-goro-matchups-2005.html",
+       "ジョー：2005年のクリス・五郎対策としゃがみ判定の例外"
+      ],
+      [
+       "research/kof98/joe-counterhit-steam-2024.html",
+       "ジョー：MAXスクリューのカウンターダメージとSteam版の差"
+      ],
+      [
+       "research/kof98/joe-iori-far-b-hurtbox-2016.html",
+       "ジョー対庵：遠Bの食らい判定移動と立ち回り"
+      ],
+      [
+       "research/kof98/joe-screw-upper-bhtk-chip-2005.html",
+       "ジョー：2005年の削り連係とスクリューアッパーのガード差"
+      ],
+      [
+       "research/kof98/joe-stun-guardcrush-2007.html",
+       "ジョー：気絶値・ガークラ値の技別データと2007年の訂正"
+      ],
+      [
+       "research/kof98/orochi-chris-joe-weak-kakato-2011.html",
+       "裏クリス対ジョー：弱かかとへの弱つき割り込み"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "リョウ・ロバート・ユリ",
+   "chars": [
+    {
+     "id": "ryo",
+     "name": "リョウ",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-ryo",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ],
+     "research": [
+      [
+       "research/kof98/kyokugen-robert-ryo-takuma-notes-2012-2019.html",
+       "ロバート・リョウ・タクマ：フレームと狙い方のメモ"
+      ]
+     ]
+    },
+    {
+     "id": "robert",
+     "name": "ロバート",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-robert",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "research/kof98/frame-advantage-original-2005.html",
+       "ブログの硬直差メモ（2005年）"
+      ],
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ],
+     "research": [
+      [
+       "research/kof98/corner-direction-input-robert-2016.html",
+       "画面端の入力：表ロバート6Bと空中の位置関係（2016年）"
+      ],
+      [
+       "research/kof98/counterhit-juggle-window-robert-terry-2016.html",
+       "カウンターヒットと追撃判定：表ロバート・テリーの実例"
+      ],
+      [
+       "research/kof98/iori-robert-jd-ryujinkyaku-interrupt-2015.html",
+       "庵対表ロバート：JDガード後の龍神脚に屑風・強鬼焼き"
+      ],
+      [
+       "research/kof98/kyokugen-robert-ryo-takuma-notes-2012-2019.html",
+       "ロバート・リョウ・タクマ：フレームと狙い方のメモ"
+      ],
+      [
+       "research/kof98/robert-chris-reversal-backjump-dash-2019.html",
+       "ロバート対クリス：リバサ後方大Jとダッシュ潜りの1F猶予"
+      ],
+      [
+       "research/kof98/robert-renbu-and-corner-input-2015-2019.html",
+       "表ロバート：6A→連舞脚の抜け方・画面端6B入力・空キャンの実例"
+      ]
+     ]
+    },
+    {
+     "id": "yuri",
+     "name": "ユリ",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-yuri",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ],
+     "research": [
+      [
+       "research/kof98/yuri-combo-conditions-max-2007.html",
+       "表ユリ：連続技の成立条件とMAX発動時の例外（2007年）"
+      ],
+      [
+       "research/kof98/yuri-ura-kohouken-pointblank-dash-2026.html",
+       "裏ユリの虎煌拳：密着ダッシュによるキャラ別回避（2026年11月20日）"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "レオナ・ラルフ・クラーク",
+   "chars": [
+    {
+     "id": "leona",
+     "name": "レオナ",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-leona",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "research/kof98/frame-advantage-original-2005.html",
+       "ブログの硬直差メモ（2005年）"
+      ],
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ],
+     "research": [
+      [
+       "research/kof98/leona-gccd-flash-conditional-cancel-2008.html",
+       "レオナ：通常技→236236P仕込みによるGCC+D対策案（2008年）"
+      ],
+      [
+       "research/kof98/leona-guardcrush-superflash-2005-2007.html",
+       "レオナ：2005～2007年の硬直差・ガークラ連係・空中移行"
+      ]
+     ]
+    },
+    {
+     "id": "ralf",
+     "name": "ラルフ",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-ralf",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ],
+     "research": [
+      [
+       "research/kof98/ralf-galactica-phantom-2003.html",
+       "ラルフのMAX Gファントムを利用した即死：全27レシピと条件別一覧"
+      ],
+      [
+       "research/kof98/ralf-kyo-75shiki-interrupt-2008.html",
+       "ラルフ対京：強75式改1段目～2段目への割り込み"
+      ]
+     ]
+    },
+    {
+     "id": "clark",
+     "name": "クラーク",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-clark",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "アテナ・ケンスウ・チン",
+   "chars": [
+    {
+     "id": "athena",
+     "name": "アテナ",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-athena",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ],
+     "research": [
+      [
+       "research/kof98/athena-daimon-gccd-phoenix-arrow-2015.html",
+       "アテナ対大門：GCCD対策とフェニックスアローの表裏"
+      ],
+      [
+       "research/kof98/athena-phoenix-arrow-simultaneous-buttons-2015.html",
+       "アテナ：AB・AD同時押しフェニックスアローのダメージ差"
+      ],
+      [
+       "research/kof98/athena-weak-throw-recovery-2009.html",
+       "アテナ：弱スルー成立後のキャラ別硬直差（2009年）"
+      ],
+      [
+       "research/kof98/kim-mai-athena-notes-2014-2019.html",
+       "キム・舞・アテナ：技の性能差と狙い方のメモ"
+      ]
+     ]
+    },
+    {
+     "id": "kensou",
+     "name": "ケンスウ",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-kensou",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ]
+    },
+    {
+     "id": "chin",
+     "name": "チン",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-chin",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "research/kof98/frame-advantage-original-2005.html",
+       "ブログの硬直差メモ（2005年）"
+      ],
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "ちづる・舞・キング",
+   "chars": [
+    {
+     "id": "chizuru",
+     "name": "ちづる",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-chizuru",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ],
+     "research": [
+      [
+       "98tizuru-sannrai.html",
+       "ガード不能三籟の布陣セットプレイ（旧サイト）"
+      ],
+      [
+       "research/kof98/chizuru-clone-gccd-glitch-2015-2025.html",
+       "千鶴：分身とGCCDの見切れてバグ・攻撃予約の謎"
+      ],
+      [
+       "research/kof98/chizuru-corner-escape-punish-2015.html",
+       "千鶴：端脱出・零技の礎の反撃・ガード不能レシピ"
+      ],
+      [
+       "research/kof98/chizuru-max-dispel-jcd-followup-2006-2007.html",
+       "千鶴：零技の礎のMAX解除とJCDカウンター追撃の疑問"
+      ],
+      [
+       "research/kof98/chizuru-super-setups-sanrai-defense-2010-2018.html",
+       "千鶴：超必殺技を狙う場面と、三籟の布陣を食らう側の工夫"
+      ],
+      [
+       "research/kof98/kyo-dokugami-interrupt-chizuru-chang-yashiro-2014.html",
+       "京の近C→毒咬み：千鶴・チャン・表社の割り込み検証（2014年）"
+      ]
+     ]
+    },
+    {
+     "id": "mai",
+     "name": "舞",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-mai",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "research/kof98/frame-advantage-original-2005.html",
+       "ブログの硬直差メモ（2005年）"
+      ],
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ],
+     "research": [
+      [
+       "research/kof98/kim-mai-athena-notes-2014-2019.html",
+       "キム・舞・アテナ：技の性能差と狙い方のメモ"
+      ],
+      [
+       "research/kof98/mai-daimon-guardcrush-gccd-2015.html",
+       "舞対大門：低ジャンプの打点とGCCD・ガードクラッシュ"
+      ],
+      [
+       "research/kof98/mai-gccd-musasabi-counterplay-2015-2017.html",
+       "舞：ムササビの舞によるGCCD回避と打点別対策"
+      ]
+     ]
+    },
+    {
+     "id": "king",
+     "name": "キング",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-king",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "キム・チャン・チョイ",
+   "chars": [
+    {
+     "id": "kim",
+     "name": "キム",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-kim",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ],
+     "research": [
+      [
+       "research/kof98/kim-mai-athena-notes-2014-2019.html",
+       "キム・舞・アテナ：技の性能差と狙い方のメモ"
+      ]
+     ]
+    },
+    {
+     "id": "chang",
+     "name": "チャン",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-chang",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ],
+     "research": [
+      [
+       "research/kof98/chang-ironball-guardpoint-2024.html",
+       "鉄球粉砕撃：ガードポイントとクリスへのヒット順序"
+      ],
+      [
+       "research/kof98/chang-neutral-hop-walk-command-throw-2009.html",
+       "チャン：垂直小ジャンプから一瞬歩いて大破壊投げ（2009年）"
+      ],
+      [
+       "research/kof98/kyo-dokugami-interrupt-chizuru-chang-yashiro-2014.html",
+       "京の近C→毒咬み：千鶴・チャン・表社の割り込み検証（2014年）"
+      ],
+      [
+       "research/kof98/terry-chang-yashiro-notes-2010-2024.html",
+       "テリー・チャン・社：技の狙い方と入力のメモ"
+      ]
+     ]
+    },
+    {
+     "id": "choi",
+     "name": "チョイ",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-choi",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "社・シェルミー・クリス",
+   "chars": [
+    {
+     "id": "yashiro",
+     "name": "社",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-yashiro",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ],
+     "research": [
+      [
+       "research/kof98/kyo-dokugami-interrupt-chizuru-chang-yashiro-2014.html",
+       "京の近C→毒咬み：千鶴・チャン・表社の割り込み検証（2014年）"
+      ],
+      [
+       "research/kof98/terry-chang-yashiro-notes-2010-2024.html",
+       "テリー・チャン・社：技の狙い方と入力のメモ"
+      ],
+      [
+       "research/kof98/yashiro-links-cancels-2012-2015.html",
+       "社・裏社：屈B→屈Aの連続ガードと空キャン投げ"
+      ]
+     ]
+    },
+    {
+     "id": "shermie",
+     "name": "シェルミー",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-shermie",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ]
+    },
+    {
+     "id": "chris",
+     "name": "クリス",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-chris",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "research/kof98/frame-advantage-original-2005.html",
+       "ブログの硬直差メモ（2005年）"
+      ],
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ],
+     "research": [
+      [
+       "research/kof98/chris-6b-vertical-hop-2018.html",
+       "クリス：6B二段目への垂直小ジャンプ回避"
+      ],
+      [
+       "research/kof98/chris-airguard-landing-jcd-test-plan-2025.html",
+       "裏クリス：弱炎空中ガード後JCDのガード不能検証計画"
+      ],
+      [
+       "research/kof98/chris-direction-change-and-notes-2011-2018.html",
+       "クリス：弱ディレクションチェンジの狙いどころと立ち回りメモ"
+      ],
+      [
+       "research/kof98/chris-guardbreak-misinput-2013-2025.html",
+       "クリス・裏クリス：暴発対策とガード不能候補"
+      ],
+      [
+       "research/kof98/daimon-iori-chris-counterplay-2013-2014.html",
+       "大門対庵・クリス：地雷震仕込みとGC前転の未検証案"
+      ],
+      [
+       "research/kof98/joe-chris-goro-matchups-2005.html",
+       "ジョー：2005年のクリス・五郎対策としゃがみ判定の例外"
+      ],
+      [
+       "research/kof98/orochi-chris-forward-jcd-littleboy-video-2007.html",
+       "裏クリス：リトルボーイの前方JCD多用をどう見るか（2007年）"
+      ],
+      [
+       "research/kof98/orochi-chris-interrupt-character-2015.html",
+       "裏クリス：236A暴発・6B止めへのキャラ別割り込み"
+      ],
+      [
+       "research/kof98/orochi-chris-joe-weak-kakato-2011.html",
+       "裏クリス対ジョー：弱かかとへの弱つき割り込み"
+      ],
+      [
+       "research/kof98/robert-chris-reversal-backjump-dash-2019.html",
+       "ロバート対クリス：リバサ後方大Jとダッシュ潜りの1F猶予"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "山崎・マリー・ビリー",
+   "chars": [
+    {
+     "id": "yamazaki",
+     "name": "山崎",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-yamazaki",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ],
+     "research": [
+      [
+       "research/kof98/yamazaki-crouch-c-98-vs-02-2017.html",
+       "山崎：屈Cの発生・火力・ゲージ増加を2002と比較"
+      ],
+      [
+       "research/kof98/yamazaki-dash-crouch-c-38chars-2011.html",
+       "山崎：密着ダッシュ中の屈C空振り・1段目・2段目の38キャラ分類"
+      ]
+     ]
+    },
+    {
+     "id": "mary",
+     "name": "マリー",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-mary",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ]
+    },
+    {
+     "id": "billy",
+     "name": "ビリー",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-billy",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ],
+     "research": [
+      [
+       "research/kof98/billy-max-fire-wheel-pseudo-corner-2008.html",
+       "表ビリー：MAX超火炎旋風棍からの疑似端現象"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "庵・マチュア・バイス",
+   "chars": [
+    {
+     "id": "iori",
+     "name": "庵",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-iori",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "research/kof98/frame-advantage-original-2005.html",
+       "ブログの硬直差メモ（2005年）"
+      ],
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ],
+     "research": [
+      [
+       "research/kof98/daimon-623-prebuffer-jirai-iori-projectile-2013.html",
+       "大門：623623仕込み弱地雷震による庵・飛び道具対策案（2013年）"
+      ],
+      [
+       "research/kof98/daimon-iori-chris-counterplay-2013-2014.html",
+       "大門対庵・クリス：地雷震仕込みとGC前転の未検証案"
+      ],
+      [
+       "research/kof98/daimon-iori-defense-counterplay-2016.html",
+       "大門：庵の表裏・鬼焼きと屑風への防御案"
+      ],
+      [
+       "research/kof98/iori-crouch-b-a-link-2011.html",
+       "庵：屈B→屈Aの連打キャンセルと連続ヒットの入力間隔（2011年）"
+      ],
+      [
+       "research/kof98/iori-dash-anti-air-throw-walk-2007-2008.html",
+       "庵：ダッシュ対空屑風と41236系の歩きコマンド投げ"
+      ],
+      [
+       "research/kof98/iori-farc-aoiha-observation-2017.html",
+       "庵：遠Cから強葵花を差し込む動画観察"
+      ],
+      [
+       "research/kof98/iori-kuzukaze-hitstance-2008.html",
+       "庵：屑風成立後の立ち・しゃがみ確認と起き攻め（2008年）"
+      ],
+      [
+       "research/kof98/iori-recovery-throw-okizeme-2015-2019.html",
+       "庵：起き上がり投げ・ダウン回避後の屑風・闇払い"
+      ],
+      [
+       "research/kof98/iori-robert-jd-ryujinkyaku-interrupt-2015.html",
+       "庵対表ロバート：JDガード後の龍神脚に屑風・強鬼焼き"
+      ],
+      [
+       "research/kof98/iori-takuma-kohouken-2007.html",
+       "庵対タクマ：虎煌拳を屈A・屈Bで回避する"
+      ],
+      [
+       "research/kof98/iori-yamibarai-poke-98-vs-02.html",
+       "庵の闇払い：牽制としての使い方と2002との違い"
+      ],
+      [
+       "research/kof98/iori-yaotome-pushbox-jirai-hypothesis-2024.html",
+       "庵：八稚女中の押し合い判定と確定地雷震への影響（2024年）"
+      ],
+      [
+       "research/kof98/iori-yuriori-guard-direction-2015-2016.html",
+       "庵のめくり中J百合折り：ガード方向・大門3+AC入力の研究"
+      ],
+      [
+       "research/kof98/joe-iori-far-b-hurtbox-2016.html",
+       "ジョー対庵：遠Bの食らい判定移動と立ち回り"
+      ]
+     ]
+    },
+    {
+     "id": "mature",
+     "name": "マチュア",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-mature",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ]
+    },
+    {
+     "id": "vice",
+     "name": "バイス",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-vice",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "ハイデルン・タクマ・柴舟",
+   "chars": [
+    {
+     "id": "heidern",
+     "name": "ハイデルン",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-heidern",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ]
+    },
+    {
+     "id": "takuma",
+     "name": "タクマ",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-takuma",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "research/kof98/frame-advantage-original-2005.html",
+       "ブログの硬直差メモ（2005年）"
+      ],
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ],
+     "research": [
+      [
+       "research/kof98/iori-takuma-kohouken-2007.html",
+       "庵対タクマ：虎煌拳を屈A・屈Bで回避する"
+      ],
+      [
+       "research/kof98/kyokugen-robert-ryo-takuma-notes-2012-2019.html",
+       "ロバート・リョウ・タクマ：フレームと狙い方のメモ"
+      ],
+      [
+       "research/kof98/takuma-priority-flag-ryukoranbu-2015-2024.html",
+       "タクマ：弱龍虎乱舞の有利フラグによる硬直差変化"
+      ]
+     ]
+    },
+    {
+     "id": "saisyu",
+     "name": "柴舟",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-saisyu",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "research/kof98/frame-advantage-original-2005.html",
+       "ブログの硬直差メモ（2005年）"
+      ],
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "ヘビィD！・ラッキー・ブライアン",
+   "chars": [
+    {
+     "id": "heavyd",
+     "name": "ヘビィD！",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-heavyd",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ]
+    },
+    {
+     "id": "lucky",
+     "name": "ラッキー",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-lucky",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ],
+     "research": [
+      [
+       "research/kof98/lucky-ad-throw-crouch-a-2005.html",
+       "ラッキー：AD同時投げと近A空振り時のフォロー（2005年）"
+      ]
+     ]
+    },
+    {
+     "id": "brian",
+     "name": "ブライアン",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-brian",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ],
+     "research": [
+      [
+       "research/kof98/brian-step-gamera-counterplay-2015-2024.html",
+       "EXTブライアン：ステップガメラ対策とGC後転の検証"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "ルガール・真吾",
+   "chars": [
+    {
+     "id": "rugal",
+     "name": "ルガール",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-rugal",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ]
+    },
+    {
+     "id": "shingo",
+     "name": "真吾",
+     "frame": [
+      [
+       "research/kof98/all-characters-normal-frame-advantage-2005.html#c-shingo",
+       "通常技の硬直差（2005年）"
+      ]
+     ],
+     "data": [
+      [
+       "98kakukyara-hit-guard-koutyoku.htm",
+       "旧サイトの表"
+      ]
+     ]
+    }
+   ]
+  }
+ ]
+}

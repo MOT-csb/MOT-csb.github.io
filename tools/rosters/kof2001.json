@@ -1,0 +1,58 @@
+{
+ "game": "KOF2001",
+ "base": "",
+ "top": "kof01-top.html",
+ "missing": "",
+ "teams": [
+  {
+   "name": "フレーム・技データのあるキャラ",
+   "chars": [
+    {
+     "id": "lin",
+     "name": "麟",
+     "frame": [
+      [
+       "research/kof2001/lin-crouch-b-1f-2f-2015.html",
+       "屈Bの発生2F（KOF2000との比較・2015年）"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "攻略・研究ページのあるキャラ",
+   "chars": [
+    {
+     "id": "joe",
+     "name": "ジョー",
+     "research": [
+      [
+       "research/kof2001/joe-2003-forum-retrospective.html",
+       "ジョーの連続技・爆裂拳の2003年回想記録"
+      ]
+     ]
+    },
+    {
+     "id": "k9999",
+     "name": "K9999",
+     "research": [
+      [
+       "research/kof2001/k9999-and-system-2021-2024.html",
+       "K9999とシステム差異の原資料整理"
+      ]
+     ]
+    },
+    {
+     "id": "maylee",
+     "name": "メイ・リー",
+     "research": [
+      [
+       "research/kof2001/maylee-pyonkichi-source-audit-2025.html",
+       "メイ・リー「ぴょん吉モード」の作品別資料と失われた座標解説の探索"
+      ]
+     ]
+    }
+   ]
+  }
+ ]
+}

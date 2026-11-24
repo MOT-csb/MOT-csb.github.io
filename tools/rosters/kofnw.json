@@ -1,0 +1,784 @@
+{
+ "game": "KOF NEOWAVE",
+ "base": "",
+ "top": "kofnw-top.htm",
+ "button": "技解析",
+ "missing": "技解析は未作成",
+ "teams": [
+  {
+   "name": "京・紅丸・五郎",
+   "chars": [
+    {
+     "id": "kyo",
+     "name": "京",
+     "frame": [
+      [
+       "nwkyo-wazakaiseki.htm",
+       "技解析（旧サイト・2004年）"
+      ]
+     ],
+     "data": [
+      [
+       "nwkyo-hennkoutenn.htm",
+       "変更点"
+      ],
+      [
+       "nwkyo-kihonnsennpou.htm",
+       "基本戦法"
+      ],
+      [
+       "nwkyo-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ],
+     "research": [
+      [
+       "research/kofnw/kyo-cancel-table-2004.html",
+       "技表・キャンセル表（2004年原稿）"
+      ],
+      [
+       "research/kofnw/kyo-strategy-combos-source-comparison-2004.html",
+       "基本戦法・連続技と原稿間の相違"
+      ]
+     ]
+    },
+    {
+     "id": "benimaru",
+     "name": "紅丸",
+     "frame": [
+      [
+       "nwbenimaru-wazakaiseki.htm",
+       "技解析（旧サイト・2004年）"
+      ]
+     ],
+     "data": [
+      [
+       "nwbenimaru-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ],
+     "research": [
+      [
+       "research/kofnw/benimaru-combos-2004.html",
+       "SC・GB・MAX2別の連続技と未確認ルート"
+      ]
+     ]
+    },
+    {
+     "id": "goro",
+     "name": "五郎",
+     "data": [
+      [
+       "nwgoro-hennkoutenn.htm",
+       "変更点"
+      ],
+      [
+       "nwgoro-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K’・マキシマ・ウイップ",
+   "chars": [
+    {
+     "id": "kdash",
+     "name": "K’",
+     "data": [
+      [
+       "nwk'-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ]
+    },
+    {
+     "id": "maxima",
+     "name": "マキシマ",
+     "data": [
+      [
+       "nwmaxima-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ]
+    },
+    {
+     "id": "whip",
+     "name": "ウイップ",
+     "data": [
+      [
+       "nwwhip-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "庵・マチュア・バイス",
+   "chars": [
+    {
+     "id": "iori",
+     "name": "庵",
+     "data": [
+      [
+       "nwiori-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ]
+    },
+    {
+     "id": "mature",
+     "name": "マチュア",
+     "frame": [
+      [
+       "nwmature-wazakaiseki.htm",
+       "技解析（旧サイト・2004年）"
+      ]
+     ],
+     "data": [
+      [
+       "nwmature-hennkoutenn.htm",
+       "変更点"
+      ],
+      [
+       "nwmature-kihonnsennpou.htm",
+       "基本戦法"
+      ],
+      [
+       "nwmature-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ],
+     "research": [
+      [
+       "research/kofnw/mature-move-analysis-2004.html",
+       "技解析：ジャンプB・デスロウ・SC追撃"
+      ]
+     ]
+    },
+    {
+     "id": "vice",
+     "name": "バイス",
+     "data": [
+      [
+       "nwvice-hennkoutenn.htm",
+       "変更点"
+      ],
+      [
+       "nwvice-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "社・シェルミー・クリス",
+   "chars": [
+    {
+     "id": "yashiro",
+     "name": "社",
+     "data": [
+      [
+       "nwomoteyashiro-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ]
+    },
+    {
+     "id": "shermie",
+     "name": "シェルミー",
+     "data": [
+      [
+       "nwomoteshermie-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ]
+    },
+    {
+     "id": "chris",
+     "name": "クリス",
+     "data": [
+      [
+       "nwomotechris-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "テリー・アンディ・ジョー",
+   "chars": [
+    {
+     "id": "terry",
+     "name": "テリー",
+     "frame": [
+      [
+       "nwterry-wazakaiseki.htm",
+       "技解析（旧サイト・2004年）"
+      ]
+     ],
+     "data": [
+      [
+       "nwterry-hennkoutenn.htm",
+       "変更点"
+      ],
+      [
+       "nwterry-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ],
+     "research": [
+      [
+       "research/kofnw/terry-moves-combos-2004.html",
+       "技解析・ヒート発動連続技"
+      ]
+     ]
+    },
+    {
+     "id": "andy",
+     "name": "アンディ",
+     "frame": [
+      [
+       "nwandy-wazakaiseki.htm",
+       "技解析（旧サイト・2004年）"
+      ]
+     ],
+     "data": [
+      [
+       "nwandy-hennkoutenn.htm",
+       "変更点"
+      ],
+      [
+       "nwandy-kihonnsennpou.htm",
+       "基本戦法"
+      ],
+      [
+       "nwandy-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ],
+     "research": [
+      [
+       "research/kofnw/andy-neutral-and-mixup-2004.html",
+       "立ち回り・対空・めくり（2004年）"
+      ],
+      [
+       "research/kofnw/andy-backturned-combos-2004-2011.html",
+       "背面連続技と2002からの変更点"
+      ]
+     ]
+    },
+    {
+     "id": "joe",
+     "name": "ジョー",
+     "frame": [
+      [
+       "nwjoe-wazakaiseki.htm",
+       "技解析（旧サイト・2004年）"
+      ]
+     ],
+     "data": [
+      [
+       "nwjoe-hennkoutenn.htm",
+       "変更点"
+      ],
+      [
+       "nwjoe-kihonnsennpou.htm",
+       "基本戦法"
+      ],
+      [
+       "nwjoe-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ],
+     "research": [
+      [
+       "research/kofnw/joe-move-analysis-2004.html",
+       "技解析の戦術評価と確認範囲"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "アテナ・ケンスウ・チン",
+   "chars": [
+    {
+     "id": "athena",
+     "name": "アテナ",
+     "data": [
+      [
+       "nwathena-hennkoutenn.htm",
+       "変更点"
+      ],
+      [
+       "nwathena-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ]
+    },
+    {
+     "id": "kensou",
+     "name": "ケンスウ",
+     "data": [
+      [
+       "nwkensou-rennzokuwaza1.htm",
+       "連続技"
+      ]
+     ]
+    },
+    {
+     "id": "chin",
+     "name": "チン",
+     "data": [
+      [
+       "nwchin-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "山崎・マリー・ビリー",
+   "chars": [
+    {
+     "id": "yamazaki",
+     "name": "山崎",
+     "data": [
+      [
+       "nwyamazaki-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ]
+    },
+    {
+     "id": "mary",
+     "name": "マリー",
+     "data": [
+      [
+       "nwmary-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ]
+    },
+    {
+     "id": "billy",
+     "name": "ビリー",
+     "data": [
+      [
+       "nwbilly-hennkoutenn.htm",
+       "変更点"
+      ],
+      [
+       "nwbilly-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "リョウ・ロバート・タクマ",
+   "chars": [
+    {
+     "id": "ryo",
+     "name": "リョウ",
+     "data": [
+      [
+       "nwryo-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ],
+     "research": [
+      [
+       "research/kofnw/ryo-evaluation-2004-2024.html",
+       "2004年の旧攻略と2024年の再評価"
+      ]
+     ]
+    },
+    {
+     "id": "robert",
+     "name": "ロバート",
+     "data": [
+      [
+       "nwrobert-hennkoutenn.htm",
+       "変更点"
+      ],
+      [
+       "nwrobert-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ]
+    },
+    {
+     "id": "takuma",
+     "name": "タクマ",
+     "data": [
+      [
+       "nwtakuma-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "レオナ・ラルフ・クラーク",
+   "chars": [
+    {
+     "id": "leona",
+     "name": "レオナ",
+     "data": [
+      [
+       "nwleona-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ]
+    },
+    {
+     "id": "ralf",
+     "name": "ラルフ",
+     "frame": [
+      [
+       "nwralf-wazakaiseki.htm",
+       "技解析（旧サイト・2004年）"
+      ]
+     ],
+     "data": [
+      [
+       "nwralf-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ],
+     "research": [
+      [
+       "research/kofnw/ralf-move-analysis-2004.html",
+       "技解析の対戦評価と限定条件"
+      ]
+     ]
+    },
+    {
+     "id": "clark",
+     "name": "クラーク",
+     "data": [
+      [
+       "nwclark-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "柴舟・クーラ・真吾",
+   "chars": [
+    {
+     "id": "saisyu",
+     "name": "柴舟",
+     "frame": [
+      [
+       "nwsaisyu-wazakaiseki.htm",
+       "技解析（旧サイト・2004年）"
+      ]
+     ],
+     "data": [
+      [
+       "nwsaisyu-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ],
+     "research": [
+      [
+       "research/kofnw/saisyu-moves-combos-2004.html",
+       "技性能・モード別連続技"
+      ],
+      [
+       "research/kofnw/saisyu-crouch-d-2004-2024.html",
+       "屈みDと判定継承"
+      ]
+     ]
+    },
+    {
+     "id": "kula",
+     "name": "クーラ",
+     "data": [
+      [
+       "nwkula-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ],
+     "research": [
+      [
+       "research/kofnw/kula-sc-followup-2004.html",
+       "SC連続技の追試"
+      ]
+     ]
+    },
+    {
+     "id": "shingo",
+     "name": "真吾",
+     "data": [
+      [
+       "nwshingo-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "ジョン・チャン・チョイ",
+   "chars": [
+    {
+     "id": "jhun",
+     "name": "ジョン",
+     "frame": [
+      [
+       "nwjhun-wazakaiseki.htm",
+       "技解析（旧サイト・2004年）"
+      ]
+     ],
+     "data": [
+      [
+       "nwjhun-kihontaisenkoryaku.htm",
+       "基本戦法"
+      ],
+      [
+       "nwjhun-rennzokuwaza.htm",
+       "連続技"
+      ],
+      [
+       "nwjhun-crush.htm",
+       "クラッシュ"
+      ]
+     ],
+     "research": [
+      [
+       "research/kofnw/jhun-move-analysis-nachtseite-2004.html",
+       "技解析・認識間合いと構え技（Nachtseite）"
+      ],
+      [
+       "research/kofnw/jhun-stance-counterplay-2004.html",
+       "ジョン対策と構えの読み合い"
+      ]
+     ]
+    },
+    {
+     "id": "chang",
+     "name": "チャン",
+     "data": [
+      [
+       "nwchang-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ]
+    },
+    {
+     "id": "choi",
+     "name": "チョイ",
+     "data": [
+      [
+       "nwchoi-hennkoutenn.htm",
+       "変更点"
+      ],
+      [
+       "nwchoi-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ],
+     "research": [
+      [
+       "research/kofnw/choi-crouch-d-cancel-2004-2024.html",
+       "屈みD連係と確定地雷震回避案"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "舞・ユリ・キング",
+   "chars": [
+    {
+     "id": "mai",
+     "name": "舞",
+     "data": [
+      [
+       "nwmai-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ]
+    },
+    {
+     "id": "yuri",
+     "name": "ユリ",
+     "data": [
+      [
+       "nwyuri-hennkoutenn.htm",
+       "変更点"
+      ],
+      [
+       "nwyuri-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ]
+    },
+    {
+     "id": "king",
+     "name": "キング",
+     "data": [
+      [
+       "nwking-rennzokuwaza.htm",
+       "連続技"
+      ],
+      [
+       "nwking-crush.htm",
+       "クラッシュ"
+      ]
+     ],
+     "research": [
+      [
+       "research/kofnw/king-sc-counterplay-2004.html",
+       "SCモードのキング対策"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "裏社・裏シェルミー・裏クリス",
+   "chars": [
+    {
+     "id": "urayashiro",
+     "name": "裏社",
+     "data": [
+      [
+       "nwurayashiro-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ]
+    },
+    {
+     "id": "urashermie",
+     "name": "裏シェルミー",
+     "data": [
+      [
+       "nwurashermie-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ]
+    },
+    {
+     "id": "urachris",
+     "name": "裏クリス",
+     "frame": [
+      [
+       "nwuchris-wazakaiseki.htm",
+       "技解析（旧サイト・2004年）"
+      ]
+     ],
+     "data": [
+      [
+       "nwurachris-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ],
+     "research": [
+      [
+       "research/kofnw/uchris-move-analysis-2004.html",
+       "技解析：必殺技の記録と未記入箇所"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "キム・ヴァネッサ・ラモン",
+   "chars": [
+    {
+     "id": "kim",
+     "name": "キム",
+     "frame": [
+      [
+       "nwkim-wazakaiseki.htm",
+       "技解析（旧サイト・2004年）"
+      ]
+     ],
+     "data": [
+      [
+       "nwkim-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ],
+     "research": [
+      [
+       "research/kofnw/kim-move-analysis-2004.html",
+       "技解析：蒼月さん提供情報"
+      ]
+     ]
+    },
+    {
+     "id": "vanessa",
+     "name": "ヴァネッサ",
+     "data": [
+      [
+       "nwvanessa-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ]
+    },
+    {
+     "id": "ramon",
+     "name": "ラモン",
+     "frame": [
+      [
+       "nwramon-wazakaiseki.htm",
+       "技解析（旧サイト・2004年）"
+      ]
+     ],
+     "data": [
+      [
+       "nwramon-rennzokuwaza.htm",
+       "連続技"
+      ]
+     ],
+     "research": [
+      [
+       "research/kofnw/ramon-moves-fs-combos-2004.html",
+       "技解析・FS連続技"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "若ギース",
+   "chars": [
+    {
+     "id": "ygeese",
+     "name": "若ギース",
+     "frame": [
+      [
+       "nwygeese-wazakaiseki.htm",
+       "技解析＆倒し方（旧サイト・2004年）"
+      ]
+     ],
+     "research": [
+      [
+       "research/kofnw/young-geese-cpu-decision-patterns-2004-2005.html",
+       "CPU攻略の行動分岐と危険条件"
+      ],
+      [
+       "research/kofnw/young-geese-hitbox-2004-2024.html",
+       "CPU攻略と後年の判定考察"
+      ]
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -74,9 +74,15 @@ def load(game):
         for c in team["chars"]:
             c["pages"] = []  # (種類, ファイル名, 表示名)
             for fn in c.get("frame", []):
-                c["pages"].append(("frame", fn, frame_label(fn, title_of(base + fn))))
+                if isinstance(fn, list):  # [ファイル名, 表示名]
+                    c["pages"].append(("frame", fn[0], fn[1]))
+                else:
+                    c["pages"].append(("frame", fn, frame_label(fn, title_of(base + fn))))
             for fn in c.get("data", []):
-                c["pages"].append(("data", fn, "ダメージ・ガークラ値"))
+                if isinstance(fn, list):  # [ファイル名, 表示名]（旧サイトの連続技・技解析など）
+                    c["pages"].append(("data", fn[0], fn[1]))
+                else:
+                    c["pages"].append(("data", fn, "ダメージ・ガークラ値"))
             for fn in c.get("research", []):
                 if isinstance(fn, list):  # [ファイル名, 表示名]
                     c["pages"].append(("research", fn[0], fn[1]))
@@ -113,9 +119,10 @@ def roster_html(d):
             research = [p for p in others if p[0] == "research"]
             line = f'<li id="c-{c["id"]}">{main}'
             if frames:
-                line += f'<a class="fbtn" href="{base}{frames[0][1]}">フレームデータ</a><span class="fl">{esc(frames[0][2])}</span>'
-            else:
-                line += '<span class="fl">フレームデータ未掲載</span>'
+                btn = c.get("button", d.get("button", "フレームデータ"))
+                line += f'<a class="fbtn" href="{base}{frames[0][1]}">{esc(btn)}</a><span class="fl">{esc(frames[0][2])}</span>'
+            elif d.get("missing", "フレームデータ未掲載"):
+                line += '<span class="fl">' + esc(d.get("missing", "フレームデータ未掲載")) + "</span>"
             if sub:
                 line += '<span class="sub">' + "".join(sub) + "</span>"
             if research:
@@ -188,10 +195,17 @@ def main(game):
     for fn, cs in owner.items():
         if len(cs) == 1:
             put_nav(base + fn, nav_html(d, cs[0], fn))
-        elif all(len([p for p in c["pages"] if p[0] != "x"]) == 1 for c in cs):
-            # チーム別ページなど、1ページに数キャラの表だけが載る場合は1本にまとめる
+        elif len(cs) > 3 or all(len([p for p in c["pages"] if p[0] != "x"]) == 1 for c in cs):
+            # チーム別ページや全キャラの表など、1ページに数キャラが載る場合は1本にまとめる
+            def anchor(c):
+                for kind, f2, _ in c["pages"]:
+                    if f2.split("#")[0] == fn and "#" in f2:
+                        return f2
+                return None
             names = " ／ ".join(
-                f'<a href="{base}{c["pages"][0][1]}">{esc(c["name"])}</a>' if "#" in c["pages"][0][1] else f"<b>{esc(c['name'])}</b>"
+                f'<a href="/{base}{anchor(c)}">{esc(c["name"])}</a>' if anchor(c)
+                else f'<a href="/{d["top"]}#c-{c["id"]}">{esc(c["name"])}</a>' if len(cs) > 3
+                else f"<b>{esc(c['name'])}</b>"
                 for c in cs
             )
             put_nav(base + fn, '<!-- chara-nav:start --><nav class="chara-nav" aria-label="キャラクター別のページ">'
