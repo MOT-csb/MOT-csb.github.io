@@ -1,0 +1,85 @@
+{
+  "game": "KOF2002UM",
+  "top": "kof02um-top.html",
+  "base": "research/kof2002um/",
+  "teams": [
+    {"name": "K′チーム", "chars": [
+      {"id": "kdash", "name": "K′", "frame": ["kdash-frame-data-2009.html"], "x": "x-kdash-team-2010-2025.html"},
+      {"id": "maxima", "name": "マキシマ", "frame": ["maxima-frame-data-2009.html"], "x": "x-kdash-team-2010-2025.html"},
+      {"id": "whip", "name": "ウィップ", "frame": ["whip-frame-data-2009.html"], "x": "x-kdash-team-2010-2025.html"}]},
+    {"name": "京チーム", "chars": [
+      {"id": "kyo", "name": "京", "frame": ["kyo-original-frame-notes-2024.html"], "data": ["kyo-damage-guardcrush-2009-2010.html"], "research": ["throw-invincible-moves-kyo-max2-2009.html"], "x": "x-kyo-iori-team-2010-2025.html"},
+      {"id": "benimaru", "name": "紅丸", "frame": ["benimaru-frame-sources-2009-2024.html"], "data": ["benimaru-damage-guardcrush-2009-2010.html"], "research": ["benimaru-vs-nameless-2010.html"], "x": "x-kyo-iori-team-2010-2025.html"},
+      {"id": "daimon", "name": "大門", "frame": ["daimon-frame-sources-2009-2025.html"], "data": ["daimon-damage-guardcrush-2009-2010.html"], "research": ["daimon-memos-2009.html"], "x": "x-kyo-iori-team-2010-2025.html"}]},
+    {"name": "クローンチーム", "chars": [
+      {"id": "kusanagi", "name": "KUSANAGI", "frame": ["kusanagi-frame-consolidation-2025.html", "clone-kyo-frame-data-2009.html"], "data": ["kusanagi-damage-guardcrush-2009-2010.html"], "research": ["kusanagi-corner-jump-6b-2010.html", "kusanagi-nuetsumi-counterplay-2021-2024.html"], "x": "x-kyo-iori-team-2010-2025.html"},
+      {"id": "kyo1", "name": "京-1", "frame": ["kyo1-frame-sources-2009-2025.html"], "data": ["kyo1-damage-guardcrush-2009-2010.html"], "x": "x-kyo-iori-team-2010-2025.html"},
+      {"id": "kyo2", "name": "京-2", "frame": ["kyo2-frame-sources-2009-2025.html"], "data": ["kyo2-damage-guardcrush-2009-2010.html"], "x": "x-kyo-iori-team-2010-2025.html"}]},
+    {"name": "八神チーム", "chars": [
+      {"id": "iori", "name": "庵", "frame": ["iori-frame-sources-2009-2025.html"], "data": ["iori-damage-guardcrush-2009-2011.html"], "research": ["iori-close-b-close-c-bao-2024.html", "iori-backturned-chris-combo-2024.html"], "x": "x-kyo-iori-team-2010-2025.html"},
+      {"id": "mature", "name": "マチュア", "frame": ["mature-frame-sources-2009-2025.html"], "data": ["mature-damage-guardcrush-2009-2010.html"], "research": ["mature-weak-despair-counterplay-2025.html", "mature-jump-b-interrupt-2024.html", "yuri-mature-kasumi-counterplay-2009-2011.html"], "x": "x-kim-yamazaki-team-2010-2025.html"},
+      {"id": "vice", "name": "バイス", "frame": ["vice-frame-sources-2009-2025.html"], "data": ["vice-damage-guardcrush-2009-2010.html"], "x": "x-kim-yamazaki-team-2010-2025.html"}]},
+    {"name": "餓狼伝説チーム", "chars": [
+      {"id": "terry", "name": "テリー", "frame": ["terry-frame-data-2025.html", "terry-frame-sources-2009-2025.html"], "data": ["terry-damage-guardcrush-2009-2010.html"], "x": "x-terry-joe-2010-2025.html"},
+      {"id": "andy", "name": "アンディ", "frame": ["andy-frame-data-2025.html", "andy-frame-sources-2009-2025.html", "early-frame-andy-robert-2009.html"], "data": ["andy-damage-guardcrush-2009-2010.html"], "research": ["andy-guide-2009.html", "andy-central-qm-and-gekiheki-2010.html", "andy-623-421-punch-kick-2024.html", "andy-continuous-forward-throw-2024.html", "andy-vs-kprime-middle-jd-2024.html", "andy-guardcrush-options-2025.html", "andy-air-to-air-landing-yamiabise-2025.html"], "x": "x-andy-2009-2025.html"},
+      {"id": "joe", "name": "ジョー", "frame": ["joe-frame-data-2025.html", "joe-frame-sources-2009-2025.html"], "data": ["joe-damage-guardcrush-2009-2010.html"], "research": ["joe-slashkick-safejump-nameless-2010.html"], "x": "x-terry-joe-2010-2025.html"}]},
+    {"name": "龍虎の拳チーム", "chars": [
+      {"id": "ryo", "name": "リョウ", "frame": ["ryo-frame-sources-2009-2025.html"], "x": "x-ryo-2010-2025.html"},
+      {"id": "robert", "name": "ロバート", "frame": ["robert-frame-sources-2009-2025.html", "early-frame-andy-robert-2009.html"], "x": "x-ryuko-women-2010-2025.html", "xid": "c-robert"},
+      {"id": "ura-robert", "name": "裏ロバート", "frame": ["ura-robert-frame-sources-2009-2025.html", "early-frame-andy-robert-2009.html"], "x": "x-ryuko-women-2010-2025.html"},
+      {"id": "yuri", "name": "ユリ", "frame": ["yuri-frame-sources-2009-2025.html"], "research": ["yuri-mature-kasumi-counterplay-2009-2011.html"], "x": "x-ryuko-women-2010-2025.html"}]},
+    {"name": "怒チーム", "chars": [
+      {"id": "leona", "name": "レオナ", "frame": ["leona-frame-data-2009.html"], "x": "x-ikari-psycho-2010-2025.html"},
+      {"id": "ralf", "name": "ラルフ", "frame": ["ralf-frame-data-2009.html"], "x": "x-ikari-psycho-2010-2025.html"},
+      {"id": "clark", "name": "クラーク", "frame": ["clark-frame-data-2009.html"], "research": ["clark-shining-wizard-running-three-2010.html"], "x": "x-ikari-psycho-2010-2025.html"}]},
+    {"name": "サイコソルジャーチーム", "chars": [
+      {"id": "athena", "name": "アテナ", "frame": ["athena-frame-data-2009.html"], "research": ["athena-weak-psychoball-jump-over-2010.html"], "x": "x-ikari-psycho-2010-2025.html"},
+      {"id": "kensou", "name": "ケンスウ", "frame": ["kensou-frame-data-2009.html"], "x": "x-ikari-psycho-2010-2025.html"},
+      {"id": "ura-kensou", "name": "裏ケンスウ", "frame": ["ura-kensou-frame-data-2009.html"]},
+      {"id": "bao", "name": "包", "frame": ["bao-frame-data-2009.html"], "research": ["bao-projectile-motion-test-2010.html", "bao-jump-cross-over-list-2010.html", "bao-hinako-gauge-gain-2010.html"], "x": "x-ikari-psycho-2010-2025.html"}]},
+    {"name": "女性格闘家チーム", "chars": [
+      {"id": "king", "name": "キング", "frame": ["king-frame-data-2009.html"], "x": "x-ryuko-women-2010-2025.html"},
+      {"id": "mai", "name": "舞", "frame": ["mai-frame-data-2009.html"], "research": ["mai-ground-musasabi-gccd-2010.html"]},
+      {"id": "kasumi", "name": "香澄", "frame": ["kasumi-frame-data-2009.html"], "research": ["kasumi-backturned-tatsumaki-2024.html", "yuri-mature-kasumi-counterplay-2009-2011.html"], "x": "x-ryuko-women-2010-2025.html"}]},
+    {"name": "美少女格闘家チーム", "chars": [
+      {"id": "xiangfei", "name": "香緋", "frame": ["xiangfei-frame-data-2009.html"], "x": "x-ikari-psycho-2010-2025.html"},
+      {"id": "hinako", "name": "雛子", "frame": ["hinako-frame-data-2009.html"], "research": ["hinako-infinite-2009.html", "bao-hinako-gauge-gain-2010.html"], "x": "x-ikari-psycho-2010-2025.html"},
+      {"id": "maylee", "name": "メイリー", "frame": ["maylee-frame-data-2009.html"], "research": ["abc-input-shermie-maylee-2010.html"], "x": "x-nests-orochi-2010-2025.html"}]},
+    {"name": "キムチーム", "chars": [
+      {"id": "kim", "name": "キム", "frame": ["kim-frame-data-2009.html"], "research": ["kim-chang-max2-input-timing-2010.html"], "x": "x-kim-yamazaki-team-2010-2025.html"},
+      {"id": "chang", "name": "チャン", "frame": ["chang-frame-data-2009.html"], "research": ["kim-chang-max2-input-timing-2010.html"], "x": "x-kim-yamazaki-team-2010-2025.html"},
+      {"id": "choi", "name": "チョイ", "frame": ["choi-frame-data-2009.html"], "x": "x-kim-yamazaki-team-2010-2025.html"}]},
+    {"name": "ジョンチーム", "chars": [
+      {"id": "jhun", "name": "ジョン", "frame": ["jhun-frame-data-2009.html"], "x": "x-kim-yamazaki-team-2010-2025.html"},
+      {"id": "lin", "name": "麟", "frame": ["lin-frame-data-2009.html"], "x": "x-ikari-psycho-2010-2025.html"},
+      {"id": "shingo", "name": "真吾", "frame": ["shingo-frame-data-2009.html"], "x": "x-ikari-psycho-2010-2025.html"}]},
+    {"name": "オロチチーム", "chars": [
+      {"id": "yashiro", "name": "社", "frame": ["omote-yashiro-frame-data-2009.html"], "research": ["yashiro-jet-counter-pressure-2010.html", "yashiro-close-crouch-d-and-far-b-punish-2010.html"], "x": "x-nests-orochi-2010-2025.html"},
+      {"id": "shermie", "name": "シェルミー", "frame": ["omote-shermie-frame-data-2009.html"], "research": ["abc-input-shermie-maylee-2010.html"], "x": "x-nests-orochi-2010-2025.html"},
+      {"id": "chris", "name": "クリス", "frame": ["omote-chris-frame-data-2009.html"], "research": ["chris-rising-jd-crouch-guard-2010.html"], "x": "x-nests-orochi-2010-2025.html"}]},
+    {"name": "裏オロチチーム", "chars": [
+      {"id": "ura-yashiro", "name": "裏社", "frame": ["ura-yashiro-frame-data-2009.html"], "research": ["ura-yashiro-623a-623c-properties-2010.html", "ura-yashiro-max2-and-corner-setups-2010.html"], "x": "x-nests-orochi-2010-2025.html"},
+      {"id": "ura-shermie", "name": "裏シェルミー", "frame": ["ura-shermie-frame-data-2009.html"], "x": "x-nests-orochi-2010-2025.html"},
+      {"id": "ura-chris", "name": "裏クリス", "frame": ["ura-chris-frame-data-2009.html"], "x": "x-nests-orochi-2010-2025.html"}]},
+    {"name": "’97スペシャルチーム", "chars": [
+      {"id": "yamazaki", "name": "山崎", "frame": ["yamazaki-frame-data-2009.html"], "x": "x-kim-yamazaki-team-2010-2025.html"},
+      {"id": "mary", "name": "マリー", "frame": ["mary-frame-data-2009.html"], "x": "x-ryuko-women-2010-2025.html"},
+      {"id": "billy", "name": "ビリー", "frame": ["billy-frame-data-2009.html"], "x": "x-kim-yamazaki-team-2010-2025.html"}]},
+    {"name": "エージェントチーム", "chars": [
+      {"id": "vanessa", "name": "ヴァネッサ", "frame": ["vanessa-frame-data-2009.html"], "x": "x-nests-orochi-2010-2025.html"},
+      {"id": "seth", "name": "セス", "frame": ["seth-frame-data-2009.html"], "x": "x-nests-orochi-2010-2025.html"},
+      {"id": "ramon", "name": "ラモン", "frame": ["ramon-frame-data-2009.html"], "x": "x-nests-orochi-2010-2025.html"}]},
+    {"name": "ネスツチーム", "chars": [
+      {"id": "kula", "name": "クーラ", "frame": ["kula-frame-data-2009.html"], "research": ["kula-far-b-weak-breath-counters-2012.html"], "x": "x-kdash-team-2010-2025.html"},
+      {"id": "angel", "name": "アンヘル", "frame": ["angel-frame-data-2009.html"], "x": "x-nests-orochi-2010-2025.html"},
+      {"id": "foxy", "name": "フォクシー", "frame": ["foxy-frame-data-2009.html"], "x": "x-nests-orochi-2010-2025.html"}]},
+    {"name": "マスターチーム", "chars": [
+      {"id": "heidern", "name": "ハイデルン", "frame": ["heidern-frame-data-2009.html"], "research": ["heidern-final-bringer-gccd-2010.html"], "x": "x-ikari-psycho-2010-2025.html"},
+      {"id": "takuma", "name": "タクマ", "frame": ["takuma-frame-data-2009.html"], "x": "x-ryuko-women-2010-2025.html"},
+      {"id": "ura-takuma", "name": "裏タクマ", "frame": ["ura-takuma-frame-data-2009.html"], "x": "x-ryuko-women-2010-2025.html"},
+      {"id": "chin", "name": "チン", "frame": ["chin-frame-data-2009.html"], "x": "x-ikari-psycho-2010-2025.html"}]},
+    {"name": "単独・ボス", "chars": [
+      {"id": "nameless", "name": "ネームレス", "frame": ["nameless-frame-sources-2009-2025.html"], "research": ["nameless-623a-counterplay-2009-2010.html"], "x": "x-nests-orochi-2010-2025.html"},
+      {"id": "goenitz", "name": "ゲーニッツ", "frame": [], "research": ["goenitz-yamidoukoku-1f-2009.html"]}]}
+  ]
+}
