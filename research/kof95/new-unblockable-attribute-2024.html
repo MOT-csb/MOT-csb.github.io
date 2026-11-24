@@ -1,31 +1,62 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'95：新ガード不能・中段属性付与の成立と解除条件（2024年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof95-top.html">KOF'95</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap"><h1>KOF'95：新ガード不能・中段属性付与の成立と解除条件（2024年）</h1><p>2024年3月28日～4月12日にMOT自身がXで検証・考察した、本人の呼称による「新ガード不能」の記録を整理する。ここでは<strong>本人の成立確認</strong>、成立しなかった条件、本人の推定・未確認を区別する。KOF'94の調査内容をKOF'95の確定事項として移植しない。</p>
-<h2>現象・呼称</h2>
-<p>本人は、ある属性が残った状態で技が中段化する現象を「新ガード不能」と呼び、3月30日には「中段属性付与」という別名も考えている。ただし中段と下段の組合せによるガード不能という意味が伝わりにくいとの留保がある。名前自体が確定した正式な呼称だとはしない。<a href="https://x.com/mot_csb/status/1773972138086797352">本人の命名に関する投稿</a>。</p>
-<h2>2013年10月28日：本人が重要な過去研究として振り返った属性付加</h2><p>MOTは2013年10月28日、長期に続けてきたKOFの研究の中で対戦への応用価値が高かった例として、<strong>KOF'95の属性付加によって接触判定が消え、中段攻撃が増える現象</strong>を挙げた。<a href="https://comesonobravo.hatenadiary.org/entry/378813746.html">2013年10月28日の本人日次原文</a>。</p><p>これは<strong>既に把握していた研究成果への2013年時点の本人による振り返り</strong>であり、2024年に新発見したとするものではない。2013年の短い回想には、成立キャラ・個別入力・フレームは記されていないため、後年の個別確認結果を2013年の実験内容としてさかのぼって扱わない。</p><h2>本人が確認した成立例・不成立例</h2>
-<table><thead><tr><th>キャラクター・操作／条件</th><th>MOTの結果</th><th>原資料</th></tr></thead><tbody>
-<tr><td>柴舟：神懸を相手に投げられる</td><td>神懸を投げられたあとも中段属性が残り、新ガード不能が可能と報告。</td><td><a href="https://x.com/mot_csb/status/1773681756983501164">2024/03/29</a></td></tr>
-<tr><td>テリー1P：強パワーダンク2段目発生直前、ハイデルン2Pが空中投げ</td><td><strong>この具体的な1P・2P条件で新ガード不能状態の成立を本人が確認。</strong></td><td><a href="https://x.com/mot_csb/status/1775329343922999391">2024/04/03</a></td></tr>
-<tr><td>ケンスウ：6C</td><td>新ガード不能が可能と記録。</td><td><a href="https://x.com/mot_csb/status/1773687090825285872">2024/03/29</a></td></tr>
-<tr><td>ケンスウ：6D</td><td>新ガード不能状態にならないらしいと記録。<strong>本人が要確認と明記。</strong></td><td><a href="https://x.com/mot_csb/status/1773687090825285872">2024/03/29</a></td></tr>
-<tr><td>京：6D vs 弱地雷震</td><td>新ガード不能にならないと本人が記録。</td><td><a href="https://x.com/mot_csb/status/1776892165530227048">2024/04/07</a></td></tr>
-<tr><td>京：6D vs ルガールのゴッドプレス</td><td>新ガード不能にならないと本人が記録。</td><td><a href="https://x.com/mot_csb/status/1776892165530227048">2024/04/07</a></td></tr>
-<tr><td>ジャンプ攻撃・空中特殊技を空中投げ</td><td>中段属性付与にはならないと、本人がKOF'94・'95の両方で確認。</td><td><a href="https://x.com/mot_csb/status/1776891105549881459">2024/04/07</a></td></tr>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'95：新ガード不能（中段属性付与）｜Come sono bravo?</title><meta name="description" content="KOF&#x27;95で中段の特殊技などを出している最中に投げられると、その後の自分の打撃が中段のまま残り、下段と組み合わせてガード不能になります。成立する技・しない技、解除される条件、&#x27;94との違い、使いどころ。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:960px}.article table{min-width:0;width:100%}.article th,.article td{overflow-wrap:anywhere;vertical-align:top}.article a{overflow-wrap:anywhere}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}.lead{font-size:1.05em}.vt{display:inline-block;font-size:.85em;line-height:1.45;padding:0 6px;margin-left:4px;border:1px solid var(--line,#ccd);border-radius:4px;font-weight:600;white-space:nowrap}.legend{font-size:.92em;color:var(--sub,#555)}.src li{font-size:.92em}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h2{font-size:1.15em;margin-top:1.2rem}details.more h3{font-size:1.05em}@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}.article th,.article td{min-width:80px}}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof95-top.html">KOF'95</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'95：新ガード不能（中段属性付与）</h1>
+<p class="lead">中段の特殊技などを出している最中に相手に投げられると、その後も自分の打撃が中段のまま残ります。屈ガードできない打撃と下段攻撃を組み合わせられるので、ガード不能になります。「新ガード不能」と呼んでいます。</p>
+<p>'94の現象としてrock2no氏が紹介したのが始まりで、'95でも起きます。'95界隈の呼び方からすると「中段属性付与」という言い方がいいかもしれない、ただし中段＋下段のガード不能という意味合いが伝わりにくいかも、としています。</p>
+<h2>なぜ起きるのか</h2>
+<p>中段属性はフラグのようなもので、技の攻撃部分が終わると解除される。動作中に投げられると、その解除の処理が飛ばされてフラグが変わらないままになる、と考えています（確かめた説明ではありません）。テリーのパワーダンクの例でも、攻撃部分が終わると中段属性を解除するが、投げられると解除の処理が飛ばされる感じ、としています。</p>
+<h2>'94との違い</h2>
+<ul>
+<li><b>中段になる技が増えている</b>：京の場合、闇払いと大蛇薙は'94・'95とも中段になりませんが、鬼焼きと朧車は'94ではならず'95ではなります。打撃系の必殺技は、'94では中段にならず'95では中段になるようです。リバーサルの無敵技やカウンター攻撃も中段になります。</li>
+<li><b>逃げにくい</b>：'95は'94と違い、レバー上入れっぱなしでもすぐには空中食らいにならず、空中食らいの着地もすぐに投げられます。</li>
+<li><b>対応キャラが多い</b>：レバー入れの特殊技を持つキャラが増えているので、できるキャラも増えています。</li>
+</ul>
+<h2>成立する技・しない技</h2>
+<table><thead><tr><th>技と状況</th><th>結果</th></tr></thead><tbody>
+<tr><td>京の6Dを投げられる</td><td>成立（京vsハイデルンなどで確認）</td></tr>
+<tr><td>柴舟の神懸を投げられる</td><td>成立。神懸を投げられた場合も中段が残った</td></tr>
+<tr><td>1Pテリーのパワーダンク<span class="vt">強</span>の2段目が出る直前に、2Pハイデルンが空中投げ</td><td>成立</td></tr>
+<tr><td>ケンスウの6C</td><td>成立</td></tr>
+<tr><td>ケンスウの6D</td><td>ならないようだ（要確認）</td></tr>
+<tr><td>京の6D vs 地雷震<span class="vt">弱</span></td><td>ならない</td></tr>
+<tr><td>京の6D vs ルガールのゴッドプレス</td><td>ならない</td></tr>
+<tr><td>ジャンプ攻撃や空中特殊技を空中投げ</td><td>ならない（'94・'95の両方で確認）。別物扱いだと思う、としています</td></tr>
 </tbody></table>
-<h2>属性の継続・解除条件</h2>
-<table><thead><tr><th>条件</th><th>本人の確認・見解</th><th>出典</th></tr></thead><tbody>
-<tr><td>京の琴月</td><td>新ガード不能状態で琴月がヒットまたはガードされても属性が継続。</td><td><a href="https://x.com/mot_csb/status/1775481276780494927">2024/04/03</a></td></tr>
-<tr><td>庵の琴月</td><td>琴月を出すだけなら継続するが、ヒットまたはガードされると解除。</td><td><a href="https://x.com/mot_csb/status/1775481276780494927">2024/04/03</a></td></tr>
-<tr><td>飛び道具</td><td>飛び道具は屈ガード可能だが、属性は解除されないと本人が別の調査結果と一致した旨を報告。全飛び道具への一般化は留保。</td><td><a href="https://x.com/mot_csb/status/1773950108692083163">2024/03/30</a></td></tr>
-<tr><td>相手の投げを食らう</td><td>属性は解除されないと本人が記録。</td><td><a href="https://x.com/mot_csb/status/1773897728181109128">2024/03/30</a></td></tr>
-<tr><td>相手の打撃を食らう／ガードする</td><td>同じ投稿の原文に「相手の技をヒットorで解除される」とあり、<strong>「or」の後ろは記載欠落</strong>。これをガードと読み替えず原文の不完全さを保存。</td><td><a href="https://x.com/mot_csb/status/1773897728181109128">2024/03/30</a></td></tr>
-<tr><td>次ラウンドへの持ち越し</td><td>京とハイデルンで、時間切れ直前の6D・ストームブリンガー投げを使って確認。どちらの勝利でも次ラウンドへ持ち越せなかったと本人が報告。ただし表現は「っぽい」。</td><td><a href="https://x.com/mot_csb/status/1773295753416302796">2024/03/28</a></td></tr>
+<h2>続く条件・解除される条件</h2>
+<table><thead><tr><th>状況</th><th>結果</th></tr></thead><tbody>
+<tr><td>相手の技を食らう</td><td>解除される（原文は「相手の技をヒットorで解除される」）</td></tr>
+<tr><td>相手の投げを食らう</td><td>解除されない</td></tr>
+<tr><td>自分の飛び道具</td><td>飛び道具は屈ガードできるが、新ガード不能は解除されない</td></tr>
+<tr><td>京の琴月</td><td>ヒット・ガードされても続く</td></tr>
+<tr><td>庵の琴月</td><td>出すだけなら続くが、ヒット・ガードされると解除</td></tr>
+<tr><td>ラウンドをまたぐ</td><td>持ち越せないようだ（京vsハイデルンで、時間切れ寸前に6Dとストームブリンガーで投げ、どちらが勝っても持ち越せなかった）</td></tr>
 </tbody></table>
-<h2>KOF'94との比較・必殺技の中段化</h2>
-<p>京の例について、闇払い・大蛇薙は94・95とも中段にならないが、鬼焼き・朧車は94ではならず95ではなると本人が記録。そこから打撃系必殺技は95の方が中段化する種類が増えているらしいと推測した。<strong>全キャラ・全必殺技で確認したという意味ではない。</strong> <a href="https://x.com/mot_csb/status/1773682281716019694">2024/03/29の原投稿</a>。</p>
-<h2>本人の原因仮説・戦術評価</h2>
-<p>テリーのパワーダンクについて、攻撃部分の終了とともに中段属性を消す処理があり、投げられるとその解除処理が飛ばされるのではないかと本人が推測。プログラムの実コードを確認したという記録ではない。<a href="https://x.com/mot_csb/status/1775481554128797730">2024/04/03の原因仮説</a>。</p>
-<p>相手に起き攻めをためらわせるGCとの組合せ、相手に立ガードと攻撃避けを迫る選択肢、屈B始動連続技の有無による脅威の違いも本人が考察した。<a href="https://x.com/mot_csb/status/1773839370065453259">GCとの併用の評価</a> ／ <a href="https://x.com/mot_csb/status/1778930251537744132">屈B連係の評価</a>。これらは本人の戦術的判断として扱う。</p>
-<h2>2024年3月31日：必殺技被投げから通常技で脱衣KOできるかという不成立寄りの記録</h2>
-<p>MOTは新ガード不能に似た発想として、<strong>必殺技を相手に投げさせた後、通常技による脱衣KOが可能にならないか</strong>を検討した。しかし本人は<strong>「ムリそうでした」</strong>と記録している。<a href="https://x.com/mot_csb/status/1774299952048689496">2024年3月31日の本人原投稿</a>。</p>
-<p>この記録は<strong>提案した応用が成立しそうになかったという本人の否定的な結果</strong>を残すためのものであり、対象キャラクター・技・試験条件・脱衣KOの成立判定まで特定した網羅的な不可能証明ではない。既存記事に掲載した中段属性付与の成立確認と区別する。</p><h2>未検証として残された案</h2>
-<p>庵の新ガード不能＋MAX強葵花からのお手玉が成立するか（<a href="https://x.com/mot_csb/status/1773316388364435927">本人の疑問</a>）。また、通常技キャンセル中段の一例としてリョウの屈C→弱飛燕疾風脚を挙げたが、本人自身が立ガードで両方防がれるのではないかと再考し、未確認のままにしている（<a href="https://x.com/mot_csb/status/1773896218441343155">検討投稿</a>）。</p><p><a href="./index.html">KOF'95研究アーカイブへ戻る</a> ／ <a href="/kof-kininaru.html#kof95">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
+<p>相手から見ると、技を食らうと解除されて投げを食らっても解除されないので、ガードするよりは攻撃避けがよさそうです。</p>
+<h2>使いどころ</h2>
+<ul>
+<li><b>お互いがパワーMAXでないとき</b>：投げられてもダメージが比較的少ないからです。投げられた後に相手が近づいてきて様子見の屈ガードをしていても、リバーサルの無敵技が中段になるので、初見殺しにもなりそうです。</li>
+<li><b>自分がMAXのときに投げを食らった場合</b>：相手はガードキャンセルを警戒して起き攻めをためらうので、かなり有効かもしれません。起き攻めしてくるなら、新ガード不能はあきらめるかわりにガードキャンセルを決めればいい、としています。</li>
+<li><b>屈B始動の連続技があるか</b>で恐ろしさが違います。ないキャラなら、相手は割り切って立ガードすれば屈Dを食らうだけで済みそうです。あとは、ガードされても問題ない必殺技があるとよく、ここでも京と庵の凶悪さが発揮されます。</li>
+</ul>
+<h2>気になること</h2>
+<ul>
+<li>庵なら新ガード不能とMAX状態の葵花<span class="vt">強</span>からお手玉できるかもしれない。</li>
+<li>通常技キャンセルの中段（例：リョウの屈C≫飛燕疾風脚<span class="vt">弱</span>）も考えたが、最初の屈Cの時点で屈ガードにヒットするか、どちらも立ガードで防がれるので、もう少し考えたい。</li>
+<li>新ガード不能のように、必殺技を投げさせたら通常技で脱衣KOできないか、とも考えましたが、無理そうでした。</li>
+</ul>
+<details class="more"><summary>2013年の振り返り</summary>
+<p>2013年に、長く続けてきたKOFの研究で対戦への影響が大きかった例として「KOF95の属性付加（接触判定がなくなって中段が増える）」を挙げています。2018年には「属性付加（離陸入力による通過属性付加など）」と書いていて、新ガード不能とは別の話です（<a href="./takeoff-cancel-grapples-2011-2024.html">離陸入力</a>）。</p>
+</details>
+<h2>関連ページ</h2>
+<ul>
+<li><a href="/research/kof94/new-crouch-guardbreak-2024.html">KOF'94の新ガード不能</a></li>
+<li><a href="./low-hit-jump-unblockable-2012-2024.html">低い打点のジャンプ攻撃のガード不能</a>（別の現象）</li>
+</ul>
+<h2>出典</h2>
+<ul class="src">
+<li><a href="https://x.com/mot_csb/status/1773192433116815653">'94との違い</a>・<a href="https://x.com/mot_csb/status/1773295753416302796">次ラウンドに持ち越せない</a>（X、2024/3/28）、<a href="https://x.com/mot_csb/status/1773316388364435927">庵の葵花</a>（同日）</li>
+<li><a href="https://x.com/mot_csb/status/1773681756983501164">柴舟の神懸</a>・<a href="https://x.com/mot_csb/status/1773682281716019694">中段になる技が増えている</a>・<a href="https://x.com/mot_csb/status/1773687090825285872">ケンスウ</a>・<a href="https://x.com/mot_csb/status/1773724957849329814">狙うならMAXでないとき</a>・<a href="https://x.com/mot_csb/status/1773839370065453259">MAX時に投げを食らった場合</a>（X、2024/3/29）</li>
+<li><a href="https://x.com/mot_csb/status/1773896218441343155">通常技キャンセル中段</a>・<a href="https://x.com/mot_csb/status/1773897728181109128">解除される条件</a>・<a href="https://x.com/mot_csb/status/1773950108692083163">飛び道具</a>・<a href="https://x.com/mot_csb/status/1773972138086797352">呼び方</a>（X、2024/3/30）、<a href="https://x.com/mot_csb/status/1774299952048689496">脱衣KO</a>（X、2024/3/31）</li>
+<li><a href="https://x.com/mot_csb/status/1775329343922999391">テリーのパワーダンク</a>・<a href="https://x.com/mot_csb/status/1775481554128797730">解除の処理</a>・<a href="https://x.com/mot_csb/status/1775481276780494927">琴月</a>（X、2024/4/3）</li>
+<li><a href="https://x.com/mot_csb/status/1776891105549881459">ジャンプ攻撃の空中投げ</a>・<a href="https://x.com/mot_csb/status/1776891661999812674">フラグ</a>・<a href="https://x.com/mot_csb/status/1776892165530227048">京の6Dで成立しない例</a>（X、2024/4/7）、<a href="https://x.com/mot_csb/status/1778930251537744132">屈B始動連続技</a>（X、2024/4/12）</li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/378813746">2013/10/28のつぶやき</a>（はてな、属性付加の振り返り）、<a href="https://x.com/mot_csb/status/1067588157758038016">属性付加</a>（X、2018/11/28）</li>
+</ul>
+<p class="legend"><a href="./index.html">KOF'95 研究アーカイブ</a> ／ <a href="/kof95-top.html">KOF'95トップ</a> ／ <a href="/kof-kininaru.html#kof95">KOF'95の気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>

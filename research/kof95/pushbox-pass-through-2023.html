@@ -1,22 +1,39 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'95：攻撃避けと押し合い判定のすり抜け研究（2023年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof95-top.html">KOF'95</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap"><h1>KOF'95：攻撃避けと押し合い判定のすり抜け研究（2023年）</h1>
-
-<p>2023年5月9～10日・6月2～4日のMOT本人のX投稿を基に、<strong>相手の攻撃避け時のすり抜け</strong>を技と条件ごとに整理する。技がすり抜けたという観測、押し合い判定についての本人説明、仕組みの仮説を混同しない。</p>
-<h2>本人が記録した現象</h2><table><thead><tr><th>キャラクター・行動</th><th>相手の状態・条件</th><th>観測・本人の説明</th></tr></thead><tbody>
-<tr><td>京：弱琴月</td><td>近距離、相手が攻撃避け</td><td>弱琴月そのままではすり抜けるが、BAずらし入力の弱琴月ではすり抜けない。</td></tr>
-<tr><td>庵：カウンター攻撃キャンセル八稚女</td><td>相手が攻撃避け</td><td>すり抜けた。押し合い判定は地面下に存在。1P/2P・左右向きのいずれでも結果は同じと本人は記録。</td></tr>
-<tr><td>ジョー：カウンター攻撃⇒空キャンセル爆裂拳⇒フィニッシュ</td><td>爆裂拳とフィニッシュは弱強いずれも</td><td>すり抜け可能。ただし<strong>相手が攻撃避けしている場合はすり抜けできない</strong>と本人が確認。</td></tr>
-<tr><td>チャン：カウンター攻撃⇒鉄球大暴走</td><td>相手が攻撃避け</td><td>すり抜けない。本人は両者の押し合い判定が地面下へ移動するためと説明。</td></tr>
-<tr><td>チャン：属性付き鉄球大暴走 vs 属性のない鉄球大暴走</td><td>スルーアタックの属性が付いた鉄球大暴走</td><td>属性のない鉄球大暴走ですり抜けできたと6月4日に本人が確認。</td></tr>
-<tr><td>京：カウンター攻撃</td><td>相手が攻撃避け</td><td>位置判定・すり抜け判定がかち合うように見えるが実際はすり抜ける、と5月10日に報告。</td></tr>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'95：攻撃避けをした相手をすり抜けるか｜Come sono bravo?</title><meta name="description" content="KOF&#x27;95で攻撃避けをした相手に突進技などを出すと、技によってすり抜けたりすり抜けなかったりします。京の琴月、庵の八稚女、ジョーの爆裂拳フィニッシュ、チャンの鉄球大暴走、京のカウンター攻撃。押し合い判定（ぶつかり判定）の位置との関係。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:960px}.article table{min-width:0;width:100%}.article th,.article td{overflow-wrap:anywhere;vertical-align:top}.article a{overflow-wrap:anywhere}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}.lead{font-size:1.05em}.vt{display:inline-block;font-size:.85em;line-height:1.45;padding:0 6px;margin-left:4px;border:1px solid var(--line,#ccd);border-radius:4px;font-weight:600;white-space:nowrap}.legend{font-size:.92em;color:var(--sub,#555)}.src li{font-size:.92em}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h2{font-size:1.15em;margin-top:1.2rem}details.more h3{font-size:1.05em}@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}.article th,.article td{min-width:80px}}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof95-top.html">KOF'95</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><h1>KOF'95：攻撃避けをした相手をすり抜けるか</h1>
+<p class="lead">相手が攻撃避けをしているところに突進する技を出すと、技によって相手をすり抜けたり、すり抜けなかったりします。攻撃避け中は押し合い判定（ぶつかり判定）が地面の下に移動するので、こちらの押し合い判定も地面の下にあるとぶつかってすり抜けない、というのが基本の考え方です。ただし、それだけでは説明できない例もあります。</p>
+<h2>技ごとの結果</h2>
+<table><thead><tr><th>こちらの技</th><th>相手</th><th>結果</th></tr></thead><tbody>
+<tr><td>京：琴月<span class="vt">弱</span>（近距離）</td><td>攻撃避け</td><td>すり抜ける。BAずらし入力で出した琴月<span class="vt">弱</span>はすり抜けない</td></tr>
+<tr><td>庵：カウンター攻撃≫八稚女</td><td>攻撃避け</td><td>すり抜ける。押し合い判定自体は地面の下にある。1P・2P、右向き・左向きのどの組み合わせでも同じ</td></tr>
+<tr><td>ジョー：カウンター攻撃≫空キャンセル爆裂拳≫フィニッシュ（弱強問わず）</td><td>通常</td><td>すり抜けられる</td></tr>
+<tr><td>同上</td><td>攻撃避け</td><td>すり抜けられない</td></tr>
+<tr><td>チャン：カウンター攻撃≫鉄球大暴走</td><td>攻撃避け</td><td>すり抜けない。両者の押し合い判定が地面の下に移動しているから</td></tr>
+<tr><td>チャン：属性のない鉄球大暴走</td><td>スルーアタックの属性付きの鉄球大暴走</td><td>すり抜けた</td></tr>
+<tr><td>京：カウンター攻撃</td><td>攻撃避け</td><td>すり抜ける</td></tr>
 </tbody></table>
-<h2>2011年11月5日：チャンの連係に関する過去の本人見解</h2><p>MOTはKOF'95の<strong>チャンのカウンター攻撃後に鉄球大暴走を出すと、ぶつかり判定がないはずなのに相手をすり抜けられない</strong>という現象を2011年11月5日に例示した。本人は、すり抜けの可否を制御する何らかの状態があるのではないかと推測している。<a href="https://comesonobravo.hatenadiary.org/entry/233782256.html">2011年11月5日の本人原文</a>。</p><p>この2011年の話題は、<strong>KOF2002のK'と裏クリスで別途確認した「見えない壁」現象</strong>との比較として挙げられたもの。ただし<strong>2002での観測が95の内部仕様の確定根拠ではない</strong>。2023年の本記事にあるチャンのすり抜け不成立の記録より前に、本人が同現象を把握し、仕組みを疑問として残していた研究史を区別する。</p><h2>本人の仮説・未確認事項</h2><p>京のカウンター攻撃では、すり抜け判定を無視する処理があるのかもしれないと考察。チャンのカウンター攻撃⇒鉄球大暴走でも、相手が長い全身無敵技を出した場合にはすり抜けるかもしれないと推測し、鉄球大暴走やイリュージョンダンスを候補にしている。<strong>候補技で成立したと断定しない。</strong></p>
-<p>また、ジョーについては本人がチャンの連係を応用した新たなすり抜けの発見と位置づけているが、両技が同じ処理で動いていると結論したわけではない。</p>
-<h2>2011年6月29日：画面端での空中側優先という過去の仮説</h2><p>MOTはKOF'94・'95について、<strong>画面端では1P・2Pに関係なくジャンプした側が端に入り込めたと思う</strong>と述べ、そこから<strong>空中にいる側を優先する処理なのではないか</strong>と推測した。<a href="https://comesonobravo.hatenadiary.org/entry/212510944.html">2011年6月29日の本人日次原文</a>。</p><p>この投稿は<strong>画面端での押し合い・位置の入替に関する本人の記憶と原因仮説</strong>であり、1P側が先攻となる同時通常投げの優先順位とは異なる処理を扱う。本人が同じスレッドで述べた<strong>チョイの立ち姿勢の低いぶつかり判定と小・中ジャンプでの飛び越し</strong>は作品別の範囲を明記していないため、本稿ではKOF'95全キャラへの成立確認と断定しない。</p><h2>本人X一次資料</h2><ul>
-<li><a href="https://x.com/mot_csb/status/1655775392542904320">2023/05/09：京の弱琴月とBAずらし入力</a></li>
-<li><a href="https://x.com/mot_csb/status/1655775951341625345">2023/05/09：庵の八稚女</a></li>
-<li><a href="https://x.com/mot_csb/status/1655781551605710849">2023/05/09：ジョーの爆裂拳フィニッシュ</a></li>
-<li><a href="https://x.com/mot_csb/status/1656218213473218565">2023/05/10：京のカウンター攻撃のすり抜け理由の考察</a></li>
-<li><a href="https://x.com/mot_csb/status/1664656279527391232">2023/06/02：チャンと全身無敵技の仮説</a></li>
-<li><a href="https://x.com/mot_csb/status/1665204771035262976">2023/06/04：2種の鉄球大暴走のすり抜け確認</a></li>
+<p class="legend">≫はキャンセルでつながる。</p>
+<h2>説明しきれない例</h2>
+<ul>
+<li><b>京の琴月</b>：ずらし入力した方がすり抜けないのが面白い、としています。</li>
+<li><b>京のカウンター攻撃</b>：動作中に位置の判定自体が前進します。相手が攻撃避けをしていると、地面の下のすり抜け判定同士がかち合うはずですが、実際はすり抜けました。この場合はすり抜け判定を無視した処理がされているのかもしれない、と考えています。</li>
+<li><b>チャンのカウンター攻撃≫鉄球大暴走</b>：ぶつかり判定がないはずなのにすり抜けられない例として、2011年から挙げています。そういうフラグがあるのではないか、としています。</li>
 </ul>
-<p><a href="./index.html">KOF'95研究アーカイブ</a> ／ <a href="/kof-kininaru.html#kof95">気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
+<h2>使い道</h2>
+<p>ジョーは、ほぼ密着でカウンター攻撃→空キャンセル爆裂拳→強フィニッシュ（弱に切り替え）で背後に回り込み→屈B、が理論上は可能なようです。弱に切り替える難易度が高そう、としています。チャンのカウンター攻撃キャンセル大暴走の応用的なものがようやく見つかった、とも書いています。</p>
+<h2>気になること</h2>
+<ul>
+<li>チャンのカウンター攻撃≫鉄球大暴走は、相手が全身無敵の長い技を出した場合はすり抜けるかもしれない（候補：鉄球大暴走、イリュージョンダンスなど）。このうち鉄球大暴走同士は、上の表のとおり確かめています。</li>
+</ul>
+<h2>似ているが別の話</h2>
+<ul>
+<li><b>画面端の空中側優先</b>：'94・'95では、1P・2Pに関係なく、ジャンプした側が画面端に入り込めたと思う、そのため「空中側優先」という仕様なのではないか、と書いています（2011年）。'98は2P優先、'02は地上側優先ではないか、としています。</li>
+<li><b>チョイの低いぶつかり判定</b>：チョイだけなぜか立ち状態のぶつかり判定が低いので、小中ジャンプで全キャラが飛び越えられ、めくりやすくなる、と書いています（2011年、作品を特定していない話）。</li>
+<li><b>ルガールのダークバリヤーと押し合い判定</b>：<a href="./rugal-dark-barrier-pushbox-jump-preparation-2023.html">ダークバリヤーと押し合い判定</a>へ。</li>
+</ul>
+<h2>出典</h2>
+<ul class="src">
+<li><a href="https://x.com/mot_csb/status/1655775392542904320">京の琴月</a>・<a href="https://x.com/mot_csb/status/1655775951341625345">庵の八稚女</a>・<a href="https://x.com/mot_csb/status/1655781551605710849">ジョーの爆裂拳</a>・<a href="https://x.com/mot_csb/status/1655810581356756992">背後に回り込む</a>（X、2023/5/9）</li>
+<li><a href="https://x.com/mot_csb/status/1656218213473218565">京のカウンター攻撃</a>（X、2023/5/10）</li>
+<li><a href="https://x.com/mot_csb/status/1664656279527391232">チャンのカウンター攻撃≫鉄球大暴走</a>（X、2023/6/2）、<a href="https://x.com/mot_csb/status/1665204771035262976">鉄球大暴走同士</a>（X、2023/6/4）</li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/233782256">2011/11/05のつぶやき</a>（はてな、すり抜けられない例）、<a href="https://comesonobravo.hatenadiary.org/entry/212510944">2011/06/29のつぶやき</a>（はてな、空中側優先とチョイ）</li>
+</ul>
+<p class="legend"><a href="./index.html">KOF'95 研究アーカイブ</a> ／ <a href="/kof95-top.html">KOF'95トップ</a> ／ <a href="/kof-kininaru.html#kof95">KOF'95の気になること</a></p></div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
