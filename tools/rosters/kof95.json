@@ -1,7 +1,8 @@
 {
  "game": "KOF'95",
  "top": "kof95-top.html",
- "base": "research/kof95/",
+ "base": "",
+ "missing": "",
  "teams": [
   {
    "name": "主人公チーム",
@@ -10,7 +11,33 @@
      "id": "kyo",
      "name": "京",
      "frame": [
-      "kyo-frame-data-2011.html"
+      "research/kof95/kyo-frame-data-2011.html"
+     ],
+     "research": [
+      [
+       "research/kof95/character-notes-2011-2024.html#n-kyo",
+       "キャラクター別メモ"
+      ]
+     ]
+    },
+    {
+     "id": "benimaru",
+     "name": "紅丸",
+     "research": [
+      [
+       "research/kof95/benimaru-raikoken-counters-max-2011-2024.html",
+       "雷光拳での確定反撃・カウンター攻撃からの追撃"
+      ]
+     ]
+    },
+    {
+     "id": "goro",
+     "name": "大門",
+     "research": [
+      [
+       "research/kof95/daimon-throw-crossup-2005.html",
+       "通常投げ後のすり抜けと表裏二択"
+      ]
      ]
     }
    ]
@@ -19,17 +46,57 @@
    "name": "餓狼伝説チーム",
    "chars": [
     {
+     "id": "terry",
+     "name": "テリー",
+     "research": [
+      [
+       "research/kof95/terry-power-geyser-94-95-gauge-2023.html",
+       "パワーゲイザーのガード後の状況とMAXの維持（'94との比較）"
+      ],
+      [
+       "research/kof95/character-notes-2011-2024.html#n-terry",
+       "キャラクター別メモ"
+      ]
+     ]
+    },
+    {
      "id": "andy",
      "name": "アンディ",
      "frame": [
-      "andy-frame-data-2011.html"
+      "research/kof95/andy-frame-data-2011.html"
+     ],
+     "research": [
+      [
+       "research/kof95/character-notes-2011-2024.html#n-andy",
+       "キャラクター別メモ"
+      ]
      ]
     },
     {
      "id": "joe",
      "name": "ジョー",
      "frame": [
-      "joe-frame-data-2011.html"
+      "research/kof95/joe-frame-data-2011.html"
+     ],
+     "data": [
+      [
+       "95joe.html",
+       "ジョー攻略（旧サイト・2004年）"
+      ]
+     ],
+     "research": [
+      [
+       "research/kof95/joe-bakuretsuken-cancel-2004.html",
+       "爆裂拳フィニッシュ・空キャン・気絶連続技"
+      ],
+      [
+       "research/kof95/joe-unblockable-strong-bakuretsu-2022.html",
+       "2P側の強爆裂拳がガード不能になる条件"
+      ],
+      [
+       "research/kof95/character-notes-2011-2024.html#n-joe",
+       "キャラクター別メモ"
+      ]
      ]
     }
    ]
@@ -38,24 +105,104 @@
    "name": "龍虎の拳チーム",
    "chars": [
     {
+     "id": "ryo",
+     "name": "リョウ",
+     "data": [
+      [
+       "95ryo.html",
+       "リョウ攻略（旧サイト・2003年）"
+      ]
+     ],
+     "research": [
+      [
+       "research/kof95/ryo-legacy-strategy-input-2003.html",
+       "虎煌拳の牽制・弱虎咆対空・連舞拳の入力"
+      ],
+      [
+       "research/kof95/ryo-dash-renbuken-input-2023.html",
+       "ダッシュ連舞拳の暴発対策とダッシュ後の選択肢"
+      ],
+      [
+       "research/kof95/character-notes-2011-2024.html#n-others",
+       "キャラクター別メモ（そのほか）"
+      ]
+     ]
+    },
+    {
      "id": "robert",
      "name": "ロバート",
      "frame": [
-      "robert-frame-data-2011.html"
+      "research/kof95/robert-frame-data-2011.html"
+     ],
+     "data": [
+      [
+       "95robert.html",
+       "ロバート攻略（旧サイト・2004年）"
+      ],
+      [
+       "95robert-neta.html",
+       "ロバートネタ（旧サイト・2003年）"
+      ]
+     ],
+     "research": [
+      [
+       "research/kof95/robert-antiair-gc-oki-2003-2004.html",
+       "対空GC連舞脚と攻撃避けを使った起き攻め"
+      ],
+      [
+       "research/kof95/robert-walk-renbukyaku-power-cancel-2023.html",
+       "歩き連舞脚・立A→歩き立Aとためキャン"
+      ],
+      [
+       "research/kof95/character-notes-2011-2024.html#n-robert",
+       "キャラクター別メモ"
+      ]
      ]
     },
     {
      "id": "takuma",
      "name": "タクマ",
      "frame": [
-      "takuma-frame-data-2011.html"
+      "research/kof95/takuma-frame-data-2011.html"
+     ],
+     "research": [
+      [
+       "research/kof95/character-notes-2011-2024.html#n-others",
+       "キャラクター別メモ（そのほか）"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "怒チーム",
+   "chars": [
+    {
+     "id": "heidern",
+     "name": "ハイデルン",
+     "research": [
+      [
+       "research/kof95/storm-bringer-guard-2024.html",
+       "ガードした技でストームブリンガーのダメージが変わる"
+      ]
      ]
     },
     {
-     "id": "yuri",
-     "name": "ユリ",
-     "frame": [
-      "yuri-frame-data-2011.html"
+     "id": "ralf",
+     "name": "ラルフ"
+    },
+    {
+     "id": "clark",
+     "name": "クラーク",
+     "research": [
+      [
+       "research/kof95/king-iori-chin-clark-anomalies-2001-2004.html",
+       "右端限定の弱バルカンパンチ永久（旧「驚異現象」）"
+      ],
+      [
+       "research/kof95/character-notes-2011-2024.html#n-others",
+       "キャラクター別メモ（そのほか）"
+      ]
      ]
     }
    ]
@@ -64,10 +211,44 @@
    "name": "サイコソルジャーチーム",
    "chars": [
     {
+     "id": "athena",
+     "name": "アテナ",
+     "research": [
+      [
+       "research/kof95/athena-phoenix-arrow-reflector-2023.html",
+       "フェニックスアローの使い方と後退リフレクター"
+      ],
+      [
+       "research/kof95/character-notes-2011-2024.html#n-athena",
+       "キャラクター別メモ"
+      ]
+     ]
+    },
+    {
+     "id": "kensou",
+     "name": "ケンスウ",
+     "research": [
+      [
+       "research/kof95/kensou-crouch-d-delay-cancel-2023.html",
+       "屈Dのディレイキャンセルと龍連牙・JCDの使い分け"
+      ]
+     ]
+    },
+    {
      "id": "chin",
      "name": "チン",
      "frame": [
-      "chin-frame-data-2011.html"
+      "research/kof95/chin-frame-data-2011.html"
+     ],
+     "research": [
+      [
+       "research/kof95/iori-chin-opening-death-combo-2023.html",
+       "庵vsチンの開幕即死（葵花お手玉）"
+      ],
+      [
+       "research/kof95/king-iori-chin-clark-anomalies-2001-2004.html",
+       "轟欄炎炮の左右差（旧「驚異現象」）"
+      ]
      ]
     }
    ]
@@ -76,10 +257,43 @@
    "name": "女性格闘家チーム",
    "chars": [
     {
+     "id": "king",
+     "name": "キング",
+     "research": [
+      [
+       "research/kof95/king-iori-chin-clark-anomalies-2001-2004.html",
+       "トラップショットのケイレン現象（旧「驚異現象」）"
+      ],
+      [
+       "research/kof95/character-notes-2011-2024.html#n-others",
+       "キャラクター別メモ（そのほか）"
+      ]
+     ]
+    },
+    {
      "id": "mai",
      "name": "舞",
      "frame": [
-      "mai-frame-data-2011.html"
+      "research/kof95/mai-frame-data-2011.html"
+     ],
+     "research": [
+      [
+       "research/kof95/character-notes-2011-2024.html#n-mai",
+       "キャラクター別メモ"
+      ]
+     ]
+    },
+    {
+     "id": "yuri",
+     "name": "ユリ",
+     "frame": [
+      "research/kof95/yuri-frame-data-2011.html"
+     ],
+     "research": [
+      [
+       "research/kof95/yuri-projectile-command-tests-2011.html",
+       "飛び道具の連射を狙う入力と失敗例"
+      ]
      ]
     }
    ]
@@ -88,11 +302,35 @@
    "name": "キムチーム",
    "chars": [
     {
+     "id": "kim",
+     "name": "キム",
+     "research": [
+      [
+       "research/kof95/kim-gc-hououkyaku-2023.html",
+       "鳳凰脚・GC鳳凰脚で反撃できる場面"
+      ],
+      [
+       "research/kof95/character-notes-2011-2024.html#n-kim",
+       "キャラクター別メモ"
+      ]
+     ]
+    },
+    {
      "id": "chang",
      "name": "チャン",
      "frame": [
-      "chang-frame-data-2011.html"
+      "research/kof95/chang-frame-data-2011.html"
+     ],
+     "research": [
+      [
+       "research/kof95/chang-ironball-rampage-counterplay-2023.html",
+       "鉄球大暴走への反撃（後方ジャンプ・攻撃避け）"
+      ]
      ]
+    },
+    {
+     "id": "choi",
+     "name": "チョイ"
     }
    ]
   },
@@ -103,14 +341,42 @@
      "id": "iori",
      "name": "庵",
      "frame": [
-      "iori-frame-data-2011.html"
+      "research/kof95/iori-frame-data-2011.html"
+     ],
+     "research": [
+      [
+       "research/kof95/iori-chin-opening-death-combo-2023.html",
+       "庵vsチンの開幕即死（葵花お手玉）"
+      ],
+      [
+       "research/kof95/character-notes-2011-2024.html#n-iori",
+       "キャラクター別メモ"
+      ],
+      [
+       "research/kof95/king-iori-chin-clark-anomalies-2001-2004.html",
+       "百合折りの多段ヒット（旧「驚異現象」）"
+      ]
+     ]
+    },
+    {
+     "id": "billy",
+     "name": "ビリー",
+     "research": [
+      [
+       "research/kof95/billy-antiair-gc-2009.html",
+       "対空GC超火炎旋風棍を受けたときの着地行動"
+      ],
+      [
+       "research/kof95/billy-super-flame-counter-gc-input-2023-2024.html",
+       "超火炎旋風棍の発生・連続技・確定反撃・GC仕込み"
+      ]
      ]
     },
     {
      "id": "eiji",
      "name": "影二",
      "frame": [
-      "eiji-frame-data-2011.html"
+      "research/kof95/eiji-frame-data-2011.html"
      ]
     }
    ]
@@ -119,10 +385,52 @@
    "name": "ボス",
    "chars": [
     {
+     "id": "saisyu",
+     "name": "柴舟"
+    },
+    {
      "id": "rugal",
      "name": "ルガール",
      "frame": [
-      "rugal-frame-data-2011.html"
+      "research/kof95/rugal-frame-data-2011.html"
+     ],
+     "research": [
+      [
+       "research/kof95/rugal-dark-barrier-counters-2011.html",
+       "ダークバリヤー対策（キャラ別・2011年）"
+      ],
+      [
+       "research/kof95/rugal-barrier-countermeasures-2023.html",
+       "ダークバリヤー対策・判定の追加調査（2023年）"
+      ],
+      [
+       "research/kof95/rugal-dark-barrier-pushbox-jump-preparation-2023.html",
+       "ダークバリヤーの押し合い判定とジャンプ予備動作"
+      ],
+      [
+       "research/kof95/rugal-kaiser-wave-startup-punishes-2023.html",
+       "カイザーウェイブを発生前に潰す技"
+      ],
+      [
+       "research/kof95/rugal-stun-combos-2023-2024.html",
+       "気絶連続技と重なり起き攻め"
+      ],
+      [
+       "research/kof95/rugal-close-b-triple-genocide-2023.html",
+       "近B×3→ジェノサイドカッターの入力"
+      ],
+      [
+       "research/kof95/rugal-reppuken-strength-hits-2024.html",
+       "密着烈風拳の弱強の当たり方"
+      ],
+      [
+       "research/kof95/rugal-throw-offense-counterplay-2024.html",
+       "通常投げを軸にした攻め方と対策"
+      ],
+      [
+       "research/kof95/character-notes-2011-2024.html#n-rugal",
+       "キャラクター別メモ"
+      ]
      ]
     }
    ]
