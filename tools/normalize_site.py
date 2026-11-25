@@ -235,6 +235,8 @@ def _page_group(t, path):
         return (RESEARCH[k][0] + " 研究アーカイブ") if k in RESEARCH else "KOFシリーズ"
     if path.startswith("social/idolmaster-cinderella-girls/"):
         return "アイドルマスター シンデレラガールズ"
+    if path.startswith("social/granblue-fantasy/"):
+        return "グランブルーファンタジー"
     if path.startswith("msx/nobunaga-fuunroku/"):
         return "信長の野望・武将風雲録（MSX2版）"
     if path.startswith("msx/"):
