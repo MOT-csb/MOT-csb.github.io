@@ -1,0 +1,59 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'98 マリー：遠Aのあとに C・D を押すと2回当たる仕組み｜Come sono bravo?</title><meta name="description" content="KOF'98のマリーの遠距離立ちAは、ヒット直後に決まったタイミングでCD（またはC・D）を押すと、同じ遠Aがもう一度当たります。起こし方、猶予、仕組み、38キャラの遠Aとの比較。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:1010px}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.article a{overflow-wrap:anywhere}.scroll{overflow-x:auto}.article table{width:100%;border-collapse:collapse}.article th,.article td{border:1px solid var(--line,#aaa);padding:9px;text-align:left;vertical-align:top}.article th{background:var(--soft,#edf1ed)}.source{font-size:.94rem}.note{border-left:3px solid var(--accent,#56745f);padding:12px;background:var(--soft,#edf1ed)}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof98-top.html">KOF'98</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><!-- chara-nav:start --><nav class="chara-nav" aria-label="キャラクター別のページ"><p class="cn-head"><a href="/kof98-top.html#c-mary">KOF&#x27;98 キャラ選択</a><span>›</span><b>マリー</b></p><p class="cn-links"><a href="/research/kof98/frame/mary.html">通常技の硬直差（2005年）</a> ／ <a href="/research/kof98/all-characters-normal-frame-advantage-2005.html#c-mary">全38キャラの表（1ページ）</a> ／ <a href="/98kakukyara-hit-guard-koutyoku.htm">旧サイトの表</a></p><details open><summary>攻略・研究ページ 1件</summary><ul><li><b>遠Aのあとに C・D を押すと2回当たる仕組み</b></li></ul></details></nav><!-- chara-nav:end --><h1>KOF'98 マリー：遠Aのあとに C・D を押すと2回当たる仕組み</h1>
+<p>マリーの遠距離立ちA（遠A）は、ヒットした直後の決まったタイミングでCDを押すと、技は遠Aのまま、もう一度相手に当たります。立ちCD（ふっとばし攻撃）は出ません。CDの代わりにCやDを単独で押しても起きますが、受付はCD同時押しのほうが長くなります。</p>
+<p>原因は、キャンセルできるかどうかを調べる処理が、キャンセルを断ったあとも「この攻撃はもう当たった」という記録を消したままにすることです。ヒットストップ明けのマリーの遠Aには攻撃判定がまだ残っているので、その判定がもう一度当たります。</p>
+
+<h2>起こし方と猶予</h2>
+<ol>
+<li>遠Aを立っている相手にヒットさせます（しゃがんでいる相手でも、遠Aが当たる相手なら同じです）。</li>
+<li>ヒットしてから4〜9F後にCDを押します。CまたはDだけなら、4〜5F後に押します。</li>
+<li>ヒットストップが終わった直後、ヒットから13F後に遠Aの2発目が当たります。</li>
+</ol>
+<div class="scroll"><table><thead><tr><th>押すボタン</th><th>2回当たるタイミング（1発目のヒットから）</th><th>猶予</th></tr></thead><tbody>
+<tr><td>CD同時押し</td><td>4〜9F後に押し始める</td><td>6F</td></tr>
+<tr><td>Cだけ／Dだけ</td><td>4〜5F後に押し始める</td><td>2F</td></tr>
+<tr><td>早すぎる（3F後まで）</td><td>何も起きない</td><td></td></tr>
+<tr><td>遅すぎる（CDで10F後から）</td><td>遠Aは1回だけ。そのあと立ちCDが出る</td><td></td></tr>
+</tbody></table></div>
+<p>補足：BやAを押した場合は、弱攻撃から弱攻撃へのキャンセルとして遠Bや遠Aがそのまま出るので、この現象にはなりません。AB同時押しでも起きません。</p>
+
+<h3>2回当てたときの違い</h3>
+<div class="scroll"><table><thead><tr><th></th><th>遠A（通常）</th><th>遠A＋CDで2回</th></tr></thead><tbody>
+<tr><td>ダメージ</td><td>1発分</td><td>2発目は1発目の約3分の1が加わる</td></tr>
+<tr><td>2発目が当たる時間</td><td>—</td><td>1発目の13F後</td></tr>
+<tr><td>ヒット時の硬直差</td><td>+2F</td><td>+4F</td></tr>
+<tr><td>ガードさせたとき</td><td colspan="2">2回目は当たりませんでした。ガード時はヒット時より2F早く押し戻しが始まるので、残りの判定が届かないためと考えられます</td></tr>
+</tbody></table></div>
+<p>2発目は相手がのけぞっている間に当たるので、連続ヒットになります。遠Aが当たった相手には、立ち・しゃがみとも、どのキャラにも2回当たりました（チョイには試した距離で遠Aが届きませんでした）。</p>
+
+<h2>仕組み</h2>
+<p>攻撃が当たると、ゲームは「この攻撃はもう当たった」という印を付け、同じ攻撃が何度も当たらないようにしています。この印は、新しい攻撃を出したときに消されます。</p>
+<p>弱攻撃がヒットしたあと、キャンセル受付中は毎フレーム次の順で処理します。</p>
+<ol>
+<li>押されたボタンから、出す通常技を選びます。A・Bは弱、C・Dは強、CDは立ちCDです。</li>
+<li>技を選んだ時点で、「もう当たった」の印を消し、新しい技を出す準備をします。</li>
+<li>そのあとで、キャンセルしてよいかを確かめます。いま出している弱攻撃と同じ弱攻撃（A・B）なら、キャンセルして新しい技を出します。</li>
+<li>強攻撃やCDなら、キャンセルは認めず、技の種類と動きを元に戻します。<b>ただし「もう当たった」の印は消えたまま元に戻しません。</b></li>
+</ol>
+<p>このため、C・D・CDを押すと、技は遠Aのままなのに、遠Aが「まだ当たっていない攻撃」として扱われます。この処理は相手のヒットストップ中は動かず、ヒットストップが明けた最初のフレームで動きます。</p>
+<p>マリーの遠Aは、空振りでは攻撃判定が4F続きます。判定の出始めで当たると、ヒットストップが明けたときにまだ判定が残っています。印が消えていればこの残りの判定が相手に当たり、2発目になります。</p>
+<p>CDとC・Dで猶予が違うのは、ボタンの読み方の違いです。CやDの単独押しは押した瞬間の記録で判定し、この記録は短い時間で消えます。CD同時押しは同時押しの記録で判定し、この記録は数フレーム残ります。ヒットストップ中に押しておいたボタンが、ヒットストップ明けまで残っているかどうかで受付の長さが決まります。</p>
+
+<h2>マリーの遠Aだけで起きる理由</h2>
+<p>キャンセル受付中に印が消える処理は全キャラ共通です。ただし2発目が当たるには、ヒットストップが明けたときに攻撃判定が残っている必要があります。</p>
+<p>38キャラの遠Aで同じ入力を試したところ、遠Aのまま2回当たったのはマリーだけでした。ほかのキャラは、ヒットストップが明けた時点で遠Aの攻撃判定が終わっているので、印が消えても当たる判定がありません。マリーの近A・屈A・遠B・屈Bでも起きませんでした。</p>
+
+<h2>似ているが別の話</h2>
+<ul>
+<li>マリーの遠Cは、もともと2段技です。この現象とは関係ありません。</li>
+<li>CDを押したあと遅れて立ちCDが出るのは、遠Aの動きが終わってから普通に立ちCDを出しただけです。</li>
+</ul>
+
+<h2>気になること</h2>
+<ul>
+<li>'98以外の作品（'99以降・'98UM）で同じことが起きるかは未確認です。</li>
+<li>遠Aを判定の出終わり近くで当てたとき（歩いてくる相手に置いた場合など）は、ヒットストップ明けに判定が残らず、2発目は出ないはずです。この条件は試していません。</li>
+</ul>
+
+<p>関連：<a href="./frame/mary.html">マリーの通常技の硬直差</a> ／ <a href="./stun-guardcrush-reset-2011-2022.html">気絶値・ガードクラッシュ値のリセット</a></p>
+<p><a href="./index.html">KOF'98研究アーカイブへ戻る</a></p>
+</div></main><footer class="footer"><div class="wrap">Come sono bravo?</div></footer></body></html>
