@@ -1,0 +1,59 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF2002：パワーゲージが使い放題になるバグ｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css"></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><section class="hero"><div class="wrap"><p class="breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof02-top.html">KOF2002</a> / <a href="./index.html">研究アーカイブ</a></p><h1>KOF2002：パワーゲージが使い放題になるバグ</h1><p>このバグは、ストックが減らなくなるのではなく、使いきると戻る現象です。ストックを使って0になると、約4秒後にその時点の最大ストックまで戻ります。家庭用のオプションにある「パワーゲージ回復」の設定が、アーケードで有効になっている状態と同じです。</p></div></section><main class="main"><div class="wrap">
+
+<section class="section"><h2>結論</h2>
+<ul>
+<li>ストックが0になった瞬間に、その側の「ゲージ回復」の設定を確かめます。有効なら240F（約4秒）後にストックが最大まで戻り、ゲージは空になります。</li>
+<li>この設定は家庭用版のオプション「POWER GAUGE（1P／2P）NORMAL／RECOVERY」と同じもので、毎ラウンドの開始時に読み込まれます。アーケードでは通常NORMAL（無効）です。</li>
+<li>1P側と2P側で別々なので、片側だけ回復することがあります。CPU戦でも対戦でも起きます。</li>
+<li>コンティニューサービスの「ゲージMAX」も同じ回復を有効にしますが、効果はそのゲーム中だけです。ゲームオーバーや乱入で消えるので、前のプレイヤーのサービスが残って起きるものではありません。</li>
+<li>アーケードで設定が勝手に有効になる原因は、まだ分かっていません。</li>
+</ul>
+</section>
+
+<section class="section"><h2>回復する仕組み</h2>
+<ol>
+<li>ラウンド開始時、1P側・2P側それぞれの「ゲージ回復」の設定値を、そのラウンド用の回復フラグに写します。コンティニューサービスでゲージMAXを選んだ側は、このあとフラグを有効にします。</li>
+<li>超必殺技・MAX発動などでストックを1本使うたびに、ストックを1減らします。</li>
+<li>減らした結果が0なら、その側のフラグを確かめます。有効なら、回復までのカウントを240Fにセットします。</li>
+<li>カウントは毎フレーム減ります。暗転などで止まる間があるので、実際には少し長くなります。</li>
+<li>カウントが0になると、ストックをその時点の最大（1番手3本・2番手4本・3番手5本）にし、ゲージを空にします。</li>
+</ol>
+<p>回復のきっかけは「使って0になった瞬間」だけです。最初からストックが0のままでは何も起きません。1本たまってから使いきると、初めて回復が始まります。そのため、外から見ると「1ゲージたまると自動回復のフラグが立つ」ように見えます。</p>
+<table><thead><tr><th>設定値</th><th>ラウンド開始時</th><th>ストックを使いきったとき</th></tr></thead><tbody>
+<tr><td>0（NORMAL）</td><td>普通</td><td>普通（0のまま）</td></tr>
+<tr><td>1（RECOVERY）</td><td>ストックが最大になる</td><td>約4秒後に最大まで戻る</td></tr>
+<tr><td>0と1以外の値</td><td>普通</td><td>約4秒後に最大まで戻る</td></tr>
+</tbody></table>
+<p>2006年の記録では、ステージ開始後に1ゲージたまってから回復するようになり、ゲージを0にすると5カウントくらい後にMAXになっています。これは表の3行目と同じ動きです。2P側でクリアしたあと1P側で始めても回復が残っていたのも、設定が毎ラウンド読み込まれ直すことと合っています。</p>
+</section>
+
+<section class="section"><h2>コンティニューサービスとの関係</h2>
+<p>コンティニュー時のサービスでゲージMAXを選ぶと、選んだ側の回復フラグが有効になります（表の2行目と同じ動き）。そのため、サービスの回復がなぜか適用されているという推測（2024年）は、動きとしては近いものです。</p>
+<p>ただ、サービスの効果はそのゲームの中だけです。</p>
+<ul>
+<li>ゲームオーバーになると消え、次のゲームには残りません。</li>
+<li>乱入されて対戦が始まるときにも消えます。対戦中は、両側とも設定値どおりに戻ります。</li>
+</ul>
+<p>コンティニューしていないプレイヤーや、対戦の両者に起きた例があるので、サービスの効果が残ったという説明では合いません。原因は、設定値そのものが有効な値になっていることだと考えられます。</p>
+</section>
+
+<section class="section"><h2>気になること</h2>
+<ul>
+<li>アーケードで設定値が有効な値になる原因が分かっていません。設定値は、カートリッジの電池で保存される領域にあります。デモ中のロゴ演出がこの領域を一時的に別の用途に使い、その間は1P・2Pとも0でも1でもない値（表の3行目に当たる値）になります。通常は演出の終わりに元へ戻り、演出中にコインを入れて中断した場合も戻ることを確認しています。どこかで戻らない経路があるのかは、まだ見つかっていません。</li>
+<li>2005年のコメントでは、稼働したばかりのころに起きて、電源を落として調整したら直ったという話があります。保存領域の値が崩れていたとすると話は合いますが、確かめられていません。</li>
+<li>2020年の投稿では、本人が次のように書いています。</li>
+</ul>
+<blockquote>KOF2002のいきなりパワーゲージがMAXになるバグ？の再現方法がわからないままで気になってます。<br>全国規模の大会でも起きたらしいので、都市伝説ではないはずですが……</blockquote>
+<p>仕組みは分かりましたが、どうすると起きるのかという再現方法は、まだ分からないままです。</p>
+</section>
+
+<section class="section"><h2>出典</h2>
+<ul>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/50199961">2005/11/16「02：謎現象」</a>：ゲーセンで乱入されたら相手が超必殺技を撃ち続け、ゲージが0になるとMAXになった。1人用をクリアするまで続いた。コメントにHIDさん（稼働初期に発生、電源を落として調整で直った）、奈々氏さん（格闘維新の壇上で発生）、ジンギスカンさん（あちょで発生、ビリーにGCCDされ続けた）。本文はブログのメモ（<a href="./blog-input-command-2004-2011.html">入力・コマンド</a>）にも収録。</li>
+<li><a href="https://comesonobravo.hatenadiary.org/entry/50436082">2006/3/5「02：ゲージ自然回復」</a>：2P側から乱入したあとに発生。本文は<a href="./blog-gauge-gccd-max-damage-2004-2024.html">ブログのメモ：ゲージ・GCCD・MAX・ダメージ</a>にも収録。</li>
+<li><a href="https://x.com/mot_csb/status/1305330311064989696">2020/9/14の投稿</a>、<a href="https://x.com/mot_csb/status/1827665663953150395">2024/8/25の投稿</a>、<a href="https://x.com/mot_csb/status/1827665855498576324">コンティニューサービスの推測</a>、<a href="https://x.com/mot_csb/status/1829169976248545603">2024/8/29の投稿</a>（<a href="./x-system-gccd-gauge-bugs-2010-2026.html">X投稿メモ：GCC+D・ゲージのシステムとバグ</a>に収録）</li>
+</ul>
+<p><a href="./index.html">KOF2002研究アーカイブへ戻る</a> ／ <a href="/kof-kininaru.html">気になること</a></p>
+</section>
+
+</div></main><footer class="footer"><div class="wrap"><a href="/kof02-top.html">KOF2002トップへ</a></div></footer></body></html>
