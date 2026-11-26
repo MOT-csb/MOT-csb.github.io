@@ -124,6 +124,10 @@
      "name": "大門",
      "research": [
       [
+       "research/kof97/goro-kakuteizirai-recipes.html",
+       "大門の確定地雷震レシピ（相手ごとの消費フレーム）"
+      ],
+      [
        "research/kof97/goro-jb-landing-crouch-guard-2015.html",
        "大門：JBのあと着地しゃがみガードで相手の攻撃をすかせる"
       ],
