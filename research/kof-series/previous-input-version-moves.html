@@ -1,0 +1,77 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>前の入力で版が変わる技：フランケンシュタイナー・鵺摘みなど｜Come sono bravo?</title><meta name="description" content="技の弱強や特殊版が、その技を出したボタンではなく、前に入れた別のコマンドのボタンで決まる技の一覧（KOF'97〜2002）"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:1010px}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.article a{overflow-wrap:anywhere}.scroll{overflow-x:auto}.article table{width:100%;border-collapse:collapse}.article th,.article td{border:1px solid var(--line,#aaa);padding:9px;text-align:left;vertical-align:top}.article th{background:var(--soft,#edf1ed)}.source{font-size:.94rem}.note{border-left:3px solid var(--accent,#56745f);padding:12px;background:var(--soft,#edf1ed)}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="./index.html">シリーズ共通研究</a></div></div><main class="main"><div class="wrap article">
+<h1>前の入力で版が変わる技：フランケンシュタイナー・鵺摘みなど</h1>
+<p>技の弱強や特殊版が、その技を出したボタンではなく、<strong>前に入れた別のコマンドのボタン</strong>で決まる技があります。KOF'98の大門の<a href="/research/kof98/daimon-previous-input-ura-nage-distance-2024.html">236A仕込み裏投げ</a>と同じ型で、KOF'97〜2002に次の技が見つかりました。</p>
+
+<div class="scroll"><table><thead><tr><th>作品</th><th>キャラ・技</th><th>版を決める入力</th><th>変わるもの</th></tr></thead><tbody>
+<tr><td>'97・'98</td><td>大門：裏投げ（632146＋BかD）</td><td>最後の236系の入力にAがあるか</td><td>走る時間（20F／31F）、投げのダメージ</td></tr>
+<tr><td>'97・'98・'99・2000</td><td>クラーク：フランケンシュタイナー（623＋BかD）</td><td>最後の41236系の入力がBか</td><td>弱か強か</td></tr>
+<tr><td>'99</td><td>レオナ：イヤリング爆弾・1（214＋BかD）</td><td>最後の421＋ボタンの入力がBか</td><td>遅い版か速い版か</td></tr>
+<tr><td>2000</td><td>ラモン：41236＋AかCのコマンド投げ</td><td>最後の214系の入力にAがあるか</td><td>投げのダメージ（1違う）</td></tr>
+<tr><td>2002</td><td>KUSANAGI：鵺摘み（214＋AかC）</td><td>最後の236236系の入力にAがあるか</td><td>全体と当て身の受付時間（4F早くなる）</td></tr>
+</tbody></table></div>
+<p>2001では見つかりませんでした。クラークのフランケンシュタイナーも、2001・2002ではボタンどおりの版が出ます。</p>
+
+<h2>仕組み</h2>
+<ol>
+<li><strong>コマンドが完成するたびに、そのときのボタンが記録されます。</strong>記録はコマンドの種類ごとに1か所ずつあり、技が出なくても、別の技の動作中でも書き換わります。</li>
+<li><strong>普通の技は、自分のコマンドの記録を読んで版を決めます。</strong>623＋Bなら623の記録のBを見て弱になる、という具合です。</li>
+<li><strong>この表の技は、別のコマンドの記録を読んでいます。</strong>そのため、技を出したボタンは版に関係しません。前に入れた別のコマンドのボタンで版が決まります。</li>
+<li><strong>記録は自然には消えません。</strong>同じ種類のコマンドを別のボタンで入れ直すまで残ります。</li>
+</ol>
+<p>同じ系統のコマンドを含む入力でも記録は書き換わります。たとえば41236は途中に236を含むので、大門の41236Aは236Aと同じように裏投げを特殊版にします。</p>
+
+<h2>クラークのフランケンシュタイナー（'97・'98・'99・2000）</h2>
+<p>623＋BかDのボタンでは弱強が決まらず、<strong>最後に入れた41236系の入力がBなら弱、それ以外なら強</strong>になります。41236をまだ一度も入れていないとき、Dで入れたとき、AやCで入れたときは強です。普通に623＋Bと入力するだけでは、強しか出ません。</p>
+<div class="scroll"><table><thead><tr><th>入力</th><th>出る版</th><th>空振り時の全体</th></tr></thead><tbody>
+<tr><td>41236＋B → 623＋D</td><td>弱</td><td>60F</td></tr>
+<tr><td>41236＋D → 623＋B</td><td>強</td><td>71F</td></tr>
+<tr><td>41236＋A → 623＋B</td><td>強</td><td>71F</td></tr>
+<tr><td>623＋B（41236の入力なし）</td><td>強</td><td>71F</td></tr>
+</tbody></table></div>
+<p>41236＋Bの部分は、'97では立ちBが出ます。'98では近くにいる相手をつかみ、遠いと空振りの動作が出ます（'99・2000も遠いと同じく空振りの動作）。どれでも記録は書き換わるので、そのあとのフランケンシュタイナーは弱になります。</p>
+<details><summary>作品ごとの確認範囲</summary>
+<ul>
+<li>'97・'98・'99・2000：上の4つの入力で、弱と強の出方と全体フレームが同じでした。</li>
+<li>2001・2002：623＋Bで弱、623＋Dで強が出る作りに直っています。</li>
+<li>弱と強で、全体フレーム以外（つかめる高さ・無敵など）の違いはここでは調べていません。</li>
+</ul></details>
+
+<h2>レオナのイヤリング爆弾・1（'99）</h2>
+<p>214＋BかDのボタンでは版が決まらず、<strong>最後の421＋ボタンの入力がBなら遅い版、それ以外なら速い版</strong>になります。普通に214＋Bと入力すると、速い版が出ます。</p>
+<div class="scroll"><table><thead><tr><th>入力</th><th>出る版</th><th>全体</th></tr></thead><tbody>
+<tr><td>421＋B → 214＋D</td><td>遅い版</td><td>64F</td></tr>
+<tr><td>421＋D → 214＋B</td><td>速い版</td><td>68F</td></tr>
+<tr><td>214＋BかD（421の入力なし）</td><td>速い版</td><td>68F</td></tr>
+</tbody></table></div>
+
+<h2>ラモンの41236＋AかCのコマンド投げ（2000）</h2>
+<p>'98の大門の裏投げと同じ型です。<strong>最後の214系の入力にAがあると、投げのダメージが1小さくなります</strong>（同じ条件で18→17）。投げの動きは変わりません。</p>
+
+<h2>KUSANAGIの鵺摘み（2002）</h2>
+<p>214＋AかCのボタンでは版が決まらず、<strong>最後の236236系の入力にAがあると、動作の短い版</strong>になります。236236＋Aは弱鬼焼きなどが出る入力で、MAX2の零式（236236＋AC）でも同じように切り替わります。236236＋Cを入れると元に戻ります。</p>
+<div class="scroll"><table><thead><tr><th></th><th>通常版</th><th>236236＋Aのあと</th></tr></thead><tbody>
+<tr><td>全体</td><td>47F</td><td>43F</td></tr>
+<tr><td>打撃の発生</td><td>19F</td><td>15F</td></tr>
+<tr><td>当て身で取れた相手の屈B（相手が出し始めたフレーム）</td><td>10〜14F目</td><td>6〜10F目</td></tr>
+</tbody></table></div>
+<p>当て身の受付と打撃の発生が、どちらも4F早くなります。</p>
+
+<h2>大門の裏投げ（'97・'98）</h2>
+<p>最後の236系の入力にAがあると、走る時間が31Fから20Fに縮んだ特殊版になり、投げのダメージも少し小さくなります。'97でも'98と同じでした。詳しくは<a href="/research/kof98/daimon-previous-input-ura-nage-distance-2024.html">KOF'98 大門：236A仕込みで裏投げが短くなる仕組み</a>にまとめています。</p>
+
+<h2>似ているが別の話</h2>
+<ul>
+<li><a href="./super-input-multi-hit.html">多段化</a>：出せない超必殺技の入力で、通常技が多段ヒットする現象です。前の入力の記録を読むのではなく、キャンセルの処理で起こります。</li>
+<li>KOF2002の大門の特殊版裏投げは、AD同時押しなど自分のボタンで出します。前の入力は関係しません。</li>
+<li>KOF'94・'95は、弱強の記録の持ち方がこのページの作品と違います。同じ型の技があるかは、まだ分かっていません。</li>
+</ul>
+
+<h2>気になること</h2>
+<ul>
+<li>ラウンドや試合をまたいだときに、前の記録が残るかは確かめていません。</li>
+<li>フランケンシュタイナーの弱と強で、全体フレーム以外に何が違うかは調べていません。</li>
+</ul>
+
+<p class="source">関連：<a href="/research/kof98/daimon-previous-input-ura-nage-distance-2024.html">KOF'98 大門：236A仕込みで裏投げが短くなる仕組み</a> ／ <a href="/research/kof99/leona-frame-combos-oki-2021-2024.html">KOF'99 レオナ</a> ／ <a href="/research/kof2002um/kusanagi-nuetsumi-counterplay-2021-2024.html">KOF2002UM KUSANAGI：鵺摘み</a> ／ <a href="/research/kof96/clark-sab-fallback.html">KOF'96 クラーク：SAB失敗時の技</a></p>
+<p><a href="./index.html">シリーズ共通研究へ戻る</a> ／ <a href="/kof-kininaru.html#series">気になること</a></p>
+</div></main><footer class="footer"><div class="wrap">Come sono bravo?</div></footer></body></html>
