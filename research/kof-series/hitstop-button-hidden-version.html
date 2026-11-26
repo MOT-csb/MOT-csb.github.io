@@ -1,0 +1,95 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ヒットストップ中にボタンを足すと別の版が出る技：チョイの旋風飛猿刺突など｜Come sono bravo?</title><meta name="description" content="普段は片方の版しか出ない技が、ヒット時のキャンセルでボタンを足すと別の版になる現象（KOF'97〜2000のチョイ・キング・香澄・舞）"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:1010px}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.article a{overflow-wrap:anywhere}.scroll{overflow-x:auto}.article table{width:100%;border-collapse:collapse}.article th,.article td{border:1px solid var(--line,#aaa);padding:9px;text-align:left;vertical-align:top}.article th{background:var(--soft,#edf1ed)}.source{font-size:.94rem}.note{border-left:3px solid var(--accent,#56745f);padding:12px;background:var(--soft,#edf1ed)}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="./index.html">シリーズ共通研究</a></div></div><main class="main"><div class="wrap article">
+<h1>ヒットストップ中にボタンを足すと別の版が出る技：チョイの旋風飛猿刺突など</h1>
+<p>KOF'99・2000のチョイの旋風飛猿刺突（4タメ6＋AかC）は、普通に出すとAでもCでも同じ版になります。ところが、<strong>通常技を当ててキャンセルし、4タメ6＋Aのあとヒットストップ中にBを足す</strong>と、普段は出ない別の版が出ます。別の版は全体が短く、ガードされたときの不利も小さくなります。</p>
+<p>同じ作りの技は、'97の舞、'98・'99のキング、'99の香澄にもありました。</p>
+
+<div class="scroll"><table><thead><tr><th>作品</th><th>キャラ・技</th><th>普段の出方</th><th>別の版の出し方（ヒット時のキャンセルで）</th></tr></thead><tbody>
+<tr><td>'99・2000</td><td>チョイ：旋風飛猿刺突（4タメ6＋AかC）</td><td>AでもCでも同じ版</td><td>4タメ6＋A→A＋B（またはC→C＋B）とずらし押し</td></tr>
+<tr><td>'98・'99</td><td>キング：623＋BかD</td><td>BでもDでも同じ版</td><td>623＋B→A＋Bとずらし押し</td></tr>
+<tr><td>'99</td><td>香澄：214＋BかD</td><td>BでもDでも同じ版</td><td>214＋B→A＋Bとずらし押し</td></tr>
+<tr><td>'97</td><td>舞：623＋AかC</td><td>AでもCでも同じ版</td><td>623＋A→A＋Bとずらし押し</td></tr>
+</tbody></table></div>
+<p>空キャンセルや、普通に出したときは、どれも別の版になりません。</p>
+
+<h2>出し方</h2>
+<ol>
+<li>キャンセルできる通常技（屈Cなど）を相手に当てるか、ガードさせます。</li>
+<li>ヒットストップ中に、技のコマンドを入れます（チョイなら4タメ6＋A）。</li>
+<li>ボタンを離さずに、もう1つのボタンを足します（チョイならB）。最初のボタンを先に押し、あとからずらして足すスライド入力にします。</li>
+</ol>
+<p>チョイの場合、Aを押してから1〜8F後にBを足しても成功しました。Aを離してBだけにすると、別の技が出ます。香澄は、Aを足すのが早すぎると別の動作になりました。</p>
+
+<h2>仕組み</h2>
+<p>この型の技は、<strong>出せるボタンと、版を決めるときに見るボタンが食い違って</strong>います。</p>
+<ul>
+<li>チョイ・舞：AかCで出る技なのに、「Bが入っているか」で版を決めます。</li>
+<li>キング・香澄：BかDで出る技なのに、「Aが入っているか」で版を決めます。</li>
+</ul>
+<p>普通に出すと、見ているボタンは必ず「なし」なので、いつも同じ版になります。弱強のつもりでボタンを変えても、同じ技が出ているだけです。</p>
+<p>キャンセルでボタンを足すと版が変わるのは、技を決める時点と、技が動き出して版を読む時点がずれるからです。</p>
+<ol>
+<li>コマンドが完成すると、そのときのボタンが記録されます（チョイなら「4タメ6＋A」）。</li>
+<li>キャンセルでは、この時点で出す技が決まり、予約されます。技の成立はこの記録で確かめるので、Aだけなら旋風飛猿刺突として成立します。</li>
+<li>技が実際に動き出すのは、ヒットストップが終わってからです。</li>
+<li>ヒットストップの間にBを足すと、4タメ6＋ボタンのコマンドがA＋Bで完成し直し、記録がA＋Bに書き換わります。予約された技はそのままです。</li>
+<li>技は動き出す瞬間に記録を読み、版を決めます。このときBが入っているので、普段は選ばれない版になります。</li>
+</ol>
+<p>空キャンセルや普通に出したときは、技を決めたその場で動き出すので、ボタンを足す時間がありません。</p>
+<p class="note">技を決める時点と版を読む時点のずれを使う点で、<a href="./previous-input-version-moves.html">前の入力で版が変わる技</a>と似ています。ただし、こちらは別のコマンドではなく、同じ技のコマンドの記録をヒットストップ中に書き換えています。</p>
+
+<h2>チョイの旋風飛猿刺突（'99・2000）</h2>
+<p>屈Cを当てて4タメ6＋Aでキャンセルした場合の比較です。フレームはキャンセルで技が動き出した時点から数えています。'99と2000で同じ値でした。</p>
+<div class="scroll"><table><thead><tr><th></th><th>普段の版</th><th>別の版</th></tr></thead><tbody>
+<tr><td>当たるまで</td><td>29F目</td><td>24F目</td></tr>
+<tr><td>ダメージ（屈Cのあと）</td><td>10</td><td>8</td></tr>
+<tr><td>全体</td><td>87F</td><td>61F</td></tr>
+<tr><td>屈Cからガードされたとき</td><td>約38F不利</td><td>約9F不利</td></tr>
+</tbody></table></div>
+<p>別の版は前に進む速さが遅く、攻撃のデータも別のものです。当たるのが5F早いぶん、屈Cからの間が詰まります。相手キャラ（アテナ）で試したこの配置では、どちらの版も屈Cから連続ヒットにはなりませんでした。</p>
+<p>補足：情報をくれた우라늄777（@URAnIuM_777）さんによれば、チャンのように左右の食らい判定が大きいキャラなら、画面端で屈Cから別の版が連続ヒットになります。また、別の版は'98のB版の旋風飛猿刺突にあたるそうです。この2点はこちらでは確かめていません。</p>
+
+<h2>キングの623＋BかD（'98・'99）</h2>
+<p>屈Cを当てて623＋B→A＋Bでキャンセルすると、別の版が出ます。'98と'99で同じでした。</p>
+<div class="scroll"><table><thead><tr><th></th><th>普段の版</th><th>別の版</th></tr></thead><tbody>
+<tr><td>全体（キャンセルから）</td><td>55F</td><td>51F</td></tr>
+</tbody></table></div>
+<p>この配置では、屈Cのあとの623＋Kはどちらの版も相手に届かず、ダメージや当たり方は比べられていません。2000のキングも同じ作りですが、この出し方で別の版が出るかはまだ確かめていません。</p>
+
+<h2>香澄の214＋BかD（'99）</h2>
+<p>屈Cを当てて214＋B→A＋Bでキャンセルすると、別の版が出ます。</p>
+<div class="scroll"><table><thead><tr><th></th><th>普段の版</th><th>別の版</th></tr></thead><tbody>
+<tr><td>全体（キャンセルから）</td><td>48F</td><td>39F</td></tr>
+</tbody></table></div>
+<p>この配置では、屈Cのあとの214＋Kはどちらの版も相手に当たらず、ダメージや当たり方は比べられていません。</p>
+
+<h2>舞の623＋AかC（'97）</h2>
+<p>屈Cを当てて623＋A→A＋Bでキャンセルすると、別の版が出ます。全体の長さはほぼ同じですが、途中の動作が別のものに置き換わります。</p>
+<div class="scroll"><table><thead><tr><th></th><th>普段の版</th><th>別の版</th></tr></thead><tbody>
+<tr><td>当たるまで（キャンセルから）</td><td>29F目</td><td>19F目</td></tr>
+<tr><td>ダメージ（屈Cのあと、合計）</td><td>19</td><td>13</td></tr>
+<tr><td>全体（キャンセルから）</td><td>86F</td><td>85F</td></tr>
+</tbody></table></div>
+
+<details><summary>確かめた範囲</summary>
+<ul>
+<li>KOF'96〜2002で、出せるボタンと版を決めるボタンが食い違う技を探し、表の技を見つけました。'96と2002には見つかりませんでした。</li>
+<li>2001のチョイの旋風飛猿刺突も同じ作りです。この出し方で別の版が出るかは確かめていません。</li>
+<li>'98の社にも同じ作りの疑いがある技が1つありますが、技そのものを出せず、確かめられていません。</li>
+<li>ダメージは、同じ配置・同じ相手で2つの版を比べた値です。屈Cのあとなので、単発で当てたときとは違うことがあります。</li>
+</ul></details>
+
+<h2>似ているが別の話</h2>
+<ul>
+<li><a href="./previous-input-version-moves.html">前の入力で版が変わる技</a>：クラークのフランケンシュタイナーなど。前に入れた別のコマンドのボタンで版が決まります。ヒットストップは関係なく、普通に出しても起こります。</li>
+<li><a href="./super-input-multi-hit.html">多段化</a>：出せない超必殺技の入力で通常技が多段ヒットする現象です。</li>
+</ul>
+
+<h2>気になること</h2>
+<ul>
+<li>キングと香澄の別の版は、当てたときのダメージや有利不利をまだ比べられていません。舞の別の版も、ガードされたときの有利不利は調べていません。</li>
+<li>2000のキング、2001のチョイで本当に出るかは確かめていません。</li>
+</ul>
+
+<p class="source">情報：우라늄777（@URAnIuM_777）さん（2026年11月、X）。関連：<a href="./previous-input-version-moves.html">前の入力で版が変わる技</a></p>
+<p><a href="./index.html">シリーズ共通研究へ戻る</a> ／ <a href="/kof-kininaru.html#series">気になること</a></p>
+</div></main><footer class="footer"><div class="wrap">Come sono bravo?</div></footer></body></html>
