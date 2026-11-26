@@ -1,7 +1,7 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>弱攻撃にC・Dを押すと2回当たる技：'98マリー遠Aと同じ現象の作品別一覧｜Come sono bravo?</title><meta name="description" content="KOF'98マリーの遠A＋CDで遠Aが2回当たる現象は、'97のマリー遠A、2000のクーラ遠A、2001のフォクシー遠B・屈B、K9999遠Bでも起きます。押すタイミング、ダメージ、起きる条件、起きない作品。">
 <link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:960px}.article table{min-width:0;width:100%}.article th,.article td{overflow-wrap:anywhere;vertical-align:top}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}.lead{font-size:1.05em}.legend{font-size:.92em;color:var(--sub,#555)}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h3{font-size:1.05em}@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}.article th,.article td{min-width:96px}}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="./index.html">シリーズ共通</a> / <b>弱攻撃にC・Dを押すと2回当たる技</b></div></div><main class="main"><div class="wrap article"><h1>弱攻撃にC・Dを押すと2回当たる技（'98マリー遠Aと同じ現象）</h1>
 
-<p class="lead">KOF'98のマリーの遠Aは、ヒット直後にCDを押すと、技は遠Aのまま2回当たります。同じことは<strong>KOF'97のマリー遠A、KOF2000のクーラ遠A、KOF2001のフォクシー遠B・屈B、K9999遠B</strong>でも起きます。KOF'99とKOF2002では、全キャラの弱攻撃で起きる技はありませんでした。</p>
+<p class="lead">KOF'98のマリーの遠Aは、ヒット直後にCDを押すと、技は遠Aのまま2回当たります。同じことは<strong>KOF'97のマリー遠A、KOF2000のクーラ遠A、KOF2001のフォクシー遠B・屈B、K9999遠B</strong>でも起きます。KOF'96・'99・2002では、全キャラの弱攻撃で起きる技はありませんでした。</p>
 
 <p>どの作品でも、押すのはヒットから数フレーム後のCD同時押し（またはCかDだけ）です。立ちCDや強攻撃は出ず、ヒットストップが明けたところで同じ弱攻撃がもう一度当たります。</p>
 
@@ -31,7 +31,7 @@
 <tr><td>KOF'99</td><td>仕組みは'98と同じですが、全キャラの弱攻撃（近A・遠A・屈A・近B・遠B・屈B）で2回当たる技はありませんでした</td></tr>
 <tr><td>KOF2002</td><td>同上。'98・2000で起きるマリー・クーラでも起きません</td></tr>
 <tr><td>KOF'97・'98・2000・2001の、上の表以外の技</td><td>起きません。'98は38キャラ、ほかの作品も全キャラの弱攻撃で確認しました</td></tr>
-<tr><td>KOF'96</td><td>同じ形のキャンセル処理が入っていますが、起きる技があるかは調べていません</td></tr>
+<tr><td>KOF'96</td><td>同じ形のキャンセル処理が入っていますが、29キャラの弱攻撃（近A・遠A・屈A・近B・遠B・屈B）で2回当たる技はありませんでした</td></tr>
 <tr><td>KOF'94・'95</td><td>キャンセルの処理が別の作りで、この仕組みはありません</td></tr>
 </tbody>
 </table>
@@ -46,7 +46,7 @@
 <li>強攻撃や立ちCDならキャンセルは認めず、技を元に戻します。ただし<strong>印は消えたまま</strong>です。</li>
 </ol>
 <p>C・D・CDを押すと、技は元の弱攻撃のままなのに「まだ当たっていない攻撃」になります。ヒットストップが明けたときに、その弱攻撃の攻撃判定がまだ残っていれば、もう一度当たります。</p>
-<p>この処理の流れは'97〜2002で同じで、'96にも同じ形の処理があります。起きる技が作品ごとに違うのは、ヒットストップ明けに攻撃判定が残っている弱攻撃があるかどうかの違いです。'97と'98のマリー遠Aは判定が残り、2000ではマリーの遠Aは残らなくなり、代わりにクーラの遠Aが残ります。'99と2002には残る弱攻撃がありません。</p>
+<p>この処理の流れは'97〜2002で同じで、'96にも同じ形の処理があります。起きる技が作品ごとに違うのは、ヒットストップ明けに攻撃判定が残っている弱攻撃があるかどうかの違いです。'97と'98のマリー遠Aは判定が残り、2000ではマリーの遠Aは残らなくなり、代わりにクーラの遠Aが残ります。'96・'99・2002には残る弱攻撃がありません。</p>
 
 <details class="more"><summary>詳しい話：ダメージが減る理由、受付がCDだけ長い理由</summary>
 <h3>2発目のダメージが小さい理由</h3>
@@ -65,7 +65,8 @@
 <ul>
 <li>多段化のページでは、KOF2000・2001でも多段化ができたはずで、マリーとクーラでできた覚えがある、と書かれています。また、ふっとばし攻撃の入力（C＋D）で多段化が安定するのは同時押し猶予が長いせいかもしれない、という見立てもあります。2000のクーラ遠Aは、この現象でCD同時押しのほうが受付が長いので、記憶にある多段化はこの現象だった可能性があります。超必殺技のコマンドでも同じことが起きるかは調べていません。</li>
 <li>KOF2000のマリーの遠Aでは起きませんでした。記憶にあるマリーが'97・'98のことか、別の技のことかは分かりません。</li>
-<li>KOF'96で起きる技があるか、しゃがんでいる相手やガード時にどうなるかは、まだ調べていません。</li>
+<li>しゃがんでいる相手やガード時にどうなるかは、まだ調べていません。</li>
+<li>KOF'96の多段化は、ギースの屈Cやリョウの近Cのような強攻撃でも起き、超必殺技のコマンドで起きます。'96ではC・D・CDを押すだけで2回当たる弱攻撃はなかったので、多段化はこの現象とは別の流れで起きていると考えられます。多段化の仕組みはまだ調べていません。</li>
 </ul>
 
 <p>関連：<a href="/research/kof98/mary-far-a-cd-double-hit.html">KOF'98 マリー：遠Aのあとに C・D を押すと2回当たる仕組み</a>（起こし方と仕組みの詳しい説明） ／ <a href="./super-input-multi-hit.html">多段化</a></p>
