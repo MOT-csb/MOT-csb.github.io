@@ -66,6 +66,28 @@
 <p>気絶の狙いやすさは「96＞99＞98」みたいな感じ、としています。KOF'94では気絶連続技のほかに、京の近C→闇払い→6D（相手のしゃがみガードにヒット）→気絶のような狙い方ができます。</p>
 <p>大事なのは、メインで使える技のうち気絶値が高い技を組み合わせることです。たとえばラルフはバルカンパンチ <span class="vt">弱</span> が28と非常に高く、カウンターで2ヒットすれば一気に気絶値がたまります。京は毒咬み絡み（13＋0＋26）とREDkick（弱39、強44）が高く、強攻撃の気絶値は屈C 18、近C 19、近D 21です。ただし、気絶を狙えるキャラはかなり限られます。ガードクラッシュも、狙えるキャラは多いものの、ガードクラッシュさせて何かを確定させやすいキャラは限られていて、基本的には忘れていい、という整理です（<a href="https://x.com/mot_csb/status/1393967806161428480">2021/5/16</a> ／ <a href="https://x.com/mot_csb/status/1393968389127688195">ガークラ</a>）。KOF'99では、気絶値の高い技（連続技を含む）が当たった後は様子見を減らして攻めを継続すると気絶させやすいかもしれません。</p>
 
+<details class="more"><summary>詳しく：気絶値とガードクラッシュ値の回復の速さ（キャラ別）</summary>
+<p>気絶値もガードクラッシュ値も、満タン（101）でない間はキャラごとに決まった間隔で1ずつ回復します。攻撃を食らっても、ガードしても、数えている途中の間隔はリセットされません。やられ中・ガード中・ジャンプ中・攻撃中も止まらずに回復が進みます。KOF'98のように「当たるたびに数え直して、一定時間で全快」という作りではありません。</p>
+<ol class="flow">
+<li>満タンでなければ、毎フレーム回復までの残り時間が1減ります。</li>
+<li>残り時間が切れたら1回復し、残り時間をそのキャラの間隔に戻します。</li>
+<li>満タンになったら数えるのを止めます。</li>
+</ol>
+<table><thead><tr><th>キャラ</th><th>気絶値（1回復の間隔）</th><th>ガードクラッシュ値（1回復の間隔）</th></tr></thead><tbody>
+<tr><th scope="row">マキシマ・チャン・京-2</th><td class="num">15F</td><td class="num">33F</td></tr>
+<tr><th scope="row">ラルフ</th><td class="num">16F</td><td class="num">34F</td></tr>
+<tr><th scope="row">香澄</th><td class="num">16F</td><td class="num">35F</td></tr>
+<tr><th scope="row">K'・真吾・ジョー・レオナ・クラーク・チン・キム・ジョン・京・庵</th><td class="num">17F</td><td class="num">35F</td></tr>
+<tr><th scope="row">アンディ・舞・リョウ・ケンスウ・バオ・キング・マリー・シャンフェイ</th><td class="num">17F</td><td class="num">36F</td></tr>
+<tr><th scope="row">ユリ・アテナ</th><td class="num">17F</td><td class="num">37F</td></tr>
+<tr><th scope="row">紅丸・チョイ</th><td class="num">18F</td><td class="num">36F</td></tr>
+<tr><th scope="row">タクマ</th><td class="num">18F</td><td class="num">37F</td></tr>
+<tr><th scope="row">京-1</th><td class="num">19F</td><td class="num">37F</td></tr>
+<tr><th scope="row">ロバート・ウィップ</th><td class="num">19F</td><td class="num">38F</td></tr>
+</tbody></table>
+<p>0から満タンまでは、気絶値が約25〜32秒、ガードクラッシュ値が約55〜64秒です。気絶値の回復はガードクラッシュ値の約2倍の速さです。テリーは未確認です。</p>
+</details>
+
 <details class="more"><summary>詳しく：2021年5月に挙げた「調べるべきこと」</summary>
 <p>「（自分にとって）わかってないキャラが多すぎる」として、各キャラの強い部分同士をぶつける形を作るために、次のことを調べるべきとしています。</p>
 <ul>
