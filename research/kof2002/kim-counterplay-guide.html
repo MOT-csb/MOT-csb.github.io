@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KOF2002 キム対策の総まとめ｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css">
+<style>.article{max-width:960px}.article h2{margin-top:2rem}.article table{border-collapse:collapse;width:100%}.article th,.article td{border:1px solid var(--line,#aaa);padding:.6em;vertical-align:top}.article th{background:var(--soft,#eff3f0)}.scroll{overflow-x:auto}.src{font-size:.9em}.v{display:inline-block;font-size:.75em;line-height:1.2;padding:0 .35em;margin-left:.2em;border:1px solid currentColor;border-radius:4px;vertical-align:.1em}.lead{font-size:1.05em}.more>summary{cursor:pointer;font-weight:700}</style>
+</head>
+<body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof02-top.html">KOF2002</a> / <a href="/research/kof2002/index.html">研究アーカイブ</a> / <b>キム対策の総まとめ</b></div></div>
+<main class="main"><div class="wrap article"><!-- chara-nav:start --><nav class="chara-nav" aria-label="キャラクター別のページ"><p class="cn-head"><a href="/kof02-top.html#c-kim">KOF2002 キャラ選択</a><span>›</span><b>キム</b></p><p class="cn-links"><a href="/research/kof2002/frame/kim.html">フレームデータ</a></p><details open><summary>攻略・研究ページ 15件</summary><ul><li><b>キム対策の総まとめ</b></li><li><a href="/research/kof2002/x-frame-notes-2016-2024.html#c-kim">飛天脚の硬直差と三空撃への対策（2024年）</a></li><li><a href="/02kim-rennzokuwaza.htm">連続技</a></li><li><a href="/02kim-crush.htm">クラッシュ攻略</a></li><li><a href="/02kim-memo.htm">メモ</a></li><li><a href="/02kim.htm">攻略</a></li><li><a href="/02kim-hanntei.html">食らい判定</a></li><li><a href="/02kim-crush-delay-2k-warikomi.html">クラッシュ攻略：キムの三連撃～9K～ディレイ2Kへの割り込みについて</a></li><li><a href="/02kim-kanni.htm">kanni</a></li><li><a href="/02kim-hishoukyaku.html">対策：飛翔脚ガード後の反撃</a></li><li><a href="/research/kof2002/kim-counterplay-2005-2024.html">飛翔脚・飛天脚・弱飛燕斬・6B・端めくりへの対処とキャラ別の対策（2005～2024年）</a></li><li><a href="/research/kof2002/kim-delay-2k-counterplay-revisions-2006-2024.html">キム三連撃9K→ディレイ2Kへの割り込み：2006年旧版と2024年改訂</a></li><li><a href="/research/kof2002/kim-play-2004-2009.html">キムの使い方：近C・飛燕斬・飛翔脚・覇気キャン・ガークラ値と連続技（2004～2009年）</a></li><li><a href="/research/kof2002/kim-sankuugeki-counterplay-2005-2009.html">キムの三連撃～三空撃への対処：ディレイ別の硬直差・2段構えの守り方・GCの使い分け（2005～2009年）</a></li><li><a href="/02kim-kakuwaza-koutyokusa.html">旧サイトの表（2008年）</a></li></ul></details></nav><!-- chara-nav:end -->
+<h1>KOF2002 キム対策の総まとめ</h1>
+
+<p class="lead">キムには、<strong>近づかれる前は空対空と対空で止めます</strong>。近づかれたら自分からは動かず、<strong>屈みガードを基本に、6Bは見てから立ちガード、C投げは見てから外します</strong>。いちばん大事な三連撃～三空撃は、ディレイには無敵技で割り込み、ディレイなしならガード後に反撃する「2段構え」で守ります。このページは、旧サイト・ブログ・X投稿に書いてきたキム対策を状況別にまとめた入口です。詳しい説明は各リンク先にあります（KOF2002UMは扱いません）。</p>
+
+<p class="src">記号：＞キャンセルなし ／ ≫キャンセルあり ／ ～追加入力 ／ →連係。三連撃＝214+A/C、三空撃＝三連撃1段目からの9K～2K（9+B/D～2+B/D）、飛翔脚＝ジャンプ頂点付近からの急降下蹴り、飛天脚＝鳳凰飛天脚、6B＝ネリチャギ。硬直差は特に断りがなければキム側から見た値です（G＝ガード時、H＝ヒット時）。</p>
+
+<h2>キムの何が強いのか</h2>
+<p>旧サイトのクラッシュ攻略（対キム）では、次の5つを挙げています。</p>
+<blockquote>・早出しJ攻撃による接近能力。<br>・接近に成功した場合のガークラ値の蓄積＆ガード崩し能力。<br>・神の近Cとそこからの三連撃～三空撃<br>・ダウンを奪った後のループ性の高い起き攻め<br>・連続技のダメージ効率</blockquote>
+<p>対策は、この5つを順番に潰していく形になります。</p>
+
+<h2>状況別の早見表</h2>
+<div class="scroll"><table><thead><tr><th>キムの行動</th><th>対処</th><th>覚えておく数値</th><th>詳しく</th></tr></thead><tbody>
+<tr><td>近C≫三連撃～三空撃</td><td>214Pをガードしたら立ちガードに切り替え、9Kの硬直が解けた瞬間に無敵技が出るよう仕込む。割り込めなければディレイなしなので反撃</td><td>2K：ディレイなしG−6F、連続ガード内のディレイ−1〜−2F、最大ディレイ±0F（非連続）</td><td><a href="./kim-sankuugeki-counterplay-2005-2009.html">三連撃～三空撃への対処</a>／<a href="/02kim-crush-delay-2k-warikomi.html">キャラ別の割り込み候補</a></td></tr>
+<tr><td>三連撃の1段・2段止め</td><td>ガード後に反撃する</td><td>1段止めG−12F、2段止めG−7F</td><td><a href="/02kim-kakuwaza-koutyokusa.html">キムの各技の硬直差</a></td></tr>
+<tr><td>6B（ネリチャギ）</td><td>見てから立ちガード。足を上げる動作ではなく、その前の動作に反応する。読めるときは無敵技のレバーだけ入れておき、見えたらボタン</td><td>発生16F。屈みから立ちガードへの切り替えに14Fかかるので、見てからの猶予は2F短い。G−1F</td><td><a href="./kim-counterplay-2005-2024.html">対キム（6Bへの警戒）</a></td></tr>
+<tr><td>C投げ・D投げ</td><td>見てから投げ外し</td><td>投げ外しの猶予はC投げ20F、D投げ19F</td><td><a href="./x-kim-2010-2026.html">キムのX投稿メモ</a></td></tr>
+<tr><td>飛翔脚</td><td>なるべく低い位置でガードし、ガード後に反撃。反撃できる技はフラグで変わる（下の例外その1）</td><td>キム側有利フラグならGC前転できる。不利フラグならヒットストップがなく硬直が実質11F長い</td><td><a href="/02kim-hishoukyaku.html">飛翔脚ガード後の反撃</a></td></tr>
+<tr><td>鳳凰飛天脚</td><td>ガードせず、暗転を見てからレバーを離してAB同時押しっぱなしで前転し、後ろから反撃</td><td>ガードするとG+1F（弱）・G−1F（強）で反撃できない。前転後は弱−7〜−1F、強−11〜−5F</td><td><a href="./kim-counterplay-2005-2024.html">対キム（飛天脚への対処）</a></td></tr>
+<tr><td>対空の弱飛燕斬</td><td>屈んだキムの真上を叩く気持ちで、前〜斜め下に強いジャンプ攻撃で後方の食らい判定を狙う</td><td>攻撃判定と同時に後方の食らい判定が出る</td><td><a href="./kim-counterplay-2005-2024.html">対キム（弱飛燕斬への対処）</a></td></tr>
+<tr><td>JA→近C</td><td>JAはガード硬直が短く、近Cが連続ガードにならないことがある。無敵技で割り込む</td><td>近Cの発生3F</td><td><a href="./kim-counterplay-2005-2024.html">対キム（割り込み）</a></td></tr>
+<tr><td>屈A→屈D</td><td>最速の前方小中ジャンプで飛び越えて連続技。前転は不利を背負いやすい</td><td>屈AはG+2F、屈Dの発生8Fなので隙間は最短6F</td><td><a href="./kim-counterplay-2005-2024.html">対キム（屈A→屈D対策）</a></td></tr>
+<tr><td>端でC投げ→端めくり</td><td>起き上がりの早いキャラはリバーサル飛び退き。ほかは先行入力大J、中央への大J</td><td>C投げ後の硬直差はキャラ別に28〜46F</td><td><a href="./preinput-bigjump-kim-throw-rise-jcd-2008.html">キムC投げ後の攻防</a></td></tr>
+<tr><td>遠距離の飛翔脚空振り（ゲージため）</td><td>無理に潰しにいかず、ダッシュで距離を詰めてプレッシャーをかける</td><td>—</td><td><a href="./kim-counterplay-2005-2024.html">対キム（飛翔脚への対処）</a></td></tr>
+</tbody></table></div>
+
+<h2>原則：近づかれたら動かず、キムの行動に集中する</h2>
+<ol>
+<li>遠めの間合いでは、空対空と対空をしっかり行ってキムを近づけない。キムの早出しジャンプには、地対空で返せるキャラは空対空や牽制より地対空に集中した方がよいかもしれません。</li>
+<li>接近されたら暴れずに屈みガードする。読みで動いて一方的に食らうのが、いちばん多い負け方です。</li>
+<li>6Bは見てから立ちガードし、C投げは見てから外す。これを徹底すると、いきなり崩れる危険がかなり下がります。</li>
+<li>三空撃は2段構えで受ける（下の手順）。ゲージに余裕があれば、三空撃まで待ってGCCDするとさらに低リスクです。</li>
+<li>キムが2ゲージ以上でこちらが体力で有利なら、6Bが来やすい。6Bを立ちガードしてクイック発動させれば2ゲージを使わせられます。そのあとの発動中のダッシュ中下段を落ち着いて防ぎ、発動時間が残っているキムには安易に攻めません（発動中の飛天脚で対空されるため）。</li>
+</ol>
+<p>ただし、割り込みや確定反撃を期待して待ち気味になると、かえって逆効果になります。2005年12月の記事では、三空撃をガードしてからの割り込みはないよりはましな程度で、そもそも近づかせない方がいい、としています。</p>
+
+<h2>三空撃の2段構え（手順）</h2>
+<ol>
+<li>214Pをガードしたら、とりあえず立ちガードに移行する（9Kを屈みガードしていると、連続ガードの2Kは立ちガード方向にレバーが入っていないとガードできないため）。</li>
+<li>9Kを立ちガードする。</li>
+<li>9Kの硬直が解けると同時にリバーサルの無敵技が出るよう、ボタン押しっぱなしで入力しておく。レバーの最後が1（屈みガード方向）になるコマンドは避ける。</li>
+<li>2Kがディレイなら、ここで無敵技が割り込む。</li>
+<li>2Kが最速なら立ちガードになり、キム側−6Fなので確定反撃する。</li>
+</ol>
+<p>割り込みに使える技の目安は、出始めの全身無敵が5F以上あり、攻撃判定の発生か投げの成立が17F以内の技です。旧サイトでは、基本の対策を次のようにまとめています。</p>
+<blockquote>「三空撃がディレイで出される場合に備えて無敵技での割り込みを狙う<br>→割り込みできなかった場合はディレイがかかっていないはずなので、ディレイなしの場合に反撃できる技で確定反撃を狙う。」<br>これが基本の対策になります。</blockquote>
+<p>同じページでは、どちらかができないキャラについて「ゲージを使わないと割り込みor反撃できないキャラは、1番手同士でキムを相手にするのはかなり厳しいと言えます。」と書いています。</p>
+<details class="more"><summary>三空撃まわりの補足（GCの使い分け・端・先行入力大J）</summary>
+<ul>
+<li>三連撃の初段にGCCDすると、派生の有無にかかわらず全キャラのGCCDがカウンターヒット付きで確定します。屈んだチンとチョイには、三連撃の初段がそもそも空振りします。三連撃の初段にGC後転なら硬直差−14Fで反撃が確定します。9KへのGC後転はほぼ五分で悪手です。</li>
+<li>端で近C≫214C～9K～2Kを受けるときは、近CへのGC前転、近C≫214CへのGCCDかGC前転が無難です。GCCDが空振りするキャラは近CへのGCCDをしてはいけません。</li>
+<li>端で三空撃が連続ガードだった場合、1Fのコマンド投げを持つキャラは反撃の1F投げがほぼ確定します。端以外では離れるので、明らかにディレイがかかっていない場合を除き反撃を狙わない方がよいようです。</li>
+<li>端で近C≫214C～9K～ディレイ2Kを立ちガードした後は、先行入力の前方大J（立ちガード→N→2か3→9入れっぱなし。途中で1を使わない）で抜けられるキャラがいます。キム側1F不利で確実なのはK’・マキシマ・紅丸・クラーク・舞・チャン・アンヘル、2F不利でほぼ安定するのはウィップ・アンディ・ジョーなど18キャラです（<a href="./preinput-bigjump-guard-kim-escape-2007.html">キャラ別の表</a>）。</li>
+<li>三空撃のミスを見逃さないこと。立ちガードしつつ、2Kのヒットストップがないのを確認できたら反撃の連続技を押します。</li>
+<li>ロバートの強龍牙は、開始1F目に直前のガード判定が残るので、割り込みのつもりがガードになることがあります（<a href="./kim-delay-2k-counterplay-revisions-2006-2024.html">2006年と2024年の改訂</a>）。</li>
+</ul>
+</details>
+
+<h2>例外その1：飛翔脚はフラグで反撃が変わる</h2>
+<p>飛翔脚をガードしたあとの硬直差は、直前にどちらが攻撃を当てたか（有利・不利フラグ）で変わります。</p>
+<div class="scroll"><table><thead><tr><th>状態</th><th>ガード側のヒットストップ</th><th>反撃</th></tr></thead><tbody>
+<tr><td>キム側有利フラグ（直前にキムが攻撃をヒット・ガードさせた、投げた）</td><td>あり</td><td>GC前転できるので、GC前転から連続技を狙えるキャラがいる</td></tr>
+<tr><td>キム側不利フラグ（直前にこちらが攻撃を当てた）</td><td>なし（実質の硬直が11F短くなる）</td><td>キムの隙が大きく、いろいろな技で直接反撃できる</td></tr>
+</tbody></table></div>
+<p>ラウンド開始時は1P側にフラグがあり、相打ちのときも1P側のフラグになります。いちばん意識しやすいのは、キムの遠Aをガードしたあと（キム側有利フラグ）に大ジャンプから飛翔脚をかぶせられる場面です。高い位置でガードするほどキムが遠くへ跳ね返るので、同じ距離なら屈みガードの方が反撃しやすくなります。</p>
+
+<h2>例外その2：飛天脚はガードではなく前転</h2>
+<p>鳳凰飛天脚はガードしても反撃できません（弱G+1F、強G−1F）。暗転を見てからレバーを離してAB同時押しっぱなしにすると、暗転後に前転してかわし、後ろから反撃できます。レバーを6に入れていると前転ではなく立ちAになります。猶予は3Fくらいです。端に追い詰めたキムの飛天脚を前転でかわすと、位置が入れ替わるので注意します。</p>
+<p>起き攻めで飛天脚と弱飛燕斬の両方に勝てる技もあります（テリーの3C、アテナの近D、ユリの近D、シェルミーの立ちC+Dなど）。技ごとの結果は<a href="./kim-counterplay-2005-2024.html">対キムの「ぶっぱなし飛天脚を潰す・空振りさせる技」</a>の表にあります。</p>
+
+<h2>キャラ別の対策</h2>
+<p>三空撃（9K～ディレイ2K）への割り込みは2006年の候補表（確認を取っていない技も多いと断り書きあり）、飛翔脚ガード後の反撃はおもに2007〜2009年の調査です。「—」は記録がないものです。</p>
+<details class="more" open><summary>キャラ別の早見表（43キャラ）</summary>
+<div class="scroll"><table><thead><tr><th>キャラ</th><th>三空撃への割り込み（ゲージなし）</th><th>同（1ゲージ）</th><th>飛翔脚ガード後の反撃（例）</th><th>個別の記事</th></tr></thead><tbody>
+<tr><td>K’</td><td>バイツ～追加攻撃<span class="v">強</span></td><td>チェーンドライブ<span class="v">弱</span><span class="v">強</span></td><td>有利：弱ヒートドライブ／不利：チェーンドライブ<span class="v">弱</span><span class="v">強</span></td><td>強ミニッツスパイクでも割り込める（<a href="./kim-sankuugeki-counterplay-2005-2009.html">三空撃</a>）</td></tr>
+<tr><td>マキシマ</td><td>なし</td><td>バンカーバスター<span class="v">弱</span></td><td>有利：GC前転→マキシマリベンジャー／不利：ダッシュ弱ベイパーキャノン</td><td>—</td></tr>
+<tr><td>ウィップ</td><td>ブーメランショット<span class="v">弱</span></td><td>ソニックスローター<span class="v">弱</span><span class="v">強</span></td><td>有利：GC前転→屈B始動／不利：リバサ大JC+D</td><td><a href="./kim-counterplay-2005-2024.html">斜めJBと弱飛燕斬</a></td></tr>
+<tr><td>テリー</td><td>なし</td><td>パワーゲイザー<span class="v">弱</span></td><td>不利：強バーンナックル</td><td><a href="./terry-matchups-2005-2008.html">テリーの対戦相手別</a></td></tr>
+<tr><td>アンディ</td><td>昇龍弾<span class="v">強</span>（<span class="v">弱</span>は起き攻めしやすい）</td><td>超裂破弾<span class="v">弱</span></td><td>有利：強斬影流星拳／ダッシュ遠C</td><td><a href="./andy-matchups-2005-2008.html">アンディの対戦相手別</a></td></tr>
+<tr><td>ジョー</td><td>タイガーキック<span class="v">弱</span></td><td>黄金タイガー・爆裂ハリケーンタイガーカカト<span class="v">弱</span><span class="v">強</span>（原文の表記）</td><td>有利：強スラッシュキック</td><td><a href="./joe-vs-kim-2006.html">ジョー対キム</a>／<a href="/02joe-kakukyara-taisaku.htm">ジョーの各キャラ対策</a></td></tr>
+<tr><td>京</td><td>鬼焼き<span class="v">強</span></td><td>なし</td><td>—</td><td>JA→近Cに強鬼焼きで割り込める</td></tr>
+<tr><td>クローン京</td><td>朧車<span class="v">強</span>（4214+D）</td><td>なし</td><td>—</td><td>—</td></tr>
+<tr><td>紅丸</td><td>真空片手駒<span class="v">強</span></td><td>幻影ハリケーン<span class="v">弱</span><span class="v">強</span></td><td>有利：幻影ハリケーン</td><td><a href="./kim-counterplay-2005-2024.html">紅丸：初手同士</a></td></tr>
+<tr><td>五郎</td><td>超大外刈り<span class="v">弱</span><span class="v">強</span></td><td>なし</td><td>不利：弱地雷震</td><td><a href="./taidan-2006-vs-kim-2-daimon.html">対談会（大門編）</a></td></tr>
+<tr><td>庵</td><td colspan="2">屑風～連続技（ゲージ区分なし）</td><td>有利：強八稚女／強葵花・強闇払い</td><td><a href="./iori-matchups-2005-2008.html">庵の対戦相手別（対キム）</a></td></tr>
+<tr><td>マチュア</td><td>なし</td><td>ヘブンズゲイト<span class="v">弱</span><span class="v">強</span></td><td>弱メタルマサカー</td><td>—</td></tr>
+<tr><td>バイス</td><td>ブラックンド～ミサンズロウブ</td><td>なし</td><td>有利：強ディーサイド</td><td>—</td></tr>
+<tr><td>レオナ</td><td>原則なし（覚醒～連続技）</td><td>リボルスパーク<span class="v">弱</span><span class="v">強</span></td><td>有利：リバサ大J強Vスラ／不利：リボル</td><td><a href="./kim-counterplay-2005-2024.html">密着近Cへの近B</a></td></tr>
+<tr><td>ラルフ</td><td>なし</td><td>馬乗りバルカンパンチ<span class="v">弱</span><span class="v">強</span></td><td>—</td><td>—</td></tr>
+<tr><td>クラーク</td><td>フランケンシュタイナー</td><td>ランニングスリー<span class="v">弱</span></td><td>有利：マウントタックル</td><td>—</td></tr>
+<tr><td>ヴァネッサ</td><td>フォウビドゥンイーグル～前方大JD</td><td>チャンピオンパンチャー<span class="v">弱</span><span class="v">強</span></td><td>弱ダッシュパンチャー</td><td>—</td></tr>
+<tr><td>セス</td><td>なし</td><td>入り身灘月<span class="v">弱</span></td><td>—</td><td>—</td></tr>
+<tr><td>ラモン</td><td>タイガーネックチャンスリー</td><td>エル・ディアブロ・アマリロ・ラモン</td><td>—</td><td><a href="./kim-counterplay-2005-2024.html">ラモンの屈み攻撃と弱飛燕斬</a></td></tr>
+<tr><td>リョウ</td><td>虎咆<span class="v">強</span></td><td>龍虎乱舞<span class="v">弱</span></td><td>強覇王翔吼拳</td><td><a href="./kim-counterplay-2005-2024.html">リョウの対キムメモ</a></td></tr>
+<tr><td>ロバート</td><td>なし（強龍牙は確信なし）</td><td>龍虎乱舞<span class="v">強</span></td><td>有利：強龍虎乱舞</td><td><a href="./kim-delay-2k-counterplay-revisions-2006-2024.html">強龍牙の仕組み</a></td></tr>
+<tr><td>タクマ</td><td>なし</td><td>龍虎乱舞<span class="v">弱</span><span class="v">強</span></td><td>有利：弱龍虎乱舞／不利：強龍虎乱舞</td><td>—</td></tr>
+<tr><td>アテナ</td><td>なし</td><td>シャイニングクリスタルビット<span class="v">弱</span><span class="v">強</span></td><td>—</td><td><a href="./kim-counterplay-2005-2024.html">C投げ後の端めくりに逆入力SCB</a></td></tr>
+<tr><td>ケンスウ</td><td>龍顎砕<span class="v">強</span>（4214+D）</td><td>神龍凄煌裂脚・神龍天舞脚</td><td>MAX2（一瞬待って出す）</td><td>—</td></tr>
+<tr><td>チン</td><td colspan="2">記載なし（屈みガードで三連撃の初段が空振りする）</td><td>—</td><td>—</td></tr>
+<tr><td>舞</td><td>ムササビの舞（2024年追加。回避・ガード狙い）</td><td>超必殺忍蜂<span class="v">弱</span><span class="v">強</span></td><td>有利：花嵐<span class="v">弱</span><span class="v">強</span></td><td>—</td></tr>
+<tr><td>ユリ</td><td>空牙～裏空牙<span class="v">強</span></td><td>飛燕鳳凰脚<span class="v">弱</span><span class="v">強</span></td><td>有利：強飛燕鳳凰脚</td><td>C投げ後はリバサ飛び退きが安定</td></tr>
+<tr><td>メイ・リー</td><td>なし</td><td>ゴッズテイルティンカーベル<span class="v">弱</span><span class="v">強</span></td><td>—</td><td>—</td></tr>
+<tr><td>社</td><td>アッパーデュエル<span class="v">強</span></td><td>ファイナルインパクト<span class="v">弱</span><span class="v">強</span></td><td>—</td><td>—</td></tr>
+<tr><td>シェルミー</td><td>シェルミーホイップ<span class="v">強</span></td><td>シェルミーカーニバル<span class="v">弱</span><span class="v">強</span></td><td>ダッシュ1Fコマンド投げ</td><td>—</td></tr>
+<tr><td>クリス</td><td>弱スクランブルダッシュで回避</td><td>チェーンスライドタッチ・ツイスタードライブ</td><td>昇り大JC+D</td><td>—</td></tr>
+<tr><td>裏社</td><td>にらぐだいち<span class="v">弱</span><span class="v">強</span></td><td>なし</td><td>—</td><td>—</td></tr>
+<tr><td>裏シェルミー</td><td>しゃじつのおどり<span class="v">強</span></td><td>しゅくめい・げんえい・しんし<span class="v">弱</span><span class="v">強</span></td><td>—</td><td>—</td></tr>
+<tr><td>裏クリス</td><td>つきをつむほのお<span class="v">弱</span></td><td>なし</td><td>—</td><td>—</td></tr>
+<tr><td>山崎</td><td>なし</td><td>ギロチン<span class="v">弱</span><span class="v">強</span></td><td>ダッシュ遠D</td><td>—</td></tr>
+<tr><td>マリー</td><td>バーチカルアロー（2段目）～M.クラブクラッチ</td><td>M.D.スゥイング・M.S.ローズ</td><td>ストレートスライサー<span class="v">弱</span><span class="v">強</span></td><td>端では最速バックドロップの案（<a href="./kim-sankuugeki-counterplay-2005-2009.html">三空撃</a>）</td></tr>
+<tr><td>ビリー</td><td>強襲飛翔棍＞前方大JC<span class="v">強</span></td><td>超火炎旋風棍<span class="v">弱</span><span class="v">強</span></td><td>強三節棍～火炎</td><td><a href="./kim-counterplay-2005-2024.html">密着で屈A対近C</a></td></tr>
+<tr><td>キム</td><td>飛燕斬～追加攻撃<span class="v">強</span></td><td>鳳凰飛天脚＞強飛燕斬～追加攻撃</td><td>強鳳凰脚</td><td>キム対キムは<a href="./kim-sankuugeki-counterplay-2005-2009.html">三空撃</a>と<a href="./preinput-bigjump-kim-throw-rise-jcd-2008.html">C投げ後</a></td></tr>
+<tr><td>チョイ</td><td>飛猿斬<span class="v">弱</span></td><td>鳳凰脚<span class="v">弱</span><span class="v">強</span></td><td>強鳳凰脚</td><td>屈みガードで三連撃の初段を空振りさせられる</td></tr>
+<tr><td>チャン</td><td>なし</td><td>鉄球大撲殺<span class="v">弱</span><span class="v">強</span></td><td>覇気脚<span class="v">弱</span><span class="v">強</span></td><td>—</td></tr>
+<tr><td>クーラ</td><td>レイスピン～シット＞各種追撃<span class="v">弱</span></td><td>なし</td><td>有利：ダッシュ遠B</td><td><a href="./preinput-bigjump-kim-throw-rise-jcd-2008.html">C投げ後</a>・<a href="./kim-counterplay-2005-2024.html">飛天脚を前転した後</a></td></tr>
+<tr><td>K9999</td><td>割れろォ！<span class="v">弱</span></td><td>月…<span class="v">弱</span><span class="v">強</span></td><td>てめぇもいっちまえ！<span class="v">弱</span><span class="v">強</span></td><td>—</td></tr>
+<tr><td>アンヘル</td><td>マッドマーダールーレット＞各種追撃</td><td>なし</td><td>—</td><td>—</td></tr>
+</tbody></table></div>
+<p class="src">補足：割り込み欄は「割り込める技全部ではなく、一番効率がいいもの」に絞った2006年の候補で、注意点や不成立の理由は<a href="/02kim-crush-delay-2k-warikomi.html">元の表</a>にあります。飛翔脚の欄は、有利＝キム側有利フラグ、不利＝キム側不利フラグ、無印はフラグの区別なしで確認したものです。全部の技とフラグ別の結果は<a href="/02kim-hishoukyaku.html">飛翔脚ガード後の反撃</a>にあります。</p>
+</details>
+
+<h2>似ているが別の話</h2>
+<ul>
+<li><b>飛翔脚ガード後の反撃と、飛天脚を前転した後の反撃</b>：飛翔脚はガード後にキムの着地硬直へ技を当てる話で、フラグの影響を受けます。飛天脚はガードせずに前転でかわす話です。</li>
+<li><b>三空撃への割り込みと、先行入力大Jでの脱出</b>：割り込みは無敵技で攻撃を返す話、先行入力大Jは端から逃げる話で、使えるキャラも条件も違います（<a href="./preinput-bigjump-guard-kim-escape-2007.html">先行入力大ジャンプ</a>）。</li>
+</ul>
+
+<h2>気になること</h2>
+<ul>
+<li>すべて連続ガードで硬直差±0Fになる三空撃の出し方が本当にあるか（2005年12月の時点では−2Fまで確認）。</li>
+<li>五郎の超大外刈り、紅丸の真空片手駒、裏クリスの弱つきをつむほのおで、上から来る飛翔脚を迎撃できるか。</li>
+<li>弱飛燕斬を潰せそうなジャンプ攻撃の候補（庵・キム・マチュア・ビリー・マリー・社）が実際に機能するか。</li>
+<li>キムの屈A→屈Dに、下段無敵のある技（アンディの弱闇浴びせ蹴り、クローン京の琴月など）で直接反撃できるか。</li>
+<li>端めくりを狙われたとき、リバーサル大ジャンプでかわせない幅は相手が立ちなら5F、屈みなら3Fかもしれない（2011年）。</li>
+</ul>
+
+<details class="more"><summary>もとになったページ（キム対策のすべて）</summary>
+<ul class="src">
+<li>旧サイト：<a href="/02kim-crush.htm">クラッシュ攻略（対キム）</a>／<a href="/02kim-crush-delay-2k-warikomi.html">三連撃～9K～ディレイ2Kへの割り込み（全キャラ）</a>／<a href="/02kim-hishoukyaku.html">飛翔脚ガード後の反撃（全キャラ）</a>／<a href="/02kim-kakuwaza-koutyokusa.html">キムの各技の硬直差</a>／<a href="/02kim-hanntei.html">屈んだ相手へのヒット・ガード状況</a>／<a href="/02kim.htm">キム攻略</a></li>
+<li>研究アーカイブ：<a href="./kim-counterplay-2005-2024.html">対キム：飛翔脚・飛天脚・弱飛燕斬・6B・端めくりとキャラ別の対策</a>／<a href="./kim-sankuugeki-counterplay-2005-2009.html">三連撃～三空撃への対処</a>／<a href="./kim-delay-2k-counterplay-revisions-2006-2024.html">ディレイ2Kへの割り込みの2006年版と2024年改訂</a>／<a href="./preinput-bigjump-guard-kim-escape-2007.html">先行入力大J：立ちガード後と対キム脱出</a>／<a href="./preinput-bigjump-kim-throw-rise-jcd-2008.html">先行入力大J：キムC投げ後</a>／<a href="./kim-play-2004-2009.html">キムの使い方</a></li>
+<li>キャラ別：<a href="./joe-vs-kim-2006.html">ジョー対キム</a>／<a href="/02joe-kakukyara-taisaku.htm">ジョーの各キャラ対策</a>／<a href="./terry-matchups-2005-2008.html">テリー</a>／<a href="./andy-matchups-2005-2008.html">アンディ</a>／<a href="./iori-matchups-2005-2008.html">庵</a>／<a href="./leona-awakening-matchups-2005-2009.html">レオナ</a></li>
+<li>対談会（2006年6月）：<a href="./taidan-2006-vs-kim-1.html">初手キム対策その1</a>／<a href="./taidan-2006-vs-kim-2-daimon.html">その2（大門編）</a></li>
+<li>メモ：<a href="./blog-system-reach-errata-misc-2004-2009.html">ブログのメモ（キムのネリチャギを見てから無敵技で返す、確定反撃を待ちすぎないこと など）</a>／<a href="./x-kim-2010-2026.html">キムのX投稿メモ（2010～2026年）</a></li>
+</ul>
+</details>
+
+<p><a href="/research/kof2002/index.html">KOF2002研究アーカイブへ戻る</a> ／ <a href="/kof02-top.html#c-kim">KOF2002 キャラ選択（キム）</a></p>
+</div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
