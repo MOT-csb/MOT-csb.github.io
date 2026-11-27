@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>デスタワーの相手別の有利不利｜Come sono bravo?</title>
+<meta name="description" content="初代ぷよぷよのデスタワーが、5連鎖・4連鎖ダブル・多連鎖・潰し・ペチに対してどう有利不利になるか、負けパターンと対策、配ぷよで決まる負けをまとめたページ。">
+<link rel="stylesheet" href="/assets/research.css">
+<style>
+.article{max-width:900px}.article h2{margin-top:2rem}.article h3{margin-top:1.3rem}.lead{font-size:1.05em}
+.boards{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;margin:12px 0 18px}.boards figure{margin:0}.boards figcaption{font-size:13px;line-height:1.5;margin-top:6px}
+.boards img{max-width:150px;width:100%;height:auto;display:block}
+.pb{display:grid;grid-template-columns:repeat(6,14px);grid-auto-rows:14px;gap:1px;padding:3px;width:max-content;background:#1d2433;border-radius:4px;text-decoration:none}.pb span{display:block;border-radius:50%}
+.p.red{background:#e5484d}.p.blue{background:#3e7bfa}.p.yellow{background:#f5c400}.p.green{background:#30a46c}.p.purple{background:#8e4ec6}.p.garbage{background:#bbb}.p.block{background:#8a8f98;border-radius:2px}
+.quote{border-left:4px solid var(--accent,#245e47);padding:6px 14px;margin:10px 0;background:var(--paper)}.src{font-size:12px;color:var(--muted)}
+details.more{margin:12px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:2px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}
+.article table{width:100%;min-width:0}.article th,.article td{vertical-align:top}
+.steps{padding-left:1.4em}.steps li{margin:6px 0}
+@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}}.tsumo{line-height:1}.tz{display:inline-flex;flex-direction:column;align-items:center;margin:0 2px 8px;vertical-align:top}.tz small{font-size:10px;color:var(--muted,#667);margin-bottom:2px}.pz{width:12px;height:12px;border-radius:50%;display:block;margin:1px 0}
+.orig{margin:4px 0}.flow{border-left:3px solid var(--line);padding-left:14px}.boards.linear{margin:8px 0 12px}
+.toc{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px}.note{font-size:14px}
+.txtboard{font-family:monospace;line-height:1.15;font-size:14px;background:var(--paper);display:inline-block;padding:6px 10px;margin:6px 0}
+</style>
+</head>
+<body>
+<header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/puyo/death-tower/">デスタワー</a><span aria-hidden="true"> / </span><b>相手別の有利不利</b></div><p class="kicker">DEATH TOWER / MATCHUPS</p><h1>デスタワーの相手別の有利不利</h1><p>5連鎖には有利、4ダブとは互角、回収率の高い多連鎖と潰し・ペチは苦手。勝ち負けのパターンと対策をまとめました。</p></div></div>
+<main class="main"><div class="wrap article">
+<style>
+.tw{border-bottom:1px solid var(--line,#ddd);padding:10px 0}.tw p{margin:4px 0;overflow-wrap:anywhere}.twd{font-size:13px;color:var(--muted,#667)}.twi{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}.twi img{max-width:min(100%,260px);height:auto;border-radius:6px;border:1px solid var(--line,#ddd)}
+.tblw{overflow-x:auto}
+</style><section class="section">
+<p class="lead">同じくらいの実力の2人が、デスタワーと連鎖系で正面から致死連鎖を撃ち合うと、デスタワー側に分があります（<a href="https://x.com/mot_csb/status/307001939789488129">2013/2/28</a>）。それを崩すのは、潰し・ペチと、回収率の高い多連鎖の完全致死です。</p>
+<p>デスタワーは判断が甘くても致死にしやすく、ごまかしが効きやすい連鎖です（<a href="https://x.com/mot_csb/status/607002786232856576">2015/6/6</a>）。一方で、完全致死ギリギリの点数で回収率を高くしにくい、という弱点があります（<a href="https://x.com/mot_csb/status/1365329115562143751">2021/2/27</a>）。</p>
+</section>
+<section class="section" id="table"><h2>相手の連鎖ごとの有利不利</h2>
+<div class="tblw"><table><thead><tr><th>相手</th><th>デスタワーから見て</th><th>理由・条件</th><th>出典</th></tr></thead><tbody>
+<tr><td>5連鎖</td><td>有利</td><td>完全致死に必要なぷよは5連鎖20個、デスタワー23個で約1.5手差。連鎖時間が短いので、5連鎖の後からでも3手差までなら追い抜けて、差し引き1.5手有利。2連鎖目で4色同時に消す2クアなら19個で完全致死になりやすく、特に有利。</td><td><a href="https://x.com/mot_csb/status/541163236062547969">2014/12/6</a>、<a href="https://x.com/mot_csb/status/713283289490939905">2016/3/25</a></td></tr>
+<tr><td>4連鎖ダブル（4ダブ）</td><td>ほぼ互角（ライバル）</td><td>1色発火の4ダブなら五分かややデスタワー有利、2色発火なら4ダブ有利。総合すると4ダブやや有利かもしれない、という見立てです。</td><td><a href="https://x.com/mot_csb/status/607001409452515328">2015/6/6</a>、<a href="https://x.com/mot_csb/status/803893664426508288">2016/11/30</a></td></tr>
+<tr><td>回収率・完全致死率の高い多連鎖</td><td>同等以下</td><td>手数の少ない完全致死を組まれると、デスタワー側は不完全致死で先に撃つしかなく、相手はほぼ全消しなので回し負けます。</td><td><a href="https://x.com/mot_csb/status/695211925643210753">2016/2/4</a>、<a href="https://x.com/mot_csb/status/1143311016501006336">2019/6/25</a></td></tr>
+<tr><td>回収率か完全致死率の低い多連鎖</td><td>同等以上</td><td>上の多連鎖とのあいだに、デスタワーが入る位置づけです。</td><td><a href="https://x.com/mot_csb/status/1143311016501006336">2019/6/25</a></td></tr>
+<tr><td>潰し</td><td>苦手</td><td>運の要素が上がるので、連鎖側が勝てる可能性が増えます。</td><td><a href="https://x.com/mot_csb/status/307001939789488129">2013/2/28</a>、<a href="https://x.com/mot_csb/status/543075157850337281">2014/12/12</a></td></tr>
+<tr><td>ペチ→致死連鎖</td><td>苦手</td><td>ペチで発火点が潰されたり連鎖が途中で途切れたりするのに対処していると、致死の追い打ちを受けます。</td><td><a href="https://x.com/mot_csb/status/548991532032745474">2014/12/28</a></td></tr>
+</tbody></table></div>
+<p>2019年には、多連鎖との関係を次の不等式で書いています（<a href="https://x.com/mot_csb/status/1143311016501006336">2019/6/25</a>）。</p>
+<p class="small">多連鎖（回収率高め＆完全致死率高め）≧デスタワー≧多連鎖（回収率低めor完全致死率低め）</p>
+<p>4ダブがライバルなのに対して、潰しは「目の上のたんこぶ的なイメージ」だと書いています（<a href="https://x.com/mot_csb/status/543075157850337281">2014/12/12</a>）。</p>
+</section>
+<section class="section" id="why"><h2>効率のいい多連鎖に負ける流れ</h2>
+<ol>
+<li>相手が12手以内などの少ない手数で、ほぼ全消しの完全致死を組みます（<a href="https://x.com/mot_csb/status/695211925643210753">2016/2/4</a>）。</li>
+<li>デスタワー側はそれより先に撃つため、手数を縮めて不完全致死で発火するしかなくなります。</li>
+<li>デスタワーはゴミぷよが残りやすく、相手はゴミが少ないので、回し負けます（<a href="https://x.com/mot_csb/status/835783276727959552">2017/2/26</a>）。</li>
+<li>相手の回収率と効率が高いほど、この流れになりやすくなります（<a href="https://x.com/mot_csb/status/835783276727959552">2017/2/26</a>）。逆に完全致死を狙って待つと、手数の少ない相手が先に刺さります（<a href="https://x.com/mot_csb/status/591967651229925376">2015/4/25</a>）。</li>
+</ol>
+<p>例として、13手で不完全致死、ゴミぷよが残るデスタワーは、14手で完全致死かつ全消しの3連鎖に回し負けます（<a href="https://x.com/mot_csb/status/1365329650168172546">2021/2/27</a>）。強いのは3連鎖致死という形そのものではなく、「完全致死ギリギリの回収率の高い連鎖」だ、という説明です（<a href="https://x.com/mot_csb/status/1365329115562143751">2021/2/27</a>、<a href="https://x.com/mot_csb/status/1365329650168172546">2021/2/27</a>）。</p>
+<p>2016年11月には、回収率の高い多連鎖にデスタワーの不完全致死が負けるのは宿命なので、組み方の問題ではないはず、とも書いています（<a href="https://x.com/mot_csb/status/799448204341231616">2016/11/18</a>）。</p>
+</section>
+<section class="section" id="scenes"><h2>厳しい場面と嬉しい場面</h2>
+<p>2016年1月の整理です（<a href="https://x.com/mot_csb/status/689766334498902018">2016/1/20</a>、<a href="https://x.com/mot_csb/status/689766912121700352">2016/1/20</a>）。</p>
+<div class="tblw"><table><thead><tr><th>厳しい場面</th><th>嬉しい場面</th></tr></thead><tbody>
+<tr><td>ペチが刺さり、致死連鎖で追い打ちされる／さらにペチを重ねられて掘りきれない</td><td>ペチが刺さらない</td></tr>
+<tr><td>潰しが刺さる／潰しに対応発火するが、不利な掘り合いになって負ける</td><td>潰しに対応発火して有利な掘り合いになる／別発火で対応して致死か有利な掘り合いになる</td></tr>
+<tr><td>手数の少ない完全致死（主に5連鎖と4ダブ）</td><td>手数の多い完全致死（主に5連鎖と4ダブ）、相手が致死未満</td></tr>
+<tr><td></td><td>こちらの致死未満が潰しとして刺さる</td></tr>
+</tbody></table></div>
+<p>2018年3月には、具体的な勝てる例として、潰し（単発を含む）が刺さらずに致死連鎖を送り返す、潰しに対応発火して掘り合いを制す、回収率の高い14手致死に16手デスタワーで勝つ、10〜11手の多連鎖に13手以内のデスタワーで勝つ、を挙げています（<a href="https://x.com/mot_csb/status/970482637369327616">2018/3/5</a>）。</p>
+</section>
+<section class="section" id="lose"><h2>負けパターンと対策</h2>
+<p>2016年9月に、負け方を次の8つにまとめています（<a href="https://x.com/mot_csb/status/778108789476188160">2016/9/20</a>）。</p>
+<ol>
+<li>速度負け</li>
+<li>手数差負け</li>
+<li>完全致死に不完全致死が負け</li>
+<li>潰されて即死</li>
+<li>潰されて不利な掘り合いになって負け</li>
+<li>ペチ→致死連鎖のコンビネーションに負け</li>
+<li>致死を組めずに負け</li>
+<li>こちらから潰しを撃って負け</li>
+</ol>
+<p>続く投稿で挙げた対策は、速度を上げる、効率を上げて手数差を減らす、潰し耐性を上げる、掘り合いの力を上げる、なるべく完全致死にできるようにする、カウンターは圧殺とセカンドできちんと仕留める、です（<a href="https://x.com/mot_csb/status/778109322370879502">2016/9/20</a>）。</p>
+<h3>速度と効率のどちらを上げるか</h3>
+<ul>
+<li>速度差で負けることが多いなら速度重視、こちらが不完全致死以下で相手がほぼ全消しで負けることが多いなら効率重視、という分け方です（<a href="https://x.com/mot_csb/status/846320824357273600">2017/3/27</a>）。多連鎖のとてもうまい人が相手だと後者が増えるので、効率をある程度意識した方がいい、としています（<a href="https://x.com/mot_csb/status/846319626342432768">2017/3/27</a>）。</li>
+<li>手数の目安：17手以上かかると負ける可能性が上がり、20手以上ならなおさらです（<a href="https://x.com/mot_csb/status/782863703058165760">2016/10/3</a>）。効率重視型でも14手で起爆できるようにならないといけない、としています（<a href="https://x.com/mot_csb/status/719624545196314624">2016/4/12</a>）。</li>
+<li>18手のデスタワーが13手の5連鎖に負けても、手順を改善して15手で発火できれば勝てる、という見直しの仕方を挙げています。ただし、次のツモを知っていて勝つ手順では意味がない、とも書いています（<a href="https://x.com/mot_csb/status/624912632164712448">2015/7/25</a>）。</li>
+<li>効率を上げると勝てる場面は増えますが、とっさにかなりいい判断をすれば13手致死、普通の判断だと19手致死、のような配ぷよが多く、実戦では難しい面があります（<a href="https://x.com/mot_csb/status/970294789798223872">2018/3/4</a>）。</li>
+<li>速度重視型がデスタワーとして崩れて多連鎖に移ると、17手5連鎖などになりやすく、最初から多連鎖を狙う相手や効率重視型のデスタワーに負ける可能性が高い、とも書いています（<a href="https://x.com/mot_csb/status/706063377995444225">2016/3/5</a>）。</li>
+</ul>
+<h3>潰しを撃つかどうか</h3>
+<p>致死連鎖自体が安定していて、デスタワーに有利な配ぷよらしいときに潰しを混ぜるのはよい使い方で、致死連鎖が安定せず、失敗のごまかしで潰しを撃つのはよくない使い方、としています（<a href="https://x.com/mot_csb/status/765779072236523520">2016/8/17</a>）。2010年の時点でも、潰しに成功してもその後に致死連鎖を組めないと掘り返されて負けるので、デスタワー側の潰しはそこまで強い戦法ではない、と書いています（<a href="https://x.com/mot_csb/status/8582493602">2010/2/3</a>）。</p>
+</section>
+<section class="section" id="deal"><h2>例外：配ぷよで決まってしまう負け</h2>
+<p>相手が大きなミスをしない限り負ける配ぷよは、デスタワー側にも多連鎖側にもあります（<a href="https://x.com/mot_csb/status/834208387118227456">2017/2/22</a>）。判断が最良なら勝てるが、少しでも甘いと勝てない配ぷよで負けるのがきつい、とも書いています（<a href="https://x.com/mot_csb/status/970295336274030593">2018/3/4</a>）。</p>
+<ul>
+<li><b>3色以下で連結の少ない塊がたくさんできる</b>：もう発火するしかないのに致死にならない形で、組み方を工夫しても結果を変えにくいパターンです（<a href="https://x.com/mot_csb/status/834202502320959489">2017/2/22</a>、<a href="https://x.com/mot_csb/status/837595443802456065">2017/3/3</a>）。</li>
+<li><b>起爆色が来ない</b>：致死テンパイ前から、オーバーキルで手数が多くなるまでずっと起爆色が来ない例を、デスタワー1本で戦う場合の明確な弱点として挙げています（<a href="https://x.com/mot_csb/status/996610176131121152">2018/5/16</a>、下の折りたたみに図）。</li>
+<li><b>多色発火の多連鎖</b>：相手の多連鎖が複数の色で発火できるのに、1色発火のデスタワー側は発火が遅れる場面があります（<a href="https://x.com/mot_csb/status/970483272953180161">2018/3/5</a>）。</li>
+</ul>
+</section>
+<section class="section" id="betsu"><h2>似ているが別の話</h2>
+<ul>
+<li><a href="/puyo/death-tower/lethal-amount/">致死量と起爆判断</a>：完全致死と不完全致死、お互い致死のときの勝ち負けの基本（完成が早い方が勝つなど）はこちらです。このページは、相手の連鎖の種類ごとの話です。</li>
+<li><a href="/puyo/death-tower/speed-and-garbage/">デスタワーと5連鎖の速度・ゴミぷよ許容量</a>：5連鎖との1.5手差の計算と、置いてよいゴミぷよの数です。</li>
+<li><a href="/puyo/death-tower/crush-resistance/">潰し耐性と形の選択</a>・<a href="/puyo/death-tower/alternative-ignition/">別発火</a>：潰しを受けたときの形と対応の手順です。</li>
+<li>ルールが変わった場合：クイックターンができると不完全致死を送っても回される回数が増え、おつりがなくなるとカウンターに対する優位が減るので、どちらもデスタワーの弱体化になる、と書いています（<a href="https://x.com/mot_csb/status/1074523588588269568">2018/12/17</a>）。このページの有利不利は初代のルールでの話です。</li>
+</ul>
+</section>
+<section class="section" id="kininaru"><h2>気になること</h2>
+<ul>
+<li>2017年1月の勝敗パターンの整理では、潰し（対応発火されない／される）、致死失敗（対応発火されない／される）、カウンター関係の項目が見出しだけで、勝ちやすい側は書かれていません（<a href="https://x.com/mot_csb/status/816580413929889792">2017/1/4</a>）。</li>
+<li>4ダブとの関係は、総合で4ダブやや有利「とかになるかも」という書き方で、1色発火と2色発火の割合を数えた記録は見つかっていません（<a href="https://x.com/mot_csb/status/803893664426508288">2016/11/30</a>）。</li>
+<li>カウンターに対しては、おつりがあることでデスタワーが優位という書き方ですが（<a href="https://x.com/mot_csb/status/1074523588588269568">2018/12/17</a>）、テストAIにカウンター5連鎖を合わせられ、同じ配ぷよで何度撃っても追撃が間に合わず負けた例もあります（<a href="https://x.com/mot_csb/status/519490518758092800">2014/10/7</a>）。どの条件なら優位なのかは、まとまった資料がありません。</li>
+</ul>
+</section>
+<section class="section"><details class="more"><summary>元の投稿（全文）</summary><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/8582493602">2010年2月3日</a></p><p>つぶしに成功しても、その後にきちんと致死連鎖を組めないと掘り返した相手に負けてしまう可能性もある。今のところ、デスタワー使用時のつぶしはそこまで強い戦法ではないと思います。</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/290745574116950016">2013年1月14日</a></p><p>デスタワーメモ。致死の打ち合いで勝ち越せる人が相手の場合、何回か勝つと潰しを多用するようになることがとても多い。これをうまく捌けるようになりたい</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/290747247430340608">2013年1月14日</a></p><p>デスタワーメモ。1段程度の潰しを食らって起爆点が埋もれる&gt;対応してるところに致死連鎖を食らうのは負けパターン。相手が賭けに勝ったといえるが抵抗してみたい</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/307001939789488129">2013年2月28日</a></p><p>初代ぷよ。同程度の実力の2人がデスタワーと連鎖系で正面から致死勝負をした場合はデスタワー側に分があります。それを覆す要素が潰し。運要素が上がるので連鎖側が勝てる可能性が増えます。大負けする可能性も増えるかな？</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/519490518758092800">2014年10月7日</a></p><p>テストAIとぷよってたらデスタワーにカウンター5連鎖を合わせられて負けてビビった。同じ配ぷよでテストAIがカウンターを起爆させてくるタイミングでデスタワーを何回売っても追撃連鎖が間に合わず負けた。テストAIつよい</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/541163236062547969">2014年12月6日</a></p><p>デスタワーと5連鎖の関係について(ブログにまとめる予定)<br><br>5連鎖致死に必要なぷよは20個<br>デスタワー致死に必要なぷよは23個<br>↓<br>1.5手差あり<br>↓<br>5連鎖の後でデスタワーが追い抜けるのは3手が目安<br>↓<br>3-1.5=1.5手デスタワー側が優位と考えてる</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/543075157850337281">2014年12月12日</a></p><p>デスタワーのライバルは4ダブだと勝手に思ってる<br>潰しは目の上のたんこぶ的なイメージ</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/548991532032745474">2014年12月28日</a></p><p>Bぷよ<br>ぺち→致死のコンボがかなり強いと思う<br>デスタワー相手にも有効だし、多連鎖相手にも強いと思う<br><br>ぺちで発火点が潰されたり連鎖が途中で途切れるのを対処しようとしたら致死の追い打ちを食らう感じ</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/591967651229925376">2015年4月25日</a></p><p>@mojira23 のしさん対TAKさんが物凄くわかりやすかったですね<br>のしさんの4ダブなどの回収率が異様に高くてゴミがほとんどないので、不完全致死のデスタワーが回し負けて、完全致死を狙うと手数が少ない4ダブが先に刺さる場面がよくありました。</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/607001409452515328">2015年6月6日</a></p><p>ブログでアップする用の初代ぷよの大雑把な有利不利メモ<br>デスタワー<br>連鎖時間が短い<br>完全致死に必要なぷよ数：23個<br>5連鎖致死に対しては1.5手差の有利<br>4連鎖致死に対してはほぼ互角<br>効率に優れた多連鎖に対して手数短縮を意識すると不完全致死になり回し負けの危険あり</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/607002786232856576">2015年6月6日</a></p><p>Q.<br>デスタワーは強いですか<br>A.<br>判断が甘くても致死にしやすく、ごまかしが効きやすい<br>5連鎖に対して手数差で有利<br>4ダブがライバル<br>効率のいい多連鎖に対して不完全致死の発火を強要されて回し負ける展開がある<br>潰しに弱い形がある←潰しからの追い打ちがライバル</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/624912632164712448">2015年7月25日</a></p><p>18手デスタワーが13手5連鎖に負ける<br>↓<br>手順を改善して15手発火にすると勝てる<br><br>みたいな感じ<br>未来予知をして勝っても意味はない</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/689766334498902018">2016年1月20日</a></p><p>デスタワーが厳しい場面<br><br>ペチが刺さる→致死連鎖での追い打ち<br><br>ペチが刺さる→さらにペチペチで掘りきれず死ぬ<br><br>潰しが刺さる<br><br>潰しに対応発火するが不利な堀合になり負ける<br><br>手数の少ない完全致死(主に5連鎖と4ダブ)</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/689766912121700352">2016年1月20日</a></p><p>デスタワーが嬉しい場面<br><br>ペチが刺さらない<br><br>潰しに対応発火して有利な堀合になる<br><br>潰しに別発火で対応発火し致死か有利な堀合に<br><br>手数の多い完全致死(主に5連鎖と4ダブ)<br><br>致死未満<br><br>こちらの致死未満が潰しとして刺さる</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/689767595264770048">2016年1月20日</a></p><p>デスタワーが厳しい場面<br><br>発火色が来ずに窒息したりペチに負ける<br><br>ずらしタワーで速度が出ずに負ける<br><br>スプリットで欲しい色が来ずに崩壊<br><br>後ろが高くなり崩壊<br><br>3連鎖移行にしたけど本来の部分だけで致死になってしまった<br><br>3連鎖回収で速度負け</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/695211925643210753">2016年2月4日</a></p><p>デスタワーが辛いのは、12手以内のほぼ全消しの完全致死<br><br>手数が少ない完全致死なのでデスタワー側は不完全致死の発火を強要されるのに、ほぼ全消しだからほぼ確実に回し負ける流れ</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/706063377995444225">2016年3月5日</a></p><p>#ブログ用メモ<br>速度重視型のデスタワーがデスタワーとしては崩壊した場合に多連鎖移行するのはよく見かけるが、その場合は17手5連鎖などになる場合が多く、最初から多連鎖を狙ったり効率重視型のデスタワーに負ける可能性が高い</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/709198519567908864">2016年3月14日</a></p><p>デスタワーが3連鎖になってしまった場合<br>手数が多くかかってるだけでなくて<br>4ダブと1連鎖しか差がなくなってしまうのもキツいんだと思う<br>デスタワーに対して厳しいのは前提として</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/713283289490939905">2016年3月25日</a></p><p>手数が少ないデスタワーが2クアだった場合は5連鎖に対して特に有利っぽい<br>↑19個消しで完全致死になりやすい<br>↑5連鎖側が致死を完成させるのが遅れる配ぷよパターンのはずなので</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/719624545196314624">2016年4月12日</a></p><p>効率重視型のデスタワーは14手で起爆できるようにならないといけない<br><br>18手起爆になると速度重視型のデスタワーに負けるのは当然だし、他の連鎖法にも分が悪くなるので</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/765779072236523520">2016年8月17日</a></p><p>〇致死連鎖自体は安定してるけど、タワー有利の配ぷよっぽいので潰しで妨害するのを混ぜる<br><br>×致死連鎖自体が安定してなくて、連鎖失敗のごまかしで潰しを撃ってみることが多い</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/778108789476188160">2016年9月20日</a></p><p>デスタワーが負けるのは<br><br>速度負け<br>手数差負け<br>完全致死に不完全致死が負け<br>潰されて即死<br>潰されて不利な堀合になって負け<br>ペチ→致死連鎖のコンビネーションに負け<br>致死組めずに負け<br>こちらから潰しを撃って負け<br><br>くらいがメイン</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/778109322370879502">2016年9月20日</a></p><p>速度を上げる<br>効率を上げて手数差を減らす<br>潰し耐性を上げる<br>堀合能力を上げる<br>なるべく完全致死にできるようにする<br>カウンターは圧殺とセカンドでキチンと殺す</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/782863703058165760">2016年10月3日</a></p><p>デスタワーで17手以上かかると負ける可能性が上がる<br>20手以上ならなおさら</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/799448204341231616">2016年11月18日</a></p><p>回収率の高い多連鎖にデスタワーの不完全致死が負けるのは宿命なのであざーどさんの組み方がどうこうという話ではないはず</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/803893664426508288">2016年11月30日</a></p><p>4ダブ(1色発火)だとデスタワーと五分かややデスタワー有利で<br>4ダブ(2色発火)だと4ダブ有利<br><br>総合すると4ダブやや有利とかになるかも<br><br>2色発火の割合が高まるほど4ダブ側が有利になる感じ</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/815874555449262080">2017年1月2日</a></p><p>多連鎖側が極まってくると、デスタワー側は不完全致死しか撃てずに負ける配ぷよが増える</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/816580413929889792">2017年1月4日</a></p><p>勝敗のパターンはある程度まとめられるはず<br>・お互い致死：完成が早い方が勝つ<br>・不完全致死vs完全致死：完全致死が勝つ<br>・不完全致死同士：完成が早い方が勝ちやすい<br>・潰し<br>　対応発火されない：<br>　対応発火される<br>・致死失敗<br>　対応発火されない<br>　対応発火される<br>・カウンター関係</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/834202502320959489">2017年2月22日</a></p><p>3色で連結少なめのものが沢山できて、もう発火するしかないけど致死にならない<br><br>というのが何回かあった<br>あれはデスタワーの負けパターンの１つだと思う<br>組み方を工夫しても結果を変えるのは難しいパターン</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/834208387118227456">2017年2月22日</a></p><p>デスタワー側が負ける配ぷよもあるよねという話<br><br>相手が大きなミスをしない限り負ける配ぷよがデスタワー側にも多連鎖側にもある</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/835783276727959552">2017年2月26日</a></p><p>デスタワー<br>ペチに弱い場合がある<br>多連鎖相手に不完全致死を先にうっても、相手のゴミが少ないと回し負ける場面が多い<br>ゴミぷよが残りやすいので、相手が不完全致死でも回し負けやすい<br><br>多連鎖相手の場合、相手の回収率と効率が高ければ高いほど厳しくなる（はず）</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/837595443802456065">2017年3月3日</a></p><p>デスタワーの負けパターンの1つ<br>3色以下で連結数少なめのものが沢山できて、ここから伸ばすのが難しい形<br><br>ぷよｍ＠ｓ part6の最終戦というとわかる人にはわかりやすいかも<br>↑あれは美希がおじゃまぷよ算を理解しきれてなかっただけだけど</p><div class="twi"><img loading="lazy" src="/puyo/death-tower/assets/x/C5-8nXkU0AEC3Ek.jpg" alt="投稿の図"></div></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/846319626342432768">2017年3月27日</a></p><p>デスタワー<br>多連鎖のすごくうまい人が相手になると、<br>こちら不完全致死、相手ほぼ全消しで負けるパターンがかなり増えるので、<br>効率をある程度は意識した方がいいかもしれない</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/846320824357273600">2017年3月27日</a></p><p>速度差で負けることが多いなら速度重視もいいけど<br>こちら不完全致死以下で相手がほぼ全消しで負ける場合は効率を重視するといいんじゃないかという話<br><br>で、速度重視の人は速度では(比較的)負けにくいんじゃないかな<br>速度でも負けてるとなると、速度重視の割にはそこまで速度が出てないのかも</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/970294460503408641">2018年3月4日</a></p><p>デスタワーが多連鎖に負ける例<br>・組みきれずに負ける（連結伸ばしようがなくなるやつ含む）<br>潰されて負ける<br>・致死まで育ってないのに相手の致死連鎖開始して対応発火してもやっぱり足りなくて負ける<br>・相手完全致死でこちら不完全致死で負ける<br>・連鎖移行するも効率差で負ける<br>・潰し刺さらず負ける</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/970294789798223872">2018年3月4日</a></p><p>デスタワーの効率が上がると勝てる場合が増えるけど、その効率を上げるのはとっさのかなりいい判断をしないといけないので厳しい<br><br>例<br>とっさのかなりいい判断だと13手致死だけど、普通の判断だと19手致死みたいなやつ</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/970295336274030593">2018年3月4日</a></p><p>デスタワー側の判断がよくても負ける配ぷよは存在するので、それは仕方ない<br><br>判断が最良なら勝てるけど、それより少しでも甘いと勝てない、という配ぷよで負けるのがキツい</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/970482637369327616">2018年3月5日</a></p><p>■デスタワーが負ける例<br>・単発の潰し→手が止まる→追い打ち致死<br><br>■デスタワーが勝てる例<br>・潰し（単発含む）が刺さらず致死連鎖を送り返す<br>・潰し（単発含む）に対して対応発火→堀合を制す<br>・回収率の高い14手致死に対して16手デスタワー<br>・10～11手多連鎖に対して13手以内デスタワー</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/970483272953180161">2018年3月5日</a></p><p>■デスタワーが負ける例<br>・多色発火の多連鎖致死に対して1色発火のデスタワー側の発火が遅れる<br>・デスタワー側が先打ちするも、不完全致死+ゴミ多めなのでほぼ全消しの多連鎖に回し負ける</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/976398491042770945">2018年3月21日</a></p><p>効率に優れる多連鎖に対してデスタワーは不完全致死(未満)で負けやすい<br><br>デスタワー側も効率を突き詰めると差を縮められるはず</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/996610176131121152">2018年5月16日</a></p><p>デスタワー<br>1枚目（致死テンパイ前）<br>2枚目（オーバーキル＆手数多数）<br>までずっと起爆色（緑）が来ない現象がもどかしい<br>デスタワー1本の場合の明確な弱点だと思う（いわゆる負ける配ぷよ）</p><div class="twi"><img loading="lazy" src="/puyo/death-tower/assets/x/DdSrp1qUwAElDiV.jpg" alt="投稿の図"><img loading="lazy" src="/puyo/death-tower/assets/x/DdSrqwMU0AA7zFU.jpg" alt="投稿の図"></div></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/1074523588588269568">2018年12月17日</a></p><p>クイックターンが可能になる→不完全致死を送っても回される回数が増える→デスタワー弱体化<br><br>おつりがなくなる→カウンターに対してのデスタワーの優位が減る→デスタワー弱体化</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/1143311016501006336">2019年6月25日</a></p><p>多連鎖（回収率高め＆完全致死率高め）≧デスタワー≧多連鎖（回収率低めor完全致死率低め）</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/1365329115562143751">2021年2月27日</a></p><p>初代ぷよ<br>3連鎖致死が強いというよりは、完全致死ギリギリの回収率の高い連鎖が強いんだと思います<br><br>デスタワーは回収率が低いというよりは「完全致死ギリギリで回収率を高くしにくい」んだと思います<br><br>16手全消しデスタワーは確かに回収率は高いですけど手数が多めですし<br><br>（続く）</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/1365329650168172546">2021年2月27日</a></p><p>「13手デスタワー（不完全致死かつゴミぷよが残る）」とかだと「14手3連鎖（完全致死かつ全消し）」に回し負ける感じ<br><br>デスタワー側の「甘えが許されない」＆「勝てない配ぷよが多くなりやすい」感じ<br><br>「完全致死ギリギリの回収率の高い連鎖」isGOD</p></div></details></section>
+<p><a href="/puyo/death-tower/">デスタワー攻略へ戻る</a></p>
+</div></main>
+<footer class="footer"><div class="wrap">Come sono bravo?　｜　作成：MOT<br>ゲームの権利は各権利者に帰属します。</div></footer>
+</body>
+</html>
