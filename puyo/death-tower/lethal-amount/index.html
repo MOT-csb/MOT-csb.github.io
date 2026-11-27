@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>デスタワーの致死量と起爆判断｜Come sono bravo?</title>
+<meta name="description" content="初代ぷよぷよのデスタワーで、致死量を手数とゴミぷよの数で見積もる目安、連鎖の形ごとの必要ぷよ数、起爆判断の手順、完全致死と不完全致死の勝ち負けをまとめたページ。">
+<link rel="stylesheet" href="/assets/research.css">
+<style>
+.article{max-width:900px}.article h2{margin-top:2rem}.article h3{margin-top:1.3rem}.lead{font-size:1.05em}
+.boards{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;margin:12px 0 18px}.boards figure{margin:0}.boards figcaption{font-size:13px;line-height:1.5;margin-top:6px}
+.boards img{max-width:150px;width:100%;height:auto;display:block}
+.pb{display:grid;grid-template-columns:repeat(6,14px);grid-auto-rows:14px;gap:1px;padding:3px;width:max-content;background:#1d2433;border-radius:4px;text-decoration:none}.pb span{display:block;border-radius:50%}
+.p.red{background:#e5484d}.p.blue{background:#3e7bfa}.p.yellow{background:#f5c400}.p.green{background:#30a46c}.p.purple{background:#8e4ec6}.p.garbage{background:#bbb}.p.block{background:#8a8f98;border-radius:2px}
+.quote{border-left:4px solid var(--accent,#245e47);padding:6px 14px;margin:10px 0;background:var(--paper)}.src{font-size:12px;color:var(--muted)}
+details.more{margin:12px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:2px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}
+.article table{width:100%;min-width:0}.article th,.article td{vertical-align:top}
+.steps{padding-left:1.4em}.steps li{margin:6px 0}
+@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}}.tsumo{line-height:1}.tz{display:inline-flex;flex-direction:column;align-items:center;margin:0 2px 8px;vertical-align:top}.tz small{font-size:10px;color:var(--muted,#667);margin-bottom:2px}.pz{width:12px;height:12px;border-radius:50%;display:block;margin:1px 0}
+.orig{margin:4px 0}.flow{border-left:3px solid var(--line);padding-left:14px}.boards.linear{margin:8px 0 12px}
+.toc{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px}.note{font-size:14px}
+.txtboard{font-family:monospace;line-height:1.15;font-size:14px;background:var(--paper);display:inline-block;padding:6px 10px;margin:6px 0}
+</style>
+</head>
+<body>
+<header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/puyo/death-tower/">デスタワー</a><span aria-hidden="true"> / </span><b>致死量と起爆判断</b></div><p class="kicker">DEATH TOWER / LETHAL AMOUNT</p><h1>デスタワーの致死量と起爆判断</h1><p>手数とゴミぷよの数で致死量を見積もり、起爆ぷよが見えたら確かめて発火する。その目安と例外をまとめました。</p></div></div>
+<main class="main"><div class="wrap article">
+<style>
+.tw{border-bottom:1px solid var(--line,#ddd);padding:10px 0}.tw p{margin:4px 0;overflow-wrap:anywhere}.twd{font-size:13px;color:var(--muted,#667)}.twi{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}.twi img{max-width:min(100%,260px);height:auto;border-radius:6px;border:1px solid var(--line,#ddd)}
+.tblw{overflow-x:auto}
+</style><section class="section">
+<p class="lead">デスタワーの致死量は、細かいおじゃまぷよ算をしなくても、手数と、連鎖に使えなかったぷよ（ゴミぷよ）の数でおおよそ判断できます。15手を基本に、全部のぷよを連鎖に使えていれば12〜13手でも致死になり、ゴミぷよが増えるほど足りなくなります。</p>
+<p>計算するタイミングは、起爆ぷよがネクストに見えたときです。それまでは最適な位置に置くことに専念し、見えたら一瞬手を止めて致死量に届いているかを確かめます。届いていれば、迷わず発火します。</p>
+</section>
+<section class="section" id="rule"><h2>手数とゴミぷよの目安</h2>
+<div class="tblw"><table><thead><tr><th>状況</th><th>目安</th><th>出典</th></tr></thead><tbody>
+<tr><td>基本</td><td>15手</td><td><a href="https://x.com/mot_csb/status/7732719643">2010/1/14</a></td></tr>
+<tr><td>全部のぷよを連鎖に使えている</td><td>12〜13手で起爆しても致死</td><td><a href="https://x.com/mot_csb/status/7732719643">2010/1/14</a></td></tr>
+<tr><td>14手でゴミぷよが2個以内</td><td>まず致死と考えてよい</td><td><a href="https://x.com/mot_csb/status/247705320653213697">2012/9/17</a></td></tr>
+<tr><td>ゴミぷよが多い</td><td>その数に応じて致死量に足りなくなる</td><td><a href="https://x.com/mot_csb/status/7732719643">2010/1/14</a></td></tr>
+</tbody></table></div>
+<p>補足：慣れてくると、実際には消える個数でなんとなく分かるようになる、とも書いています（<a href="https://x.com/mot_csb/status/247705320653213697">2012/9/17</a>）。</p>
+</section>
+<section class="section" id="count"><h2>連鎖の形ごとの致死に必要なぷよ数</h2>
+<p>2016年1月に、致死に必要なぷよ数の認識を次のようにまとめています。デスタワーは2連鎖マルチ（2連鎖目で複数の色を同時に消す形）にあたります。</p>
+<div class="tblw"><table><thead><tr><th>連鎖の形</th><th>致死に必要なぷよ数</th></tr></thead><tbody>
+<tr><td>5連鎖</td><td>20個</td></tr>
+<tr><td>4連鎖ダブル</td><td>22個</td></tr>
+<tr><td>3連鎖マルチ</td><td>23個</td></tr>
+<tr><td>2連鎖マルチ（デスタワー）</td><td>23個</td></tr>
+</tbody></table></div>
+<p class="small">出典：<a href="https://x.com/mot_csb/status/691380904099516417">2016/1/25</a>。前日には40・42・43個と書き、数え間違いとして20・22・23個に直しています（<a href="https://x.com/mot_csb/status/691241708248440832">2016/1/24</a>、<a href="https://x.com/mot_csb/status/691246628590628864">2016/1/24</a>）。</p>
+<ul>
+<li><b>5連鎖との差</b>：5連鎖が20個、デスタワーが23個なので約1.5手の差があります。一方で連鎖時間が短く、5連鎖の後からでも3手差までなら追い抜けるので、差し引き1.5手デスタワーが有利、という考え方です。詳しくは<a href="/puyo/death-tower/speed-and-garbage/">デスタワーと5連鎖の速度・ゴミぷよ許容量</a>（<a href="https://x.com/mot_csb/status/541163236062547969">2014/12/6</a>）。</li>
+<li><b>4連鎖ダブルとの差</b>：22個と23個で肉薄していて、4ダブがライバル、4連鎖致死に対してはほぼ互角とされています（<a href="https://x.com/mot_csb/status/691241708248440832">2016/1/24</a>、<a href="https://x.com/mot_csb/status/607001409452515328">2015/6/6</a>）。</li>
+<li><b>3連鎖への移行</b>：3連鎖マルチや3連鎖回収は2連鎖マルチより必要なぷよ数が多くなります。相手がきれいに2連鎖マルチにしてくると分が悪い一方、どちらも2連鎖マルチなら速度勝ちしやすい、という整理です（<a href="https://x.com/mot_csb/status/492611829030322176">2014/7/25</a>、<a href="https://x.com/mot_csb/status/675926031736307713">2015/12/13</a>）。3連鎖ダブルの場合は、3連鎖目で消すぷよが15個以上が最低ラインとしています（<a href="https://x.com/mot_csb/status/7118113340">2009/12/28</a>）。</li>
+</ul>
+</section>
+<section class="section" id="exceptions"><h2>例外：個数だけでは足りない場合</h2>
+<ul>
+<li><b>色数が少ないとき</b>：20個以上消したのに、4個消しで3色だったため致死量にならなかった例があります（<a href="https://x.com/mot_csb/status/2706475830">2009/7/18</a>）。3色の場合は、つなげるボーナス（連結ボーナス）で数え、9点以上で致死という目安も挙げています（<a href="https://x.com/mot_csb/status/5279247849">2009/10/30</a>）。</li>
+<li><b>2クア（2連鎖目で4色同時消し）のとき</b>：19個消しで完全致死になりやすく、5連鎖に対して特に有利になりやすいとしています（<a href="https://x.com/mot_csb/status/713283289490939905">2016/3/25</a>）。</li>
+<li><b>はなれを作ったとき</b>：起爆部分に必要なぷよが6個になるので、完全致死に13手以上必要になります（<a href="https://x.com/mot_csb/status/888572974848032768">2017/7/22</a>）。</li>
+</ul>
+<p>点数で説明するなら、10段4200点、11段4620点、12段5040点を軸にするとよい、という投稿もあります（<a href="https://x.com/mot_csb/status/699167029094264833">2016/2/15</a>）。</p>
+</section>
+<section class="section" id="steps"><h2>起爆までの判断の手順</h2>
+<ol>
+<li>起爆ぷよがネクストに見えるまでは、最適な位置に置くことに専念します。常に計算していると高速で組めません（<a href="/puyo/death-tower/memos-2009-extra/">2009年5月30日の記事</a>）。</li>
+<li>起爆ぷよがネクストに見えたら、手数とゴミぷよの数で致死量に届いているかを確かめます。</li>
+<li>届いていれば迷わず発火します。致死量の確認から発火までに手が止まると、最上位クラスの相手にはその躊躇で抜かれることが多い、と書いています（<a href="https://x.com/mot_csb/status/493755755917348866">2014/7/28</a>）。</li>
+<li>届いているなら、3列目にゴミぷよが残るのを嫌いすぎずに起爆します（逆タワーの場合、<a href="https://x.com/mot_csb/status/4125092858560512">2010/11/15</a>）。</li>
+<li>2連鎖では微妙なときは、<a href="/puyo/death-tower/transition-decision/">3連鎖への移行</a>を考えます。2連鎖では足りず、降ってくるぷよとネクストで3連鎖が完成し、3連鎖なら足りる、の3条件がそろえば、3連鎖にした方が連鎖終了まで早くなります。</li>
+</ol>
+</section>
+<section class="section" id="chigiri"><h2>致死量を超えたらちぎらない</h2>
+<p>致死量を超えたあとは、点数を上げるより、ちぎり（組ぷよが段差で分かれて落ちること）を避けて完成を早める方を優先します。高い場所からのちぎりは極力避け、致死量を超えていたら厳禁としています（<a href="https://x.com/mot_csb/status/286596403306823680">2013/1/3</a>）。</p>
+<ul>
+<li><a href="/puyo/death-tower/memos-2015/">終盤での致死量把握してのちぎり回避</a>（2015年3月27日）：ネクストの緑を見てちぎりを回避すれば、致死完成までの時間を短縮できます。</li>
+<li><a href="/puyo/death-tower/memos-2016-feb/">致死量に到達しているのでちぎってはいけない例</a>（2016年2月5日）：青の4連結で完全致死が確定する場面です。</li>
+<li>2016年3月6日の投稿でも、ほぼ完全致死の点数があるので、黄ゾロをちぎらずに6列目か2列目に捨てた方が速い例を挙げています（下の折りたたみに図）。</li>
+</ul>
+<p>補足：従来式（1式）で3列目の1段目と3段目に同じ色を置き、その色が来ないと、致死量に届いても起爆後に3列目に2段残ります。参式ならその心配がない、というのが参式の利点の一つです（<a href="https://x.com/mot_csb/status/12812424623">2010/4/25</a>）。</p>
+</section>
+<section class="section" id="kanzen"><h2>完全致死と不完全致死の勝ち負け</h2>
+<p>同じ致死連鎖でも、完全致死か不完全致死かで、相手の連鎖との勝ち負けが変わります。2017年1月の整理は次のとおりです（<a href="https://x.com/mot_csb/status/816580413929889792">2017/1/4</a>）。</p>
+<div class="tblw"><table><thead><tr><th>組み合わせ</th><th>勝ちやすい側</th></tr></thead><tbody>
+<tr><td>お互い致死</td><td>完成が早い方</td></tr>
+<tr><td>不完全致死と完全致死</td><td>完全致死</td></tr>
+<tr><td>不完全致死同士</td><td>完成が早い方</td></tr>
+</tbody></table></div>
+<p>デスタワーは判断が甘くても致死にしやすい一方、効率のいい多連鎖に対して手数を縮めようとすると不完全致死になり、回し負ける危険があります（<a href="https://x.com/mot_csb/status/607001409452515328">2015/6/6</a>、<a href="https://x.com/mot_csb/status/607002786232856576">2015/6/6</a>）。2021年には、デスタワーは回収率が低いというより、完全致死ギリギリで回収率を高くしにくいのだと説明し、13手の不完全致死でゴミぷよが残るデスタワーは、14手で完全致死かつ全消しの3連鎖に回し負ける例を挙げています（<a href="https://x.com/mot_csb/status/1365329115562143751">2021/2/27</a>）。</p>
+<p>補足：完全致死と不完全致死を分ける点数の境目は、元の資料には書かれていません。</p>
+</section>
+<section class="section" id="mistakes"><h2>よくある失敗と練習</h2>
+<ul>
+<li><b>ギリギリを超えたところの判断</b>：足りていないのはよく分かるが、ギリギリ超えたところの判断が甘く、まだ足りないと思ってテンパイ（起爆ぷよを待つだけの状態）のまま起爆できずに負けた、という2010年の対戦の振り返りがあります（<a href="https://x.com/mot_csb/status/29547378555">2010/11/3</a>）。<a href="/puyo/death-tower/match-review-2010/">対戦の振り返り</a>にも、致死量を読み違えて起爆が遅れた場面があります。</li>
+<li><b>速度を上げすぎる</b>：速度を上げると致死量判断が雑になり、オーバーキル（必要以上に消すこと）が増えます（<a href="https://x.com/mot_csb/status/710121724113592322">2016/3/17</a>）。</li>
+<li><b>練習方法</b>：致死量の判断は、机上とシミュレータで検討したうえで数をこなして慣れていくものだ、としています。自分で一通り机上で計算してみることも勧めています（<a href="https://x.com/mot_csb/status/708284181009203200">2016/3/11</a>、<a href="https://x.com/mot_csb/status/709611526143934464">2016/3/15</a>）。</li>
+<li><b>手数の少なさにこだわらない</b>：12手の完全致死などは配ぷよがよければ組めてしまう類いのもので、大事なのは悩まずに捌けるパターンを増やすこと、としています（<a href="https://x.com/mot_csb/status/496971524885082112">2014/8/6</a>）。</li>
+</ul>
+<p>実際の起爆手数と点数の記録は、<a href="/puyo/death-tower/video-analysis/#shibari-count">デスタワー縛り対戦の起爆までの手数（2009年）</a>や、ぷよm@sの配ぷよを組み直した<a href="/puyo/death-tower/x-2009-2011/">2010年のX投稿</a>（13〜18手起爆の完全致死・不完全致死の例が多数）にあります。</p>
+</section>
+<section class="section" id="kininaru"><h2>気になること</h2>
+<ul>
+<li>完全致死と不完全致死の境目が、点数や段数で書かれた資料は見つかっていません。2016年の10段・11段・12段の点数とどう対応するのかも分かりません。</li>
+<li>2010年の目安（15手が基本）と、2014〜2016年の必要ぷよ数（デスタワーは23個）の関係は、どちらの資料にも書かれていません。</li>
+<li>3色の場合の、つなげるボーナス9点以上という目安は2010年の投稿1件だけで、後年に確かめた記録は見つかっていません。</li>
+</ul>
+</section>
+<section class="section"><details class="more"><summary>元の投稿（全文）</summary><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/7732719643">2010年1月14日</a></p><p>DTKM4：致死量の判断はほぼ感覚になる、ただ、目安はある。１５手を基本として、連鎖に使えなかったぷよの数で判断。全て連鎖につかえていれば１２～１３手で起爆しても致死にいき、無駄ぷよの数に応じて致死量に足りなくなるのがわかってくる</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/247705320653213697">2012年9月17日</a></p><p>たまにはデスタワーについて呟いてみる。デスタワーの致死量計算は細かい計算は意識しなくても、｢手数とゴミぷよの数｣で結構わかります。例えば、｢14手でゴミぷよが2個以内ならまず致死と考えていい｣などです。実際は消える個数でなんとなくわかってきますがね(ノ∀｀)</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/691241708248440832">2016年1月24日</a></p><p>自分の致死量の認識は<br><br>5連鎖→40個<br>4連鎖ダブル→42個<br>2連鎖マルチ→43個<br><br>なので、4ダブと2連鎖マルチはかなり肉薄してる</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/691246628590628864">2016年1月24日</a></p><p>数え間違えてました<br><br>自分の致死量の認識は<br><br>5連鎖→20個<br>4連鎖ダブル→22個<br>2連鎖マルチ→23個<br><br>ですね</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/691380904099516417">2016年1月25日</a></p><p>自分の致死量の認識は<br><br>5連鎖→20個<br>4連鎖ダブル→22個<br>3連鎖マルチ→23個<br>2連鎖マルチ→23個<br><br>です<br><br>3連鎖マルチを追加</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/541163236062547969">2014年12月6日</a></p><p>デスタワーと5連鎖の関係について(ブログにまとめる予定)<br><br>5連鎖致死に必要なぷよは20個<br>デスタワー致死に必要なぷよは23個<br>↓<br>1.5手差あり<br>↓<br>5連鎖の後でデスタワーが追い抜けるのは3手が目安<br>↓<br>3-1.5=1.5手デスタワー側が優位と考えてる</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/607001409452515328">2015年6月6日</a></p><p>ブログでアップする用の初代ぷよの大雑把な有利不利メモ<br>デスタワー<br>連鎖時間が短い<br>完全致死に必要なぷよ数：23個<br>5連鎖致死に対しては1.5手差の有利<br>4連鎖致死に対してはほぼ互角<br>効率に優れた多連鎖に対して手数短縮を意識すると不完全致死になり回し負けの危険あり</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/607002786232856576">2015年6月6日</a></p><p>Q.<br>デスタワーは強いですか<br>A.<br>判断が甘くても致死にしやすく、ごまかしが効きやすい<br>5連鎖に対して手数差で有利<br>4ダブがライバル<br>効率のいい多連鎖に対して不完全致死の発火を強要されて回し負ける展開がある<br>潰しに弱い形がある←潰しからの追い打ちがライバル</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/675926031736307713">2015年12月13日</a></p><p>致死量に必要なぷよ数<br>3連鎖回収＞2連鎖マルチ<br>なので、相手がキレイに2連鎖マルチにしてくると分が悪い<br><br>しかし、どちらも2連鎖マルチを組めた場合は速度勝ちしやすい<br><br>2連鎖マルチにできた場合の速度勝ちを最優先した組み方と言える</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/492611829030322176">2014年7月25日</a></p><p>3連鎖マルチは4連鎖ダブルや2連鎖マルチよりも致死に必要なぷよ数が多いです</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/7118113340">2009年12月28日</a></p><p>デスタワーメモ：３連鎖ダブルの場合の致死量の最低ラインは、３連鎖めで消すぷよの数が１５個以上みたいです。</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/2706475830">2009年7月18日</a></p><p>さっき対戦したんですが、デスタワーで２０個以上消したのに致死量にならない時がありました。４個消しで３色だった模様。</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/5279247849">2009年10月30日</a></p><p>デスタワーの致死量判断は、３色の場合はつなげるボーナスで数えるといいかも。つなげるボーナス９点以上で致死。ムズいかな…</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/713283289490939905">2016年3月25日</a></p><p>手数が少ないデスタワーが2クアだった場合は5連鎖に対して特に有利っぽい<br>↑19個消しで完全致死になりやすい<br>↑5連鎖側が致死を完成させるのが遅れる配ぷよパターンのはずなので</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/888572974848032768">2017年7月22日</a></p><p>デスタワー<br>離れを作ると起爆部分に必要なぷよが6個になるので、完全致死に13手以上必要になる<br>→回収率の高い連鎖に分が悪くなる</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/699167029094264833">2016年2月15日</a></p><p>デスタワー<br>でつぶやき検索したら致死量計算がわからない人がいたのでおじゃまぷよ算のURLを紹介しようかと思ったけど不親切かなと思ってやめた<br><br>正確に説明しようとすると量が多くなるので<br>10段　4200点<br>11段　4620点<br>12段　5040点<br>を軸に説明するといいかも</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/493755755917348866">2014年7月28日</a></p><p>デスタワーでそこそこの速さで組めてるのに、致死量確認→発火の際に少し手が止まってしまうのを直したい。最上位クラスの人が相手だとその躊躇で抜かれることがとても多い。逆に言えば、迷わず致死発火までいけば勝てる試合がとても増えるはず。</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/4125092858560512">2010年11月15日</a></p><p>デスタワーメモ。逆タワーで３列目にゴミぷよが残るのを嫌いすぎ。致死量にいったなら起爆させたほうがいい。</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/286596403306823680">2013年1月3日</a></p><p>デスタワーメモ。高い場所からのちぎりは極力避ける。気持ちいいのでついやってしまう。致死量越えてたら厳禁</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/706295750204854272">2016年3月6日</a></p><p>終盤でのちぎり回避例<br>この時点でほぼ完全致死の点数があるのがわかるので、黄ゾロをちぎらずに6列目か2列目に捨てた方が速い</p><div class="twi"><img loading="lazy" src="/puyo/death-tower/assets/x/Cc1EPe7VIAAnyyi.jpg" alt="投稿の図"></div></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/12812424623">2010年4月25日</a></p><p>参式デスタワーのメリット：従来式の場合、三１と三３に同じ色を置いた後に、その色が全然こないと、致死量にいっても起爆したら三列目に２段残ってしまうけど、参式ならそういう心配がないこと</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/816580413929889792">2017年1月4日</a></p><p>勝敗のパターンはある程度まとめられるはず<br>・お互い致死：完成が早い方が勝つ<br>・不完全致死vs完全致死：完全致死が勝つ<br>・不完全致死同士：完成が早い方が勝ちやすい<br>・潰し<br>　対応発火されない：<br>　対応発火される<br>・致死失敗<br>　対応発火されない<br>　対応発火される<br>・カウンター関係</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/1365329115562143751">2021年2月27日</a></p><p>初代ぷよ<br>3連鎖致死が強いというよりは、完全致死ギリギリの回収率の高い連鎖が強いんだと思います<br><br>デスタワーは回収率が低いというよりは「完全致死ギリギリで回収率を高くしにくい」んだと思います<br><br>16手全消しデスタワーは確かに回収率は高いですけど手数が多めですし<br><br>（続く）</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/1365329650168172546">2021年2月27日</a></p><p>「13手デスタワー（不完全致死かつゴミぷよが残る）」とかだと「14手3連鎖（完全致死かつ全消し）」に回し負ける感じ<br><br>デスタワー側の「甘えが許されない」＆「勝てない配ぷよが多くなりやすい」感じ<br><br>「完全致死ギリギリの回収率の高い連鎖」isGOD</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/29547378555">2010年11月3日</a></p><p>対戦感想。ピロ彦さんに指摘されたんですが、致死量の判断を何回か間違えてしまってます。まだギリギリ足りないと思い、結果テンパイまではいっても起爆できず負けてしまっているのがいくつかありました。『致死量に足りてない』のはよくわかるんですが、『ギリギリこえたところ』の判断が甘いですね。</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/710121724113592322">2016年3月17日</a></p><p>速度を上げると致死量判断が雑になってオーバーキルが増える</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/708284181009203200">2016年3月11日</a></p><p>致死量の判断は机上とシミュレータで検討した上で数をこなすことで慣れていくことを伝える</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/709611526143934464">2016年3月15日</a></p><p>致死量計算は自分で机上で一通りした方がいいのかもしれない<br>↑してない人向けの話</p></div><div class="tw"><p class="twd"><a href="https://x.com/mot_csb/status/496971524885082112">2014年8月6日</a></p><p>デスタワーに関しては12手完全致死タワーなんかは配ぷよがよければ組めてしまう類いのものなので、気にしても仕方がない。『駅に着くまでに信号に1回もひっかからなかった！』みたいなもの。<br>大事なのは、悩まずに捌けるパターンを増やすこと。</p></div></details></section>
+<p><a href="/puyo/death-tower/">デスタワー攻略へ戻る</a></p>
+</div></main>
+<footer class="footer"><div class="wrap">Come sono bravo?　｜　作成：MOT<br>ゲームの権利は各権利者に帰属します。</div></footer>
+</body>
+</html>
