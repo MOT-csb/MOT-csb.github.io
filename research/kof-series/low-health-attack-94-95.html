@@ -1,0 +1,58 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'94・'95の底力：残り体力が1になると攻撃力が上がる仕組み｜Come sono bravo?</title><meta name="description" content="KOF'94と'95では、攻撃する側の体力が1だけ残っていると技の威力が上がる。'94は1.25倍、'95は1.125倍。体力16以下では1/16の上乗せが低い確率で起き、飛び道具は上がらない。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:1010px}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.article a{overflow-wrap:anywhere}.scroll{overflow-x:auto}.article table{width:100%;border-collapse:collapse}.article th,.article td{border:1px solid var(--line,#aaa);padding:9px;text-align:left;vertical-align:top}.article th{background:var(--soft,#edf1ed)}.source{font-size:.94rem}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="./index.html">シリーズ共通研究</a></div></div><main class="main"><div class="wrap article">
+<h1>KOF'94・'95の底力：残り体力が1になると攻撃力が上がる仕組み</h1>
+<p>KOF'94と'95では、攻撃する側の体力がちょうど1だけ残っていると、技の威力が上がります。'94は1.25倍、'95は1.125倍です。体力が16以下のときは、これとは別に、威力の1/16が上乗せされることが低い確率で起きます。</p>
+
+<div class="scroll"><table><thead><tr><th>攻撃する側の残り体力</th><th>KOF'94</th><th>KOF'95</th></tr></thead><tbody>
+<tr><td>17以上</td><td colspan="2">そのまま</td></tr>
+<tr><td>2〜16</td><td colspan="2">ときどき威力の1/16を上乗せ（体力16で1/256、体力2で15/256の確率）</td></tr>
+<tr><td>1</td><td>威力が1.25倍。さらに16/256（6.25%）の確率で1/16を上乗せ</td><td>威力が1.125倍。さらに16/256（6.25%）の確率で1/16を上乗せ</td></tr>
+</tbody></table></div>
+<p>体力は満タンで207です。旧サイトで「体力0ドット」と呼んでいた状態が、この「体力1」にあたると考えられます。</p>
+
+<h2>ダメージが決まる順番</h2>
+<p>攻撃が当たると、次の順番でダメージが決まります。底力は1番目で、技の威力そのものを増やします。</p>
+<ol>
+<li><strong>攻撃する側の残り体力を見る</strong>：体力が1なら、技の威力を'94は1/4、'95は1/8だけ増やします。体力が16以下なら、低い確率で威力の1/16を上乗せします。</li>
+<li><strong>受ける側の状態を見る</strong>（'95のみ）：受ける側がパワーMAXなら1.125倍になります。</li>
+<li><strong>受ける側の残り体力で減らす</strong>：受ける側の体力が少ないほどダメージが減ります（根性補正）。'94は体力128・64・32・16以下、'95は120・64・32・16・8以下で段階的に減ります。</li>
+<li><strong>ばらつきを掛ける</strong>：0.75倍〜ほぼ1倍の範囲で毎回変わります。結果が0なら1にします。</li>
+</ol>
+<p>例：'95の京の近C（威力50）は、体力が2〜207のときは50、体力が1のときは56になります。'94のテリーの近C（1発目の威力40）は、体力1で50になります。</p>
+
+<h2>例外その1：飛び道具は上がらない</h2>
+<p>飛び道具は、攻撃する側のキャラではなく飛び道具そのものが当たった扱いになります。そのため、1番目で見る「攻撃する側の体力」がキャラの体力にならず、底力がかかりません。'94のテリーのパワーウェイブ、'95の京の闇払いとも、体力1でも威力は変わりませんでした。</p>
+
+<h2>例外その2：2発目以降がさらに上がる技</h2>
+<p>'94のテリーの近Cは2回当たり、2発目の威力は1発目の威力の半分として決まります。体力1では1発目の威力が1.25倍に書き換えられたあとで2発目の威力が作られ、2発目にもう一度1.25倍がかかります。そのため2発目は、通常の20に対して31（約1.56倍）になります。</p>
+
+<details class="more"><summary>詳しい仕組み・確かめた範囲</summary>
+<ul>
+<li>体力1のときの増加は、攻撃する側に記録されている「いま当てている技の威力」を直接書き換えます。'94は威力の1/4、'95は1/8を足します（端数は切り捨て）。</li>
+<li>1/16の上乗せは、0〜255の乱数が「239＋体力」以上のときに起きます。体力1で16/256、体力16で1/256です。</li>
+<li>根性補正は、受ける側のキャラごとの防御の値から、体力のしきい値ごとに決まった量を引いて掛けます。'94は128以下・64以下・32以下・16以下で4段階、'95は120以下・64以下・32以下・16以下・8以下で5段階です。</li>
+<li>ガードしたときの削りも同じ順番で計算されます。'94のパワーウェイブの削りは1で、体力が1のときは削りでKOされます。'95の京の闇払いは、体力3でも削りでKOされました。'95で体力1の状態を作りにくいのは、削りが大きくなったためと考えられます。</li>
+<li>'95には、体力が0以下になったときに条件によって体力1で止める処理があります。どの場面で働くかは確かめていません。</li>
+<li>確かめたのは、'94のテリー（近C、パワーウェイブ）、'95の京（近C、闇払い）です。超必殺技に底力がかかるかは、技ごとに飛び道具の扱いかどうかで変わると考えられますが、確かめていません。</li>
+</ul></details>
+
+<h2>似ているが別の話</h2>
+<ul>
+<li><strong>パワーMAXの攻撃力</strong>：パワーMAXでも攻撃力が上がります。体力の条件とは別の処理です。'94の比較画像は<a href="/research/kof94/health-zero-damage-images-2011.html">体力0・ゲージMAXでのダメージ比較画像</a>にあります。</li>
+<li><strong>根性補正</strong>：受ける側の体力が少ないとダメージが減る補正です。底力は攻撃する側の体力を見るので、別の処理です。</li>
+</ul>
+
+<h2>気になること</h2>
+<ul>
+<li>旧メモの「パワーゲイザーはダメージが減る」は本当か。パワーゲイザーが飛び道具の扱いなら底力はかからないはずですが、減る理由はまだ分かりません。</li>
+<li>体力ゲージで0ドットに見える範囲と、体力1がどう対応しているか。</li>
+</ul>
+
+<details class="more source"><summary>出典</summary>
+<ul>
+<li>KOF'94の<a href="/research/kof94/frame-data-findings-2010-2011.html">フレームデータと発見（2010〜2011年）</a>の「底力（体力0ドットの攻撃力上昇）」</li>
+<li><a href="/research/kof94/health-zero-damage-images-2011.html">体力0・ゲージMAXでのダメージ比較画像（2011年）</a>：倍率について「1.2か1.25くらいなんじゃないかと思ってます」</li>
+<li><a href="/research/kof94/input-processing-details-2016-2022.html">入力・処理の細かい話（2016〜2022年）</a>：体力0で上がらない技、パワーゲイザー</li>
+<li><a href="/research/kof95/94-95-differences-original-notes-2004-2005.html">'94・'95の違い（2004〜2005年の原稿）</a>：'95の底力</li>
+</ul></details>
+<p><a href="./index.html">シリーズ共通研究へ戻る</a> ／ <a href="/kof94-top.html">KOF'94</a> ／ <a href="/kof95-top.html">KOF'95</a></p>
+</div></main><footer class="footer"><div class="wrap">Come sono bravo?</div></footer></body></html>
