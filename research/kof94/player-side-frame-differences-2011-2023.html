@@ -1,5 +1,5 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOF'94：1Pと2Pで変わること｜Come sono bravo?</title><meta name="description" content="相打ち後の硬直差、同キャラ相打ちのダメージ、投げの優先など、1P・2Pで結果が変わる例です。"><link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:980px}.article p,.article li{line-height:1.85}.article h2{margin-top:1.8em}.srcbox{background:#f1f5f2;border-left:4px solid #52745b;padding:10px 14px}.scroll{max-width:100%;overflow-x:auto}.article table{border-collapse:collapse;min-width:620px;width:100%;font-size:14px}.article th,.article td{border:1px solid #b4c6b9;padding:9px;text-align:left;vertical-align:top}.article th{background:#eaf0ec}.article td{overflow-wrap:anywhere}.article a{overflow-wrap:anywhere}</style></head><body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof94-top.html">KOF'94</a> / <a href="./index.html">研究アーカイブ</a></div></div><main class="main"><div class="wrap article"><!-- chara-nav:start --><nav class="chara-nav" aria-label="キャラクター別のページ"><p class="cn-head"><a href="/kof94-top.html#chara">KOF&#x27;94 キャラ選択</a><span>›</span><a href="/kof94-top.html#c-andy">アンディ</a> ／ <a href="/kof94-top.html#c-joe">ジョー</a> ／ <a href="/kof94-top.html#c-ralf">ラルフ</a> ／ <a href="/kof94-top.html#c-athena">アテナ</a> ／ <a href="/kof94-top.html#c-kensou">ケンスウ</a></p></nav><!-- chara-nav:end --><h1>KOF'94：1Pと2Pで変わること</h1>
-<p class="lead">KOF'94では、1Pと2Pで結果が変わることがあります。ラルフのガトリングアタックやアテナのフェニックスアローは、相打ちになると1P側が4F早く動けます（早くダウンします）。同時に投げると1P側が勝ち、ハイデルン同士のムーンスラッシャーの相打ちでは1P側だけダメージが高くなります。</p>
+<p class="lead">KOF'94では、1Pと2Pで結果が変わることがあります。ラルフのガトリングアタックやアテナのフェニックスアローは、相打ちになると1P側が4F早く動けます（早くダウンします）。同時に投げると1P側が勝ち、ハイデルン同士のムーンスラッシャーの相打ちでは1P側だけダメージが高くなります。ムーンスラッシャーとキングのトラップショットのダメージ差は、当てた瞬間の威力の書き換えと1P→2Pの処理順で起きます。</p>
 <h2>1P側が4F早く動ける技</h2>
 <div class="scroll"><table><thead><tr><th>キャラクター／技</th><th>確認した状況</th><th>1P側</th><th>出典</th></tr></thead><tbody>
 <tr><td>ラルフ／ガトリングアタック</td><td>相打ち。弱・強どちらも</td><td>1P側+4F</td><td><a href="https://x.com/mot_csb/status/1722174213040284102">2023/11/8</a></td></tr>
@@ -36,9 +36,40 @@
 <ul>
 <li>1Pハイデルンの相打ちによるダメージ増加は、45°以外の部分でも起きるか。ムーンスラッシャー以外の技との相打ちでも起きるか。</li>
 <li>相打ちによるダメージの変化が、ほかの技でも起きるか。</li>
-<li>ムーンスラッシャーの大ダメージがどういう仕組みなのかは、まだよく分かっていません。</li>
+<li>ムーンスラッシャーの大ダメージがどういう仕組みなのかは、まだよく分かっていません。<br>補足：仕組みは<a href="#damage-order">下の節</a>で分かりました。</li>
 </ul>
 <p>出典：<a href="https://x.com/mot_csb/status/39216966619250688">ムーンスラッシャー <span class="ver">強</span>の発生</a>（2011/2/20） ／ <a href="https://x.com/mot_csb/status/39217579763580928">大ダメージの謎</a> ／ <a href="https://x.com/mot_csb/status/41865510614347776">45°の相打ち</a>（2/27） ／ <a href="https://x.com/mot_csb/status/42888827676803073">弱強とも1P・相打ちで増大</a>（3/2） ／ <a href="https://x.com/mot_csb/status/37430837553135616">存在判定</a>（2/15） ／ <a href="https://x.com/mot_csb/status/39218133747240961">トラップショット <span class="ver">弱</span>の比較画像</a>（2/20） ／ <a href="https://x.com/mot_csb/status/41080487917256704">トラップショット <span class="ver">強</span>空中ヒット</a>（2/25） ／ <a href="https://x.com/mot_csb/status/41081515060379648">両者MAXの連続技</a> ／ <a href="https://x.com/mot_csb/status/41864130000461824">相打ちと通常ヒット</a>（2/27） ／ <a href="https://x.com/mot_csb/status/41864587364151297">まとめ</a> ／ <a href="https://x.com/mot_csb/status/42077911175397377">推定ダメージ</a>（2/28） ／ <a href="https://x.com/mot_csb/status/42051474397732864">2Pキングの使い方</a> ／ <a href="https://x.com/mot_csb/status/42051853407625216">続き</a> ／ <a href="https://x.com/mot_csb/status/42078482238279680">確認したいこと</a></p>
+<h2 id="damage-order">ムーンスラッシャーとトラップショットで1P・2Pの差が出る仕組み</h2>
+<p>結論から言うと、この2つの技は当てた瞬間に「技の威力」が半分に書き換わる作りで、1Pは書き換えの後で、2Pは書き換えの前でダメージが決まります。そのため、何もしなければ1Pが当てたときだけダメージが半分になります。ムーンスラッシャーはこれを打ち消す処理が入っているので通常ヒットでは差がなく、相打ちのときだけ差が出ます。トラップショットにはその処理がないので、2Pが当てると通常ヒットでも1Pの2倍になります。</p>
+<p>ここでの数値は基本ダメージ（ランダム補正などがかかる前の値）です。実際に減る量は、ここから0.75〜1倍程度のばらつきが掛かります。</p>
+<h3>ダメージが決まる順番</h3>
+<ol>
+<li>攻撃が当たると、攻撃した側の「技の威力」が半分に書き換えられます。多段技の2発目以降を減らすための処理です。たとえばテリーの2147D（48→24）やアンディの1タメ9D（46→23）は、この処理で2発目が半分になります。</li>
+<li>ふつうの技は、当たると攻撃した側もヒットストップで止まり、書き換えはヒットストップが終わってから行われます。ダメージはそれより前に決まるので、1Pでも2Pでも同じ値になります。上の2147Dと1タメ9Dも、1P・2Pで同じでした。</li>
+<li>ムーンスラッシャーとトラップショットは、当たっても攻撃した側が止まらない作りです。そのため、書き換えが当たったフレームのうちに行われます。</li>
+<li>1フレームの中では、1P→2Pの順に処理が進みます。ダメージの計算は、攻撃を受けた側の番に行われます。
+<ul>
+<li>1Pが当てたとき：1Pの番で威力が半分になる→2Pの番でダメージを計算するので、半分の値になります。</li>
+<li>2Pが当てたとき：1Pの番でダメージを計算する→2Pの番で威力が半分になるので、元の値のままです。</li>
+</ul></li>
+</ol>
+<div class="scroll"><table><thead><tr><th>技</th><th>1Pが当てた</th><th>2Pが当てた</th><th>相打ち</th></tr></thead><tbody>
+<tr><td>ムーンスラッシャー</td><td>76</td><td>76</td><td>1Pが与える：152<br>2Pが与える：76</td></tr>
+<tr><td>トラップショット <span class="ver">弱</span>（1段目）</td><td>40</td><td>80</td><td>（下の説明）</td></tr>
+<tr><td>トラップショット <span class="ver">強</span>（1段目）</td><td>46</td><td>92</td><td>（下の説明）</td></tr>
+</tbody></table></div>
+<p>トラップショットの2段目は、1P・2Pとも30です。</p>
+<h3>ムーンスラッシャー：2倍から始めて半分にそろえる</h3>
+<p>ムーンスラッシャーは、技を出した時点で、1Pなら威力152、2Pなら76を設定します。1P・2Pを区別する処理がはっきり入っていて、1Pだけ当たった瞬間に半分になることを見越して2倍にしている形です。そのため通常ヒットでは、どちらも76にそろいます。</p>
+<p>ところが相打ちでは、1Pは相手の攻撃を受けて技が止まり、威力を半分にする処理が行われません。そのまま2Pの番でダメージが計算されるので、1Pが与えるダメージだけ152（通常の2倍）になります。2Pは76のままです。2011年の「1P＆相打ちであればダメージが増大」という記録はこれで説明できます。</p>
+<p>ムーンスラッシャーを空振りした場合も、何にも当たっていないので威力は半分になりません。1Pは152、2Pは76が残ります。<a href="./heidern-storm-damage-2024.html">ストームブリンガー</a>の1段目は、残っている技の威力をそのまま使うので、空振り後のストームブリンガー1段目は1Pで152、2Pで76になります（2段目以降は1P・2Pとも10ずつ）。「ムンスラ空振り→ストームブリンガーは、1P側のみなぜかムーンスラッシャーのダメージが相打ち時のものになる」という2011年の説明のとおりです。</p>
+<h3>トラップショット：打ち消す処理がない</h3>
+<p>トラップショットは、1P・2Pとも同じ威力（<span class="ver">弱</span>80、<span class="ver">強</span>92）で始まり、ムーンスラッシャーのような打ち消しがありません。そのため1Pが当てると半分の40・46、2Pが当てると80・92のままになります。2011年の「2Pキングのトラップショットのダメージはダメージ低めの超必殺技なみ」という見立ても、ほかの必殺技（多くは40〜68）を大きく上回る基本ダメージなので、この結果と合います。</p>
+<p>相打ちでは、ムーンスラッシャーと同じ理由で1Pも半分にならず、1P・2Pとも80・92になると考えられます（相打ちのトラップショットは計測していません）。2011年の記録では相打ちはどちらも高く、1Pの方が少し高かったとあります。どちらも高いのはこの仕組みのとおりで、1Pの方が少し高かったのはランダム補正の範囲の差と考えられます。</p>
+<h3>ほかの技</h3>
+<p>全キャラの必殺技・超必殺技を1Pと2Pで当てて比べたところ（同キャラ戦、通常ヒット）、基本ダメージが違ったのはトラップショットだけでした。当たっても攻撃した側が止まらない技はほかにもありますが、当てるたびに威力を設定し直す作りなどのため、差は出ませんでした。それらの技の相打ちは調べていません。</p>
+<p>補足：飛び道具は、まれに基本ダメージが1/16上がることがあります（例：40→42）。1P・2Pとは関係なく起きるもので、<a href="/research/kof-series/low-health-attack-94-95.html">底力の記事</a>の例外その1で説明しています。</p>
+
 <h2>2011年：コマンド投げとジャンプの同時入力</h2>
 <p>1P五郎の天地返しと2Pテリーの垂直ジャンプの先行テストから、1P・2Pを入れ替えて同時入力した場合には<strong>1Pテリーが垂直ジャンプできた</strong>という結果でした。ここから、有利／不利フラグによる差ではなく<strong>1Pと2Pの処理優先順位が原因らしい</strong>と考えています（原因は仮説です）。<a href="https://x.com/mot_csb/status/24639691328331776">2011年1月11日の投稿</a></p>
 <p>補足：先行テストでは、1P五郎の天地返しの最後のCと2Pテリーの垂直ジャンプの8を同時に入力すると天地返しが成立し、テリー側が1Fでも早いと不成立でした。事前にどちらの攻撃がヒットしていても同じ結果です（<a href="https://x.com/mot_csb/status/24637873105936384">2011年1月11日</a>）。</p>
