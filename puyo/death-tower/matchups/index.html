@@ -29,7 +29,7 @@ details.more{margin:12px 0;border:1px solid var(--line,#ccd);border-radius:10px;
 <main class="main"><div class="wrap article">
 <style>
 .tw{border-bottom:1px solid var(--line,#ddd);padding:10px 0}.tw p{margin:4px 0;overflow-wrap:anywhere}.twd{font-size:13px;color:var(--muted,#667)}.twi{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}.twi img{max-width:min(100%,260px);height:auto;border-radius:6px;border:1px solid var(--line,#ddd)}
-.tblw{overflow-x:auto}
+.tblw{overflow-x:auto}tr.hl td{font-weight:bold}
 </style><section class="section">
 <p class="lead">同じくらいの実力の2人が、デスタワーと連鎖系で正面から致死連鎖を撃ち合うと、デスタワー側に分があります（<a href="https://x.com/mot_csb/status/307001939789488129">2013/2/28</a>）。それを崩すのは、潰し・ペチと、回収率の高い多連鎖の完全致死です。</p>
 <p>デスタワーは判断が甘くても致死にしやすく、ごまかしが効きやすい連鎖です（<a href="https://x.com/mot_csb/status/607002786232856576">2015/6/6</a>）。一方で、完全致死ギリギリの点数で回収率を高くしにくい、という弱点があります（<a href="https://x.com/mot_csb/status/1365329115562143751">2021/2/27</a>）。</p>
@@ -49,15 +49,15 @@ details.more{margin:12px 0;border:1px solid var(--line,#ccd);border-radius:10px;
 <p>4ダブがライバルなのに対して、潰しは「目の上のたんこぶ的なイメージ」だと書いています（<a href="https://x.com/mot_csb/status/543075157850337281">2014/12/12</a>）。</p>
 </section>
 <section class="section" id="counter-odds"><h2>カウンター側が狙った色を引けない確率</h2>
-<p>4色のとき、組ぷよ1組で狙った色を引けない確率は9/16です。毎手同じ確率だとすると、n手のあいだずっと引けない確率は(9/16)<sup>n</sup>になります。デスタワーが見えてから引けるのは3組くらい、5連鎖が相手なら7手くらいという見立てに当てはめると、次のようになります。</p>
+<p>4色のとき、組ぷよ1組で狙った色を引けない確率は9/16です。毎手同じ確率だとすると、n手のあいだずっと引けない確率は(9/16)<sup>n</sup>になります。デスタワーが見えてから引けるのは3組くらい、5連鎖が相手なら7手くらい、デスタワーがクイックだった場合はさらに少なく、引けて2組くらいという見立てに当てはめると、次のようになります。</p>
 <div class="tblw"><table><thead><tr><th>引ける手数</th><th>ずっと引けない確率（分数）</th><th>引けない</th><th>どこかで引ける</th></tr></thead><tbody>
 <tr><td>1手</td><td>9/16</td><td>56.2%</td><td>43.8%</td></tr>
-<tr><td>2手</td><td>81/256</td><td>31.6%</td><td>68.4%</td></tr>
-<tr><td>3手</td><td>729/4,096</td><td>17.8%</td><td>82.2%</td></tr>
+<tr class="hl"><td>2手（クイックのデスタワー相手）</td><td>81/256</td><td>31.6%</td><td>68.4%</td></tr>
+<tr class="hl"><td>3手（デスタワー相手）</td><td>729/4,096</td><td>17.8%</td><td>82.2%</td></tr>
 <tr><td>4手</td><td>6,561/65,536</td><td>10.0%</td><td>90.0%</td></tr>
 <tr><td>5手</td><td>59,049/1,048,576</td><td>5.6%</td><td>94.4%</td></tr>
 <tr><td>6手</td><td>531,441/16,777,216</td><td>3.2%</td><td>96.8%</td></tr>
-<tr><td>7手</td><td>4,782,969/268,435,456</td><td>1.8%</td><td>98.2%</td></tr>
+<tr class="hl"><td>7手（5連鎖相手）</td><td>4,782,969/268,435,456</td><td>1.8%</td><td>98.2%</td></tr>
 <tr><td>8手</td><td>43,046,721/4,294,967,296</td><td>1.0%</td><td>99.0%</td></tr>
 </tbody></table></div>
 <p class="small">補足：どの組ぷよも4色から同じ確率で選ばれ、毎手が独立だとした場合の計算です。実際の配ぷよの偏りや、引いた色を置ける場所があるかどうかは含めていません。</p>
