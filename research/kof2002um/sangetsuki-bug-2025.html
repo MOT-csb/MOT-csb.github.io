@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KOF2002UM 山月記バグ：仕込みで出すMAX版超必殺技の没技（2025年）｜Come sono bravo?</title><link rel="stylesheet" href="/assets/research.css">
+<style>.article{max-width:960px}.article h2{margin-top:2rem}.article table{border-collapse:collapse;width:100%}.article th,.article td{border:1px solid var(--line,#aaa);padding:.6em;vertical-align:top}.article th{background:var(--soft,#eff3f0)}.note{background:var(--soft,#eff3f0);padding:12px 16px;border-left:4px solid var(--accent,#416958)}.scroll{overflow-x:auto}.src{font-size:.9em}.article a{overflow-wrap:anywhere}.lead{font-size:1.05em}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h3{font-size:1.05em}.tag{display:inline-block;font-size:.78em;border:1px solid currentColor;border-radius:4px;padding:0 4px;margin-left:4px;opacity:.85}.cmd{font-family:monospace;overflow-wrap:anywhere;background:var(--soft,#eff3f0);padding:6px 10px;border-radius:6px}figure{margin:16px 0}figure img{max-width:100%;height:auto;border-radius:6px}figcaption{font-size:.9em}</style></head>
+<body><header class="header"><div class="wrap topline"><a class="brand" href="/">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof02um-top.html">KOF2002UM</a> / <a href="/research/kof2002um/index.html">研究アーカイブ</a> / <b>山月記バグ：仕込みで出すMAX版超必殺技の没技（2025年）</b></div></div>
+<main class="main"><div class="wrap article"><h1>山月記バグ：仕込みで出すMAX版超必殺技の没技（2025年）</h1>
+
+<p class="lead">KOF2002UMでは、<strong>2ゲージのときにMAX版超必殺技のコマンドを入れておく（仕込み）</strong>と、MAX発動中に<strong>本来は存在しないMAX版超必殺技（没技）</strong>を出せます。裏ロバートのMAX版覇王翔吼拳は、暗転も何もなく「ノーモーションでいきなり虎になる」ので、山月記バグと呼ばれています。</p>
+
+<div class="note">
+<p><b>この記事の用語</b></p>
+<ul>
+<li><b>仕込み</b>：ゲージが足りずMAX版超必殺技が出ない状態で、そのコマンドを入れておくこと。</li>
+<li><b>召喚</b>：仕込んだあと、MAX発動中に没技のMAX版超必殺技を出すこと。</li>
+<li><b>どこキャン</b>：MAX発動中に、必殺技などをキャンセルして別の技を出すこと。空振りどこキャンは、空振りした技をキャンセルするもの。</li>
+<li><b>コマンド登録</b>：家庭用のトレーニングで、入力をフレーム単位で登録して再生する機能。<code>C[1]</code>は「Cを1F入力」の意味です。</li>
+</ul>
+</div>
+
+<h2>原則：仕込んだMAX版超必殺技は、どこキャンでは出せない</h2>
+<p>仕込みのあとMAX発動すると、仕込んだMAX版超必殺技は出し方によって出たり出なかったりします。</p>
+<div class="scroll"><table><thead><tr><th>MAX発動後の出し方</th><th>仕込んだMAX版超必殺技</th></tr></thead><tbody>
+<tr><td>直接出す</td><td>出せる</td></tr>
+<tr><td>キャンセルで出す</td><td>出せる</td></tr>
+<tr><td>どこキャンで出す</td><td><b>出せない</b></td></tr>
+</tbody></table></div>
+<p>投稿では、この性質を「どこキャンMAX超必殺技封印」と呼び、「この部分がこのテクニックのキモだと思います。」と書いています。この封印を利用して、空振りした通常技からどこキャンで仕込んだ技のコマンドを入れ（これは出ない）、続けて別の超必殺技のコマンドを入れると、その技がMAX版で出ます。</p>
+
+<h2>出し方の流れ</h2>
+<ol class="flow">
+<li>2ゲージの状態で、MAX版がある超必殺技（A）のMAX版コマンドを入れる。ゲージが足りないので出ず、遠Aなどが出る。ここで仕込みが入る。</li>
+<li>MAX発動する。</li>
+<li>通常技などを空振りし、空振りどこキャンでAのMAX版コマンドを入れる。Aは封印されているので出ない。</li>
+<li>続けて、MAX版が存在しない超必殺技（B）のコマンドの残りを入れる。BのMAX版（没技）が出る。</li>
+</ol>
+<p>ポイントは手順4の時点で、手順3のAのコマンドが<b>成立しない</b>ようにすることです。裏ロバートの場合は、最後の236+Aのレバーを入れっぱなしにします。召喚するコマンドはノーマル版の入力でよいようです。</p>
+
+<h3>レシピ</h3>
+<p>手順2のMAX発動まで済ませたあとの入力です。</p>
+<div class="scroll"><table><thead><tr><th>キャラ</th><th>仕込む技（A）</th><th>出る没技（B）</th><th>入力</th></tr></thead><tbody>
+<tr><td>裏ロバート</td><td>龍虎乱舞<span class="tag">MAX</span></td><td>覇王翔吼拳<span class="tag">MAX</span>（虎）</td><td>C空振り→MAX版龍虎乱舞のコマンド→236+A（最後の6は入れっぱなし）</td></tr>
+<tr><td>ジョー</td><td>スクリューアッパー<span class="tag">MAX</span>（236236+AC）</td><td>爆裂ハリケーンタイガーカカト<span class="tag">MAX</span></td><td>遠C→236236+AC→214+A。最後を4+Aにするのがポイントで、Nだと出ないようです</td></tr>
+<tr><td>リョウ</td><td>天地覇王拳（236236+AC）</td><td>龍虎乱舞<span class="tag">MAX</span>（02バージョン）</td><td>天地覇王拳のコマンドのあと214A。覇王翔吼拳のコマンドでも龍虎乱舞が出るようです</td></tr>
+<tr><td>テリー</td><td>パワーゲイザー<span class="tag">MAX</span>（2141236+AC）</td><td>ハイアングルゲイザー<span class="tag">MAX</span></td><td>遠D→2141236+AC→236B。パワーゲイザーを大蛇薙コマンドで出して、ハイアングルゲイザーのコマンドと重ねています</td></tr>
+</tbody></table></div>
+<p>ジョーの例では、236236+ACのあとに214Aを入れると、爆裂ハリケーンタイガーカカトのコマンドが成立します。</p>
+
+<h3>裏ロバートのコマンド登録</h3>
+<p>ほぼ最短の登録は次のとおりです（[ ]内は入力するフレーム数。ACと6+Aは同時入力）。</p>
+<p class="cmd">C[1] 2[4] 3[1] 6[1] 3[1] 2[1] 1[1] 4[1] AC[1] 2[1] 3[1] 6[1] 6+A[1]</p>
+<figure><img src="./img/sangetsuki-command-shortest-2025.jpg" alt="KOF2002UMのコマンド登録画面。SP、2、3、6、3、2、1、4、AC同時押し、2、3、6、6+A同時押しの順に並んでいる" width="680" height="326" loading="lazy"><figcaption>山月記バグのコマンド登録（2025年5月27日の投稿の画像）</figcaption></figure>
+<p>仕込みが成功しているかは見た目では分かりません。同じ登録で仕込みをしていなければ普通の技が出るので、入力が合っているかの確認に使えます。</p>
+<details class="more"><summary>ほかのコマンド登録と、入力タイミングの注意</summary>
+<ul>
+<li>しゃがみC空振りから出す版（2025年5月26日）：<br><span class="cmd">2+C[5] 1+C[3] 2[2] 3[2] 6[3] 3[2] 2[1] 1[3] 4[1] 4+AC[1] 7+AC[3] 7+C[1] 4[2] 1[1] 2[1] 3[1] 3+A[2] 6+A[3] N[101]</span></li>
+<li>短縮版（同日）：<br><span class="cmd">C[1] 2[6] 3[2] 6[3] 3[2] 2[1] 1[3] 4[1] AC[5] 4[2] 1[1] 2[1] 3[1] 6[1] 6+A[5]</span></li>
+<li>空振りする技によって、入力タイミングが変わるようです。遠C空振りで成立する登録を作ったあと、近Cに変えると全然成立しませんでした。キャンセルできるかどうかで違うのかもしれません。</li>
+<li>庵でしゃがみCから出そうとすると、MAX版八稚女ばかり出ました。庵のしゃがみCのキャンセル受付時間が長いのだろう、と推測しています。</li>
+</ul>
+</details>
+
+<h2>なぜどこキャンだと入れやすいのか</h2>
+<p>KOF2002（無印）でも、キムの地上空中鳳凰脚のように、本来出ない超必殺技を出す入力がありました。こちらはスパキャンの受付時間の中で成立させる必要があり、受付は3Fくらいしかないのでシビアでした。</p>
+<p>KOF2002UMの山月記バグは空振りどこキャンを使うので、「技の空振り中」と「MAX版超必殺技の受付時間」の両方を満たせばよく、どちらも長いため緩くなっています。MAX版超必殺技を出せる権利のようなフラグが、MAX版超必殺技の受付時間中は残っている説を推しています。海外のプレイヤーの話では、SCでもできるようです。</p>
+
+<h2>仕込みが解除される条件</h2>
+<div class="scroll"><table><thead><tr><th>解除される</th><th>解除されない</th></tr></thead><tbody>
+<tr><td>相手の攻撃がヒット・ガード<br>特殊技・必殺技を出す<br>通常投げを決める<br>クイック発動（するかも）</td><td>通常技<br>立CD</td></tr>
+</tbody></table></div>
+<ul>
+<li>仕込むときに4Aや6A（特殊技）が暴発すると解除されてしまいます。</li>
+<li>空中でも仕込めます。空中で仕込むと、ノーマル版超必殺技の暴発を防ぎやすくなります。</li>
+<li>MAX版超必殺技が出せる状況（2ゲージから発動している、3ゲージ以上ある）では仕込めません。</li>
+<li>クイック発動で解除されるようで、「チンで3ゲージ寸前に仕込んで10割コンボできないかな？と思っていたんですが残念……。」と書いています。</li>
+</ul>
+
+<h2>虎（裏ロバートのMAX版覇王翔吼拳）の性質</h2>
+<div class="scroll"><table><thead><tr><th>項目</th><th>結果</th></tr></thead><tbody>
+<tr><td>出かた</td><td>超必殺技の暗転がなく、ノーモーションで虎の姿になって突進。虎には影も付いています</td></tr>
+<tr><td>当たり方</td><td>なんでも判定と言われるほど当たります。端の相手に近Aを空中ヒットさせたあとでも拾えて、ふっとばし攻撃からも確定します（「なんでも判定すごい。」）</td></tr>
+<tr><td>当て身投げ</td><td>打撃判定なので当て身投げされます。香澄の当て身投げでも取れるようです</td></tr>
+<tr><td>投げ</td><td>投げられ判定があるので投げも入ります。キャラ限定で通常投げも入ります（通常投げはほかの人の調査）。クーラのラ☆カチョーラは対地投げなので入りそうでしたが、入りませんでした</td></tr>
+<tr><td>ガードされたとき</td><td>飛び道具判定ではないので、端の相手にガードさせても離れてしまいます（「100%削りできるかと思ったんですが残念」）</td></tr>
+<tr><td>食らった側のゲージ</td><td>大きく増えます。体力満タン・ゲージ0のバイスが食らうと約1.6ゲージたまり、KO後も少したまるようです。対戦でKOした京は、次のラウンドで4ゲージたまっていました</td></tr>
+</tbody></table></div>
+<p>補足：飛び道具も消しているので、打撃と飛び道具の両方の判定が付いているのか、あるいは打撃判定ではなく当て身投げされる判定だけが付いているのかもしれない、と考えています。</p>
+
+<h2>実戦での使い道</h2>
+<p>前提として、相手の攻撃をガードすると仕込みが解けます。そのため「相手の攻撃をガードさせずに自然に仕込む」のがポイントになります。</p>
+<ul>
+<li><b>無敵技を読んで後転</b>：相手の強版の無敵技を読んで後転し、後転中にMAX版龍虎乱舞の入力を仕込む→相手が無敵技を出したのを確認→MAX発動→虎。相手の無敵技のモーションの長さ次第で可能性はありそう、としています。</li>
+<li><b>リスクの少ない仕込み方</b>：後転のほか、バックステップ・後方小JC空振り（どちらも着地硬直に成立させる）・立CD空振りでも仕込めそうです。今は逃げながら虎を狙う人が多いので、立ち回りや攻めの最中に実は仕込んでおく、という考え方です。裏ロバートには連舞脚という強力な起き攻めの選択肢があるので、相手の無敵技を誘いやすいのもポイントです。</li>
+<li><b>ガークラから</b>：2ゲージで仕込む→MAX発動→Jふっとばし攻撃などでガークラ→着地してふっとばし攻撃→虎。</li>
+<li><b>端で拾う</b>：端の相手に強版連舞脚→近A→虎も可能です。</li>
+<li><b>GC前転をされたとき</b>：裏ロバートが振り向かない状況を作れれば、遠D（相手がガードしてGC前転）→虎もありえます。</li>
+</ul>
+<p>大会での扱いについては、「裏ロバは大会では禁止になりそうなんで、これが有効になるのはチンかも。」と書いています。</p>
+
+<h2>例外：ほかのキャラの没技は、ほとんどノーマル版と同じ</h2>
+<p>同じ方法でほかのキャラの没技も出せますが、「裏ロバが面白すぎるだけで、他はなかなかないですね。」とあるとおり、多くはノーマル版とほとんど変わりません。役に立ちそうなのは、リョウ・チン・ユリの3つです。</p>
+<div class="scroll"><table><thead><tr><th>キャラ</th><th>没技</th><th>ノーマル版との違い</th></tr></thead><tbody>
+<tr><td>リョウ</td><td>龍虎乱舞<span class="tag">MAX</span></td><td>02バージョンのガード不能龍虎乱舞</td></tr>
+<tr><td>チン</td><td>轟炎招来<span class="tag">MAX</span><span class="tag">強</span></td><td>02にもあった強版の性能で、弱版よりダメージが明らかに高く、約9割減ります。02ではオーバーキルでしたが、02UMでは10割に届きません</td></tr>
+<tr><td>ユリ</td><td>飛燕鳳凰脚<span class="tag">MAX</span></td><td>無敵時間が長い</td></tr>
+<tr><td>表ロバート</td><td>覇王翔吼拳<span class="tag">MAX</span></td><td>球が出ません（微妙）</td></tr>
+<tr><td>庵</td><td>裏参百拾壱式・析爪櫛<span class="tag">MAX</span></td><td>暗転なし。最初にしゃがむポーズが入り、ゲーニッツの移動技のような動きをします</td></tr>
+<tr><td>ビリー</td><td>超火炎旋風棍<span class="tag">MAX</span></td><td>炎を飛ばす部分がなく、ヒットしてもダウンしません</td></tr>
+<tr><td>ジョー</td><td>爆裂ハリケーンタイガーカカト<span class="tag">MAX</span></td><td>02からある没技。連続ヒットしません</td></tr>
+<tr><td>紅丸</td><td>幻影ハリケーン<span class="tag">MAX</span></td><td>02でも出せた没技。'99と同じ構成かもしれません。ダメージは驚くほど低いです</td></tr>
+<tr><td>テリー</td><td>ハイアングルゲイザー<span class="tag">MAX</span></td><td>音だけMAX版で、ダメージはノーマル版と同じようです</td></tr>
+<tr><td>アンディ</td><td>斬影流星拳<span class="tag">MAX</span></td><td>音だけMAX版で、ダメージはノーマル版と同じようです</td></tr>
+<tr><td>京</td><td>百八拾弐式<span class="tag">MAX</span></td><td>音以外はノーマル版と同じようです</td></tr>
+<tr><td>キング</td><td>サプライズローズ<span class="tag">MAX</span></td><td>音以外はノーマル版と同じようです</td></tr>
+<tr><td>香澄</td><td>超重ね当て<span class="tag">MAX</span></td><td>ノーマル版と見分けがつきません。同じ登録で仕込みをしていないと超当て身が出るので、入力自体は合っているようです</td></tr>
+<tr><td>表タクマ</td><td>真・鬼神撃<span class="tag">MAX</span></td><td>見た目はノーマル版と同じです</td></tr>
+<tr><td>KUSANAGI</td><td>千九百九拾九式・霧焔<span class="tag">MAX</span></td><td>見た目はノーマル版と同じです</td></tr>
+<tr><td>チャン</td><td>鉄球大暴走<span class="tag">MAX</span>／鉄球大撲殺<span class="tag">MAX</span></td><td>内容はノーマル版と同じようです</td></tr>
+<tr><td>レオナ</td><td>リボルスパーク<span class="tag">MAX</span></td><td>成功していないかもしれません。覚醒中でも変わりませんでした</td></tr>
+</tbody></table></div>
+<p>召喚のボタンは弱ボタンで調べています。チンのように強版で性能が変わる技もあるので、強ボタンでは違う結果になる可能性があります。ヒット数が変わっている技もそこそこあるようです。ほかに、「02と同じなら幻影ハリケーンとケンスウの神龍天舞脚もいけると思います。ユリのはそこまでダメージが上がらないのが痛いですね。」とも書いています。</p>
+<p>チンの強版轟炎招来は、KOF2002では特殊版轟炎招来として知られていたものです。KOF2002UMでも出ることを確かめていて（02ほどのダメージではなさそう）、コマンド登録では屈B→特殊版轟炎招来は連続技にならないので、ノーガード設定で試すよう書いています。</p>
+
+<h2>似ているが別の話</h2>
+<ul>
+<li><b>KOF2002（無印）の隠し超必殺技</b>：スパキャンの受付時間中にMAX2などと別の超必殺技の入力を続けて成立させると、キムの地上空中鳳凰脚のような本来出ない技が出ます。山月記バグの源流にあたる現象で、最初に見つかったのが地上空中鳳凰脚です。→ <a href="/research/kof2002/super-cancel-overlap-special-moves.html">スーパーキャンセルと複合入力で発生する特殊版の技</a></li>
+<li><b>竜巻槍打バグ</b>：香澄の竜巻槍打を受けた相手の技が、暗転なしの超必殺技になる現象です。暗転が出ない点は似ていますが、仕込みは関係ありません。→ <a href="./tatsumaki-sangetsuki-bugs-2024-2025.html">竜巻槍打バグ</a></li>
+<li><b>前の入力で版が変わる技</b>：KOF'98の大門の裏投げのように、前に入れたコマンドの記録で技の版が変わる技があります。最初に出せない状態で仕込む点は、この大門の仕込みに近いのかもしれない、としています。→ <a href="/research/kof-series/previous-input-version-moves.html">前の入力で版が変わる技</a></li>
+<li><b>特殊技のキャンセル版</b>：特殊技をキャンセル版にする話にも似ていますが、あちらはキャンセルで仕込む必要がある点が違います。</li>
+<li><b>包のいくよキャン</b>：山月記バグや、02のチンの特殊版轟炎招来に弱版・強版があることは、いくよキャンとも関係していそうだ、と2025年6月に書いています。→ <a href="/research/kof2000/bao-ikuyo-whiff-cancel-2015-2025.html">包のいくよキャン</a></li>
+</ul>
+
+<h2>気になること</h2>
+<ul>
+<li>「多分発生もムチャクチャ早そうですよね。1フレかも。」（2025年5月24日）。虎の発生フレームはまだ測っていません。</li>
+<li>「もしかして、虎を食らって時間切れになった場合、こっちはKOされないのでゲージMAXまでたまる？」チーム戦で、KOした相手のゲージが基本的にMAXまでたまるのかも要確認です。</li>
+<li>「後は、「生発動→虎」が空中追撃に間に合えば……」</li>
+<li>「仕込みがどういう状況で可能なのかも気になります。遠Aが出る必要があるのか。」遠Aが出なくても仕込めるなら、硬直などに仕込んで生発動からポンポン出せるかも、と書いています。空中で仕込めることは確かめています。</li>
+<li>「MAX2でも仕込める」と書いたあと、「すみません、02UMだと天地覇王拳はMAX2じゃないんですね。他のMAX2で試してみます。」と訂正しています。MAX2での仕込みと、体力が多いときに3ゲージ以上でも仕込めるかは確かめられていません。</li>
+<li>強ボタンで召喚した場合に、ほかのキャラの没技の性能が変わるかは未確認です。</li>
+<li>「果たして山月記バグは禁止されるのか🤔」</li>
+</ul>
+
+<details class="more"><summary>名前の由来と、見つかった経緯</summary>
+<p>2025年5月24日、裏ロバートが虎になる動画が話題になり、No.17さん（@17rotd）が再現しました。No.17さんの説明は、2ゲージのときにMAX龍虎乱舞のコマンドを入れて（ミスで遠Aが出る）、そのあとどこキャンかSCでMAX龍虎乱舞を入力し、素早く236Aを入れると虎になる、というものでした。KOF2002のキムの三空SCと同じ原理で上書きしているようだ、とも書かれています。動画のキー表示では236C→63214AC→236Aの流れになっていました。</p>
+<p>この情報をもとに、翌25日に仕込みと召喚の流れを整理し、リョウやチンでも出せることを確かめています。名前は、「山月記かよ」という感想が多かったので付けた、としています。</p>
+</details>
+
+<details class="more"><summary>出典（X投稿・ブログ）</summary>
+<ul class="src">
+<li>2025/5/24：<a href="https://x.com/mot_csb/status/1926415632817381751">動画のキー表示</a>／<a href="https://x.com/mot_csb/status/1926298756338593894">発生は1Fかも</a>（No.17さんの元の投稿：<a href="https://x.com/17rotd">@17rotd</a>）</li>
+<li>2025/5/25：<a href="https://x.com/mot_csb/status/1926470660282347986">特殊版の出し方</a>／<a href="https://x.com/mot_csb/status/1926483992682860961">直接・キャンセル・どこキャン</a>／<a href="https://x.com/mot_csb/status/1926484397596750104">裏ロバートの236A</a>／<a href="https://x.com/mot_csb/status/1926485121990812001">大まかな流れ</a>／<a href="https://x.com/mot_csb/status/1926485554452922485">ジョーの例</a>／<a href="https://x.com/mot_csb/status/1926500653007823305">リョウ</a>／<a href="https://x.com/mot_csb/status/1926498206101160140">特殊版轟炎招来</a>／<a href="https://x.com/mot_csb/status/1926568461238464964">轟炎招来のコマンド登録</a>／<a href="https://x.com/mot_csb/status/1926513416136523872">MAX2</a>／<a href="https://x.com/mot_csb/status/1926522237336629329">天地覇王拳の訂正</a>／<a href="https://x.com/mot_csb/status/1926450013535719821">香澄の当て身投げ</a>／<a href="https://x.com/mot_csb/status/1926451588723364333">飛び道具も消す</a>／<a href="https://x.com/mot_csb/status/1926461585528156302">ゲージ（バイス）</a>／<a href="https://x.com/mot_csb/status/1926505079042937112">時間切れ</a>／<a href="https://x.com/mot_csb/status/1926584835654537564">ゲージ（京）</a>／<a href="https://x.com/mot_csb/status/1926551372129878393">幻影ハリケーン・神龍天舞脚</a>／<a href="https://x.com/mot_csb/status/1926767946845573603">名前</a>／<a href="https://x.com/mot_csb/status/1926768604961259979">仕込みの条件</a>／<a href="https://x.com/mot_csb/status/1926771603305533920">影</a>／<a href="https://x.com/mot_csb/status/1926778136659640706">封印がキモ</a>／<a href="https://x.com/mot_csb/status/1926778869824057605">スパキャンと空振りどこキャン</a>／<a href="https://x.com/mot_csb/status/1926779280148635954">その補足</a></li>
+<li>2025/5/26：<a href="https://x.com/mot_csb/status/1926813293718523909">生発動→虎</a>／<a href="https://x.com/mot_csb/status/1926852773976392020">端でガード</a>／<a href="https://x.com/mot_csb/status/1926853439784358246">しゃがみC版</a>／<a href="https://x.com/mot_csb/status/1926853909361877470">入力タイミング</a>／<a href="https://x.com/mot_csb/status/1926857288452567116">GC前転</a>／<a href="https://x.com/mot_csb/status/1926898029610611091">短縮版</a>／<a href="https://x.com/mot_csb/status/1926898770895114636">空中の仕込み</a>／<a href="https://x.com/mot_csb/status/1926923281283596688">SC</a>／<a href="https://x.com/mot_csb/status/1926996313716994474">テリー</a>／<a href="https://x.com/mot_csb/status/1926996919399686259">テリーの出し方</a>／<a href="https://x.com/mot_csb/status/1926998602762576374">アンディ</a>／<a href="https://x.com/mot_csb/status/1927000778713022812">ジョー</a>／<a href="https://x.com/mot_csb/status/1927001020258804019">ジョーの出し方</a>／<a href="https://x.com/mot_csb/status/1927007353578144192">入力のポイント</a></li>
+<li>2025/5/27：<a href="https://x.com/mot_csb/status/1927274195437703207">最短のコマンド登録</a>／<a href="https://x.com/mot_csb/status/1927276530524164159">暗転なし</a>／<a href="https://x.com/mot_csb/status/1927281259694133668">庵</a>／<a href="https://x.com/mot_csb/status/1927281497301479496">庵のしゃがみC</a>／<a href="https://x.com/mot_csb/status/1927285281801080987">香澄</a>／<a href="https://x.com/mot_csb/status/1927304564316782923">香澄の入力</a>／<a href="https://x.com/mot_csb/status/1927344227135946823">ビリー</a>／<a href="https://x.com/mot_csb/status/1927345949166191097">キング</a>／<a href="https://x.com/mot_csb/status/1927347906417164466">レオナ</a>／<a href="https://x.com/mot_csb/status/1927349289904226545">京</a>／<a href="https://x.com/mot_csb/status/1927350534295458130">紅丸</a>／<a href="https://x.com/mot_csb/status/1927369971903959402">リョウの召喚コマンド</a>／<a href="https://x.com/mot_csb/status/1927372726609576378">チン</a>／<a href="https://x.com/mot_csb/status/1927374264140739001">表タクマ</a>／<a href="https://x.com/mot_csb/status/1927376166567997756">KUSANAGI</a>／<a href="https://x.com/mot_csb/status/1927376340522582339">他はなかなかない</a></li>
+<li>2025/5/28～31：<a href="https://x.com/mot_csb/status/1927526400191324341">弱ボタンで調査</a>／<a href="https://x.com/mot_csb/status/1928010301489959297">チャン（大暴走）</a>／<a href="https://x.com/mot_csb/status/1928010551453442435">チャン（大撲殺）</a>／<a href="https://x.com/mot_csb/status/1928015935685681544">なんでも判定</a>／<a href="https://x.com/mot_csb/status/1928029947316113723">受付時間中のフラグ</a>／<a href="https://x.com/mot_csb/status/1928051437507854579">名前の由来</a>／<a href="https://x.com/mot_csb/status/1928051679133376699">KOF2002との違い</a>／<a href="https://x.com/mot_csb/status/1928270213348544583">ガークラから</a>／<a href="https://x.com/mot_csb/status/1928440392552206782">禁止されるのか</a>／<a href="https://x.com/mot_csb/status/1928629273817973159">いいこと考えた（後転で仕込む）</a>／<a href="https://x.com/mot_csb/status/1928645711203041295">端で近Aから拾う</a>／<a href="https://x.com/mot_csb/status/1928648935893250549">強版連舞脚→近A→虎</a>／<a href="https://x.com/mot_csb/status/1928653620297281818">解除条件</a></li>
+<li>2025/6：<a href="https://x.com/mot_csb/status/1929823681783713823">ラ☆カチョーラ</a>／<a href="https://x.com/mot_csb/status/1929825423539786028">当て身投げ</a>／<a href="https://x.com/mot_csb/status/1929826429635907975">投げ</a>／<a href="https://x.com/mot_csb/status/1929827424696783028">通常投げ</a>／<a href="https://x.com/mot_csb/status/1932568793659904013">いくよキャンとの関係</a>／<a href="https://x.com/mot_csb/status/1934179064706941177">クイック発動で解除</a>／<a href="https://x.com/mot_csb/status/1935276702156079426">役に立ちそうな没技</a></li>
+<li>KOF2002のチン：<a href="https://kofplayers.hatenablog.jp/entry/2024/08/31/104914">KOF2002 チンの特殊テクニック：特殊版轟炎招来（KOF勢共有ブログ、2024年8月31日）</a></li>
+<li>源流の動画：<a href="https://www.nicovideo.jp/watch/sm22399461">【KOF02】真・隠し超必まとめ（ALXさん）</a>／<a href="http://koflog.blog38.fc2.com/blog-entry-154.html">地上ＭＡＸ鳳凰脚（ponZaさん）</a></li>
+</ul>
+</details>
+
+<p><a href="/research/kof2002um/index.html">KOF2002UM研究アーカイブへ戻る</a> ／ <a href="./x-system-2010-2025.html">システムのX投稿メモ</a> ／ <a href="/kof02um-top.html">KOF2002UM作品トップ</a></p>
+</div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
