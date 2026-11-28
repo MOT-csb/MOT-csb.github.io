@@ -1,0 +1,61 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>ガードポーズの継続と起き上がりの細かい仕様｜Come sono bravo?</title><meta name="description" content="KOFでガード硬直のあとにレバーを離してもガードが続く仕様、立ちガードと屈ガードからの解け方の違い、大ジャンプの受付時間17F、背向け起き上がりのガード方向などをまとめたメモ。">
+<link rel="stylesheet" href="/assets/research.css"><style>.article{max-width:960px}.article table{min-width:0;width:100%}.article th,.article td{overflow-wrap:anywhere;vertical-align:top}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}.lead{font-size:1.05em}.vt{display:inline-block;font-size:.85em;line-height:1.45;padding:0 6px;margin-left:4px;border:1px solid var(--line,#ccd);border-radius:4px;font-weight:600;white-space:nowrap}.legend{font-size:.92em;color:var(--sub,#555)}.src li{font-size:.92em}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h2{font-size:1.15em;margin-top:1.2rem}details.more h3{font-size:1.05em}@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px}.article th,.article td{min-width:96px}}</style></head><body><header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header><div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a><span aria-hidden="true"> / </span><a href="/kof-top.html">KOF</a><span aria-hidden="true"> / </span><a href="/research/kof-series/">シリーズ共通</a><span aria-hidden="true"> / </span><b>ガードポーズの継続</b></div></div><main class="main"><div class="wrap article"><h1>ガードポーズの継続と起き上がりの細かい仕様</h1>
+
+<p class="lead">KOFでは、ガード硬直が終わったあとにレバーを離しても、ガードポーズがしばらく続きます。そのため、わずかに連続ガードにならない連係も、レバーを離したまま防げます。続く長さは元のガードで変わり、立ちガード（4）から6に入れた場合は長く、屈ガード（1）から6に入れた場合はすぐに解けます。</p>
+
+<p>このページは、作品名を書かずに「KOF」の仕様として説明した投稿をまとめたものです。数値や例が特定の作品に寄る場合は、その旨を各節に書いています。</p>
+
+<h2>原則：ガード硬直のあとレバーを離してもガードが続く</h2>
+<blockquote>「KOFではガード硬直の後にレバーを離していればガードポーズを続けてくれるという仕様があるため、ギリギリ連続ガードにならない連係に対しては、レバーを離してもガードを続けてくれる、という仕様も利用しています」（<a href="https://x.com/mot_csb/status/22152330842">2010/8/26</a>）</blockquote>
+<p>これを使うと、ガードしたあとの反撃のコマンドが入れやすくなります。同じやりとりでは、次の例が挙げられています。</p>
+<ul>
+<li>相手の表社の6A→特殊ジェットカウンターをガードしたあと、クーラで強クロウバイツ1段目→SCダイヤモンドエッジで反撃する場合、屈ガード方向にレバーを入れたままだと出しにくく、6Aをガードした時点でレバーを離すと入力しやすくなります（<a href="https://x.com/mot_csb/status/22155899935">2010/8/26</a>）。</li>
+</ul>
+<p>補足：KOF'98では、屈ガードポーズからレバーを変えたときにガードポーズが続く時間が計測されています。2・3に入れた場合やレバーを離した（N）場合は11F、6に入れた場合は2Fです。→ <a href="/research/kof98/guard-pose-input-movement-notes-2015-2025.html">KOF'98 屈ガードポーズの維持・入力・移動の細かい仕様</a></p>
+
+<h2>例外：屈ガードから6に入れるとすぐ解ける</h2>
+<p>ガードポーズが続くのは、元が立ちガードの場合です。屈ガードから前に入れるとすぐ解けます。</p>
+<blockquote>「ガードが継続されるのは、4（立ちガードポーズ）→6が長めで、1（屈ガード）→6などはすぐに解けてしまうようです。なので、例えば舞で超必殺技を出したい場合は、立ちガードから6146+BCと入力するとよさそうです。」（<a href="https://x.com/mot_csb/status/46156445561004032">2011/3/11</a>）</blockquote>
+<p>前に入れる方向から始まるコマンド（舞の超必殺技なら6146+BC）を、ガードを解かずに入力し始められるということです。KOF'98で計った「1→6で2F」は、この「すぐに解けてしまう」と合っています。4→6で何F続くかは、まだ計っていません。</p>
+
+<h2>大ジャンプの受付時間は17F</h2>
+<blockquote>「確か、大Jの受付時間は17Fで、623コマンドの14Fや236コマンドの16Fよりも長かったのです。余裕を持ってレシピに組み込めリバサ大Jも簡単だったと。」（<a href="https://x.com/mot_csb/status/53010997597835264">2011/3/30</a>）</blockquote>
+<p>大ジャンプは、必殺技のコマンドよりも入力を受け付ける時間が長いので、起き上がりのリバーサル大ジャンプは比較的やさしくなります。KOF2002UMについては、2024年の投稿でも「大Jの受付時間は17F」「214系の必殺技の受付時間は16F」と書かれています（→ <a href="/research/kof2002um/x-system-2010-2025.html">KOF2002UM システムのX投稿メモ</a>）。2011年の投稿にはどの作品の値か書かれていないため、ほかの作品で同じ値かは未確認です。</p>
+
+<h2>起き上がりでボタンを押しっぱなしにしても意味はない</h2>
+<blockquote>「ボタンを押しっぱなしにしても、リバサで通常技や通常投げが出やすくなったりしないですよね。」（<a href="https://x.com/mot_csb/status/38238259574210561">2011/2/17</a>）</blockquote>
+<p>ボタンの押しっぱなしが何にも影響しないことが分かりやすい例として挙げられています。</p>
+
+<h2>背向け起き上がり</h2>
+<ul>
+<li><strong>重なった攻撃はリバーサル大ジャンプでかわせることがある</strong>：「横軸が同じ場合はリバサ大Jで回避が可能です。」「KOFではリバサ大Jでの回避と正面ガードを使い分けたりしてました。」（<a href="https://x.com/mot_csb/status/1834211895244681272">2024/9/12</a>）</li>
+<li><strong>地上技を重ねられても逆ガードにはならない</strong>：「KOFでは背向け起き上がりに地上技を重ねても逆ガードとかには特にならないです。」（<a href="https://x.com/mot_csb/status/1852863001386463394">2024/11/3</a>）。キャラの向きでガード方向が決まるゲーム（投稿では龍虎2を例に挙げています）とは違い、背向けでも普段どおりの方向でガードします。</li>
+</ul>
+<p>補足：KOF'98・2002の背向け起き上がりでリバーサル大ジャンプをすると、ジャンプの予備動作があるため、すぐには空中判定になりません。→ <a href="/research/kof98/backturned-reversal-hyperjump-cd-2008-2015.html">KOF'98 背向けダウン時のリバーサル大JCDと地上判定1F</a></p>
+
+<h2>投げの条件で出るガード不能の打撃技も、打撃無敵には負ける</h2>
+<blockquote>「KOFでも投げ条件で出せるガード不能打撃技があるんですが、それも打撃無敵がある技に負けます。」（<a href="https://x.com/mot_csb/status/1454816973313826822">2021/10/31</a>）</blockquote>
+<p>出せる条件が投げと同じでも、当たり方は打撃です。そのため、投げ無敵ではなく打撃無敵の技でかわせます。</p>
+
+<h2>似ているが別の話：KOF XIのヒット硬直の最後のフレーム</h2>
+<blockquote>「KOFシリーズでも11はヒット硬直の最後のフレームが無敵になっていたりします。」（<a href="https://x.com/mot_csb/status/1486939287316697091">2022/1/28</a>）</blockquote>
+<p>これはKOF XIの話で、ほかの作品で同じかは書かれていません。</p>
+
+<h2>気になること</h2>
+<ul>
+<li>立ちガード（4）から6に入れた場合、ガードポーズは何F続くのか。KOF'98で計った屈ガードの値（6で2F、2・3・Nで11F）と比べたいところです。</li>
+<li>KOF'98では、強攻撃に対する屈ガードポーズは2段階になっていて、最初の軽く構えるポーズからは早く解けるようです（要検証）。立ちガードでも同じことが起きるかは未確認です。</li>
+<li>大ジャンプ17F・623が14F・236が16Fという受付時間が、KOF2002UM以外の作品でも同じか。</li>
+</ul>
+
+<details class="more"><summary>出典</summary>
+<ul class="src">
+<li>X投稿：<a href="https://x.com/mot_csb/status/22152330842">ガード硬直のあとのガードポーズ（2010/8/26）</a>、<a href="https://x.com/mot_csb/status/22155899935">クーラでの反撃の例（2010/8/26）</a>、<a href="https://x.com/mot_csb/status/38238259574210561">起き上がりとボタン押しっぱなし（2011/2/17）</a>、<a href="https://x.com/mot_csb/status/46156445561004032">4→6と1→6の違い（2011/3/11）</a>、<a href="https://x.com/mot_csb/status/53010997597835264">大ジャンプの受付時間（2011/3/30）</a>、<a href="https://x.com/mot_csb/status/1454816973313826822">投げ条件のガード不能打撃（2021/10/31）</a>、<a href="https://x.com/mot_csb/status/1486939287316697091">KOF XIのヒット硬直（2022/1/28）</a>、<a href="https://x.com/mot_csb/status/1834211895244681272">背向けダウンとリバーサル大ジャンプ（2024/9/12）</a>、<a href="https://x.com/mot_csb/status/1852863001386463394">背向け起き上がりのガード方向（2024/11/3）</a></li>
+<li>いずれも他の方への返信で、本文に作品名はありません。</li>
+</ul>
+<h3>更新履歴</h3>
+<ul class="src"><li>2026/11/28 作成</li></ul>
+</details>
+
+<p><a href="/research/kof-series/">KOFシリーズ共通仕様・バグ研究へ</a></p>
+</div></main><footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer></body></html>
