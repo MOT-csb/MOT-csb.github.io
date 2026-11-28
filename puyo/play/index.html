@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>初代ルール対戦練習アプリ｜Come sono bravo?</title>
+<meta name="description" content="初代ぷよぷよのルール（相殺なし、クイック、1回30個のおじゃまぷよ、初代の得点ボーナス）で、CPU対戦ととこぷよ練習ができるブラウザアプリ。">
+<link rel="stylesheet" href="/assets/research.css">
+<style>
+.app{max-width:760px;margin:0 auto}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px}
+.bar button,.bar select,.bar input{padding:7px 11px;font-size:15px}
+.bar input[type=number]{width:7.5em}
+.arena{display:flex;gap:10px;justify-content:center;align-items:flex-start;touch-action:manipulation}
+.side{display:flex;flex-direction:column;align-items:center;gap:4px}
+.side h3{margin:0;font-size:14px}
+.warn{min-height:1.4em;font-size:13px;font-weight:700;color:#c0392b;font-variant-numeric:tabular-nums}
+[hidden]{display:none!important}
+.pstat{font-size:13px;font-variant-numeric:tabular-nums;text-align:center;line-height:1.5}
+canvas.board{background:#14212f;border:4px solid #283f57;border-radius:8px;display:block}
+.nexts{display:flex;flex-direction:column;gap:6px;align-items:center;padding-top:24px}
+.nexts canvas{background:#1b293a;border-radius:6px}
+.nexts span{font-size:11px;color:var(--muted)}
+.pad{display:none;grid-template-columns:repeat(5,1fr);gap:6px;margin:12px auto 0;max-width:420px;user-select:none;-webkit-user-select:none}
+.pad button{padding:16px 0;font-size:18px;border-radius:10px;touch-action:none}
+.pad.on{display:grid}
+.log{font-size:13px;margin:10px 0 0;padding:8px 10px;border:1px solid var(--line);border-radius:7px;max-height:180px;overflow:auto;font-variant-numeric:tabular-nums}
+.log ol{margin:0;padding-left:22px}
+.result{font-size:18px;font-weight:800;text-align:center;min-height:1.6em;margin:8px 0 0}
+.tblw{overflow-x:auto}
+.hint{font-size:13px;color:var(--muted)}
+kbd{border:1px solid var(--line);border-radius:4px;padding:0 5px;font-size:13px}
+</style></head><body>
+<header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<div class="hero"><div class="wrap"><div class="breadcrumbs"><a href="/">トップ</a> / <a href="/puyo/death-tower/">ぷよぷよ</a> / 初代ルール対戦練習アプリ</div><p class="kicker">PUYO / PLAY</p><h1>初代ルール対戦練習アプリ</h1><p>相殺なし・クイックあり・1回30個のおじゃまぷよ。初代のルールでCPU対戦と、とこぷよ（ひとり練習）ができます。</p></div></div>
+<main class="main"><div class="wrap">
+<section class="section app" id="game">
+<div class="bar">
+<label>モード <select id="mode"><option value="vs">CPU対戦</option><option value="toko">とこぷよ（ひとり練習）</option></select></label>
+<label id="lvl-wrap">CPUの強さ <select id="level"><option value="0">やさしい</option><option value="1" selected>ふつう</option><option value="2">つよい</option></select></label>
+<label>配ぷよ番号 <input id="seed" type="number" min="1" max="99999999"></label>
+<button id="start" type="button">はじめる</button>
+<button id="pause" type="button">一時停止</button>
+<button id="undo" type="button" hidden>1手戻す</button>
+<label id="grav-wrap" hidden><input id="grav" type="checkbox" checked> 自動で落ちる</label>
+</div>
+<div class="arena" id="arena">
+<div class="side"><h3>あなた</h3><div class="warn" id="w0"></div><canvas class="board" id="b0"></canvas><div class="pstat" id="s0"></div></div>
+<div class="nexts" id="nx"><span>NEXT</span><canvas id="n0a"></canvas><canvas id="n0b"></canvas></div>
+<div class="side" id="cpu-side"><h3>CPU</h3><div class="warn" id="w1"></div><canvas class="board" id="b1"></canvas><div class="pstat" id="s1"></div></div>
+</div>
+<p class="result" id="result" role="status" aria-live="polite"></p>
+<div class="pad" id="pad">
+<button type="button" data-k="L" aria-label="左へ">◀</button><button type="button" data-k="RL" aria-label="左回転">↺</button><button type="button" data-k="D" aria-label="下へ">▼</button><button type="button" data-k="RR" aria-label="右回転">↻</button><button type="button" data-k="R" aria-label="右へ">▶</button>
+</div>
+<div class="log" id="log"><b>連鎖の記録</b><div id="logbody">まだ連鎖していません</div></div>
+<p class="hint">操作：<kbd>←</kbd><kbd>→</kbd>移動、<kbd>↓</kbd>落とす、<kbd>Z</kbd>左回転、<kbd>X</kbd>・<kbd>↑</kbd>右回転、<kbd>P</kbd>一時停止。スマホでは盤面の下のボタンで操作します。同じ配ぷよ番号なら、同じ組ぷよの順番で遊べます。</p>
+</section>
+
+<section class="section" id="rules"><h2>このアプリの初代ルール</h2>
+<p>初代のルールは、後のシリーズと違って相殺がありません。先に致死量を撃った方がほぼ勝つので、勝負は撃つ速さと潰し・掘り合いになります。このアプリでは次のルールで動きます。</p>
+<div class="tblw"><table><thead><tr><th>項目</th><th>このアプリの動き</th></tr></thead><tbody>
+<tr><td>盤面</td><td>6列×13段。13段目のぷよは消えません。3列目の12段目がふさがった状態で次の組ぷよが出ると負け（窒息）です。</td></tr>
+<tr><td>色</td><td>1試合4色。5色から4色を選びます。2人とも同じ順番で組ぷよが来ます。</td></tr>
+<tr><td>得点</td><td>消した色ぷよの数×10×倍率。倍率は連鎖ボーナス（2連鎖目8、3連鎖目16、4連鎖目32…、9連鎖目以降999）・色数ボーナス（2色3、3色6、4色12）・連結ボーナス（5個2、6個3…10個7、11個以上10）の合計で、最低1、最大999です。</td></tr>
+<tr><td>おじゃまぷよ</td><td>70点で1個。割り切れない端数の点は次の連鎖に持ち越します。</td></tr>
+<tr><td>相殺</td><td>ありません。送られたおじゃまぷよは必ず降ります。</td></tr>
+<tr><td>降るタイミング</td><td>連鎖した側のフィールドで落ちるぷよがなくなった時点で、相手に送られます。最後の消去で落ちるぷよがないと、その場で送られます（クイック）。受けた側には、操作中の組ぷよを置いて連鎖が終わったあとに降ります。</td></tr>
+<tr><td>1回に降る数</td><td>最大30個（5段）。残りは、組ぷよを1つ置くたびにまた最大30個ずつ降ります。</td></tr>
+<tr><td>回転</td><td>壁や床に当たるときは1マスずらして回ります。ずらせないときは回りません（クイックターンなし）。</td></tr>
+</tbody></table></div>
+<p>ルールの根拠は<a href="/puyo/strategy/rules/">初代ルールの対戦仕様</a>（クイックと降るタイミング）、<a href="/puyo/death-tower/theory/">盤面計算による分析</a>（1回30個・得点ボーナス・70点で1個）、<a href="/puyo/simulator/">研究用シミュレーター</a>（得点式）です。</p>
+<details class="more"><summary>実機と違うところ・まだ入っていないもの</summary>
+<ul>
+<li>落下の速さ、消えるまでの時間、連鎖の演出時間は、実機の値を測っていない目安です。クイックの起き方（最後に落ちるぷよがあるかどうかで送るタイミングが変わること）は再現していますが、連鎖時間の長さそのものは実機と同じではありません。</li>
+<li>おつりは、端数の点を持ち越す形にしています。<a href="/puyo/strategy/rules/#otsuri">おつりの項</a>にある、おじゃまぷよ1個がなかなか降ってこない現象の細かい条件は再現していません。</li>
+<li>おじゃまぷよが5段に満たないときの降る列の選び方は、ランダムにしています。</li>
+<li>大きいぷよ・特殊な組ぷよ、ゲーム開始時の組ぷよの決まり方、得点の表示方法は入れていません。</li>
+<li>CPUは独自の考え方で動きます。連鎖を組みながら、相手の空きマスより多くおじゃまぷよを送れるときや、自分が危ないときに撃ちます。デスタワー専用の組み方はしません。</li>
+</ul></details>
+</section>
+<section class="section"><h2>関連ページ</h2><p><a href="/puyo/death-tower/">デスタワー</a> ／ <a href="/puyo/death-tower/matchups/">デスタワーの相手別の有利不利</a> ／ <a href="/puyo/death-tower/lethal-amount/">致死量と起爆判断</a> ／ <a href="/puyo/simulator/">研究用シミュレーター</a> ／ <a href="/puyo/strategy/">初代ぷよぷよの攻略メモ</a></p></section>
+</div></main>
+<script>
+(()=>{'use strict';
+const W=6,H=13,N=W*H,GARB=6,RATE=70,MAXDROP=30;
+const COL=['','#f04d53','#4aa4f4','#f6d24b','#53d47a','#aa72e6','#aeb9c5'];
+const CNAME=['','赤','青','黄','緑','紫','おじゃま'];
+const CHAIN=[0,0,8,16,32,64,128,256,512,999],CB=[0,0,3,6,12,24];
+const T={fall:20,soft:2,lock:16,pop:30,fallCell:3,das:10,arr:3};
+const gbon=n=>n<=4?0:n>=11?10:n-3;
+const $=id=>document.getElementById(id);
+
+function rng(seed){let s=(seed>>>0)||1;return()=>{s^=s<<13;s>>>=0;s^=s>>>17;s^=s<<5;s>>>=0;return s/4294967296}}
+function makeSeq(seed){const r=rng(seed*2654435761);for(let i=0;i<10;i++)r();const pal=[1,2,3,4,5];for(let i=4;i>0;i--){const j=Math.floor(r()*(i+1));[pal[i],pal[j]]=[pal[j],pal[i]]}const use=pal.slice(0,4).sort();const seq=[];for(let i=0;i<4000;i++)seq.push([use[Math.floor(r()*4)],use[Math.floor(r()*4)]]);return{use,seq}}
+
+// ---- field logic (y=0 is the 13th row, y=12 the 1st row)
+function fall(f){let md=0;for(let x=0;x<W;x++){let w=H-1;for(let y=H-1;y>=0;y--){const v=f[y*W+x];if(v){if(w!==y){f[w*W+x]=v;f[y*W+x]=0;if(w-y>md)md=w-y}w--}}}return md}
+function nbs(k){const x=k%W,y=(k/W)|0,r=[];if(x>0)r.push(k-1);if(x<W-1)r.push(k+1);if(y>1)r.push(k-W);if(y<H-1)r.push(k+W);return r}
+function groups(f,min=4){const seen=new Uint8Array(N),res=[];for(let i=W;i<N;i++){const c=f[i];if(!c||c===GARB||seen[i])continue;const st=[i],g=[];seen[i]=1;while(st.length){const k=st.pop();g.push(k);for(const m of nbs(k))if(!seen[m]&&f[m]===c){seen[m]=1;st.push(m)}}if(g.length>=min)res.push(g)}return res}
+function popInfo(f,gs,chainNo){const set=new Set(),cols=new Set();let gsum=0;for(const g of gs){gsum+=gbon(g.length);cols.add(f[g[0]]);for(const k of g)set.add(k)}const colored=set.size,garb=new Set();for(const k of set)for(const m of nbs(k))if(f[m]===GARB)garb.add(m);const bonus=Math.max(1,Math.min(999,CHAIN[Math.min(chainNo,9)]+CB[Math.min(cols.size,5)]+gsum));return{cells:[...set,...garb],points:colored*10*bonus,colored,colors:cols.size,bonus}}
+function simChain(f){let ch=0,sc=0;fall(f);for(;;){const gs=groups(f);if(!gs.length)break;ch++;const p=popInfo(f,gs,ch);sc+=p.points;for(const k of p.cells)f[k]=0;fall(f)}return{ch,sc}}
+function topY(f,x){for(let y=0;y<H;y++)if(f[y*W+x])return y;return H}
+function emptyCount(f){let n=0;for(let i=W;i<N;i++)if(!f[i])n++;return n}
+function dropGarbage(f,k){const cnt=Array(W).fill(Math.floor(k/W));const cols=[0,1,2,3,4,5];for(let i=5;i>0;i--){const j=Math.floor(Math.random()*(i+1));[cols[i],cols[j]]=[cols[j],cols[i]]}for(let i=0;i<k%W;i++)cnt[cols[i]]++;for(let x=0;x<W;x++){let y=topY(f,x)-1;for(let n=0;n<cnt[x]&&y>=0;n++,y--)f[y*W+x]=GARB}}
+
+// ---- game state
+const DX=[0,1,0,-1],DY=[-1,0,1,0];
+let mode='vs',level=1,players=[],seq=null,useCols=[],running=false,paused=false,over=false,frame=0,seed=1,logRows=[];
+function newPlayer(i,cpu){return{i,cpu,f:new Uint8Array(N),idx:0,cur:null,phase:'spawn',timer:0,g:0,lock:0,chain:0,chainScore:0,carry:0,pending:0,popCells:null,score:0,dead:false,soft:false,lastMsg:'',msgT:0,hist:[],ai:null,aiAct:0}}
+function pairAt(p,k){return seq[(p.idx+k)%seq.length]}
+function cells(c,x,y,r){return[[x,y,c.colors[0]],[x+DX[r],y+DY[r],c.colors[1]]]}
+function fits(f,x,y,r){for(const[cx,cy]of[[x,y],[x+DX[r],y+DY[r]]]){if(cx<0||cx>=W||cy<0||cy>=H||f[cy*W+cx])return false}return true}
+function spawn(p){if(p.f[1*W+2]){p.dead=true;p.phase='dead';finish(p);return}
+ if(mode==='toko')p.hist.push({f:p.f.slice(),idx:p.idx,score:p.score,carry:p.carry,logs:logRows.length});
+ p.cur={x:2,y:1,r:0,colors:pairAt(p,0)};p.idx++;p.phase='move';p.g=0;p.lock=0;p.soft=false;
+ if(p.cpu)startAI(p)}
+function move(p,dx){if(p.phase!=='move')return false;const c=p.cur;if(fits(p.f,c.x+dx,c.y,c.r)){c.x+=dx;p.lock=0;return true}return false}
+function rotate(p,d){if(p.phase!=='move')return false;const c=p.cur,nr=(c.r+d+4)%4;
+ if(fits(p.f,c.x,c.y,nr)){c.r=nr;return true}
+ if(nr===1||nr===3){const sx=c.x-DX[nr];if(fits(p.f,sx,c.y,nr)){c.x=sx;c.r=nr;return true}}
+ if(nr===2){if(fits(p.f,c.x,c.y-1,nr)){c.y--;c.r=nr;return true}}
+ return false}
+function place(p){for(const[x,y,col]of cells(p.cur,p.cur.x,p.cur.y,p.cur.r))if(y>=0)p.f[y*W+x]=col;p.cur=null;const d=fall(p.f);p.phase='fall';p.timer=d*T.fallCell+4;p.chain=0;p.chainScore=0}
+function step(p){
+ if(p.dead||p.phase==='dead')return;
+ if(p.msgT>0)p.msgT--;
+ switch(p.phase){
+ case'spawn':spawn(p);break;
+ case'move':{const c=p.cur;const grav=!(mode==='toko'&&!$('grav').checked);const iv=p.soft?T.soft:T.fall;
+  if(p.soft||grav){p.g++;if(p.g>=iv){p.g=0;if(fits(p.f,c.x,c.y+1,c.r)){c.y++;p.lock=0}}}
+  if(!fits(p.f,c.x,c.y+1,c.r)){p.lock++;if(p.soft||p.lock>=T.lock)place(p)}
+  break}
+ case'fall':if(--p.timer<=0)p.phase='check';break;
+ case'check':{const gs=groups(p.f);if(gs.length){p.chain++;const info=popInfo(p.f,gs,p.chain);p.popCells=info.cells;p.chainScore+=info.points;p.score+=info.points;p.lastMsg=p.chain+'連鎖';p.msgT=60;p.phase='pop';p.timer=T.pop;p.lastInfo=info}else endChain(p);break}
+ case'pop':if(--p.timer<=0){for(const k of p.popCells)p.f[k]=0;p.popCells=null;const d=fall(p.f);if(d>0){p.phase='fall';p.timer=d*T.fallCell+2}else p.phase='check'}break;
+ case'gfall':if(--p.timer<=0)p.phase='spawn';break;
+ }}
+function endChain(p){
+ if(p.chain>0){const tot=p.carry+p.chainScore,g=Math.floor(tot/RATE);p.carry=tot%RATE;
+  const opp=players.find(q=>q!==p);if(opp&&!opp.dead)opp.pending+=g;
+  p.lastMsg=p.chain+'連鎖 '+p.chainScore+'点'+(mode==='vs'?' → おじゃま'+g+'個':'（おじゃま'+g+'個ぶん）');p.msgT=120;
+  if(!p.cpu||mode==='vs')addLog(p,g)}
+ p.chain=0;p.chainScore=0;
+ if(p.pending>0){const k=Math.min(MAXDROP,p.pending);p.pending-=k;dropGarbage(p.f,k);p.phase='gfall';p.timer=12*T.fallCell/3+20}
+ else p.phase='spawn'}
+function addLog(p,g){logRows.push((mode==='vs'?(p.cpu?'CPU':'あなた')+'：':'')+p.chain+'連鎖　'+p.chainScore+'点　おじゃま'+g+'個'+(mode==='toko'?'（'+p.idx+'手目）':''));const lb=$('logbody');lb.innerHTML='<ol>'+logRows.slice(-30).map(s=>'<li>'+s+'</li>').join('')+'</ol>';$('log').scrollTop=1e6}
+function finish(loser){over=true;running=false;const r=$('result');if(mode==='toko')r.textContent='窒息しました（'+(loser.idx)+'手目・'+loser.score+'点）';else r.textContent=loser.cpu?'あなたの勝ちです！':'CPUの勝ちです';}
+
+// ---- CPU
+const LV=[{ply:1,pot:false,noise:120,delay:14,think:2},{ply:1,pot:true,noise:20,delay:8,think:4},{ply:2,pot:true,noise:0,delay:4,think:7}];
+function candidates(){const r=[];for(let x=0;x<W;x++)for(let rot=0;rot<4;rot++){const x2=x+DX[rot];if(x2<0||x2>=W)continue;r.push([x,rot])}return r}
+const CANDS=candidates();
+function reachable(f,x,x2){const lo=Math.min(2,x,x2),hi=Math.max(2,x,x2);for(let c=lo;c<=hi;c++)if(f[1*W+c])return false;return true}
+function placeSim(f,pair,x,rot){const x2=x+DX[rot];if(!reachable(f,x,x2))return null;const g=f.slice();
+ if(rot===0||rot===2){const t=topY(g,x);if(t-2<0)return null;const lo=rot===0?pair[0]:pair[1],up=rot===0?pair[1]:pair[0];g[(t-1)*W+x]=lo;g[(t-2)*W+x]=up}
+ else{const t1=topY(g,x),t2=topY(g,x2);if(t1<1||t2<1)return null;g[(t1-1)*W+x]=pair[0];g[(t2-1)*W+x2]=pair[1]}
+ return g}
+function leaf(g,cfg){if(g[W+2])return-1e9;let v=0;
+ for(let x=0;x<W;x++){const h=H-topY(g,x);if(h>9)v-=(h-9)*60;if(x===2&&h>8)v-=(h-8)*120}
+ for(const grp of groups(g,2)){const s=grp.length;v+=s===2?4:s===3?14:0}
+ if(cfg.pot){let best=0;for(let x=0;x<W;x++){const t=topY(g,x);if(t<3)continue;for(const c of useCols){const h=g.slice();h[(t-1)*W+x]=c;h[(t-2)*W+x]=c;const r=simChain(h);if(r.sc>best)best=r.sc}}v+=best/RATE*6}
+ return v}
+function judge(g,cfg,ctx){const r=simChain(g);if(g[W+2])return-1e9;const gar=Math.floor((r.sc+ctx.carry)/RATE);
+ let v=leaf(g,cfg);
+ if(r.ch>0){if(gar>=ctx.oppEmpty-6&&gar>=12)v+=1e6+gar;else if(ctx.danger)v+=5e4+gar*50;else if(r.ch===1&&gar<6)v+=(ctx.oppHot?gar*30:-400);else v-=250-gar*10}
+ return v}
+function* think(p){const cfg=LV[level],opp=players.find(q=>q!==p);
+ const ctx={carry:p.carry,oppEmpty:opp?emptyCount(opp.f):99,danger:p.pending>=12||H-topY(p.f,2)>=9,oppHot:opp&&opp.pending>0};
+ const pair0=p.cur.colors,pair1=pairAt(p,0);let best=null,bv=-Infinity;
+ for(const[x,rot]of CANDS){const g=placeSim(p.f,pair0,x,rot);if(!g){yield;continue}
+  let v;if(cfg.ply===1)v=judge(g,cfg,ctx);
+  else{const g1=g.slice();const r=simChain(g1);const gar=Math.floor((r.sc+ctx.carry)/RATE);
+   if(r.ch>0)v=judge(g,cfg,ctx);else{let m=-1e9;for(const[x2,r2]of CANDS){const h=placeSim(g1,pair1,x2,r2);if(!h)continue;const w=judge(h,{pot:cfg.pot&&false},ctx);if(w>m)m=w}v=Math.max(m*0.9,leaf(g1,cfg))}}
+  v+=(Math.random()-.5)*cfg.noise;if(v>bv){bv=v;best=[x,rot]}yield}
+ return best}
+function startAI(p){p.ai={gen:think(p),plan:null};p.aiAct=0}
+function aiFrame(p){if(!p.cur||p.phase!=='move'||!p.ai)return;const a=p.ai;
+ if(!a.plan){const t0=performance.now();let it=0;while(performance.now()-t0<LV[level].think){const r=a.gen.next();it++;if(r.done){a.plan=r.value||[2,0];break}}return}
+ if(++p.aiAct<LV[level].delay)return;p.aiAct=0;const[tx,tr]=a.plan,c=p.cur;
+ if(c.r!==tr){const d=((tr-c.r+4)%4)<=2?1:-1;if(!rotate(p,d))p.soft=true;return}
+ if(c.x<tx){if(!move(p,1))p.soft=true;return}if(c.x>tx){if(!move(p,-1))p.soft=true;return}
+ p.soft=true}
+
+// ---- input
+const keys={L:false,R:false,D:false},rep={L:0,R:0};
+function human(){return players[0]}
+function press(k){const p=human();if(!p||!running||paused)return;if(k==='RL')rotate(p,-1);else if(k==='RR')rotate(p,1);else if(k==='L'||k==='R'){if(!keys[k]){keys[k]=true;rep[k]=0;move(p,k==='L'?-1:1)}}else if(k==='D')keys.D=true}
+function release(k){if(k in keys)keys[k]=false}
+function inputFrame(){const p=human();if(!p)return;p.soft=keys.D&&p.phase==='move';for(const k of['L','R'])if(keys[k]){rep[k]++;if(rep[k]>=T.das&&(rep[k]-T.das)%T.arr===0)move(p,k==='L'?-1:1)}}
+const KM={ArrowLeft:'L',ArrowRight:'R',ArrowDown:'D',ArrowUp:'RR',x:'RR',X:'RR',z:'RL',Z:'RL'};
+addEventListener('keydown',e=>{if(e.target.closest&&e.target.closest('input,select,textarea'))return;if(e.key==='p'||e.key==='P'){togglePause();return}const k=KM[e.key];if(!k||!running)return;e.preventDefault();if(e.repeat&&(k==='RL'||k==='RR'||k==='L'||k==='R'))return;press(k)});
+addEventListener('keyup',e=>{const k=KM[e.key];if(k)release(k)});
+document.querySelectorAll('#pad button').forEach(b=>{const k=b.dataset.k;b.addEventListener('pointerdown',e=>{e.preventDefault();b.setPointerCapture(e.pointerId);press(k)});['pointerup','pointercancel','lostpointercapture'].forEach(t=>b.addEventListener(t,()=>release(k)))});
+if(matchMedia('(pointer:coarse)').matches)$('pad').classList.add('on');
+
+// ---- drawing
+let cs=28;const boards=[$('b0'),$('b1')],nx=[$('n0a'),$('n0b')];
+function sizeAll(){const aw=Math.min($('game').clientWidth,760);const nboards=mode==='vs'?2:1;cs=Math.max(14,Math.min(32,Math.floor((aw-60-nboards*18)/(nboards*6))));const dpr=devicePixelRatio||1;
+ for(const c of boards){c.width=W*cs*dpr;c.height=H*cs*dpr;c.style.width=W*cs+'px';c.style.height=H*cs+'px';c.getContext('2d').setTransform(dpr,0,0,dpr,0,0)}
+ const ns=Math.max(12,Math.round(cs*.8));for(const c of nx){c.width=ns*dpr;c.height=ns*2*dpr;c.style.width=ns+'px';c.style.height=ns*2+'px';c.getContext('2d').setTransform(dpr,0,0,dpr,0,0);c._s=ns}}
+function blob(ctx,x,y,s,v,alpha=1){ctx.globalAlpha=alpha;ctx.fillStyle=COL[v];ctx.beginPath();ctx.arc(x+s/2,y+s/2,s*.44,0,7);ctx.fill();if(v!==GARB){ctx.fillStyle='rgba(255,255,255,.5)';ctx.beginPath();ctx.arc(x+s*.36,y+s*.36,s*.11,0,7);ctx.fill()}else{ctx.strokeStyle='rgba(0,0,0,.25)';ctx.lineWidth=1;ctx.stroke()}ctx.globalAlpha=1}
+function draw(p,c){const ctx=c.getContext('2d');const w=W*cs,h=H*cs;ctx.fillStyle='#14212f';ctx.fillRect(0,0,w,h);ctx.fillStyle='rgba(255,255,255,.05)';ctx.fillRect(0,0,w,cs);
+ ctx.strokeStyle='rgba(255,90,90,.55)';ctx.lineWidth=2;const xx=2*cs,yy=cs;ctx.beginPath();ctx.moveTo(xx+cs*.25,yy+cs*.25);ctx.lineTo(xx+cs*.75,yy+cs*.75);ctx.moveTo(xx+cs*.75,yy+cs*.25);ctx.lineTo(xx+cs*.25,yy+cs*.75);ctx.stroke();
+ if(!p)return;const pop=p.popCells?new Set(p.popCells):null;
+ for(let i=0;i<N;i++){const v=p.f[i];if(!v)continue;const x=i%W,y=(i/W)|0;blob(ctx,x*cs,y*cs,cs,v,pop&&pop.has(i)?((frame>>2)&1?.25:1):(y===0?.6:1))}
+ if(p.cur&&p.phase==='move')for(const[x,y,v]of cells(p.cur,p.cur.x,p.cur.y,p.cur.r))if(y>=0)blob(ctx,x*cs,y*cs,cs,v);
+ if(p.msgT>0&&p.lastMsg){ctx.font='bold '+Math.max(11,Math.round(cs*.5))+'px sans-serif';ctx.textAlign='center';const tw=ctx.measureText(p.lastMsg).width+12;ctx.fillStyle='rgba(0,0,0,.6)';ctx.fillRect(w/2-tw/2,h*.38,tw,cs*.9);ctx.fillStyle='#fff';ctx.fillText(p.lastMsg,w/2,h*.38+cs*.65)}
+ if(p.dead){ctx.fillStyle='rgba(0,0,0,.55)';ctx.fillRect(0,0,w,h);ctx.fillStyle='#fff';ctx.font='bold '+Math.round(cs*.7)+'px sans-serif';ctx.textAlign='center';ctx.fillText('窒息',w/2,h/2)}}
+function drawNext(){const p=players[0];for(let k=0;k<2;k++){const c=nx[k],s=c._s,ctx=c.getContext('2d');ctx.clearRect(0,0,s,s*2);if(!p||!seq)continue;const pr=p.phase==='move'?pairAt(p,k):pairAt(p,k);blob(ctx,0,s,s,pr[0]);blob(ctx,0,0,s,pr[1])}}
+function hud(){players.forEach((p,i)=>{$('s'+i).textContent=p.score+'点'+(mode==='toko'?'　'+p.idx+'手目':'');$('w'+i).textContent=p.pending>0?'おじゃま予告 '+p.pending+'個':''});if(mode==='toko')$('w0').textContent=''}
+function render(){draw(players[0],boards[0]);if(mode==='vs')draw(players[1],boards[1]);drawNext();hud()}
+
+// ---- loop
+let acc=0,last=0;
+function tick(ts){requestAnimationFrame(tick);if(!last)last=ts;acc+=Math.min(100,ts-last);last=ts;
+ while(acc>=1000/60){acc-=1000/60;if(running&&!paused){frame++;inputFrame();for(const p of players){if(p.cpu)aiFrame(p);step(p);if(over)break}}}
+ render()}
+requestAnimationFrame(tick);
+
+function start(){mode=$('mode').value;level=+$('level').value;let s=parseInt($('seed').value,10);if(!(s>0)){s=1+Math.floor(Math.random()*99999);$('seed').value=s}seed=s;const q=makeSeq(seed);seq=q.seq;useCols=q.use;
+ players=[newPlayer(0,false)];if(mode==='vs')players.push(newPlayer(1,true));
+ running=true;paused=false;over=false;frame=0;logRows=[];$('logbody').textContent='まだ連鎖していません';$('result').textContent='';$('pause').textContent='一時停止';
+ $('cpu-side').hidden=mode!=='vs';$('lvl-wrap').hidden=mode!=='vs';$('undo').hidden=mode!=='toko';$('grav-wrap').hidden=mode!=='toko';
+ sizeAll();$('arena').scrollIntoView({block:'nearest'});document.activeElement&&document.activeElement.blur()}
+function togglePause(){if(!running)return;paused=!paused;$('pause').textContent=paused?'再開':'一時停止';$('result').textContent=paused?'一時停止中':''}
+function undo(){const p=players[0];if(mode!=='toko'||p.hist.length<2)return;p.hist.pop();const h=p.hist.pop();p.f=h.f.slice();p.idx=h.idx;p.score=h.score;p.carry=h.carry;logRows.length=h.logs;$('logbody').innerHTML=logRows.length?'<ol>'+logRows.slice(-30).map(s=>'<li>'+s+'</li>').join('')+'</ol>':'まだ連鎖していません';p.dead=false;p.popCells=null;p.chain=0;p.msgT=0;p.phase='spawn';over=false;running=true;$('result').textContent=''}
+$('start').onclick=start;$('pause').onclick=togglePause;$('undo').onclick=undo;
+$('mode').onchange=()=>{const m=$('mode').value;$('lvl-wrap').hidden=m!=='vs';$('undo').hidden=m!=='toko';$('grav-wrap').hidden=m!=='toko'};
+addEventListener('resize',()=>sizeAll());
+$('cpu-side').hidden=false;sizeAll();players=[newPlayer(0,false),newPlayer(1,true)];render();
+window.__puyo={get players(){return players},simChain,popInfo,groups,makeSeq,fall,dropGarbage,step,T,setLevel:v=>level=v};
+})();
+</script>
+</body></html>
