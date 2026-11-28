@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>KOF2000 超必殺技の発生と無敵時間（全キャラ）｜Come sono bravo?</title>
+<meta name="description" content="KOF2000の全キャラの超必殺技について、通常版・MAX版、弱・強ごとに発生フレームと無敵時間を一覧にしました。発生後まで無敵が続く技、発生直前で切れる技、発生前に無敵が切れる技を区別し、カウンターモード中の変化も載せています。">
+<link rel="stylesheet" href="/assets/research.css">
+<style>.article{max-width:960px}.article table{width:100%;border-collapse:collapse}.article th,.article td{border:1px solid var(--line,#ccd);padding:6px 8px;overflow-wrap:anywhere;vertical-align:top;text-align:left}.article thead th{background:var(--soft,#eaf0ed)}.article td.num{font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap}.article h2{margin-top:2rem}.article h3{margin-top:1.4rem}.flow{counter-reset:s;list-style:none;padding:0}.flow li{counter-increment:s;position:relative;padding:8px 12px 8px 44px;margin:8px 0;border:1px solid var(--line,#ccd);border-radius:10px}.flow li::before{content:counter(s);position:absolute;left:12px;top:8px;width:22px;height:22px;border-radius:50%;background:var(--accent,#245e47);color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:22px}.lead{font-size:1.05em}.vt{display:inline-block;font-size:.85em;line-height:1.45;padding:0 6px;margin-left:4px;border:1px solid var(--line,#ccd);border-radius:4px;font-weight:600;white-space:nowrap}.legend{font-size:.92em;color:var(--sub,#555)}.src li{font-size:.92em}details.more{margin:14px 0;border:1px solid var(--line,#ccd);border-radius:10px;padding:4px 14px}details.more>summary{cursor:pointer;font-weight:700;padding:8px 0}details.more[open]>summary{border-bottom:1px solid var(--line,#ccd);margin-bottom:8px}details.more h2{font-size:1.15em;margin-top:1.2rem}details.more h3{font-size:1.05em}figure{margin:14px 0}figure img{max-width:100%;height:auto;border:1px solid var(--line,#ccd)}figcaption{font-size:.9em;color:var(--sub,#555)}@media(max-width:700px){.article table{display:block;overflow-x:auto;font-size:13px;min-width:0;max-width:100%}.article th,.article td{min-width:72px}}.note{font-weight:400;font-size:.88em;color:var(--sub,#555)}.j-best{font-weight:700;color:#0a6b3d}.j-good{color:#245e47}.j-gap{color:#8a5a00}.j-none{color:#a33}.tw{overflow-x:auto}</style>
+</head><body>
+<header class="header"><div class="wrap topline"><a href="/" class="brand">Come sono bravo?</a><nav class="nav" aria-label="主要ナビゲーション"><a href="/">トップ</a><a href="/kof-top.html">KOF</a><a href="/sonota.html">作品一覧</a><a href="/msx/">MSX</a><a href="/puyo/death-tower/">ぷよぷよ</a><a href="/sitemap.html">全ページ一覧</a></nav></div></header>
+<div class="crumbbar"><div class="wrap breadcrumbs"><a href="/">トップ</a> / <a href="/kof-top.html">KOF</a> / <a href="/kof00-top.html">KOF2000</a> / <a href="/research/kof2000/index.html">研究アーカイブ</a> / <b>超必殺技の発生と無敵時間</b></div></div>
+<main class="main"><div class="wrap article">
+<h1>KOF2000 超必殺技の発生と無敵時間（全キャラ）</h1>
+<p class="lead">KOF2000の超必殺技は、<strong>出始めの無敵が攻撃判定の出るところまで続く技が多め</strong>です。通常版では約半分、MAX版では8割以上が「発生の直前まで無敵」か「発生後まで無敵」です。ただし<strong>カウンターモード中に出すと暗転がなくなり、発生が遅くなって、無敵が発生前に切れる技が増えます</strong>。</p>
+<p>無敵が発生の直前で切れる技（○）は、相手の攻撃と同時に出ると相打ちになることがあります。発生後まで無敵が続く技（◎）なら、出始めに重ねられた攻撃を抜けて当てられます。どちらなのかで、割り込みや切り返しに使えるかが大きく変わります。</p>
+
+<h2>数え方</h2>
+<ul>
+<li><strong>発生</strong>：攻撃判定が出たフレームです。技の1コマ目を1Fと数えます。</li>
+<li><strong>暗転中は数えません。</strong>暗転中は相手が止まっているので、相手が動けるフレームだけを数えています。<strong>暗転前</strong>は、技を出してから暗転が始まるまでに相手が動けるフレーム数です（0Fなら出した瞬間に暗転）。</li>
+<li><strong>無敵</strong>：食らい判定がないフレームです（打撃・飛び道具が当たらない）。技によっては、本人とは別の部品が本人の位置に食らい判定を出すことがあり、そこに当たると本人がやられます。この部品の食らい判定も「食らい判定あり」として数えています。投げに対する無敵は別の仕組みなので、この表には入れていません。</li>
+<li>暗転中にも本人が動く技があります（表の<sup>※</sup>）。その分は相手から見ると0Fなので、本人の動きより発生が早く見えます。</li>
+<li>攻撃判定が本人ではなく、飛び道具や本人から離れた部品に出る技には<sup>†</sup>を付けています。突進技・飛び道具は、相手との距離で当たるまでの時間が変わります。</li>
+<li>空中で出す超必殺技は、垂直ジャンプの上昇中に出した値です。</li>
+<li><strong>MAX版</strong>は、パワーゲージのストックが3つ（満タン）のときにAC同時押し（キック技はBD）で出ます。ストックを3つとも使います。ストックが2つ以下のときにACやBDで入力すると、ストックを1つ使う通常版が出ます。</li>
+<li>技名とコマンドは<a href="./move-list.html">KOF2000 技表</a>（出典の外部コマンド表2つ）によります。資料によってコマンドが違うものは、実際に出た入力を書いています（<a href="#kininaru">気になること</a>）。</li>
+</ul>
+<p class="legend">発生と無敵の関係：◎＝発生のフレームでも無敵、○＝発生の直前まで無敵、△＝発生より前に無敵が切れる、×＝無敵なし。</p>
+
+<h2>発生後まで無敵が続く超必殺技</h2>
+<p>攻撃判定が出るフレームでも食らい判定がない技です。出始めに攻撃を重ねられても、相手の攻撃をすり抜けて当てられます。</p>
+<div class="tw"><table><thead><tr><th>キャラ</th><th>技</th><th>版：発生／無敵</th></tr></thead><tbody>
+<tr><td>K’</td><td>チェーンドライブ</td><td>MAX：12F／1〜21F</td></tr>
+<tr><td>マキシマ</td><td>バンカーバスター</td><td>通常弱：16F／1〜2F、16〜21F 通常強：26F／1〜2F、26〜31F</td></tr>
+<tr><td>真吾</td><td>バーニングSHINGO</td><td>MAX：12F／1〜45F</td></tr>
+<tr><td>麟</td><td>飛賊奥義 影向</td><td>通常弱強：28F／1〜6F、28F〜</td></tr>
+<tr><td>アンディ</td><td>超裂破弾</td><td>MAX：15F／1〜18F</td></tr>
+<tr><td>ジョー</td><td>スクリューアッパー</td><td>MAX：9F／1〜18F</td></tr>
+<tr><td>マリー</td><td>M.ダイナマイトスウィング</td><td>通常弱：3F／1〜5F、36F〜 通常強：3F／1〜18F、35F〜 MAX：3F／1〜18F、35F〜</td></tr>
+<tr><td>ロバート</td><td>九頭龍閃</td><td>通常弱強：7F／1〜11F</td></tr>
+<tr><td>キング</td><td>イリュージョンダンス</td><td>通常弱：21F／1〜37F、127〜133F 通常強：23F／1〜39F、129〜135F MAX：23F／1〜39F</td></tr>
+<tr><td>タクマ</td><td>龍虎乱舞</td><td>通常強：15F／1〜17F、147F〜 MAX：6F／1〜11F</td></tr>
+<tr><td>ラルフ</td><td>バリバリバルカンパンチ</td><td>MAX：14F／1〜25F</td></tr>
+<tr><td>ウィップ</td><td>ソニックスローター“コード:KW”</td><td>通常弱：6F／1〜9F 通常強：7F／1〜11F MAX：9F／1〜13F</td></tr>
+<tr><td>アテナ</td><td>シャイニングクリスタルビット</td><td>通常弱：3F／1〜11F 通常強：3F／1〜14F MAX：3F／1〜11F</td></tr>
+<tr><td>拳崇</td><td>神龍天舞脚</td><td>MAX：14F／1〜25F</td></tr>
+<tr><td>鎮</td><td>轟炎招来</td><td>通常弱：6F／1〜14F 通常強：6F／1〜16F</td></tr>
+<tr><td>包</td><td>サイコボールアタック MAX</td><td>通常弱強：4F／1〜6F MAX：4F／1〜10F</td></tr>
+<tr><td>包</td><td>サイコボールクラッシュ SP</td><td>通常弱強：9F／1〜29F</td></tr>
+<tr><td>舞</td><td>超必殺忍蜂</td><td>MAX：7F／1〜7F</td></tr>
+<tr><td>ユリ</td><td>飛燕鳳凰脚</td><td>通常弱：9F／1〜5F、9〜11F 通常強：9F／1〜11F MAX：9F／1〜15F</td></tr>
+<tr><td>ユリ</td><td>芯！ちょうアッパー</td><td>MAX：6F／1〜8F、11〜26F</td></tr>
+<tr><td>チャン</td><td>鉄球大圧殺</td><td>通常弱：4F／1〜18F MAX：4F／1〜10F</td></tr>
+<tr><td>ジョン</td><td>鳳凰裂爪脚</td><td>MAX：14F／1〜15F</td></tr>
+<tr><td>庵</td><td>裏千弐百七式・闇削ぎ</td><td>通常弱：18F／1〜18F 通常強：21F／1〜21F</td></tr>
+<tr><td>クーラ</td><td>フリーズエクスキュージョン</td><td>MAX：4F／1〜13F、28〜85F</td></tr>
+<tr><td>ゼロ</td><td>獄鎖斬陣</td><td>通常弱強：5F／1〜10F</td></tr>
+<tr><td>ゼロ</td><td>白羅滅精</td><td>通常弱強：25F／1〜133F</td></tr>
+</tbody></table></div>
+<p>マキシマのバンカーバスター、麟の飛賊奥義 影向、ユリの飛燕鳳凰脚 通常弱は、出始めの無敵がいったん切れ、攻撃判定が出る少し前から再び無敵になる技です。出始めに重ねられた攻撃には負けますが、攻撃判定が出るところでは相手の攻撃が当たりません。</p>
+
+<h2>発生の直前まで無敵の技</h2>
+<p>攻撃判定が出る1F前まで無敵で、攻撃判定と同時に食らい判定が出る技です。相手の攻撃と同時に出ると相打ちになる可能性があります。</p>
+<p>ラモン：エル・ディアブロ・アマリロ・ラモン（通常弱&nbsp;15F／1〜14F、147F〜 通常強&nbsp;17F／1〜16F、149F〜）　ヴァネッサ：クレイジーパンチャー（通常弱強&nbsp;10F／1〜9F MAX&nbsp;10F／1〜9F、30F〜）　紅丸：幻影ハリケーン（通常弱強&nbsp;16F／1〜15F、39F〜）　麟：飛賊奥義 乱舞・毒蛾（通常弱強&nbsp;7F／1〜6F MAX&nbsp;7F／1〜6F）　セス：双掌昇陽（通常弱強&nbsp;5F／1〜4F）　テリー：パワーゲイザー（MAX&nbsp;19F／1〜18F）　アンディ：超裂破弾（通常弱&nbsp;14F／1〜13F 通常強&nbsp;17F／1〜16F）　ジョー：爆裂ハリケーンタイガーカカト（通常弱&nbsp;3F／1〜2F 通常強&nbsp;3F／1〜2F、5〜7F）　マリー：M.スプラッシュローズ（通常弱強&nbsp;12F／1〜11F、20〜144F）　リョウ：龍虎乱舞（MAX&nbsp;16F／1〜15F）　ロバート：龍虎乱舞（通常弱&nbsp;19F／1〜18F 通常強&nbsp;21F／1〜20F MAX&nbsp;15F／1〜14F）　キング：サイレントフラッシュ（通常弱&nbsp;9F／1〜8F）　タクマ：龍虎乱舞（通常弱&nbsp;6F／1〜5F、138F〜）　レオナ：Vスラッシャー（通常弱&nbsp;3F／1〜2F 通常強&nbsp;3F／1〜2F、8〜47F MAX&nbsp;6F／1〜5F、11〜105F）　レオナ：リボルスパーク（通常強&nbsp;11F／1〜10F、19F〜）　ラルフ：バリバリバルカンパンチ（通常弱&nbsp;13F／1〜12F 通常強&nbsp;14F／1〜13F）　鎮：轟欄炎炮（通常弱&nbsp;7F／1〜6F 通常強&nbsp;9F／1〜8F MAX&nbsp;7F／1〜6F）　舞：超必殺忍蜂（通常弱&nbsp;6F／1〜5F 通常強&nbsp;8F／1〜7F）　ユリ：飛燕烈孔（通常弱強&nbsp;12F／1〜11F）　キム：鳳凰脚（通常弱強&nbsp;9F／1〜8F MAX&nbsp;9F／1〜8F）　チャン：鉄球大暴走（通常弱強&nbsp;19F／1〜18F）　チョイ：鳳凰脚（通常弱強&nbsp;3F／1〜2F MAX&nbsp;3F／1〜2F）　チョイ：真！超絶輪回転突刃（通常弱強&nbsp;6F／1〜5F）　ジョン：鳳凰天舞脚（通常弱強&nbsp;8F／1〜7F）　京：百八拾弐式（通常強&nbsp;21F／1〜20F）　庵：禁千弐百拾壱式・八稚女（通常弱強&nbsp;7F／1〜6F、110F〜 MAX&nbsp;7F／1〜6F、110F〜）</p>
+
+<h2>例外その1：通常版とMAX版、弱と強で性質が違う技</h2>
+<ul>
+<li><strong>MAX版だけ発生後まで無敵になる技</strong>：K'のチェーンドライブ（通常版は1〜6F／1〜2Fで発生の4F以上前に切れる、MAX版は1〜21F）、真吾のバーニングSHINGO（MAX版は1〜45F）、ジョーのスクリューアッパー（MAX版は1〜18F）、拳崇の神龍天舞脚（通常版1〜8F、MAX版1〜25F）、ラルフのバリバリバルカンパンチ（通常版は発生直前まで、MAX版は1〜25F）。</li>
+<li><strong>MAX版で発生直前まで伸びる技</strong>：テリーのパワーゲイザー（通常版は発生の3〜4F前に切れる、MAX版は1〜18Fで発生19Fの直前まで）、リョウの龍虎乱舞（通常版は1〜4F、MAX版は1〜15F）。</li>
+<li><strong>ジョーのスクリューアッパー 通常強</strong>は、暗転の前に6F動き、その間は食らい判定があります。無敵は7〜12Fだけで、弱（1〜7F）とは別物です。</li>
+<li><strong>弱と強で違う技</strong>：マリーのM.ダイナマイトスウィングは弱の無敵が1〜5F、強とMAX版は1〜18F（どれも発生3F）。タクマの龍虎乱舞は弱が発生6F、強が発生15Fで1〜17F無敵。チャンの鉄球大圧殺は弱が発生4F、強は発生32Fで、強だけ無敵が発生前に切れます。</li>
+<li><strong>リョウのMAX版龍虎乱舞</strong>は236＋ACで出ます。ストック3つで2363214＋ACと入れると、ストックを1つ使う通常版が出ました。</li>
+</ul>
+
+<h2 id="cm">例外その2：カウンターモード中の超必殺技</h2>
+<p>カウンターモード中は超必殺技を出してもストックが減らず、モードの残り時間が減り続けるだけです。このとき<strong>暗転がなくなり</strong>、技の最初に通常時とは別の動きが入ります。そのぶん、相手が動けるフレームで数えた発生は、通常時より遅くなる技がほとんどです（下の68技のうち45技は2〜12F遅く、中央値は6Fです。覇王翔吼拳、タクマの覇王至高拳、舞の水鳥の舞、包のサイコボールアタック MAXなど10技は26F以上遅くなります。逆に早くなる技はごくわずかです）。</p>
+<p>無敵の長さも変わり、<strong>通常時に発生直前・発生後まで無敵だった技の多くが、発生前に無敵が切れる</strong>ようになります（通常時に○◎だった36技のうち、カウンターモード中も○◎なのは18技）。マキシマのバンカーバスター、アテナのシャイニングクリスタルビット、ユリの飛燕鳳凰脚は◎から△に変わります。反対に、レオナのグレイトフルデッドは△から◎になります。テリーのパワーゲイザーでは、ストックが3つあってもカウンターモード中にACで入力するとこの同じ版が出ました。</p>
+<p class="legend">弱で出した値です（拳崇の神龍天舞脚・神龍凄煌裂脚はそれぞれのボタン）。発生は暗転がないので、技を出した1F目から数えています。</p>
+<div class="tw"><table><thead><tr><th>キャラ</th><th>技（弱）</th><th>通常時：発生／無敵</th><th>カウンターモード中：発生／無敵</th><th>カウンターモード中の発生と無敵</th></tr></thead><tbody>
+<tr><td>K’</td><td>ヒートドライブ</td><td>18F／1〜7F、20〜22F</td><td>34F／1〜3F、36〜38F</td><td class="j-gap">△ 発生の30F前に切れる</td></tr>
+<tr><td>K’</td><td>チェーンドライブ</td><td>11F／1〜6F</td><td>15F／1〜4F</td><td class="j-gap">△ 発生の10F前に切れる</td></tr>
+<tr><td>マキシマ</td><td>バンカーバスター</td><td>16F／1〜2F、16〜21F</td><td>20F／1〜3F</td><td class="j-gap">△ 発生の16F前に切れる</td></tr>
+<tr><td>ラモン</td><td>エル・ディアブロ・アマリロ・ラモン</td><td>15F／1〜14F、147F〜</td><td>16F／1〜15F、148F〜</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td>ヴァネッサ</td><td>クレイジーパンチャー</td><td>10F／1〜9F</td><td>12F／1〜4F</td><td class="j-gap">△ 発生の7F前に切れる</td></tr>
+<tr><td>紅丸</td><td>雷光拳</td><td>12F／1〜2F</td><td>19F／2〜10F</td><td class="j-gap">△ 発生の8F前に切れる</td></tr>
+<tr><td>紅丸</td><td>幻影ハリケーン</td><td>16F／1〜15F、39F〜</td><td>14F／1〜8F</td><td class="j-gap">△ 発生の5F前に切れる</td></tr>
+<tr><td>真吾</td><td>外式・駆け鳳燐</td><td>13F／1〜2F</td><td>19F／1〜8F</td><td class="j-gap">△ 発生の10F前に切れる</td></tr>
+<tr><td>真吾</td><td>バーニングSHINGO</td><td>14F／1〜8F</td><td>16F／1〜8F</td><td class="j-gap">△ 発生の7F前に切れる</td></tr>
+<tr><td>麟</td><td>飛賊奥義 乱舞・毒蛾</td><td>7F／1〜6F</td><td>11F／1〜10F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td>麟</td><td>飛賊奥義 影向</td><td>28F／1〜6F、28F〜</td><td>33F／1〜8F、33F〜</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td>セス</td><td>双掌昇陽</td><td>5F／1〜4F</td><td>7F／1〜6F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td>セス</td><td>入り身 灘月</td><td>18F／1〜7F、11〜13F</td><td>18F／1〜7F、11〜13F</td><td class="j-gap">△ 発生の4F前に切れる</td></tr>
+<tr><td>テリー</td><td>パワーゲイザー</td><td>18F／1〜14F</td><td>24F／1〜12F</td><td class="j-gap">△ 発生の11F前に切れる</td></tr>
+<tr><td>テリー</td><td>ハイアングルゲイザー</td><td>7F／1〜3F</td><td>13F／5〜9F</td><td class="j-gap">△ 発生の3F前に切れる</td></tr>
+<tr><td>アンディ</td><td>超裂破弾</td><td>14F／1〜13F</td><td>13F／1〜7F</td><td class="j-gap">△ 発生の5F前に切れる</td></tr>
+<tr><td>アンディ</td><td>斬影流星拳</td><td>10F／1〜6F</td><td>19F／1〜11F</td><td class="j-gap">△ 発生の7F前に切れる</td></tr>
+<tr><td>ジョー</td><td>スクリューアッパー</td><td>9F／1〜7F</td><td>18F／4〜6F</td><td class="j-gap">△ 発生の11F前に切れる</td></tr>
+<tr><td>ジョー</td><td>史上最強のローキック</td><td>20F／1〜4F</td><td>48F／1〜32F</td><td class="j-gap">△ 発生の15F前に切れる</td></tr>
+<tr><td>ジョー</td><td>爆裂ハリケーンタイガーカカト</td><td>3F／1〜2F</td><td>14F／1〜9F</td><td class="j-gap">△ 発生の4F前に切れる</td></tr>
+<tr><td>マリー</td><td>M.スプラッシュローズ</td><td>12F／1〜11F、20〜144F</td><td>17F／1〜7F、25〜149F</td><td class="j-gap">△ 発生の9F前に切れる</td></tr>
+<tr><td>マリー</td><td>M.ダイナマイトスウィング</td><td>3F／1〜5F、36F〜</td><td>14F／1〜16F、47F〜</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td>リョウ</td><td>覇王翔吼拳</td><td>14F／1〜2F</td><td>46F／1〜15F</td><td class="j-gap">△ 発生の30F前に切れる</td></tr>
+<tr><td>リョウ</td><td>龍虎乱舞</td><td>12F／1〜4F</td><td>23F／1〜11F</td><td class="j-gap">△ 発生の11F前に切れる</td></tr>
+<tr><td>リョウ</td><td>天地覇煌拳</td><td>8F／1〜6F</td><td>13F／1〜5F</td><td class="j-gap">△ 発生の7F前に切れる</td></tr>
+<tr><td>ロバート</td><td>覇王翔吼拳</td><td>19F／1〜2F</td><td>45F／1〜7F</td><td class="j-gap">△ 発生の37F前に切れる</td></tr>
+<tr><td>ロバート</td><td>龍虎乱舞</td><td>19F／1〜18F</td><td>21F／1〜11F</td><td class="j-gap">△ 発生の9F前に切れる</td></tr>
+<tr><td>ロバート</td><td>九頭龍閃</td><td>7F／1〜11F</td><td>8F／1〜12F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td>キング</td><td>イリュージョンダンス</td><td>21F／1〜37F、127〜133F</td><td>23F／1〜6F、23〜39F、129〜135F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td>キング</td><td>サイレントフラッシュ</td><td>9F／1〜8F</td><td>17F／1〜14F</td><td class="j-gap">△ 発生の2F前に切れる</td></tr>
+<tr><td>タクマ</td><td>覇王至高拳</td><td>14F／1〜3F</td><td>67F／1〜13F</td><td class="j-gap">△ 発生の53F前に切れる</td></tr>
+<tr><td>タクマ</td><td>龍虎乱舞</td><td>6F／1〜5F、138F〜</td><td>16F／1〜7F、148F〜</td><td class="j-gap">△ 発生の8F前に切れる</td></tr>
+<tr><td>レオナ</td><td>Vスラッシャー</td><td>3F／1〜2F</td><td>12F／1〜11F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td>レオナ</td><td>リボルスパーク</td><td>11F／1〜5F、19F〜</td><td>23F／1〜13F、31F〜</td><td class="j-gap">△ 発生の9F前に切れる</td></tr>
+<tr><td>レオナ</td><td>グレイトフルデッド</td><td>6F／1〜2F、19F〜</td><td>11F／5〜16F、35F〜</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td>ラルフ</td><td>バリバリバルカンパンチ</td><td>13F／1〜12F</td><td>17F／1〜16F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td>アテナ</td><td>シャイニングクリスタルビット</td><td>3F／1〜11F</td><td>39F／6〜10F</td><td class="j-gap">△ 発生の28F前に切れる</td></tr>
+<tr><td>アテナ</td><td>フェニックスファングアロー</td><td>10F／1〜8F</td><td>15F／1〜7F</td><td class="j-gap">△ 発生の7F前に切れる</td></tr>
+<tr><td>拳崇</td><td>神龍天舞脚</td><td>14F／1〜8F</td><td>19F／1〜13F</td><td class="j-gap">△ 発生の5F前に切れる</td></tr>
+<tr><td>拳崇</td><td>神龍凄煌裂脚</td><td>14F／1〜8F</td><td>16F／1〜10F</td><td class="j-gap">△ 発生の5F前に切れる</td></tr>
+<tr><td>拳崇</td><td>超龍連拳</td><td>7F／1〜4F</td><td>13F／1〜5F</td><td class="j-gap">△ 発生の7F前に切れる</td></tr>
+<tr><td>鎮</td><td>轟欄炎炮</td><td>7F／1〜6F</td><td>44F／1〜3F、12〜17F</td><td class="j-gap">△ 発生の26F前に切れる</td></tr>
+<tr><td>鎮</td><td>轟炎招来</td><td>6F／1〜14F</td><td>22F／1〜8F、22〜30F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td>包</td><td>サイコボールアタック MAX</td><td>4F／1〜6F</td><td>43F／22〜43F</td><td class="j-best">◎ 発生時も無敵</td></tr>
+<tr><td>包</td><td>サイコボールクラッシュ SP</td><td>9F／1〜29F</td><td>18F／1〜38F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td>舞</td><td>超必殺忍蜂</td><td>6F／1〜5F</td><td>10F／1〜9F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td>舞</td><td>鳳凰の舞</td><td>30F／1〜5F</td><td>37F／1〜12F</td><td class="j-gap">△ 発生の24F前に切れる</td></tr>
+<tr><td>舞</td><td>水鳥の舞</td><td>11F／1〜5F</td><td>43F／11〜16F</td><td class="j-gap">△ 発生の26F前に切れる</td></tr>
+<tr><td>ユリ</td><td>飛燕鳳凰脚</td><td>9F／1〜5F、9〜11F</td><td>21F／5〜11F、24〜26F</td><td class="j-gap">△ 発生の9F前に切れる</td></tr>
+<tr><td>ユリ</td><td>飛燕烈孔</td><td>12F／1〜11F</td><td>11F／1〜7F、15〜21F</td><td class="j-gap">△ 発生の3F前に切れる</td></tr>
+<tr><td>香澄</td><td>超重ね当て</td><td>20F／1〜9F</td><td>35F／5〜15F</td><td class="j-gap">△ 発生の19F前に切れる</td></tr>
+<tr><td>キム</td><td>鳳凰脚</td><td>9F／1〜8F</td><td>15F／1〜7F</td><td class="j-gap">△ 発生の7F前に切れる</td></tr>
+<tr><td>キム</td><td>鳳凰飛天脚</td><td>9F／1〜5F</td><td>17F／1〜10F</td><td class="j-gap">△ 発生の6F前に切れる</td></tr>
+<tr><td>チャン</td><td>鉄球大暴走</td><td>19F／1〜18F</td><td>42F／1〜10F</td><td class="j-gap">△ 発生の31F前に切れる</td></tr>
+<tr><td>チャン</td><td>鉄球大圧殺</td><td>4F／1〜18F</td><td>32F／1〜46F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td>チャン</td><td>鉄球大撲殺</td><td>17F／1〜8F</td><td>27F／1〜12F</td><td class="j-gap">△ 発生の14F前に切れる</td></tr>
+<tr><td>チョイ</td><td>真！超絶竜巻真空斬</td><td>20F／1〜14F</td><td>32F／1〜13F</td><td class="j-gap">△ 発生の18F前に切れる</td></tr>
+<tr><td>チョイ</td><td>鳳凰脚</td><td>3F／1〜2F</td><td>31F／1〜6F</td><td class="j-gap">△ 発生の24F前に切れる</td></tr>
+<tr><td>チョイ</td><td>真！超絶輪回転突刃</td><td>6F／1〜5F</td><td>9F／1〜8F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td>ジョン</td><td>鳳凰裂爪脚</td><td>13F／1〜9F</td><td>16F／1〜4F</td><td class="j-gap">△ 発生の11F前に切れる</td></tr>
+<tr><td>ジョン</td><td>鳳凰天舞脚</td><td>8F／1〜7F</td><td>12F／1〜6F</td><td class="j-gap">△ 発生の5F前に切れる</td></tr>
+<tr><td>京</td><td>裏百八式・大蛇薙</td><td>21F／1〜8F</td><td>41F／1〜28F</td><td class="j-gap">△ 発生の12F前に切れる</td></tr>
+<tr><td>京</td><td>百八拾弐式</td><td>15F／1〜10F</td><td>17F／4〜12F</td><td class="j-gap">△ 発生の4F前に切れる</td></tr>
+<tr><td>庵</td><td>禁千弐百拾壱式・八稚女</td><td>7F／1〜6F、110F〜</td><td>21F／1〜16F、124F〜</td><td class="j-gap">△ 発生の4F前に切れる</td></tr>
+<tr><td>庵</td><td>裏千弐百七式・闇削ぎ</td><td>18F／1〜18F</td><td>19F／1〜19F</td><td class="j-best">◎ 発生時も無敵</td></tr>
+<tr><td>クーラ</td><td>ダイアモンドエッジ</td><td>17F／1〜7F</td><td>23F／1〜9F</td><td class="j-gap">△ 発生の13F前に切れる</td></tr>
+<tr><td>ゼロ</td><td>獄鎖斬陣</td><td>5F／1〜10F</td><td>10F／1〜13F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td>ゼロ</td><td>白羅滅精</td><td>25F／1〜133F</td><td>27F／1〜147F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+</tbody></table></div>
+
+<h2>例外その3：暗転の前に長く動く技</h2>
+<p>多くの超必殺技は技を出して1F後に暗転しますが、ラモンのエル・ディアブロ・アマリロ・ラモン（暗転前6〜7F）、京の百八拾弐式（弱6F、強12F）、ゼロの白羅滅精（12F）、ジョーのスクリューアッパー 通常強（6F）、セスの入り身 灘月（3F）は、暗転が始まる前に相手が動ける時間が長めです。スクリューアッパー強以外は、暗転前の間も無敵です。</p>
+
+<h2>似ているが別の話</h2>
+<ul>
+<li><strong>その場でつかむ超必殺技</strong>（マキシマ・リベンジャー、ウルトラアルゼンチンバックブリーカー、M.タイフーン、麟の飛賊奥義 毒手功）は、投げ間合いで出すと<strong>出した1F目に相手をつかみます</strong>。ラモンのタイガースピンだけは2F目につかみました。</li>
+<li><strong>前に進んでからつかむ超必殺技</strong>（馬乗りバルカンパンチ、ランニングスリー、合掌ひねり）は、近くの相手をつかむまでのフレームを載せています。間合いで早さが変わります。</li>
+<li>セスの胴取り七悶殺と香澄の心眼 葛落としは、相手の攻撃を受け止める技です。発生の代わりに受け止めが始まるフレームを書いています（どちらも暗転の直後の2F目から）。</li>
+<li>京の裏百八式・大蛇薙は、ボタンを押しっぱなしにしない出し方での値です。</li>
+<li>アテナのクリスタルシュート（シャイニングクリスタルビット中の追加入力）はまだ調べていません。</li>
+<li>暗転中に相手が止まる時間を使った別の話題は<a href="./superfreeze-ab-roll-2000-2001-2021.html">暗転中のAB回避</a>、カウンターモード中の相手の硬直は<a href="./counter-mode-hit-block-recovery-2016.html">カウンターモード中の相手の硬直</a>にあります。</li>
+</ul>
+
+<h2>全キャラの表</h2>
+<p class="legend">暗転前・発生・無敵は、すべて相手が動けるフレームで数えています（カウンターモード中ではない通常時の値）。<sup>※</sup>は暗転中にも本人が動く技、<sup>†</sup>は攻撃判定が本人から離れたところに出る技。MAX版はAC（キック技はBD）同時押しで出した値です。「147F〜」のような書き方は、調べた範囲（160F前後まで）の終わりまで無敵が続いていたものです。</p>
+<h3>主人公チーム</h3>
+<div class="tw"><table><thead><tr><th>キャラ</th><th>技</th><th>版</th><th>暗転前</th><th>発生</th><th>無敵</th><th>発生と無敵</th></tr></thead><tbody>
+<tr><th scope="row" rowspan="5">K’</th><td rowspan="2">ヒートドライブ<br><span class="note">236236＋AかC</span></td><td>通常弱</td><td class="num">1F</td><td class="num">18F</td><td>1〜7F、20〜22F</td><td class="j-gap">△ 発生の10F前に切れる</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">21F</td><td>1〜9F、23〜25F</td><td class="j-gap">△ 発生の11F前に切れる</td></tr>
+<tr><td rowspan="3">チェーンドライブ<br><span class="note">2363214＋AかC</span></td><td>通常弱</td><td class="num">1F</td><td class="num">11F<sup>†</sup></td><td>1〜6F</td><td class="j-gap">△ 発生の4F前に切れる</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">11F<sup>†</sup></td><td>1〜2F</td><td class="j-gap">△ 発生の8F前に切れる</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">12F<sup>†</sup></td><td>1〜21F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><th scope="row" rowspan="4">マキシマ</th><td rowspan="2">バンカーバスター<br><span class="note">2363214＋AかC</span></td><td>通常弱</td><td class="num">1F</td><td class="num">16F</td><td>1〜2F、16〜21F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">26F</td><td>1〜2F、26〜31F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td rowspan="2">マキシマ・リベンジャー<br><span class="note">近距離で(63214)×2＋BかD</span></td><td>通常</td><td class="num">—</td><td class="num">1F<span class="note">（つかみ）</span></td><td>—</td><td>—（つかみ技）</td></tr>
+<tr><td>MAX</td><td class="num">—</td><td class="num">1F<span class="note">（つかみ）</span></td><td>—</td><td>—（つかみ技）</td></tr>
+<tr><th scope="row" rowspan="4">ラモン</th><td rowspan="2">タイガースピン<br><span class="note">近距離で(63214)×2＋AかC</span></td><td>通常</td><td class="num">—</td><td class="num">2F<span class="note">（つかみ）</span></td><td>—</td><td>—（つかみ技）</td></tr>
+<tr><td>MAX</td><td class="num">—</td><td class="num">2F<span class="note">（つかみ）</span></td><td>—</td><td>—（つかみ技）</td></tr>
+<tr><td rowspan="2">エル・ディアブロ・アマリロ・ラモン<br><span class="note">2141236＋BかD</span></td><td>通常弱</td><td class="num">6F</td><td class="num">15F</td><td>1〜14F、147F〜</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td>通常強</td><td class="num">7F</td><td class="num">17F</td><td>1〜16F、149F〜</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><th scope="row" rowspan="3">ヴァネッサ</th><td rowspan="2">クレイジーパンチャー<br><span class="note">2141236＋AかC</span></td><td>通常弱強</td><td class="num">1F</td><td class="num">10F</td><td>1〜9F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">10F</td><td>1〜9F、30F〜</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td rowspan="1">チャンピオンパンチャー<br><span class="note">近距離で236236＋AかC</span></td><td>通常弱強</td><td class="num">1F</td><td class="num">26F</td><td>1〜12F、118F〜</td><td class="j-gap">△ 発生の13F前に切れる</td></tr>
+</tbody></table></div>
+<h3>紅丸チーム</h3>
+<div class="tw"><table><thead><tr><th>キャラ</th><th>技</th><th>版</th><th>暗転前</th><th>発生</th><th>無敵</th><th>発生と無敵</th></tr></thead><tbody>
+<tr><th scope="row" rowspan="4">紅丸</th><td rowspan="3">雷光拳<br><span class="note">236236＋AかC</span></td><td>通常弱</td><td class="num">1F</td><td class="num">12F<sup>†</sup></td><td>1〜2F</td><td class="j-gap">△ 発生の9F前に切れる</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">13F<sup>†</sup></td><td>1〜5F</td><td class="j-gap">△ 発生の7F前に切れる</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">10F<sup>†</sup></td><td>1〜5F</td><td class="j-gap">△ 発生の4F前に切れる</td></tr>
+<tr><td rowspan="1">幻影ハリケーン<br><span class="note">214214＋BかD</span></td><td>通常弱強</td><td class="num">2F</td><td class="num">16F<sup>†</sup></td><td>1〜15F、39F〜</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><th scope="row" rowspan="4">真吾</th><td rowspan="1">外式・駆け鳳燐<br><span class="note">236236＋AかC</span></td><td>通常弱強</td><td class="num">1F</td><td class="num">13F</td><td>1〜2F</td><td class="j-gap">△ 発生の10F前に切れる</td></tr>
+<tr><td rowspan="3">バーニングSHINGO<br><span class="note">2141236＋AかC</span></td><td>通常弱</td><td class="num">1F</td><td class="num">14F</td><td>1〜8F</td><td class="j-gap">△ 発生の5F前に切れる</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">19F</td><td>1〜10F</td><td class="j-gap">△ 発生の8F前に切れる</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">12F</td><td>1〜45F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><th scope="row" rowspan="4">麟</th><td rowspan="2">飛賊奥義 乱舞・毒蛾<br><span class="note">2141236＋AかC</span></td><td>通常弱強</td><td class="num">1F</td><td class="num">7F</td><td>1〜6F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">7F</td><td>1〜6F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td rowspan="1">飛賊奥義 影向<br><span class="note">(41236)×2＋BかD</span></td><td>通常弱強</td><td class="num">1F</td><td class="num">28F</td><td>1〜6F、28F〜</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td rowspan="1">飛賊奥義 毒手功<br><span class="note">近距離で222＋AC</span></td><td>MAX</td><td class="num">1F</td><td class="num">1F<span class="note">（つかみ）</span></td><td>—</td><td>—（つかみ技）</td></tr>
+<tr><th scope="row" rowspan="5">セス</th><td rowspan="2">胴取り七悶殺<br><span class="note">2363214＋AかC</span></td><td>通常弱強</td><td class="num">0F</td><td class="num">2F目から受け止め</td><td>1F<sup>※</sup></td><td>—（当て身技）</td></tr>
+<tr><td>MAX</td><td class="num">0F</td><td class="num">2F目から受け止め</td><td>1〜4F<sup>※</sup></td><td>—（当て身技）</td></tr>
+<tr><td rowspan="1">双掌昇陽<br><span class="note">236236＋AかC</span></td><td>通常弱強</td><td class="num">1F</td><td class="num">5F</td><td>1〜4F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td rowspan="2">入り身 灘月<br><span class="note">2363214＋BかD</span></td><td>通常弱</td><td class="num">3F</td><td class="num">18F</td><td>1〜7F、11〜13F</td><td class="j-gap">△ 発生の4F前に切れる</td></tr>
+<tr><td>通常強</td><td class="num">3F</td><td class="num">34F</td><td>1〜26F</td><td class="j-gap">△ 発生の7F前に切れる</td></tr>
+</tbody></table></div>
+<h3>餓狼伝説チーム</h3>
+<div class="tw"><table><thead><tr><th>キャラ</th><th>技</th><th>版</th><th>暗転前</th><th>発生</th><th>無敵</th><th>発生と無敵</th></tr></thead><tbody>
+<tr><th scope="row" rowspan="5">テリー</th><td rowspan="3">パワーゲイザー<br><span class="note">21416＋AかC</span></td><td>通常弱</td><td class="num">1F</td><td class="num">18F<sup>†</sup></td><td>1〜14F</td><td class="j-gap">△ 発生の3F前に切れる</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">19F<sup>†</sup></td><td>1〜15F</td><td class="j-gap">△ 発生の3F前に切れる</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">19F<sup>†</sup></td><td>1〜18F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td rowspan="2">ハイアングルゲイザー<br><span class="note">236236＋BかD</span></td><td>通常弱</td><td class="num">1F</td><td class="num">7F</td><td>1〜3F</td><td class="j-gap">△ 発生の3F前に切れる</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">12F</td><td>1〜6F</td><td class="j-gap">△ 発生の5F前に切れる</td></tr>
+<tr><th scope="row" rowspan="4">アンディ</th><td rowspan="3">超裂破弾<br><span class="note">21416＋BかD</span></td><td>通常弱</td><td class="num">1F</td><td class="num">14F</td><td>1〜13F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">17F</td><td>1〜16F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">15F</td><td>1〜18F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td rowspan="1">斬影流星拳<br><span class="note">2141236＋AかC</span></td><td>通常弱強</td><td class="num">1F</td><td class="num">10F</td><td>1〜6F<sup>※</sup></td><td class="j-gap">△ 発生の3F前に切れる</td></tr>
+<tr><th scope="row" rowspan="6">ジョー</th><td rowspan="3">スクリューアッパー<br><span class="note">236236＋AかC</span></td><td>通常弱</td><td class="num">1F</td><td class="num">9F<sup>†</sup></td><td>1〜7F<sup>※</sup></td><td class="j-gap">△ 発生の1F前に切れる</td></tr>
+<tr><td>通常強</td><td class="num">6F</td><td class="num">14F<sup>†</sup></td><td>7〜12F<sup>※</sup></td><td class="j-gap">△ 発生の1F前に切れる</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">9F<sup>†</sup></td><td>1〜18F<sup>※</sup></td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td rowspan="1">史上最強のローキック<br><span class="note">236236＋BかD</span></td><td>通常弱強</td><td class="num">2F</td><td class="num">20F</td><td>1〜4F<sup>※</sup></td><td class="j-gap">△ 発生の15F前に切れる</td></tr>
+<tr><td rowspan="2">爆裂ハリケーンタイガーカカト<br><span class="note">2363214＋AかC</span></td><td>通常弱</td><td class="num">1F</td><td class="num">3F</td><td>1〜2F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">3F</td><td>1〜2F、5〜7F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><th scope="row" rowspan="5">マリー</th><td rowspan="1">M.タイフーン<br><span class="note">近距離で(63214)×2＋BかD</span></td><td>通常</td><td class="num">—</td><td class="num">1F<span class="note">（つかみ）</span></td><td>—</td><td>—（つかみ技）</td></tr>
+<tr><td rowspan="1">M.スプラッシュローズ<br><span class="note">2363214＋AかC</span></td><td>通常弱強</td><td class="num">1F</td><td class="num">12F</td><td>1〜11F、20〜144F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td rowspan="3">M.ダイナマイトスウィング<br><span class="note">236236＋BかD</span></td><td>通常弱</td><td class="num">1F</td><td class="num">3F</td><td>1〜5F、36F〜</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">3F</td><td>1〜18F、35F〜</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">3F</td><td>1〜18F、35F〜</td><td class="j-best">◎ 発生後も無敵</td></tr>
+</tbody></table></div>
+<h3>龍虎の拳チーム</h3>
+<div class="tw"><table><thead><tr><th>キャラ</th><th>技</th><th>版</th><th>暗転前</th><th>発生</th><th>無敵</th><th>発生と無敵</th></tr></thead><tbody>
+<tr><th scope="row" rowspan="8">リョウ</th><td rowspan="3">覇王翔吼拳<br><span class="note">641236＋AかC</span></td><td>通常弱</td><td class="num">1F</td><td class="num">14F<sup>†</sup></td><td>1〜2F<sup>※</sup></td><td class="j-gap">△ 発生の11F前に切れる</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">19F<sup>†</sup></td><td>1〜5F</td><td class="j-gap">△ 発生の13F前に切れる</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">19F<sup>†</sup></td><td>1〜14F</td><td class="j-gap">△ 発生の4F前に切れる</td></tr>
+<tr><td rowspan="3">龍虎乱舞<br><span class="note">2363214＋AかC（MAXは236＋AC）</span></td><td>通常弱</td><td class="num">1F</td><td class="num">12F</td><td>1〜4F<sup>※</sup></td><td class="j-gap">△ 発生の7F前に切れる</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">14F</td><td>1〜4F</td><td class="j-gap">△ 発生の9F前に切れる</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">16F</td><td>1〜15F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td rowspan="2">天地覇煌拳<br><span class="note">236236＋AかC</span></td><td>通常弱</td><td class="num">1F</td><td class="num">8F</td><td>1〜6F</td><td class="j-gap">△ 発生の1F前に切れる</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">10F</td><td>1〜7F</td><td class="j-gap">△ 発生の2F前に切れる</td></tr>
+<tr><th scope="row" rowspan="6">ロバート</th><td rowspan="2">覇王翔吼拳<br><span class="note">641236＋AかC</span></td><td>通常弱</td><td class="num">1F</td><td class="num">19F<sup>†</sup></td><td>1〜2F<sup>※</sup></td><td class="j-gap">△ 発生の16F前に切れる</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">24F<sup>†</sup></td><td>1〜5F</td><td class="j-gap">△ 発生の18F前に切れる</td></tr>
+<tr><td rowspan="3">龍虎乱舞<br><span class="note">2363214＋AかC</span></td><td>通常弱</td><td class="num">1F</td><td class="num">19F</td><td>1〜18F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">21F</td><td>1〜20F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">15F</td><td>1〜14F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td rowspan="1">九頭龍閃<br><span class="note">236236＋BかD</span></td><td>通常弱強</td><td class="num">1F</td><td class="num">7F</td><td>1〜11F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><th scope="row" rowspan="5">キング</th><td rowspan="3">イリュージョンダンス<br><span class="note">2363214＋BかD</span></td><td>通常弱</td><td class="num">1F</td><td class="num">21F</td><td>1〜37F、127〜133F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">23F</td><td>1〜39F、129〜135F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">23F</td><td>1〜39F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td rowspan="2">サイレントフラッシュ<br><span class="note">214214＋BかD</span></td><td>通常弱</td><td class="num">1F</td><td class="num">9F</td><td>1〜8F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">9F</td><td>1〜6F</td><td class="j-gap">△ 発生の2F前に切れる</td></tr>
+<tr><th scope="row" rowspan="6">タクマ</th><td rowspan="2">覇王至高拳<br><span class="note">641236＋AかC</span></td><td>通常弱</td><td class="num">1F</td><td class="num">14F<sup>†</sup></td><td>1〜3F</td><td class="j-gap">△ 発生の10F前に切れる</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">12F<sup>†</sup></td><td>1〜2F<sup>※</sup></td><td class="j-gap">△ 発生の9F前に切れる</td></tr>
+<tr><td rowspan="1">真・鬼神撃<br><span class="note">近距離で236236＋AかC</span></td><td>通常弱強</td><td class="num">1F</td><td class="num">8F</td><td>1〜2F<sup>※</sup></td><td class="j-gap">△ 発生の5F前に切れる</td></tr>
+<tr><td rowspan="3">龍虎乱舞<br><span class="note">2363214＋AかC</span></td><td>通常弱</td><td class="num">1F</td><td class="num">6F</td><td>1〜5F、138F〜</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">15F</td><td>1〜17F、147F〜</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">6F</td><td>1〜11F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+</tbody></table></div>
+<h3>怒チーム</h3>
+<div class="tw"><table><thead><tr><th>キャラ</th><th>技</th><th>版</th><th>暗転前</th><th>発生</th><th>無敵</th><th>発生と無敵</th></tr></thead><tbody>
+<tr><th scope="row" rowspan="6">レオナ</th><td rowspan="3">Vスラッシャー<br><span class="note">空中で2363214＋AかC</span></td><td>通常弱</td><td class="num">1F</td><td class="num">3F</td><td>1〜2F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">3F</td><td>1〜2F、8〜47F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">6F</td><td>1〜5F、11〜105F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td rowspan="2">リボルスパーク<br><span class="note">2141236＋BかD</span></td><td>通常弱</td><td class="num">1F</td><td class="num">11F</td><td>1〜5F、19F〜<sup>※</sup></td><td class="j-gap">△ 発生の5F前に切れる</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">11F</td><td>1〜10F、19F〜</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td rowspan="1">グレイトフルデッド<br><span class="note">236236＋AかC</span></td><td>通常弱強</td><td class="num">1F</td><td class="num">6F</td><td>1〜2F、19F〜<sup>※</sup></td><td class="j-gap">△ 発生の3F前に切れる</td></tr>
+<tr><th scope="row" rowspan="5">ラルフ</th><td rowspan="3">バリバリバルカンパンチ<br><span class="note">2363214＋AかC</span></td><td>通常弱</td><td class="num">1F</td><td class="num">13F</td><td>1〜12F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">14F</td><td>1〜13F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">14F</td><td>1〜25F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td rowspan="1">馬乗りバルカンパンチ<br><span class="note">2141236＋BかD</span></td><td>通常弱強</td><td class="num">1F</td><td class="num">—<span class="note">（近くの相手をつかむのは11F）</span></td><td>1〜7F、12F〜</td><td>—（つかみ技）</td></tr>
+<tr><td rowspan="1">ギャラクティカファントム<br><span class="note">236236＋AC</span></td><td>MAX</td><td class="num">1F</td><td class="num">80F</td><td>1〜34F</td><td class="j-gap">△ 発生の45F前に切れる</td></tr>
+<tr><th scope="row" rowspan="3">クラーク</th><td rowspan="2">ウルトラアルゼンチンバックブリーカー<br><span class="note">近距離で(63214)×2＋AかC</span></td><td>通常</td><td class="num">—</td><td class="num">1F<span class="note">（つかみ）</span></td><td>—</td><td>—（つかみ技）</td></tr>
+<tr><td>MAX</td><td class="num">—</td><td class="num">1F<span class="note">（つかみ）</span></td><td>—</td><td>—（つかみ技）</td></tr>
+<tr><td rowspan="1">ランニングスリー<br><span class="note">(41236)×2＋BかD</span></td><td>通常</td><td class="num">1F</td><td class="num">—<span class="note">（近くの相手をつかむのは12F）</span></td><td>1〜7F、13〜152F</td><td>—（つかみ技）</td></tr>
+<tr><th scope="row" rowspan="3">ウィップ</th><td rowspan="3">ソニックスローター“コード:KW”<br><span class="note">2141236＋AかC</span></td><td>通常弱</td><td class="num">1F</td><td class="num">6F</td><td>1〜9F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">7F</td><td>1〜11F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">9F</td><td>1〜13F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+</tbody></table></div>
+<h3>サイコソルジャーチーム</h3>
+<div class="tw"><table><thead><tr><th>キャラ</th><th>技</th><th>版</th><th>暗転前</th><th>発生</th><th>無敵</th><th>発生と無敵</th></tr></thead><tbody>
+<tr><th scope="row" rowspan="5">アテナ</th><td rowspan="3">シャイニングクリスタルビット<br><span class="note">(63214)×2＋AかC</span></td><td>通常弱</td><td class="num">1F</td><td class="num">3F<sup>†</sup></td><td>1〜11F<sup>※</sup></td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">3F<sup>†</sup></td><td>1〜14F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">3F<sup>†</sup></td><td>1〜11F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td rowspan="2">フェニックスファングアロー<br><span class="note">空中で236236＋BかD</span></td><td>通常弱</td><td class="num">1F</td><td class="num">10F<sup>†</sup></td><td>1〜8F</td><td class="j-gap">△ 発生の1F前に切れる</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">10F<sup>†</sup></td><td>1〜6F</td><td class="j-gap">△ 発生の3F前に切れる</td></tr>
+<tr><th scope="row" rowspan="5">拳崇</th><td rowspan="2">神龍天舞脚<br><span class="note">2363214＋D（MAXはBD）</span></td><td>通常</td><td class="num">1F</td><td class="num">14F</td><td>1〜8F</td><td class="j-gap">△ 発生の5F前に切れる</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">14F</td><td>1〜25F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td rowspan="1">神龍凄煌裂脚<br><span class="note">2363214＋B</span></td><td>通常</td><td class="num">1F</td><td class="num">14F</td><td>1〜8F</td><td class="j-gap">△ 発生の5F前に切れる</td></tr>
+<tr><td rowspan="2">超龍連拳<br><span class="note">236236＋AかC</span></td><td>通常弱</td><td class="num">1F</td><td class="num">7F</td><td>1〜4F</td><td class="j-gap">△ 発生の2F前に切れる</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">8F</td><td>1〜5F</td><td class="j-gap">△ 発生の2F前に切れる</td></tr>
+<tr><th scope="row" rowspan="5">鎮</th><td rowspan="3">轟欄炎炮<br><span class="note">236236＋AかC</span></td><td>通常弱</td><td class="num">1F</td><td class="num">7F<sup>†</sup></td><td>1〜6F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">9F<sup>†</sup></td><td>1〜8F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">7F<sup>†</sup></td><td>1〜6F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td rowspan="2">轟炎招来<br><span class="note">2363214＋AかC</span></td><td>通常弱</td><td class="num">1F</td><td class="num">6F</td><td>1〜14F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">6F</td><td>1〜16F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><th scope="row" rowspan="4">包</th><td rowspan="2">サイコボールアタック MAX<br><span class="note">214214＋AかC</span></td><td>通常弱強</td><td class="num">2F</td><td class="num">4F<sup>†</sup></td><td>1〜6F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td>MAX</td><td class="num">2F</td><td class="num">4F<sup>†</sup></td><td>1〜10F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td rowspan="1">サイコボールクラッシュ SP<br><span class="note">214214＋BかD</span></td><td>通常弱強</td><td class="num">1F</td><td class="num">9F<sup>†</sup></td><td>1〜29F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td rowspan="1">サイコボールアタック ⅡDX<br><span class="note">641236＋BD</span></td><td>MAX</td><td class="num">1F</td><td class="num">46F<sup>†</sup></td><td>1〜12F</td><td class="j-gap">△ 発生の33F前に切れる</td></tr>
+</tbody></table></div>
+<h3>女性格闘家チーム</h3>
+<div class="tw"><table><thead><tr><th>キャラ</th><th>技</th><th>版</th><th>暗転前</th><th>発生</th><th>無敵</th><th>発生と無敵</th></tr></thead><tbody>
+<tr><th scope="row" rowspan="7">舞</th><td rowspan="3">超必殺忍蜂<br><span class="note">2141236＋BかD</span></td><td>通常弱</td><td class="num">1F</td><td class="num">6F</td><td>1〜5F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">8F</td><td>1〜7F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">7F</td><td>1〜7F</td><td class="j-best">◎ 発生時も無敵</td></tr>
+<tr><td rowspan="2">鳳凰の舞<br><span class="note">214214＋AかC</span></td><td>通常弱</td><td class="num">1F</td><td class="num">30F</td><td>1〜5F</td><td class="j-gap">△ 発生の24F前に切れる</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">30F</td><td>1〜7F</td><td class="j-gap">△ 発生の22F前に切れる</td></tr>
+<tr><td rowspan="2">水鳥の舞<br><span class="note">236236＋AかC</span></td><td>通常弱</td><td class="num">1F</td><td class="num">11F<sup>†</sup></td><td>1〜5F</td><td class="j-gap">△ 発生の5F前に切れる</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">13F<sup>†</sup></td><td>1〜7F</td><td class="j-gap">△ 発生の5F前に切れる</td></tr>
+<tr><th scope="row" rowspan="5">ユリ</th><td rowspan="3">飛燕鳳凰脚<br><span class="note">2363214＋BかD</span></td><td>通常弱</td><td class="num">1F</td><td class="num">9F</td><td>1〜5F、9〜11F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">9F</td><td>1〜11F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">9F</td><td>1〜15F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td rowspan="1">飛燕烈孔<br><span class="note">236236＋AかC</span></td><td>通常弱強</td><td class="num">1F</td><td class="num">12F</td><td>1〜11F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td rowspan="1">芯！ちょうアッパー<br><span class="note">236236＋BD</span></td><td>MAX</td><td class="num">1F</td><td class="num">6F</td><td>1〜8F、11〜26F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><th scope="row" rowspan="4">香澄</th><td rowspan="2">超重ね当て<br><span class="note">236236＋AかC</span></td><td>通常弱</td><td class="num">1F</td><td class="num">20F<sup>†</sup></td><td>1〜9F</td><td class="j-gap">△ 発生の10F前に切れる</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">24F<sup>†</sup></td><td>1〜9F</td><td class="j-gap">△ 発生の14F前に切れる</td></tr>
+<tr><td rowspan="2">心眼 葛落とし<br><span class="note">2363214＋AかC</span></td><td>通常弱強</td><td class="num">0F</td><td class="num">2F目から受け止め</td><td>1F<sup>※</sup></td><td>—（当て身技）</td></tr>
+<tr><td>MAX</td><td class="num">0F</td><td class="num">2F目から受け止め</td><td>1F<sup>※</sup></td><td>—（当て身技）</td></tr>
+<tr><th scope="row" rowspan="2">雛子</th><td rowspan="2">合掌ひねり<br><span class="note">(41236)×2＋BかD</span></td><td>通常</td><td class="num">1F</td><td class="num">—<span class="note">（近くの相手をつかむのは32F）</span></td><td>1〜11F、32〜137F</td><td>—（つかみ技）</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">—<span class="note">（近くの相手をつかむのは32F）</span></td><td>1〜18F、32〜152F</td><td>—（つかみ技）</td></tr>
+</tbody></table></div>
+<h3>キムチーム</h3>
+<div class="tw"><table><thead><tr><th>キャラ</th><th>技</th><th>版</th><th>暗転前</th><th>発生</th><th>無敵</th><th>発生と無敵</th></tr></thead><tbody>
+<tr><th scope="row" rowspan="3">キム</th><td rowspan="2">鳳凰脚<br><span class="note">21416＋BかD</span></td><td>通常弱強</td><td class="num">1F</td><td class="num">9F</td><td>1〜8F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">9F</td><td>1〜8F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td rowspan="1">鳳凰飛天脚<br><span class="note">236236＋BかD</span></td><td>通常弱強</td><td class="num">1F</td><td class="num">9F</td><td>1〜5F</td><td class="j-gap">△ 発生の3F前に切れる</td></tr>
+<tr><th scope="row" rowspan="6">チャン</th><td rowspan="1">鉄球大暴走<br><span class="note">2363214＋AかC</span></td><td>通常弱強</td><td class="num">1F</td><td class="num">19F</td><td>1〜18F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td rowspan="3">鉄球大圧殺<br><span class="note">236236＋AかC</span></td><td>通常弱</td><td class="num">1F</td><td class="num">4F</td><td>1〜18F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">32F</td><td>1〜11F</td><td class="j-gap">△ 発生の20F前に切れる</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">4F</td><td>1〜10F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td rowspan="2">鉄球大撲殺<br><span class="note">236236＋BかD</span></td><td>通常弱</td><td class="num">1F</td><td class="num">17F</td><td>1〜8F</td><td class="j-gap">△ 発生の8F前に切れる</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">18F</td><td>1〜9F</td><td class="j-gap">△ 発生の8F前に切れる</td></tr>
+<tr><th scope="row" rowspan="4">チョイ</th><td rowspan="1">真！超絶竜巻真空斬<br><span class="note">(63214)×2＋AかC</span></td><td>通常弱強</td><td class="num">1F</td><td class="num">20F<sup>†</sup></td><td>1〜14F</td><td class="j-gap">△ 発生の5F前に切れる</td></tr>
+<tr><td rowspan="2">鳳凰脚<br><span class="note">2363214＋BかD</span></td><td>通常弱強</td><td class="num">1F</td><td class="num">3F</td><td>1〜2F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">3F</td><td>1〜2F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td rowspan="1">真！超絶輪回転突刃<br><span class="note">空中で236236＋AかC</span></td><td>通常弱強</td><td class="num">0F</td><td class="num">6F</td><td>1〜5F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><th scope="row" rowspan="3">ジョン</th><td rowspan="2">鳳凰裂爪脚<br><span class="note">236236＋BかD</span></td><td>通常弱強</td><td class="num">0F</td><td class="num">13F<sup>†</sup></td><td>1〜9F</td><td class="j-gap">△ 発生の3F前に切れる</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">14F<sup>†</sup></td><td>1〜15F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td rowspan="1">鳳凰天舞脚<br><span class="note">空中で236236＋BかD</span></td><td>通常弱強</td><td class="num">1F</td><td class="num">8F</td><td>1〜7F</td><td class="j-good">○ 発生直前まで</td></tr>
+</tbody></table></div>
+<h3>エディット専用キャラ</h3>
+<div class="tw"><table><thead><tr><th>キャラ</th><th>技</th><th>版</th><th>暗転前</th><th>発生</th><th>無敵</th><th>発生と無敵</th></tr></thead><tbody>
+<tr><th scope="row" rowspan="5">京</th><td rowspan="3">裏百八式・大蛇薙<br><span class="note">2141236＋AかC</span></td><td>通常弱</td><td class="num">1F</td><td class="num">21F<sup>†</sup></td><td>1〜8F</td><td class="j-gap">△ 発生の12F前に切れる</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">19F<sup>†</sup></td><td>1〜8F</td><td class="j-gap">△ 発生の10F前に切れる</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">20F<sup>†</sup></td><td>1〜9F</td><td class="j-gap">△ 発生の10F前に切れる</td></tr>
+<tr><td rowspan="2">百八拾弐式<br><span class="note">236236＋AかC</span></td><td>通常弱</td><td class="num">6F</td><td class="num">15F</td><td>1〜10F</td><td class="j-gap">△ 発生の4F前に切れる</td></tr>
+<tr><td>通常強</td><td class="num">12F</td><td class="num">21F</td><td>1〜20F</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><th scope="row" rowspan="4">庵</th><td rowspan="2">禁千弐百拾壱式・八稚女<br><span class="note">2363214＋AかC</span></td><td>通常弱強</td><td class="num">1F</td><td class="num">7F</td><td>1〜6F、110F〜</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">7F</td><td>1〜6F、110F〜</td><td class="j-good">○ 発生直前まで</td></tr>
+<tr><td rowspan="2">裏千弐百七式・闇削ぎ<br><span class="note">236236＋AかC</span></td><td>通常弱</td><td class="num">2F</td><td class="num">18F<sup>†</sup></td><td>1〜18F</td><td class="j-best">◎ 発生時も無敵</td></tr>
+<tr><td>通常強</td><td class="num">3F</td><td class="num">21F<sup>†</sup></td><td>1〜21F</td><td class="j-best">◎ 発生時も無敵</td></tr>
+</tbody></table></div>
+<h3>隠しキャラ</h3>
+<div class="tw"><table><thead><tr><th>キャラ</th><th>技</th><th>版</th><th>暗転前</th><th>発生</th><th>無敵</th><th>発生と無敵</th></tr></thead><tbody>
+<tr><th scope="row" rowspan="4">クーラ</th><td rowspan="3">ダイアモンドエッジ<br><span class="note">236236＋AかC</span></td><td>通常弱</td><td class="num">1F</td><td class="num">17F<sup>†</sup></td><td>1〜7F</td><td class="j-gap">△ 発生の9F前に切れる</td></tr>
+<tr><td>通常強</td><td class="num">1F</td><td class="num">22F<sup>†</sup></td><td>1〜14F</td><td class="j-gap">△ 発生の7F前に切れる</td></tr>
+<tr><td>MAX</td><td class="num">1F</td><td class="num">16F<sup>†</sup></td><td>1〜12F</td><td class="j-gap">△ 発生の3F前に切れる</td></tr>
+<tr><td rowspan="1">フリーズエクスキュージョン<br><span class="note">(63214)×2＋AC</span></td><td>MAX</td><td class="num">1F</td><td class="num">4F<sup>†</sup></td><td>1〜13F、28〜85F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><th scope="row" rowspan="2">ゼロ</th><td rowspan="1">獄鎖斬陣<br><span class="note">236236＋AかC</span></td><td>通常弱強</td><td class="num">1F</td><td class="num">5F</td><td>1〜10F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+<tr><td rowspan="1">白羅滅精<br><span class="note">236236＋BかD</span></td><td>通常弱強</td><td class="num">12F</td><td class="num">25F<sup>†</sup></td><td>1〜133F</td><td class="j-best">◎ 発生後も無敵</td></tr>
+</tbody></table></div>
+
+<h2 id="kininaru">気になること</h2>
+<h3>資料どうしの食い違い</h3>
+<ul>
+<li><strong>庵の裏千弐百七式・闇削ぎ</strong>：<a href="./move-list.html">技表</a>の出典（PS4で格ゲー）では236236＋BかDですが、BやDでは出ず、236236＋AかC（KOF ZONEの表記）で出ました。</li>
+<li><strong>庵の禁千弐百拾壱式・八稚女</strong>：KOF ZONEでは2141236＋AかCですが、表の値は2363214＋AかCで出したものです。</li>
+<li><strong>マリーのM.タイフーン</strong>：KOF ZONEではAかCですが、BかDで出ました（PS4で格ゲーの表記）。</li>
+</ul>
+<h3>まだ調べていないこと</h3>
+<ul>
+<li>アテナのクリスタルシュート。</li>
+<li>カウンターモード中の、相手に近づいて出す技（チャンピオンパンチャー、真・鬼神撃、その場でつかむ技）と、ウィップのソニックスローター“コード:KW”。ウィップはカウンターモード中に1F目から攻撃判定が出ていて、通常時と違いすぎるため確かめ直しています。</li>
+<li>カウンターモード中のMAX版相当の技（ストックがあってもACでは通常の版が出ました）。</li>
+</ul>
+
+<details class="more"><summary>関連ページ・出典</summary>
+<ul class="src">
+<li><a href="./counter-mode-hit-block-recovery-2016.html">カウンターモード中の相手の硬直</a>：カウンターモード中の超必殺技は発生が遅くなるものが多い、という2005年の記録</li>
+<li>技名・コマンド：<a href="./move-list.html">KOF2000 技表</a>（出典：PS4で格ゲー「コマンド表(KOF2000)」、照合：KOF ZONE「KOF2000コマンド表」）</li>
+<li>ほかの作品：<a href="/research/kof99/super-startup-invincibility.html">KOF'99 超必殺技の発生と無敵時間</a>／<a href="/research/kof2002/super-startup-invincibility.html">KOF2002 超必殺技の発生と無敵時間</a></li>
+<li><a href="./index.html">KOF2000 研究アーカイブ</a></li>
+</ul></details>
+</div></main>
+<footer class="footer"><div class="wrap">Come sono bravo?｜作成：MOT</div></footer>
+</body></html>
