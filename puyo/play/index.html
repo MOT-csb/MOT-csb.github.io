@@ -18,9 +18,13 @@ canvas.board{background:#14212f;border:4px solid #283f57;border-radius:8px;displ
 .nexts{display:flex;flex-direction:column;gap:6px;align-items:center;padding-top:24px}
 .nexts canvas{background:#1b293a;border-radius:6px}
 .nexts span{font-size:11px;color:var(--muted)}
-.pad{display:none;grid-template-columns:repeat(5,1fr);gap:6px;margin:12px auto 0;max-width:420px;user-select:none;-webkit-user-select:none}
-.pad button{padding:16px 0;font-size:18px;border-radius:10px;touch-action:none}
-.pad.on{display:grid}
+.pad{display:none;justify-content:space-between;align-items:center;gap:12px;margin:12px auto 0;max-width:460px;user-select:none;-webkit-user-select:none}
+.pad.on{display:flex}
+.pad button{font-size:20px;border-radius:12px;touch-action:none;width:58px;height:58px;padding:0}
+.dpad{display:grid;grid-template-columns:repeat(3,58px);grid-template-rows:repeat(2,58px);gap:4px}
+.dpad [data-k="L"]{grid-column:1;grid-row:1/3;height:auto}.dpad [data-k="R"]{grid-column:3;grid-row:1/3;height:auto}.dpad [data-k="D"]{grid-column:2;grid-row:2}
+.rot{display:flex;gap:10px;align-items:center}.rot button{border-radius:50%;width:64px;height:64px}.rot [data-k="RR"]{margin-top:-28px}
+.moves{font-size:15px;font-weight:800}
 .log{font-size:13px;margin:10px 0 0;padding:8px 10px;border:1px solid var(--line);border-radius:7px;max-height:180px;overflow:auto;font-variant-numeric:tabular-nums}
 .log ol{margin:0;padding-left:22px}
 .result{font-size:18px;font-weight:800;text-align:center;min-height:1.6em;margin:8px 0 0}
@@ -48,10 +52,10 @@ kbd{border:1px solid var(--line);border-radius:4px;padding:0 5px;font-size:13px}
 </div>
 <p class="result" id="result" role="status" aria-live="polite"></p>
 <div class="pad" id="pad">
-<button type="button" data-k="L" aria-label="左へ">◀</button><button type="button" data-k="RL" aria-label="左回転">↺</button><button type="button" data-k="D" aria-label="下へ">▼</button><button type="button" data-k="RR" aria-label="右回転">↻</button><button type="button" data-k="R" aria-label="右へ">▶</button>
+<div class="dpad"><button type="button" data-k="L" aria-label="左へ">◀</button><button type="button" data-k="D" aria-label="下へ">▼</button><button type="button" data-k="R" aria-label="右へ">▶</button></div><div class="rot"><button type="button" data-k="RL" aria-label="左回転">↺</button><button type="button" data-k="RR" aria-label="右回転">↻</button></div>
 </div>
 <div class="log" id="log"><b>連鎖の記録</b><div id="logbody">まだ連鎖していません</div></div>
-<p class="hint">操作：<kbd>←</kbd><kbd>→</kbd>移動、<kbd>↓</kbd>落とす、<kbd>Z</kbd>左回転、<kbd>X</kbd>・<kbd>↑</kbd>右回転、<kbd>P</kbd>一時停止。スマホでは盤面の下のボタンで操作します。同じ配ぷよ番号なら、同じ組ぷよの順番で遊べます。</p>
+<p class="hint">操作：<kbd>←</kbd><kbd>→</kbd>移動、<kbd>↓</kbd>落とす、<kbd>Z</kbd>左回転、<kbd>X</kbd>・<kbd>↑</kbd>右回転、<kbd>P</kbd>一時停止。スマホでは盤面の下のボタンで操作します（左が移動・落下、右が回転）。手数は、いま操作している組ぷよが何手目かを表します。同じ配ぷよ番号なら、同じ組ぷよの順番で遊べます。</p>
 </section>
 
 <section class="section" id="rules"><h2>このアプリの初代ルール</h2>
@@ -136,12 +140,12 @@ function step(p){
 function endChain(p){
  if(p.chain>0){const tot=p.carry+p.chainScore,g=Math.floor(tot/RATE);p.carry=tot%RATE;
   const opp=players.find(q=>q!==p);if(opp&&!opp.dead)opp.pending+=g;
-  p.lastMsg=p.chain+'連鎖 '+p.chainScore+'点'+(mode==='vs'?' → おじゃま'+g+'個':'（おじゃま'+g+'個ぶん）');p.msgT=120;
+  p.lastMsg=p.idx+'手目 '+p.chain+'連鎖 '+p.chainScore+'点'+(mode==='vs'?' → おじゃま'+g+'個':'（おじゃま'+g+'個ぶん）');p.msgT=120;
   if(!p.cpu||mode==='vs')addLog(p,g)}
  p.chain=0;p.chainScore=0;
  if(p.pending>0){const k=Math.min(MAXDROP,p.pending);p.pending-=k;dropGarbage(p.f,k);p.phase='gfall';p.timer=12*T.fallCell/3+20}
  else p.phase='spawn'}
-function addLog(p,g){logRows.push((mode==='vs'?(p.cpu?'CPU':'あなた')+'：':'')+p.chain+'連鎖　'+p.chainScore+'点　おじゃま'+g+'個'+(mode==='toko'?'（'+p.idx+'手目）':''));const lb=$('logbody');lb.innerHTML='<ol>'+logRows.slice(-30).map(s=>'<li>'+s+'</li>').join('')+'</ol>';$('log').scrollTop=1e6}
+function addLog(p,g){logRows.push((mode==='vs'?(p.cpu?'CPU':'あなた')+'：':'')+p.idx+'手目　'+p.chain+'連鎖　'+p.chainScore+'点　おじゃま'+g+'個');const lb=$('logbody');lb.innerHTML='<ol>'+logRows.slice(-30).map(s=>'<li>'+s+'</li>').join('')+'</ol>';$('log').scrollTop=1e6}
 function finish(loser){over=true;running=false;const r=$('result');if(mode==='toko')r.textContent='窒息しました（'+(loser.idx)+'手目・'+loser.score+'点）';else r.textContent=loser.cpu?'あなたの勝ちです！':'CPUの勝ちです';}
 
 // ---- CPU
@@ -205,7 +209,7 @@ function draw(p,c){const ctx=c.getContext('2d');const w=W*cs,h=H*cs;ctx.fillStyl
  if(p.msgT>0&&p.lastMsg){ctx.font='bold '+Math.max(11,Math.round(cs*.5))+'px sans-serif';ctx.textAlign='center';const tw=ctx.measureText(p.lastMsg).width+12;ctx.fillStyle='rgba(0,0,0,.6)';ctx.fillRect(w/2-tw/2,h*.38,tw,cs*.9);ctx.fillStyle='#fff';ctx.fillText(p.lastMsg,w/2,h*.38+cs*.65)}
  if(p.dead){ctx.fillStyle='rgba(0,0,0,.55)';ctx.fillRect(0,0,w,h);ctx.fillStyle='#fff';ctx.font='bold '+Math.round(cs*.7)+'px sans-serif';ctx.textAlign='center';ctx.fillText('窒息',w/2,h/2)}}
 function drawNext(){const p=players[0];for(let k=0;k<2;k++){const c=nx[k],s=c._s,ctx=c.getContext('2d');ctx.clearRect(0,0,s,s*2);if(!p||!seq)continue;const pr=p.phase==='move'?pairAt(p,k):pairAt(p,k);blob(ctx,0,s,s,pr[0]);blob(ctx,0,0,s,pr[1])}}
-function hud(){players.forEach((p,i)=>{$('s'+i).textContent=p.score+'点'+(mode==='toko'?'　'+p.idx+'手目':'');$('w'+i).textContent=p.pending>0?'おじゃま予告 '+p.pending+'個':''});if(mode==='toko')$('w0').textContent=''}
+function hud(){players.forEach((p,i)=>{$('s'+i).innerHTML='<span class="moves">'+Math.max(p.idx,1)+'手目</span>　'+p.score+'点';$('w'+i).textContent=p.pending>0?'おじゃま予告 '+p.pending+'個':''});if(mode==='toko')$('w0').textContent=''}
 function render(){draw(players[0],boards[0]);if(mode==='vs')draw(players[1],boards[1]);drawNext();hud()}
 
 // ---- loop
@@ -219,7 +223,7 @@ function start(){mode=$('mode').value;level=+$('level').value;let s=parseInt($('
  players=[newPlayer(0,false)];if(mode==='vs')players.push(newPlayer(1,true));
  running=true;paused=false;over=false;frame=0;logRows=[];$('logbody').textContent='まだ連鎖していません';$('result').textContent='';$('pause').textContent='一時停止';
  $('cpu-side').hidden=mode!=='vs';$('lvl-wrap').hidden=mode!=='vs';$('undo').hidden=mode!=='toko';$('grav-wrap').hidden=mode!=='toko';
- sizeAll();$('arena').scrollIntoView({block:'nearest'});document.activeElement&&document.activeElement.blur()}
+ sizeAll();$('arena').scrollIntoView({block:'start'});document.activeElement&&document.activeElement.blur()}
 function togglePause(){if(!running)return;paused=!paused;$('pause').textContent=paused?'再開':'一時停止';$('result').textContent=paused?'一時停止中':''}
 function undo(){const p=players[0];if(mode!=='toko'||p.hist.length<2)return;p.hist.pop();const h=p.hist.pop();p.f=h.f.slice();p.idx=h.idx;p.score=h.score;p.carry=h.carry;logRows.length=h.logs;$('logbody').innerHTML=logRows.length?'<ol>'+logRows.slice(-30).map(s=>'<li>'+s+'</li>').join('')+'</ol>':'まだ連鎖していません';p.dead=false;p.popCells=null;p.chain=0;p.msgT=0;p.phase='spawn';over=false;running=true;$('result').textContent=''}
 $('start').onclick=start;$('pause').onclick=togglePause;$('undo').onclick=undo;
